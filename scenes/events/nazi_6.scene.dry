@@ -1,0 +1,38 @@
+title: Разногласия в рядах <span style="color: #7A3C00;">**СА**</span>
+subtitle: Единичный случай или начало конца?
+view-if: chancellor = "Schleicher" and schleicher_time == 5 and nazi_funds <= 3
+new-page: true
+tags: event
+priority: 3
+max-visits: 1
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/sa_rally.jpg";  
+
+    cardEl.appendChild(image);
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+= Разногласия в рядах <span style="color: #7A3C00;">**СА**</span>
+
+Так как у <span style="color: #7A3C00;">**НСДАП**</span> заканчиваются средства, а в <span style="color: #7A3C00;">**СА**</span> растёт недовольство бездействием партии, напряжение между политическим руководством и её военизированным крылом нарастает. Финансовая поддержка <span style="color: #7A3C00;">**СА**</span> сокращается, и по мере падения боевого духа ослабевает и дисциплина. Участились жестокие теракты. Это тревожит партийных чиновников, опасающихся оттока избирателей. Один из высокопоставленных командиров <span style="color: #7A3C00;">**СА**</span> даже публично осудил [+ nsdap_leader +]овскую тактику легального прихода к власти и призвал к более «прямым» методам.
+
+С тех пор разгорелся крупный конфликт между <span style="color: #7A3C00;">**СА**</span> и гауляйтером <span style="color: #7A3C00;">**НСДАП**</span> в Северной Баварии. Вильгельм Штегман, командир <span style="color: #7A3C00;">**СА**</span> со штрассеристскими симпатиями, вступил в конфликт с авторитарным гауляйтером из-за невыполненного обещания возместить расходы <span style="color: #7A3C00;">**СА**</span>. Хоть национальное руководство <span style="color: #7A3C00;">**СА**</span> и встало на сторону гауляйтера, Штегман не подчинился приказу об отставке, сохранив верность своих штурмовиков.
+
+- @nazi_2
+
+
+@nazi_2
+title: Спор обостряется…
+on-arrival: sa_strength -= 25; sa_militancy -= 0.03; unemployed_nsdap -= 4; workers_nsdap -= 2
+
+Один из помощников Штегмана проник в штаб-квартиру <span style="color: #7A3C00;">**СА**</span>, заперев верного гауляйтеру штурмовика и захватив служебные документы. Это спровоцировало кровавую драку между сторонниками Штегмана и сторонниками гауляйтера в штаб-квартире партии.
+
+В ответ [+ nsdap_leader +] лишил Штегмана всех полномочий и, сославшись на *принцип Фюрерства*, заставил его подписать заявление о подчинении лидеру партии. Однако, по всей видимости, это решение — временное.
+
+- @root: It's our chance to reclaim control of the streets.

@@ -1,0 +1,68 @@
+title: Юлиус Лебер
+is-pinned-card: true
+tags: advisor, neorevisionist
+card-image: img/portraits/LeberJulius.jpg
+view-if: leber_advisor = 1
+new-page: true 
+
+= Юлиус Лебер
+
+Лебер — бывший армейский офицер, который в 1920 году выступил против военных лидеров Капповского путча и помог нам подавить попытку военного переворота. Он выступает за расширение демократии и создание широкой народной базы для <span style="color: #c00000;">**СДПГ**</span>.
+
+- @democratic_rally
+- @military_affairs
+- @support_peoples_party
+- @build_peoples_party
+- @campaigning_peoples_party
+- @root: Return to main
+
+
+@democratic_rally
+title: Митинг в защиту демократии
+subtitle: Сплотить нашу партию и немецкий народ на защиту демократии, свободы и республики.
+choose-if: advisor_action_timer == 0 
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?]
+on-arrival: advisor_action_timer = 6; pro_republic += 5; democratization += 1; neorevisionist_strength += 5; reformist_strength += 3; workers_spd += 4*(1-dissent) if democratization >= 4; new_middle_spd += 3*(1-dissent) if democratization >= 4
+
+Лебер помогает нам сплотить народ на защиту демократии.
+
+
+@military_affairs
+title: Министерство Рейхсвера
+subtitle: Мы можем определять нашу военную политику.
+choose-if: advisor_action_timer == 0 and spd_in_government and reichswehr_minister_party == "SPD"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] мес. до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> не входит в правительство. ?][? if reichswehr_minister_party != "SPD": <span style="color: #c00000;">СДПГ</span> не контролирует министерство рейхсвера. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1
+go-to: military_policy
+
+
+@support_peoples_party
+title: Поддержать концепцию Народной партии
+subtitle: Сможем ли мы расширить нашу партию за пределы промышленного рабочего класса?
+view-if: peoples_party = 0
+choose-if: peoples_party_support <= 4 and advisor_action_timer = 0 and peoples_party == 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if peoples_party_support > 4: Концепция Народной партии уже пользуется значительной поддержкой. ?]
+on-arrival: advisor_action_timer = 6; peoples_party_support += 1
+
+Мы наращиваем поддержку идеи Народной Партии.
+
+
+@build_peoples_party
+title: Создание народной партии
+subtitle: Сможем ли мы расширить нашу партию, выйдя за рамки промышленного рабочего класса?
+view-if: peoples_party == 0
+choose-if: peoples_party_support >= 3 and advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if peoples_party_support < 3: Внутри партии недостаточно поддержки этой политики. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1
+go-to: peoples_party
+
+
+@campaigning_peoples_party
+title: Агитировать как Народная Партия
+subtitle: Агитация среди некоторых наших ранее нетрадиционных демографических групп.
+view-if: peoples_party = 1
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?]
+on-arrival: advisor_action_timer = 6;
+go-to: peoples_party_campaigning
+

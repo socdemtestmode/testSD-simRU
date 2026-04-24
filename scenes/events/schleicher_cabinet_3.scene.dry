@@ -1,0 +1,28 @@
+title: Запасной план Шлейхера
+subtitle: Поскольку [+ nsdap_leader +] непреклонен, Шлейхер стремится неконституционно «отложить» выборы.
+view-if: chancellor = "Schleicher" and schleicher_time == 6
+on-arrival: schleicher_spd_support -= 2; schleicher_spd_r -= 1; schleicher_approval -= 2
+new-page: true
+tags: event
+priority: 2
+max-visits: 1
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/schleicher_work.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+= Запасной план Шлейхера
+
+Шлейхер никогда по-настоящему не верил в возможность превращения своего кабинета в парламентский: он сам же ослабил свою угрозу объявить новые выборы, предположив, что никто не будет возражать против их отсрочки сверх установленных конституцией 60 дней. В действительности же ничто не могло быть дальше от истины.
+
+Тем не менее, теперь Шлейхер пытается добиться от Гинденбурга издания декрета о приостановке выборов на неопределенный срок. Декрета, который когда-то был у Папена. Но его тогда так и не приняли: председатель Рейхстага его попросту проигнорировал, а Шлейхер убедил президента пойти на деэскалацию из-за угрозы Гражданской войны. Если Гинденбург откажется издать такой декрет, это не будет означать возобновления приверженности конституционным нормам. Скорее, это подтвердит масштаб заговора против Шлейхера, в котором теперь замешан и сам президент.
+
+- @root: [? if not schleicher_spd_adopted: The <span style="color: #c00000;">**SPD**</span> will strongly oppose any effort to violate the constitution. ?][? if schleicher_spd_adopted: The nation needs a break from more polarizing elections. Let the chancellor govern. ?]

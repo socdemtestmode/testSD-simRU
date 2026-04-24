@@ -1,0 +1,25 @@
+title: <span style="color: #3E88B3;">**НННП**</span>: умеренные откалываются!
+subtitle: Вестарпу надоели выходки Гугенберга.
+view-if: year = 1930 and month = 7 and dnvp_leader = "Hugenberg" and not dnvp_split_2 and not hugenberg_reinstated and not kvp_formed and bruning_event_timer == 0
+priority: -1
+max-visits: 1
+tags: event
+face-image: img/dnvp2.jpg
+new-page: true
+
+= <span style="color: #3E88B3;">**НННП**</span>: умеренные откалываются!
+
+Умеренное антигугенберговское крыло <span style="color: #3E88B3;">**НННП**</span> уже решило порвать с партией: оставалось лишь найти подходящий предлог. Такая возможность представилась, когда Гугенберг провёл резолюцию, закреплявшую <i>Фюрерпринцип</i> в партии. Согласно ей, решения исполнительного комитета и лидера партии становились обязательными для всех членов партийных делегаций в рейхстаге и ландтагах земель.
+
+Умеренные члены партии оказались бессильны остановить принятие резолюции. Вестарп и остальные умеренные [? if not kvp_formed: разошлись по различным партиям умеренно-правого толка ?][? if kvp_formed: присоединились к своим друзьям в недавно основанной <span style="color: #0087DC;">**КНП**</span> ?].
+
+- @dnvp_split: Давно пора.
+
+
+
+@dnvp_split
+on-arrival: other_r += dnvp_r*0.3 if not kvp_formed; kvp_r += dnvp_r*0.3 if kvp_formed; dnvp_r = dnvp_r*0.7; rural_dnvp -= 4; new_middle_dnvp -= 4; old_middle_dnvp -= 4; rural_other += 4 if not kvp_formed; new_middle_other += 4 if not kvp_formed; old_middle_other += 4 if not kvp_formed; rural_kvp += 4 if kvp_formed; new_middle_kvp += 4 if kvp_formed; old_middle_kvp += 4 if kvp_formed; dnvp_split_2 = 1; dnvp_split_2_timer = 1 if not kvp_formed
+face-image: img/portraits/Kuno_von_Westarp.jpg
+
+К сожалению, районные партийные организации остаются верны Гугенбергу, который постарался заполнить партийную бюрократию своими сторонниками. В результате раскол всего умеренного крыла <span style="color: #3E88B3;">**НННП**</span> оказался не таким значимым, как мог бы. Более того, многие правые считают, что внутрипартийная резолюция — недостаточно веский повод для разрыва с партией, и остаются с Гугенбергом.
+

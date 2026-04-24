@@ -1,0 +1,63 @@
+title: Рейхстаг возобновляет работу
+subtitle: Рейхстаг не решается вступать в конфронтацию со Шлейхером и провоцировать очередную серию выборов.
+view-if: chancellor = "Schleicher" and schleicher_time and schleicher_post and next_reichstag_time == rubicon_time and next_reichstag_time > 0
+on-arrival: reichstag_rubicon = 1
+new-page: true
+tags: event
+max-visits: 1
+priority: 2
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/reichstag.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+= Рейхстаг возобновляет работу
+
+Рейхстаг возобновляет работу при канцлере Шлейхере: почти все представленные партии не готовы выступать против популярного канцлера в первый же день. Оппозиция решает выжидать, ища неизбежную ошибку — нарушение конституции или спорную политику, — чтобы использовать её как предлог и повод для сплочения против него.
+
+Тем временем Шлейхер не демонстрирует особого беспокойства по поводу угрозы вотума недоверия. Он чётко обозначает свою позицию: до тех пор, пока не появится единый блок с реальным преемником, он, при поддержке Гинденбурга, будет править как и прежде.
+
+- @reichstag
+
+
+@reichstag
+title: Именно <span style="color: #700000;">**коммунисты**</span> внесли предложение о вотуме недоверия.
+on-arrival: {!
+Q.pro_republic += 5;
+
+Q.reichstag_rubicon = 0;
+Q.schleicher_post_reichstag = 1;
+
+Q.next_reichstag_time = Q.rubicon_time + 4;
+Q.next_reichstag_week = Q.week + 4;
+Q.next_reichstag_month = Q.month;
+Q.next_reichstag_year = Q.year;
+
+if (Q.next_reichstag_week > 4) {
+  Q.next_reichstag_week -= 4;
+  Q.next_reichstag_month += 1;
+}
+
+if (Q.next_reichstag_week > 4) {
+  Q.next_reichstag_week -= 4;
+  Q.next_reichstag_month += 1;
+}
+
+if (Q.next_reichstag_month > 12) {
+  Q.next_reichstag_month -= 12;
+  Q.next_reichstag_year += 1;
+}
+!}
+
+Как и прежде, предложение вынести на повестку дня вотум недоверия отклонено — благодаря поддержке со стороны <span style="color: #7A3C00;">нацистов</span>, <span style="color: #000000;">Партии Центра</span> и различных правых и буржуазных фракций.
+
+Поскольку в повестке дня лишь несколько законопроектов, комитет по повестке дня успешно провёл решение об отсрочке заседаний на тридцать дней с возможностью продления.
+

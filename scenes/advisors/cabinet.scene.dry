@@ -1,0 +1,20 @@
+title: Кабинет
+is-pinned-card: true
+tags: advisor
+card-image: img/muller_cabinet.jpg
+view-if: in_spd_majority or (in_emergency_government and chancellor_party = "SPD") or (in_left_front and chancellor_party = "SPD")
+on-arrival: last_cabinet_action = 1
+new-page: true 
+
+= Кабинет
+
+Имея канцлера и министров от СДПГ, мы можем определять политику правительства страны.
+
+- #cabinet
+- @back: Вернуться на главный экран
+
+
+@back
+on-arrival: last_cabinet_action = 0
+go-to: root
+

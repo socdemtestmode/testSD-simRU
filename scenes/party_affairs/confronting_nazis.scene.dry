@@ -1,0 +1,94 @@
+title: Противостояние нацистам
+new-page: true
+is-card: true
+view-if: (nsdap_r >= 10 and nazi_urgency > 1) and confronting_nazis_timer == 0 and iron_front_formed == 0
+on-arrival: confronting_nazis_seen += 1; confronting_nazis_timer = 5; month_actions += 1; month_actions -= 1 if harzburg_front_time = time;
+card-image: img/iron_front.png
+tags: party_affairs; antifascism
+
+<span style="color: #7A3C00;">Нацисты</span> набирают силу, о чём свидетельствуют результаты недавних выборов и их насильственное присутствие на улицах. Их <span style="color: #7A3C00;">фашизм</span> угрожает вновь ввергнуть Германию в бездну.
+
+Многие в нашей партии призывают к немедленным действиям. «Неоревизионистская» фракция во главе с молодыми <span style="color: #c00000;">социалистами</span> Карло Мерендорффом и Юлиусом Лебером объединилась именно вокруг этой цели. Но к действию призывают члены всех партийных фракций.
+
+- @not_a_big_deal: Время <span style="color: #7A3C00;">нацистов</span> пройдёт. Не будем торопиться.
+- @economic_crisis
+- @major_crisis: Мы должны что-то предпринять, чтобы противостоять <span style="color: #7A3C00;">нацистам</span>.
+- @iron_front
+
+
+
+@not_a_big_deal
+on-arrival: nazi_urgency -= 1; left_dissent += 5; neorevisionist_dissent += 15
+view-if: mierendorff_advisor = 0 and leber_advisor = 0 and schumacher_advisor = 0
+
+<span style="color: #7A3C00;">Нацисты</span> — всего лишь очередное <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правое</span> поветрие, которое рано или поздно погибнет от собственных противоречий; нам не нужно разрабатывать особую политику для борьбы с ними.
+
+
+@economic_crisis
+title: Мы должны в первую очередь заняться экономическим кризисом.
+view-if: economic_plan == 0 and black_thursday_seen == 1
+go-to: crisis_program
+
+
+@major_crisis
+view-if: nazi_urgency < 5
+on-arrival: nazi_urgency += 1; neorevisionist_dissent -= 5; neorevisionist_strength += 5
+
+<span style="color: #7A3C00;">Нацисты</span> — одна из главных угроз для германской республики. Однако мы всё ещё разрабатываем стратегию борьбы с ними и пытаемся достичь консенсуса внутри партии для активных действий. Возвращайтесь к этому вопросу позже.
+
+
+@iron_front
+title: Сформировать <span style="color: #c00000;">Железный</span> <span style="color: #1A1A1A;">фронт</span>!
+subtitle: <span style="color: #c00000;">Железный</span> <span style="color: #1A1A1A;">фронт</span> состоит из <span style="color: #c00000;">**СДПГ**</span>, профсоюзов и Рейхсбаннера.
+view-if: nazi_urgency >= 3 and iron_front_formed == 0
+on-arrival: iron_front_formed = 1; radicalization += 1; nazi_urgency += 1; workers_spd += 5*(1-dissent); pro_republic += 5*(1-dissent); left_dissent -= 8; neorevisionist_dissent -= 10; neorevisionist_strength += 5
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/tnoreference.png";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+achievement: eiserne_front
+
+Нельзя больше игнорировать <span style="color: #7A3C00;">нацистскую</span> угрозу. Мы должны создать новую организацию для противостояния ей — <span style="color: #c00000;">**Железный**</span> <span style="color: #1A1A1A;">**фронт**</span> — состоящий из <span style="color: #c00000;">**СДПГ**</span>, федерация профсоюзов АДГБ и *Рейхсбаннер* <span style="color: #000000;"><b><i>Schwarz</i></b></span>-<span style="color: #DD0000;"><b><i>Rot</i></b></span>-<span style="color: #FFCC00;"><b><i>Gold</i></b></span>. У нас новый символ — Три стрелы, направленные вниз и влево.
+
+Что означают три стрелы?
+
+- @unity: Единство, активность и дисциплина.
+- @anti: Борьба против <span style="color: #7A3C00;">фашизма</span>, <span style="color:rgb(90, 0, 0);">сталинизма</span> и <span style="color: #808080;">монархизма</span>.
+- @orgs: The <span style="color: #c00000;">**СДПГ**</span>, АДГБ и Рейхсбаннер.
+- @wtb: Войтинский, Тарнов и Бааде (план ВТБ)
+- @all: Все вышеперечисленное.
+
+
+@unity
+go-to: if_end
+
+
+@anti
+go-to: if_end
+
+
+@orgs
+go-to: if_end
+
+
+@wtb
+view-if: wtb_adopted == 1
+go-to: if_end
+
+
+@all
+go-to: if_end
+
+
+@if_end
+
+The <span style="color: #c00000;">**Железный**</span> <span style="color: #1A1A1A;">**фронт**</span> вдохнул в нашу партию новую энергию.
+

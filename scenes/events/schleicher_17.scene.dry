@@ -1,0 +1,211 @@
+title: Гугенберг смещён!
+subtitle: Даже его слепо преданная партия больше его не поддерживает.
+view-if: chancellor = "Schleicher" and dnef_formed and ((nationalists_schleicher >= 10 and industrialists_schleicher >= 8 and not press_censorship) or (nationalists_schleicher >= 8 and industrialists_schleicher >= 6 and press_censorship))
+new-page: true
+priority: 1
+tags: event
+max-visits: 1
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/dnvp_poster.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+go-to: hugenberg_dnvp if dnvp_ideology == "Radical"; hugenberg_dnf if dnvp_ideology == "Moderate"
+
+= Гугенберг смещён
+
+
+@hugenberg_dnvp
+
+Поначалу Гугенберг и его <span style="color: #3E88B3;">**НННП**</span> больше всех выигрывали от поддержки <span style="color: #808080;">реакционного</span> кабинета Папена. Однако отношения с рейхсканцелярией испортились, когда Шлейхер отказался предоставить ему полный контроль над министерствами сельского хозяйства и экономики. Его бескомпромиссная оппозиция Шлейхеру вызвала широкое недовольство в рядах <span style="color: #3E88B3;">**НННП**</span>: это подрывает некогда неоспоримый авторитет Гугенберга среди партийных лидеров и рядовых членов.
+
+Многим непонятно, почему Гугенберг выступает против своего же соратника-<span style="color: #808080;">реакционера</span>, который, по-видимому, разделяет его цель по установлению в Германии авторитарного режима.
+
+Внутрипартийная демократия давно мертва — партийные съезды, наводнённые лоялистами, служат лишь для формального одобрения решений, — и у несогласных почти нет выбора. Теперь большинство членов партии хватается за спасательный круг, брошенный Шлейхером: поглощение дружественных <span style="color: #3E88B3;">националистов</span> <span style="color: #BFC8CC;">Фронтом Национального Единства Германии</span>, где они надеются наконец-то получить возможность влиять на будущую политику канцлера.
+
+- @schleicher_2_dnvp: Новых членов приветствует <span style="color: #BFC8CC;">Фронт Национального Единства Германии</span>.
+
+
+@hugenberg_dnf
+
+Гугенберг и <span style="color: #003755;">**НФГ**</span>, когда-то окрыленная своей ранней популярностью как одна из немногих партий, безоговорочно поддержавших Папена, с тех пор испортила отношения с канцелярией. Требование Гугенберга о полном контроле над министерствами сельского хозяйства и экономики обострило связи, а его бескомпромиссная оппозиция Шлейхеру вызвала недовольство внутри <span style="color: #003755;">**НФГ**</span> — партия, некогда целиком состоявшая из его сторонников.
+
+Многие из его бывших союзников теперь недоумевают, почему Гугенберг выступил против другого <span style="color: #808080;">реакционера</span>, особенно того, кто, по всей видимости, разделяет его стремление привести Германию к авторитарному правлению.
+
+Личное состояние Гугенберга, которое некогда поддерживалось его медиаимперией, иссякает, а промышленники по-прежнему решительно выступают против его руководства, поэтому разочарованные члены партии и бывшие доверенные лица спасаются бегством. Теперь они стекаются в <span style="color: #BFC8CC;">Фронт Национального Единства Германии</span>, предпочитая поддерживать Шлейхера напрямую, чтобы Гугенберг не стоял у них на пути.
+
+- @schleicher_2_dnf: <span style="color: #BFC8CC;">Фронт Национального Единства Германии</span> приветствует своих новых членов.
+
+
+@schleicher_2_dnvp
+go-to: schleicher_2_dnvp_post
+
+При поддержке Шлейхера отколовшиеся фракции вошли в состав[? if not kvp_formed: недавно возрождённой <span style="color: #0087DC;">**КНП**</span>, которая по настоянию рейхсканцлера превратилась в <i>Rechtsblock</i>, где могут сплотиться все <span style="color: #3E88B3;">националисты</span>. ?][? if kvp_formed and kvp_dnef: <span style="color: #0087DC;">**КНП**</span>, которая по настоянию Шлейхера превратилась в <i>Rechtsblock</i>, где могут сплотиться все <span style="color: #3E88B3;">националисты</span>. ?][? if kvp_formed and not kvp_dnef: <span style="color: #0087DC;">**КНП**</span>, которую также силой заставили вступить в <span style="color: #BFC8CC;">Фронт Национального Единства Германии</span>. ?]
+
+То, что осталось от гугенберговской <span style="color: #3E88B3;">**НННП**</span>, — лишь бледная тень самой себя, а его влияние на политической арене страны практически сошло на нет. Но этот человек никогда не сдаётся. [? if kvp_leader != "Treviranus": Тревиранус с тех пор поставлен во главе теперь уже примкнувшей к <i>Blocpartei</i> <span style="color: #0087DC;">**КНП**</span>. ?]
+
+
+@schleicher_2_dnvp_post
+on-arrival: {!
+Q.kvp_dnef = 1;
+Q.hindenburg_schleicher_r += 1;
+Q.dnvp_dnef_alt = 1;
+
+Q.pro_republic -= 3;
+
+if (!Q.kvp_formed) {
+    Q.kvp_formed = 1;
+    Q.schleicher_kvp = 1;
+    Q.parties.push('kvp');
+    Q.parties_graph.push('kvp');
+
+    Q.workers_kvp = 3;
+    Q.workers_dnvp -= 3;
+
+    Q.new_middle_kvp = 8;
+    Q.new_middle_dnvp -= 8;
+
+    Q.old_middle_kvp = 12;
+    Q.old_middle_dnvp -= 12;
+
+    Q.rural_kvp = 8;
+    Q.rural_dnvp -= 6;
+    Q.rural_other -= 2;
+
+    Q.unemployed_kvp = 0;
+
+    Q.catholics_kvp = 4;
+    Q.catholics_dnvp -= 3;
+    Q.catholics_other -= 1;
+
+    Q.kvp_r = Math.round((Q.other_r*0.2) * 10) / 10 ;
+    Q.other_r = Math.round((Q.other_r - Q.kvp_r) * 10) / 10 ;
+    Q.kvp_r = Math.round((Q.kvp_r) * 10 / 10)
+    Q.other_r = Math.round((Q.other_r) * 10 / 10)
+
+    Q.kvp_r += Math.round((Q.dnvp_r*0.6) * 10) / 10 ;
+    Q.dnvp_r = Math.round((Q.dnvp_r - Q.kvp_r) * 10) / 10 ;
+    Q.kvp_r = Math.round((Q.kvp_r) * 10 / 10)
+    Q.dnvp_r = Math.round((Q.dnvp_r) * 10 / 10)
+
+    Q.kvp_relation = 10;
+
+    Q.kvp_leader = "Treviranus";
+    Q.old_workers_kvp_display = 0;
+    Q.old_new_middle_kvp_display = 0;
+    Q.old_old_middle_kvp_display = 0;
+    Q.old_rural_kvp_display = 0;
+    Q.old_unemployed_kvp_display = 0;
+    Q.old_catholics_kvp_display = 0;
+
+    for (var record of Q.election_records) {
+        record['kvp'] = 0;
+    }
+    for (var record of Q.party_support_records) {
+        record['kvp'] = 0;
+    }
+}
+Q.dnef_relation -= 15;
+
+Q.dnef_r += Q.kvp_r;
+Q.kvp_r = 0;
+
+Q.kvp_leader = "Treviranus";
+!}
+
+Текущий состав <span style="color: #BFC8CC;">Фронта Национального Единства Германии</span>:
+
+[? if dnef_formed: - <span style="color: #BFC8CC;">**ФНЕГ**</span> ?]
+
+[? if dstp_dnef: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
+
+[? if lvp_dnef: - <span style="color: #FFCC00;">**ЛНП**</span> ?]
+
+[? if z_dnef: - <span style="color: #000000;">Партия Центра</span> ?]
+
+[? if z_dnef: - <span style="color: #A2D8E0;">**БНП**</span> ?]
+
+[? if dvp_dnef: - <span style="color: #C0A054;">**ННП**</span> ?]
+
+[? if other_dnef: - **Прочие** ?]
+
+[? if kvp_dnef: - <span style="color: #0087DC;">**КНП**</span> ?]
+
+[? if dnvp_dnef: - <span style="color: #3E88B3;">**НННП**</span> ?]
+
+[? if nvf_dnef: - <span style="color: #142e20;">**ННФ**</span> ?]
+
+
+@schleicher_2_dnf
+go-to: schleicher_2_dnf_post
+
+При поддержке Шлейхера оппозиционные фракции поглощены <span style="color: #3E88B3;">**НННП**</span>, которую «убедили» преобразоваться в <i>Rechtsblock</i>[? if not dnvp_dnef: , а также принудили вступить во <span style="color: #BFC8CC;">Фронт Национального Единства Германии</span> ?], который твёрдо поддерживает правительство Шлейхера.
+
+Теперь у Гугенберга осталась лишь его крошечная <span style="color: #003755;">**НФГ**</span> — без друзей, без денег и без влияния на национальной арене. Велика вероятность, что он сдастся окончательно. Но пока что он упрямо цепляется за остатки влияния в своей медиаимперии. [? if dnvp_leader != "Treviranus" and dnvp_leader != "Lambach": Тревиранус с тех пор назначен лидером ныне ставшей <i>Blocpartei</i> <span style="color: #3E88B3;">**НННП**</span>. ?]
+
+
+@schleicher_2_dnf_post
+on-arrival: {!
+Q.dnvp_dnef = 1;
+Q.hindenburg_schleicher_r += 1;
+Q.dnvp_dnef_alt = 1;
+
+Q.pro_republic -= 5;
+Q.dnvp_relation = (Q.dnef_relation - 35);
+
+Q.workers_dnf -= 3;
+Q.new_middle_dnf -= 5;
+Q.old_middle_dnf -= 5;
+Q.rural_dnf -= 5;
+Q.unemployed_dnf -= 5;
+Q.catholics_dnf -= 3;
+
+Q.workers_dnvp += 3;
+Q.new_middle_dnvp += 5;
+Q.old_middle_dnvp += 5;
+Q.rural_dnvp += 5;
+Q.unemployed_dnvp += 5;
+Q.catholics_dnvp += 3;
+
+Q.dnef_relation -= 15;
+
+Q.dnvp_r = Math.round((Q.dnf_r*0.4) * 10) / 10 ;
+Q.dnf_r = Math.round((Q.dnf_r*0.6) * 10) / 10 ;
+Q.dnvp_r = Math.round((Q.dnvp_r) * 10 / 10)
+Q.dnf_r = Math.round((Q.dnf_r) * 10 / 10)
+
+Q.dnef_r += Q.dnvp_r;
+Q.dnvp_r = 0;
+
+if (Q.dnvp_leader != "Lambach") Q.dnvp_leader = "Treviranus";
+!}
+
+Текущий состав <span style="color: #BFC8CC;">Фронта Национального Единства Германии</span>:
+
+[? if dnef_formed: - <span style="color: #BFC8CC;">**ФНЕГ**</span> ?]
+
+[? if dstp_dnef: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
+
+[? if lvp_dnef: - <span style="color: #FFCC00;">**ЛНП**</span> ?]
+
+[? if z_dnef: - <span style="color: #000000;">Партия Центра</span> ?]
+
+[? if z_dnef: - <span style="color: #A2D8E0;">**БНП**</span> ?]
+
+[? if dvp_dnef: - <span style="color: #C0A054;">**ННП**</span> ?]
+
+[? if other_dnef: - **Прочие** ?]
+
+[? if kvp_dnef: - <span style="color: #0087DC;">**КНП**</span> ?]
+
+[? if dnvp_dnef: - <span style="color: #3E88B3;">**НННП**</span> ?]
+
+[? if nvf_dnef: - <span style="color: #142e20;">**ННФ**</span> ?]
+

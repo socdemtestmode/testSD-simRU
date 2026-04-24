@@ -1,0 +1,69 @@
+title: <span style="color: #3E88B3;">**НННП**</span> проводит съезд
+subtitle: Экономическая депрессия радикализировала партию…
+view-if: year = 1930 and month = 11 and dnvp_leader = "Treviranus"
+on-arrival: {!
+if (Q.pro_republic < 50) Q.pro_republic += Q.dnvp_votes;
+Q.pro_republic += 3
+
+if (Q.land_reform >= 1 || Q.rural_spd_normalized >= 30 || (Q.rural_nsdap_normalized >= (Q.rural_dnvp_normalized + 5) && !Q.stegerwald_path) || (Q.rural_nsdap_normalized >= (Q.rural_dnvp_normalized + 7) && Q.stegerwald_path)) {
+    Q.schiele_trigger = 1;
+}
+
+if (((Q.pro_republic >= ((Q.nsdap_votes + Q.dnf_votes + Q.kpd_votes)*2)) && Q.true_christian_democracy) || !Q.true_christian_democracy) {
+    Q.treviranus_trigger = 1;
+}
+
+if (Q.pro_republic < ((Q.nsdap_votes + Q.dnf_votes + Q.kpd_votes)*2) && Q.true_christian_democracy) {
+    Q.westarp_trigger = 1;
+}
+
+!}
+max-visits: 1
+tags: event
+face-image: img/dnvp3.jpg
+new-page: true
+
+= <span style="color: #3E88B3;">**НННП**</span> проводит съезд
+
+Победа умеренных <span style="color: #3E88B3;">**НННП**</span> не смогла остановить сдвиг партии вправо, начавшийся после её поражения на выборах. Неожиданное избрание Готфрида Тревирануса ненадолго заморозило радикализацию партии. Однако усугубляющийся экономический кризис вновь качнул маятник в пользу национал-консерваторов. Неоднозначная линия Тревирануса по вопросу монархии вызвала споры и усугубила разногласия в партии. Ей угрожает раскол, как во время дебатов вокруг статьи Ламбаха.
+
+Хотя смута, вызванная расколом Гугенберга и принятием плана Юнга, улеглась, дальнейший сдвиг партии вправо по-прежнему возможен, особенно из-за <span style="color: #7A3C00;">**НСДАП**</span>, которая переманивает её электорат. Теперь Тревиранусу предстоит борьба с <span style="color: #808080;">реакционерами</span> в партии, поскольку он стремится модернизировать <span style="color: #3E88B3;">**НННП**</span> и обеспечить ей национал-консервативное, но демократическое будущее.
+
+- @treviranus: Тревиранус убеждает партию продолжить следовать его курсу.
+- @westarp: Вестарп восстановлен на прежнем посту.
+- @schiele: Бразды правления переходят к Мартину Шиле и <span style="color: #385A38;">аграриям</span>.
+
+
+@treviranus
+choose-if: treviranus_trigger and not westarp_trigger and not schiele_trigger
+unavailable-subtitle: [? if schiele_trigger: <span style="color: #385A38;">Аграрное</span> крыло <span style="color: #3E88B3;">НННП</span> возражает: пришел их черед возглавить партию. ?][? if westarp_trigger: Национал-консерваторы возражают: реформы Тревирануса зашли слишком далеко. ?]
+on-arrival: treviranus_stays = 1; rural_dnvp -= 3; rural_nsdap += 3; rural_dnf += 3; new_middle_dnvp += 4; new_middle_dvp -= 2; new_middle_ddp -= 2; new_middle_lvp -= 4; workers_dnvp += 2; workers_z -= 2; catholics_dnvp += 6; catholics_z -= 3; catholics_other -= 3; pro_republic += dnvp_votes / 2; dvp_left += 5; ddp_left += 2.5; lvp_left += 3
+face-image: img/portraits/Treviranus.jpg
+
+Увидительно, но Тревиранус отразил все попытки заменить его более консервативной фигурой и заручился мандатом на дальнейшее реформирование партии — вопреки противодействию со стороны <span style="color: #808080;">реакционных</span> партийных боссов. [? if hugenberg_removed: Однако он остаётся марионеткой старой гвардии <span style="color: #3E88B3;">**НННП**</span> — Вестарпа и Гергта. Они блокируют любой решительный сдвиг к <span style="color: #0087DC;">народному консерватизму</span>. ?]
+
+Некоторые консерваторы и <span style="color: #808080;">реакционеры</span> и переходят в <span style="color: #003755;">**НФГ**</span> и даже в <span style="color: #7A3C00;">**НСДАП**</span>. Однако партия компенсирует эти потери, привлекая <span style="color: #000000;">респу</span><span style="color: #DD0000;">бли</span><span style="color: #FFCC00;">канцев</span>, которых ранее отталкивал чрезмерный монархизм <span style="color: #3E88B3;">**НННП**</span>. И хотя монархизм остался в партийной программе, он отошёл на второй план перед более насущными вопросами.
+
+
+@westarp
+view-if: true_christian_democracy
+choose-if: westarp_trigger and not treviranus_trigger and not schiele_trigger
+unavailable-subtitle: [? if treviranus_trigger and not schiele_trigger: Тревиранус слишком популярен, чтобы его смещать. ?][? if schiele_trigger: Партия предпочитает Шиле — Вестарп уже успел побыть лидером и провалиться. ?]
+on-arrival: dnvp_leader = "Westarp"; rural_dnvp += 2; rural_dnf -= 2; new_middle_dnvp -= 3; new_middle_dvp += 2; new_middle_ddp += 1; old_middle_dnvp += 5; old_middle_dnf -= 3; old_middle_nsdap -= 2; workers_dnvp -= 1; workers_nsdap += 1; catholics_dnvp -= 2; catholics_z += 2
+face-image: img/portraits/Kuno_von_Westarp.jpg
+
+Сдвиг <span style="color: #3E88B3;">**НННП**</span> к <span style="color: #0087DC;">Тори-демократии</span> и <span style="color: #000000;">рес</span><span style="color: #DD0000;">публ</span><span style="color: #FFCC00;">иканизму</span> застопорился. Куно фон Вестарпа избрали лидером партии. Имея опыт разрешения внутрипартийных разногласиями, Вестарп избегает радикальных изменений, чтобы предотвратить раскол. Это слегка разочаровывает наиболее <span style="color: #808080;">реакционных</span> спонсоров: они надеялись, что его избрание приведет <span style="color: #3E88B3;">**НННП**</span> к более правому курсу. 
+
+<span style="color: #000000;">Респу</span><span style="color: #DD0000;">бли</span><span style="color: #FFCC00;">кански</span> настроенные избиратели, которых привлёк Тревиранус, возвращаются к буржуазным партиям. Однако «старое доброе» лидерство национал-консерватора Вестарпа возвращает избирателей, ушедших к Гугенбергу и <span style="color: #003755;">**НФГ**</span>. Кроме того, он по-прежнему сомневается в идее «приручения» <span style="color: #7A3C00;">нацистов</span> и выступает против примирения с раскольниками Гугенберга.
+
+
+@schiele
+choose-if: schiele_trigger
+unavailable-subtitle: <span style="color: #385A38;">Аграрное</span> крыло не настолько недовольно Тревиранусом.
+on-arrival: dnvp_leader = "Schiele"; rural_dnvp += 8; rural_nsdap -= 4; rural_dnf -= 4; rural_dnvp += rural_other; rural_other = rural_other*0.2; new_middle_dnvp -= 4; new_middle_nsdap += 4; workers_dnvp -= 2; workers_nsdap += 2; catholics_dnvp += 5; catholics_other -= 2; catholics_z -= 3; z_relation -= 4; dnvp_r += other_r*0.3; other_r = other_r*0.7
+face-image: img/portraits/schiele.jpg
+
+[? if land_reform >= 1 : Из-за земельной реформы, проводимой [? if not spd_in_government: прошлым ?] правительством, <span style="color: #385A38;">аграрные</span> консервативные элиты приложили все усилия, чтобы сплотить германских правых против реформ. Это включает в себя смену руководства <span style="color: #3E88B3;">**НННП**</span>, оплота <span style="color: #385A38;">аграрного</span> консерватизма. Тревиранус смещён в пользу президента Имперского Аграрного Союза (RLB) Мартина Шиле. Будучи влиятельнейшим политиким из аграриев, он хочет защитить организованное сельского хозяйства Германии. Тревиранус же кажется слишком близкий к среднему классу. ?][? if rural_spd_normalized >= 30 and land_reform == 0 : Поскольку <span style="color: #c00000;">**СДПГ**</span> добивается значительных успехов среди сельских избирателей, <span style="color: #3E88B3;">**НННП**</span> и её <span style="color: #385A38;">аграрные</span> элиты сместили Тревирануса и избрали Мартина Шиле, президента Имперского Аграрного союза (RLB). Будучи влиятельнейшим политиким из аграриев, он, может быть, сдвиг деревни влево и сохранит давний союз сельского хозяйства и немецкого консерватизма. Тревиранус же кажется слишком близким к среднему классу. ?][? if rural_nsdap_normalized >= rural_dnvp_normalized and rural_spd_normalized < 30 and land_reform == 0 : Из-за значительных успехов <span style="color: #7A3C00;">**НСДАП**</span> среди их базы сельских избирателей, <span style="color: #3E88B3;">**НННП**</span> и её <span style="color: #385A38;">аграрные</span> элиты сместили Тревирануса и избрали Мартина Шиле, президента Имперского Аграрного союза (RLB). Будучи влиятельнейшим политиким из аграриев, он, может быть, сдвиг деревни влево и сохранит давний союз сельского хозяйства и немецкого консерватизма. Тревиранус же кажется слишком близким к среднему классу. ?]
+
+Избрание Шиле привело к слиянию <span style="color: #7FCEB1;">**ХНПКЗ**</span> с <span style="color: #3E88B3;">**НННП**</span>, что укрепило её позиции в сельской местности и сплотило RLB в лоббировании интересов <span style="color: #385A38;">аграриев</span>. Эта консолидация привела к возрождению <span style="color: #385A38;">Зелёного фронта</span> — конфедерации сельскохозяйственных лоббистских групп, объединившей RLB, крестьянские союзы по всей Германии, а также некоторые католические и [? if z_party_name != "CVP": аффилированные с <span style="color: #000000;">Центром</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] сельскохозяйственные организации.
+

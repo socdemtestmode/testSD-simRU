@@ -1,0 +1,967 @@
+title: Агитация на президентских выборах
+subtitle: Началась предвыборная кампания.
+new-page: true
+on-arrival: {!
+Q.presidential_election_campaigning_seen = 1;
+Q.hindenburg_funds = 0;
+Q.hindenburg_support = 0;
+if (Q.nsdap_candidate_1932 == "Hitler") {
+    Q.workers_nsdap += 3;
+    Q.new_middle_nsdap += 4;
+    Q.old_middle_nsdap += 4;
+    Q.catholics_nsdap += 2;
+    Q.rural_nsdap += 4;
+    Q.unemployed_nsdap += 4;
+    Q.new_middle_dnvp -= 2;
+    Q.old_middle_dnvp -= 2; 
+    Q.unemployed_kpd -= 2;
+} else if (Q.nsdap_candidate_1932 == "Göring") {
+    Q.old_middle_nsdap += 4;
+    Q.old_middle_dnvp -= 4;
+    Q.rural_nsdap += 2;
+    Q.rural_dnvp -= 2;
+    Q.workers_kpd += 3;
+    Q.workers_nsdap -= 3;
+}
+!}
+tags: event
+view-if: year = 1932 and month >= 2 and not hindenburg_term_extended and not spd_abstain_1932 and hindenburg_run
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/campaign.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+priority: -1
+max-visits: 1
+go-to: candidate_selection
+
+= Агитация на президентских выборах
+
+[? if nsdap_candidate_1932: The <span style="color: #7A3C00;">**НСДАП**</span> в одиночку ведет предвыборную борьбу. Их кандидат: [+ nsdap_candidate_1932_disp +] — имеет мало шансов на победу. По крайней мере, по мнению наших советников. Однако это не значит, что выборы не имеют значения. Масштабная <span style="color: #7A3C00;">нацистская</span> пропагандистская кампания, организованная печально известным Йозефом Геббельсом, в сочетании с предстоящими местными выборами всего через месяц после первого тура может значительно изменить общественное мнение. Это, в свою очередь, может оказать давление на президента Гинденбурга и его окружение, чтобы они заняли более враждебную позицию по отношению к действующему правительству и добивались реорганизации национального правительства с включением в него <span style="color: #7A3C00;">национальной</span> <span style="color: #3E88B3;">оппозиции</span>. [? if nsdap_candidate_1932 == "Hitler": Более того, Адольф Гитлер обладает поразительной харизмой, и его стратегия ежедневных перелётов по Германии для выступлений перед сотнями тысяч избирателей, которые иначе остались бы равнодушны, не уступает даже кампании Гинденбурга. ?][? if nsdap_candidate_1932 == "Göring": Поскольку Гитлер не допущен к выборам, Герман Геринг принял на себя роль кандидата от <span style="color: #7A3C00;">**НСДАП**</span>. Будучи убеждённым представителем правого крыла партии и противником более радикальной политики Штрассера, Герингу будет проще заручиться поддержкой промышленников, обеспечив тем самым ключевое финансирование для их обширной пропагандистской сети. ?] ?]
+
+[? if spd_support_reactionary: Из-за нашей поддержки президента Гинденбурга нас исключили из Объединённых комитетов Гинденбурга — главной организации, продвигающей его кандидатуру. Сам Гинденбург не приветствует нашу поддержку, а Вестарп и Гереке, ключевые лидеры Объединённых комитетов Гинденбурга, будут всячески пытаться от нас дистанцироваться, чтобы заручиться поддержкой умеренно правых и промышленных кругов. В итоге наша роль в этой кампании сведётся к тому, чтобы сплотить немецких левых, которые не горят желанием голосовать за такого реакционера, как он. ?][? if braun_campaign: Мы выдвигаем Отто Брауна, одного из наших самых известных и уважаемых государственных деятелей. Его реформистская позиция даёт нам шанс заручиться поддержкой части избирателей буржуазных партий. Однако многие за пределами нашей партии скорее умрут, чем поддержат <span style="color: #c00000;">социалиста</span>. Единственный реальный способ увеличить нашу долю голосов — вернуть разочаровавшихся <span style="color: #700000;">**коммунистов**</span> и воодушевить рабочих. ?][? if spd_support_thalmann: Наше неоднозначное решение поддержать[+ communist_candidate_1932_disp +] в качестве единого кандидата от левых сил глубоко раскололо немецкую политику, подготовив почву для решающей схватки между <span style="color: #9B0000;">марксизмом</span> и капитализмом. Не исключена даже гражданская война, и неважно, кто из кандидатов победит. Поскольку все левые силы Германии объединились вокруг [+ communist_candidate_1932 +]а, нашему электорату почти некуда расти — остаётся лишь надеяться, что рабочие в полном составе придут на избирательные участки. ?][? if rosenfeld_campaign: Мы выдвигаем Курта Розенфельда, менее известного представителя нашего левого крыла. Его левые взгляды дают нам шанс заручиться поддержкой <span style="color: #700000;">**коммунистов**</span>, но это полностью отрезало нам путь к поддержке со стороны буржуазных партий. Наш единственный шанс увеличить число голосов — это вернуть себе расположение разочарованных рабочих, воодушевить их и убедить наших более умеренных сторонников из среднего класса и сельской местности придерживаться общего плана. ?][? if eckener_campaign: Мы выдвигаем Гуго Эккенера, знаменитого беспартийного капитана дирижабля и человека лично консервативных взглядов. Его правые позиции заставили <span style="color: #c00000;">**СДПГ**</span> уязвимы перед оттоком к <span style="color: #700000;">**коммунистам**</span>, но зато полностью открыли дверь для единой поддержки со стороны буржуазных партий. Мы можем либо укрепить поддержку Эккенера внутри <span style="color: #c00000;">**СДПГ**</span>, или же сосредоточиться на привлечении сторонних избирателей и укреплении сотрудничества с буржуазными союзниками. ?]
+
+
+@candidate_selection
+
+- @view_candidates: Посмотреть список кандидатов.
+
+
+@view_candidates
+
+[? if spd_campaign: [? if spd_candidate_1932 != "Eckener": <span style="color: #c00000;">**[+ spd_candidate_1932_disp +]**</span> ?][? if spd_candidate_1932 == "Eckener": <span style="color: #000000;">**Эк**</span><span style="color: #DD0000;">**кен**</span><span style="color: #FFCC00;">**ер**</span> ?] — поддерживают: ?]
+
+[? if spd_campaign: - <span style="color: #c00000;">**СДПГ**</span> ?]
+
+[? if kpd_support_spd == 1 and sapd_formed and spd_campaign: - <span style="color: #9B0000;">**СРПГ**</span> ?]
+
+[? if kpd_support_spd == 1 and spd_campaign: - <span style="color: #700000;">**КПГ**</span> ?]
+
+[? if z_support_spd == 1 and spd_campaign: - [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] ?]
+
+[? if bvp_support_spd and spd_campaign: - <span style="color: #A2D8E0;">**БНП**</span> ?]
+
+[? if ddp_support_spd == 1 and spd_campaign: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
+
+[? if lvp_support_spd == 1 and spd_campaign: - <span style="color: #FFCC00;">**ЛНП**</span> ?]
+
+[? if dvp_support_spd == 1 and spd_campaign: - <span style="color: #C0A054;">**ННП**</span> ?]
+
+[? if reactionary_candidate_1932: [? if hindenburg_run: <span style="color: #808080;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if (reactionary_candidate_1932 == "Luther" or reactionary_candidate_1932 == "Gessler" or reactionary_candidate_1932 == "Jarres") and lvp_formed: <span style="color: #FFCC00;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if (reactionary_candidate_1932 == "Luther" or reactionary_candidate_1932 == "Jarres") and not lvp_formed: <span style="color: #C0A054;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if reactionary_candidate_1932 == "Gessler" and not lvp_formed: <span style="color: #D3C24D;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if ((reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or reactionary_candidate_1932 == "Westarp") and not kvp_formed: <span style="color: #3E88B3;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if ((reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or reactionary_candidate_1932 == "Westarp") and kvp_formed: <span style="color: #0087DC;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if reactionary_candidate_1932 == "Adenauer" or reactionary_candidate_1932 == "Brüning" or reactionary_candidate_1932 == "Stegerwald" or (reactionary_candidate_1932 == "Lettow-Vorbeck" and cvp_formed): <span style="color: #000000;">**[+ reactionary_candidate_1932_disp +]**</span> ?] — поддерживают: ?]
+
+[? if (spd_support_reactionary_1 or (spd_support_reactionary and hindenburg_run)) and reactionary_candidate_1932: - <span style="color: #c00000;">**СДПГ**</span> ?]
+
+[? if z_support_spd != 1 and (z_choice == reactionary_candidate_1932 or hindenburg_run) and reactionary_candidate_1932: - [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] ?]
+
+[? if (z_choice == reactionary_candidate_1932 or hindenburg_run) and not bvp_support_spd and reactionary_candidate_1932: - <span style="color: #A2D8E0;">**БНП**</span> ?]
+
+[? if (lvp_choice == reactionary_candidate_1932 or hindenburg_run) and lvp_support_spd != 1 and lvp_formed and reactionary_candidate_1932: - <span style="color: #FFCC00;">**ЛНП**</span> ?]
+
+[? if (ddp_choice == reactionary_candidate_1932 or hindenburg_run) and ddp_support_spd != 1 and not lvp_formed and reactionary_candidate_1932: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
+
+[? if (dvp_choice == reactionary_candidate_1932 or hindenburg_run) and dvp_support_spd != 1 and not lvp_formed and reactionary_candidate_1932: - <span style="color: #C0A054;">**ННП**</span> ?]
+
+[? if (kvp_choice == reactionary_candidate_1932 or hindenburg_run) and kvp_formed and reactionary_candidate_1932: - <span style="color: #0087DC;">**КНП**</span> ?]
+
+[? if (dnvp_choice == reactionary_candidate_1932 or hindenburg_run) and dnvp_ideology == "Moderate" and not cvp_formed: - <span style="color: #3E88B3;">**НННП**</span> ?]
+
+[? if (other_choice == reactionary_candidate_1932 or hindenburg_run) and reactionary_candidate_1932: - **Прочие** ?]
+
+[? if secondary_reactionary_candidate_1932: [? if hindenburg_run: <span style="color: #808080;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if (secondary_reactionary_candidate_1932 == "Luther" or secondary_reactionary_candidate_1932 == "Gessler" or secondary_reactionary_candidate_1932 == "Jarres") and lvp_formed: <span style="color: #FFCC00;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if (secondary_reactionary_candidate_1932 == "Luther" or secondary_reactionary_candidate_1932 == "Jarres") and not lvp_formed: <span style="color: #C0A054;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if secondary_reactionary_candidate_1932 == "Gessler" and not lvp_formed: <span style="color: #D3C24D;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if (secondary_reactionary_candidate_1932 == "Lettow-Vorbeck" or secondary_reactionary_candidate_1932 == "Westarp") and not kvp_formed: <span style="color: #3E88B3;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if ((secondary_reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Westarp") and kvp_formed: <span style="color: #0087DC;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if secondary_reactionary_candidate_1932 == "Adenauer" or secondary_reactionary_candidate_1932 == "Brüning" or secondary_reactionary_candidate_1932 == "Stegerwald": <span style="color: #000000;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?] — поддерживают: ?]
+
+[? if spd_support_reactionary_2 and reactionary_candidate_1932: - <span style="color: #c00000;">**СДПГ**</span> ?]
+
+[? if z_support_spd != 1 and (z_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and secondary_reactionary_candidate_1932: - [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] ?]
+
+[? if (z_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and not bvp_support_spd and secondary_reactionary_candidate_1932: - <span style="color: #A2D8E0;">**БНП**</span> ?]
+
+[? if (lvp_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and lvp_support_spd != 1 and lvp_formed and secondary_reactionary_candidate_1932: - <span style="color: #FFCC00;">**ЛНП**</span> ?]
+
+[? if (ddp_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and ddp_support_spd != 1 and not lvp_formed and secondary_reactionary_candidate_1932: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
+
+[? if (dvp_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and dvp_support_spd != 1 and not lvp_formed and secondary_reactionary_candidate_1932: - <span style="color: #C0A054;">**ННП**</span> ?]
+
+[? if (kvp_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and kvp_formed and secondary_reactionary_candidate_1932: - <span style="color: #0087DC;">**КНП**</span> ?]
+
+[? if (dnvp_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and dnvp_ideology == "Moderate" and not cvp_formed and secondary_reactionary_candidate_1932: - <span style="color: #3E88B3;">**НННП**</span> ?]
+
+[? if (other_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and secondary_reactionary_candidate_1932: - **Прочие** ?]
+
+[? if nsdap_candidate_1932: <span style="color: #7A3C00;">**[+ nsdap_candidate_1932_disp +]**</span> — поддерживают: ?]
+
+[? if nsdap_candidate_1932: - <span style="color: #7A3C00;">**НСДАП**</span> ?]
+
+[? if kpd_support_spd == 0 and communist_candidate_1932: <span style="color: #700000;">**[+ communist_candidate_1932_disp +]**</span> — поддерживают: ?]
+
+[? if kpd_support_spd == 0 and communist_candidate_1932: - <span style="color: #700000;">**КПГ**</span> ?]
+
+[? if kpd_support_spd == 0 and communist_candidate_1932 and sapd_formed: - <span style="color: #9B0000;">**СРПГ**</span> ?]
+
+[? if spd_support_thalmann == 1: - <span style="color: #c00000;">**СДПГ**</span> ?]
+
+[? if dnvp_candidate_1932: [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**[+ dnvp_candidate_1932_disp +]**</span> ?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**[+ dnvp_candidate_1932_disp +]**</span> ?] — поддерживают: ?]
+
+[? if dnvp_candidate_1932 and dnvp_ideology == "Radical": - <span style="color: #3E88B3;">**НННП**</span> ?]
+
+[? if dnvp_candidate_1932 and dnvp_ideology == "Moderate": - <span style="color: #003755;">**НФГ**</span> ?]
+
+- @campaigning_braun: Пора начинать предвыборную кампанию!
+- @campaigning_rosenfeld: Пора начинать предвыборную кампанию!
+- @campaigning_hindenburg: Пора начинать предвыборную кампанию!
+- @campaigning_thalmann: Пора начинать предвыборную кампанию!
+
+
+@campaigning_braun
+view-if: braun_campaign
+
+В нашем распоряжении множество вариантов ведения кампании.
+
+- @iron_front
+- @media
+- @center_glaze
+- @communist_glaze
+- @campaigning
+- @campaigning_hindenburg_op: Теперь очередь Гинденбурга вести кампанию.
+
+
+@iron_front
+title: Мобилизовать все силы <span style="color: #c00000;">**Железного**</span> <span style="color: #1A1A1A;">**фронта**</span> для поддержки Брауна.
+view-if: iron_front_formed
+on-arrival: radicalization = 3 if radicalization > 3; workers_spd += radicalization + 3; new_middle_spd += radicalization + 2; unemployed_spd += radicalization + 2; pro_republic += 3; nationalism -= 3; neorevisionist_dissent -= 10; neorevisionist_strength += 10; left_dissent -= 10; rb_strength += 100; workers_nsdap -= 3 if strife >= 5 and far_right_paramilitary; new_middle_nsdap -= 3 if strife >= 5 and far_right_paramilitary; unemployed_nsdap -= 3 if strife >= 5 and far_right_paramilitary
+max-visits: 1
+face-image: img/iron_front_poster.png
+go-to: campaigning_braun
+
+Наш <span style="color: #c00000;">**Железный **</span> <span style="color: #1A1A1A;">**Фронт**</span> немедленно приступает к работе, объединяясь под лозунгом борьбы с <span style="color: #7A3C00;">фашизмом</span>, <span style="color:rgb(90, 0, 0);">сталинизмом</span> и <span style="color: #808080;">монархизмом</span>, что особенно актуально на этих выборах.
+
+
+@media
+title: Использовать наши радиостанции для агитации в поддержку Брауна.
+subtitle: -1 ресурс
+choose-if: radio >= 2 and resources >= 1
+unavailable-subtitle: [? if radio < 2: Мы ещё не создали достаточно развитую радиоинфраструктуру. ?] [? if resources < 1: Недостаточно ресурсов. ?]
+on-arrival: resources -= 1; new_middle_spd += (radio + commercialized_media); old_middle_spd += (radio + commercialized_media); workers_spd += (campaign_media + radio - 2); unemployed_spd += (campaign_media + radio); new_middle_nsdap -= (radio + commercialized_media); old_middle_nsdap -= (radio + commercialized_media); workers_nsdap -= (campaign_media + radio - 2); unemployed_nsdap -= (campaign_media + radio); socialism += 3; nationalism -= 1; nationalism -= 2 if pacifism > 1; pro_republic += (radio + commercialized_media)
+face-image: img/poster_0.jpg
+max-visits: 1
+go-to: campaigning_braun
+
+Мы можем транслировать по радио обращения с призывом голосовать за Брауна, донося наши идеи до среднего класса в надежде преодолеть их неприязнь к <span style="color: #c00000;">социализму</span>.
+
+
+@center_glaze
+title: Мы убеждаем [? if z_party_name != "CVP": <span style="color: #000000;">Центр</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] принять более активное участие в нашей кампании.
+subtitle: The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] не вносит достаточный вклад. -1 к ресурсам
+choose-if: z_support_spd == 1 and ((z_relation >= 60 and z_ideology == "Right") or (z_relation >= 45 and z_ideology == "Left")) and resources >= 1
+unavailable-subtitle: [? if z_support_spd != 1: The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] не поддерживает Брауна. ?][? if (z_relation < 60 and z_ideology == "Right") or (z_relation < 45 and z_ideology == "Left"): У нас недостаточно хорошие отношения. ?] [? if resources < 1: Недостаточно ресурсов. ?]
+on-arrival: resources -= 1; pro_republic += 3; z_glaze_spd = 1; catholics_nsdap -= 3; catholics_spd += 3; catholics_z += 2; rural_spd += 1; z_relation += 5; ddp_left += 2; dvp_left += 3; ddp_cohesion += 1; lvp_left += 2
+face-image: img/center_poster.jpg
+max-visits: 1
+go-to: campaigning_braun
+
+The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] не самая ярая сторонница Брауна. Однако, используя наши связи с её левым крылом и профсоюзами, мы можем подтолкнуть её к более активному участию в кампании. Это должно помочь Брауну получить больше голосов от её электората.
+
+
+@communist_glaze
+title: Мы убеждаем <span style="color: #700000;">**коммунистов**</span> принять более активное участие в нашей кампании.
+subtitle: Это оттолкнёт избирателей из буржуазии! -2 ресурса
+choose-if: kpd_support_spd == 1 and (kpd_relation >= 70 or (kpd_relation >= 55 and kpd_leader == "Conciliators")) and resources >= 2
+unavailable-subtitle: [? if kpd_support_spd != 1: <span style="color: #700000;">КПГ</span> не поддерживает Брауна. ?][? if (kpd_relation < 70 or (kpd_relation < 55 and kpd_leader == "Conciliators")): Наши отношения недостаточно хороши. ?] [? if resources < 2: Недостаточно ресурсов (требуется 2). ?]
+on-arrival: resources -= 2; kpd_glaze_spd = 1; workers_spd += 3; workers_kpd += 5; workers_nsdap -= 3; unemployed_kpd += 3; unemployed_nsdap -= 3; z_relation -= 10; ddp_relation -= 10; dvp_relation -= 10; lvp_relation -= 10; dvp_right += 5; ddp_right += 3; ddp_cohesion -= 2; lvp_right += 5; z_support_spd = 0 if (z_relation < 60 and z_ideology == "Right") or (z_relation < 50 and z_ideology == "Left"); new_middle_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3
+face-image: img/kpd_poster.jpg
+max-visits: 1
+go-to: campaigning_braun
+
+Несмотря на наши прежние настояния о том, чтобы поддержка <span style="color: #700000;">**коммунистов**</span> оставалась негласной, мы пришли к выводу: их полная поддержка на предстоящих выборах оправдывает риск оттолкнуть буржуазных <span style="color: #000000;">респу</span><span style="color: #DD0000;">бли</span><span style="color: #FFCC00;">канцев</span>. В результате мы теперь открыто участвуем в совместных митингах в поддержку Брауна.
+
+[? if (z_relation < 60 and z_ideology == "Right") or (z_relation < 50 and z_ideology == "Left"): The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] отозвала свою поддержку Брауна, если её оказывала. ?]
+
+
+@campaigning
+title: Активизировать кампанию в целом.
+subtitle: Это будет стоить нам 1 ед. ресурсов.
+view-if: not campaigning_seen
+choose-if: resources >= 1
+unavailable-subtitle: Недостаточно ресурсов.
+on-arrival: resources -= 1; campaigning_seen = 1; campaigning_count = 0
+max-visits: 1
+go-to: campaign_menu
+
+
+
+
+@campaign_menu
+
+Поскольку сейчас время выборов, мы можем усилить агитацию. Купите одну кампанию — и получите вторую совершенно бесплатно!
+
+- @workers: Добавить 1 «Рабочих» в корзину.
+- @middle_class: Добавить 1 «Средний класс» в корзину.
+- @rural: Добавить 1 «Сельский жителей» в корзину.
+- @unemployed: Добавить «Безработных» в корзину.
+- @catholics: Добавить «Католиков» в корзину.
+- @checkout
+
+
+@workers
+view-if: campaigning_count < 2
+on-arrival: workers_spd += 3*(1 - dissent); campaigning_count += 1
+go-to: campaign_menu
+
+
+
+
+@middle_class
+view-if: campaigning_count < 2
+on-arrival: new_middle_spd += 3*(1 - dissent); old_middle_spd += 3*(1 - dissent); new_middle_spd += 2*(1 - dissent) if peoples_party; old_middle_spd += 2*(1 - dissent) if peoples_party; campaigning_count += 1
+go-to: campaign_menu
+
+
+
+
+@rural
+view-if: campaigning_count < 2
+on-arrival: rural_spd += 3*(1 - dissent); rural_spd += 3*(1 - dissent) if peoples_party; campaigning_count += 1
+go-to: campaign_menu
+
+
+
+
+@unemployed
+view-if: campaigning_count < 2
+on-arrival: unemployed_spd += 3*(1 - dissent); campaigning_count += 1
+go-to: campaign_menu
+
+
+
+
+@catholics
+view-if: campaigning_count < 2 and peoples_party
+on-arrival: catholics_spd += 3*(1 - dissent); campaigning_count += 1
+go-to: campaign_menu
+
+
+
+
+@checkout
+title: Оформить заказ.
+go-to: campaigning_braun if braun_campaign; campaigning_rosenfeld if rosenfeld_campaign; campaigning_thalmann if spd_support_thalmann; campaigning_hindenburg_2 if spd_support_reactionary
+
+
+
+
+@hope
+
+И куда привела нас надежда за последние несколько лет?
+
+
+@campaigning_rosenfeld
+view-if: rosenfeld_campaign
+
+Нам доступно множество вариантов ведения кампании.
+
+- @iron_front_rosenfeld
+- @media_rosenfeld
+- @party_discipline_rosenfeld
+- @communist_glaze_rosenfeld
+- @campaigning
+- @campaigning_hindenburg_op: Теперь очередь Гинденбурга вести кампанию.
+
+
+@iron_front_rosenfeld
+title: Мобилизовать все силы <span style="color: #c00000;">**Железного**</span> <span style="color: #1A1A1A;">**фронта**</span> для поддержки Розенфельда.
+view-if: iron_front_formed
+on-arrival: radicalization = 3 if radicalization > 3; workers_spd += radicalization + 3; new_middle_spd += radicalization + 2; unemployed_spd += radicalization + 2; pro_republic += 3; nationalism -= 3; neorevisionist_dissent -= 10; neorevisionist_strength += 10; left_dissent -= 10; rb_strength += 100; workers_nsdap -= 3 if strife >= 5 and far_right_paramilitary; new_middle_nsdap -= 3 if strife >= 5 and far_right_paramilitary; unemployed_nsdap -= 3 if strife >= 5 and far_right_paramilitary
+max-visits: 1
+face-image: img/iron_front_poster.png
+go-to: campaigning_rosenfeld
+
+The <span style="color: #c00000;">**Железный**</span> <span style="color: #1A1A1A;">**фронт**</span> немедленно приступает к работе, объединившись вокруг своего лозунга противостояния <span style="color: #7A3C00;">фашизму</span> и <span style="color: #808080;">монархизму</span>, что особенно актуально на этих выборах. Это поможет нам укрепить поддержку среди сомневающихся рабочих.
+
+
+@media_rosenfeld
+title: Использовать наши радиостанции для агитации за Розенфельда.
+subtitle: -1 ресурс
+choose-if: radio >= 2 and resources >= 1
+unavailable-subtitle: [? if radio < 2: Мы ещё не создали достаточно развитую радиосеть. ?] [? if resources < 1: Недостаточно ресурсов. ?]
+on-arrival: resources -= 1; media_rosenfeld_seen = 1; new_middle_spd += (radio + commercialized_media); old_middle_spd += (radio + commercialized_media); workers_spd += (campaign_media + radio - 2); unemployed_spd += (campaign_media + radio); new_middle_kpd += 3; socialism += 3; nationalism -= 3
+face-image: img/poster_0.jpg
+max-visits: 1
+go-to: campaigning_rosenfeld
+
+Мы можем транслировать по радио обращения с призывом голосовать за Розенфельда, донося наши идеи до среднего класса в надежде преодолеть его неприязнь к <span style="color: #c00000;">социализму</span> и особенно к Розенфельду.
+
+
+@party_discipline_rosenfeld
+title: Укрепить партийную дисциплину.
+subtitle: Некоторые реформистские местные организации недорабатывают.
+choose-if: dissent < 0.15
+unavailable-subtitle: [? if dissent >= 0.15: Уровень внутренних разногласий слишком высок. ?]
+on-arrival: party_rosenfeld_seen = 1
+face-image: img/poster_2.jpg
+max-visits: 1
+go-to: campaigning_rosenfeld
+
+Нам нужен единый фронт, чтобы победить на этих выборах, — фракционная борьба в партии должна отойти на второй план.
+
+
+@communist_glaze_rosenfeld
+title: Убедить <span style="color: #700000;">**коммунистов**</span> принять более активное участие в нашей агитационной работе.
+subtitle: Это оттолкнёт буржуазные партии! -1 ресурс
+choose-if: kpd_support_spd == 1 and (kpd_relation >= 60 or (kpd_relation >= 40 and kpd_leader == "Conciliators")) and resources >= 1
+unavailable-subtitle: [? if kpd_support_spd != 1: <span style="color: #700000;">КПГ</span> не поддерживает Розенфельда. ?][? if (kpd_relation < 60 or (kpd_relation < 40 and kpd_leader == "Conciliators")): Наши отношения недостаточно хороши. ?] [? if resources < 1: Недостаточно ресурсов. ?]
+on-arrival: resources -= 1; kpd_glaze_spd = 1; workers_spd += 3; workers_kpd += 5; workers_nsdap -= 3; unemployed_kpd += 3; unemployed_nsdap -= 3; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5; lvp_relation -= 5; dvp_right += 3; ddp_right += 1; ddp_cohesion -= 1; lvp_right += 3; new_middle_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3
+face-image: img/kpd_poster.jpg
+max-visits: 1
+go-to: campaigning_rosenfeld
+
+В результате мы теперь открыто участвуем в совместных митингах в поддержку Розенфельда. Эта демонстрация <span style="color: #9B0000;">марксистского</span> единства закономерно тревожит буржуазные партии, но может привести и к обратному эффекту — подтолкнуть ещё больше избирателей к их кандидату.
+
+
+@campaigning_hindenburg
+on-arrival: {!
+if (Q.industrial_total_backing) {
+    Q.hindenburg_funds += Q.industrial_ddp_backing;
+    Q.hindenburg_funds += Q.industrial_lvp_backing;
+    Q.hindenburg_funds += Q.industrial_dvp_backing;
+    Q.hindenburg_funds += Q.industrial_dnvp_backing;
+    Q.hindenburg_funds += ((100 - Q.nsdap_votes) / 25);
+    if (Q.spd_in_government) Q.hindenburg_funds += ((100 - Q.kpd_votes) / 10);
+}
+Q.hindenburg_funds_old = Q.hindenburg_funds;
+!}
+view-if: spd_support_reactionary
+go-to: embezzlement_options
+
+Финансы кампании Гинденбурга в полном беспорядке. Влиятельные промышленники и лидеры деловых кругов удерживают значительные пожертвования из-за того, что правые считают его предателем. Долг в пять миллионов рейхсмарок с его кампании 1925 года до сих пор не выплачен, а для покрытия организационных расходов требуются дополнительные средства. [? if hindenburg_funds < 5: Попытки собрать деньги с партий, поддерживающих переизбрание Гинденбурга, ещё больше осложняются их собственными финансовыми трудностями. Многие из них уже исчерпали свои ресурсы и тщательно берегут то немногое, что осталось, для предстоящих земельных выборов в конце апреля. ?][? if hindenburg_funds >= 5: Сбору средств также мешает позиция партий, поддерживающих переизбрание Гинденбурга: они предпочитают приберечь деньги для грядущих земельных выборов в конце апреля, так как уверены в его победе. ?]
+
+
+@embezzlement_options
+
+- @embezzle
+- @embezzle_2
+- @embezzle_3
+- @embezzle_4
+- @campaigning_hindenburg_2: Проблема с финансированием решена.
+
+
+@embezzle
+title: Гюнтер Гереке чудесным образом раздобыл миллионы рейхсмарок из неизвестного источника.
+view-if: bruning_time or chancellor == "Goerdeler"
+max-visits: 1
+on-arrival: hindenburg_funds += 3; new_middle_kvp += 2; old_middle_kvp += 2; rural_kvp += 4; new_middle_dnvp += 2 if dnvp_ideology == "Moderate"; old_middle_dnvp += 2 if dnvp_ideology == "Moderate"; rural_dnvp += 4 if dnvp_ideology == "Moderate"; rural_other += 4 if not kvp_formed; rural_nsdap -= 4 if rural_nsdap_normalized >= 35; pro_republic += 3; embezzle_1 = 1
+go-to: embezzlement_options
+
+Гюнтер Гереке, член [? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Radical": <span style="color: #7FCEB1;">**ХНПКЗ**</span> ?], ответственный за сбор средств для кампании Гинденбурга, сумел привлечь и направить в кампанию семь миллионов марок — хотя часть этих средств перенаправлена в его собственную партию. Объёма одних лишь частных и корпоративных пожертвований недостаточно, чтобы покрыть расходы кампании: очевидна роль государственного финансирования.
+
+
+@embezzle_2
+title: Встретьтесь с кабинетом Брюнинга и добейтесь государственного финансирования для прусского правительства с целью обеспечить переизбрание Гинденбурга.
+subtitle: [? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?][? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]: её видный член и вице-канцлер Герман Дитрих проявил к нам дружелюбие. +3 к ресурсам
+unavailable-subtitle: <span style="color: #c00000;">СДПГ</span> не контролирует Пруссию.
+view-if: bruning_time
+choose-if: spd_prussia
+on-arrival: hindenburg_funds += 1; resources += 3; ddp_relation += 5; z_relation += 3; lvp_relation += 3; ddp_left += 1; pro_republic += 3; new_middle_ddp += 2; old_middle_ddp += 2; new_middle_dvp += 2 if dvp_ideology != "Right"; old_middle_dvp += 2 if dvp_ideology != "Right"; new_middle_lvp += 2; old_middle_lvp += 2; new_middle_nsdap -= 2 if new_middle_nsdap_normalized >= 40; old_middle_nsdap -= 2 if old_middle_nsdap_normalized >= 40; prussian_police_loyalty += 0.05; prussian_police_strength += 20; rb_militancy += 0.05; sa_strength -= 50; embezzle_2 = 1
+max-visits: 1
+go-to: embezzlement_options
+
+На встрече с канцлером Брюнингом, министром обороны Грёнером, генералом Шлейхером, министром финансов и вице-канцлером Германом Дитрихом и нашим соратником Карлом Зеверингом обсуждались предстоящие президентские выборы и организация эффективной пропагандистской кампании в поддержку Гинденбурга. Зеверинг обрисовал угрозу, которую <span style="color: #7A3C00;">нацизм</span> — особенно <span style="color: #7A3C00;">**СА**</span> — представляли для государственной власти, и подчеркнул решающую роль выборов в сдерживании <span style="color: #7A3C00;">нацистов</span>.
+
+Все присутствовавшие согласились, что убедительная победа Гинденбурга и проведение кампании без насильственных беспорядков значительно ускорят экономическое восстановление и внутриполитическую стабилизацию в Германии. Однако для этого требовалось использовать государственные средства. Сам Дитрих горячо выступал за это, тайно переведя 1,8 миллиона марок Зеверингу и прусскому правительству с тем условием, что средства будут распределены между различными прогинденбургскими организациями в Пруссии. Такой подход позволил Дитриху и правительству поддержать прогинденбургские группы, не входящие в правые «Объединённые комитеты в поддержку Гинденбурга».
+
+
+@embezzle_3
+title: Мы используем госаппарат, чтобы профинансировать переизбрание Гинденбурга.
+view-if: spd_in_government and not bruning_time
+max-visits: 1
+on-arrival: hindenburg_funds += 3; new_middle_kvp += 2; old_middle_kvp += 2; rural_kvp += 4; new_middle_dnvp += 2 if dnvp_ideology == "Moderate"; old_middle_dnvp += 2 if dnvp_ideology == "Moderate"; rural_dnvp += 4 if dnvp_ideology == "Moderate"; rural_other += 4 if not kvp_formed; rural_nsdap -= 4 if rural_nsdap_normalized >= 35; pro_republic += 3; embezzle_1 = 1
+go-to: embezzlement_options
+
+Мы связались с Гюнтером Гереке, членом [? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Radical": <span style="color: #7FCEB1;">**ХНПКЗ**</span> ?], ответственным за сбор средств для кампании Гинденбурга, и передали ему крупное пожертвование, чтобы обеспечить выделение и выплату пяти миллионов марок на кампанию, — хотя часть этих средств перенаправлена в его собственную партию. Это событие порадовало и Шлейхера, и самого Гинденбурга, которые никак не ожидали, что мы предпочтём направить государственные средства на политическую кампанию, а не еду детям. Впрочем, общественность об этом никогда не узнает.
+
+
+@embezzle_4
+title: Наше правительство в Пруссии выделит средства прогинденбургским организациям.
+subtitle: Это потребует финансирования буржуазных партий.
+view-if: spd_prussia and not bruning_time
+max-visits: 1
+on-arrival: hindenburg_funds += 1; ddp_relation += 5; z_relation += 5; lvp_relation += 5; ddp_left += 1; pro_republic += 3; new_middle_ddp += 3; old_middle_ddp += 3; new_middle_dvp += 3 if dvp_ideology != "Right"; old_middle_dvp += 3 if dvp_ideology != "Right"; new_middle_lvp += 3; old_middle_lvp += 3; new_middle_nsdap -= 3 if new_middle_nsdap_normalized >= 40; old_middle_nsdap -= 3 if new_middle_nsdap_normalized >= 40; rural_other += 3; rb_militancy += 0.06; sa_strength -= 50; embezzle_2 = 1
+go-to: embezzlement_options
+
+Мы встретились с политиками из[? if lvp_formed: <span style="color: #FFCC00;">ЛНП</span> ?][? if not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span> ?], the [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] , Рейхсбаннера и даже нескольких <span style="color: #000000;">рес</span><span style="color: #DD0000;">пуб</span><span style="color: #FFCC00;">ликанских</span> крестьянских союзов. Мы договорились о выделении прусских государственных средств их группам, что укрепит кампанию Гинденбурга среди тех, кто не вошёл в официальный комитет, а также улучшит наши отношения с этими фракциями.
+
+
+@campaigning_hindenburg_2
+on-arrival: {!
+if (Q.hindenburg_funds >= 5 && !Q.industrial_hindenburg) {
+    Q.new_middle_kvp += Q.hindenburg_funds / 2;
+    Q.old_middle_kvp += Q.hindenburg_funds / 2;
+    Q.rural_kvp += Q.hindenburg_funds / 2;
+    if (Q.dnvp_ideology == "Moderate") {
+        Q.new_middle_dnvp += Q.hindenburg_funds / 2;
+        Q.old_middle_dnvp += Q.hindenburg_funds / 2;
+        Q.rural_dnvp += Q.hindenburg_funds / 3;
+    }
+    Q.new_middle_other += Q.hindenburg_funds / 3;
+    Q.old_middle_other += Q.hindenburg_funds / 3;
+    Q.rural_other += Q.hindenburg_funds / 3;
+    Q.new_middle_dvp += Q.hindenburg_funds / 3;
+    Q.old_middle_dvp += Q.hindenburg_funds / 3;
+    Q.rural_dvp += Q.hindenburg_funds / 4;
+    Q.new_middle_lvp += Q.hindenburg_funds / 2;
+    Q.old_middle_lvp += Q.hindenburg_funds / 2;
+    Q.rural_lvp += Q.hindenburg_funds / 4;
+}
+Q.industrial_hindenburg = 1;
+!}
+view-if: hindenburg_funds >= hindenburg_funds_old + 3
+
+В нашем распоряжении множество вариантов ведения кампании.
+
+- @iron_front_hindenburg
+- @media_hindenburg
+- @for_democracy
+- @against_communists
+- @campaigning
+- @bourgeois_campaign: Будем надеяться, что буржуазные партии возьмут на себя остальную работу.
+
+
+@iron_front_hindenburg
+title: Сплотить все силы <span style="color: #c00000;">**Железного**</span> <span style="color: #1A1A1A;">**фронта**</span> для поддержки Гинденбурга.
+view-if: iron_front_formed
+on-arrival: radicalization = 3 if radicalization > 3; workers_spd += radicalization + 2; new_middle_spd += radicalization + 1; unemployed_spd += radicalization + 1; pro_republic += 3; nationalism -= 3; neorevisionist_dissent -= 10; neorevisionist_strength += 10; rb_strength += 100; workers_nsdap -= 2 if strife >= 5 and far_right_paramilitary; new_middle_nsdap -= 2 if strife >= 5 and far_right_paramilitary; unemployed_nsdap -= 2 if strife >= 5 and far_right_paramilitary
+max-visits: 1
+face-image: img/iron_front_poster.png
+go-to: campaigning_hindenburg_2
+
+The <span style="color: #c00000;">**Железный**</span> <span style="color: #1A1A1A;">**фронт**</span> немедленно приступает к работе, объединившись вокруг лозунга противостояния <span style="color: #7A3C00;">фашизму</span> и <span style="color:rgb(90, 0, 0);">сталинизму</span>. Хотя многие левые в альянсе неохотно поддерживают <span style="color: #808080;">реакционера</span> Гинденбурга.
+
+
+@media_hindenburg
+title: Использовать наши радиостанции для агитации за Гинденбурга.
+subtitle: -1 ресурс
+choose-if: radio >= 2 and resources >= 1
+unavailable-subtitle: [? if radio < 2: Мы ещё недостаточно развили нашу радиоинфраструктуру. ?] [? if resources < 1: Недостаточно ресурсов. ?]
+on-arrival: resources -= 1; new_middle_spd += (radio + commercialized_media); old_middle_spd += (radio + commercialized_media); workers_spd += (campaign_media + radio - 2); unemployed_spd += (campaign_media + radio); socialism += 3; nationalism -= 1; nationalism -= 2 if pacifism > 1; pro_republic += (radio + commercialized_media)
+face-image: img/poster_0.jpg
+max-visits: 1
+go-to: campaigning_hindenburg_2
+
+Мы можем транслировать радиообращения, призывающие голосовать за Гинденбурга, и доносить наши идеи до среднего класса в надежде преодолеть его радикализацию, вызванную экономическим кризисом.
+
+
+@for_democracy
+title: Митинг в поддержку демократии и <span style="color: #000000;">Вей</span><span style="color: #DD0000;">мар</span><span style="color: #FFCC00;">ской</span> республики.
+subtitle: Мы можем оттолкнуть некоторых из более <span style="color: #808080;">реакционно</span> настроенных сторонников Гинденбурга. -1 ресурс
+choose-if: resources >= 1
+unavailable-subtitle: Недостаточно ресурсов.
+on-arrival: resources -= 1; hindenburg_democracy_bonus = 1; pro_republic += 5; center_dissent -= 5; labor_dissent -= 5; neorevisionist_dissent -= 5; reformist_dissent -= 5; left_dissent -= 5; workers_spd += 3*(1-dissent) if democratization >= 3; unemployed_spd += 3*(1-dissent) if democratization >= 3; pro_republic += 2*(1 - dissent) if democratization >= 3; new_middle_spd += 3*(1-dissent) if democratization >= 3; hindenburg_angry += 10; hindenburg_angry_bruning += 10; z_relation += 3; ddp_relation += 3; lvp_relation += 3
+face-image: img/weimar_coalition.jpg
+max-visits: 1
+go-to: campaigning_hindenburg_2
+
+Мы убеждаем своих сторонников, что, несмотря на общеизвестные <span style="color: #808080;">реакционные</span> взгляды Гинденбурга, он воздерживается от прямого демонтажа нашей демократии, и что его поддержка как меньшего из зол необходима. Однако наша активная кампания в поддержку президента Гинденбурга дискредитировала его в глазах его <span style="color: #808080;">реакционных</span> сторонников, изначально голосовавших за него в 1925 году. Это усилило желание Гинденбурга дистанцироваться от нашей поддержки, сместившись ещё правее.
+
+
+@against_communists
+title: Сосредоточить кампанию против <span style="color: #700000;">**коммуниста **</span> [+ communist_candidate_1932 +].
+subtitle: Он заручился значительной поддержкой, позиционируя себя как «единственного левого кандидата». –1 ресурс
+choose-if: resources >= 1
+unavailable-subtitle: Недостаточно ресурсов.
+on-arrival: resources -= 1; left_dissent -= 10; workers_spd += 3; workers_kpd -= 3; kpd_relation -= 10; hindenburg_angry -= 10; hindenburg_angry_bruning -= 10
+face-image: img/social_fascist.jpg
+max-visits: 1
+go-to: campaigning_hindenburg_2
+
+Тревожно большое число наших избирателей перешло на сторону <span style="color: #700000;">**коммунистов**</span> из-за нашей поддержки <span style="color: #808080;">реакционного</span> президента Гинденбурга. Чтобы обеспечить Гинденбургу абсолютное большинство в первом туре, мы должны предотвратить дальнейший отток голосов.
+
+
+@bourgeois_campaign
+on-arrival: {!
+Q.hindenburg_unity = 10;
+if (Q.hindenburg_angry_bruning >= 75) Q.hindenburg_unity -= 1;
+if (Q.dvp_defect) Q.hindenburg_unity -= 1;
+if (Q.cnblp_defect) Q.hindenburg_unity -= 1;
+if (Q.second_bruning_cabinet_seen) Q.hindenburg_unity -= 1;
+if (Q.spd_support_reactionary) Q.hindenburg_unity -= 3;
+if (Q.nsdap_votes >= 20) Q.hindenburg_unity -= 1;
+if (Q.nsdap_votes >= 30) Q.hindenburg_unity -= 1;
+if (Q.nsdap_votes >= 35) Q.hindenburg_unity -= 1;
+if (Q.spd_campaign || Q.spd_support_thalmann || Q.kpd_support_spd) Q.hindenburg_unity += 3;
+!}
+go-to: bourgeois_campaign_menu
+
+Объединенные комитеты Гинденбурга приступили к работе по улучшению отношения умеренно-правых немецких избирателей к президенту Гинденбургу, чья репутация Героя Танненберга подорвана его поддержкой ненавистной <span style="color: #000000;">Вей</span><span style="color: #DD0000;">мар</span><span style="color: #FFCC00;">ской</span> системы. Несмотря на это, <span class="tooltip-text" title="После сокрушительной победы Германии под Танненбергом в Великой войне, одержанной под руководством Гинденбурга, он стал центром масштабного культа личности. Его превозносят как живое воплощение немецкой мужественности и патриотизма. Он — олицетворение лучших добродетелей прусской традиции.">Миф о Гинденбурге</span> остается непоколебимым[? if nsdap_candidate_1932 == "Hitler": , и, возможно, это единственное, что может соперничать с харизмой Гитлера ?].
+
+Теперь их очередь агитировать.
+
+Уровень единства в лагере Гинденбурга: [+ hindenburg_unity : hindenburg_unity +]
+
+
+@bourgeois_campaign_menu
+on-arrival: {!
+if (Q.z_support_spd != 1) Q.religion_available = 1;
+!}
+
+- @eckener
+- @industrial
+- @religion
+- @westarp
+- @organizational_endorsements
+
+
+@eckener
+title: Для кампании привлечён знаменитый капитан дирижаблей Гуго Эккенер.
+subtitle: Будучи верным сторонником президента, он будет использовать *Граф Цеппелин*в кампании.
+on-arrival: eckener_used = 1
+max-visits: 1
+go-to: eckener_2 if hindenburg_unity >= 8; eckener_3 if hindenburg_unity < 8
+
+
+@eckener_2
+on-arrival: hindenburg_support += 2
+go-to: bourgeois_campaign_menu
+
+В попытке посоперничать с <span class="tooltip-text" title="отличный мод">динамизмом</span> <span style="color: #7A3C00;">нацистской</span> кампании, в ходе которой использовались самолеты для быстрой переброски видных <span style="color: #7A3C00;">нацистских</span> лидеров, что позволяло им выступать с речами до четырех раз в день, Гуго Эккенера убедили совершить агитационный полет по Германии, чтобы заручиться народной поддержкой для Гинденбурга.
+
+
+@eckener_3
+on-arrival: unemployed_nsdap += 6; unemployed_kpd -= 3; unemployed_spd -= 3
+go-to: bourgeois_campaign_menu
+
+Пытаясь не уступить в динамичности кампании <span style="color: #7A3C00;">нацистов</span>, штаб Гинденбурга сперва пытался убедить пилота дирижабля «Граф Цеппелин» Гуго Эккенера облететь Германию в поддержку Гинденбурга. Однако у Эккенера уже запланирован рейс в Южную Америку, поэтому штабу пришлось искать другой подход. Решили арендовать самолёты и сбросить двадцать миллионов листовок для населения Германии. Однако этого недостаточно, чтобы противостоять стилю кампании <span style="color: #7A3C00;">нацистов</span>.
+
+
+@industrial
+title: Карл Дуйсберг из IG Farben попытается заручиться поддержкой ключевых промышленников.
+subtitle: Гинденбург лишился поддержки многих своих прежних сторонников, но, возможно, их удастся переубедить?
+on-arrival: industry_used = 1
+max-visits: 1
+go-to: industrial_2 if hindenburg_unity >= 5; industrial_3 if hindenburg_unity < 5
+
+Карлу Дуйсбергу, председателю Объединённых комитетов в поддержку Гинденбурга, в основном не удалось убедить лидеров крупного бизнеса подписать петицию о переизбрании Гинденбурга, но, возможно, значимость этих выборов поможет их переубедить?
+
+
+@industrial_2
+on-arrival: hindenburg_support += 2
+go-to: bourgeois_campaign_menu
+
+Дуйсбергу, бывшему председателю Имперского союза германской промышленности (RDI) и одному из наиболее умеренных его членов, удалось собрать пожертвования от многих представителей деловых кругов, которые сомневались, стоит ли вновь поддерживать Гинденбурга. Радикальная революционная и социалистическая политика <span style="color: #7A3C00;">**НСДАП**</span> отбила у них всякое желание финансировать её и [+ nsdap_candidate_1932 +]а. Теперь, похоже, у избирательного штаба Гинденбурга наконец-то есть средства для создания полноценной предвыборной инфраструктуры, способной соперничать с усилиями Геббельса и <span style="color: #7A3C00;">нацистов</span>.
+
+
+@industrial_3
+on-arrival: old_middle_nsdap += 4; old_middle_kvp -= 2; old_middle_dnvp -= 2 if industrial_dnvp_backing >= 2 and dnvp_ideology == "Moderate"; old_middle_other -= 4; rural_nsdap += 2
+go-to: bourgeois_campaign_menu
+
+Несмотря на антипатию, которую промышленники испытывают к [? if not hitler_deported: Гитлеру и ?]<span style="color: #7A3C00;">**НСДАП**</span>, из-за их крипто-<span style="color: #c00000;">социалистической</span> политики, значительная их часть решительно настроена против Гинденбурга и откажется от пожертвований. Кампания Гинденбурга начинает сильно отставать от <span style="color: #7A3C00;">**НСДАП**</span> в сельской местности, в основном из-за нехватки ресурсов.
+
+
+@religion
+title: Католическая и лютеранская церкви давно придерживаются политического нейтралитета. Может, это изменится?
+view-if: z_support_spd != 1
+on-arrival: religion_used = 1; catholics_z += 4 if catholics_z_normalized < 50; catholics_nsdap -= 4 if catholics_z_normalized < 50 and catholics_nsdap_normalized >= 8;
+max-visits: 1
+go-to: religion_2 if hindenburg_unity >= 3; religion_3 if hindenburg_unity < 3
+
+Видные деятели лютеранской церкви поддержали президента Гинденбурга, заявив, что, несмотря на исторически сложившийся политический нейтралитет, его переизбрание — насущная необходимость. Тем временем католическая церковь сплотилась в поддержке Гинденбурга даже сильнее, чем в 1925 году в поддержке Вильгельма Маркса. Католические лидеры, исторически скептически относившиеся к <span style="color: #7A3C00;">нацизму</span>, активно отговаривали своих прихожан от вступления в <span style="color: #7A3C00;">нацистские</span> военизированные организации. Это, в сочетании с мощной поддержкой со стороны католических профсоюзов, будет иметь огромное значение для сплочения скептически настроенного католического населения вокруг кандидата, который у большинства инстинктивно ассоциируется с лютеранской ортодоксией и прусским авторитаризмом.
+
+
+@religion_2
+on-arrival: hindenburg_support += 1
+go-to: bourgeois_campaign_menu
+
+Несмотря на сильное сопротивление со стороны земельных и местных протестантских церковных организаций, многие члены которых симпатизируют [+ nsdap_candidate_1932 +] и <span style="color: #7A3C00;">**НСДАП**</span>, — они заняли публичную позицию и будут агитировать за Гинденбурга, даже несмотря на растущие призывы отозвать свою поддержку.
+
+
+@religion_3
+on-arrival: new_middle_nsdap += 2; old_middle_nsdap += 2; rural_nsdap += 2; new_middle_kvp -= 2; old_middle_kvp -= 2; rural_kvp -= 2; new_middle_dnvp -= 2 if dnvp_ideology == "Moderate"; old_middle_dnvp -= 2 if dnvp_ideology == "Moderate"; rural_dnvp -= 2 if dnvp_ideology == "Moderate"; new_middle_other -= 2 if not kvp_formed; old_middle_other -= 2 if not kvp_formed; rural_other -= 2 if not kvp_formed
+go-to: bourgeois_campaign_menu
+
+К несчастью для кампании Гинденбурга, про<span style="color: #7A3C00;">нацистские</span> настроения в государственных и местных церквях не позволили церковным лидерам публично выступить в его поддержку. Многие набожные протестанты теперь будут голосовать за [+ nsdap_candidate_1932 +] в результате, так как церковь теперь заявляет, что вмешательство в президентские выборы противоречит её природе.
+
+
+@westarp
+title: Вестарп, один из близких друзей Гинденбурга, попытается сплотить консервативные силы в его поддержку.
+on-arrival: westarp_used = 1; hindenburg_support += 1
+view-if: not spd_campaign_1932
+max-visits: 1
+go-to: bourgeois_campaign_menu
+
+Конечно, главная цель объединённых Гинденбургских комитетов — развеять представление о том, что Гинденбурга поддерживают <span style="color: #000000;">чёрно</span>-<span style="color: #c00000;">красные</span> партии. С этой целью Вестарп разослал письма 750 представителям консервативной элиты, которые поддержали избрание Гинденбурга в 1925 году, и 500 из них подтвердили свою поддержку и сегодня. [? if dnvp_ideology == "Moderate": Он также сыграл ключевую роль в сплочении <span style="color: #3E88B3;">**НННП**</span> вокруг его кандидатуры. ?]
+
+
+@organizational_endorsements
+title: Что насчёт поддержки со стороны беспартийных организаций?
+subtitle: Такие влиятельные группы, как Имперский Аграрный Союз (RLB), ННСТП и Пангерманский союз, всё больше отдаляются от Гинденбурга.
+view-if: eckener_used and industry_used and (religion_used or not religion_available) and (westarp_used or spd_candidate_1932)
+on-arrival: {!
+if (Q.hindenburg_support) {
+    Q.new_middle_kvp += Q.hindenburg_support;
+    Q.old_middle_kvp += Q.hindenburg_support; 
+    Q.rural_kvp += Q.hindenburg_support;
+    if (Q.dnvp_ideology == "Moderate") {
+        Q.new_middle_dnvp += Q.hindenburg_support;
+        Q.old_middle_dnvp += Q.hindenburg_support;
+        Q.rural_dnvp += Q.hindenburg_support;
+    }
+    Q.new_middle_ddp += Q.hindenburg_support / 3; 
+    Q.old_middle_ddp += Q.hindenburg_support / 3;
+    Q.new_middle_other += Q.hindenburg_support / 1.5;
+    Q.old_middle_other += Q.hindenburg_support / 1.5;
+    Q.new_middle_dvp += Q.hindenburg_support / 3;
+    Q.old_middle_dvp += Q.hindenburg_support / 3;
+    Q.rural_other += Q.hindenburg_support / 1.5;
+    Q.pro_republic += Q.hindenburg_support; 
+    if (!Q.kvp_formed) Q.rural_other += Q.hindenburg_support;
+    Q.new_middle_nsdap -= (Q.hindenburg_support*Q.nsdap_votes) / 50;
+    Q.old_nsdap -= (Q.hindenburg_support*Q.nsdap_votes) / 50;
+    Q.rural_nsdap -= (Q.hindenburg_support*Q.nsdap_votes) / 50;
+}
+if (Q.rlb_nazi) {
+    Q.rlb_hindenburg = 0;
+    Q.rural_nsdap += Q.rural_other*0.1;
+    Q.rural_other *= 0.9;
+    Q.rural_dnvp *= 0.9;
+} else if (!Q.rlb_nazi) {
+    Q.rlb_hindenburg = 1;
+    Q.rural_other += 4;
+    if (Q.dnvp_ideology == "Moderate") {
+        Q.rural_dnvp += 2;
+    } else {
+        Q.rural_kvp += 2;
+    }
+}
+!}
+
+Имперский Аграрный Союз (RLB) – [? if rlb_hindenburg: <span style="color: #808080;">**[+ reactionary_candidate_1932 +]**</span> ?][? if not rlb_hindenburg: <span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span>[? if dnvp_candidate_1932: &nbsp;или[? if dnvp_candidate_1932 != "Hugenberg" or dnvp_ideology == "Radical": <span style="color: #3E88B3;">**[+ dnvp_candidate_1932 +]**</span> ?][? if dnvp_candidate_1932 == "Hugenberg" and dnvp_ideology == "Moderate": <span style="color: #003755;">**[+ dnvp_candidate_1932 +]**</span> ?] ?] ?]
+
+Стальной шлем – [? if dnvp_candidate_1932 and dnvp_candidate_1932 != "Hugenberg": <span style="color: #3E88B3;">**[+ dnvp_candidate_1932 +]**</span> ?][? if not dnvp_candidate_1932 or dnvp_candidate_1932 == "Hugenberg": <span style="color: #808080;">**[+ reactionary_candidate_1932 +]**</span> ?]
+
+Немецкий национальный союз коммерческих служащих (DHV) – <span style="color: #808080;">**[+ reactionary_candidate_1932 +]**</span>
+
+Пангерманский союз (ADV) – <span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span>[? if dnvp_candidate_1932: &nbsp;или [? if dnvp_candidate_1932 != "Hugenberg" or dnvp_ideology == "Radical": <span style="color: #3E88B3;">**[+ dnvp_candidate_1932 +]**</span> ?][? if dnvp_candidate_1932 == "Hugenberg" and dnvp_ideology == "Moderate": <span style="color: #003755;">**[+ dnvp_candidate_1932 +]**</span> ?] ?]
+
+Объединённые отечественные союзы (VVVD) – <span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span>[? if dnvp_candidate_1932: &nbsp;или [? if dnvp_candidate_1932 != "Hugenberg" or dnvp_ideology == "Radical": <span style="color: #3E88B3;">**[+ dnvp_candidate_1932 +]**</span> ?][? if dnvp_candidate_1932 == "Hugenberg" and dnvp_ideology == "Moderate": <span style="color: #003755;">**[+ dnvp_candidate_1932 +]**</span> ?] ?]
+
+Кифхойзербунд – <span style="color: #808080;">**[+ reactionary_candidate_1932 +]**</span>
+
+[? if not rlb_nazi: Из всех правоконсервативных организаций, представляющих различные интересы, самая значимая, несомненно, поддержка RLB — крупнейшего в Германии экономического союза, насчитывающего миллион членов и множество влиятельных земельных организаций. Стратегия <span style="color: #7A3C00;">нацистов</span> в отношении этих организаций заключается не в прямых нападках, а во влиянии на их рядовых членов. Это давление вынуждает руководство либо поддержать <span style="color: #7A3C00;">нацистов</span>, либо рисковать дискредитацией в глазах членов.<br><br> Однако с RLB этот подход не сработал. Под руководством Шиле организация по-прежнему относится к <span style="color: #7A3C00;">национальной</span> <span style="color: #3E88B3;">оппозиции</span> скептически и успешно воспрепятствовала вхождению в президиум назначенца от <span style="color: #7A3C00;">нацистов</span>. Несмотря на это, сильные симпатии к <span style="color: #7A3C00;">нацистам</span> среди рядовых членов привели к их переходу в альтернативную организацию, созданную <span style="color: #7A3C00;">нацистами</span>. ?]
+
+[? if rlb_nazi: Из всех правых организаций поддержка крупнейшей в Германии группы экономических интересов, RLB, насчитывающей миллион членов и множество влиятельных земельных организаций, несомненно, имеет наибольшее значение. Стратегия <span style="color: #7A3C00;">нацистов</span> в отношении этих организаций заключается не в прямых нападках на них, а во влиянии на их рядовых членов. Это давление вынуждает руководство либо поддерживать <span style="color: #7A3C00;">нацистов</span>, либо рисковать дискредитацией в глазах своих членов. <br><br> Этот подход оказался успешным в RLB, поскольку её новый лидер, Калькройт, заметно дружелюбен по отношению к <span style="color: #7A3C00;">национальной</span> <span style="color: #3E88B3;">оппозиции</span>. Он даже назначил в президиум <span style="color: #7A3C00;">нацистского</span> чиновника по сельскому хозяйству. Однако этот сдвиг вызвал значительную негативную реакцию со стороны <span style="color: #7FCEB1;">**ХНПКЗ**</span> и связанных с ней фракций внутри организации, а также от земельных отделений в Баварии, Тюрингии и Вюртемберге. Эти группы отвергли поддержку со стороны Имперского Аграрного Союза (RLB) и вместо этого призвали своих членов голосовать за [+ reactionary_candidate_1932 +][? if dnvp_candidate_1932: &nbsp;или[+ dnvp_candidate_1932 +] ?]. ?]
+
+- @hope: Будем надеяться, что Германия сделает правильный выбор.
+
+
+@campaigning_thalmann
+view-if: spd_support_thalmann
+
+В нашем распоряжении имеется множество вариантов ведения кампании.
+
+- @paramilitary
+- @media_communist
+- @united_left
+- @campaigning
+- @campaigning_hindenburg_op: Настала очередь Гинденбурга вести кампанию.
+
+
+@paramilitary
+title: Объединиться с <span style="color: #700000;">коммунистическим</span> <span style="color: #700000;">**СКФ**</span> на улицах, чтобы бороться с <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правыми</span>.
+subtitle: Это навсегда оттолкнёт от нас буржуазные партии!
+on-arrival: kpd_truce = 1; kpd_relation += 5; rfb_strength += 100; rb_strength += 100; rfb_militancy += 0.1; rb_militancy += 0.04; neorevisionist_dissent += 10; reformist_dissent += 10; hindenburg_angry += 150; z_relation -= 20; ddp_relation -= 20; dvp_relation -= 20; lvp_relation -= 20; ddp_cohesion -= 5; ddp_right += 6; dvp_right += 10; lvp_right += 10
+face-image: img/reichsbanner_2.jpg
+max-visits: 1
+go-to: campaigning_thalmann
+
+Установлены более тесные связи между Рейхсбаннером и <span style="color: #700000;">**СКФ**</span>, что защищает местных партийных функционеров от политического насилия.
+
+
+@media_communist
+title: Использовать наши радиостанции для агитации. [+ communist_candidate_1932 +] — наш кандидат!
+subtitle: Это может помочь преодолеть их враждебность по отношению к <span style="color: #700000;">коммунистам</span>. -1 ресурс
+choose-if: radio >= 2 and resources >= 1
+unavailable-subtitle: [? if radio < 2: Наша радиоинфраструктура ещё недостаточно развита. ?] [? if resources < 1: Недостаточно ресурсов. ?]
+on-arrival: resources -= 1; media_communist_seen = 1; new_middle_spd += (radio + commercialized_media); old_middle_spd += (radio + commercialized_media); workers_spd += (campaign_media + radio - 2); unemployed_spd += (campaign_media + radio); new_middle_kpd += 3; socialism += 3; nationalism -= 3
+face-image: img/poster_0.jpg
+max-visits: 1
+go-to: campaigning_thalmann
+
+Посмотрим правде в глаза: средний класс никогда не поддержит такого, как [+ communist_candidate_1932 +], как бы мы ни старались. Однако нам удаётся убедить некоторых наших сторонников в <span style="color: #c00000;">социалистических</span> профсоюзах «белых воротничков» изменить своё мнение.
+
+
+@united_left
+title: Мы убеждаем <span style="color: #700000;">**коммунистов**</span> позволить нам принять более активное участие в их агитационной кампании.
+subtitle: Они старались быть на первом плане. -1 к ресурсам
+choose-if: (kpd_relation >= 70 or (kpd_relation >= 55 and kpd_leader == "Conciliators")) and resources >= 2
+unavailable-subtitle: [? if (kpd_relation < 70 or (kpd_relation < 55 and kpd_leader == "Conciliators")): Наши отношения недостаточно хороши. ?] [? if resources < 2: Недостаточно ресурсов (требуется 2). ?]
+on-arrival: resources -= 1; spd_glaze_thalmann = 1; workers_spd += 3; workers_kpd += 3; workers_nsdap -= 3; unemployed_spd += 3; unemployed_kpd += 3; unemployed_nsdap -= 3; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5; lvp_relation -= 5; dvp_right += 4; ddp_right += 2; ddp_cohesion -= 2; lvp_right += 4; new_middle_kpd = 1
+face-image: img/kpd_poster.jpg
+max-visits: 1
+go-to: campaigning_thalmann
+
+По какой-то причине <span style="color: #700000;">**коммунисты**</span> не особенно благодарны за нашу поддержку[+ communist_candidate_1932 +]; возможно, дело в приказах из Москвы. В любом случае, нам удалось убедить их руководство разрешить нам совместное участие в общих митингах и других акциях.
+
+
+@campaigning_hindenburg_op
+on-arrival: {!
+if (Q.industrial_total_backing) {
+    Q.hindenburg_funds += Q.industrial_ddp_backing;
+    Q.hindenburg_funds += Q.industrial_lvp_backing;
+    Q.hindenburg_funds += Q.industrial_dvp_backing;
+    Q.hindenburg_funds += Q.industrial_dnvp_backing;
+    Q.hindenburg_funds += ((100 - Q.nsdap_votes) / 25);
+    if (Q.spd_in_government) Q.hindenburg_funds += ((100 - Q.kpd_votes) / 10);
+}
+Q.hindenburg_funds_old = Q.hindenburg_funds;
+!}
+view-if: not spd_support_reactionary
+go-to: embezzlement_options_op
+
+Финансы кампании Гинденбурга в полном беспорядке. Влиятельные промышленники и бизнес-лидеры удерживают значительные пожертвования из-за его мнимого предательства правых. Долг в пять миллионов рейхсмарок с кампании 1925 года всё ещё не погашен, а для покрытия организационных расходов требуются дополнительные средства. [? if hindenburg_funds < 5: Попытки собрать деньги с партий, поддерживающих переизбрание Гинденбурга, ещё больше осложняются их собственными финансовыми трудностями. Многие уже исчерпали свои ресурсы и тщательно берегут остатки на предстоящие в конце апреля выборы в землях. ?][? if hindenburg_funds >= 5: Сбору средств ещё больше мешают партии, поддерживающие переизбрание Гинденбурга, поскольку они предпочитают приберечь свои средства для предстоящих в конце апреля выборов в землях Они уверены: его победа и так обеспечена. ?]
+
+
+@embezzlement_options_op
+
+- @embezzle_op
+- @embezzle_op_2
+- @bourgeois_campaign_op: Вопрос финансирования решён.
+
+
+@embezzle_op
+title: Гюнтер Гереке чудесным образом предоставил миллионы рейхсмарок из неизвестного источника.
+view-if: bruning_time
+max-visits: 1
+on-arrival: hindenburg_funds += 3; new_middle_kvp += 2; old_middle_kvp += 2; rural_kvp += 4; new_middle_dnvp += 2 if dnvp_ideology == "Moderate"; old_middle_dnvp += 2 if dnvp_ideology == "Moderate"; rural_dnvp += 4 if dnvp_ideology == "Moderate"; rural_other += 4 if not kvp_formed; rural_nsdap -= 4 if rural_nsdap_normalized >= 35; pro_republic += 3; embezzle_1_op = 1
+go-to: embezzlement_options_op
+
+Гюнтер Гереке, член [? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Radical": <span style="color: #7FCEB1;">**ХНПКЗ**</span> ?], ответственный за сбор средств для кампании Гинденбурга, сумел привлечь и направить на кампанию семь миллионов марок, — хотя часть этих средств перенаправлена в его собственную партию. Объёма одних лишь частных и корпоративных пожертвований недостаточно, чтобы покрыть расходы на кампанию, из чего становится очевидно: свою роль сыграло государственное финансирование, в частности со стороны рейхсвера.
+
+
+@embezzle_op_2
+title: Гюнтер Гереке чудесным образом предоставил миллионы рейхсмарок из неизвестного источника.
+view-if: not bruning_time
+max-visits: 1
+on-arrival: hindenburg_funds += 1
+go-to: embezzlement_options_op
+
+Гюнтер Гереке, член [? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Radical": <span style="color: #7FCEB1;">**ХНПКЗ**</span> ?], ответственный за сбор средств для кампании Гинденбурга, сумел найти и направить на неё два миллиона марок — хотя часть этих средств перенаправлена в его собственную партию. Объёма частных и корпоративных пожертвований  недостаточно, чтобы покрыть расходы на кампанию, поэтому мы подозреваем, что внезапно появившийся миллион марок был предоставлен Шлейхером из тайных фондов рейхсвера.
+
+
+@bourgeois_campaign_op
+on-arrival: {!
+if (Q.hindenburg_funds >= 5 && !Q.industrial_hindenburg) {
+    Q.new_middle_kvp += Q.hindenburg_funds / 2;
+    Q.old_middle_kvp += Q.hindenburg_funds / 2;
+    Q.rural_kvp += Q.hindenburg_funds / 2;
+    if (Q.dnvp_ideology == "Moderate") {
+        Q.new_middle_dnvp += Q.hindenburg_funds / 2;
+        Q.old_middle_dnvp += Q.hindenburg_funds / 2;
+        Q.rural_dnvp += Q.hindenburg_funds / 3;
+    }
+    Q.new_middle_other += Q.hindenburg_funds / 3;
+    Q.old_middle_other += Q.hindenburg_funds / 3;
+    Q.rural_other += Q.hindenburg_funds / 3;
+    Q.new_middle_dvp += Q.hindenburg_funds / 3;
+    Q.old_middle_dvp += Q.hindenburg_funds / 3;
+    Q.rural_dvp += Q.hindenburg_funds / 4;
+    Q.new_middle_lvp += Q.hindenburg_funds / 2;
+    Q.old_middle_lvp += Q.hindenburg_funds / 2;
+    Q.rural_lvp += Q.hindenburg_funds / 4;
+}
+Q.industrial_hindenburg = 1;
+
+Q.hindenburg_unity = 10;
+if (Q.hindenburg_angry_bruning >= 75) Q.hindenburg_unity -= 1;
+if (Q.dvp_defect) Q.hindenburg_unity -= 1;
+if (Q.cnblp_defect) Q.hindenburg_unity -= 1;
+if (Q.second_bruning_cabinet_seen) Q.hindenburg_unity -= 1;
+if (Q.nsdap_votes >= 25) Q.hindenburg_unity -= 1;
+if (Q.spd_support_reactionary) Q.hindenburg_unity -= 3;
+if (Q.spd_campaign || Q.spd_support_thalmann || Q.kpd_support_spd) Q.hindenburg_unity += 3;
+!}
+view-if: hindenburg_funds > hindenburg_funds_old
+go-to: bourgeois_campaign_menu_op
+
+Объединенные комитеты Гинденбурга приступили к работе по улучшению отношения умеренно-правых немецких избирателей к президенту Гинденбургу, чья репутация Героя Танненберга подорвана его поддержкой ненавистной <span style="color: #000000;">Вей</span><span style="color: #DD0000;">мар</span><span style="color: #FFCC00;">ской</span> системы. Несмотря на это, <span class="tooltip-text" title="После сокрушительной победы Германии под Танненбергом в Великой войне, одержанной под руководством Гинденбурга, он стал центром масштабного культа личности. Его превозносят как живое воплощение немецкой мужественности и патриотизма. Он — олицетворение лучших добродетелей прусской традиции.">Миф о Гинденбурге</span> остается непоколебимым[? if nsdap_candidate_1932 == "Hitler": , и это, возможно, единственное, что может сравниться с харизмой Гитлера. ?].
+
+Настала их очередь агитировать.
+
+Уровень единства в лагере Гинденбурга: [+ hindenburg_unity : hindenburg_unity +]
+
+
+@bourgeois_campaign_menu_op
+on-arrival: {!
+if (Q.z_support_spd != 1) Q.religion_available = 1;
+!}
+
+- @eckener_op
+- @industrial_op
+- @religion_op
+- @westarp_op
+- @organizational_endorsements_op
+
+
+@eckener_op
+title: К кампании присоединился прославленный капитан дирижабля Гуго Эккенер.
+subtitle: Как верный сторонник президента, он будет использовать *«Граф Цеппелин»* в предвыборной кампании.
+on-arrival: eckener_used = 1
+max-visits: 1
+go-to: eckener_2_op if hindenburg_unity >= 8; eckener_3_op if hindenburg_unity < 8
+
+
+@eckener_2_op
+on-arrival: hindenburg_support += 2
+go-to: bourgeois_campaign_menu_op
+
+В попытке посоперничать с <span class="tooltip-text" title="отличный мод">динамизмом</span> <span style="color: #7A3C00;">нацистской</span> кампании, в ходе которой использовались самолеты для быстрой переброски видных <span style="color: #7A3C00;">нацистских</span> лидеров, что позволяло им выступать с речами до четырех раз в день, Гуго Эккенера убедили совершить агитационный полет по Германии, чтобы заручиться народной поддержкой для Гинденбурга.
+
+
+@eckener_3_op
+on-arrival: unemployed_nsdap += 6; unemployed_kpd -= 3; unemployed_spd -= 3
+go-to: bourgeois_campaign_menu_op
+
+Пытаясь соперничать с динамичной кампанией <span style="color: #7A3C00;">нацистов</span>, штаб Гинденбурга сначала попытался убедить Гуго Эккенера, пилота дирижабля «Граф Цеппелин», совершить полёт над Германией в поддержку Гинденбурга. Однако Эккенер в это время должен лететь в Южную Америку, поэтому штабу пришлось искать другой подход. В итоге решили арендовать самолёты и разбросать над Германией двадцать миллионов листовок. Но этого недостаточно, чтобы противостоять стилю ведения кампании <span style="color: #7A3C00;">нацистов</span>.
+
+
+@industrial_op
+title: Карл Дуйсберг из IG Farben попытается заручиться поддержкой ключевых промышленников.
+subtitle: Гинденбург утратил расположение многих своих бывших сторонников. Может, их удастся переубедить?
+on-arrival: industry_used = 1
+max-visits: 1
+go-to: industrial_2_op if hindenburg_unity >= 5; industrial_3_op if hindenburg_unity < 5
+
+Карл Дуйсберг, председатель Объединённых комитетов в поддержку Гинденбурга, по большей части не смог убедить лидеров крупного бизнеса подписать петицию о переизбрании Гинденбурга, но, возможно, серьёзность этой гонки поможет их переубедить?
+
+
+@industrial_2_op
+on-arrival: hindenburg_support += 2
+go-to: bourgeois_campaign_menu_op
+
+Дуйсбергу, бывшему председателю Имперского союза германской промышленности (RDI) и одному из его наиболее умеренных членов, удалось получить пожертвования от многих бизнес-лидеров, сомневавшихся в необходимости вновь поддерживать Гинденбурга. Радикальная революционная и социалистическая политика <span style="color: #7A3C00;">**НСДАП**</span> в значительной степени отбила у них охоту жертвовать нацистам. [+ nsdap_candidate_1932 +] вызывает у них скепсис. Похоже, теперь у кампании Гинденбурга наконец-то есть средства на создание предвыборной инфраструктуры, способной соперничать с усилиями Геббельса и <span style="color: #7A3C00;">нацистами</span>.
+
+
+@industrial_3_op
+on-arrival: old_middle_nsdap += 4; old_middle_kvp -= 2; old_middle_dnvp -= 2 if industrial_dnvp_backing >= 2 and dnvp_ideology == "Moderate"; old_middle_other -= 4; rural_nsdap += 2
+go-to: bourgeois_campaign_menu_op
+
+Несмотря на антипатию промышленников к[? if not hitler_deported: Гитлеру и ?]<span style="color: #7A3C00;">**НСДАП**</span> из-за их крипто<span style="color: #c00000;">социалистической</span> политики, значительная их часть решительно настроена против Гинденбурга и воздержится от пожертвований. Кампания Гинденбурга начинает сильно отставать от <span style="color: #7A3C00;">**НСДАП**</span> в сельской местности, в основном из-за нехватки ресурсов.
+
+
+@religion_op
+title: Католическая и лютеранская церкви долгое время сохраняли политический нейтралитет. Возможно, теперь это изменится?
+view-if: z_support_spd != 1
+on-arrival: religion_used = 1; catholics_z += 4 if catholics_z_normalized < 50; catholics_nsdap -= 4 if catholics_z_normalized < 50 and catholics_nsdap_normalized >= 8
+max-visits: 1
+go-to: religion_2_op if hindenburg_unity >= 3; religion_3_op if hindenburg_unity < 3
+
+Видные деятели лютеранской церкви высказались в поддержку президента Гинденбурга, утверждая, что, несмотря на их исторический политический нейтралитет, его переизбрание — насущная необходимость. Тем временем католическая церковь ещё сплочённее поддерживает Гинденбурга, чем Вильгельма Маркса в 1925 году. Католические лидеры, исторически скептически относившиеся к <span style="color: #7A3C00;">нацизму</span>, активно отговаривали своих прихожан от вступления в <span style="color: #7A3C00;">нацистские</span> военизированные организации. Это, в сочетании с мощной поддержкой со стороны связанных с католиками профсоюзов, сыграет огромную роль в сплочении скептически настроенного католического населения вокруг кандидата, который у большинства инстинктивно ассоциируется с лютеранской ортодоксией и прусским авторитаризмом.
+
+
+@religion_2_op
+on-arrival: hindenburg_support += 1
+go-to: bourgeois_campaign_menu_op
+
+Несмотря на сильное сопротивление со стороны земельных и местных протестантских церковных организаций — многие члены которых симпатизируют[+ nsdap_candidate_1932 +] и <span style="color: #7A3C00;">**НСДАП**</span> — они заняли публичную позицию и будут агитировать за Гинденбурга, даже на фоне растущих призывов отозвать свою поддержку.
+
+
+@religion_3_op
+on-arrival: new_middle_nsdap += 2; old_middle_nsdap += 2; rural_nsdap += 2; new_middle_kvp -= 2; old_middle_kvp -= 2; rural_kvp -= 2; new_middle_dnvp -= 2 if dnvp_ideology == "Moderate"; old_middle_dnvp -= 2 if dnvp_ideology == "Moderate"; rural_dnvp -= 2 if dnvp_ideology == "Moderate"; new_middle_other -= 2 if not kvp_formed; old_middle_other -= 2 if not kvp_formed; rural_other -= 2 if not kvp_formed
+go-to: bourgeois_campaign_menu_op
+
+К несчастью для кампании Гинденбурга, про<span style="color: #7A3C00;">нацистские</span> настроения в земельных и местных церквях помешали церковным лидерам публично выступить в поддержку Гинденбурга. Многие набожные протестанты теперь проголосуют за [+ nsdap_candidate_1932 +] в результате, поскольку церковь теперь заявляет, что вмешательство в президентские выборы противоречит её природе.
+
+
+@westarp_op
+title: Вестарп, один из близких друзей Гинденбурга, попытается сплотить консервативные силы в поддержку Гинденбурга.
+on-arrival: westarp_used = 1; hindenburg_support += 1
+view-if: not spd_campaign_1932
+max-visits: 1
+go-to: bourgeois_campaign_menu_op
+
+Разумеется, главная цель Объединённых комитетов в поддержку Гинденбурга — развеять представление , что его якобы поддерживают <span style="color: #000000;">чёрно</span>-<span style="color: #c00000;">красные</span> избиратели. С этой целью Вестарп разослал письма 750 представителям консервативной элиты, которые поддержали избрание Гинденбурга в 1925 году, и 500 из них вновь подтвердили свою поддержку. [? if dnvp_ideology == "Moderate": Он также сыграл ключевую роль в сплочении <span style="color: #3E88B3;">**НННП**</span> вокруг его кандидатуры. ?]
+
+
+@organizational_endorsements_op
+title: А как насчёт поддержки со стороны беспартийных организаций?
+subtitle: Имперский Аграрный Союз (RLB), DHV и Пангерманский союз раньше поддерживали Гинденбурга. А сейчас?
+view-if: eckener_used and industry_used and (religion_used or not religion_available) and nd (westarp_used or spd_candidate_1932)
+on-arrival: {!
+if (Q.hindenburg_support) {
+    Q.new_middle_kvp += Q.hindenburg_support;
+    Q.old_middle_kvp += Q.hindenburg_support; 
+    Q.rural_kvp += Q.hindenburg_support;
+    if (Q.dnvp_ideology == "Moderate") {
+        Q.new_middle_dnvp += Q.hindenburg_support;
+        Q.old_middle_dnvp += Q.hindenburg_support;
+        Q.rural_dnvp += Q.hindenburg_support;
+    }
+    Q.new_middle_ddp += Q.hindenburg_support / 3; 
+    Q.old_middle_ddp += Q.hindenburg_support / 3;
+    Q.new_middle_other += Q.hindenburg_support / 1.5;
+    Q.old_middle_other += Q.hindenburg_support / 1.5;
+    Q.new_middle_dvp += Q.hindenburg_support / 3;
+    Q.old_middle_dvp += Q.hindenburg_support / 3;
+    Q.rural_other += Q.hindenburg_support / 1.5;
+    Q.pro_republic += Q.hindenburg_support; 
+    if (!Q.kvp_formed && Q.dnvp_ideology == "Radical") Q.rural_other += Q.hindenburg_support;
+    Q.new_middle_nsdap -= (Q.hindenburg_support*Q.nsdap_votes) / 50;
+    Q.old_nsdap -= (Q.hindenburg_support*Q.nsdap_votes) / 50;
+    Q.rural_nsdap -= (Q.hindenburg_support*Q.nsdap_votes) / 50;
+}
+if (Q.rlb_nazi) {
+    Q.rlb_hindenburg = 0;
+    Q.rural_nsdap += Q.rural_other*0.1;
+    Q.rural_other *= 0.9;
+    Q.rural_dnvp *= 0.9;
+} else if (!Q.rlb_nazi) {
+    Q.rlb_hindenburg = 1;
+    Q.rural_other += 4;
+    if (Q.dnvp_ideology == "Moderate") {
+        Q.rural_dnvp += 2;
+    } else {
+        Q.rural_kvp += 2;
+    }
+}
+!}
+
+Имперский аграрный союз (RLB) — [? if rlb_hindenburg: <span style="color: #808080;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if not rlb_hindenburg: <span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span>[? if dnvp_candidate_1932: &nbsp;или <span style="color: #3E88B3;">**[+ dnvp_candidate_1932 +]**</span> ?] ?]
+
+Стальной Шлем — [? if dnvp_candidate_1932 == "Duesterberg": <span style="color: #3E88B3;">**[+ dnvp_candidate_1932 +]**</span> ?][? if dnvp_candidate_1932 != "Duesterberg": <span style="color: #808080;">**[+ reactionary_candidate_1932_disp +]**</span> ?]
+
+Немецко-национальный союз торговых служащих (DHV) — <span style="color: #808080;">**[+ reactionary_candidate_1932_disp +]**</span>
+
+Пангерманский союз (ADV) — <span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span>[? if dnvp_candidate_1932: &nbsp;или <span style="color: #3E88B3;">**[+ dnvp_candidate_1932 +]**</span> ?]
+
+Объединённые патриотические союзы (VVVD) — <span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span>[? if dnvp_candidate_1932: &nbsp;или <span style="color: #3E88B3;">**[+ dnvp_candidate_1932 +]**</span> ?]
+
+Союз «Кифхойзер» — <span style="color: #808080;">**[+ reactionary_candidate_1932_disp +]**</span>
+
+[? if not rlb_nazi: Из всех различных правых организаций, отстаивающих свои интересы, поддержка со стороны RLB, крупнейшей в Германии экономической лоббистской группы с миллионом членов и многочисленными влиятельными земельными организациями, несомненно, самая значимая. Стратегия <span style="color: #7A3C00;">нацистов</span> в отношении этих организаций заключается не в прямых нападках, а во влиянии на их рядовых членов. Такое давление вынуждает руководство либо поддержать <span style="color: #7A3C00;">нацистов</span>, либо рисковать дискредитацией в глазах собственных членов.<br><br> Однако в случае с RLB этот подход провалился. Под руководством Шиле организация по-прежнему скептически относится к <span style="color: #7A3C00;">национальной</span> <span style="color: #3E88B3;">оппозиции</span> и успешно заблокировала вхождение в президиум выдвиженца от <span style="color: #7A3C00;">нацистов</span>. Несмотря на это, сильные симпатии к <span style="color: #7A3C00;">нацистам</span> среди рядовых членов привели к их переходу в альтернативную <span style="color: #7A3C00;">нацистскую</span> организацию. ?]
+
+[? if rlb_nazi: Из всех правых организаций поддержка со стороны крупнейшей экономической группы интересов Германии, Имперского аграрного союза (RLB), с его миллионом членов и многочисленными влиятельными земельными организациями, несомненно, наиболее значимая. Стратегия <span style="color: #7A3C00;">нацистов</span> в отношении этих организаций заключается не в прямых нападках, а во влиянии на их рядовых членов. Под таким давлением руководство вынуждено либо поддержать <span style="color: #7A3C00;">нацистов</span>, либо рисковать своей репутацией в глазах членов организации. <br><br> Этот подход оказался успешным в случае с RLB, поскольку его новый лидер, Калькройт, заметно дружелюбен по отношению к <span style="color: #7A3C00;">национальной</span> <span style="color: #3E88B3;">оппозиции</span>. Он даже назначил в президиум <span style="color: #7A3C00;">нацистского</span> чиновника по аграрным вопросам. Однако этот сдвиг вызвал значительную негативную реакцию со стороны ориентированных на <span style="color: #7FCEB1;">**ХНПКЗ**</span> фракций внутри организации и со стороны земельных отделений в Баварии, Тюрингии и Вюртемберге. Эти группы отвергли решение Имперского Аграрного Союза (RLB) о поддержке и вместо этого призвали своих членов голосовать за [+ reactionary_candidate_1932 +][? if dnvp_candidate_1932: &nbsp;или[+ dnvp_candidate_1932 +] ?]. ?]
+
+- @hope: Будем надеяться, что Германия сделает правильный выбор.

@@ -1,0 +1,94 @@
+title: Правительство Брюнинга пало!
+subtitle: Партии, поддерживающие Брюнинга, больше не составляют большинства.
+new-page: true
+tags: event
+view-if: bruning_time and spd_toleration and bruning_coalition < 50
+priority: -1
+on-arrival: pro_republic -= 3
+
+= Правительство Брюнинга пало!
+
+Отход нескольких буржуазных партий и партий, представляющих особые интересы, от ранее непоколебимой поддержки правительства Брюнинга лишил кабинет большинства, даже при том, что мы воздерживаемся от вотума недоверия. [? if not second_bruning_cabinet_seen: Сам Брюнинг по-прежнему отказывается формировать более правый кабинет, чтобы угодить перебежчикам, так как верит, что хотя бы одна из этих партий дрогнет перед лицом грядущей политической и экономической нестабильности. ?]
+
+<span style="color: #7A3C00;">Национальная</span> <span style="color: #3E88B3;">оппозиция</span> остается верна своему принципу «всё или ничего» и отказывается поддерживать правительство, если ей не отдадут пост канцлера. Несмотря на это, многие правые всё ещё верят в возможность компромисса с Гитлером и Гугенбергом и считают, что Брюнинг прилагает для этого недостаточно усилий.
+
+- @vonc_yes
+- @vonc_no
+
+
+@vonc_yes
+title: Поддержать вотум недоверия, проголосовав против правительства.
+subtitle: Пожалуй, пора сократить наши потери.
+on-arrival: time_to_election = 3; spd_in_government = 0; in_right_coalition = 0; in_center_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 0; spd_toleration_right = 0; pro_republic -= 3; z_relation -= 5; ddp_relation -= 3; lvp_relation -= 3; dvp_right += 1; ddp_right += 1; lvp_right += 1
+call: set_next_election_time
+
+Мы официально порвали с[+ chancellor +]ом и возглавляемым им правительством, проголосовав против него при вынесении вотума недоверия. Буржуазные партии также присоединились, отказавшись от тщетных попыток спасти правительство Брюнинга.
+
+Новые выборы назначены на [+ next_election_month : month +] [+ next_election_year +].
+
+
+@vonc_no
+title: Выступить против вотума недоверия, проголосовав за правительство.
+subtitle: В настоящее время [+ bruning_coalition +]% депутатов Рейхстага поддерживают Брюнинга, но эта цифра может измениться.
+on-arrival: {!
+Q.bruning_joever = 1;
+Q.left_dissent += 15;
+Q.labor_dissent += 5;
+Q.unemployed_nsdap += Q.unemployed_spd*0.04;
+Q.unemployed_kpd += Q.unemployed_spd*0.04;
+Q.workers_nsdap += Q.workers_spd*0.04;
+Q.workers_kpd += Q.workers_spd*0.04;
+Q.workers_spd *= 0.96;
+Q.unemployed_spd *= 0.96;
+Q.kpd_relation -= 5;
+Q.bruning_coalition = Q.neo_weimar_coalition;
+if (Q.dnvp_ideology == "Moderate") Q.bruning_coalition = Q.cordon_sanitaire;
+Q.bruning_coalition = Math.round((Q.bruning_coalition - Q.bruning_coalition_loss) * 10) / 10;
+if (Q.wp_defect && Q.bruning_coalition < 50) Q.wp_reversal = 1;
+if (Q.wp_defect && Q.bruning_coalition < 50) Q.bruning_coalition_loss -= Q.wp_r;
+if (Q.wp_reversal) Q.wp_defect = 0;
+Q.bruning_coalition = Q.neo_weimar_coalition;
+Q.bruning_coalition = Math.round((Q.bruning_coalition - Q.bruning_coalition_loss) * 10) / 10;
+!}
+go-to: bruning_calculations
+
+
+
+
+@bruning_calculations
+go-to: bruning_lives_wp if bruning_coalition >= 50 and wp_reversal; bruning_dies_wp if bruning_coalition < 50 and wp_reversal; bruning_dies_no_wp if bruning_coalition < 50 and not wp_reversal
+
+
+
+
+@bruning_lives_wp
+on-arrival: bruning_not_joever = 1; new_middle_nsdap += new_middle_other*0.5; new_middle_other *= 0.5; old_middle_nsdap += old_middle_other*0.5; old_middle_other *= 0.5
+face-image: img/wp2.jpg
+
+Партия <span style="color: #b8996f;">**ЭП**</span> неожиданно отказалась от своей оппозиции правительству Брюнинга после уступок, сделанных канцлером в последнюю минуту. Во время решающего голосования о вотуме недоверия она поддержала правительство, тем самым сведя на нет голоса других буржуазных партий, выступивших против.
+
+Этот внезапный поворот со стороны <span style="color: #b8996f;">**ЭП**</span> практически предрешил её политический крах. Уже и так с трудом удерживая поддержку среднего класса, партия теперь столкнулась с массовым уходом её членов, а её местные отделения либо распускаются, либо полностью откалываются.
+
+Несмотря на формирование более правого кабинета, <span style="color: #7A3C00;">национальная</span> <span style="color: #3E88B3;">оппозиция</span> по-прежнему не желает поддерживать Брюнинга, поскольку стремится сама заполучить всю полноту власти.
+
+
+@bruning_dies_wp
+on-arrival: time_to_election = 3; spd_toleration = 0; spd_toleration_right = 0; bruning_cabinet_collapsed = 1; new_middle_nsdap += new_middle_other*0.5; new_middle_other *= 0.5; old_middle_nsdap += old_middle_other*0.5; old_middle_other *= 0.5
+face-image: img/wp2.jpg
+call: set_next_election_time
+
+Партия <span style="color: #b8996f;">**ЭП**</span> неожиданно отказалась от противостояния правительству Брюнинга после уступок, на которые канцлер пошёл в последнюю минуту. На решающем голосовании о вотуме недоверия она поддержала правительство[? if cnblp_defect or (dvp_defect and dvp_exist): , сведя на нет эффект от того, что [? if dvp_defect and dvp_exist: <span style="color: #C0A054;">**ННП**</span> и ?][? if not dvp_defect or not dvp_exist: [? if cnblp_defect: <span style="color: #7FCEB1;">**ХНПКЗ**</span>'s ?] ?]отозвали свою поддержку. ?].
+
+Этот внезапный поворот со стороны <span style="color: #b8996f;">**ЭП**</span> практически предрешил её политическую гибель. Партия, и без того с трудом сохранявшая поддержку среднего класса, теперь столкнулась с массовым оттоком членов: местные отделения либо самораспускаются, либо полностью выходят из её состава.
+
+К сожалению, все эти усилия оказались напрасны, и лишь [+ bruning_coalition +]% рейхстага проголосовали против правительства Брюнинга. Новые выборы назначены на [+ next_election_month : month +] [+ next_election_year +].
+
+
+@bruning_dies_no_wp
+on-arrival: time_to_election = 3; spd_toleration = 0; spd_toleration_right = 0; bruning_cabinet_collapsed = 1
+call: set_next_election_time
+
+Мы снова вынуждены голосовать в поддержку правительства [+ chancellor +]а, чтобы не дать экстремистским партиям на <span style="color: #7A3C00;">крайнем</span> <span style="color: #3E88B3;">правом</span> и <span style="color: #700000;">левом</span> флангах превратить свою растущую народную поддержку в парламентские мандаты.
+
+К сожалению, все попытки спасти правительство оказались тщетны. Лишь [+ bruning_coalition +]% депутатов рейхстага проголосовали в поддержку правительства Брюнинга. В результате назначены новые выборы на [+ next_election_month : month +] [+ next_election_year +].
+

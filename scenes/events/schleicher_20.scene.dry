@@ -1,0 +1,55 @@
+title: Шлейхер и <span style="color: #3E88B3;">**Стальной Шлем**</span>
+subtitle: Ветеранская организация интегрирована в государство.
+view-if: chancellor = "Schleicher" and dnef_formed and (nationalists_schleicher >= 10 and (dnvp_dnef or dnvp_dnef_alt)) and schleicher_post_time >= 6
+new-page: true
+priority: 2
+tags: event
+max-visits: 1
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/stahlhelm_3.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+= Шлейхер и <span style="color: #3E88B3;">**Стальной Шлем**</span>
+
+The <span style="color: #3E88B3;">**Стальной Шлем**</span>, ветеранская и военизированная организация, разделяющая многие взгляды Шлейхера и пользующаяся его уважением, уже давно привлекается канцлером к сотрудничеству с рейхсвером. Шлейхер планирует субсидировать организацию из государственных средств, постепенно ставя её в зависимость от государства и готовя к использованию в своих целях. Тем не менее, генерала раздражает, что её военные учения зачастую затмевают учения численно уступающего ей рейхсвера.
+
+Несмотря на общие взгляды, <span style="color: #3E88B3;">**Стальной Шлем**</span> и его лидеры Франц Зельдте и Теодор Дюстерберг по-прежнему с опаской относятся к посягательствам Шлейхера на их независимость. Но так как <span style="color: #3E88B3;">**НННП**</span> теперь вошла в состав <span style="color: #BFC8CC;">**ФНЕГ**</span>, организация оказывается в политической изоляции, ведь даже её рядовые члены начинают склоняться к подчинению.
+
+- @schleicher_2: The <span style="color: #3E88B3;">**Стальной Шлем**</span> интегрируется в государство.
+
+
+@schleicher_2
+on-arrival: {!
+Q.schleicher_stahlhelm = 1;
+
+Q.pro_republic -= 3;
+
+Q.sh_strength = 0;
+Q.sh_militancy = 0;
+
+Q.reichswehr_strength += 75;
+
+Q.old_middle_dnef += 12;
+Q.old_middle_dnvp -= 4;
+Q.old_middle_kvp -= 4;
+Q.old_middle_dvp -= 2;
+Q.old_middle_nsdap -= 2;
+
+Q.schleicher_spd_influence -= 1;
+Q.schleicher_spd_r -= 1;
+Q.schleicher_spd_support -= 2;
+!}
+
+Подчинение — это последнее, с чем согласилась бы такая гордая ветеранская организация, как <span style="color: #3E88B3;">**Стальной Шлем**</span>, — но попытки её лидеров сопротивляться привели лишь к обратному результату. На съезде руководства и местных отделений они признали: эпоха военизированных формирований и политического маневрирования — окончена. Они согласились подчинить организацию государству ради служения национальным интересам.
+
+Взамен <span style="color: #3E88B3;">**Стальной Шлем**</span> получает статус официальной организации ветеранов при Рейхсвере, а их лояльные лидеры приобретают государственные посты. Многие из закалённых бойцов и офицеров <span style="color: #3E88B3;">Стального Шлема</span> принимаются в ряды Рейхсвера, где им поручают подготовку нового поколения новобранцев.
+
