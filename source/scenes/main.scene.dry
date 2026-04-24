@@ -2611,7 +2611,7 @@ is-deck: true
 - @rubicon_filler
 
 @time_2
-title: 
+title: test
 view-if: rubicon and not (schleicher_spd_influence < 6 or chancellor != "Schleicher" or not schleicher_time or schleicher_time < 8)
 card-image: img/black.jpg
 is-deck: true
