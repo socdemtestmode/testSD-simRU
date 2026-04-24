@@ -1885,6 +1885,8 @@ if (boxes.length >= 2) {
 !}
 max-cards: 4
 
+#Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
+
 {!<div class="scrollable-box">!}
 
 {!<p class="both">!}[? if year = 1928 and month = 1: Для немецкой демократии настали светлые времена. После периода трудностей, инфляция наконец взята под контроль, а экономика стабильно растёт. Во внешней политике мы достигли соглашений с западными державами и Советским Союзом, которые могут сделать долгосрочный мир реальностью. 
