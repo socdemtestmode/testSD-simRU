@@ -7,6 +7,10 @@ on-arrival: weltbuhne_seen = 1
 face-image: img/weltbune.jpg
 tags: event
 
+# if the SPD controls the judiciary then they can just cancel the trial (at the expense of DVP relations).
+# If in a grand coalition then the SPD can pressure the coalition to cancel the trial at the expense of dissent.
+# If the trial goes ahead, then reparations negotiation process gets set back by a few steps and relations with the west suffers.
+
 = Процесс «Вельтбюне»
 
 Новостной и литературный журнал <span style="color: #c00000;">левого толка</span> „Вельтбюне“ стал объектом преследования со стороны властей по обвинению в разглашении государственной тайны. В журнале опубликованы статьи о тайной программе перевооружения рейхсвера в нарушение Версальского договора. Военные, разумеется, не желают огласки этой информации. Ситуацию усугубляет один факт: редактор журнала Карл фон Осецкий — известный пацифист.
@@ -51,4 +55,3 @@ view-if: not spd_in_government
 on-arrival: weltbuhne_dropped = 0; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; pacifism -= 1; nationalism += 4
 
 Дело продвигается медленно из-за связанных с ним военных тайн, и решение по нему будет принято нескоро. Однако этот скандал заставил западные державы с подозрением отнестись к возрождению нашего милитаризма.
-

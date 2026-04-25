@@ -67,6 +67,42 @@ if (Q.economic_growth) {
 Экономический рост: [+ economic_growth_2 +]%
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 1928: 30, 1930: 25, 1932: 22
+
+# 1928: 15, 1930: 15, 1932: 
+# 1928: 10, 1930: 13
+# 1928: 5, 1930: 4 (as DStP)
+# 1928: 9, 1930: 5
+# 1928: 14, 1930: 7
+# 1928: 3, 1930: 18
+# 1928: 9, 1930: 10
+
+
+
+
+
+
+
+
+# = Public Opinion
+
+
 @emergency
 on-arrival: {!
 if (Q.unemployed) {
@@ -252,6 +288,7 @@ Q.sa_strength_2 = Q.sa_strength.toFixed(1);
 
 [? if year >= 1930 and not streetfighting_joever: Сейчас улицы [? if far_right_paramilitary and rfb_force < far_right_force: [? if far_right_paramilitary_highest: полностью контролируются <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правыми</span> ?][? if far_right_paramilitary_high: почти полностью контролируются <span style="color: #7A3C00;">ультра</span> <span style="color: #3E88B3;">правыми</span> ?][? if far_right_paramilitary_med: контролируются <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правыми</span> ?][? if far_right_paramilitary_low: частично контролируются <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правыми</span> ?][? if sa_paramilitary: , в основном жестокими <span style="color: #7A3C00;">**СА**</span> ?] ?][? if rfb_force >= far_right_force and far_right_paramilitary: контролируются <span style="color: #700000;">**СКФ**</span> ?][? if democracy_paramilitary and rfb_force < democracy_force: [? if democracy_paramilitary_highest: полностью контролируются <span style="color: #000000;">респу</span><span style="color: #DD0000;">бли</span><span style="color: #FFCC00;">канцами</span> ?][? if democracy_paramilitary_high: почти полностью контролируются <span style="color: #000000;">республи</span><span style="color: #DD0000;">кан</span><span style="color: #FFCC00;">цами</span> ?][? if democracy_paramilitary_med: контролируются <span style="color: #000000;">респу</span><span style="color: #DD0000;">бли</span><span style="color: #FFCC00;">канцами</span> ?][? if democracy_paramilitary_low: частично контролируются <span style="color: #000000;">респу</span><span style="color: #DD0000;">бли</span><span style="color: #FFCC00;">канцами</span> ?] ?][? if rfb_force >= democracy_force and democracy_paramilitary: контролируются <span style="color: #700000;">**СКФ**</span> ?][? if state_paramilitary: [? if state_paramilitary_highest: полностью контролируются <span style="color: #BFC8CC;">**государством**</span> ?][? if state_paramilitary_high: почти полностью контролируются <span style="color: #BFC8CC;">**государством**</span> ?][? if state_paramilitary_med: контролируются <span style="color: #BFC8CC;">**государством**</span> ?][? if state_paramilitary_low: частично контролируются <span style="color: #BFC8CC;">**государством**</span> ?] ?]. ?]
 
+
 = Официальные военные/военизированные формирования
 
 Рейхсвер: [+ reichswehr_strength +] тысяч солдат.
@@ -325,4 +362,3 @@ Q.socialism_disp = Math.floor(Q.socialism);
 Безработные: [? if dnef_formed: ФНЕГ: [+ unemployed_dnef_display +]%, ?]СДПГ: [+ unemployed_spd_display +]%, [+ z_party_name +]: [+ unemployed_z_display +]%, КПГ: [+ unemployed_kpd_display +]%, [? if not lvp_formed: [+ ddp_name +]: [+ unemployed_ddp_display +]%, [? if dvp_exist: ННП: [+ unemployed_dvp_display +]%, ?] ?][? if lvp_formed: ЛНП: [+ unemployed_lvp_display +]%, ?] [? if not cvp_formed: НННП: [+ unemployed_dnvp_display +]%, ?] [? if dnf_formed: НФГ: [+ unemployed_dnf_display +]% ?][? if kvp_formed: КНП: [+ unemployed_kvp_display +]% ?]НСДАП: [+ unemployed_nsdap_display +]%, Прочие: [+ unemployed_other_display +]%
 
 Католики: [? if dnef_formed: ФНЕГ: [+ catholics_dnef_display +]%, ?]СДПГ: [+ catholics_spd_display +]%, [+ z_party_name +]: [+ catholics_z_display +]%, КПГ: [+ catholics_kpd_display +]%, [? if not lvp_formed: [+ ddp_name +]: [+ catholics_ddp_display +]%, [? if dvp_exist: ННП: [+ catholics_dvp_display +]%, ?] ?][? if lvp_formed: ЛНП: [+ catholics_lvp_display +]%, ?] [? if not cvp_formed: НННП: [+ catholics_dnvp_display +]%, ?] [? if dnf_formed: НФГ: [+ catholics_dnf_display +]% ?][? if kvp_formed: КНП: [+ catholics_kvp_display +]% ?]НСДАП: [+ catholics_nsdap_display +]%, Прочие: [+ catholics_other_display +]%
-

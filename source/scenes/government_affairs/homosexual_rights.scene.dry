@@ -49,6 +49,7 @@ on-arrival: reformed_183 = 1; homosexual_rights += 1; z_relation -= 5; kpd_relat
 Проголосовав вместе с прогрессивистами из <span style="color: #700000;">**КПГ**</span> и [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: левыми членами <span style="color: #FFCC00;">**ЛНП**</span> members ?] Мы реформировали Параграф 183: он больше не предусматривает уголовной ответственности за публичную <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">льность</span> и <span style="color: deepskyblue;">кросс</span><span style="color: deeppink;">дрессинг</span>. <i>(ЛГБТ — экстремистское международное движение, запрещенное Верховным Судом России)</i>.
 
 
+
 @change_sex
 subtitle: Мы можем создать юридическую процедуру смены пола. <i>(ЛГБТ — экстремистское международное движение, запрещенное Верховным Судом России)</i>.
 unavailable-subtitle: У нас нет поддержки большинства для проведения этой политики.
@@ -59,4 +60,3 @@ on-arrival: trans_rights = 1; homosexual_rights += 1; z_relation -= 5; kpd_relat
 Мы приняли законопроект, который позволяет юридически признавать <span style="color: deepskyblue;">тран</span><span style="color: linen;">ссе</span><span style="color: lightpink;">ксуалов</span> и трансвеститов в том поле, в котором они сами себя видят. А также менять имя, одеваться по своему желанию без преследования со стороны полиции, проходить медицинские процедуры. <i>(ЛГБТ — экстремистское международное движение, запрещенное Верховным Судом России)</i>
 
 Разумеется, консерваторы и <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правые</span> обвиняют нас в «дегенератизме».
-

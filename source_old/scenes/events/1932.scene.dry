@@ -1,0 +1,21 @@
+title: 1932
+subtitle: Новый год
+on-arrival: {!
+// increase NSDAP vote share 
+if (Q.works_program && Q.works_program >= 2) {
+    Q.unemployed -= 1;
+    Q.inflation += 1;
+    Q.economic_growth += 1;
+}
+// historical growth: -7.5%
+// moved demographic changes to post_event
+!}
+tags: event
+view-if: year = 1932 and month = 1 
+priority: 2
+max-visits: 1
+
+Начинается новый год. [? if works_program = 0 : В Германии почти нет хороших новостей. Экономическая депрессия всё ещё усугубляется. ?][? if works_program >= 1 and unemployed >= 20 : Мы реализовываем программу общественных работ, однако безработица всё ещё остаётся довольно высокой. У людей появляется оптимизм насчёт будущего. ?][? if works_program >= 1 and unemployed < 20 : Мы реализовываем программу общественных работ, и безработица наконец-то снижается. У людей появляется оптимизм насчёт будущего. ?]
+
+В этом году в апреле состоятся президентские выборы в Германии.
+

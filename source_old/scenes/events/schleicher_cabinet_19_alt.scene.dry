@@ -1,0 +1,46 @@
+title: Шлейхер уходит в отставку!
+subtitle: Гинденбург недоволен канцлером.
+view-if: chancellor == "Schleicher" and schleicher_post and schleicher_pause
+face-image: img/portraits/schleicher_stare.jpg
+max-visits: 1
+new-page: true
+tags: event
+
+= Шлейхер уходит в отставку!
+
+Гинденбург в ярости. Шлейхер — глава рейхсвера и человек, неоднократно заверявший президента в способности армии подавить любую угрозу со стороны <span style="color: #700000;">**коммунистов**</span> — теперь капитулировал перед нашими требованиями легализовать <span style="color: #700000;">**КПГ**</span>.
+
+Утратив веру в рейхсвер, он вновь обратился к своим старым союзникам из <span style="color: #3E88B3;">националистов</span>. И поскольку планка низка, возможно, для нас это положительное развитие событий. Хотя они и остаются нашими врагами, как и во времена стабильности, кого бы Гинденбург сейчас ни выбрал, он, скорее всего, будет предпочтительнее дальнейшего пребывания Шлейхера у власти.
+
+- @treviranus
+
+
+@treviranus
+title: Куно фон Вестарп — [? if dnvp_ideology == "Radical": &nbsp;Бывший лидер ?] <span style="color: #3E88B3;">**НННП**</span>
+subtitle:  вновь предпочтительный кандидат Гинденбурга и [? if dnvp_leader != "Westarp": бывший ?] <span style="color: #3E88B3;">** лидер НННП**</span> party leader.
+face-image: img/portraits/Treviranus.jpg
+on-arrival: {!
+Q.chancellor = "Treviranus";
+Q.schleicher_approval -= 4;
+
+if (Q.dnvp_ideology == "Radical" && !Q.kvp_formed) {
+    Q.treviranus_party = "DNEF";
+} else if (Q.dnvp_ideology == "Radical" && Q.kvp_formed) {
+    Q.treviranus_party = "KVP";
+} else if (Q.dnvp_ideology == "Moderate") {
+    Q.treviranus_party = "DNVP";
+}
+
+Q.chancellor_party = Q.treviranus_party;
+
+Q.schleicher_spd_r -= 3;
+Q.schleicher_spd_influence -= 4;
+Q.schleicher_spd_support -= 5;
+!}
+
+Вестарп, несмотря на очередные мольбы стареющего и всё более больного Гинденбурга, отклонил предложение. Вместо этого он рекомендует назначить восходящую звезду и лидера <span style="color: #0087DC;">Volkskonservativ</span> Готфрида Тревирануса. Имея тесные связи с немецкой промышленностью, правыми кругами и псевдо<span style="color: #000000;">респу</span><span style="color: #DD0000;">бликан</span><span style="color: #FFCC00;">ским</span> лоском, Тревиранус — кандидат, призванный стабилизировать усугубляющийся кризис в Германии.
+
+Как и в случае с отставкой Папена в пользу Шлейхера, политический класс вновь вздыхает с облегчением. Даже внутри <span style="color: #c00000;">**СДПГ**</span> многие считают: лучше иметь дело со знакомым злом, нежели с динамичным и непредсказуемым правлением Шлейхера.
+
+Тревиранус попытается сформировать рабочее большинство в парламенте.
+

@@ -49,7 +49,6 @@ go-to: red_general
 
 
 
-
 @union_unity
 title: Координация партии и профсоюзов
 subtitle: Уменьшить разногласия в профсоюзах.
@@ -58,4 +57,3 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 on-arrival: advisor_action_timer = 6; labor_dissent -= 5; labor_strength += 5
 
 Мы снизили напряжённость в отношениях с фракцией профсоюзников и укрепили её позиции в партии.
-

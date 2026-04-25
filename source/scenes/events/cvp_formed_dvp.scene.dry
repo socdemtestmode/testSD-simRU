@@ -267,4 +267,3 @@ if (Q.kpd_relation >= 30 && Q.sapd_formed == 1) {
     Q.weimar_coalition_prussia += Q.sapd_r_prussia;
 }
 !}
-

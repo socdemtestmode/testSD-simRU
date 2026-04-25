@@ -9,6 +9,7 @@ new-page: true
 
 Магнус Хиршфельд — основатель Institut für Sexualwissenschaft и защитник прав сексуальных меньшинств.[? if homosexual_rights: В настоящее время он пользуется значительной поддержкой среди партийных фракций благодаря достижениям <span style="color: #c00000;">**СДПГ**</span> в области прав <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">сек</span><span style="color: green;">су</span><span style="color: blue;">а</span><span style="color: purple;">ло</span>в <i>(ЛГБТ — экстремистское международное движение, запрещенное Верховным Судом России)</i>. ?]
 
+
 - @homosexual_rights_
 - @womens_rights_
 - @science_funding
@@ -23,7 +24,6 @@ choose-if: advisor_action_timer = 0 and spd_in_government and progressive_coalit
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> сейчас не входит в правительство. ?][? if progressive_coalition < 50 : У нас недостаточно голосов в парламенте, чтобы принять эти законы. ?] [? if cvp_women_accepted : Наше коалиционное соглашение не позволяет нам действовать в вопросе прав <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">лов</span>. ?]
 on-arrival: advisor_action_timer = 6; homosexual_rights_timer -= 11; last_advisor_action = 1
 go-to: homosexual_rights
-
 
 
 

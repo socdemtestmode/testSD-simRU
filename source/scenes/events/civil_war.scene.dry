@@ -112,6 +112,8 @@ go-to: war_menu
 
 Что у нас ещё есть?
 
+# note: many scenarios lead to civil war. This calculates the array of forces, and the possible outcomes.
+
 
 @war_menu
 
@@ -149,6 +151,7 @@ on-arrival: war_choices += 1
 Всеобщая забастовка остановила Капповский путч в 1920 году, и сегодня она может остановить <span style="color: #7A3C00;">фашизм</span>. [? if normalized_workers_total > 70 : Рабочие в большинстве своём с нами. ?][? if normalized_workers_total >= 50 and normalized_workers_total <= 70 : В рабочей среде есть некоторые разногласия, но большинство рабочих поддерживает всеобщую забастовку. ?][? if normalized_workers_total > 30 and normalized_workers_total < 50 : Однако в рабочей среде существуют серьёзные разногласия, и всеобщую забастовку поддерживает меньше половины. ?][? if normalized_workers_total <= 30 : Однако рабочее движение глубоко расколото, и большинство рабочих не откликнулось на призыв к забастовке. ?]
 
 
+
 @loyal_police
 max-visits: 1
 go-to: war_menu
@@ -158,11 +161,15 @@ view-if: spd_prussia = 1
 Поскольку мы по-прежнему контролируем правительство Пруссии, мы можем призвать на помощь прусскую полицию. [? if prussian_police_loyalty < 0.4 : К сожалению, полиция в лучшем случае политически ненадёжна. ?][? if prussian_police_loyalty >= 0.4 and prussian_police_loyalty < 0.65 : В этот решающий час прусская полиция расколота, и примерно половина её сотрудников активно поддерживает наши действия. ?][? if prussian_police_loyalty >= 0.65 : Большинство поддерживает наши усилия. Наши усилия по воспитанию <span style="color: #000000;">рес</span><span style="color: #DD0000;">пуб</span><span style="color: #FFCC00;">ликанской</span> лояльности в полиции оправдали себя. ?]
 
 
+
+
+
 @foreign_intervention
 max-visits: 1
 go-to: war_menu
 on-arrival: war_choices += 1; 
 
+# note: the Prussian coup should not trigger foreign intervention...
 
 
 

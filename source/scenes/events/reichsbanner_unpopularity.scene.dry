@@ -28,4 +28,3 @@ on-arrival: reichsbanner_unpopularity_time = time + 6
 on-arrival: rb_strength *= 0.9; rb_militancy *= 0.8 if left_strength < 40; rb_militancy *= 0.9 if left_strength >= 40
 
 Это останется проблемой, если наша популярность и дальше будет падать.
-

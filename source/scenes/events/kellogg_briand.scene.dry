@@ -5,6 +5,7 @@ view-if: year = 1928 and month == 8
 max-visits: 1
 on-arrival: kellogg_briand_seen = 1; kellogg_briand_signed = 1 if foreign_minister_party = "DVP" or foreign_minister_party == "Z"
 tags: event
+#face-image: img/portraits/StresemannGustav.jpg
 
 = Пакт Бриана — Келлога
 
@@ -41,4 +42,3 @@ view-if: kellogg_briand_signed
 title: Договора недостаточно.
 
 Несмотря на идеализм, лежащий в основе договора, он неспособен достичь своей цели — предотвращения войн. Должен существовать некий механизм принуждения к его исполнению, возможно, автоматические торговые санкции или силы вмешательства под контролем Лиги Наций. В нынешнем виде Лига Наций и этот договор беззубы.
-

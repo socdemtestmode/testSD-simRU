@@ -49,4 +49,3 @@ on-arrival: enemies = "KPD"; reformist_strength += 5; left_dissent += 8; reformi
 on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; dvp_relation -= 5; z_relation -= 5; ddp_relation -= 3; lvp_relation -= 3; kpd_relation += 5; reformist_dissent += 8; workers_z -= 3; new_middle_dvp -= 2; workers_dvp -= 1; workers_ddp -= 0.5; workers_ddp -= 0.5 if not dvp_exist; coalition_dissent += 1; dvp_right += 1; ddp_cohesion -= 1; ddp_right += 1; lvp_right += 1
 
 Наша антибуржуазная риторика популярна среди левых, но в будущем она может помешать созданию коалиций, необходимых для формирования правительства.
-

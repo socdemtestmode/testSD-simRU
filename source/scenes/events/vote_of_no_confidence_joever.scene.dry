@@ -44,6 +44,7 @@ unavailable-subtitle: [? if communist_coalition < 3 : <span style="color: #70000
 on-arrival: communist_coalition += 1; workers_kpd += 3; kpd_relation += 5
 go-to: support_kpd_weimar if in_weimar_coalition; support_kpd_grand if in_grand_coalition
 
+
 The <span style="color: #700000;">**КПГ**</span> не заинтересована в соглашении о «воздержании от вотума недоверия»; они поддержат нас, только если смогут войти в правительство в составе коалиции. А если это соглашение состоится, правые партии уже не будут склонны нас поддерживать.
 
 
@@ -90,4 +91,3 @@ call: set_next_election_time
 Вотум недоверия принят: наше правительство ушло в отставку. Канцлер [+ chancellor +] остаётся исполняющим обязанности, но больше не имеет полномочий проводить новую политику.
 
 Новые выборы назначены на [+ next_election_month : month +] [+ next_election_year +].
-

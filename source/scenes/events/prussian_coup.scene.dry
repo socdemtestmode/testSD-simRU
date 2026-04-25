@@ -64,10 +64,8 @@ go-to: calculations
 
 
 
-
 @calculations
 go-to: defend_2_civil_war if happy_forces < angry_forces; defend_2_victory if happy_forces >= angry_forces
-
 
 
 
@@ -83,7 +81,6 @@ go-to: defend_2_victory_2
 
 @defend_2_victory_2
 achievement: drei_pfeile
-
 
 
 
@@ -114,4 +111,3 @@ on-arrival: older_prussia_leader = prussia_leader; prussia_coup_lose = 1; pre_in
 На <span style="color: #c00000;">социал-демократию</span> опускается пелена безнадёжности и отчаяния. Мы потерпели поражение. Многие члены Рейхсбаннера просто уходят, деморализованные отсутствием призыва к действию.
 
 Президент Гинденбург назначает <span style="color: #808080;">реакционера</span> Франца фон Папена на должность <i>Рейхскомиссара</i> Пруссии, поручив ему демонтировать демократические структуры, за сохранение которых мы боролись. Это способствует амбициям Папена по созданию «Нового государства» — такого, что объединит посты канцлера и премьер-министра Пруссии в одних авторитарных руках.
-

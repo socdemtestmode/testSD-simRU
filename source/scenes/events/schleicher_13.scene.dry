@@ -60,4 +60,3 @@ Q.ddp_name = "DStP";
 [? if dnvp_dnef: - <span style="color: #3E88B3;">**НННП**</span> ?]
 
 [? if nvf_dnef: - <span style="color: #142e20;">**ННФ**</span> ?]
-

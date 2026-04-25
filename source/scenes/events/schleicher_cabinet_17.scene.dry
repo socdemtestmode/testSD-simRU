@@ -37,4 +37,3 @@ Q.pro_republic += 10;
 Q.schleicher_approval += 1;
 !}
 go-to: root
-

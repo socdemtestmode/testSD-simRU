@@ -49,4 +49,3 @@ on-arrival: next_election_week_prussia = next_election_week if rubicon and next_
 call: set_next_election_time_prussia
 
 Новые выборы в ландтаг назначены на [+ next_election_month_prussia : month +] [+ next_election_year_prussia +], неделя [+ next_election_week +].
-

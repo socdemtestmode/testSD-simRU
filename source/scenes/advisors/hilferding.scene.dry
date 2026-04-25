@@ -4,6 +4,7 @@ tags: advisor, centrist
 card-image: img/portraits/HilferdingRudolf.jpg
 view-if: hilferding_advisor = 1
 new-page: true
+#face-image: img/portraits/HilferdingRudolf.jpg
 
 = Рудольф Гильфердинг
 
@@ -52,4 +53,3 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 choose-if: advisor_action_timer == 0 and spd_in_government == 1 and (economic_minister_party == "SPD" or finance_minister_party == "SPD") and (labor_minister_party == "SPD")
 on-arrival: advisor_action_timer = 6; economic_democracy_timer -= 10; last_advisor_action = 1
 go-to: economic_democracy
-

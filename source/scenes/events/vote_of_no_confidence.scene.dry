@@ -87,6 +87,7 @@ unavailable-subtitle: [? if communist_coalition < 3 : <span style="color: #70000
 on-arrival: communist_coalition += 1; workers_kpd += 3; kpd_relation += 5
 go-to: support_kpd_weimar if in_weimar_coalition; support_kpd_grand if in_grand_coalition
 
+
 The <span style="color: #700000;">**КПГ**</span> не заинтересована в том, чтобы лишь «воздерживаться от вотума недоверия»; она поддержит нас, только если войдёт в правительственную коалицию. Если же мы договоримся об этом, нас не поддержат правые партии.
 
 
@@ -140,4 +141,3 @@ call: set_next_election_time
 Голосование прошло успешно: наше правительство ушло в отставку. Канцлер [+ chancellor +] остаётся исполняющим обязанности, но больше не имеет полномочий для проведения новой политики.
 
 Новые выборы назначены на [+ next_election_month : month +] [+ next_election_year +].
-

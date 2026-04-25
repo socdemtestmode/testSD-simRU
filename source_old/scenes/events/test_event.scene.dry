@@ -1,0 +1,26 @@
+title: для разработчика мода
+subtitle: пожалуйста, активируйте
+new-page: true
+view-if: secret_trigger == 1
+tags: event
+
+= тест
+
+тесты
+
+- @ok: ОК
+- @no: нет
+
+
+@ok
+on-arrival: secret_trigger = 0
+go-to: lvp_formed
+
+ОК
+
+
+@no
+on-arrival: secret_trigger = 0
+
+ОК
+

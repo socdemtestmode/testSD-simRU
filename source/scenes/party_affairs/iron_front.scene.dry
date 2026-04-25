@@ -71,4 +71,3 @@ view-if: confronting_antisemitism > 1
 on-arrival: nationalism -= 4*(1-dissent); pro_republic += 1.5*(1-dissent); confronting_antisemitism += 1; workers_nsdap -= 4*(1-dissent); unemployed_nsdap -= 4*(1-dissent); ddp_left += 0.5; lvp_left += 1
 
 <span style="color: #7A3C00;">Нацисты</span> и другие <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правые</span> политические движения всё чаще обращают свою ненависть против <span style="color: #005EB8;">еврейской</span> общины Германии. <span style="color: #c00000;">**Железный**</span> <span style="color: #1A1A1A;">**Фронт**</span> митинги в защиту отдельных <span style="color: #005EB8;">евреев</span> и всей общины от насилия.
-

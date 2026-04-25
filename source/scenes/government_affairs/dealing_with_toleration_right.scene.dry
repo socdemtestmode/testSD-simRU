@@ -5,6 +5,7 @@ card-image: img/portraits/BrüningHeinrich.jpg
 view-if: dealing_with_toleration_timer = 0 and spd_toleration and spd_toleration_right and chancellor_party == "Z" and not cvp_formed
 on-arrival: dealing_with_toleration_timer += 6; month_actions += 1
 tags: govt_affairs
+#subtitle: Despite not being in government, we can still provide support.
 
 = Воздержание от вотума недоверия
 
@@ -114,4 +115,3 @@ on-arrival: z_relation += 4*(1-dissent); dvp_relation += 3*(1-dissent); ddp_rela
 @stay_course
 
 Мы продолжим воздерживаться от вотума недоверия ради стабильности.
-

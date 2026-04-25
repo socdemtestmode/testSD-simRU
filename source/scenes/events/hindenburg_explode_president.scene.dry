@@ -193,6 +193,7 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 [? if not impeachment_bvp: К сожалению, <span style="color: #A2D8E0;">**БНП**</span> разрывает отношения с[? if z_party_name != "CVP": <span style="color: #000000;">Центром</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] на этих выборах, поддерживая вместо этого Секта. ?]
 
 
+
 @convince_ddp_unity
 title: Убедить <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: им нужен [+ spd_candidate +].
 view-if: (spd_candidate = "Eckener" or spd_candidate = "Adenauer") and ddp_candidate != spd_candidate and not lvp_formed
@@ -201,6 +202,7 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
 
 [? if ddp_candidate = spd_candidate: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> легко соглашается: [+ spd_candidate +] теперь и их кандидат! ?] [? if ddp_candidate != spd_candidate: К сожалению, <span style="color: #D3C24D;">**[+ ddp_name +]**</span> не нужен [+ spd_candidate +]. Похоже, <span style="color: #000000;">Вей</span><span style="color: #DD0000;">мар</span><span style="color: #FFCC00;">ская</span> коалиция распадается. ?]
+
 
 
 @convince_ddp_spd
@@ -221,6 +223,7 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
 
 [? if lvp_candidate = spd_candidate: The <span style="color: #FFCC00;">**ЛНП**</span> легко соглашается: [+ spd_candidate +] теперь и их кандидат! ?] [? if lvp_candidate != spd_candidate: К сожалению, <span style="color: #FFCC00;">**ЛНП**</span>, похоже, не нужен [+ spd_candidate +]. <span style="color: #000000;">Вей</span><span style="color: #DD0000;">мар</span><span style="color: #FFCC00;">ская</span> коалиция, похоже, раскалывается. ?]
+
 
 
 @convince_lvp_spd
@@ -280,10 +283,10 @@ max-visits: 1
 [? if dvp_candidate = spd_candidate: Благодаря нашим хорошим отношениям и тому, что наш кандидат — беспартийная кандидатура, не связанная с <span style="color: #c00000;">**СДПГ**</span>, the <span style="color: #C0A054;">**ННП**</span> соглашается: [+ spd_candidate +] теперь и их кандидат. ?]
 
 
+
 @round_1
 go-to: election_algorithm
 set-jump: post_election
-
 
 
 

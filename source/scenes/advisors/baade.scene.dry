@@ -25,7 +25,6 @@ go-to: agricultural_policy
 
 
 
-
 @rural_campaign
 title: Агитация в сельской местности
 subtitle: Попытаться провести агитацию среди сельского населения.
@@ -44,4 +43,3 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 on-arrival: advisor_action_timer = 6; wtb_support += 2; center_dissent += 10; labor_strength += 5; wtb_points += 15
 
 [? if not wtb_concept: Войтинский, Тарнов и Бааде совместно работали над планом по выводу страны из депрессии. Бааде агитирует за этот план по всей партии. ?][? if wtb_concept: План ВТБ, названный в честь его главных сторонников — Войтинского, Тарнова и Бааде, — принят профсоюзами как план по выводу страны из депрессии. Бааде агитирует за этот план по всей партии. ?]
-

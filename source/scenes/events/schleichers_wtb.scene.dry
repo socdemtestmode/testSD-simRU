@@ -4,6 +4,8 @@ view-if: year >= 1930 and president = "Hindenburg" and spd_in_government and not
 on-arrival: schleicher_wtb_proposal_seen = 1
 new-page: true
 max-visits: 1
+#tags: event
+face-image: img/portraits/SchleicherKurt.jpg
 
 = Предложение Шлейхера
 
@@ -43,4 +45,3 @@ on-arrival: schleicher_spd = 1; hindenburg_angry = 0; hindenburg_angry_pause_tim
 title: Словам Шлейхера нельзя доверять, он в любой момент вонзит нам нож в спину.
 
 Мы отклонили просьбу Шлейхера о встрече. Его предложение слишком хорошо, чтобы быть правдой, а союз с таким милитаристом и реакционером стал бы предательством всего, что мы отстаиваем.
-

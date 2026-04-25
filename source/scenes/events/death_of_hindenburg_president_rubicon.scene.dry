@@ -165,7 +165,7 @@ The <span style="color: #6A1E1E;">**НСС**</span> выдвинет [? if dsu_c
 
 
 @candidates_nats
-title: Перейдём к <span style="color: #3E88B3;">националистам</span>. 
+title: Перейдём к <span style="color: #3E88B3;">националистам</span>.
 
 <span style="color: #3E88B3;">Националисты</span> едины. Их кандидат: [+ dnef_candidate +]. К ним присоединились различные отколовшиеся фракции и малые буржуазные партии. Хотя Гугенберг — каким-то образом — всё ещё обдумывает возможность баллотироваться в президенты, недвусмысленная угроза заставила его молчать.
 
@@ -349,6 +349,7 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 [? if z_relation < 50 : В результате нашей поддержки Аденауэра наиболее консервативное крыло <span style="color: #A2D8E0;">Баварской народной партии</span> откололось от [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?]. Теперь их кандидат: [+ dnef_candidate +]. Надеюсь, это не приведёт к повторению президентских выборов 1925 года. ?]
 
 
+
 @convince_ddp_unity
 title: Убедить <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: им нужен [+ spd_candidate +].
 view-if: spd_candidate = "Adenauer" and ddp_candidate != spd_candidate and not lvp_formed
@@ -357,6 +358,7 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
 
 [? if ddp_candidate = spd_candidate: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> легко соглашается: [+ spd_candidate +] теперь и их кандидат! Во многом это потому, что [+ spd_candidate +] — кандидат от <span style="color: #000000;">Партии Центра</span>, а не от <span style="color: #c00000;">**СДПГ**</span>. ?] [? if ddp_candidate != spd_candidate: К сожалению, <span style="color: #D3C24D;">**[+ ddp_name +]**</span> не нужен [+ spd_candidate +]. <span style="color: #000000;">Вей</span><span style="color: #DD0000;">ма</span><span style="color: #FFCC00;">рская</span> коалиция, похоже, раскалывается, и Шлейхер, несомненно, играет в этом не последнюю роль. ?]
+
 
 
 @convince_ddp_spd
@@ -407,7 +409,6 @@ max-visits: 1
 @round_1
 go-to: election_algorithm
 set-jump: post_election
-
 
 
 
@@ -617,6 +618,7 @@ go-to: post_election
 @r1_winner
 go-to: election_end
 
+# TODO: different paths for the different outcomes...
 
 
 
@@ -681,4 +683,3 @@ go-to: hammerstein_win if winner == "Hammerstein" or winner == "Strasser" or win
 on-arrival: president = winner; president = "Hammerstein" if (winner == "Strasser" or winner == "Goring" or winner == "Göring" or winner == "Frick")
 
 На выборах победил [+ winner_desc +].
-

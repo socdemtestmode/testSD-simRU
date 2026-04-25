@@ -5,6 +5,7 @@ tags: party_affairs
 is-card: true
 on-arrival: month_actions += 1; inter_party_relationships_timer = 6;
 card-image: img/weimar_coalition_2.jpg
+#subtitle: Building relations with the other political parties of Germany.
 
 = Межпартийные отношения
 
@@ -59,6 +60,7 @@ on-arrival: reformist_dissent += 12; reformist_strength -= 2; neorevisionist_dis
 on-arrival: kpd_relation -= 3
 
 Нам незачем извиняться за действия Эберта и Носке; это вина <span style="color: #700000;">коммунистов</span> в том, что они подняли кровавое восстание.
+
 
 
 @kpd_2
@@ -416,9 +418,10 @@ if (d3 && window) {
 }
 !}
 
+
 Благодаря нашим общим ценностям — добропорядочности и любви — мы договорились выставить единый список с <span style="color: #3E88B3;">**НННП**</span> и принять их в нашу парламентскую фракцию. Однако из-за этой сделки нам пришлось исключить всех наших членов <span style="color: #005EB8;">еврейского</span> происхождения, которые присоединятся к [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?].
 
-<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 
 @nsdap

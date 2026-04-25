@@ -1,0 +1,40 @@
+title: Уличные бои прекращаются
+subtitle: Парамилитарные организации уходят в прошлое.
+view-if: chancellor == "Schleicher" and schleicher_post_time >= 10 and state_force >= 70
+max-visits: 1
+new-page: true
+tags: event
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/blutmai_3.jpg";  
+
+    cardEl.appendChild(image);      
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+= Уличные бои окончены
+
+После того как рейхсвер брошен на подавление политического насилия, уличные бои между враждующими военизированными организациями пошли на спад: ситуация фактически разрешилась.
+
+Механика отключена.
+
+- @streetfighting_joever
+
+
+@streetfighting_joever
+title: Ура?
+on-arrival: {!
+Q.streetfighting_joever = 1;
+
+Q.schleicher_portrait = 1;
+
+Q.pro_republic += 10;
+Q.schleicher_approval += 1;
+!}
+go-to: root
+

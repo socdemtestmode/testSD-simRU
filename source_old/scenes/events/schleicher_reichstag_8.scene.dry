@@ -1,0 +1,52 @@
+title: Объявлены досрочные выборы
+view-if: chancellor = "Schleicher" and schleicher_time and not schleicher_post_protests and reichstag_break and dnef_total_votes >= 35
+on-arrival: {!
+Q.reichstag_rubicon = 0;
+Q.reichstag_break = 0;
+
+Q.next_election_week = Q.week + 6;
+Q.next_election_month = Q.month;
+Q.next_election_year = Q.year;
+Q.next_election_time = Q.time;
+
+let added_months = Math.floor(Q.next_election_week / 4);
+Q.next_election_month += added_months;
+Q.next_election_time += added_months;
+Q.next_election_week = Q.next_election_week % 4;
+if (Q.next_election_week === 0) Q.next_election_week = 1;
+
+if (Q.next_election_month > 12) {
+    Q.next_election_month -= 12;
+    Q.next_election_year += 1;
+}
+!}
+new-page: true
+tags: event
+max-visits: 1
+priority: 2
+
+= Объявлены досрочные выборы
+
+Канцлер Шлейхер и <span style="color: #BFC8CC;">**ФНЕГ**</span> видят в новых выборах возможность резко увеличить число своих мест, что позволит им консолидировать власть и править единолично, опираясь лишь на верных им <span style="color: #6A1E1E;">**НСС**</span>, без оглядки на парламентаризм.
+
+Новые выборы в Рейхстаг назначены на [+ next_election_month : month +] [+ next_election_year +], неделя [+ next_election_week +].
+
+- @prussia_election
+
+
+@prussia_election
+title: Шлейхер требует[+ prussia_leader +]двойного роспуска.
+view-if: prussia_leader != "Goerdeler" and prussia_leader != "Strasser"
+
+Шлейхер сообщает, [+ prussia_leader +] что двойной роспуск палат Рейха и Пруссии необходим для того, чтобы состав Рейхстага соответствовал изменившемуся общественному мнению. Также сохраняется угроза вмешательства со стороны центра.
+
+- @prussia_election_2
+
+
+@prussia_election_2
+title: [+ prussia_leader +]уступает давлению.
+on-arrival: next_election_week_prussia = next_election_week if rubicon and next_election_time - time < 3; next_election_week_prussia = week + 6 if rubicon and next_election_time - time >= 3; next_election_week_prussia -= 4 if rubicon and next_election_week_prussia > 4; next_election_week_prussia -= 4 if rubicon and next_election_week_prussia > 4
+call: set_next_election_time_prussia
+
+Новые выборы в ландтаг назначены на [+ next_election_month_prussia : month +] [+ next_election_year_prussia +], неделя [+ next_election_week +].
+

@@ -1,0 +1,39 @@
+title: Утечка с конференции гауляйтеров
+subtitle: Раскрыт «альтернативный» способ захвата власти, который планируют <span style="color: #7A3C00;">нацисты</span>…
+view-if: chancellor = "Papen" and papen_time == 9 and prussia_coup_lose
+new-page: true
+tags: event
+max-visits: 1
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/reichswehr_nazi.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+= Утечка с конференции гауляйтеров
+
+Бывший начальник полиции Берлина и член <span style="color: #c00000;">**СДПГ**</span> Альберт Гржезинский, который также входит в наш исполнительный комитет, представил донесение от информатора о собрании региональных функционеров <span style="color: #7A3C00;">нацистской</span> партии. В нём обсуждалось, что произойдёт, если на выборах победит <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правое</span> большинство: немедленное введение чрезвычайного положения, приостановка действия части конституции, нетайное голосование под наблюдением — и всё это при поддержке министра обороны фон Шлейхера.
+
+Если большинство не будет получено, альтернативой станет столкнуть <span style="color: #7A3C00;">нацистские</span> <span style="color: #7A3C00;">**СА**</span> и рейхсвер фон Шлейхера с Папеном, и если Папен откажется действовать, они будут вынуждены действовать сами.
+
+- @nazi
+
+
+@nazi
+title: В ответ немедленно укрепить Рейхсбаннер.
+subtitle: -1 ресурс
+unavailable-subtitle: Недостаточно ресурсов.
+choose-if: resources >= 1
+on-arrival: nazi_urgency += 1; resources -= 1; rb_strength += 200; rb_militancy += 0.05
+
+Такое развитие событий убедило <span style="color: #c00000;">**СДПГ**</span> — и самого Отто Вельса — предоставить Рейхсбаннеру независимые полномочия и финансовую поддержку, которую его лидеры считают жизненно важной.
+
+Такая поддержка особенно важна после потери нами Пруссии и её хорошо оснащённой полиции.
+

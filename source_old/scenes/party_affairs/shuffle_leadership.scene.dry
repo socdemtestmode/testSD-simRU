@@ -1,0 +1,725 @@
+title: Смена советников
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: shuffle_leadership_timer = 0 and difficulty >= 0 and not started
+on-arrival: month_activities += 1; shuffle_leadership_timer = 10;
+card-image: img/vorwarts_2.jpg
+go-to: rm_main
+
+- @rm_main: Сместить советников
+- @add_advisors: Добавить советников
+- @remove_none: Не смещать советников.
+- @easy_discard
+
+
+###################### removing leaders
+
+
+@rm_main
+title: Сместить советников.
+tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
+on-arrival: {!
+Q.last_time_check = Q.time;
+if (Q.time > Q.last_time_check) {
+    Q.advisor_1 = [];
+
+    for (let key in Q) {
+        if (key.endsWith('_advisor') && Q[key] === 1) {
+            Q.advisor_1.push(key.replace('_advisor', ''));
+        }
+    }
+}
+console.log(Q.advisor_1)
+!}
+frequency: 1
+go-to: rm_main_menu
+
+The <span style="color: #c00000;">**СДПГ**</span> — это многоликая и динамичная партия, но её внутренние противоречия со временем приводят к постепенному росту внутренних разногласий. [? if nsdap_votes >= 20: Однако угроза, исходящая от <span style="color: #7A3C00;">**НСДАП**</span> для Республики, заставила утихнуть многие внутренние споры. ?]
+
+Назначение отдельных советников повысит лояльность и влияние их фракций, но приведёт к росту недовольства среди оттеснённых фракций.
+
+<span class="tooltip-text" title="Левые заинтересованы в радикальной, меняющей общество политике и сотрудничестве с КПГ.">Левые</span> сила: [+ left_strength : strength +], недовольство фракции: [+ left_dissent : dissent +]
+
+<span class="tooltip-text" title="Центр — это фракция центристов-марксистов, балансирующая между реформой и революцией.">Центр</span> сила: [+ center_strength : strength +], недовольство фракции: [+ center_dissent : dissent +]
+
+<span class="tooltip-text" title="Цель профсоюзной фракции — экономические реформы и льготы для организованных рабочих.">Профсоюзники</span> сила: [+ labor_strength : strength +], недовольство фракции: [+ labor_dissent : dissent +]
+
+<span class="tooltip-text" title="Реформисты — это прагматики, сторонники участия в правительствах с центристскими буржуазными партиями. Стремятся к расширению социального государства и защите демократии.">Реформисты</span> сила: [+ reformist_strength : strength +], недовольство фракции: [+ reformist_dissent : dissent +]
+
+
+@rm_main_menu
+
+- #remove_advisor
+- @add_advisors: Добавить советников
+
+
+@remove_none
+title: Прекратить менять советников.
+on-arrival: {!
+Q.advisor_2 = [];
+
+for (let key in Q) {
+    if (key.endsWith('_advisor') && Q[key] === 1) {
+        Q.advisor_2.push(key.replace('_advisor', ''));
+    }
+}
+
+console.log(Q.advisor_2)
+
+function arraysAreEqual(arr1, arr2) {
+    if (arr1.length !== arr2.length) return false;
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] !== arr2[i]) return false;
+    }
+    return true;
+}
+
+if (arraysAreEqual(Q.advisor_1, Q.advisor_2)) {
+    Q.shuffle_leadership_timer = 0;
+} else {
+    Q.kleber_der_partei = 0;
+}
+!}
+go-to: root
+tags: remove_advisor
+
+
+
+
+@remove_hilferding
+title: Сместить Гильфердинга
+view-if: hilferding_advisor = 1
+on-arrival: hilferding_advisor = 0; center_dissent += 10; n_advisors -= 1
+tags: remove_advisor
+go-to: rm_main_menu
+
+Гильфердинг смещён с поста советника. Фракция центристов недовольна.
+
+
+@remove_wels
+title: Сместить Вельса
+view-if: wels_advisor = 1
+tags: remove_advisor
+on-arrival: wels_advisor = 0; center_dissent += 10; n_advisors -= 1
+go-to: rm_main_menu
+
+Вельс смещён с поста советника. Фракция центристов недовольна.
+
+
+@remove_muller
+title: Сместить Мюллера
+view-if: muller_advisor = 1
+tags: remove_advisor
+on-arrival: muller_advisor = 0; center_dissent += 10; n_advisors -= 1
+go-to: rm_main_menu
+
+Мюллер смещён с поста советника. Фракция центристов недовольна.
+
+
+@remove_breitscheid
+title: Сместить Брейтшейда
+view-if: breitscheid_advisor = 1
+tags: remove_advisor
+on-arrival: breitscheid_advisor = 0; center_dissent += 10; n_advisors -= 1
+go-to: rm_main_menu
+
+Брейтшейд смещён с поста советника. Центристская фракция недовольна.
+
+
+@remove_severing
+title: Сместить Зеверинга
+view-if: severing_advisor = 1
+tags: remove_advisor
+on-arrival: severing_advisor = 0; reformist_dissent += 10; n_advisors -= 1
+go-to: rm_main_menu
+
+Зеверинг смещён с поста советника. Реформистская фракция недовольна.
+
+
+@remove_braun
+title: Сместить Брауна
+view-if: braun_advisor = 1
+tags: remove_advisor
+on-arrival: braun_advisor = 0; reformist_dissent += 10; n_advisors -= 1
+go-to: rm_main_menu
+
+Браун смещён с поста советника. Реформистская фракция недовольна.
+
+
+@remove_juchacz
+title: Сместить Юхач
+view-if: juchacz_advisor = 1
+tags: remove_advisor
+on-arrival: juchacz_advisor = 0; reformist_dissent += 10; n_advisors -= 1
+go-to: rm_main_menu
+
+Юхач смещена с поста советника. Реформистская фракция недовольна.
+
+
+@remove_pfulf
+title: Сместить Пфюльф
+view-if: pfulf_advisor = 1
+tags: remove_advisor
+on-arrival: pfulf_advisor = 0; reformist_dissent += 10; n_advisors -= 1
+go-to: rm_main_menu
+
+Пфюльф смещена с поста советника. Реформистская фракция недовольна.
+
+
+@remove_leipart
+title: Сместить Лейпарта
+view-if: leipart_advisor = 1
+tags: remove_advisor
+on-arrival: leipart_advisor = 0; labor_dissent += 10; n_advisors -= 1
+go-to: rm_main_menu
+
+Лейпарт смещён с поста советника. Фракция профсоюзников недовольна.
+
+
+@remove_aufhauser
+title: Сместить Ауфхойзера
+view-if: aufhauser_advisor = 1
+tags: remove_advisor
+on-arrival: aufhauser_advisor = 0; labor_dissent += 10; n_advisors -= 1
+go-to: rm_main_menu
+
+Ауфхойзер смещён с поста советника. Фракция профсоюзников недовольна.
+
+
+@remove_wissell
+title: Отстранить Висселя
+view-if: wissell_advisor = 1
+tags: remove_advisor
+on-arrival: wissell_advisor = 0; labor_dissent += 7; n_advisors -= 1
+go-to: rm_main_menu
+
+Виссель отстранён с поста советника. Фракция профсоюзников недовольна.
+
+
+@remove_woytinsky
+title: Сместить Войтинского
+view-if: woytinsky_advisor = 1
+tags: remove_advisor
+on-arrival: woytinsky_advisor = 0; labor_dissent += 7; n_advisors -= 1
+go-to: rm_main_menu
+
+Войтинский смещён с поста советника. Фракция профсоюзников недовольна.
+
+
+@remove_levi
+title: Сместить Леви
+view-if: levi_advisor = 1
+tags: remove_advisor
+on-arrival: levi_advisor = 0; left_dissent += 10; n_advisors -= 1
+go-to: rm_main_menu
+
+Леви смещён с поста советника. Фракция левых недовольна.
+
+
+@remove_sender
+title: Сместить Зендер
+view-if: sender_advisor = 1
+tags: remove_advisor
+on-arrival: sender_advisor = 0; left_dissent += 7; n_advisors -= 1
+go-to: rm_main_menu
+
+Зендер смещёна с поста советника. Фракция левых недовольна.
+
+
+@remove_rosenfeld
+title: Сместить Розенфельда
+view-if: rosenfeld_advisor = 1
+tags: remove_advisor
+on-arrival: rosenfeld_advisor = 0; left_dissent += 7; n_advisors -= 1
+go-to: rm_main_menu
+
+Розенфельд смещён с поста советника. Фракция левых недовольна.
+
+
+@remove_seydewitz
+title: Сместить Зейдевица
+view-if: seydewitz_advisor = 1
+tags: remove_advisor
+on-arrival: seydewitz_advisor = 0; left_dissent += 7; n_advisors -= 1
+go-to: rm_main_menu
+
+Зейдевиц смещён с поста советника. Фракция левых недовольна.
+
+
+@remove_siemsen
+title: Сместить Зимзен
+view-if: siemsen_advisor = 1
+tags: remove_advisor
+on-arrival: siemsen_advisor = 0; left_dissent += 7; n_advisors -= 1
+go-to: rm_main_menu
+
+Зимзен смещёна с поста советника. Фракция левых недовольна.
+
+
+@remove_mierendorff
+title: Сместить Мерендорффа
+view-if: mierendorff_advisor = 1
+tags: remove_advisor
+on-arrival: mierendorff_advisor = 0; neorevisionist_dissent += 10; n_advisors -= 1
+go-to: rm_main_menu
+
+Мерендорфф смещён с поста советника. Фракция неоревизионистов недовольна.
+
+
+@remove_leber
+title: Сместить Лебера
+view-if: leber_advisor = 1
+tags: remove_advisor
+on-arrival: leber_advisor = 0; neorevisionist_dissent += 7; n_advisors -= 1
+go-to: rm_main_menu
+
+Лебер снят с поста советника. Фракция неоревизионистов недовольна.
+
+
+@remove_schumacher
+title: Сместить Шумахера
+view-if: schumacher_advisor = 1
+tags: remove_advisor
+on-arrival: schumacher_advisor = 0; neorevisionist_dissent += 7; n_advisors -= 1
+go-to: rm_main_menu
+
+Шумахер смещён с поста советника. Фракция неоревизионистов недовольна.
+
+
+@remove_wirth
+title: Сместить Вирта
+view-if: wirth_advisor = 1
+tags: remove_advisor
+on-arrival: wirth_advisor = 0; neorevisionist_dissent += 7; n_advisors -= 1
+go-to: rm_main_menu
+
+Вирт смещён с поста советника. Фракция неоревизионистов недовольна.
+
+
+@remove_baade
+title: Сместить Бааде
+view-if: baade_advisor = 1
+tags: remove_advisor
+on-arrival: baade_advisor = 0; n_advisors -= 1
+go-to: rm_main_menu
+
+Бааде снят с поста советника.
+
+
+@remove_hirschfeld
+title: Сместить Гиршфельда
+view-if: hirschfeld_advisor = 1
+tags: remove_advisor
+on-arrival: hirschfeld_advisor = 0; n_advisors -= 1
+go-to: rm_main_menu
+
+Гиршфельд смещён с поста советника.
+
+
+@remove_stampfer
+title: Сместить Штампфера
+view-if: stampfer_advisor = 1 and not stampfer_killed
+tags: remove_advisor
+on-arrival: stampfer_advisor = 0; n_advisors -= 1
+go-to: rm_main_menu
+
+Штампфер отстранён от должности советника.
+
+
+@remove_radbruch
+title: Сместить Радбруха
+view-if: radbruch_advisor = 1
+tags: remove_advisor
+on-arrival: radbruch_advisor = 0; n_advisors -= 1
+go-to: rm_main_menu
+
+Радбрух смещён с поста советника.
+
+
+@add_advisors
+title: Добавить советников
+choose-if: n_advisors < 3
+unavailable-subtitle: Максимум 3 советника.
+go-to: advisor_menu
+
+
+@advisor_menu
+title: Добавить других советников.
+tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
+frequency: 1
+
+
+
+- @centrist: Добавить центристов
+- @left: Добавить левых
+- @reformist: Добавить реформистов
+- @labor: Добавить профсоюзников
+- @neorev: Добавить неоревизионистов
+- @nonfactional: Добавить внефракционных советников
+- @rm_main: Вместо этого сместить советников.
+- @remove_none: Прекратить смену советников.
+
+
+@centrist
+subtitle: Связующее звено; «клей», скрепляющий партию. Снижают падение лояльности всех фракций на 30% за каждого советника-центриста.
+view-if: n_advisors < 3
+
+- #center_advisor
+
+
+@reformist
+view-if: n_advisors < 3
+
+- #reformist_advisor
+
+
+@left
+view-if: n_advisors < 3
+
+- #left_advisor
+
+
+@labor
+view-if: n_advisors < 3
+
+- #labor_advisor
+
+
+@neorev
+view-if: neorevisionism > 0 and n_advisors < 3
+
+- #neorev_advisor
+
+
+@nonfactional
+subtitle: Безразличны к внутрипартийной борьбе. Снижают рост недовольства всех фракций на 10% за каждого внефракционного советника.
+view-if: n_advisors < 3
+
+- #nonfactional_advisor
+
+
+@add_hilferding
+title: Рудольф Гильфердинг
+subtitle: Рудольф Гильфердинг — экономист и один из наших главных теоретиков марксизма.<br><br>[? if difficulty < 0 : Действия — против правого и левого уклона, поддержка тактики воздержания от вотума недоверия, фискальная политика, демократия в экономике ?]
+is-card: true
+card-image: img/portraits/HilferdingRudolf.jpg
+tags: center_advisor
+view-if: hilferding_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: hilferding_advisor = 1; n_advisors += 1; center_dissent -= 7; center_strength += 5
+go-to: advisor_menu
+
+Рудольф Гильфердинг назначен советником.
+
+
+@add_wels
+title: Отто Вельс
+subtitle: Отто Вельс — давний партийный организатор и председатель партии, служивший ещё под началом Фридриха Эберта. <br><br>[? if difficulty < 0 : Действия: очистить повестку, партийная дисциплина, экстренный сбор средств. ?]
+is-card: true
+card-image: img/portraits/WelsRudolf.jpg
+tags: center_advisor
+view-if: wels_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: wels_advisor = 1; n_advisors += 1; center_dissent -= 7; center_strength += 5
+go-to: advisor_menu
+
+Отто Вельс назначен советником.
+
+
+@add_muller
+title: Герман Мюллер
+subtitle: Герман Мюллер — последний канцлер от <span style="color: #c00000;">социал-демократов</span>. <br><br>[? if difficulty < 0 : Действия — переговоры с коалицией, поддержка тактики воздержания от вотума недоверия ?]
+is-card: true
+card-image: img/portraits/MüllerHermann.jpg
+tags: center_advisor
+view-if: muller_advisor = 0 and muller_dead = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: muller_advisor = 1; n_advisors += 1; center_dissent -= 7; center_strength += 5
+go-to: advisor_menu
+
+Герман Мюллер назначен советником.
+
+
+@add_breitscheid
+title: Рудольф Брейтшейд
+subtitle: Рудольф Брейтшейд — выходец из высокообразованной семьи и один из наших лидеров во внешней политике.<br><br>[? if difficulty < 0 : Действия — международные партийные связи, внешняя политика, партийная дисциплина ?]
+is-card: true
+card-image: img/portraits/BreitscheidRudolf.jpg
+view-if: breitscheid_advisor = 0 and n_advisors < 3
+on-arrival: breitscheid_advisor = 1; n_advisors += 1; center_dissent -= 7; center_strength += 5
+go-to: advisor_menu
+tags: center_advisor
+
+Рудольф Брейтшейд назначен советником.
+
+
+@add_severing
+title: Карл Зеверинг
+subtitle: Карл Зеверинг — бывший министр внутренних дел Пруссии и реформатор полиции.<br><br>[? if difficulty < 0 : Действия: Прусский оплот, Дела полиции ?]
+is-card: true
+card-image: img/portraits/SeveringCarl.jpg
+tags: reformist_advisor
+view-if: severing_advisor = 0 and n_advisors < 3
+on-arrival: severing_advisor = 1; n_advisors += 1; reformist_strength += 5; reformist_dissent -= 7
+go-to: advisor_menu
+
+Карл Зеверинг назначен советником.
+
+
+@add_braun
+title: Отто Браун
+subtitle: Отто Браун — министр-президент Пруссии и один из самых популярных и известных лидеров <span style="color: #c00000;">социал-демократов</span>. <br><br>[? if difficulty < 0 : Действия: Прусский оплот, Переговоры с коалицией ?]
+is-card: true
+card-image: img/portraits/BraunOtto.jpg
+tags: reformist_advisor
+view-if: braun_advisor = 0 and n_advisors < 3
+on-arrival: braun_advisor = 1; n_advisors += 1; reformist_strength += 5; reformist_dissent -= 7
+go-to: advisor_menu
+
+Отто Браун назначен советником.
+
+
+@add_juchacz
+title: Мари Юхач
+subtitle: Мари Юхач — основательница «Рабочей благотворительности», организации взаимопомощи. <br><br>[? if difficulty < 0 : Действия — срочный сбор средств, «Рабочая благотворительность», организация женщин ?]
+is-card: true
+card-image: img/portraits/JuchaczMarie.jpg
+view-if: juchacz_advisor = 0 and n_advisors < 3
+on-arrival: juchacz_advisor = 1; n_advisors += 1; reformist_strength += 5; reformist_dissent -= 7
+go-to: advisor_menu
+tags: reformist_advisor
+
+Мари Юхач назначена советником.
+
+
+@add_pfulf
+title: Антони Пфюльф
+subtitle: Антони Пфюльф — одна из лидеров в социальной политике и защите прав женщин.<br><br>[? if difficulty < 0 : Действия — поддержать идею Народной Партии, права женщин. ?]
+is-card: true
+card-image: img/portraits/PfülfAntonie.jpg
+view-if: pfulf_advisor = 0 and n_advisors < 3
+on-arrival: pfulf_advisor = 1; n_advisors += 1; reformist_strength += 5; reformist_dissent -= 7
+go-to: advisor_menu
+tags: reformist_advisor
+
+Антони Пфюльф теперь — советник.
+
+
+@add_levi
+title: Пауль Леви
+subtitle: Пауль Леви — бывший председатель <span style="color: #700000;">**КПГ,**</span>, которого исключили из партии за критику путчистской тактики <span style="color: #700000;">**коммунистов**</span> policies. <br><br>[? if difficulty < 0 : Действия: усиление фракции левых, сотрудничество с <span style="color: #700000;">**КПГ**</span> ?]
+is-card: true
+card-image: img/portraits/LeviPaul.jpg
+view-if: levi_advisor = 0 and levi_dead = 0 and n_advisors < 3 and left_split = 0
+on-arrival: levi_advisor = 1; n_advisors += 1; left_strength += 5; left_dissent -= 7
+go-to: advisor_menu
+tags: left_advisor
+
+Теперь Пауль Леви — советник.
+
+
+@add_sender
+title: Тони Зендер
+subtitle: Тони Зендер — антивоенная антивистка и феминистка, а также депутат Рейхстага. <br><br>[? if difficulty < 0 : Действия — единство левой и центристской фракции, организация женщин, против воздержания от вотума недоверия, экономический план левых ?]
+is-card: true
+card-image: img/portraits/SenderToni.jpg
+view-if: sender_advisor = 0 and n_advisors < 3
+on-arrival: sender_advisor = 1; n_advisors += 1; left_strength += 5; left_dissent -= 4
+go-to: advisor_menu
+tags: left_advisor
+
+Тони Зендер назначена советником.
+
+
+@add_rosenfeld
+title: Курт Розенфельд
+subtitle: Курт Розенфельд — юрист, антивоенный активист и депутат рейхстага. <br><br>[? if difficulty < 0 : Действия: Укрепление фракции левых, Сотрудничество с <span style="color: #700000;">**КПГ**</span>, Против тактики воздержания от вотума недоверия ?]
+is-card: true
+card-image: img/portraits/RosenfeldKurt.jpg
+view-if: rosenfeld_advisor = 0 and n_advisors < 3 and left_split = 0
+on-arrival: rosenfeld_advisor = 1; n_advisors += 1; left_strength += 5; left_dissent -= 4
+go-to: advisor_menu
+tags: left_advisor
+
+Курт Розенфельд теперь ваш советник.
+
+
+@add_seydewitz
+title: Макс Зайдевиц
+subtitle: Макс Зайдевиц — бывший лидер молодёжного крыла, член фракции левых в <span style="color: #c00000;">**СДПГ**</span> и сторонник классовой борьбы.<br><br>[? if difficulty < 0 : Действия: Митинг за классовую борьбу, Социалистическая молодёжь, Против тактики на воздержание от вотума недоверия ?]
+is-card: true
+card-image: img/portraits/SeydewitzMax.jpg
+view-if: seydewitz_advisor = 0 and n_advisors < 3 and left_split = 0
+on-arrival: seydewitz_advisor = 1; n_advisors += 1; left_strength += 5; left_dissent -= 4
+go-to: advisor_menu
+tags: left_advisor
+
+Макс Зайдевиц назначен советником.
+
+
+@add_siemsen
+title: Анна Зимзен
+subtitle: Анна Зимзен — сторонница реформы образования и пацифистка, одна из немногих немецких женщин, получивших докторскую степень в довоенный период. <br><br>[? if difficulty < 0 : Действия: митинг в поддержку пацифизма, изменение учебной программы, изменение структуру образования ?]
+is-card: true
+card-image: img/portraits/SiemsenAnna.jpg
+view-if: siemsen_advisor = 0 and n_advisors < 3 and left_split = 0
+on-arrival: siemsen_advisor = 1; n_advisors += 1; left_strength += 5; left_dissent -= 4
+go-to: advisor_menu
+tags: left_advisor
+
+Анна Зимзен теперь — советник.
+
+
+@add_leipart
+title: Теодор Лейпарт
+subtitle: Теодор Лейпарт — лидер АДГБ, Всеобщей конфедерации немецких профсоюзов. <br><br>[? if difficulty < 0 : Действия: организация рабочих, поддержка экономического плана реформистов[? if red_general_unlock and rubicon: , переговоры с красным генералом ?] ?]
+is-card: true
+card-image: img/portraits/LeipartTheodor.jpg
+tags: labor_advisor
+view-if: leipart_advisor = 0 and n_advisors < 3 and unions_independent = 0
+on-arrival: leipart_advisor = 1; n_advisors += 1; labor_strength += 5; labor_dissent -= 8
+go-to: advisor_menu
+
+Теодор Лейпарт назначен советником.
+
+
+@add_aufhauser
+title: Зигфрид Ауфхойзер
+subtitle: Зигфрид Ауфхойзер — лидер всеобщего профсоюза служащих (AfA-Bund).<br><br>[? if difficulty < 0 : Действия: организация служащих («белых воротничков»), координация профсоюзов и партии, поддержать экономический план реформистов, поддержать экономический план левых ?]
+is-card: true
+card-image: img/portraits/AufhäuserSiegfried.jpg
+tags: labor_advisor
+view-if: aufhauser_advisor = 0 and n_advisors < 3
+on-arrival: aufhauser_advisor = 1; n_advisors += 1; labor_strength += 5; labor_dissent -= 8
+go-to: advisor_menu
+
+Зигфрид Ауфхойзер назначен советником.
+
+
+@add_wissell
+title: Рудольф Виссель
+subtitle: Рудольф Виссель — экономист, бывший министр труда, защитник интересов трудящихся в правительстве. <br><br>[? if difficulty < 0 : Действия — координация партии и профсоюзов, защита прав трудящихся ?]
+is-card: true
+card-image: img/portraits/WissellRudolf.jpg
+tags: labor_advisor
+view-if: wissell_advisor = 0 and n_advisors < 3 and unions_independent = 0
+on-arrival: wissell_advisor = 1; n_advisors += 1; labor_strength += 3; labor_dissent -= 4
+go-to: advisor_menu
+
+Рудольф Виссель назначен советником.
+
+
+@add_woytinsky
+title: Владимир Войтинский
+subtitle: Владимир Войтинский — бывший русский меньшевик, а ныне ведущий экономист профсоюзов. <br><br>[? if difficulty < 0 : Действия — поддержать экономический план профсоюзников, реализовать экономический план профсоюзников ?]
+is-card: true
+card-image: img/portraits/WoytinskyWladimir.jpg
+tags: labor_advisor
+view-if: woytinsky_advisor = 0 and n_advisors < 3 and unions_independent = 0
+on-arrival: woytinsky_advisor = 1; n_advisors += 1; labor_strength += 3; labor_dissent -= 4
+go-to: advisor_menu
+
+Владимир Войтинский назначен советником.
+
+
+@add_mierendorff
+title: Карло Мерендорфф
+subtitle: Карло Мерендорфф — один из самых молодых депутатов рейхстага и основоположник «неоревизионистского» движения. Он — стратег по борьбе с нацистами.<br><br>[? if difficulty < 0 : Действия — Создать <span style="color: #c00000;">Железный</span> <span style="color: #1A1A1A;">фронт</span>, вербовать в Железный фронт, предупредить об угрозе <span style="color: #7A3C00;">нацизма</span> ?]
+is-card: true
+card-image: img/portraits/MierendorffCarlo.jpg
+view-if: mierendorff_advisor = 0 and n_advisors < 3
+on-arrival: mierendorff_advisor = 1; n_advisors += 1; neorevisionist_strength += 5; neorevisionist_dissent -= 7
+go-to: advisor_menu
+tags: neorev_advisor
+
+Карло Мерендорфф назначен советником.
+
+
+@add_schumacher
+title: Курт Шумахер
+subtitle: Курт Шумахер — ветеран Великой войны и пламенный оратор, защитник <span style="color: #c00000;">социал-демократических</span> идей. Он выступает за реформизм. <br><br>[? if difficulty < 0 : Действия: срочный сбор средств, укрепление Рейхсбаннера, поддержать экономический план реформистов. ?]
+is-card: true
+card-image: img/portraits/SchumacherKurt.jpg
+tags: neorev_advisor
+view-if: schumacher_advisor = 0 and n_advisors < 3
+on-arrival: schumacher_advisor = 1; n_advisors += 1; neorevisionist_strength += 5; neorevisionist_dissent -= 4
+go-to: advisor_menu
+
+Курт Шумахер назначен советником.
+
+
+@add_leber
+title: Юлиус Лебер
+subtitle: Юлиус Лебер — бывший офицер рейхсвера, подавший в отставку в знак протеста против Капповского путча. <br><br>[? if difficulty < 0 : Действия: митинг в защиту демократии, министерство Рейхсвера, создание Народной партии. ?]
+is-card: true
+card-image: img/portraits/LeberJulius.jpg
+view-if: leber_advisor = 0 and n_advisors < 3
+on-arrival: leber_advisor = 1; n_advisors += 1; neorevisionist_strength += 5; neorevisionist_dissent -= 4
+go-to: advisor_menu
+tags: neorev_advisor
+
+Юлиус Лебер назначен советником.
+
+
+@add_wirth
+title: Йозеф Вирт
+subtitle: Йозеф Вирт — бывший член левого крыла партии <span style="color: #000000;">«Центр»</span> и бывший канцлер, известный своими ярыми <span style="color: #000000;">респ</span><span style="color: #DD0000;">убл</span><span style="color: #FFCC00;">икан</span>скими убеждениями.
+is-card: true
+card-image: img/portraits/wirth.jpg
+view-if: wirth_advisor = 0 and wirth_spd and n_advisors < 3
+on-arrival: wirth_advisor = 1; n_advisors += 1; neorevisionist_strength += 5; neorevisionist_dissent -= 8
+go-to: advisor_menu
+tags: neorev_advisor
+
+Йозеф Вирт назначен советником.
+
+
+@add_baade
+title: Фриц Бааде
+subtitle: Фриц Бааде — один из немногих экспертов по сельскому хозяйству в <span style="color: #c00000;">**СДПГ**</span>. <br><br>[? if difficulty < 0 : Действия: аграрная политика, агитация в сельской местности, поддержать экономический план профсоюзников ?]
+is-card: true
+card-image: img/portraits/BaadeFritz.jpg
+view-if: baade_advisor = 0 and n_advisors < 3
+on-arrival: baade_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: nonfactional_advisor
+
+Фриц Бааде назначен советником.
+
+
+@add_hirschfeld
+title: Магнус Хиршфельд
+subtitle: Магнус Хиршфельд — основатель Institut für Sexualwissenschaft и защитник прав сексуальных меньшинств.<br><br>[? if difficulty < 0 : Действия — права гомосексуалов, права женщин, финансирование науки ?]
+is-card: true
+card-image: img/portraits/HirschfeldMagnus.jpg
+view-if: hirschfeld_advisor = 0 and n_advisors < 3
+on-arrival: hirschfeld_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: nonfactional_advisor
+
+Магнус Хиршфельд назначен советником.
+
+
+@add_radbruch
+title: Густав Радбрух
+subtitle: Густав Радбрух — известный правовед и министр юстиции от <span style="color: #c00000;">**СДПГ**</span> justice minister. <br><br>[? if difficulty < 0 : Действия: судебная реформа, конституционная реформа ?]
+is-card: true
+card-image: img/portraits/RadbruchGustav.jpg
+view-if: radbruch_advisor = 0 and n_advisors < 3
+on-arrival: radbruch_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: nonfactional_advisor
+
+Густав Радбрух назначен советником.
+
+
+@add_stampfer
+title: Фридрих Штампфер
+subtitle: Фридрих Штампфер — многолетний главный редактор «Форвертс», нашей партийной газеты. <br><br>[? if difficulty < 0 : Действия: СМИ, редакционная политика, сотрудничество с <span style="color: #700000;">КПГ</span> ?]
+is-card: true
+card-image: img/portraits/StampferFriedrich.jpg
+view-if: stampfer_advisor = 0 and n_advisors < 3 and not stampfer_killed
+on-arrival: stampfer_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: nonfactional_advisor
+
+Фридрих Штампфер назначен советником.
+

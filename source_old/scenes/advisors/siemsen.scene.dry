@@ -1,0 +1,45 @@
+title: Анна Зимзен
+is-pinned-card: true
+tags: advisor, left
+card-image: img/portraits/SiemsenAnna.jpg
+view-if: siemsen_advisor = 1
+new-page: true 
+
+= Анна Зимзен
+
+Анна Зимзен — сторонница реформы образования и пацифистка, одна из немногих немок, получивших докторскую степень в довоенный период. В прошлом она состояла в <span style="color: #D47B9B;">**НСДПГ**</span>.
+
+- @campaign_pacifism
+- @structure_
+- @curriculum_
+- @root: Return to main
+
+
+@campaign_pacifism
+title: Митинг за пацифизм.
+subtitle: Кампания за интернационализм и против милитаризма.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?]
+on-arrival: advisor_action_timer = 6;
+go-to: rally.pacifism
+
+
+
+
+@curriculum_
+title: Изменить учебную программу.
+choose-if: advisor_action_timer = 0 and spd_in_government and chancellor_party = "SPD" and (prussia_leader == "Braun" or prussia_leader == "Rosenfeld") and curriculum_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> в настоящее время не у власти. ?][? if chancellor_party != "SPD": <span style="color: #c00000;">СДПГ</span> должна занимать пост рейхсканцлера. ?][? if prussia_leader != "Braun" and prussia_leader != "Rosenfeld": <span style="color: #c00000;">СДПГ</span> должна занимать пост министра-президента Пруссии. ?][? if curriculum_timer > 0 : Слишком рано снова менять учебную программу. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1
+go-to: education_science.curriculum
+
+
+
+
+@structure_
+title: Изменить структуру и финансирование образования.
+choose-if: advisor_action_timer = 0 and spd_in_government and chancellor_party = "SPD" and (prussia_leader == "Braun" or prussia_leader == "Rosenfeld")
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : В данный момент <span style="color: #c00000;">СДПГ</span> не входит в состав правительства. ?][? if chancellor_party != "SPD": Канцлером должен быть член <span style="color: #c00000;">СДПГ</span>. ?][? if prussia_leader != "Braun" and prussia_leader != "Rosenfeld": Пост министра-председателя Пруссии должен контролироваться <span style="color: #c00000;">СДПГ</span>. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1
+go-to: education_science.structure
+

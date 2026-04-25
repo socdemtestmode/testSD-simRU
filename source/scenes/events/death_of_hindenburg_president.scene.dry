@@ -128,6 +128,8 @@ tags: event
 
 Новые президентские выборы должны состояться как можно скорее. Политический ландшафт Германии полностью открыт для кандидатов самых разных взглядов. Тем временем председатель Верховного суда [? if judicial_reform < 4 : Эрвин Бумке ?][? if judicial_reform >= 4 : Герман Гроссманн ?] исполняет обязанности президента.
 
+# Hermann Großmann is the supreme court chief justice in judicial reform.
+
 - @candidates: Кто кандидаты?
 
 
@@ -177,6 +179,7 @@ go-to: r1_menu
 Мы убедили Гуго Эккенера баллотироваться от <span style="color: #c00000;">**СДПГ**</span>. Надеемся, что его поддержит и остальная <span style="color: #000000;">Ве</span><span style="color: #DD0000;">йм</span><span style="color: #FFCC00;">ар</span>ская коалиция.
 
 
+
 @adenauer_r1
 view-if: center_running
 on-arrival: spd_candidate = center_candidate_1934; z_relation += 4; Center_bonus -= 2.5 if ((z_relation < 40 and reactionary_candidate_1934 == "Seldte") or (z_relation < 55 and reactionary_candidate_1934 != "Seldte")) and reactionary_running; Reactionary_bonus += 2.5 if ((z_relation < 40 and reactionary_candidate_1934 == "Seldte") or (z_relation < 55 and reactionary_candidate_1934 != "Seldte")) and reactionary_running; is_unity_candidate = 1; kvp_candidate = dnvp_candidate
@@ -215,6 +218,7 @@ go-to: r1_menu
 Хорошо. Мы поддержали кандидатуру Эрнста Тельмана от <span style="color: #700000;">**КПГ**</span> на пост президента.
 
 
+
 @munzenberg_r1
 subtitle: Поддержка Мюнценберга непопулярна среди реформистов, но не настолько, как была бы непопулярна поддержка Тельмана.
 view-if: kpd_candidate = "Münzenberg" 
@@ -224,6 +228,7 @@ on-arrival: spd_candidate = "Münzenberg"; kpd_relation += 5; reformist_dissent 
 go-to: r1_menu
 
 Мы поддержали Вилли Мюнценберга из <span style="color: #700000;">**КПГ**</span>.
+
 
 
 @braun_r1
@@ -236,6 +241,7 @@ go-to: r1_menu
 Мы убедили Отто Брауна вновь баллотироваться в президенты.
 
 
+
 @schumacher_r1
 subtitle: -2 ресурса.
 unavailable-subtitle: [? if resources < 2 : -2 ресурса — недостаточно ресурсов. ?]
@@ -244,6 +250,7 @@ on-arrival: spd_candidate = "Schumacher"; resources -= 2; is_unity_candidate = 0
 go-to: r1_menu
 
 Мы выдвинули Курта Шумахера кандидатом в президенты.
+
 
 
 @juchacz_r1
@@ -258,7 +265,7 @@ go-to: r1_menu
 
 
 @cultural_figure
-subtitle: Следующий президент должен стать символом новой Германии… 
+subtitle: Следующий президент должен стать символом новой Германии…
 view-if: presidential_powers >= 1 and pro_republic >= 60 and pacifism >= 3
 
 Поскольку в результате наших реформ пост президента стал в значительной степени церемониальным, мы могли бы создать прецедент, выдвинув беспартийного, демократически настроенного деятеля из мира культуры, науки или литературы. Есть много подходящих кандидатур…
@@ -295,6 +302,7 @@ go-to: r1_menu
 Манн готов принять назначение на пост президента.
 
 
+
 @ossietzky_r1
 view-if: weltbuhne_dropped = 1
 subtitle: –2 ресурса — он может казаться слишком <span style="color: #700000;">левым</span> для буржуазных партий.
@@ -305,6 +313,7 @@ go-to: r1_menu
 Карл фон Осецкий — левый журналист, издатель новостного журнала „Вельтбюне“. Он наиболее известен тем, что в 1929 году разоблачил тайную программу перевооружения Германии: это принесло ему международную известность. На президентских выборах 1932 года он поддержал <span style="color: #700000;">**коммуниста**</span> Тельмана.
 
 Осецкий крайне неохотно становится политиком; он всю жизнь был нонконформистом и критиковал <span style="color: #c00000;">**СДПГ**</span>, считая её частью истеблишмента. Не без иронии он принимает наше выдвижение.
+
 
 
 @r1_menu
@@ -339,8 +348,11 @@ if (Q.z_relation >= 40 || (Q.z_relation > 20 && Q.z_leader == "Joos")) {
 max-visits: 1
 go-to: z_failed if z_support_braun = 0 or (z_support_braun == 2 and historical_mode); z_success if z_support_braun = 1; z_partial if z_support_braun = 2 and not historical_mode
 
+# use the same supports as the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] in 1932
 Мы призываем [? if z_party_name != "CVP": <span style="color: #000000;">Партию Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?]: им нужен [? if z_party_name != "CVP": в качестве единого кандидата против <span style="color: #7A3C00;">фашизма</span>. Мы уверены, что вместе <span style="color: #000000;">Ве</span><span style="color: #DD0000;">йм</span><span style="color: #FFCC00;">ар</span>ская коалиция сможет победить <span style="color: #7A3C00;">нацистов</span>. ?] Мы также напоминаем им об истории сотрудничества между нашими партиями, которое началось ещё в 1918 году. [? if z_party_name == "CVP":
 
+
+# convincing Z to support an SPD candidate
 
 @convince_z_spd
 title: Убедить [? if z_party_name != "CVP": <span style="color: #000000;">Партию Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] — им нужен [+ spd_candidate +].
@@ -418,6 +430,7 @@ max-visits: 1
 [? if ddp_candidate = spd_candidate: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> легко соглашается: [+ spd_candidate +] теперь и их кандидат! ?] [? if ddp_candidate != spd_candidate: К сожалению, <span style="color: #D3C24D;">**[+ ddp_name +]**</span> не нужен [+ spd_candidate +]. Похоже, <span style="color: #000000;">Ве</span><span style="color: #DD0000;">йм</span><span style="color: #FFCC00;">ар</span>ская коалиция трещит по швам. ?]
 
 
+
 @convince_ddp_spd
 title: Убедить <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: им нужен [+ spd_candidate +].
 view-if: (spd_candidate = "Braun" or spd_candidate = "Schumacher" or spd_candidate = "Juchacz" or is_cultural_candidate) and ddp_candidate != spd_candidate and not lvp_formed
@@ -436,6 +449,7 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
 
 [? if lvp_candidate = spd_candidate: The <span style="color: #FFCC00;">**ЛНП**</span> легко соглашается: [+ spd_candidate +] теперь и их кандидат! ?] [? if lvp_candidate != spd_candidate: К сожалению, <span style="color: #FFCC00;">**ЛНП**</span> не нужен [+ spd_candidate +]. <span style="color: #000000;">Вей</span><span style="color: #DD0000;">мар</span><span style="color: #FFCC00;">ская</span> коалиция, похоже, трещит по швам. ?]
+
 
 
 @convince_lvp_spd
@@ -495,10 +509,11 @@ max-visits: 1
 [? if dvp_candidate = spd_candidate: Благодаря нашим хорошим отношениям и тому, что наш кандидат — единый и не связан с <span style="color: #c00000;">**СДПГ**</span>, the <span style="color: #C0A054;">**ННП**</span> удалось убедить: [+ spd_candidate +] теперь и их кандидат. ?]
 
 
+
+
 @round_1
 go-to: election_algorithm
 set-jump: post_election
-
 
 
 
@@ -673,7 +688,7 @@ Q.round += 1
 !}
 go-to: r2_start if round = 1 and not has_majority; election_end if round > 1; r1_winner if has_majority
 
-Результаты выборов: 
+Результаты выборов:
 
 [? if Hitler_running : <span style="color: #7A3C00;">**Гитлер**</span> - [+ Hitler_votes_disp +]% ?] [? if Goring_running : <span style="color: #7A3C00;">**Геринг**</span> - [+ Goring_votes_disp +]% ?]
 
@@ -690,6 +705,15 @@ go-to: r2_start if round = 1 and not has_majority; election_end if round > 1; r1
 [? if Eckener_running : <span style="color: #000000;">**Эк**</span><span style="color: #DD0000;">**кен**</span><span style="color: #FFCC00;">**ер**</span> - [+ Eckener_votes_disp +]% ?]
 
 [? if spd_running : <span style="color: #c00000;">**[+ spd_candidate +]**</span> - [+ Socialist_votes_disp +]% ?] [? if Einstein_running : <span style="color: #CFC88F;">**Эйнштейн**</span> - [+ Einstein_votes_disp +]% ?] [? if Ossietzky_running : <span style="color: #E0A0A0;">**Осецкий**</span> - [+ Ossietzky_votes_disp +]% ?] [? if Mann_running : <span style="color: #E0A0A0;">**Манн**</span> - [+ Mann_votes_disp +]% ?]
+
+
+
+
+
+
+
+
+# cultural candidates
 
 
 @r2_start
@@ -775,7 +799,9 @@ go-to: r2_menu
 
 @r2_menu
 
-
+# convince DDP/DVP/Z/KPD to endorse our candidate
+# change the endorsement, if they aren't endorsing our candidate
+# campaign
 
 - @r2_endorse_thalmann
 - @r2_endorse_munzenberg
@@ -883,6 +909,7 @@ set-jump: post_election
 @r1_winner
 go-to: election_end
 
+# TODO: different paths for the different outcomes...
 
 
 
@@ -1009,6 +1036,8 @@ achievement: nach_schleicher_wir
 @thalmann_civil_war
 on-arrival: kpd_relation = 80
 
+# TODO: depose the chancellor?
+
 Тельман без промедления приступает к консолидации власти, используя все доступные средства для реорганизации правительства. В ответ на это крайне правые немедленно устраивают путч. Нам ничего не остаётся, кроме как объединиться с <span style="color: #700000;">**КПГ**</span> против <span style="color: #7A3C00;">фашистов</span>…
 
 - @civil_war: This is civil war.
@@ -1017,6 +1046,7 @@ on-arrival: kpd_relation = 80
 @thalmann_democrat
 
 Несмотря на победу антиконституционалиста Тельмана, он, похоже, соблюдает конституционные ограничения президентской власти — по крайней мере, пока что. Правые в данный момент не горят желанием устраивать переворот. Буржуазии придётся смириться с президентом-<span style="color: #700000;">коммунистом</span>. Хотя бы на время.
+
 
 
 @munzenberg_victory
@@ -1034,7 +1064,6 @@ go-to: nazis_lose
 @eckener_win
 achievement: zeppelin_kapitan
 go-to: nazis_lose
-
 
 
 
@@ -1075,4 +1104,3 @@ go-to: nazis_lose
 @game_over_rubicon
 view-if: rubicon
 go-to: game_over
-

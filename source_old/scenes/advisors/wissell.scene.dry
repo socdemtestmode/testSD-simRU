@@ -1,0 +1,36 @@
+title: Рудольф Виссель
+is-pinned-card: true
+tags: advisor, labor
+card-image: img/portraits/WissellRudolf.jpg
+view-if: wissell_advisor = 1
+new-page: true 
+
+= Рудольф Виссель
+
+Виссель — экономист и профсоюзный деятель. Он работает в АДГБ, федерации независимых профсоюзов, и неоднократно занимал пост министра труда. Его приоритет — улучшение жизни рабочих.
+
+- @labor_rights_
+- @union_unity
+- @root: Return to main
+
+
+@labor_rights_
+title: Защита прав рабочих
+subtitle: Будучи министром труда, Виссель может помочь в регулировании условий труда.
+choose-if: advisor_action_timer <= 0 and spd_in_government and labor_minister_party = "SPD"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if labor_minister_party != "SPD" : СДПГ не контролирует Министерство труда. ?]
+on-arrival: advisor_action_timer = 6; labor_rights_timer -= 10; last_advisor_action = 1
+go-to: labor_rights
+
+
+
+
+@union_unity
+title: Координация профсоюзов и партии
+subtitle: Снизить разногласия среди профсоюзов.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?]
+on-arrival: advisor_action_timer = 6; labor_dissent -= 5; labor_strength += 5
+
+Мы снизили напряжённость в отношениях с фракцией профсоюзников и усилили её позиции в партии.
+

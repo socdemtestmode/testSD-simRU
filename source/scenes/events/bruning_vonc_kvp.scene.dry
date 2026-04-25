@@ -48,4 +48,3 @@ call: set_next_election_time
 on-arrival: time_to_election = 3; spd_in_government = 0; in_right_coalition = 0; in_center_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 0; spd_toleration_right = 0; pro_republic -= 5; bruning_event_timer = 0
 
 Буржуазная коалиция пала. Новые выборы назначены на [+ next_election_month : month +] [+ next_election_year +].
-

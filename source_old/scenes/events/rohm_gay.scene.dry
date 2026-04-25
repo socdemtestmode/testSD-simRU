@@ -1,0 +1,53 @@
+title: <span style="color: #7A3C00;">**</span> <span style="color: red;">Го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">льно</span>сть лидера СА ** Эрнста Рёма разоблачена
+subtitle: Министерство внутренних дел Пруссии раскрывает шокирующие факты о лидере <span style="color: #7A3C00;">нацистов</span>…
+view-if: year == 1932 and month == 3 and not hindenburg_term_extended and spd_prussia and not repealed_175
+priority: 3
+max-visits: 1
+tags: event
+new-page: true
+on-arrival: nazi_urgency += 1
+face-image: img/portraits/rohm.jpg
+
+= Разоблачена <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">льность</span> лидера <span style="color: #7A3C00;">**СА**</span> Эрнста Рёма
+
+Вильгельм Абегг из прусского министерства внутренних дел обратился к <span style="color: #c00000;">**СДПГ**</span> и сообщил нам о трёх письмах, написанных <span style="color: #7A3C00;">**СА**</span> лидером Эрнстом Рёмом берлинскому неврологу Карлу-Гюнтеру Хаймзоту во время его добровольного изгнания в Боливии. Эти письма, конфискованные прусской полицией, примечательны не своим политическим содержанием, а откровенными рассуждениями Рёма о своей <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">льности</span> — что может стать основанием для его судебного преследования.
+
+Рём никогда не скрывал своей <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">льности</span>, и Гитлера это никогда не задевало. Несмотря на то что в прошлом Рёма неоднократно пытались привлечь к ответственности по параграфу 175, ни одна из этих попыток не увенчалась успехом. Однако на этот раз у нас есть неопровержимые доказательства.
+
+Как нам следует поступить с этими письмами?
+
+*«Мы выступаем против позорного параграфа 175 везде, где только можем, и потому не должны присоединяться к хору тех, кто хочет изгнать человека из общества лишь за то, что он гомосексуал».*— Die Weltbühne, немецкий еженедельный журнал
+
+- @expose_rohm: Мы опубликуем письма, так как разоблачение <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">льности</span> столь высокопоставленного <span style="color: #7A3C00;">нацистского</span> чиновника, несомненно, снизит их привлекательность для основного электората.
+- @no_expose_rohm: The <span style="color: #c00000;">**СДПГ**</span> формально выступает в защиту прав <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">лов</span>, и предавать огласке столь личное дело — дурной тон.
+
+
+@expose_rohm
+on-arrival: hindenburg_angry_bruning -= 10; old_middle_nsdap -= 2; rural_nsdap -= 2; catholics_nsdap -= 2; new_middle_spd -= 0.01; z_relation += 3; left_dissent += 5
+
+Мы опубликовали письма Рёма под заголовком* Дело Рёма*, распространив эту брошюру по всей Германии. Это подорвало привлекательность <span style="color: #7A3C00;">нацистской</span> партии среди её более социально-реакционных сторонников и даже спровоцировало среди некоторых <span style="color: #7A3C00;">нацистов</span> заговор для убийства Рёма.
+
+В брошюре утверждается: партия, попустительствующая <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">секс</span><span style="color: green;">уаль</span><span style="color: blue;">нос</span><span style="color: purple;">ти</span> в своих высших эшелонах, стремится «отравить народ и уничтожить его нравственную силу». Она предостерегает, что это приведёт к упадку Германии, подобному падению Древнего Рима, и заявляет: оставляя Рёма у власти, нацисты становятся соучастниками «сознательного и преднамеренного совращения немецкой молодёжи с целью превратить её в <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">секс</span><span style="color: green;">уаль</span><span style="color: blue;">ны</span><span style="color: purple;">х</span> миньонов». <i>(ЛГБТ — экстремистское международное движение, запрещенное Верховным Судом России)</i>.
+
+Несмотря на это, Гитлер незамедлительно выступил в защиту Рёма, публично подтвердив его пост главы <span style="color: #7A3C00;">**СА**</span>. Результаты <span style="color: #7A3C00;">нацистов</span> на выборах в целом не пострадали, но впечатление, которое этот скандал произведёт на президента Гинденбурга, ещё может оказаться весьма значительным.
+
+Тем временем издатель брошюры, Гельмут Клотц, жестоко избит <span style="color: #7A3C00;">нацистскими</span> депутатами в здании Рейхстага в качестве мести — и это событие затмило сам скандал.
+
+- @persecute_rohm: Начать судебное преследование Рёма! <span style="color: red;">Го</span><span style="color: orange;">мо</span><span style="color: yellow;">сек</span><span style="color: green;">су</span><span style="color: blue;">аль</span><span style="color: purple;">ные</span> контакты запрещены параграфом 175, что позволяет нам возбудить против него дело. <i>(ЛГБТ — экстремистское международное движение, запрещенное Верховным Судом России)</i>.
+
+
+@no_expose_rohm
+on-arrival: old_middle_nsdap -= 2; left_dissent -= 5; wholesome_point += 1; rohm_join_rb_time = time + 6
+
+Для партии, выступающей за права <span style="color: red;">го</span><span style="color: orange;">м</span><span style="color: yellow;">о</span><span style="color: green;">се</span><span style="color: blue;">ксуа</span><span style="color: purple;">лов</span>, дурной тон — нападать на кого-то из-за гомосексуальности. Мы поступили благородно, но многие в нашей партии считают: мы упустили возможность.
+
+
+@persecute_rohm
+unavailable-subtitle: Несмотря на повсеместную неприязнь к <span style="color: red;">го</span><span style="color: orange;">м</span><span style="color: yellow;">о</span><span style="color: green;">се</span><span style="color: blue;">ксу</span><span style="color: purple;">алу</span>, судебная власть слишком реакционна, чтобы осудить высокопоставленного <span style="color: #7A3C00;">нациста</span>.
+choose-if: judicial_reform >= 3
+on-arrival: rohm_explode = 1; new_middle_nsdap -= 2; old_middle_nsdap -= 4; rural_nsdap -= 2; catholics_nsdap -= 4; left_dissent += 3; sa_strength *= 0.9; hindenburg_angry_bruning -= 10
+
+Имея неопровержимые доказательства нарушения Рёмом параграфа 175 — закона, устанавливающего уголовную ответственность за <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">льные</span> деяния, — мы смогли вновь возбудить против него дело. Рём не в состоянии отрицать подлинность писем: многие восприняли это как подтверждение их достоверности.
+
+В итоге Рём осуждён по параграфу 175 и приговорён к году тюремного заключения. Это вновь вынесло скандал на всеобщее обозрение, нанеся серьёзный удар по репутации <span style="color: #7A3C00;">**НСДАП**</span> и <span style="color: #7A3C00;">**СА**</span>.
+

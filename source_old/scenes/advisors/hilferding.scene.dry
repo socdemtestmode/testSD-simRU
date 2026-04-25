@@ -1,0 +1,55 @@
+title: Рудольф Гильфердинг
+is-pinned-card: true
+tags: advisor, centrist
+card-image: img/portraits/HilferdingRudolf.jpg
+view-if: hilferding_advisor = 1
+new-page: true
+
+= Рудольф Гильфердинг
+
+Гильфердинг — ученик Карла Каутского, заслуженный экономист нашей партии. Он ведущий идеолог нашей партии со времён Гейдельбергской программы 1925 года. Уроженец Вены (Австрия), он получил медицинское образование, но позже занялся марксистской политэкономией. Один из ведущих исследователей финансового капитала, признается классиком мировым социалистическим движением.
+
+- @against_right_and_left
+- @toleration
+- @finance_ministry_
+- @economic_democracy_
+- @root: Return to main
+
+
+@against_right_and_left
+title: Против правого и левого уклона
+subtitle: Будучи центристом, Гильфердинг стремится лавировать между партийными фракциями.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: advisor_action_timer = 5; advisor_action_time = time; center_strength += 10; left_strength -= 5; labor_strength -= 5; neorevisionist_strength -= 5; center_dissent -= 10
+
+Мы ослабили разногласия между фракциями в партии.
+
+
+@toleration
+title: Поддержать тактику воздержания от вотума недоверия
+subtitle: Гильфердинг поддерживает сотрудничество с буржуазными партиями.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] мес. до следующего действия советника. ?][? if not spd_toleration: <span style="color: #c00000;">СДПГ</span> не воздерживается от вотума недоверия. ?]
+choose-if: spd_in_government = 0 and spd_toleration = 1 and advisor_action_timer = 0
+on-arrival: advisor_action_timer = 6; left_dissent -= 10; neorevisionist_dissent -= 8; center_dissent -= 5
+
+Мы уменьшили недовольство фракций, выступающих против воздержания от вотума недоверия.
+
+
+@finance_ministry_
+title: Фискальная политика
+subtitle: Будучи министром финансов, Гильфердинг может проводить налоговую политику.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?] [? if spd_in_government = 0 : <span style="color: #c00000;">СДПГ</span> не в правительстве: ?] [? if finance_minister_party != "SPD" : <span style="color: #c00000;">СДПГ</span> не контролирует министерство финансов. ?]
+choose-if: advisor_action_timer == 0 and spd_in_government == 1 and finance_minister_party == "SPD"
+on-arrival: advisor_action_timer = 6; fiscal_policy_timer -= 6; last_advisor_action = 1
+go-to: fiscal_policy
+
+
+@economic_democracy_
+title: Демократия в экономике
+subtitle: Принять меры для построения более демократичной экономики.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?] [? if spd_in_government = 0 : <span style="color: #c00000;">СДПГ</span> не входит в правительство: ?] [? if labor_minister_party != "SPD" or (finance_minister_party != "SPD" and economic_minister_party != "SPD") : У нас нет необходимых министров в правительстве. ?] [? if cvp_economy_accepted : Наше коалиционное соглашение запрещает обобществление. ?]
+choose-if: advisor_action_timer == 0 and spd_in_government == 1 and (economic_minister_party == "SPD" or finance_minister_party == "SPD") and (labor_minister_party == "SPD")
+on-arrival: advisor_action_timer = 6; economic_democracy_timer -= 10; last_advisor_action = 1
+go-to: economic_democracy
+

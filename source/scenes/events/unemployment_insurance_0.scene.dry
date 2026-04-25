@@ -62,4 +62,3 @@ unavailable-subtitle: [? if dvp_ideology != "Left": <span style="color: #C0A054;
 on-arrival: workers_spd -= 1; unemployed_spd -= 1; unemployed_kpd += 1; unemployed_nsdap += 1; workers_nsdap += 1; left_dissent += 5; labor_dissent += 3; kpd_relation -= 4; reformist_strength += 10; reformist_dissent -= 5; coalition_dissent -= 1; old_middle_dvp -= 3; old_middle_nsdap += 3; unemployment_insurance_threshold = unemployed; dvp_left += 3; ddp_left += 1; ddp_cohesion += 1; unemployment_goal_spd += 1; economic_growth -= 0.1
 
 Вместо того чтобы урезать пособия, мы настояли на повышении взносов и для работодателей, и для работников. <span style="color: #C0A054;">**ННП**</span> соглашается под влиянием [? if not stresemann_dead: Штреземана и ?]своего левого крыла.
-

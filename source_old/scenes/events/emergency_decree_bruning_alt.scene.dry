@@ -1,0 +1,198 @@
+title: Второй чрезвычайный указ об экономике и финансах
+subtitle: Канцлер [+ chancellor +] издаёт спорный чрезвычайный указ.
+new-page: true
+view-if: total_bruning_time == 15 and bruning_toleration_time and (hoover_moratorium_seen or reparations == -2) and not emergency_decree_seen and not cvp_formed and not lautenbach_adopted and not bruning_sigma_time and not bruning_skibidi_time
+on-arrival: emergency_decree_alt_seen = 1; ddp_right += 1; ddp_cohesion -= 1; dvp_right += 3; lvp_right += 2; liberal_cooperation -= 1; bourgeois_cooperation -= 1; pro_republic -= 3; new_middle_nsdap += new_middle_ddp*0.1; old_middle_nsdap += old_middle_ddp*0.05; new_middle_nsdap += new_middle_dvp*0.1; old_middle_nsdap += old_middle_dvp*0.1; new_middle_ddp *= 0.2; old_middle_ddp *= 0.9; new_middle_dvp *= 0.8; old_middle_dvp *= 0.8; new_middle_nsdap += new_middle_lvp*0.2; old_middle_nsdap += old_middle_lvp*0.2; new_middle_lvp *= 0.8; old_middle_lvp *= 0.8
+tags: event
+face-image: img/article48.jpg
+max-visits: 1
+
+= Второй чрезвычайный указ об экономике и финансах
+
+Чтобы полностью ликвидировать дефицит государственного бюджета, чрезвычайный указ вводит сокращение расходов наряду со специальным «кризисным налогом». Однако, поскольку репарационные выплаты приостановлены, Брюнинг смог реализовать эти меры жёсткой экономии в более мягкой форме, чем ожидалось.
+
+Несмотря на то, что указ оказался мягче, чем ожидалось, он вызвал широкое возмущение, ещё сильнее подстегнув нападки <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правых</span> на буржуазные партии, которые продолжают поддерживать Брюнинга — в особенности [? if not lvp_formed: [? if dvp_exist: <span style="color: #C0A054;">**ННП**</span> и ?]<span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?], поскольку именно они [? if not lvp_formed and dvp_exist: партии ?][? if lvp_formed or not dvp_exist: партия ?] представляют социальные группы, наиболее затронутые этими изменениями. [? if not lvp_formed and not bourgeois_parliament and not liberal_parliament: Отношения либеральных партий с правительством Брюнинга осложнились из-за того, что им не удалось убедить его отменить сокращение зарплат госслужащих и повышение общегосударственного налога с оборота. ?]
+
+Мы можем либо и дальше воздерживаться от вотума недоверия правительству Брюнинга, либо использовать этот указ как предлог для разрыва с ним.
+
+- @nothing_to_do: Мы ничего не можем поделать.
+- @vote_no
+- @vote_yes
+
+
+@nothing_to_do
+view-if: spd_toleration == 0
+on-arrival: {!
+Q.budget += 1;
+Q.inflation -= 1.5;
+Q.unemployed += 1.5;
+Q.economic_growth -= 1;
+Q.emergency_decree_mitigated = Q.liberal_parliament || (Q.bourgeois_parliament && !Q.lvp_formed) || Q.lvp_formed;
+if (Q.emergency_decree_mitigated) {
+    Q.unemployed -= 0.5;
+    Q.budget -= 1;
+    Q.inflation += 0.8;
+    Q.economic_growth += 0.4;
+    Q.new_middle_ddp += 2;
+    Q.old_middle_ddp += 1;
+    Q.new_middle_dvp += 3;
+    Q.old_middle_dvp += 3;
+    Q.rural_dvp += 1;
+    Q.new_middle_lvp += 4;
+    Q.old_middle_lvp += 6;
+    Q.rural_lvp += 2;
+    Q.new_middle_nsdap -= 4;
+    Q.old_middle_nsdap -= 4;
+    Q.dvp_left += 3;
+    Q.ddp_left += 2;
+    Q.ddp_cohesion += 2;
+    Q.lvp_left += 3;
+}
+if (Q.emergency_decree_mitigated_more) {
+    Q.unemployed -= 0.2;
+    Q.inflation += 0.2;
+    Q.economic_growth += 0.1;
+    Q.new_middle_ddp += 1;
+    Q.old_middle_ddp += 1;
+    Q.new_middle_dvp += 2;
+    Q.old_middle_dvp += 2;
+    Q.rural_dvp += 1;
+    Q.new_middle_lvp += 2;
+    Q.old_middle_lvp += 2;
+    Q.rural_lvp += 1;
+    Q.new_middle_nsdap -= 2;
+    Q.old_middle_nsdap -= 2;
+    Q.dvp_left += 2;
+    Q.ddp_left += 1;
+    Q.lvp_left += 2;
+}
+!}
+
+Чрезвычайные меры вводятся в действие в обход парламента, так как рейхстаг распущен. <span style="color: #7A3C00;">Нацисты</span> используют это в своей агитации, как, впрочем, и мы.
+
+[? if bourgeois_parliament and not lvp_formed and not liberal_parliament: К счастью, буржуазной парламентской группе, используя рычаги влияния на Брюнинга, удалось убедить его отказаться от декрета! Группа утверждает, что пауза в выплате репараций сделала предложенные сокращения ненужными и что Брюнингу следует смягчить свои меры жёсткой экономии. [? if bourgeois_parliament_ddp: Более того, <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, присутствуя в парламентской группе, побудила вице-канцлера и министра финансов Дитриха, представителя <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, лично смягчить суровость мер жёсткой экономии Брюнинга. ?] ?][? if liberal_parliament: К счастью, либеральная парламентская группа позволила либеральным партиям объединить свои рычаги влияния на Брюнинга и убедить его отказаться от декрета! Группа утверждает, что пауза в выплате репараций сделала предложенные сокращения ненужными и что Брюнингу следует смягчить свои меры жёсткой экономии. [? if liberal_parliament and liberal_cooperation >= 8: Более того, <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, в лице своего вице-канцлера и министра финансов Дитриха, может лично смягчить суровость мер жёсткой экономии Брюнинга. ?] ?][? if lvp_formed: К счастью, <span style="color: #FFCC00;">**ЛНП**</span>, используя свои рычаги влияния на Брюнинга, успешно убедила его отказаться от декрета! Группа утверждает, что пауза в выплате репараций сделала предложенные сокращения ненужными и что Брюнингу следует свернуть свои меры жёсткой экономии. [? if lvp_leader == "Luther": Более того, <span style="color: #FFCC00;">**ЛНП**</span>, в лице своего лидера Ганса Лютера, может использовать свои связи с Брюнингом и промышленными кругами, чтобы увести его экономическую политику от курса безудержной жёсткой экономии. ?] ?]
+
+
+@vote_no
+title: Проголосовать против этой меры и объявить о вотуме недоверия правительству.
+view-if: spd_toleration
+on-arrival: {!
+Q.time_to_election = 3;
+Q.spd_in_government = 0;
+Q.in_grand_coalition = 0; 
+Q.spd_toleration = 0;
+Q.budget += 1;
+Q.inflation -= 1.5;
+Q.unemployed += 1.5;
+Q.economic_growth -= 1;
+Q.emergency_decree_mitigated = Q.liberal_parliament || (Q.bourgeois_parliament && !Q.lvp_formed) || Q.lvp_formed;
+if (Q.emergency_decree_mitigated) {
+    Q.unemployed -= 0.5;
+    Q.budget -= 1;
+    Q.inflation += 0.8;
+    Q.economic_growth += 0.5;
+    Q.new_middle_ddp += 2;
+    Q.old_middle_ddp += 1;
+    Q.new_middle_dvp += 3;
+    Q.old_middle_dvp += 3;
+    Q.rural_dvp += 1;
+    Q.new_middle_lvp += 4;
+    Q.old_middle_lvp += 6;
+    Q.rural_lvp += 2;
+    Q.new_middle_nsdap -= 4;
+    Q.old_middle_nsdap -= 4;
+    Q.dvp_left += 3;
+    Q.ddp_left += 2;
+    Q.ddp_cohesion += 2;
+    Q.lvp_left += 3;
+}
+if (Q.emergency_decree_mitigated_more) {
+    Q.unemployed -= 0.2;
+    Q.inflation += 0.2;
+    Q.economic_growth += 0.1;
+    Q.new_middle_ddp += 1;
+    Q.old_middle_ddp += 1;
+    Q.new_middle_dvp += 2;
+    Q.old_middle_dvp += 2;
+    Q.rural_dvp += 1;
+    Q.new_middle_lvp += 2;
+    Q.old_middle_lvp += 2;
+    Q.rural_lvp += 1;
+    Q.new_middle_nsdap -= 2;
+    Q.old_middle_nsdap -= 2;
+    Q.dvp_left += 2;
+    Q.ddp_left += 1;
+    Q.lvp_left += 2;
+}
+!}
+call: set_next_election_time
+
+Мы порвали с правительством [+ chancellor +]а и проголосовали за вотум недоверия. Декрет всё равно принят, но, по крайней мере, мы избавились от необходимости нести на себе всю тяжесть его последствий, прекратив наше сотрудничество с [+ chancellor +]ом.
+
+[? if bourgeois_parliament and not lvp_formed and not liberal_parliament: К счастью, буржуазная парламентская группа, используя свои рычаги влияния на Брюнинга, сумела убедить его отозвать декрет! Группа утверждает: приостановка репарационных платежей сделала предлагаемые сокращения расходов излишними и что Брюнинг должен смягчить свои меры жёсткой экономии. [? if bourgeois_parliament_ddp: Более того, <span style="color: #D3C24D;">**[+ ddp_name +]**</span> в парламентской группе побудило вице-канцлера и министра финансов Дитриха из <span style="color: #D3C24D;">**[+ ddp_name +]**</span> лично смягчить жёсткость мер строгой экономии Брюнинга. ?] ?][? if liberal_parliament: К счастью, либеральная парламентская группа позволила либеральным партиям объединить свои рычаги влияния на Брюнинга и убедить его отозвать декрет! Группа утверждает, что приостановка репарационных платежей сделала предлагаемые сокращения расходов излишними и что Брюнинг должен смягчить свои меры жёсткой экономии. [? if liberal_parliament and liberal_cooperation >= 8: Более того, <span style="color: #D3C24D;">**[+ ddp_name +]**</span> и представляющий их вице-канцлер и министр финансов Дитрих может лично смягчить жёсткость мер строгой экономии Брюнинга. ?] ?][? if lvp_formed: К счастью, <span style="color: #FFCC00;">**ЛНП**</span>, используя свои рычаги влияния на Брюнинга, успешно убедила его отозвать декрет! Группа утверждает, что приостановка репарационных платежей сделала предлагаемые сокращения расходов излишними и что Брюнинг должен сократить масштабы мер жёсткой экономии. [? if lvp_leader == "Luther": Более того, <span style="color: #FFCC00;">**ЛНП**</span> лидер Ганс Лютер может использовать свои связи с Брюнингом и промышленными кругами, чтобы повлиять на его экономическую политику и увести её от неограниченной жёсткой экономии. ?] ?]
+
+Новые выборы назначены на [+ next_election_month : month +] [+ next_election_year +].
+
+
+@vote_yes
+title: Голосуйте за эту меру, чтобы продолжить политику терпимости.
+subtitle: [? if (bourgeois_parliament and not lvp_formed) or liberal_parliament or lvp_formed: Либеральные партии попытаются смягчить катастрофические последствия. ?]
+view-if: spd_toleration
+on-arrival: {!
+Q.left_dissent += 10;
+Q.new_middle_spd -= 2;
+Q.new_middle_nsdap += 2;
+Q.workers_spd -= 2;
+Q.workers_kpd += 2;
+Q.unemployed_spd -= 2;
+Q.unemployed_kpd += 2;
+Q.kpd_relation -= 3;
+Q.budget += 1;
+Q.inflation -= 1.5;
+Q.unemployed += 1.5;
+Q.economic_growth -= 1;
+Q.emergency_decree_mitigated = Q.liberal_parliament || (Q.bourgeois_parliament && !Q.lvp_formed) || Q.lvp_formed;
+if (Q.emergency_decree_mitigated) {
+    Q.unemployed -= 0.5;
+    Q.budget -= 1;
+    Q.inflation += 1;
+    Q.economic_growth += 0.5;
+    Q.new_middle_ddp += 2;
+    Q.old_middle_ddp += 1;
+    Q.new_middle_dvp += 3;
+    Q.old_middle_dvp += 3;
+    Q.rural_dvp += 1;
+    Q.new_middle_lvp += 4;
+    Q.old_middle_lvp += 6;
+    Q.rural_lvp += 2;
+    Q.new_middle_nsdap -= 4;
+    Q.old_middle_nsdap -= 4;
+    Q.dvp_left += 3;
+    Q.ddp_left += 2;
+    Q.ddp_cohesion += 2;
+    Q.lvp_left += 3;
+}
+if (Q.emergency_decree_mitigated_more) {
+    Q.unemployed -= 0.2;
+    Q.inflation += 0.2;
+    Q.economic_growth += 0.1;
+    Q.new_middle_ddp += 1;
+    Q.old_middle_ddp += 1;
+    Q.new_middle_dvp += 2;
+    Q.old_middle_dvp += 2;
+    Q.rural_dvp += 1;
+    Q.new_middle_lvp += 2;
+    Q.old_middle_lvp += 2;
+    Q.rural_lvp += 1;
+    Q.new_middle_nsdap -= 2;
+    Q.old_middle_nsdap -= 2;
+    Q.dvp_left += 2;
+    Q.ddp_left += 1;
+    Q.lvp_left += 2;
+}
+!}
+
+Мы вынуждены голосовать за правительство [+ chancellor +]а, чтобы не дать экстремистским партиям на <span style="color: #7A3C00;">крайнем</span> <span style="color: #3E88B3;">правом</span> и <span style="color: #700000;">левом</span> флангах превратить свою растущую народную поддержку в парламентские мандаты.
+
+[? if bourgeois_parliament and not lvp_formed and not liberal_parliament: К счастью, буржуазная парламентская группа, используя своё влияние на Брюнинга, смогла убедить его отменить указ! Группа утверждает, что пауза в выплате репараций сделала предложенные сокращения ненужными и что Брюнингу следует смягчить свои меры жёсткой экономии. [? if bourgeois_parliament_ddp: Более того, присутствие <span style="color: #D3C24D;">**[+ ddp_name +]**</span> в парламентской группе привело к тому, что вице-канцлер и министр финансов Дитрих, член <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, лично смягчил суровость мер жёсткой экономии Брюнинга. ?] ?][? if liberal_parliament: К счастью, либеральная парламентская группа позволила либеральным партиям объединить усилия для влияния на Брюнинга и убедить его отменить указ!, Группа утверждает, что пауза в выплате репараций сделала предложенные сокращения ненужными и что Брюнингу следует смягчить свои меры жёсткой экономии. [? if liberal_parliament and liberal_cooperation >= 8: Более того, <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: её представитель, вице-канцлер и министр финансов Дитрих, может лично смягчить суровость мер жёсткой экономии Брюнинга. ?] ?][? if lvp_formed: К счастью, <span style="color: #FFCC00;">**ЛНП**</span>, оказав давление на Брюнинга, успешно убедила его отменить указ! Партия утверждает, что приостановка репарационных выплат сделала предложенные сокращения ненужными и что Брюнингу следует ослабить меры жёсткой экономии. [? if lvp_leader == "Luther": Более того, <span style="color: #FFCC00;">**ЛНП**</span>, её лидер Ганс Лютер, смог использовать свои связи с Брюнингом и промышленными кругами, чтобы увести его экономическую политику от курса безудержной жёсткой экономии. ?] ?][? if not lvp_formed and not bourgeois_parliament and not liberal_parliament: Однако[+ chancellor +]постоянная зависимость Брюнинга от наших голосов ведёт к растущему расколу между ним и буржуазными партиями, которые изначально его поддерживали. Это может подтолкнуть [+ chancellor +] Брюнинга к перестановкам в кабинете и приданию ему более правого уклона — или даже к поиску альтернативного большинства с <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правыми</span> в обход нас. ?]
+

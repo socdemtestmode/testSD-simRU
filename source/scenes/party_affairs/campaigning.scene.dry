@@ -75,4 +75,3 @@ view-if: peoples_party == 1
 on-arrival: catholics_spd += 6*(1-dissent); resources -= 1
 
 Мы усилили агитацию среди католиков.
-

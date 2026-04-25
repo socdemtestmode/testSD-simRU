@@ -5,6 +5,7 @@ view-if: (in_weimar_coalition_prussia or in_social_liberal_coalition_prussia or 
 on-arrival: prussian_affairs_timer += 6; prussian_affairs_timer += 6 if prussia_leader != "Braun"; month_actions += 1
 tags: govt_affairs
 card-image: img/braun.jpg
+#subtitle: The state government of Prussia is a bulwark of democracy...
 
 = Прусский оплот
 
@@ -89,6 +90,7 @@ on-arrival: sh_banned = 0; sh_strength += 100; coup_progress += 2 if sh_coup_pro
 The <span style="color: #3E88B3;">**Стальной Шлем**</span> больше не запрещён.
 
 
+
 @ban_rfb
 view-if: communist_coalition < 3 and rfb_banned = 0
 on-arrival: kpd_relation -= 15; rfb_strength -= 50; rfb_banned = 1; communist_coalition -= 1; z_relation += 5; dvp_relation += 5; ddp_relation += 5; lvp_relation += 5; prussian_police_loyalty += 0.1; dvp_left += 1; ddp_left += 0.5; lvp_left += 1; hindenburg_angry -= 8
@@ -117,4 +119,3 @@ on-arrival: prussian_concordat = 1; z_relation += 8; catholics_spd += 3*(1-disse
 Мы подписали конкордат между Свободным государством Пруссия и Римско-католической церковью, гарантирующий свободу вероисповедания для католиков в Пруссии. Это готовит почву для переговоров о заключении общенационального конкордата, охватывающего всю Германию.
 
 [? if dnvp_ideology == "Radical": Члены-католики <span style="color: #3E88B3;">**НННП**</span> в Пруссии находятся в открытом конфликте со своим руководством из-за голосования, и многие из них покидают партию. ?]
-

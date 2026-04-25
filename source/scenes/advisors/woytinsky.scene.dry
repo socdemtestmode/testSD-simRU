@@ -34,7 +34,6 @@ go-to: economic_policy
 
 
 
-
 @depression
 title: Поддержать экономический план профсоюзников
 subtitle: Сформулировать план по выходу из экономического кризиса.
@@ -43,4 +42,3 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 on-arrival: advisor_action_timer = 6; wtb_support += 2; center_dissent += 10; labor_strength += 5; wtb_points += 15
 
 [? if not wtb_concept: Войтинский, Тарнов и Бааде совместно разработали план по выходу из депрессии. Войтинский агитирует за эту политику через <span style="color: #c00000;">**СДПГ**</span> и профсоюзы. ?][? if wtb_concept: План ВТБ, названный в честь его главных сторонников — Войтинского, Тарнова и Бааде, — принят профсоюзами как программа по выходу из депрессии. Войтинский агитирует за эту политику через <span style="color: #c00000;">**СДПГ**</span> и профсоюзы. ?]
-

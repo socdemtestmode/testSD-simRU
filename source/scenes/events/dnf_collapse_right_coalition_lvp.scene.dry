@@ -68,6 +68,7 @@ on-arrival: prussia_coalition_trigger = 1 if right_coalition_prussia < 50
 
 У нас есть возможность изменить состав прусской коалиции.
 
+
 - @new_prussia_election_oppo: Мы вынуждены остаться в оппозиции.
 - @new_prussia_election_called: Придётся объявить новые выборы.
 
@@ -86,4 +87,3 @@ on-arrival: was_in_weimar_coalition_prussia = 1 if (in_weimar_coalition_prussia 
 call: set_next_election_time_prussia
 
 Новые выборы в Пруссии назначены на [+ next_election_month_prussia : month +] [+ next_election_year_prussia +].
-

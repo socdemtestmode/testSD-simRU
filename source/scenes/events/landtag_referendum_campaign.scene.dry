@@ -127,4 +127,3 @@ on-arrival: workers_spd -= 3; old_middle_spd -= 3; new_middle_spd -= 3; workers_
 on-arrival: workers_spd -= 3; old_middle_spd -= 3; new_middle_spd -= 3; workers_nsdap += 3; new_middle_nsdap += 3; old_middle_nsdap += 3; pro_republic -= 5; catholics_spd -= 2; catholics_nsdap += 2; workers_kpd += 3; unemployed_spd -= 5; unemployed_nsdap += 5; unemployed_kpd += 3;
 
 Референдум, скорее всего, провалится, независимо от нашего участия в кампании. Однако антидемократические настроения разгораются, и <span style="color: #7A3C00;">крайне</span> <span style="color: #3E88B3;">правые</span> используют наше молчание, чтобы вести среди народа свою радикализирующую пропаганду.
-

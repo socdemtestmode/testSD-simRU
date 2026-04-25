@@ -142,4 +142,3 @@ call: set_next_election_time_prussia
 Не удалось сформировать ни одной коалиции, что вынуждает [+ prussia_leader +] объявить новые выборы, от которых, скорее всего, выиграют экстремистские партии.
 
 Новые выборы в Пруссии назначены на [+ next_election_month_prussia : month +] [+ next_election_year_prussia +].
-

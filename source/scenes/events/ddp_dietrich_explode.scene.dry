@@ -191,4 +191,3 @@ title: Очень смешно, верните изменения.
 on-arrival: ddp_leader = "Stolper"; ddp_relation += 3; ddp_left += 1; ddp_cohesion -= 3; rural_ddp *= 0.7; rural_nsdap += 1; new_middle_ddp *= 2; old_middle_ddp *= 1.5; pro_republic += 5; ddp_name = "DStP" if dstp_formed; ddp_name = "DDP" if not dstp_formed
 
 Ну и зануда. В итоге в качестве компромиссной кандидатуры выбран Штольпер.
-

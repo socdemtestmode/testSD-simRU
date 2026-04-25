@@ -1,0 +1,105 @@
+title: Трансформация <span style="color: #D3C24D;">**НДП**</span> Reformation
+subtitle: <span style="color: #D3C24D;">Немецкая демократическая партия</span> становится <span style="color: #D3C24D;">Немецкой государственной партией</span>.
+view-if: year == 1930 and month >= 8 and not lvp_formed
+on-arrival: {!
+Q.dstp_formation_points = 0;
+if (!Q.vnr_cool) Q.dstp_formation_points -= 5;
+if (Q.ddp_votes < 3.7) {
+    Q.dstp_formation_points += 1;
+}
+if (Q.next_election_time - Q.time < 6) {
+    Q.dstp_formation_points += 1;
+}
+if (Q.dvp_ideology == "Right") {
+    Q.dstp_formation_points += 1;
+}
+if ((100 - Q.pro_republic) + Q.nationalism >= 90) {
+    Q.dstp_formation_points += 1;
+}
+if (Q.lvp_timer_1_trigger == 1) {
+    Q.dstp_formation_points += 5;
+}
+if (Q.major_curriculum == "humanist") {
+    Q.dstp_formation_points += 3;
+} else if (Q.minor_curriculum == "humanist") {
+    Q.dstp_formation_points += 1;
+}
+if (Q.ddp_relation < 50) {
+    Q.dstp_formation_points += 1;
+    Q.ddp_right += 1;
+}
+if (Q.ddp_relation >= 50) {
+    Q.ddp_left += 1;
+}
+if (Q.liberal_parliament || Q.bourgeois_parliament_ddp) {
+    Q.dstp_formation_points -= 5;
+}
+if (Q.bourgeois_parliament && !Q.bourgeois_parliament_ddp) {
+    Q.dstp_formation_points += 1;
+}
+!}
+max-visits: 1
+tags: event
+face-image: img/ddp.jpg
+new-page: true
+
+= Трансформация <span style="color: #D3C24D;">**НДП**</span> Reformation
+
+The <span style="color: #D3C24D;">**НДП**</span> — любопытная партия. Она с основания республики раздирается усобицами и регулярно меняет политическую платформу. <span style="color: #D3C24D;">Демократы</span> тщетно пытаются стать партией «республиканского либерального центра» и привлекать избирателей из всех слоёв общества сразу. [? if stolper_program_adopted: &nbsp;Однако недавно партия, похоже, наконец-то определилась, сплотившись вокруг возобновлённого курса на защиту интересов среднего класса благодаря усилиям Штольпера. ?][? if not stolper_program_adopted: &nbsp;Недавняя попытка Штольпера переориентироваться на средний класс тихо похоронена из-за разногласий. Похоже, борьба фракций и распри между лидерами — неотъемлемая черта <span style="color: #D3C24D;">Демократической</span> партии. ?]
+
+В стане <span style="color: #D3C24D;">демократов</span> царит пессимизм. Все ждут от председателя Коха-Везера, что он предпримет «что-то» для спасения партии. После нескольких недель тайных переговоров <span style="color: #D3C24D;">**НДП**</span> объявляет о результатах предложенного слияния <span style="color: #D3C24D;">**НДП**</span> с <span style="color: #D3D3A9;">**ННОР**</span> (Народно-национальное объединение Рейха) — партии, чей динамизм вызывает восхищение у руководства <span style="color: #D3C24D;">демократов</span>. [? if not vnr_cool: Однако слабый результат <span style="color: #D3D3A9;">**ННОР**</span> на региональных выборах заставил усомниться в целесообразности слияния. ?]
+
+- @dstp_formed: The <span style="color: #D3C24D;">**НГП**</span> создана.
+- @status_quo: Переговоры провалились.
+
+
+@dstp_formed
+view-if: dstp_formation_points >= 3
+on-arrival: dstp_formed = 1; ddp_name = "DStP"; liberal_cooperation -= 5; bourgeois_cooperation -= 3; new_middle_ddp -= 2; old_middle_ddp += 4; rural_ddp += 2; ddp_right += 2; ddp_relation -= 5; pro_republic -= 3; nationalism += 5; justice_minister_party = ddp_name if justice_minister_party == "DDP"; agriculture_minister_party = ddp_name if agriculture_minister_party == "DDP"; economic_minister_party = ddp_name if economic_minister_party == "DDP"; finance_minister_party = ddp_name if finance_minister_party == "DDP"
+face-image: img/dstp.jpg
+achievement: dstp_dilemma
+go-to: recalculate
+
+Это стало полной неожиданностью для всех — как внутри партии, так и за её пределами, — ведь <span style="color: #D3C24D;">**НДП**</span> решила слиться с антисемитской националистической военизированной группировки «Младогерманский орден». Продолжающимся переговорам об объединении либеральных и буржуазных партий нанесён урон из-за попыток <span style="color: #D3C24D;">**НДП**</span> спровоцировать раскол и выход левого крыла из <span style="color: #C0A054;">**ННП**</span>.
+
+Согласно соглашению, <span style="color: #D3C24D;">**НДП**</span> пообещала «расширить партию вправо», что может сулить лишь неприятности нашему ближайшему буржуазному союзнику. Несмотря на это, создание <span style="color: #D3C24D;">**НГП**</span> не просто раскол партии на левых и правых: лидер социально-республиканцев профсоюзник Эрнст Леммер помог предотвратить крупный раскол среди левых. Однако в этом союзе уже намечаются трещины. Лишь вопрос времени, когда этот эксперимент провалится.
+
+
+@status_quo
+view-if: dstp_formation_points < 3
+on-arrival: dstp_formed = 0; pro_republic += 3
+face-image: img/ddp_2.jpg
+achievement: dstp_dilemma
+go-to: recalculate
+
+Как и ожидалось, слияние организации антисемитов-националистов и партии, которую считают <span style="color: #005EB8;">еврейской</span>, провалилось: лидер Младогерманского ордена Артур Мараун покинул переговоры, сославшись на непреодолимые разногласия. [? if not vnr_cool and not saxony_election_1930_seen: Однако главный фактор иной: успешность <span style="color: #D3D3A9;">**ННОР**</span> никогда не проверялось на выборах. ?][? if not vnr_cool and saxony_election_1930_seen: Однако главное опасение иное: <span style="color: #D3D3A9;">**ННОР**</span> не удалось получить ни одного места на единственных выборах, в которых оно участвовало, — недавних выборах в саксонский ландтаг. ?]
+
+Внутренняя оппозиция Кох-Везеру достигла апогея. Им недовольны все фракции. Его обвиняют в срыве переговоров о создании <span style="color: #FFCC00;">единой либеральной партии</span> и провале «возродить партию» через сотрудничество с Младогерманцами.
+
+
+@recalculate
+on-arrival: {!
+if (Q.bourgeois_negotiations_elections_1930_timer == 1 && Q.bourgeois_negotiations_1930_done && Q.dstp_formed && !Q.liberal_parliament && Q.dvp_exist) {
+    Q.bourgeois_negotiations_fail_elections_dstp = 1;
+    Q.bourgeois_negotiations_fail_elections = 0;
+    Q.bourgeois_merger_trigger_scholz = 0;
+    Q.bourgeois_parliament = 0;
+    Q.bourgeois_parliament_ddp = 0;
+    Q.bourgeois_parliament_kvp = 0;
+    Q.bourgeois_list = 0;
+    Q.bourgeois_list_ddp = 0;
+    Q.bourgeois_list_kvp = 0;
+}
+!}
+go-to: dstp_formed_achievement if dstp_formed; dstp_fail_achievement if not dstp_formed
+
+
+@dstp_formed_achievement
+achievement: dstp_formed
+
+
+
+
+@dstp_fail_achievement
+achievement: dstp_failed
+

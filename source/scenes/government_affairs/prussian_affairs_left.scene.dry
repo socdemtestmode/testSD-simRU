@@ -5,6 +5,7 @@ view-if: prussia_leader = "Rosenfeld" and in_popular_front_prussia = 1 or in_lef
 on-arrival: prussian_affairs_timer += 6; month_actions += 1
 tags: govt_affairs
 card-image: img/braun.jpg
+#subtitle: The state government of Prussia is a bulwark of democracy...
 
 = Прусский оплот
 
@@ -73,4 +74,3 @@ view-if: rfb_banned = 0
 on-arrival: rfb_banned = 0; rfb_strength += 50; rfb_militancy += 0.03; prussian_police_loyalty -= 0.05; workers_kpd += 4; unemployed_kpd += 4; free_kpd_goal_prussia -= 1; reichsexekution += 1; dvp_relation -= 5; ddp_relation -= 4; lvp_relation -= 5; z_relation -= 4; dvp_right += 2; ddp_right += 1; ddp_cohesion -= 0.5; lvp_right += 1.5; left_dissent -= 5; reformist_dissent += 5
 
 Ограничения снимаются, и полиция направляется для защиты <span style="color: #700000;">коммунистических</span> демонстраций и организаций от <span style="color: #7A3C00;">ультра</span>-<span style="color: #3E88B3;">правых</span>.
-

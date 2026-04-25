@@ -75,6 +75,7 @@ go-to: recalculate
 Всё его потуги по спасению партии закончились тем, что <span style="color: #D3C24D;">**НГП**</span> превратилась в старую <span style="color: #D3C24D;">**НДП**</span> под новой вывеской, хотя и с формально более националистической и этатистской платформой.
 
 
+
 @recalculate
 on-arrival: {!
 if (Q.ddp_r < 3.6 && !Q.liberal_parliament && !Q.bourgeois_parliament_ddp && Q.ddp_r) {
@@ -111,7 +112,6 @@ go-to: dstp_maintained_achievement if dstp_maintained; dstp_collapsed_achievemen
 
 @dstp_maintained_achievement
 achievement: dstp_maintained
-
 
 
 

@@ -1,0 +1,52 @@
+title: The <span style="color: #C0A054;">**ННП**</span> присоединяется к <span style="color: #BFC8CC;">**ФНЕГ**</span>
+subtitle: [? if dvp_votes < 4 and dvp_leader != "Glatzel": Терпя неудачи на выборах, партия пытается сохранить своё влияние, войдя в состав более крупного блока ?][? if dvp_leader == "Glatzel": Взгляды Глатцеля во многом совпадают со взглядами канцлера. ?].
+view-if: chancellor = "Schleicher" and schleicher_time >= 11 and not lvp_formed and dvp_exist and ((dvp_votes < 4 and not bourgeois_list) or dvp_leader == "Glatzel") and dnef_formed and next_election_time - time < 2 and dvp_ideology != "Left" and not dvp_r_alt
+new-page: true
+priority: 1
+tags: event
+max-visits: 1
+face-image: img/portraits/schleicher.jpg
+
+= <span style="color: #C0A054;">**ННП**</span> присоединяется к <span style="color: #BFC8CC;">**ФНЕГ**</span>
+
+[? if dvp_votes < 4 and dvp_leader != "Glatzel": Падение электоральной поддержки <span style="color: #C0A054;">**ННП**</span>, а также угроза исчезновения из парламента из-за несовершенной пропорциональной системы Германии, заставили партию отказаться от своей политической независимости и примкнуть к шлейхеровскому <span style="color: #BFC8CC;">**ФНЕГ**</span>. Это решение вызвало серьёзные возражения внутри партии. Многие всё ещё надеются на достижение договорённости с буржуазными и правыми партиями, чтобы обеспечить себе место в общем избирательном списке. ?] [? if dvp_leader == "Glatzel": Франк Глатцель, лидер <span style="color: #C0A054;">**ННП**</span>, разделяет многие идеологические положения новой партии Шлейхера — национализм, корпоративизм и цель создания <i>Фольксгемайншафт</i>. Таким образом, слияние с <span style="color: #BFC8CC;">Фронтом Национального Единства Германии</span> стало неизбежным. ?]
+
+[? if dvp_votes < 4 and dvp_leader != "Glatzel": Nonetheless, the <span style="color: #C0A054;">**ННП**</span> и стоящие за ней промышленники усилят <span style="color: #BFC8CC;">**ФНЕГ**</span> и легитимизируют его в глазах среднего класса, лишив тем самым ещё одного выбора буржуазных избирателей, не поддерживающих <span style="color: #7A3C00;">нацистов</span>. ?] [? if dvp_leader == "Glatzel": Идеи Глатцеля о «новом национализме» привлекут в его новый политический дом значительное число сторонников, а также связанный с ним профсоюз «белых воротничков» (DHV), который он также приводит в ряды <span style="color: #BFC8CC;">**ФНЕГ**</span> as well. ?]
+
+- @schleicher_2: <span style="color: #BFC8CC;">Фронт Национального Единства Германии</span> приветствует нового члена.
+
+
+@schleicher_2
+on-arrival: {!
+Q.dvp_dnef = 1
+
+Q.pro_republic -= Q.dvp_votes;
+
+Q.dvp_relation = (Q.dnef_relation - 20);
+
+Q.dnef_r += Q.dvp_r;
+Q.dvp_r = 0;
+!}
+
+Текущий состав <span style="color: #BFC8CC;">Фронта Национального Единства Германии</span>:
+
+[? if dnef_formed: - <span style="color: #BFC8CC;">**ФНЕГ**</span> ?]
+
+[? if dstp_dnef: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
+
+[? if lvp_dnef: - <span style="color: #FFCC00;">**ЛНП**</span> ?]
+
+[? if z_dnef: - <span style="color: #000000;">Партия Центра</span> ?]
+
+[? if z_dnef: - <span style="color: #A2D8E0;">**БНП**</span> ?]
+
+[? if dvp_dnef: - <span style="color: #C0A054;">**ННП**</span> ?]
+
+[? if other_dnef: - **Прочие** ?]
+
+[? if kvp_dnef: - <span style="color: #0087DC;">**КНП**</span> ?]
+
+[? if dnvp_dnef: - <span style="color: #3E88B3;">**НННП**</span> ?]
+
+[? if nvf_dnef: - <span style="color: #142e20;">**ННФ**</span> ?]
+

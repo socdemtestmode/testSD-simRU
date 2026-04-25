@@ -26,7 +26,6 @@ set-jump: post_election
 
 
 
-
 @post_election
 on-arrival: {!
 Q.bvp_votes = Q.bvp_votes / 100;
@@ -755,7 +754,6 @@ achievement: bundesrepublik
 
 
 
-
 @bruning_win
 on-arrival: president = "Brüning"; president_ideology = "Moderate"; new_middle_z += 4; old_middle_z += 4; rural_z += 2; catholics_z += 2
 
@@ -778,4 +776,3 @@ on-arrival: president = "Lettow-Vorbeck"; president_ideology = "Right"; vorbeck_
 on-arrival: president = "Westarp"; president_ideology = "Right"; westarp_party = "DNVP"; westarp_party = "KVP" if kvp_formed; westarp_party = "Other" if dnvp_ideology == "Radical" and not kvp_formed; workers_dnvp += 2 if westarp_party == "DNVP"; new_middle_dnvp += 4 if westarp_party == "DNVP"; old_middle_dnvp += 6 if westarp_party == "DNVP"; rural_dnvp += 6 if westarp_party == "DNVP"; catholics_dnvp += 2 if westarp_party == "DNVP"; workers_kvp += 2 if westarp_party == "KVP"; new_middle_kvp += 4 if westarp_party == "KVP"; old_middle_kvp += 6 if westarp_party == "KVP"; rural_kvp += 6 if westarp_party == "KVP"; catholics_kvp += 2 if westarp_party == "KVP"; workers_other += 2 if westarp_party == "Other"; new_middle_other += 4 if westarp_party == "Other"; old_middle_other += 6 if westarp_party == "Other"; rural_other += 6 if westarp_party == "Other"; catholics_other += 2 if westarp_party == "Other"; 
 
 К сожалению, Куно фон Вестарп, известный <span style="color: #808080;">реакционер</span> и <span style="color: #3E88B3;">националист</span>, избран президентом. Маловероятно, что мы вернемся в правительство под его руководством. Будем надеяться, что он удержит оборону против <span style="color: #7A3C00;">нацистов</span> — и откажется от своей опасной стратегии «приручения».
-

@@ -36,4 +36,3 @@ on-arrival: democratization += 1; workers_spd += 3*(1-dissent) if democratizatio
 
 @as_is
 go-to: root
-

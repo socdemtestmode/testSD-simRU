@@ -1,0 +1,19 @@
+title: Образована буржуазная парламентская группа
+subtitle: Бред какой-то.
+view-if: bourgeois_parliament_trigger_event == 1
+max-visits: 1
+tags: event
+new-page: true
+
+= Образована буржуазная парламентская группа
+
+Лишь благодаря дальнейшей поддержке со стороны промышленных спонсоров буржуазные партии объединились в парламентский союз, в который входят <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, <span style="color: #C0A054;">**ННП**</span>, <span style="color: #b8996f;">**ЭП**</span> и <span style="color: #7FCEB1;">**ХНПКЗ**</span>. Позже к этому союзу присоединилась <span style="color: #007A00;">Немецкая крестьянская партия</span>[? if dnvp_ideology == "Radical": &nbsp;и даже [? if not kvp_formed: отколовшиеся от <span style="color: #3E88B3;">**НННП**</span> ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?] ?].
+
+- @bourgeois_parliament: Ладно…
+
+
+@bourgeois_parliament
+on-arrival: bourgeois_parliament = 1; bourgeois_parliament_ddp = 1; dvp_right += 3; ddp_right += 2; lvp_right += 2; liberal_cooperation += 3; bourgeois_cooperation += 3
+
+Хотя это и дела буржуазии, они всё равно нас касаются. У этого парламентского союза есть скрытая анти<span style="color: #c00000;">социалистическая</span> повестка, и нам придётся приложить значительные усилия, чтобы расколоть эту группу и вести переговоры с её членами по отдельности.
+

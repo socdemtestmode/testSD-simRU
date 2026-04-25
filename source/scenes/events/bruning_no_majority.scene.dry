@@ -54,10 +54,8 @@ go-to: bruning_calculations
 
 
 
-
 @bruning_calculations
 go-to: bruning_lives_wp if bruning_coalition >= 50 and wp_reversal; bruning_dies_wp if bruning_coalition < 50 and wp_reversal; bruning_dies_no_wp if bruning_coalition < 50 and not wp_reversal
-
 
 
 
@@ -91,4 +89,3 @@ call: set_next_election_time
 Мы снова вынуждены голосовать в поддержку правительства [+ chancellor +]а, чтобы не дать экстремистским партиям на <span style="color: #7A3C00;">крайнем</span> <span style="color: #3E88B3;">правом</span> и <span style="color: #700000;">левом</span> флангах превратить свою растущую народную поддержку в парламентские мандаты.
 
 К сожалению, все попытки спасти правительство оказались тщетны. Лишь [+ bruning_coalition +]% депутатов рейхстага проголосовали в поддержку правительства Брюнинга. В результате назначены новые выборы на [+ next_election_month : month +] [+ next_election_year +].
-

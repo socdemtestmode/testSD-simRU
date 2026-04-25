@@ -92,4 +92,3 @@ on-arrival: advisor_action_timer = 6; time_to_election = 3
 call: set_next_election_time
 
 Мы назначили новые выборы на [+ next_election_month : month +] [+ next_election_year +].
-

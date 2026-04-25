@@ -35,4 +35,3 @@ card-image: img/muller_cabinet.jpg
 @shuffle
 on-arrival: coalition_dissent += 1; month_actions += 1
 go-to: election_1928.ministries
-

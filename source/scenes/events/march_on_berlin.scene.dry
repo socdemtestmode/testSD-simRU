@@ -33,6 +33,7 @@ on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_e
 Президент[+ president +] объявил о проведении досрочных выборов, которые состоятся в следующем месяце под руководством временного правительства. <span style="color: #7A3C00;">**СА**</span> получили разрешение действовать безнаказанно, запугивая избирателей и принуждая их поддерживать <span style="color: #7A3C00;">фашистов</span>.
 
 
+
 @accept_hitler
 on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; spd_in_government = 0
 
@@ -66,6 +67,7 @@ go-to: fight_2_win if defense_strength >= enemy_strength and march_on_berlin_see
 [? if spd_prussia: Прусская полиция задействована против <span style="color: #7A3C00;">фашистов</span>. ?] [? if spd_in_government and president == "Braun" : Лояльные части рейхсвера также задействованы. ?]
 
 
+
 @fight_2_win
 on-arrival: coup_progress = 0; sa_strength *= 0.7; sh_strength *= 0.7; rb_strength *= 0.9; workers_nsdap -= 12*(1-dissent); unemployed_nsdap -= 10*(1-dissent); new_middle_nsdap -= 6*(1-dissent); workers_spd += 8*(1-dissent); unemployed_spd += 6*(1-dissent); workers_dnvp -= 2; new_middle_dnvp -= 2; old_middle_dnvp -= 2; catholics_dnvp -= 2; pro_republic += 15
 go-to: left_outcome if march_on_berlin_left
@@ -83,6 +85,7 @@ go-to: left_outcome if march_on_berlin_left
 Наши силы вступают в бой с <span style="color: #7A3C00;">фашистами</span>, и каким-то образом <span style="color: #7A3C00;">фашисты</span> отступают! Они ошеломлены нашей демонстрацией силы и предпочли убраться восвояси. Попытка переворота окончена, по крайней мере, на данный момент.
 
 Эта демонстрация силы укрепила поддержку республики и <span style="color: #c00000;">**СДПГ**</span> и ослабила <span style="color: #7A3C00;">фашистов</span>.
+
 
 
 @fight_2_pre_civil_war
@@ -112,10 +115,8 @@ go-to: new_elections_braun if president_ideology == "Left"; new_elections_hinden
 
 
 
-
 @new_elections_braun
 go-to: new_elections_braun_2 if nsdap_normalized + dnvp_normalized >= 0.5 and far_right_coalition < 50; new_elections_braun_reject if (nsdap_normalized + dnvp_normalized < 0.5 or far_right_coalition >= 50)
-
 
 
 
@@ -134,15 +135,16 @@ go-to: new_elections_2
 <span style="color: #7A3C00;">Фашисты</span>, похоже, верят, что победят на выборах, если те состоятся сейчас, поэтому соглашаются на их проведение в следующем месяце.
 
 
+
 @new_elections_hindenburg
 go-to: new_elections_2
 
 При посредничестве различных влиятельных лиц на следующий месяц назначаются новые выборы — без использования <span style="color: #7A3C00;">фашистских</span> «наблюдателей за выборами».
 
 
+
 @new_elections_2
 on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_election_month = month + 1 if next_election_time >= time+1; next_election_year = year if next_election_time >= time+1; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
-
 
 
 

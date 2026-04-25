@@ -174,4 +174,3 @@ if (Q.agriculture_minister !== "Baade" && Q.in_social_liberal_coalition) Q.agric
 if (Q.reichswehr_minister_party !== "SPD") Q.reichswehr_minister_party = "I";
 if (Q.reichswehr_minister !== "Leber") Q.reichswehr_minister = "Groener";
 !}
-

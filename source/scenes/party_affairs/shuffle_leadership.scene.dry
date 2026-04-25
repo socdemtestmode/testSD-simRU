@@ -86,7 +86,6 @@ tags: remove_advisor
 
 
 
-
 @remove_hilferding
 title: Сместить Гильфердинга
 view-if: hilferding_advisor = 1
@@ -117,6 +116,7 @@ go-to: rm_main_menu
 Мюллер смещён с поста советника. Фракция центристов недовольна.
 
 
+
 @remove_breitscheid
 title: Сместить Брейтшейда
 view-if: breitscheid_advisor = 1
@@ -125,6 +125,9 @@ on-arrival: breitscheid_advisor = 0; center_dissent += 10; n_advisors -= 1
 go-to: rm_main_menu
 
 Брейтшейд смещён с поста советника. Центристская фракция недовольна.
+
+# reformists
+
 
 
 @remove_severing
@@ -167,6 +170,9 @@ go-to: rm_main_menu
 Пфюльф смещена с поста советника. Реформистская фракция недовольна.
 
 
+# labor
+
+
 @remove_leipart
 title: Сместить Лейпарта
 view-if: leipart_advisor = 1
@@ -197,6 +203,7 @@ go-to: rm_main_menu
 Виссель отстранён с поста советника. Фракция профсоюзников недовольна.
 
 
+
 @remove_woytinsky
 title: Сместить Войтинского
 view-if: woytinsky_advisor = 1
@@ -205,6 +212,8 @@ on-arrival: woytinsky_advisor = 0; labor_dissent += 7; n_advisors -= 1
 go-to: rm_main_menu
 
 Войтинский смещён с поста советника. Фракция профсоюзников недовольна.
+
+# left
 
 
 @remove_levi
@@ -257,6 +266,11 @@ go-to: rm_main_menu
 Зимзен смещёна с поста советника. Фракция левых недовольна.
 
 
+
+
+# neorevisionists
+
+
 @remove_mierendorff
 title: Сместить Мерендорффа
 view-if: mierendorff_advisor = 1
@@ -297,6 +311,11 @@ go-to: rm_main_menu
 Вирт смещён с поста советника. Фракция неоревизионистов недовольна.
 
 
+## nonfactional
+
+# tbh I'm not sure if Baade should be a reformist or nonfactional. same for stampfer. they were vaguely reformist-aligned but had pretty different ideas from the other reformists here. so they're non-factional.
+
+
 @remove_baade
 title: Сместить Бааде
 view-if: baade_advisor = 1
@@ -305,6 +324,9 @@ on-arrival: baade_advisor = 0; n_advisors -= 1
 go-to: rm_main_menu
 
 Бааде снят с поста советника.
+
+#The Reformist faction disapproves.
+
 
 
 @remove_hirschfeld
@@ -337,6 +359,12 @@ go-to: rm_main_menu
 Радбрух смещён с поста советника.
 
 
+
+
+
+####################### adding advisors
+
+
 @add_advisors
 title: Добавить советников
 choose-if: n_advisors < 3
@@ -348,7 +376,6 @@ go-to: advisor_menu
 title: Добавить других советников.
 tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
 frequency: 1
-
 
 
 - @centrist: Добавить центристов
@@ -401,7 +428,7 @@ view-if: n_advisors < 3
 
 @add_hilferding
 title: Рудольф Гильфердинг
-subtitle: Рудольф Гильфердинг — экономист и один из наших главных теоретиков марксизма.<br><br>[? if difficulty < 0 : Действия — против правого и левого уклона, поддержка тактики воздержания от вотума недоверия, фискальная политика, демократия в экономике ?]
+subtitle: Рудольф Гильфердинг — экономист и один из наших главных теоретиков марксизма.{!<br><br>!}[? if difficulty < 0 : Действия — против правого и левого уклона, поддержка тактики воздержания от вотума недоверия, фискальная политика, демократия в экономике ?]
 is-card: true
 card-image: img/portraits/HilferdingRudolf.jpg
 tags: center_advisor
@@ -414,7 +441,7 @@ go-to: advisor_menu
 
 @add_wels
 title: Отто Вельс
-subtitle: Отто Вельс — давний партийный организатор и председатель партии, служивший ещё под началом Фридриха Эберта. <br><br>[? if difficulty < 0 : Действия: очистить повестку, партийная дисциплина, экстренный сбор средств. ?]
+subtitle: Отто Вельс — давний партийный организатор и председатель партии, служивший ещё под началом Фридриха Эберта. {!<br><br>!}[? if difficulty < 0 : Действия: очистить повестку, партийная дисциплина, экстренный сбор средств. ?]
 is-card: true
 card-image: img/portraits/WelsRudolf.jpg
 tags: center_advisor
@@ -427,7 +454,7 @@ go-to: advisor_menu
 
 @add_muller
 title: Герман Мюллер
-subtitle: Герман Мюллер — последний канцлер от <span style="color: #c00000;">социал-демократов</span>. <br><br>[? if difficulty < 0 : Действия — переговоры с коалицией, поддержка тактики воздержания от вотума недоверия ?]
+subtitle: Герман Мюллер — последний канцлер от <span style="color: #c00000;">социал-демократов</span>. {!<br><br>!}[? if difficulty < 0 : Действия — переговоры с коалицией, поддержка тактики воздержания от вотума недоверия ?]
 is-card: true
 card-image: img/portraits/MüllerHermann.jpg
 tags: center_advisor
@@ -440,7 +467,7 @@ go-to: advisor_menu
 
 @add_breitscheid
 title: Рудольф Брейтшейд
-subtitle: Рудольф Брейтшейд — выходец из высокообразованной семьи и один из наших лидеров во внешней политике.<br><br>[? if difficulty < 0 : Действия — международные партийные связи, внешняя политика, партийная дисциплина ?]
+subtitle: Рудольф Брейтшейд — выходец из высокообразованной семьи и один из наших лидеров во внешней политике.{!<br><br>!}[? if difficulty < 0 : Действия — международные партийные связи, внешняя политика, партийная дисциплина ?]
 is-card: true
 card-image: img/portraits/BreitscheidRudolf.jpg
 view-if: breitscheid_advisor = 0 and n_advisors < 3
@@ -450,10 +477,13 @@ tags: center_advisor
 
 Рудольф Брейтшейд назначен советником.
 
+# reformist
+
+
 
 @add_severing
 title: Карл Зеверинг
-subtitle: Карл Зеверинг — бывший министр внутренних дел Пруссии и реформатор полиции.<br><br>[? if difficulty < 0 : Действия: Прусский оплот, Дела полиции ?]
+subtitle: Карл Зеверинг — бывший министр внутренних дел Пруссии и реформатор полиции.{!<br><br>!}[? if difficulty < 0 : Действия: Прусский оплот, Дела полиции ?]
 is-card: true
 card-image: img/portraits/SeveringCarl.jpg
 tags: reformist_advisor
@@ -466,7 +496,7 @@ go-to: advisor_menu
 
 @add_braun
 title: Отто Браун
-subtitle: Отто Браун — министр-президент Пруссии и один из самых популярных и известных лидеров <span style="color: #c00000;">социал-демократов</span>. <br><br>[? if difficulty < 0 : Действия: Прусский оплот, Переговоры с коалицией ?]
+subtitle: Отто Браун — министр-президент Пруссии и один из самых популярных и известных лидеров <span style="color: #c00000;">социал-демократов</span>. {!<br><br>!}[? if difficulty < 0 : Действия: Прусский оплот, Переговоры с коалицией ?]
 is-card: true
 card-image: img/portraits/BraunOtto.jpg
 tags: reformist_advisor
@@ -479,7 +509,7 @@ go-to: advisor_menu
 
 @add_juchacz
 title: Мари Юхач
-subtitle: Мари Юхач — основательница «Рабочей благотворительности», организации взаимопомощи. <br><br>[? if difficulty < 0 : Действия — срочный сбор средств, «Рабочая благотворительность», организация женщин ?]
+subtitle: Мари Юхач — основательница «Рабочей благотворительности», организации взаимопомощи. {!<br><br>!}[? if difficulty < 0 : Действия — срочный сбор средств, «Рабочая благотворительность», организация женщин ?]
 is-card: true
 card-image: img/portraits/JuchaczMarie.jpg
 view-if: juchacz_advisor = 0 and n_advisors < 3
@@ -492,7 +522,7 @@ tags: reformist_advisor
 
 @add_pfulf
 title: Антони Пфюльф
-subtitle: Антони Пфюльф — одна из лидеров в социальной политике и защите прав женщин.<br><br>[? if difficulty < 0 : Действия — поддержать идею Народной Партии, права женщин. ?]
+subtitle: Антони Пфюльф — одна из лидеров в социальной политике и защите прав женщин.{!<br><br>!}[? if difficulty < 0 : Действия — поддержать идею Народной Партии, права женщин. ?]
 is-card: true
 card-image: img/portraits/PfülfAntonie.jpg
 view-if: pfulf_advisor = 0 and n_advisors < 3
@@ -503,9 +533,13 @@ tags: reformist_advisor
 Антони Пфюльф теперь — советник.
 
 
+
+# left
+
+
 @add_levi
 title: Пауль Леви
-subtitle: Пауль Леви — бывший председатель <span style="color: #700000;">**КПГ,**</span>, которого исключили из партии за критику путчистской тактики <span style="color: #700000;">**коммунистов**</span> policies. <br><br>[? if difficulty < 0 : Действия: усиление фракции левых, сотрудничество с <span style="color: #700000;">**КПГ**</span> ?]
+subtitle: Пауль Леви — бывший председатель <span style="color: #700000;">**КПГ,**</span>, которого исключили из партии за критику путчистской тактики <span style="color: #700000;">**коммунистов**</span> policies. {!<br><br>!}[? if difficulty < 0 : Действия: усиление фракции левых, сотрудничество с <span style="color: #700000;">**КПГ**</span> ?]
 is-card: true
 card-image: img/portraits/LeviPaul.jpg
 view-if: levi_advisor = 0 and levi_dead = 0 and n_advisors < 3 and left_split = 0
@@ -518,7 +552,7 @@ tags: left_advisor
 
 @add_sender
 title: Тони Зендер
-subtitle: Тони Зендер — антивоенная антивистка и феминистка, а также депутат Рейхстага. <br><br>[? if difficulty < 0 : Действия — единство левой и центристской фракции, организация женщин, против воздержания от вотума недоверия, экономический план левых ?]
+subtitle: Тони Зендер — антивоенная антивистка и феминистка, а также депутат Рейхстага. {!<br><br>!}[? if difficulty < 0 : Действия — единство левой и центристской фракции, организация женщин, против воздержания от вотума недоверия, экономический план левых ?]
 is-card: true
 card-image: img/portraits/SenderToni.jpg
 view-if: sender_advisor = 0 and n_advisors < 3
@@ -531,7 +565,7 @@ tags: left_advisor
 
 @add_rosenfeld
 title: Курт Розенфельд
-subtitle: Курт Розенфельд — юрист, антивоенный активист и депутат рейхстага. <br><br>[? if difficulty < 0 : Действия: Укрепление фракции левых, Сотрудничество с <span style="color: #700000;">**КПГ**</span>, Против тактики воздержания от вотума недоверия ?]
+subtitle: Курт Розенфельд — юрист, антивоенный активист и депутат рейхстага. {!<br><br>!}[? if difficulty < 0 : Действия: Укрепление фракции левых, Сотрудничество с <span style="color: #700000;">**КПГ**</span>, Против тактики воздержания от вотума недоверия ?]
 is-card: true
 card-image: img/portraits/RosenfeldKurt.jpg
 view-if: rosenfeld_advisor = 0 and n_advisors < 3 and left_split = 0
@@ -544,7 +578,7 @@ tags: left_advisor
 
 @add_seydewitz
 title: Макс Зайдевиц
-subtitle: Макс Зайдевиц — бывший лидер молодёжного крыла, член фракции левых в <span style="color: #c00000;">**СДПГ**</span> и сторонник классовой борьбы.<br><br>[? if difficulty < 0 : Действия: Митинг за классовую борьбу, Социалистическая молодёжь, Против тактики на воздержание от вотума недоверия ?]
+subtitle: Макс Зайдевиц — бывший лидер молодёжного крыла, член фракции левых в <span style="color: #c00000;">**СДПГ**</span> и сторонник классовой борьбы.{!<br><br>!}[? if difficulty < 0 : Действия: Митинг за классовую борьбу, Социалистическая молодёжь, Против тактики на воздержание от вотума недоверия ?]
 is-card: true
 card-image: img/portraits/SeydewitzMax.jpg
 view-if: seydewitz_advisor = 0 and n_advisors < 3 and left_split = 0
@@ -557,7 +591,7 @@ tags: left_advisor
 
 @add_siemsen
 title: Анна Зимзен
-subtitle: Анна Зимзен — сторонница реформы образования и пацифистка, одна из немногих немецких женщин, получивших докторскую степень в довоенный период. <br><br>[? if difficulty < 0 : Действия: митинг в поддержку пацифизма, изменение учебной программы, изменение структуру образования ?]
+subtitle: Анна Зимзен — сторонница реформы образования и пацифистка, одна из немногих немецких женщин, получивших докторскую степень в довоенный период. {!<br><br>!}[? if difficulty < 0 : Действия: митинг в поддержку пацифизма, изменение учебной программы, изменение структуру образования ?]
 is-card: true
 card-image: img/portraits/SiemsenAnna.jpg
 view-if: siemsen_advisor = 0 and n_advisors < 3 and left_split = 0
@@ -568,9 +602,13 @@ tags: left_advisor
 Анна Зимзен теперь — советник.
 
 
+
+# labor
+
+
 @add_leipart
 title: Теодор Лейпарт
-subtitle: Теодор Лейпарт — лидер АДГБ, Всеобщей конфедерации немецких профсоюзов. <br><br>[? if difficulty < 0 : Действия: организация рабочих, поддержка экономического плана реформистов[? if red_general_unlock and rubicon: , переговоры с красным генералом ?] ?]
+subtitle: Теодор Лейпарт — лидер АДГБ, Всеобщей конфедерации немецких профсоюзов. {!<br><br>!}[? if difficulty < 0 : Действия: организация рабочих, поддержка экономического плана реформистов[? if red_general_unlock and rubicon: , переговоры с красным генералом ?] ?]
 is-card: true
 card-image: img/portraits/LeipartTheodor.jpg
 tags: labor_advisor
@@ -583,7 +621,7 @@ go-to: advisor_menu
 
 @add_aufhauser
 title: Зигфрид Ауфхойзер
-subtitle: Зигфрид Ауфхойзер — лидер всеобщего профсоюза служащих (AfA-Bund).<br><br>[? if difficulty < 0 : Действия: организация служащих («белых воротничков»), координация профсоюзов и партии, поддержать экономический план реформистов, поддержать экономический план левых ?]
+subtitle: Зигфрид Ауфхойзер — лидер всеобщего профсоюза служащих (AfA-Bund).{!<br><br>!}[? if difficulty < 0 : Действия: организация служащих («белых воротничков»), координация профсоюзов и партии, поддержать экономический план реформистов, поддержать экономический план левых ?]
 is-card: true
 card-image: img/portraits/AufhäuserSiegfried.jpg
 tags: labor_advisor
@@ -596,7 +634,7 @@ go-to: advisor_menu
 
 @add_wissell
 title: Рудольф Виссель
-subtitle: Рудольф Виссель — экономист, бывший министр труда, защитник интересов трудящихся в правительстве. <br><br>[? if difficulty < 0 : Действия — координация партии и профсоюзов, защита прав трудящихся ?]
+subtitle: Рудольф Виссель — экономист, бывший министр труда, защитник интересов трудящихся в правительстве. {!<br><br>!}[? if difficulty < 0 : Действия — координация партии и профсоюзов, защита прав трудящихся ?]
 is-card: true
 card-image: img/portraits/WissellRudolf.jpg
 tags: labor_advisor
@@ -607,9 +645,10 @@ go-to: advisor_menu
 Рудольф Виссель назначен советником.
 
 
+
 @add_woytinsky
 title: Владимир Войтинский
-subtitle: Владимир Войтинский — бывший русский меньшевик, а ныне ведущий экономист профсоюзов. <br><br>[? if difficulty < 0 : Действия — поддержать экономический план профсоюзников, реализовать экономический план профсоюзников ?]
+subtitle: Владимир Войтинский — бывший русский меньшевик, а ныне ведущий экономист профсоюзов. {!<br><br>!}[? if difficulty < 0 : Действия — поддержать экономический план профсоюзников, реализовать экономический план профсоюзников ?]
 is-card: true
 card-image: img/portraits/WoytinskyWladimir.jpg
 tags: labor_advisor
@@ -620,9 +659,12 @@ go-to: advisor_menu
 Владимир Войтинский назначен советником.
 
 
+# neorevisionist leaders
+
+
 @add_mierendorff
 title: Карло Мерендорфф
-subtitle: Карло Мерендорфф — один из самых молодых депутатов рейхстага и основоположник «неоревизионистского» движения. Он — стратег по борьбе с нацистами.<br><br>[? if difficulty < 0 : Действия — Создать <span style="color: #c00000;">Железный</span> <span style="color: #1A1A1A;">фронт</span>, вербовать в Железный фронт, предупредить об угрозе <span style="color: #7A3C00;">нацизма</span> ?]
+subtitle: Карло Мерендорфф — один из самых молодых депутатов рейхстага и основоположник «неоревизионистского» движения. Он — стратег по борьбе с нацистами.{!<br><br>!}[? if difficulty < 0 : Действия — Создать <span style="color: #c00000;">Железный</span> <span style="color: #1A1A1A;">фронт</span>, вербовать в Железный фронт, предупредить об угрозе <span style="color: #7A3C00;">нацизма</span> ?]
 is-card: true
 card-image: img/portraits/MierendorffCarlo.jpg
 view-if: mierendorff_advisor = 0 and n_advisors < 3
@@ -635,7 +677,7 @@ tags: neorev_advisor
 
 @add_schumacher
 title: Курт Шумахер
-subtitle: Курт Шумахер — ветеран Великой войны и пламенный оратор, защитник <span style="color: #c00000;">социал-демократических</span> идей. Он выступает за реформизм. <br><br>[? if difficulty < 0 : Действия: срочный сбор средств, укрепление Рейхсбаннера, поддержать экономический план реформистов. ?]
+subtitle: Курт Шумахер — ветеран Великой войны и пламенный оратор, защитник <span style="color: #c00000;">социал-демократических</span> идей. Он выступает за реформизм. {!<br><br>!}[? if difficulty < 0 : Действия: срочный сбор средств, укрепление Рейхсбаннера, поддержать экономический план реформистов. ?]
 is-card: true
 card-image: img/portraits/SchumacherKurt.jpg
 tags: neorev_advisor
@@ -648,7 +690,7 @@ go-to: advisor_menu
 
 @add_leber
 title: Юлиус Лебер
-subtitle: Юлиус Лебер — бывший офицер рейхсвера, подавший в отставку в знак протеста против Капповского путча. <br><br>[? if difficulty < 0 : Действия: митинг в защиту демократии, министерство Рейхсвера, создание Народной партии. ?]
+subtitle: Юлиус Лебер — бывший офицер рейхсвера, подавший в отставку в знак протеста против Капповского путча. {!<br><br>!}[? if difficulty < 0 : Действия: митинг в защиту демократии, министерство Рейхсвера, создание Народной партии. ?]
 is-card: true
 card-image: img/portraits/LeberJulius.jpg
 view-if: leber_advisor = 0 and n_advisors < 3
@@ -657,6 +699,8 @@ go-to: advisor_menu
 tags: neorev_advisor
 
 Юлиус Лебер назначен советником.
+
+# Nonfactional advisors
 
 
 @add_wirth
@@ -671,10 +715,12 @@ tags: neorev_advisor
 
 Йозеф Вирт назначен советником.
 
+# Nonfactional advisors
+
 
 @add_baade
 title: Фриц Бааде
-subtitle: Фриц Бааде — один из немногих экспертов по сельскому хозяйству в <span style="color: #c00000;">**СДПГ**</span>. <br><br>[? if difficulty < 0 : Действия: аграрная политика, агитация в сельской местности, поддержать экономический план профсоюзников ?]
+subtitle: Фриц Бааде — один из немногих экспертов по сельскому хозяйству в <span style="color: #c00000;">**СДПГ**</span>. {!<br><br>!}[? if difficulty < 0 : Действия: аграрная политика, агитация в сельской местности, поддержать экономический план профсоюзников ?]
 is-card: true
 card-image: img/portraits/BaadeFritz.jpg
 view-if: baade_advisor = 0 and n_advisors < 3
@@ -685,9 +731,10 @@ tags: nonfactional_advisor
 Фриц Бааде назначен советником.
 
 
+
 @add_hirschfeld
 title: Магнус Хиршфельд
-subtitle: Магнус Хиршфельд — основатель Institut für Sexualwissenschaft и защитник прав сексуальных меньшинств.<br><br>[? if difficulty < 0 : Действия — права гомосексуалов, права женщин, финансирование науки ?]
+subtitle: Магнус Хиршфельд — основатель Institut für Sexualwissenschaft и защитник прав сексуальных меньшинств.{!<br><br>!}[? if difficulty < 0 : Действия — права гомосексуалов, права женщин, финансирование науки ?]
 is-card: true
 card-image: img/portraits/HirschfeldMagnus.jpg
 view-if: hirschfeld_advisor = 0 and n_advisors < 3
@@ -698,9 +745,10 @@ tags: nonfactional_advisor
 Магнус Хиршфельд назначен советником.
 
 
+
 @add_radbruch
 title: Густав Радбрух
-subtitle: Густав Радбрух — известный правовед и министр юстиции от <span style="color: #c00000;">**СДПГ**</span> justice minister. <br><br>[? if difficulty < 0 : Действия: судебная реформа, конституционная реформа ?]
+subtitle: Густав Радбрух — известный правовед и министр юстиции от <span style="color: #c00000;">**СДПГ**</span> justice minister. {!<br><br>!}[? if difficulty < 0 : Действия: судебная реформа, конституционная реформа ?]
 is-card: true
 card-image: img/portraits/RadbruchGustav.jpg
 view-if: radbruch_advisor = 0 and n_advisors < 3
@@ -711,9 +759,10 @@ tags: nonfactional_advisor
 Густав Радбрух назначен советником.
 
 
+
 @add_stampfer
 title: Фридрих Штампфер
-subtitle: Фридрих Штампфер — многолетний главный редактор «Форвертс», нашей партийной газеты. <br><br>[? if difficulty < 0 : Действия: СМИ, редакционная политика, сотрудничество с <span style="color: #700000;">КПГ</span> ?]
+subtitle: Фридрих Штампфер — многолетний главный редактор «Форвертс», нашей партийной газеты. {!<br><br>!}[? if difficulty < 0 : Действия: СМИ, редакционная политика, сотрудничество с <span style="color: #700000;">КПГ</span> ?]
 is-card: true
 card-image: img/portraits/StampferFriedrich.jpg
 view-if: stampfer_advisor = 0 and n_advisors < 3 and not stampfer_killed
@@ -722,4 +771,5 @@ go-to: advisor_menu
 tags: nonfactional_advisor
 
 Фридрих Штампфер назначен советником.
+
 

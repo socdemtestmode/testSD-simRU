@@ -1,0 +1,19 @@
+title: План Юнга ратифицирован
+new-page: true
+subtitle: Мы им больше не нужны.
+tags: event
+view-if: year = 1930 and month >= 3 and spd_in_government and not young_plan_ratified
+on-arrival: dvp_right += 3; ddp_right += 1; dvp_relation -= 5; lvp_right += 3; lvp_relation -= 5; hindenburg_angry += 10; young_plan_ratified = 1
+max-visits: 1
+
+= План Юнга ратифицирован
+
+План Юнга наконец ратифицирован, а вместе с ним и главная причина, по которой президент Гинденбург и [? if not lvp_formed and in_grand_coalition: <span style="color: #C0A054;">**ННП**</span> ?][? if lvp_formed or not in_grand_coalition: буржуазные правые ?] терпели нас в правительстве, исчезла. Гинденбург уведомил канцлера [+ chancellor +]а, что ожидает скорейшего проведения масштабной реформы немецких финансов, а это непростая задача для такого правительства.
+
+- @joever: Хуже этого года уже и быть не могло…
+
+
+@joever
+
+[? if in_grand_coalition or (in_weimar_coalition and lvp_formed): The [? if not lvp_formed: <span style="color: #C0A054;">**ННП**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] может вновь поднять вопрос о страхованиях по безработице. ?][? if in_popular_front or in_left_front or (in_weimar_coalition and not lvp_formed): Ближний круг Гинденбурга твёрдо намерен заставить его исключить нас из правительства[? if in_popular_front or in_left_front: , особенно на фоне нашего сотрудничества с <span style="color: #700000;">**коммунистами**</span> ?]. ?]
+

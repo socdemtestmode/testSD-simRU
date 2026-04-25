@@ -28,7 +28,6 @@ go-to: media
 
 
 
-
 @faction_support_
 title: Редакционная политика
 subtitle: Мы можем изменить редакционную политику «Форвертс», чтобы поддержать определённую фракцию.
@@ -38,11 +37,11 @@ on-arrival: advisor_action_timer = 6
 
 Какую фракцию нам следует поддержать?
 
-- @support_left: Левые 
-- @support_center: Центристы 
+- @support_left: Левые
+- @support_center: Центристы
 - @support_labor: Профсоюзники
-- @support_reform: Реформисты 
-- @support_neorev: Неоревизионисты 
+- @support_reform: Реформисты
+- @support_neorev: Неоревизионисты
 
 
 @support_left
@@ -84,4 +83,3 @@ choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_strength += 2; kpd_relation += 4*(1-dissent); reformist_dissent += 2
 
 Штампфер работает над установлением более тесных связей с <span style="color: #700000;">**КПГ**</span> через наши СМИ.
-

@@ -17,7 +17,7 @@ tags: event
 
 @treviranus
 title: Куно фон Вестарп — [? if dnvp_ideology == "Radical": &nbsp;Бывший лидер ?] <span style="color: #3E88B3;">**НННП**</span>
-subtitle:  вновь предпочтительный кандидат Гинденбурга и [? if dnvp_leader != "Westarp": бывший ?] <span style="color: #3E88B3;">** лидер НННП**</span> party leader.
+subtitle: вновь предпочтительный кандидат Гинденбурга и [? if dnvp_leader != "Westarp": бывший ?] <span style="color: #3E88B3;">** лидер НННП**</span> party leader.
 face-image: img/portraits/Treviranus.jpg
 on-arrival: {!
 Q.chancellor = "Treviranus";
@@ -43,4 +43,3 @@ Q.schleicher_spd_support -= 5;
 Как и в случае с отставкой Папена в пользу Шлейхера, политический класс вновь вздыхает с облегчением. Даже внутри <span style="color: #c00000;">**СДПГ**</span> многие считают: лучше иметь дело со знакомым злом, нежели с динамичным и непредсказуемым правлением Шлейхера.
 
 Тревиранус попытается сформировать рабочее большинство в парламенте.
-

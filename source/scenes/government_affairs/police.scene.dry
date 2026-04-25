@@ -30,6 +30,7 @@ on-arrival: interior_police_loyalty += 0.1
 Текущая верность полиции: [+ interior_police_loyalty : loyalty +]
 
 
+
 @investigate_corruption
 go-to: investigate_corruption_success if interior_police_loyalty >= 0.5; investigate_corruption_failure if interior_police_loyalty < 0.5
 
@@ -38,6 +39,7 @@ go-to: investigate_corruption_success if interior_police_loyalty >= 0.5; investi
 on-arrival: investigate_corruption += 1; workers_spd += 5*(1-dissent); inflation -= 0.1 if inflation > 3; inflation -= 0.2 if inflation >= 8; dvp_relation -= 3; dvp_right += 1; ddp_relation -= 1; ddp_left += 0.5; ddp_cohesion -= 0.5; lvp_relation -= 2; lvp_right += 1
 
 Коррупция в крупном бизнесе, конечно, процветает. Мы раскрыли несколько скандалов, и их огласка привлекает новое внимание к работе министра внутренних дел [+ interior_minister +], повышая его популярность в народе и популярность <span style="color: #c00000;">**СДПГ**</span>.
+
 
 
 @investigate_corruption_failure
@@ -60,4 +62,3 @@ on-arrival: investigate_far_right += 1; sa_strength *= 0.96; sa_strength *= 0.96
 @investigate_far_right_failure
 
 К сожалению, наши расследования ничего не дали. Ходят слухи, что объекты нашего расследования предупреждены внедрёнными в полицию агентами.
-

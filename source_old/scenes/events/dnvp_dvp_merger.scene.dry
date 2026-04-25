@@ -1,0 +1,37 @@
+title: The <span style="color: #C0A054;">**ННП**</span> объединяется с <span style="color: #3E88B3;">**НННП**</span>!
+subtitle: Дингельдей и[+ dnvp_leader +]достигли соглашения.
+view-if: year == 2000
+max-visits: 1
+tags: event
+priority: 3
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/dvpcampaign.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+new-page: true
+
+= <span style="color: #C0A054;">**ННП**</span> объединяется с <span style="color: #3E88B3;">**НННП**</span>
+
+Электоральный упадок правых буржуазных сил, значительный сдвиг <span style="color: #C0A054;">**ННП**</span> вправо, и их общий страх перед <span style="color: #7A3C00;">нацистами</span> и <span style="color: #c00000;">социалистами</span> заставил обе партии объединиться. <span style="color: #3E88B3;">**НННП**</span>, как более крупная партия, поглотит <span style="color: #C0A054;">**ННП**</span>, пойдя на ключевые уступки ради слияния.
+
+Внутри <span style="color: #C0A054;">**ННП**</span> реакция неоднозначна. Штреземанисты и левое крыло категорически против слияния, тогда как правая промышленная фракция поддерживает его как необходимый шаг. Внутри <span style="color: #3E88B3;">**НННП**</span>, сопротивление исходит от её <span style="color: #385A38;">аграрной</span> и <span style="color: #6D5298;">христианско-социальной</span> фракций, которые противятся объединению с промышленно-капиталистической <span style="color: #C0A054;">**ННП**</span>. Кроме того, старая гвардия партии во главе с Вестарпом относится скептически из-за серьёзных разногласий по «национальным вопросам».
+
+- @dnvp_dvp: Так или иначе, соглашение достигнуто.
+
+
+@dnvp_dvp
+face-image: img/dvpposter.jpg
+go-to: dnvp_dvp_formed
+
+Многие члены <span style="color: #C0A054;">**ННП**</span> из левого крыла, такие как Лютер и Курциус, вместе со своими сторонниками перешли в процветающую <span style="color: #D3C24D;">[+ ddp_name +]</span>, видя в ней последний бастион либерализма.
+
+Будь Штреземан жив, он был бы очень разочарован: во что превратилась его партия?
+

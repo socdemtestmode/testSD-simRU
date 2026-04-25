@@ -1,0 +1,38 @@
+title: Расширение общественных работ
+subtitle: Кабинет Брюнинга объявляет о программе создания рабочих мест.
+view-if: (bruning_time >= 6 or bruning_lite_time >= 6) and ((year == 1932 and month >= 5) or year >= 1933) and unemployed >= 30 and (in_center_right_coalition or in_right_coalition) and time >= bruning_skibidi_time and bruning_skibidi_time and not works_program
+max-visits: 1
+tags: event
+new-page: true
+priority: 2
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/factory.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+set-bg: img/map_2.jpg
+
+= Расширение общественных работ
+
+После отмены репараций в Лозанне кабинет Брюнинга наконец счёл возможным расширить финансирование своей недавно принятой программы общественных работ. На её финансирование направлен миллиард рейхсмарок в виде выпущенных правительством облигаций, и деньги снова начинают поступать в экономику.
+
+Это знаменует собой настоящий переломный момент, и вместе с отменой репараций радикализирующее влияние заоблачной безработицы и Версальского договора ослабевает. Условия, которые обеспечили стремительный взлёт <span style="color: #7A3C00;">нацистов</span>, начинают исчезать, лишая их топлива, которое некогда питало их восхождение.
+
+- @public_works
+
+
+@public_works
+title: Отличные новости!
+on-arrival: labor_dissent -= 5; hindenburg_angry_bruning -= 25; lautenbach_adopted = 1; lautenbach_plan_time = time + 12; public_works_name = "Dietrich"; dvp_left += 3; ddp_left += 2; lvp_left += 2; ddp_cohesion += 2; inflation += 2; budget -= 1; economic_growth += 2; workers_nsdap -= 3; workers_ddp += 1; workers_z += 1; workers_dnvp += 1; workers_lvp += 1; unemployed_nsdap -= 5; unemployed_z += 2; unemployed_ddp += 2; unemployed_dnvp += 2; unemployed_lvp += 2
+
+Несмотря на давнее убеждение Брюнинга, что общественные работы должны начинаться после того, как депрессия достигнет дна, похоже, он считает, что этот момент настал — благодаря началу мирового экономического подъёма и отмене германских репараций. Тем не менее инфляционные опасения в обществе сдерживали любое значительное расширение денежной массы, а промышленники из правящей коалиции отчаянно боролись за то, чтобы выхолостить самые дорогие положения законопроекта. К счастью, для его принятия их голоса не требуются.
+
+Ответ канцлера [+ chancellor +]а... Общественные работы..?
+

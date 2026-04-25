@@ -38,7 +38,6 @@ go-to: hindenburg_ref_win if hindenburg_ref_votes >= 50; hindenburg_ref_lose if 
 
 
 
-
 @hindenburg_ref_win
 on-arrival: {!
 Q.hindenburg_gone = 1;

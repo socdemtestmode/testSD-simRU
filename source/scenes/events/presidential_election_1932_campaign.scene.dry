@@ -42,6 +42,7 @@ priority: -1
 max-visits: 1
 go-to: candidate_selection
 
+
 = Агитация на президентских выборах
 
 [? if nsdap_candidate_1932: The <span style="color: #7A3C00;">**НСДАП**</span> в одиночку ведет предвыборную борьбу. Их кандидат: [+ nsdap_candidate_1932_disp +] — имеет мало шансов на победу. По крайней мере, по мнению наших советников. Однако это не значит, что выборы не имеют значения. Масштабная <span style="color: #7A3C00;">нацистская</span> пропагандистская кампания, организованная печально известным Йозефом Геббельсом, в сочетании с предстоящими местными выборами всего через месяц после первого тура может значительно изменить общественное мнение. Это, в свою очередь, может оказать давление на президента Гинденбурга и его окружение, чтобы они заняли более враждебную позицию по отношению к действующему правительству и добивались реорганизации национального правительства с включением в него <span style="color: #7A3C00;">национальной</span> <span style="color: #3E88B3;">оппозиции</span>. [? if nsdap_candidate_1932 == "Hitler": Более того, Адольф Гитлер обладает поразительной харизмой, и его стратегия ежедневных перелётов по Германии для выступлений перед сотнями тысяч избирателей, которые иначе остались бы равнодушны, не уступает даже кампании Гинденбурга. ?][? if nsdap_candidate_1932 == "Göring": Поскольку Гитлер не допущен к выборам, Герман Геринг принял на себя роль кандидата от <span style="color: #7A3C00;">**НСДАП**</span>. Будучи убеждённым представителем правого крыла партии и противником более радикальной политики Штрассера, Герингу будет проще заручиться поддержкой промышленников, обеспечив тем самым ключевое финансирование для их обширной пропагандистской сети. ?] ?]
@@ -215,8 +216,8 @@ go-to: campaign_menu
 
 
 
-
 @campaign_menu
+
 
 Поскольку сейчас время выборов, мы можем усилить агитацию. Купите одну кампанию — и получите вторую совершенно бесплатно!
 
@@ -235,12 +236,10 @@ go-to: campaign_menu
 
 
 
-
 @middle_class
 view-if: campaigning_count < 2
 on-arrival: new_middle_spd += 3*(1 - dissent); old_middle_spd += 3*(1 - dissent); new_middle_spd += 2*(1 - dissent) if peoples_party; old_middle_spd += 2*(1 - dissent) if peoples_party; campaigning_count += 1
 go-to: campaign_menu
-
 
 
 
@@ -251,12 +250,10 @@ go-to: campaign_menu
 
 
 
-
 @unemployed
 view-if: campaigning_count < 2
 on-arrival: unemployed_spd += 3*(1 - dissent); campaigning_count += 1
 go-to: campaign_menu
-
 
 
 
@@ -267,11 +264,9 @@ go-to: campaign_menu
 
 
 
-
 @checkout
 title: Оформить заказ.
 go-to: campaigning_braun if braun_campaign; campaigning_rosenfeld if rosenfeld_campaign; campaigning_thalmann if spd_support_thalmann; campaigning_hindenburg_2 if spd_support_reactionary
-
 
 
 

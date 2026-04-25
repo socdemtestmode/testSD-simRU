@@ -17,10 +17,9 @@ is-special: true
 [? if dnef_existed: <div style="display: flex; gap: 5px; margin-bottom: 5px; margin-left: -3px;"> ?] [? if dnef_existed: <img src="img/weimar_coalition_3.jpg" alt="Republicans and Constitutionalists" style="width: 50%;"> ?] [? if dnef_existed: <img src="img/dnvp_monarchy.jpg" alt="Nationalists and Conservatives" style="width: 50%;"> ?] [? if dnef_existed: </div> ?]
 
 [? if dnef_existed: <div style="display: flex; justify-content: space-between; gap: 0px; margin-bottom: 5px;"> ?]
-
+  
 [? if dnef_existed: <div style="flex: 1;"> ?] [? if dnef_existed: <p style="font-weight: bold;margin-bottom: 2px;">Республиканцы</p> ?] [? if dnef_existed: <p style="margin-bottom: 2px;">Влияние: [? if weimar_votes < 20: скромное ?][? if weimar_votes < 30 and weimar_votes >= 20: значительное ?][? if weimar_votes < 40 and weimar_votes >= 30: существенное ?][? if weimar_votes >= 40: мощное ?]</p> ?] [? if dnef_existed: <p style="margin-bottom: 2px;">Отношение к [+ chancellor +]: [+ republicans_schleicher : schleicher_spd_4 +]</p> ?] [? if dnef_existed: </div> ?]
 
 [? if dnef_existed: <div style="flex: 1;"> ?] [? if dnef_existed: <p style="font-weight: bold; margin-bottom: 0px;">националистов</p> ?] [? if dnef_existed: <p style="margin-bottom: 2px;">Влияние: [? if nationalist_votes < 15: скромное ?][? if nationalist_votes >= 15: значительное ?]</p> ?] [? if dnef_existed: <p style="margin-bottom: 2px;">Отношение к [+ chancellor +]: [+ nationalists_schleicher : schleicher_spd_4 +]</p> ?] [? if dnef_existed: </div> ?]
 
 [? if dnef_existed: </div> ?]
-

@@ -9,6 +9,7 @@ new-page: true
 
 Густав Радбрух — известный правовед, долгое время занимавший пост министра юстиции от <span style="color: #c00000;">**СДПГ**</span> justice minister. [? if judicial_reform >= 2: В настоящее время он пользуется значительной поддержкой среди партийных фракций благодаря успехам <span style="color: #c00000;">СДПГ</span> в судебных реформах. ?]
 
+
 - @judiciary_major
 - @judiciary_minor
 - @constitutional_reform_
@@ -32,7 +33,6 @@ choose-if: advisor_action_timer = 0 and spd_in_government and justice_minister_p
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> в настоящее время не у власти. ?][? if justice_minister_party != "SPD" : У нас нет министерства юстиции. ?]
 on-arrival: advisor_action_timer = 6;
 go-to: judiciary.minor_reforms
-
 
 
 

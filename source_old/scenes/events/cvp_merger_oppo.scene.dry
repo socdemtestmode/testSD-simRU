@@ -1,0 +1,368 @@
+title: Партия <span style="color: #000000;">Центра</span> объединяется с <span style="color: #3E88B3;">**НННП**</span>!
+subtitle: Рождается гигант немецких правых сил…
+view-if: year >= 1931 and (100 - z_relation) >= spd_votes and z_ideology == "Right" and (z_leader == "Stegerwald" or z_leader == "Adenauer") and (((in_spd_majority or in_left_front) and (not spd_prussia or in_left_front_prussia or in_spd_majority_prussia)) or (spd_votes + pro_republic + left_strength >= 150)) and dnvp_leader == "Treviranus" and stegerwald_transformation_timer == 0 and not cvp_formed and not dkp_merger_waiting
+max-visits: 1
+tags: event
+priority: 3
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/dvpcampaign.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+new-page: true
+
+= Партия <span style="color: #000000;">Центра</span> объединяется с <span style="color: #3E88B3;">**НННП**</span>
+
+Партия <span style="color: #000000;">Центра</span>, претерпевшая серьёзную трансформацию в правоцентристскую <span style="color: #000000;">Христианскую народную партию</span> под руководством [+ z_leader +], вынашивала идею объединения с [+ dnvp_leader +], который возглавляет <span style="color: #3E88B3;">**НННП**</span> последние несколько месяцев.[? if spd_votes + pro_republic < 120 or ((in_spd_majority or in_left_front) and (not spd_prussia or in_left_front_prussia or in_spd_majority_prussia)): Их совместная оппозиция нынешней правящей коалиции, новообретенная идеологическая близость и общие страхи перед <span style="color: #7A3C00;">нацистами</span> и <span style="color: #c00000;">социалистами</span> — в сочетании с падением их электоральной поддержки в пользу первых — подтолкнули их к более тесному сотрудничеству. ?][? if spd_votes + pro_republic >= 120 and not ((in_spd_majority or in_left_front) and (not spd_prussia or in_left_front_prussia or in_spd_majority_prussia)): Их растущее идеологическое сближение, общая приверженность Республике и взаимная тревога из-за <span style="color: #c00000;">социалистов</span> — чьи колоссальные успехи на выборах угрожают свергнуть консервативный порядок в Германии — подтолкнули их к более тесному сотрудничеству. ?]
+
+У нас произошёл разлад с партией <span style="color: #000000;">Центра</span>, которая теперь стремится разорвать оставшиеся связи с нами, чтобы расчистить путь для слияния с <span style="color: #3E88B3;">**НННП**</span>. Наших немногих оставшихся союзников в их рядах оттеснили на обочину — они оказались бессильны помешать дрейфу партии вправо. Этот сдвиг позволил партийному руководству вместе с недавно примкнувшими к нему правыми политиками-протестантами начать переговоры с <span style="color: #3E88B3;">**НННП**</span> о возможном объединении.
+
+Однако сопротивление остаётся: <span style="color: #3E88B3;">**НННП**</span>, чья старая гвардия во главе с такими деятелями, как Вестарп и Шиле, по-прежнему глубоко скептически относится к слиянию, ссылаясь на фундаментальные разногласия по ключевым «национальным вопросам», таким как репарации.
+
+- @cvp_dnvp: Между двумя партиями начались переговоры.
+
+
+@cvp_dnvp
+on-arrival: {!
+Q.cvp_dnvp_balance = 50;
+
+if (Q.z_relation >= 20) {
+    Q.cvp_dnvp_balance -= 10;
+} else {
+    Q.cvp_dnvp_balance += 10;
+}
+if (Q.peoples_party) Q.cvp_dnvp_balance += 5;
+if (Q.left_split) Q.cvp_dnvp_balance += 5;
+if (Q.sapd_formed) Q.cvp_dnvp_balance += 5;
+if (Q.reformist_strength >= Q.left_strength + Q.center_strength) {
+    Q.cvp_dnvp_balance += 5;
+} else if (Q.left_strength >= Q.reformist_strength) {
+    Q.cvp_dnvp_balance -= 10;
+}
+if (Q.nsdap_votes >= 35) {
+  Q.cvp_dnvp_balance = Q.cvp_dnvp_balance + ((50 - Q.cvp_dnvp_balance) * 0.6);
+} else if (Q.nsdap_votes >= 30) {
+  Q.cvp_dnvp_balance = Q.cvp_dnvp_balance + ((50 - Q.cvp_dnvp_balance) * 0.4);
+} else if (Q.nsdap_votes >= 25) {
+  Q.cvp_dnvp_balance = Q.cvp_dnvp_balance + ((50 - Q.cvp_dnvp_balance) * 0.2);
+}
+if (Q.pro_republic >= 70) {
+    Q.cvp_dnvp_balance += 20;
+} else if (Q.pro_republic >= 55) {
+    Q.cvp_dnvp_balance += 10;
+} else {
+    Q.cvp_dnvp_balance -= 20;
+}
+if (Q.nationalism < 45) {
+    Q.cvp_dnvp_balance += 10;
+} else if (Q.nationalism < 55) {
+    Q.cvp_dnvp_balance -= 10;
+} else {
+    Q.cvp_dnvp_balance -= 20;
+}
+
+Q.cvp_dnvp_balance -= (Q.spd_votes / 4);
+
+if (Q.bruning_coalition_dissent < 1) Q.cvp_dnvp_balance += 10;
+if (Q.reparations <= -2) Q.cvp_dnvp_balance += 15;
+
+Q.cvp_dnvp_balance -= Q.bruning_coalition_dissent*10;
+Q.cvp_dnvp_balance -= Q.dnvp_angry*5;
+
+Q.cvp_dnvp_balance += (Q.z_votes - Q.bvp_votes)*2;
+Q.cvp_dnvp_balance -= (Q.dnvp_votes)*2;
+
+!}
+go-to: cvp_dnvp_menu
+
+Чтобы привести обе стороны к всеобъемлющему соглашению, потребуются значительные уступки, поскольку им придётся преодолеть свои разногласия и выработать единую политику на случай слияния. Однако, скорее всего, одна из партий будет иметь преимущество на переговорах: либо из-за перевеса по популярности, либо из-за своего нежелания идти на слияние, что вынудит другую сторону пойти на более весомые уступки.
+
+Фракции, выступающие за слияние:
+
+<span style="color: #000000;">Ультраправые</span> (<span style="color: #000000;">**Центр**</span>)
+
+<span style="color: #000000;">Правые профсоюзы</span> (<span style="color: #000000;">**Центр**</span>)
+
+<span style="color: #000000;">Правые протестанты</span> (<span style="color: #000000;">**Центр**</span>)
+
+<span style="color: #6D5298;">Христианско-социальное движение</span> (<span style="color: #3E88B3;">**НННП**</span>)
+
+<span style="color: #0087DC;">Народные консерваторы</span> (<span style="color: #3E88B3;">**НННП**</span>)
+
+Фракции, настроенные скептически:
+
+<span style="color: #000000;">Католический Центр</span> (<span style="color: #000000;">**Центр**</span>)
+
+<span style="color: #3E88B3;">Национал-консерваторы</span> (<span style="color: #3E88B3;">**НННП**</span>)
+
+Оппозиционные фракции:
+
+<span style="color: #FF7F00;">Христианские левые</span> (<span style="color: #000000;">**Центр**</span>)
+
+<span style="color: #385A38;">Аграрии</span> (<span style="color: #3E88B3;">**НННП**</span>)
+
+Баланс сил:[+ cvp_dnvp_balance : cvp_dnvp_balance +]
+
+
+@cvp_dnvp_menu
+
+
+
+- @monarchy
+- @reparations
+- @economy
+- @coalition
+- @congress
+
+
+@reparations
+title: «Национальные вопросы».
+subtitle: Споры об утраченных землях Германии, выплате репараций, перевооружении и многом другом.
+view-if: not cvp_reparations
+on-arrival: cvp_reparations = 1
+go-to: reparations_right if cvp_dnvp_balance < 45; reparations_moderate if cvp_dnvp_balance >= 45 and cvp_dnvp_balance < 55; reparations_left if cvp_dnvp_balance >= 55
+
+Репарационный вопрос остаётся самым острым предметом разногласий между двумя партиями, чьи взгляды на то, как Германии следует выполнять свои финансовые обязательства, кардинально расходятся. <span style="color: #3E88B3;">**НННП**</span>, включая самого Тревирануса, решительно выступала против плана Юнга и в прошлом уже вступала в конфликт с <span style="color: #000000;">Центром</span> из-за таких внешнеполитических успехов, как Локарнские договоры.
+
+
+@reparations_right
+on-arrival: cvp_dnvp_balance += 10; cvp_right += 5; nationalism += 10; pro_republic -= 5; west_relation -= 1; east_relation -= 2; z_relation -= 5; old_middle_z += 4; old_middle_dnf -= 4; new_middle_z -= 4; new_middle_dvp += 4; new_middle_lvp += 4; rural_dnf -= 2; rural_z += 2
+go-to: cvp_dnvp_menu
+
+<span style="color: #3E88B3;">Националисты</span> использовали свои рычаги давления, чтобы внести свои важнейшие цели в партийную программу.
+
+Репарации — Германия должна добиваться полной отмены репараций и аннулирования статьи о «вине за развязывание войны», но до тех пор продолжит выплаты.
+
+Восточная политика — Германия должна оказать давление на Польшу с целью возвращения наших бывших земель, а в дальнейшем, если потребуется, применить силу.
+
+Западная политика — сближение Австрии и рейха, добиваться *аншлюса*, референдума по Эйпен-Мальмеди.
+
+Рейхсвер — продолжить тайное перевооружение и переоснащение армии.
+
+
+@reparations_moderate
+go-to: cvp_dnvp_menu
+
+<span style="color: #000000;">Христиане</span> и <span style="color: #3E88B3;">националисты</span> неохотно пришли к соглашению, поскольку прагматизм берет верх: Германия не может просто отказаться платить.
+
+Репарации — Германия должна проводить политику выполнения обязательств в надежде на пересмотр Версальского договора.
+
+Восточная политика — Германия должна оказать давление на Польшу с целью возвращения наших бывших земель мирным путём в дальнейшем.
+
+Западная политика — более тесные связи между Австрией и рейхом, референдум по Эйпен-Мальмеди.
+
+Рейхсвер — продолжить тайное перевооружение и переоснащение армии.
+
+
+@reparations_left
+on-arrival: cvp_dnvp_balance -= 10; cvp_left += 5; nationalism -= 10; pro_republic += 5; west_relation += 1; east_relation += 1; z_relation += 5; old_middle_z -= 8; old_middle_dnf += 8; rural_z -= 4; rural_dnf += 4; new_middle_z += 6; new_middle_dvp -= 2; new_middle_ddp -= 2; new_middle_lvp -= 4; new_middle_spd -= 2
+go-to: cvp_dnvp_menu
+
+<span style="color: #000000;">Христиане</span> использовали своё влияние, чтобы продвигать более сдержанную и дипломатичную внешнюю политику в духе наследия Штреземана.
+
+Репарации — Германия должна развивать более тесные связи с Западом в надежде на пересмотр Версальского договора.
+
+Восточная политика — Германия должна стремиться к мирному урегулированию споров на Востоке.
+
+Западная политика — более тесные связи между Австрией и Рейхом.
+
+Рейхсвер — продолжить тайное перевооружение, но сократить его масштабы.
+
+
+@monarchy
+title: Германская монархия
+subtitle: Споры о том, должна ли партия быть <span style="color: #000000;">респ</span><span style="color: #DD0000;">убл</span><span style="color: #FFCC00;">иканской</span> или <span style="color: #808080;">монархической</span>.
+view-if: not cvp_monarchy and cvp_reparations
+on-arrival: cvp_monarchy = 1
+go-to: monarchy_right if cvp_dnvp_balance < 45; monarchy_moderate if cvp_dnvp_balance >= 45 and cvp_dnvp_balance < 55; monarchy_left if cvp_dnvp_balance >= 55
+
+Вопрос о немецкой <span style="color: #808080;">монархии</span> остаётся крайне спорным, ведь обе стороны придерживаются кардинально разных взглядов. Несмотря на невозможность реставрации в текущем политическом климате, <span style="color: #3E88B3;">**НННП**</span> никогда не прекращала выступать за возвращение ко временам Кайзеррейх. <span style="color: #000000;">Партия Центра</span>, с другой стороны, неизменно убеждённая <span style="color: #000000;">респ</span><span style="color: #DD0000;">убл</span><span style="color: #FFCC00;">иканская</span> сила с самого рождения <span style="color: #000000;">Ве</span><span style="color: #DD0000;">йм</span><span style="color: #FFCC00;">арской</span> республики. Возможно, влияние <span style="color: #0087DC;">народных консерваторов</span> перевесит решительные возражения со стороны <span style="color: #3E88B3;">**НННП**</span>, её старой гвардии.
+
+
+@monarchy_right
+on-arrival: cvp_dnvp_balance -= 10; cvp_right += 4; z_relation -= 5; pro_republic -= 5; rural_z += 4; rural_dnf -= 2; rural_other -= 2; old_middle_z += 6; old_middle_dnf -= 4; old_middle_other -= 2; new_middle_z += 2; new_middle_dnf -= 2; workers_z -= 5; workers_spd += 3; workers_ddp += 3; workers_lvp += 3; unemployed_z -= 3; unemployed_spd += 3; unemployed_ddp += 2; unemployed_lvp += 2; catholics_z -= 4; catholics_spd += 4; catholics_ddp += 2; catholics_lvp += 2
+go-to: cvp_dnvp_menu
+
+<span style="color: #3E88B3;">Националисты</span> и <span style="color: #385A38;">аграрии</span> успешно добились включения поддержки конституционной монархии в партийную платформу. Однако она больше не центральный столп идеологии партии.
+
+Монархия: поддержка конституционной монархии, аналогично позиции[? if not dvp_exist or lvp_formed: &nbsp;бывшей ?] <span style="color: #C0A054;">**ННП**</span>.
+
+Демократия: за усиление президентской власти при сохранении продемократической позиции
+
+
+@monarchy_moderate
+on-arrival: cvp_right += 2; pro_republic -= 3; old_middle_dnf += 4; rural_dnf += 2; old_middle_z -= 4; rural_z -= 2; workers_z -= 2; workers_spd += 2; workers_ddp += 1; workers_lvp += 1
+go-to: cvp_dnvp_menu
+
+<span style="color: #3E88B3;">Националисты</span> и <span style="color: #385A38;">аграрии</span> использовали свое влияние, чтобы заблокировать прямое одобрение <span style="color: #000000;">рес</span><span style="color: #DD0000;">публ</span><span style="color: #FFCC00;">иканизма</span> в партийной платформе, гарантируя тем самым, что их взгляды по-прежнему будут представлены, несмотря на то, что они хоть и громкое, но меньшинство.
+
+Монархия — У партии нет официальной позиции по вопросу монархизма.
+
+Демократия — Поддержка президентского правления, в остальном — сохранение статус-кво.
+
+
+@monarchy_left
+on-arrival: cvp_dnvp_balance += 10; cvp_left += 4; z_relation += 15; pro_republic += 15; rural_z -= 6; rural_dnf += 4; rural_other += 2; old_middle_z -= 6; old_middle_dnf += 4; old_middle_other += 2; new_middle_z -= 4; new_middle_dnf += 2; new_middle_other += 2; workers_z += 5; workers_spd -= 3; unemployed_z += 4; unemployed_spd -= 3
+go-to: cvp_dnvp_menu
+
+<span style="color: #3E88B3;">Националисты</span> и <span style="color: #385A38;">аграрии</span> попытались внести свою давнюю поддержку монархизма в партийную платформу, но решительно побеждены в голосовании непоколебимо <span style="color: #000000;">рес</span><span style="color: #DD0000;">публ</span><span style="color: #FFCC00;">иканским</span> <span style="color: #000000;">Центром</span>, а также при поддержке некоторых <span style="color: #0087DC;">Народных консерваторов</span>.
+
+Монархия — Официальная поддержка <span style="color: #000000;">рес</span><span style="color: #DD0000;">пуб</span><span style="color: #FFCC00;">ликан</span><span style="color: #000000;">ской</span> системы
+
+Демократия — поддержка более парламентской системы, президентские указы — крайняя мера
+
+
+@economy
+title: Экономическая политика
+subtitle: Дебаты о сельском хозяйстве, социальном обеспечении и депрессии.
+view-if: not cvp_economy and cvp_reparations and cvp_monarchy
+on-arrival: cvp_economy = 1
+go-to: economy_right if cvp_dnvp_balance < 30; economy_moderate if cvp_dnvp_balance >= 30 and cvp_dnvp_balance < 40; economy_left if cvp_dnvp_balance >= 40
+
+Потенциальная всеохватная <span style="color: #000000;">Христианская народная партия</span> сталкивается со сложной задачей удовлетворения разнообразных экономических интересов своей широкой электоральной базы. Эта база включает в себя фермеров, аристократов, землевладельцев, представителей крупного и малого бизнеса, государственных служащих, «белых воротничков», городских «синих воротничков» и многих других представителей всех слоёв общества.
+
+
+@economy_right
+on-arrival: cvp_dnvp_balance += 10; cvp_right += 5; rural_z += 2; rural_dnf -= 2; old_middle_z += 6; old_middle_dnf -= 2; old_middle_dvp -= 2; old_middle_lvp -= 2; new_middle_z += 4; new_middle_dnf -= 2; workers_z -= 3; workers_spd += 5; unemployed_z -= 3; unemployed_spd += 5
+go-to: cvp_dnvp_menu
+
+<span style="color: #3E88B3;">Националисты</span> и <span style="color: #385A38;">аграрии</span> использовали свое влияние, чтобы внести свои экономические убеждения в программу партии.
+
+Налогообложение — любой ценой избегать повышения налогов, особенно для предприятий.
+
+Социальное обеспечение — Германия не может позволить себе одновременно и социальное обеспечение, и сбалансированный бюджет, от чего-то одного придётся отказаться.
+
+Трудовые отношения — категорически против любых <span style="color: #c00000;">социалистических</span> мер, выгодных профсоюзам.
+
+Великая депрессия — придерживаться строгой бюджетной политики, однако необходимо поддерживать на плаву производственные отрасли и сельское хозяйство.
+
+
+@economy_moderate
+on-arrival: old_middle_z += 4; old_middle_dvp -= 2; old_middle_lvp -= 2; new_middle_z += 4; new_middle_dnf -= 2; workers_z -= 1.5; workers_spd += 3; unemployed_z -= 1.5; unemployed_spd += 3; cvp_economy_keynes = 1
+go-to: cvp_dnvp_menu
+
+<span style="color: #000000;">Христиане</span> и <span style="color: #3E88B3;">националисты</span> неохотно пришли к соглашению, поскольку прагматизм берет верх. Партия должна представлять свою разнообразную базу, поэтому *Фольксгемайншафт*.
+
+Налогообложение: любой ценой избегать повышения налогов
+
+Социальное обеспечение: сосредоточиться на финансировании существующей системы, так как бедные страдают
+
+Трудовые вопросы: против любой <span style="color: #c00000;">социалистической</span> политики, но нейтралитет в трудовых вопросах — ключевой компонент *Фольксгемайншафт*.
+
+Великая депрессия: экспериментировать с планом общественных работ в сочетании с увеличением денежной массы
+
+
+@economy_left
+on-arrival: cvp_dnvp_balance -= 10; cvp_left += 5; rural_z -= 4; rural_dnf += 2; rural_dvp += 2; rural_lvp += 2; old_middle_z -= 6; old_middle_dnf += 2; old_middle_dvp += 4; old_middle_lvp += 4; new_middle_z += 4; new_middle_dnf -= 2; new_middle_ddp -= 2; workers_z += 8; workers_spd -= 5; workers_kpd -= 3; unemployed_z += 8; unemployed_spd -= 5; unemployed_nsdap -= 3; cvp_economy_keynes = 1
+go-to: cvp_dnvp_menu
+
+<span style="color: #000000;">Христиане</span> и <span style="color: #6D5298;">христианско-социальное движение</span> использовали свое влияние, чтобы отстаивать прорабочую и более амбициозную экономическую политику, признавая: рабочие — ключевая часть*Фольксгемайншафт*.
+
+Налогообложение — ввести более прогрессивные налоги и нормативы, чтобы обеспечить справедливость в Германии.
+
+Экономическая политика — внедрение «социальной рыночной экономики», золотой середины между капитализмом и <span style="color: #c00000;">социализмом</span>.
+
+Великая депрессия — необходима программа общественных работ, народ должен вернуться к труду.
+
+
+@coalition
+title: Межпартийные отношения
+subtitle: Ведутся споры о том, стоит ли рассматривать нас в качестве партнёра по коалиции.
+view-if: cvp_reparations and cvp_economy and cvp_monarchy and not cvp_coalition
+on-arrival: cvp_coalition = 1
+go-to: coalition_right if cvp_dnvp_balance < 65; coalition_moderate if cvp_dnvp_balance >= 65 and cvp_dnvp_balance < 75; coalition_left if cvp_dnvp_balance >= 75
+
+Интеграция ярой анти-<span style="color: #9B0000;">марксистской</span> <span style="color: #3E88B3;">**НННП**</span> в состав <span style="color: #000000;">Партии Центра</span>, скорее всего, исключит любое дальнейшее сотрудничество с ними. Однако в рядах <span style="color: #000000;">«Центра»</span> всё ещё существует активное меньшинство прогрессистов, которое может выступить в нашу поддержку.
+
+
+@coalition_right
+on-arrival: cvp_dnvp_balance += 10; cvp_right += 5; z_relation -= 10; rural_z += 6; rural_dnf -= 2; rural_other -= 2; rural_nsdap -= 2; old_middle_z += 10; old_middle_dnf -= 4; old_middle_dvp -= 2; old_middle_lvp -= 2; old_middle_other -= 4; new_middle_z += 6; new_middle_dnf -= 2; new_middle_other -= 4; workers_z -= 3; workers_spd += 3; workers_ddp += 2; workers_lvp += 2; unemployed_z -= 3; unemployed_spd += 3; unemployed_ddp += 2; unemployed_lvp += 2; cvp_coalition_right = 1
+go-to: cvp_dnvp_menu
+
+<span style="color: #3E88B3;">Националисты</span> и <span style="color: #385A38;">аграрии</span> использовали свое влияние, чтобы внести свою ярую анти<span style="color: #c00000;">социалистическую</span> позицию в партийную платформу.
+
+<span style="color: #c00000;">**СДПГ**</span> - Категорически против правительства с
+
+<span style="color: #FFCC00;">**Либералами**</span> - Предпочтительный партнёр по коалиции
+
+<span style="color: #003755;">**НФГ**</span> - Категорически против правительства с
+
+<span style="color: #7A3C00;">**НСДАП**</span> - Подозрительно двусмысленно
+
+
+@coalition_moderate
+on-arrival: z_relation -= 5; rural_z += 4; rural_other -= 2; rural_nsdap -= 2; old_middle_z += 6; old_middle_dvp -= 2; old_middle_lvp -= 2; old_middle_other -= 4; new_middle_z += 2; new_middle_other -= 2; cvp_coalition_moderate = 1
+go-to: cvp_dnvp_menu
+
+<span style="color: #3E88B3;">Националисты</span> и <span style="color: #385A38;">аграрии</span> использовали свое влияние, чтобы внести свою ярую анти<span style="color: #c00000;">социалистическую</span> позицию в партийную платформу. Однако <span style="color: #FF7F00;">Христианские левые</span> сумели сохранить дверь открытой для будущего сотрудничества — хотя эта дверь открыта и не очень широко.
+
+<span style="color: #c00000;">**СДПГ**</span> — Против коалиции
+
+<span style="color: #FFCC00;">**Либералы**</span> — Предпочтительный партнёр по коалиции
+
+<span style="color: #003755;">**НФГ**</span> — категорически против коалиции
+
+<span style="color: #7A3C00;">**НСДАП**</span> — Подозрительно неоднозначно
+
+
+@coalition_left
+on-arrival: cvp_dnvp_balance -= 10; cvp_left += 5; z_relation += 15; rural_z -= 4; rural_dnf += 2; rural_other += 4; old_middle_z -= 6; old_middle_dnf += 2; old_middle_other += 4; new_middle_z -= 4; new_middle_other += 4; workers_z += 3; workers_spd += 3; unemployed_z += 3; unemployed_spd += 3; cvp_coalition_left = 1
+go-to: cvp_dnvp_menu
+
+<span style="color: #3E88B3;">Националисты</span> и <span style="color: #385A38;">аграрии</span> попытались использовать свое влияние, чтобы внести свою ярую анти<span style="color: #c00000;">социалистическую</span> позицию в партийную платформу. Однако <span style="color: #FF7F00;">Христианские левые</span> и [+ z_leader +]сумели оставить дверь для будущего сотрудничества открытой.
+
+<span style="color: #c00000;">**СДПГ**</span> — Готовы к соглашению
+
+<span style="color: #FFCC00;">**Либералы**</span> — Предпочтительный партнёр по коалиции
+
+<span style="color: #003755;">**НФГ**</span> — Категорически против коалиции
+
+<span style="color: #7A3C00;">**НСДАП**</span> — Против коалиции
+
+
+@congress
+title: После разрешения всех разногласий <span style="color: #000000;">**ХНП**</span> сформирована!
+view-if: cvp_reparations and cvp_economy and cvp_coalition and cvp_monarchy
+on-arrival: {!
+Q.cvp_dvp_trigger = 0;
+if (Q.dvp_exist && Q.dvp_votes < 5 && !Q.lvp_formed && !Q.lvp_merger_2_timer && !Q.lvp_timer_2_trigger) Q.cvp_dvp_trigger = 1;
+if (Q.spd_prussia && !Q.in_spd_majority_prussia && !Q.in_left_front_prussia) Q.prussia_coalition_trigger = 1;
+if (Q.in_weimar_coalition && !Q.in_social_liberal_coalition || Q.in_grand_coalition || Q.in_popular_front) Q.federal_coalition_trigger = Q.time;
+!}
+face-image: img/cvp.jpg
+call: cvp_formed
+achievement: christliche_volkspartei
+
+Соглашение достигнуто, и рождается <i>Christliche Volkspartei</i> (<span style="color: #000000;">Христианская народная партия</span>).
+
+The <span style="color: #000000;">**ХНП**</span> стремится следовать Эссенской программе 1920 года, преобразуя немецких правых в партию, которая сплачивается вокруг <span style="color: #000000;">христианских</span>, <span style="color: #586593;">демократических</span>, <span style="color: #000000;">национальных</span> и <span style="color: #c00000;">социальных</span> принципов.
+
+- @cvp_party_congress_go
+- @cvp_dvp_merger
+
+
+@cvp_party_congress_go
+title: Первый съезд <span style="color: #000000;">**[+ z_party_name +]**</span> Congress
+subtitle: Здесь решится будущее этой новой партии.
+view-if: not cvp_dvp_trigger
+go-to: cvp_party_congress
+
+
+@cvp_dvp_merger
+title: Кроме того, <span style="color: #C0A054;">**ННП**</span> тоже хочет поучаствовать.
+subtitle: А?
+call: cvp_dvp_formed
+view-if: cvp_dvp_trigger
+
+Не успели общественности объявить о создании <span style="color: #000000;">Христианской народной партии</span>, как представители оказавшейся в трудном положении <span style="color: #C0A054;">**ННП**</span> также проявили интерес к присоединению к соглашению.
+
+Таким образом, <span style="color: #D3C24D;">**[+ ddp_name +]**</span> остаётся единственной либеральной партией на политической арене и теперь укрепляется за счёт перебежчиков из <span style="color: #C0A054;">**ННП**</span>, из её левого крыла.
+
+- @cvp_party_congress

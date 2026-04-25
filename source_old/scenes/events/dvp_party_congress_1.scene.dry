@@ -1,0 +1,59 @@
+title: <span style="color: #C0A054;">**ННП**</span> — Голосование в партии
+subtitle: Промышленники добиваются отставки руководства. В центре их недовольства — [+ dvp_leader +]...
+view-if: year = 1930 and month = 12 and (dvp_leader == "Luther" or dvp_leader == "Curtius") and not lvp_formed
+on-arrival: dvp_right += 3 if dvp_relation < 25; dvp_left += 3 if dvp_relation >= 45; dvp_left += 2 if in_grand_coalition; dvp_left += 3 if dvp_leader == "Luther"; dvp_right += 3 if foreign_minister_party == "DVP" and dvp_leader == "Curtius"; dvp_left += 3 if liberal_parliament; dvp_right += 3 if bourgeois_parliament
+max-visits: 1
+tags: event
+face-image: img/dvp.jpg
+new-page: true
+
+= <span style="color: #C0A054;">**ННП**</span> — Голосование в партии
+
+За последние несколько месяцев тяжёлое состояние экономики — да и Германии в целом — подтолкнуло буржуазные партии к радикализации и сдвигу вправо. Пока <span style="color: #C0A054;">**ННП**</span> сопротивлялась этой тенденции благодаря избранию [+ dvp_leader +]а в прошлом году, теперь промышленники из правого крыла объединили ресурсы для последней попытки сместить [+ dvp_leader +]а.
+
+[? if dvp_leader == "Curtius": Юлиус Курциус, действующий председатель партии, вынужден передать часть обязанностей председателя новоназначенному заместителю, Эдуарду Дингельдею[? if foreign_minister_party == "DVP": , из-за своей занятости обязанностями министра иностранных дел ?][? if foreign_minister_party != "DVP": , из-за своей занятости государственными делами ?]. Дингельдей один из первых в <span style="color: #C0A054;">**ННП**</span>, кто поддержал движение за буржуазное единство. Он также придерживается достаточно консервативных взглядов, особенно в отношении сотрудничества с <span style="color: #c00000;">**СДПГ**</span> — чтобы заручиться поддержкой Шольца и правого крыла партии. Учитывая его широкую поддержку внутри партии, правое крыло <span style="color: #C0A054;">**ННП**</span> выдвинуло его кандидатуру на смену Курциусу, ссылаясь на [? if foreign_minister_party == "DVP": его сомнительные достижения на посту министра иностранных дел после смерти Штреземана ?][? if foreign_minister_party != "DVP": его сомнительные достижения в качестве преемника Штреземана ?]. ?][? if dvp_leader == "Luther": Ганса Лютера хоть и избрали при мощной поддержке немецких деловых кругов, он частично утратил расположение сторонников, главным образом из-за непопулярной позиции в поддержку конструктивного сотрудничества с <span style="color: #c00000;">**СДПГ**</span>. Поскольку настроения немецкого электората значительно сместились вправо, правое крыло партии видит в этом слабость, которой можно воспользоваться. Они выдвинули Эдуарда Дингельдея, он один из первых в <span style="color: #C0A054;">**ННП**</span>, кто поддержал движение за буржуазное единство. ** Он** также достаточно консервативен, особенно в отношении сотрудничества с <span style="color: #c00000;">**СДПГ**</span> — чтобы заручиться единой поддержкой Шольца и правого крыла партии. ?]
+
+- @resultsdvp: Партия голосует…
+
+
+@resultsdvp
+on-arrival: {!
+if (Q.dvp_right > (Q.dvp_left*1.5) || (Q.dvp_right > (Q.dvp_left + 4))) {
+    Q.dvp_ideology = "Right"
+} else if (Q.dvp_left > (Q.dvp_right*1.5) || (Q.dvp_left > (Q.dvp_right + 4))) {
+    Q.dvp_ideology = "Left"
+} else {
+    Q.dvp_ideology = "Moderate"
+}
+!}
+go-to: curtius if dvp_leader == "Curtius" and dvp_ideology != "Right"; luther if dvp_leader == "Luther" and dvp_ideology != "Right"; dingeldey if dvp_ideology == "Right"
+
+
+@curtius
+on-arrival: dvp_leader = "Curtius"; liberal_cooperation += 2; bourgeois_cooperation -= 1; dvp_left += 5; dvp_relation += 3; new_middle_dvp += 4; new_middle_nsdap -= 4; new_middle_other -= 4; catholics_dvp += 3; catholics_other -= 3; old_middle_dvp -= 2; old_middle_dnvp += 2; old_middle_kvp += 2 if kvp_formed; rural_dvp += 2; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Moderate"; rural_kvp += 2 if kvp_formed; pro_republic += (dvp_votes * 2); ddp_right += 3 if ddp_ideology != "Right"; ddp_relation += 5;
+face-image: img/portraits/curtius.jpg
+
+Юлиус Курциус вновь победил на голосовании, сохранив пост в борьбе с правым крылом <span style="color: #C0A054;">**ННП**</span>. Промышленники проиграли последнюю битву, открыв путь <span style="color: #C0A054;">**ННП**</span> к превращению в партию, которой Штреземан бы гордился, — подлинно либеральную <span style="color: #C0A054;">Немецкую народную партию</span>, свободную от махровых <span style="color: #808080;">реакционеров</span>.
+
+Это великолепная новость для нас и наших отношений с <span style="color: #C0A054;">**ННП**</span>, что вызвало резонанс во всей партийной системе. В ответ на своё поражение промышленники перенаправили свои пожертвования <span style="color: #3E88B3;">**НННП**</span> и даже <span style="color: #7A3C00;">**НСДАП**</span>, в надежде обрести новый политический дом для своего лобби.
+
+
+@luther
+on-arrival: dvp_leader = "Luther"; dvp_left += 3 if in_grand_coalition; liberal_cooperation += 3; bourgeois_cooperation += 5; dvp_relation += 3 if in_grand_coalition; new_middle_dvp += 3; catholics_dvp += 5; catholics_other -= 3; catholics_z -= 2; rural_dvp += 3; pro_republic += dvp_votes; ddp_right += 5 if ddp_ideology != "Right"
+face-image: img/portraits/luther.jpg
+
+Ганс Лютер ожидаемо победил на выборах в <span style="color: #C0A054;">**ННП**</span>. Несмотря на подмоченную репутацию в правом крыле, его широкой поддержки хватило для решительной победы над вотумом недоверия. Его планы по созданию объединённой либеральной и даже буржуазной партии, чтобы противостоять влиянию <span style="color: #c00000;">социалистов</span>, успокоили большинство промышленников, хотя некоторые из них начали финансировать <span style="color: #3E88B3;">**НННП**</span>.
+
+Это отличная новость для демократии, а также для нашего конструктивного сотрудничества с <span style="color: #C0A054;">**ННП**</span>. Правые силы вновь потерпели поражение: партия, вероятно, останется на демократическом пути в обозримом будущем.
+
+
+@dingeldey
+on-arrival: old_dvp_leader = dvp_leader; dvp_leader = "Dingeldey"; dvp_right += 6; dvp_relation -= 15; old_middle_dvp -= 3; new_middle_dvp -= 6; rural_dvp -= 4; pro_republic -= 5; ddp_left += 3 if ddp_ideology == "Right"; ddp_cohesion -= 1; liberal_cooperation -= 3; bourgeois_cooperation -= 3
+face-image: img/portraits/dingeldey.jpg
+
+Эдуард Дингельдей неожиданно победил в голосовании и сменит [+ old_dvp_leader +]а на посту председателя <span style="color: #C0A054;">**ННП**</span>. Заручившись единой поддержкой правого крыла партии во главе с Эрнстом Шольцем, а также некоторых реформаторски настроенных членов <span style="color: #C0A054;">**ННП**</span> и молодежных групп, он с небольшим перевесом одержал победу в ходе голосования о вотуме недоверия против [+ old_dvp_leader +]а.
+
+Избрание Дингельдея означает значительный и необратимый сдвиг вправо,[? if dvp_reform: &nbsp;он даже отменил реформу внутрипартийной структуры Штреземана, ?] вернув промышленникам их утраченное влияние в <span style="color: #C0A054;">**ННП**</span>'s decision making. [? if chancellor == "Brüning" and not spd_in_government: Дингельдей не испытывает доверия к правительству Брюнинга и считает, что партия сможет выполнить свою миссию по сплочению буржуазии лишь освободившись от бремени власти. ?]
+
+Более того, Дингельдей не заинтересован в сближении с <span style="color: #D3C24D;">**[+ ddp_name +]**</span> и уж точно недружелюбен к нам. Его взгляд направлен на правые партии: <span style="color: #3E88B3;">**НННП**</span> и даже <span style="color: #7A3C00;">**НСДАП**</span>, чтобы превратить их в «конструктивный элемент государства». Это не сулит ничего хорошего будущему <span style="color: #000000;">Вей</span><span style="color: #DD0000;">мар</span><span style="color: #FFCC00;">ской</span> демократии.
+

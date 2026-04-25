@@ -39,7 +39,6 @@ go-to: vonc_hergt if dnvp_leader == "Hergt"; vonc_treviranus if dnvp_leader == "
 
 
 
-
 @vonc_hergt
 on-arrival: dnvp_leader = "Westarp"
 

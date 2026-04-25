@@ -1,0 +1,32 @@
+title: Правительство Брюнинга устояло?
+subtitle: Канцлер [+ chancellor +] сформировал правительство большинства.
+new-page: true
+view-if: spd_in_government == 0 and spd_toleration == 0 and chancellor = "Brüning" and bourgeois_coalition >= 50 and not in_bourgeois_coalition and (not kvp_formed or young_plan_ratified)
+on-arrival: bruning_event_seen = 1; spd_in_government = 0; spd_toleration = 0; spd_toleration_right = 0; in_bourgeois_coalition = 1; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = ddp_name; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"; bruning_event_timer = 0; bourgeois_cooperation += 10; z_relation -= 5; judicial_reform -= 1
+tags: event
+priority: -1
+max-visits: 1
+
+= какого чёрта
+
+После распада Большой коалиции президент [+ president +] назначил Генриха Брюнинга из [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] главой правительства, поддерживаемого исключительно буржуазными силами. Обычно такие правительства не могут устоять без тактики воздержания от вотума недоверия со стороны <span style="color: #c00000;">**СДПГ**</span> или включения в свой состав <span style="color: #3E88B3;">**НННП**</span>.
+
+Каким-то образом буржуазная коалиция действительно получила большинство в рейхстаге, объединив множество партий, находящихся в политическом спектре между <span style="color: #c00000;">**СДПГ**</span> и <span style="color: #3E88B3;">**НННП**</span>.
+
+- @secret_mode
+- @no
+
+
+@secret_mode
+title: Включить секретный режим
+subtitle: Это необратимо.
+on-arrival: secret_mode = 1
+
+Хорошо.
+
+
+@no
+title: Позвольте мне продолжить игру.
+
+Хорошо.
+

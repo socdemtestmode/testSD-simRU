@@ -1,6 +1,11 @@
 title: Расследование деятельности внутренних врагов
 on-arrival: month_actions += 1
 view-if: spd_in_government = 1 and interior_minister_party = "SPD"
+#card-image: img/portraits/SeveringCarl.jpg
+#is-card: true
+#new-page: true
+
+# this is not a card...
 
 = Расследование деятельности внутренних врагов
 
@@ -93,4 +98,3 @@ view-if: rfb_banned = 1 and in_popular_front_prussia == 0 and in_left_front_prus
 on-arrival: rfb_strength *= 0.7; rfb_militancy -= 0.05; kpd_relation -= 10; kpd_coalition_dissent += 1; z_relation += 2; dvp_relation += 2; lvp_relation += 2; prussian_police_loyalty += 0.1; interior_police_loyalty += 0.1; coalition_dissent -= 1 if coalition_dissent > 0 and n_rfb_persecuted = 0; n_rfb_persecuted += 1; hindenburg_angry -= 5
 
 Мы арестовали ещё нескольких лидеров <span style="color: #8B0000;">**СКФ**</span> и конфисковали их оружие.
-

@@ -6,6 +6,7 @@ view-if: international_relations_timer <= 0
 on-arrival: month_actions += 1; international_relations_timer += 12;
 card-image: img/international.jpg
 max-visits: 4
+#subtitle: Building ties with our fraternal socialist parties.
 
 В <span style="color: #D50032;">Социалистическом рабочем интернационале</span> мы можем наладить контакты с нашими братскими <span style="color: #c00000;">социалистическими</span> партиями в <span style="color: #001489;">Европе</span> и по всему миру.
 
@@ -41,6 +42,7 @@ on-arrival: left_strength += 3; radicalization += 1; rb_militancy += 0.03; resou
 [? if austrian_parliament_seen and not austrian_civil_war_seen: Мы также помогаем австрийской <span style="color: #A50034;">Социал-демократической рабочей партии</span> накапливать ресурсы в рамках подготовки к будущей борьбе — как законными, так и незаконными методами. ?]
 
 
+
 @scandi
 subtitle: -1 ресурс
 choose-if: resources >= 1
@@ -71,4 +73,3 @@ on-arrival: resources -= 1
 @reduce
 
 Сейчас нам не нужны международные контакты.
-

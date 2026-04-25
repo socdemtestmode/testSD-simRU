@@ -250,4 +250,3 @@ for (var record of Q.party_support_records) {
 }
 !}
 go-to: dnf_collapse_right_coalition if right_coalition < 50 and in_right_coalition == 1; dnf_collapse_center_right_coalition if center_right_coalition < 50 and in_center_right_coalition == 1
-

@@ -24,7 +24,6 @@ go-to: prussian_affairs if in_grand_coalition_prussia == 0 and not in_popular_fr
 
 
 
-
 @police_affairs
 title: Дела полиции
 subtitle: Мы можем определить нашу политику в отношении полиции.

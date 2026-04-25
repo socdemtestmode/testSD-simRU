@@ -1,0 +1,34 @@
+title: Папен снимает запрет с <span style="color: #7A3C00;">**СА**</span>!
+subtitle: Политическое насилие возвращается…
+view-if: chancellor = "Papen" and papen_time == 2 and sa_nationwide_ban
+new-page: true
+tags: event
+max-visits: 1
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/sa_rally.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+= <span style="color: #7A3C00;">**СА**</span>: запрет снят
+
+Запрет на <span style="color: #7A3C00;">**СА**</span>, введённый предыдущим кабинетом, отменён чрезвычайным указом. Несомненно, это одно из условий [+ nsdap_leader +]а, которые выдвинула <span style="color: #7A3C00;">**НСДАП**</span> в обмен на поддержку кабинета, ведь её военизированные формирования играют большую роль в срыве политических собраний и создании гнетущей атмосферы на улицах.
+
+Это немедленно приводит к всплеску политического насилия, при этом против снятия запрета выступают все, кроме <span style="color: #7A3C00;">нацистов</span>. Это также лишает <span style="color: #7A3C00;">нацистов</span> последней рациональной причины для поддержки непопулярного Папена.
+
+- @papen
+
+
+@papen
+title: Указ подписан президентом Гинденбургом.
+on-arrival: sa_strength *= 2; sa_militancy += 0.1; coup_progress += 2; pro_republic -= 5; sa_ban_repealed = 1; sa_nationwide_ban = 0; sa_banned = 0
+
+The <span style="color: #7A3C00;">**СА**</span> немедленно возвращается к массовой вербовке и вооружаются. Прусская полиция не в силах с этим справиться.
+

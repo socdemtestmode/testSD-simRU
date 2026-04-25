@@ -1,0 +1,81 @@
+title: Коалиционные вопросы
+new-page: true
+is-card: true
+tags: govt_affairs
+on-arrival: month_actions += 1; coalition_affairs_timer = 5
+view-if: spd_in_government = 1 and coalition_dissent >= 1 and coalition_affairs_timer = 0 and (in_grand_coalition or in_weimar_coalition or in_popular_front)
+card-image: img/muller_cabinet.jpg
+
+= Коалиционные вопросы
+
+Наша коалиция в беде. Правые члены [? if not in_social_liberal_coalition: [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] ?] [? if not in_social_catholic_coalition: [? if in_grand_coalition and not lvp_formed: и <span style="color: #C0A054;">**ННП**</span> ?][? if not lvp_formed and in_weimar_coalition: [? if not in_social_liberal_coalition: и ?] <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: [? if not in_social_liberal_coalition: и ?] <span style="color: #FFCC00;">**ЛНП**</span> ?] ?] постоянно критикуют нашу политику и угрожают объявить вотум недоверия, чтобы свергнуть наше правительство [? if spd_prussia : или сделать то же самое с нашим правительством в Пруссии ?].
+
+Как нам снизить напряжённость в коалиции?
+
+- @dvp_prussia_2: Пригласить <span style="color: #C0A054;">**ННП**</span> совместно управлять Пруссией.
+- @promise_cuts: Согласиться на планы буржуазии по сокращению социального обеспечения.
+- @resources: Использовать наши партийные ресурсы для поддержки наших союзников.
+- @bring_down: Вместо этого мы обрушим правительство вотумом недоверия и назначим новые выборы.
+- @no_change: Не предпринимать никаких действий.
+- @easy_discard
+
+
+
+@dvp_prussia_2
+view-if: year <= 1929 and in_grand_coalition_prussia = 0 and (in_weimar_coalition_prussia or in_minority_weimar_coalition_prussia) and in_grand_coalition = 1 and dvp_was_in_prussia == 0 and not lvp_formed
+choose-if: z_leader != "Kaas"
+unavailable-subtitle: [? if z_leader = "Kaas": Каас и [? if z_party_name != "CVP": <span style="color: #000000;">Центр</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] решительно против. ?]
+on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 1; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; spd_prussia = 1; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0; dvp_relation += 10; z_relation -= 5; ddp_relation += 3; coalition_dissent -= 1; left_dissent += 5; in_grand_coalition_prussia = 1; in_weimar_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; dvp_left += 3; new_middle_dvp += 3;
+
+Допустить <span style="color: #C0A054;">**ННП**</span> в прусское правительство — это предложение, от которого они не смогут отказаться, вне зависимости от их руководства.
+
+Однако это негативно сказалось на той свободе действий, которой мы обладали в <span style="color: #000000;">Вей</span><span style="color: #DD0000;">мар</span><span style="color: #FFCC00;">ской</span> коалиции.
+
+
+@give_up_prussia
+subtitle: Брауну придётся уйти в отставку.
+view-if: prussia_leader = "Braun" and neo_weimar_coalition_prussia >= 50
+on-arrival: coalition_dissent = 1; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; reformist_dissent += 10; center_dissent += 10; labor_dissent += 10; left_dissent += 5; workers_spd -= 5; new_middle_spd -= 5; rural_spd -= 3; braun_resign = 1
+
+Что ж, мы больше не контролируем правительство Пруссии. Голосование отменено.
+
+Пост министра-президента передаётся[? if z_party_name != "CVP": <span style="color: #000000;">партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?].
+
+
+@promise_cuts
+on-arrival: workers_spd -= 5; unemployed_spd -= 6; workers_kpd += 5; unemployed_kpd += 3; unemployed_nsdap += 3; left_dissent += 10; labor_dissent += 5; welfare -= 1; budget += 1; coalition_dissent = 0; dvp_left += 1; ddp_cohesion -= 1; ddp_right += 1; lvp_left += 1; goal_spd_cancel += 1; social_welfare_timer = 10
+
+Хорошо. Сократив социальные выплаты, мы уменьшили разногласия внутри коалиции.
+
+
+@resources
+subtitle: -2 ресурса
+view-if: historical_mode = 0
+choose-if: (resources >= 2 and in_weimar_coalition or in_popular_front or in_minority_government) or ((resources >= 2 and in_grand_coalition and not (dvp_ideology == "Right" and year >= 1930) and not lvp_formed) or (resources >= 2 and (in_grand_coalition or in_weimar_coalition) and not (lvp_ideology == "Right" and year >= 1930) and lvp_formed))
+unavailable-subtitle: [? if resources < 2: У нас недостаточно ресурсов. ?] [? if in_grand_coalition and (dvp_ideology == "Right" and year >= 1930) and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span> больше не хочет получать от нас ресурсы. ?] [? if (in_grand_coalition or in_weimar_coalition) and (lvp_ideology == "Right" and year >= 1930) and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span> больше не хочет получать от нас ресурсы. ?]
+on-arrival: resources -= 2; coalition_dissent -= 1
+
+Передав часть средств на избирательную кампанию нашим партнёрам по коалиции, мы можем сделать нашу политику более приемлемой для них. Кто-то назовёт это коррупцией, но, возможно, это необходимо для спасения демократии.
+
+
+@no_change
+
+Нет. Мы этого делать не будем.
+
+
+@bring_down
+subtitle: Отправьте это правительство в отставку, прежде чем это сделают наши противники.
+view-if: not constructive_vonc
+on-arrival: spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; spd_toleration = 0; spd_toleration_right = 0; left_strength += 8; pro_republic -= 5; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; reformist_dissent += 5; bruning_event_timer = 6 if not bruning_event_seen and year >= 1930
+go-to: elections if bruning_event_seen or year < 1930
+
+Мы инициировали вотум недоверия самим себе и отправили правительство в отставку. [+ chancellor +] сейчас правит в качестве исполняющего обязанности канцлера.
+
+[? if not bruning_event_seen and year >= 1930: Новые выборы ещё не назначены, но, вероятно, они скоро состоятся, учитывая, что Брюнинг, скорее всего, не пользуется поддержкой большинства в рейхстаге. ?]
+
+
+@elections
+call: set_next_election_time
+
+Новые выборы назначены на [+ next_election_month : month +] [+ next_election_year +].
+

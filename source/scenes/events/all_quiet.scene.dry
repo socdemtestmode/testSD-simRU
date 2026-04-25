@@ -25,10 +25,12 @@ on-arrival: old_middle_nsdap += 5; new_middle_nsdap += 3; workers_nsdap += 2; un
 Когда мы запрещаем фильм к показу, <span style="color: #7A3C00;">нацисты</span> немедленно празднуют это как крупную победу; они заявляют, что даже красные марксисты с ними согласны! Это серьёзно поднимает их боевой дух.
 
 
+
 @allow
 on-arrival: nationalism += 3; old_middle_nsdap += 5; new_middle_nsdap += 3; workers_nsdap += 1; unemployed_nsdap += 1; sa_strength += 15; pro_republic -= 3; strife += 1
 
 Хотя мы и разрешаем фильм к показу, сеансы сопровождаются насилием. В конце концов его показ прекращается, и <span style="color: #7A3C00;">нацисты</span> заявляют о своей победе.
+
 
 
 @allow_protect

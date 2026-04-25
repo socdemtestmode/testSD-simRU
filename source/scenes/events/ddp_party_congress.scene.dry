@@ -177,7 +177,6 @@ go-to: heuss
 
 
 
-
 @achievement_calculation
 go-to: ddp_lemmer if ddp_leader == "Lemmer"; ddp_heuss if ddp_leader == "Heuss"; ddp_dietrich if ddp_leader == "Dietrich"
 achievement: ddp_congress

@@ -65,4 +65,3 @@ choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?]
 on-arrival: advisor_action_timer = 6;
 go-to: peoples_party_campaigning
-

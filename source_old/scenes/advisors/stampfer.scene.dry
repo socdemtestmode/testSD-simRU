@@ -1,0 +1,87 @@
+title: Фридрих Штампфер
+is-pinned-card: true
+tags: advisor
+card-image: img/portraits/StampferFriedrich.jpg
+view-if: stampfer_advisor = 1
+new-page: true 
+
+= Фридрих Штампфер
+
+Фридрих Штампфер — многолетний главный редактор партийной газеты «Форвертс», депутат Рейхстага. Исторически часть <span style="color: #c00000;">**СДПГ**</span>, которая поддерживала наше участие в Великой войне, но он также поддерживает сотрудничество с <span style="color: #700000;">**КПГ**</span>, чтобы спасти республику.
+
+[? if kpd_truce: Поскольку можно считать, что сотрудничество СДПГ и КПГ достигнуто благодаря перемирию с СКФ, Штампфер теперь смело направляет ресурсы «Форвертс» на подавление внутреннего инакомыслия и поддержку центристских позиций. ?]
+
+- @media_
+- @faction_support_
+- @kpd_cooperation
+- @root: Return to main
+
+
+
+@media_
+title: СМИ
+subtitle: Руководить нашими партийными газетами и радио.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?]
+on-arrival: advisor_action_timer = 6; media_timer -= 6; last_advisor_action = 1
+go-to: media
+
+
+
+
+@faction_support_
+title: Редакционная политика
+subtitle: Мы можем изменить редакционную политику «Форвертс», чтобы поддержать определённую фракцию.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?]
+on-arrival: advisor_action_timer = 6
+
+Какую фракцию нам следует поддержать?
+
+- @support_left: Левые 
+- @support_center: Центристы 
+- @support_labor: Профсоюзники
+- @support_reform: Реформисты 
+- @support_neorev: Неоревизионисты 
+
+
+@support_left
+on-arrival: left_dissent -= 8; left_strength += 8; editorial_line = "Left"
+
+«Форвертс» печатает передовицы в поддержку левых позиций.
+
+
+@support_center
+on-arrival: center_dissent -= 8; center_strength += 8; editorial_line = "Center"
+
+Газета «Форвертс» публикует редакционные статьи в поддержку центристских позиций.
+
+
+@support_labor
+on-arrival: labor_dissent -= 8; labor_strength += 8; editorial_line = "Labor"
+
+«Форвертс» публикует редакционные статьи в поддержку политики профсоюзов.
+
+
+@support_reform
+on-arrival: reformist_dissent -= 8; reformist_strength += 8; editorial_line = "Reformists"
+
+«Форвертс» печатает передовицы в поддержку реформистской политики.
+
+
+@support_neorev
+view-if: neorevisionism
+on-arrival: neorevisionist_dissent -= 8; neorevisionist_strength += 8; editorial_line = "Neorevisionists"; nazi_urgency += 1
+
+В газете «Форвертс» печатают статьи в поддержку неоревизионистских идей.
+
+
+@kpd_cooperation
+title: Сотрудничество с <span style="color: #700000;">**КПГ**</span>
+subtitle: Можем ли мы наладить более тесные связи с <span style="color: #700000;">**КПГ**</span>?
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: advisor_action_timer = 6; left_strength += 2; kpd_relation += 4*(1-dissent); reformist_dissent += 2
+
+Штампфер работает над установлением более тесных связей с <span style="color: #700000;">**КПГ**</span> через наши СМИ.
+

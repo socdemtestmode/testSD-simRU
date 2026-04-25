@@ -56,4 +56,3 @@ subtitle: моддеру лень это кодить <i>(так в оригин
 call: set_next_election_time_prussia
 
 Новые выборы в Пруссии назначены на [+ next_election_month_prussia : month +] [+ next_election_year_prussia +].
-

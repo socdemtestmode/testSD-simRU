@@ -29,6 +29,7 @@ Q.dnef_r += Q.dnvp_r;
 Q.dnvp_r = 0;
 !}
 
+
 Текущий состав <span style="color: #BFC8CC;">Фронта Национального Единства Германии</span>:
 
 [? if dnef_formed: - <span style="color: #BFC8CC;">**ФНЕГ**</span> ?]
@@ -50,4 +51,3 @@ Q.dnvp_r = 0;
 [? if dnvp_dnef: - <span style="color: #3E88B3;">**НННП**</span> ?]
 
 [? if nvf_dnef: - <span style="color: #142e20;">**ННФ**</span> ?]
-
