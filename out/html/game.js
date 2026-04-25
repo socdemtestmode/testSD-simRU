@@ -275,10 +275,10 @@ window.disableGrayMode = function() {
       elements.forEach(function (element) {
           if (element.style.display !== 'block') {
               element.style.display = 'block';
-              button.innerHTML = "View Other News";
+              button.innerHTML = "Посмотреть новости правых";
           } else {
               element.style.display = 'none';
-              button.innerHTML = "View Right-Wing News";
+              button.innerHTML = "Посмотреть другие новости";
           }
       });
 
@@ -339,7 +339,7 @@ window.disableGrayMode = function() {
     if (window.dendryUI.gray_mode) {
         document.body.classList.add('gray-mode');
     }
-    window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
+    window.pinnedCardsDescription = "Карты советников - могут использоваться только 1 раз в 6 месяцев.";
     window.statusTab = "status";
     window.updateSidebar();
     window.statusTabRight = "status_right";
