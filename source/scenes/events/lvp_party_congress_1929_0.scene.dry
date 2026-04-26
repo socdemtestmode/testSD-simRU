@@ -145,7 +145,7 @@ if (Q.foreign_minister_party !== "СДПГ" && !Q.lvp_formed) {
 } else if (Q.foreign_minister_party !== "СДПГ" && Q.lvp_formed) {
     Q.foreign_minister_party = "ЛНП";
 }
-if (Q.foreign_minister !== "Брайтшайд") Q.foreign_minister = "Stresemann";
+if (Q.foreign_minister !== "Брайтшайд") Q.foreign_minister = "Штреземан";
 if (Q.foreign_minister !== "Брайтшайд" && Q.stresemann_dead === 1) Q.foreign_minister = "Курциус";
 if (Q.foreign_minister_party !== "СДПГ" && (Q.in_weimar_coalition && !Q.lvp_formed || Q.in_popular_front || Q.in_social_catholic_coalition)) Q.foreign_minister_party = "Центр";
 if (Q.foreign_minister_party !== "СДПГ" && (Q.in_weimar_coalition && Q.lvp_formed)) Q.foreign_minister_party = "ЛНП";

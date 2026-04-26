@@ -4088,7 +4088,7 @@ if (Q.spd_in_government_time >= 6) {
     } else if (Q.dvp_relation >= 50 && !Q.lvp_formed) {
         Q.hindenburg_angry -= 1;
     }
-    if (Q.dvp_leader == "Stresemann" && !Q.lvp_formed) {
+    if (Q.dvp_leader == "Штреземан" && !Q.lvp_formed) {
         Q.hindenburg_angry -= 2;
     } else if (Q.lvp_leader == "Лютер" && Q.lvp_formed) {
         Q.hindenburg_angry -= 1;
@@ -4625,7 +4625,7 @@ if (Q.ddp_ideology == "Правые" && Q.ddp_leader == "Дитрих" && !Q.dst
     Q.industrial_ddp_backing = 0;
 }
 
-if (((Q.dvp_ideology == "Правые" || (Q.dvp_leader == "Дингельдей" || Q.dvp_leader == "Шольц" || Q.dvp_leader == "Лютер" || (Q.dvp_leader == "Stresemann" && !Q.dvp_reform))) || (Q.dvp_ideology == "Умеренные" && Q.dvp_relation < 30)) && ((Q.bourgeois_parliament || Q.liberal_parliament) || Q.year < 1930) && !Q.lvp_formed) {
+if (((Q.dvp_ideology == "Правые" || (Q.dvp_leader == "Дингельдей" || Q.dvp_leader == "Шольц" || Q.dvp_leader == "Лютер" || (Q.dvp_leader == "Штреземан" && !Q.dvp_reform))) || (Q.dvp_ideology == "Умеренные" && Q.dvp_relation < 30)) && ((Q.bourgeois_parliament || Q.liberal_parliament) || Q.year < 1930) && !Q.lvp_formed) {
     Q.industrial_dvp_backing = 3;
 } else if (Q.dvp_leader != "Глацель" && Q.dvp_leader != "Тиль" && Q.dvp_votes >= 3 && !Q.lvp_formed) {
     Q.industrial_dvp_backing = 2;

@@ -4111,7 +4111,7 @@ if (Q.foreign_minister_party !== "СДПГ" && !Q.lvp_formed) {
 } else if (Q.foreign_minister_party !== "СДПГ" && Q.lvp_formed) {
     Q.foreign_minister_party = "ЛНП";
 }
-if (Q.foreign_minister !== "Брайтшайд") Q.foreign_minister = "Stresemann";
+if (Q.foreign_minister !== "Брайтшайд") Q.foreign_minister = "Штреземан";
 if (Q.foreign_minister !== "Брайтшайд" && Q.stresemann_dead === 1) Q.foreign_minister = "Курциус";
 if (Q.foreign_minister_party !== "СДПГ" && (Q.in_weimar_coalition && Q.lvp_formed)) Q.foreign_minister_party = "ЛНП";
 if (Q.foreign_minister_party !== "СДПГ" && (Q.in_weimar_coalition && !Q.lvp_formed || Q.in_popular_front || Q.in_social_catholic_coalition)) Q.foreign_minister_party = "Центр";
@@ -4232,7 +4232,7 @@ go-to: ministries
 @drop_foreign
 title: Отказаться от Министерства иностранных дел.
 view-if: foreign_minister_party = "СДПГ"
-on-arrival: foreign_minister_party = "ННП"; foreign_minister_party = "ЛНП" if lvp_formed; foreign_minister = "Stresemann"; foreign_minister = "Курциус" if streseman_dead; leverage += 10; foreign_minister_party = "Центр" if in_weimar_coalition or in_popular_front; foreign_minister = "Вирт" if in_weimar_coalition or in_popular_front;
+on-arrival: foreign_minister_party = "ННП"; foreign_minister_party = "ЛНП" if lvp_formed; foreign_minister = "Штреземан"; foreign_minister = "Курциус" if streseman_dead; leverage += 10; foreign_minister_party = "Центр" if in_weimar_coalition or in_popular_front; foreign_minister = "Вирт" if in_weimar_coalition or in_popular_front;
 tags: drop_mins_1928
 go-to: ministries
 
