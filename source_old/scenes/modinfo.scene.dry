@@ -16,7 +16,7 @@ new-page: true
 - @discord: Discord* (Запрещен в Российской Федерации)
 - @source: Литература и источники (дополнительная информация)
 - @root.start: Start game
-- @root: Back
+- @root: Назад
 
 
 @infotext

@@ -548,7 +548,7 @@ if (!document.getElementById('news_tab')) {
     button.style.backgroundColor = '#dddddd';
     button.className = 'tab_button';
     button.id = 'news_tab';
-    button.textContent = 'View Right-Wing News';
+    button.textContent = 'Просмотреть новости правых';
     button.onclick = function () {
         toggleNews();
     };
@@ -1837,7 +1837,7 @@ if (!document.getElementById('news_tab')) {
     button.style.backgroundColor = '#dddddd';
     button.className = 'tab_button';
     button.id = 'news_tab';
-    button.textContent = 'View Right-Wing News';
+    button.textContent = 'Просмотреть новости правых';
     button.onclick = function () {
         toggleNews();
     };
