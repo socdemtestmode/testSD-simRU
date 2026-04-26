@@ -52,6 +52,6 @@ go-to: peoples_party_campaigning
 title: Права женщин
 subtitle: Проводить политику в отношении прав женщин.
 choose-if: advisor_action_timer = 0 and spd_in_government and not cvp_women_accepted
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> в настоящее время не входит в правительство. ?] [? if cvp_women_accepted : Наше коалиционное соглашение исключает меры по защите прав женщин. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> в настоящее время не входит в правительство.  ?] [? if cvp_women_accepted : Наше коалиционное соглашение исключает меры по защите прав женщин. ?]
 on-arrival: advisor_action_timer = 6; womens_rights_timer -= 10; last_advisor_action = 1
 go-to: womens_rights

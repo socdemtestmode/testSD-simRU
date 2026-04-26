@@ -143,7 +143,7 @@ face-image: img/portraits/heuss.jpg
 @maier
 title: Рейнгольд Майер избран!
 subtitle: Крупная фигура в политике Вюртемберга, теперь его ждёт повышение.
-unavailable-subtitle: [? if not heuss_lead: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к <span style="color: #D3C24D;">[+ ddp_name +]</span>, её деловым крылом. ?][? if heuss_lead: Социал-республиканцы предпочитают избрать вместо него Хойсса. ?]
+unavailable-subtitle: [? if not heuss_lead: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к <span style="color: #D3C24D;">[+ ddp_name +]</span>, её деловым крылом.  ?][? if heuss_lead: Социал-республиканцы предпочитают избрать вместо него Хойсса. ?]
 choose-if: maier_lead
 on-arrival: lvp_relation += 5; lvp_left += 3; lvp_leader = "Maier"; pro_republic += 3; new_middle_lvp += 2; old_middle_lvp += 2; rural_lvp += 4; catholics_lvp += 6
 face-image: img/portraits/maier.jpg

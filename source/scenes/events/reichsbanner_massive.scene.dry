@@ -29,7 +29,7 @@ on-display: {!
 
 
 @let_go
-subtitle: Рейхсбаннер по-прежнему необходим, поскольку на полицию нельзя положиться. [? if president == "Hindenburg" and spd_in_government: Гинденбург пригрозил сместить наше правительство, если не будут приняты меры. ?][? if spd_in_government and not in_left_front and not in_spd_majority: Наши партнёры по коалиции вынесут вотум недоверия. ?]Буржуазные партии навсегда станут нам враждебны.
+subtitle: Рейхсбаннер по-прежнему необходим, поскольку на полицию нельзя положиться. [? if president == "Hindenburg" and spd_in_government: Гинденбург пригрозил сместить наше правительство, если не будут приняты меры.  ?][? if spd_in_government and not in_left_front and not in_spd_majority: Наши партнёры по коалиции вынесут вотум недоверия. ?]Буржуазные партии навсегда станут нам враждебны.
 unavailable-subtitle: Реформистскому крылу партии удаётся отговорить партию от поддержки этого варианта.
 choose-if: left_strength + neorevisionist_strength >= reformist_strength
 on-arrival: rb_strength *= 0.8; z_relation -= 20; ddp_relation -= 20; lvp_relation -= 20; rb_exit = 1; left_strength += 10*(1-dissent); neorevisionist_strength += 20*(1-dissent); ddp_right += 8; lvp_right += 10; dvp_right += 10; ddp_cohesion -= 5; pro_republic -= 10; coalition_dissent += 5; rb_massive = 1; hindenburg_angry += 100

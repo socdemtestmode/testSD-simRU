@@ -24,11 +24,11 @@ go-to: goals_success if kpd_goals_completed_prussia >= 4; goals_failed if kpd_go
 
 В начале срока полномочий этого правительства <span style="color: #700000;">**КПГ**</span> выдвинула список целей для прусской коалиции:
 
-[? if interior_goal_seen_prussia = 1 : - Запретить <span style="color: #7A3C00;">**СА**</span> и <span style="color: #3E88B3;">**Стальной Шлем**</span>. - [? if interior_goal_prussia <= 0 : Успех ?][? if interior_goal_prussia >= 1: Провал ?] ?]
+[? if interior_goal_seen_prussia = 1 : - Запретить <span style="color: #7A3C00;">**СА**</span> и <span style="color: #3E88B3;">**Стальной Шлем**</span>. - [? if interior_goal_prussia <= 0 : Успех ?][? if interior_goal_prussia >= 1: Провал ?]  ?]
 
-[? if rfb_goal_seen_prussia = 1 : - Отменить запрет <span style="color: #700000;">**СКФ**</span>. - [? if rfb_goal_prussia <= 0: Успех ?][? if rfb_goal_prussia >= 1: Провал ?] ?]
+[? if rfb_goal_seen_prussia = 1 : - Отменить запрет <span style="color: #700000;">**СКФ**</span>. - [? if rfb_goal_prussia <= 0: Успех ?][? if rfb_goal_prussia >= 1: Провал ?]  ?]
 
-[? if bureaucracy_goal_seen_prussia = 1 : - Провести чистку в госаппарате. -[? if bureaucracy_goal_prussia <= 0: Успех ?][? if bureaucracy_goal_prussia >= 1: Провал ?] ?]
+[? if bureaucracy_goal_seen_prussia = 1 : - Провести чистку в госаппарате. -[? if bureaucracy_goal_prussia <= 0: Успех ?][? if bureaucracy_goal_prussia >= 1: Провал ?]  ?]
 
 [? if free_kpd_goal_seen_prussia = 1 : - Защитить <span style="color: #700000;">коммунистические</span> демонстрации. - [? if free_kpd_goal_prussia <= 0: Успех ?][? if free_kpd_goal_prussia >= 1: Провал ?] ?]
 

@@ -22,7 +22,7 @@ choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?]
 on-arrival: advisor_action_timer = 6; emergency_used += 1; resources += 2; workers_spd -= 2 if emergency_used > 1; labor_dissent += 5 if emergency_used > 1; unemployed_spd -= 2 if emergency_used > 1; workers_spd -= 2 if emergency_used > 2; unemployed_spd -= 2 if emergency_used > 2; labor_dissent += 5 if emergency_used > 2; labor_dissent += 5 if emergency_used > 2
 
-[? if emergency_used <= 1: Шумахер использовал своё положение, чтобы привлечь пожертвования и организовать быстрые займы. ?][? if emergency_used > 1 and emergency_used < 3: Зреет недовольство среди рядовых членов <span style="color: #c00000;">**СДПГ**</span> из-за наших настойчивых попыток выпросить деньги. ?][? if emergency_used > 2: Теперь мы действительно выскребаем последние крохи: на преданных членов партии оказывают давление, чтобы они продавали свои ценности, а многие другие разочарованно покидают наши ряды. ?]
+[? if emergency_used <= 1: Шумахер использовал своё положение, чтобы привлечь пожертвования и организовать быстрые займы.  ?][? if emergency_used > 1 and emergency_used < 3: Зреет недовольство среди рядовых членов <span style="color: #c00000;">**СДПГ**</span> из-за наших настойчивых попыток выпросить деньги. ?][? if emergency_used > 2: Теперь мы действительно выскребаем последние крохи: на преданных членов партии оказывают давление, чтобы они продавали свои ценности, а многие другие разочарованно покидают наши ряды.  ?]
 
 Мы получили +2 ресурса.
 

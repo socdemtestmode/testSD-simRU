@@ -53,7 +53,7 @@ on-arrival: in_center_right_coalition_prussia = 1; in_right_coalition_prussia = 
 
 Партия[? if z_party_name != "CVP": <span style="color: #000000;">Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] объявила ответный вотум недоверия в Пруссии, заменив наше правительство правоцентристской коалицией, состоящей из всех партий правее нас, за исключением <span style="color: #003755;">**НФГ**</span> и <span style="color: #7A3C00;">**НСДАП**</span>. Хотя это и неудача, это не худший из возможных исходов, ведь новые выборы могли бы привести к значительному усилению экстремистских партий.
 
-[? if z_leader != "Stegerwald": Адам Штегервальд ?][? if z_leader == "Stegerwald": Генрих Брюнинг ?]от [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] избран на пост министра-президента Пруссии.
+[? if z_leader != "Stegerwald": Адам Штегервальд  ?][? if z_leader == "Stegerwald": Генрих Брюнинг  ?]от [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] избран на пост министра-президента Пруссии.
 
 
 @vote_yes

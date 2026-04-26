@@ -20,7 +20,7 @@ face-image: img/beauty_of_labor.jpg
 
 
 @schleicher_2
-unavailable-subtitle: [? if schleicher_spd_influence >= 6: Шлейхер использует своё влияние в АДГБ, чтобы заблокировать дальнейшие переговоры. ?][? if labor_dissent >= 40 or unions_independent: Недовольство рабочих слишком велико. ?][? if z_relation < 40 or (z_relation < 60 and z_in_gov): У нас нет должных отношений с <span style="color: #000000;">партией Центра</span>. ?]
+unavailable-subtitle: [? if schleicher_spd_influence >= 6: Шлейхер использует своё влияние в АДГБ, чтобы заблокировать дальнейшие переговоры.  ?][? if labor_dissent >= 40 or unions_independent: Недовольство рабочих слишком велико. ?][? if z_relation < 40 or (z_relation < 60 and z_in_gov): У нас нет должных отношений с <span style="color: #000000;">партией Центра</span>. ?]
 choose-if: schleicher_spd_influence < 6 and (z_relation >= 40 or (z_relation >= 60 and z_in_gov)) and labor_dissent < 40 and not unions_independent
 
 Переговоры продвинулись, но остаётся одно серьёзное препятствие: неизменная приверженность АДГБ <span style="color: #9B0000;">марксизму</span>. Это отличает его от других профсоюзов, которые теперь выступают за классовый коллаборационизм. Стоит ли нам на время умолчать о классовой борьбе ради единства против Шлейхера?

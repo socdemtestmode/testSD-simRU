@@ -28,7 +28,7 @@ go-to: international_relations
 @breitscheid_foreign
 title: Внешняя политика
 subtitle: Будучи министром иностранных дел, Брейтшейд может определять нашу внешнюю политику.
-unavailable-subtitle: [? if not spd_in_government: <span style="color: #c00000;">СДПГ</span> не входит в правительство. ?] [? if foreign_minister_party != "SPD" : <span style="color: #c00000;">СДПГ</span> не контролирует министерство иностранных дел. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] мес. до следующего действия советника. ?]
+unavailable-subtitle: [? if not spd_in_government: <span style="color: #c00000;">СДПГ</span> не входит в правительство.  ?] [? if foreign_minister_party != "SPD" : <span style="color: #c00000;">СДПГ</span> не контролирует министерство иностранных дел.  ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] мес. до следующего действия советника. ?]
 choose-if: advisor_action_timer == 0 and spd_in_government and foreign_minister_party == "SPD"
 on-arrival: advisor_action_timer = 6; foreign_policy_timer -= 8; last_advisor_action = 1
 go-to: foreign_policy

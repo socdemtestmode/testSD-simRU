@@ -51,7 +51,7 @@ new-page: true
 Мы можем либо выйти из оппозиции и «терпеть» буржуазное правительство меньшинства, чтобы избежать новых выборов, либо остаться в оппозиции и поддерживать все вотумы недоверия. [? if spd_coalition_possible_saxony >= 50: Хотя [? if lvp_formed and stegerwald_path: <span style="color: #000000;">Вей</span><span style="color: #DD0000;">мар</span><span style="color: #FFCC00;">ская</span> ?][? if not lvp_formed or not stegerwald_path: Большая ?] коалиция с либералами в теории возможна, но такой союз невозможен из-за сильного левого уклона саксонской <span style="color: #c00000;">**СДПГ**</span>: у них есть влиятельные друзья из фракции левых в руководстве партии. ?]
 
 - @united_left_saxony
-- @grand_coalition_saxony: Мы сформируем [? if lvp_formed and stegerwald_path: <span style="color: #000000;">Вей</span><span style="color: #DD0000;">мар</span><span style="color: #FFCC00;">скую</span> ?][? if not lvp_formed or not stegerwald_path: Большую ?]Коалицию!
+- @grand_coalition_saxony: Мы сформируем [? if lvp_formed and stegerwald_path: <span style="color: #000000;">Вей</span><span style="color: #DD0000;">мар</span><span style="color: #FFCC00;">скую</span>  ?][? if not lvp_formed or not stegerwald_path: Большую  ?]Коалицию!
 - @no_majority_saxony
 
 
@@ -82,7 +82,7 @@ on-display: {!
 
 @grand_coalition_saxony
 subtitle: Нам как-то удалось примириться с буржуазными партиями, так что они снова готовы править вместе с нами.
-unavailable-subtitle: [? if z_relation < 45 and stegerwald_path: Нам нужно улучшить отношения с [? if z_party_name != "CVP": <span style="color: #000000;">Партией Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?]. ?][? if dvp_toleration_threshold_fail_saxony: Нам нужно улучшить отношения с [? if not lvp_formed: <span style="color: #C0A054;">ННП</span> ?][? if lvp_formed: <span style="color: #FFCC00;">ЛНП</span> ?]. ?][? if left_strength >= 30: В нашем саксонском отделении слишком сильна фракция левых, чтобы даже рассматривать такой вариант — ведь в прошлом именно их упрямый отказ привёл к исключению из партии большей части нашей парламентской делегации и последующему созданию <span style="color: #fe9e00;">СДПГ(с)</span>. У них немало друзей в центральном руководстве партии, так что мы не сможем их заставить. ?]
+unavailable-subtitle: [? if z_relation < 45 and stegerwald_path: Нам нужно улучшить отношения с [? if z_party_name != "CVP": <span style="color: #000000;">Партией Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?].  ?][? if dvp_toleration_threshold_fail_saxony: Нам нужно улучшить отношения с [? if not lvp_formed: <span style="color: #C0A054;">ННП</span> ?][? if lvp_formed: <span style="color: #FFCC00;">ЛНП</span> ?].  ?][? if left_strength >= 30: В нашем саксонском отделении слишком сильна фракция левых, чтобы даже рассматривать такой вариант — ведь в прошлом именно их упрямый отказ привёл к исключению из партии большей части нашей парламентской делегации и последующему созданию <span style="color: #fe9e00;">СДПГ(с)</span>. У них немало друзей в центральном руководстве партии, так что мы не сможем их заставить. ?]
 view-if: spd_coalition_saxony >= 50
 choose-if: spd_coalition_possible_saxony and left_strength < 30
 on-arrival: saxony_spd = 1; workers_nsdap -= 3; unemployed_nsdap -= 3; workers_spd += 3; unemployed_spd += 3; z_relation += 3; ddp_relation += 3; lvp_relation += 3; dvp_relation += 5; pro_republic += 3; reformist_dissent -= 15; reformist_strength += 10; aspd_dead = 1; saxony_groko = 1

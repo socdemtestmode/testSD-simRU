@@ -140,7 +140,7 @@ face-image: img/portraits/heuss.jpg
 @dietrich
 title: Герман Дитрих избран!
 subtitle: Дитрих, бывший лидер <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, её делового крыла, — несколько скептически относится к сотрудничеству с нами.
-unavailable-subtitle: [? if not heuss_lead: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к <span style="color: #D3C24D;">[+ ddp_name +]</span>, её деловым крылом. ?][? if heuss_lead: Из-за недостатка энергии и бремени правительственных обязанностей партия предпочла ему Хойсса. ?]
+unavailable-subtitle: [? if not heuss_lead: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к <span style="color: #D3C24D;">[+ ddp_name +]</span>, её деловым крылом.  ?][? if heuss_lead: Из-за недостатка энергии и бремени правительственных обязанностей партия предпочла ему Хойсса. ?]
 choose-if: dietrich_lead
 on-arrival: lvp_relation += 5; lvp_left += 2; lvp_leader = "Dietrich"; pro_republic += 5; old_middle_lvp += 4; rural_lvp += 4; new_middle_lvp -= 4; dietrich_lvp_explode_time = time + 8; dietrich_election_time = time
 face-image: img/portraits/dietrich.jpg

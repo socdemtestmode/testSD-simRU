@@ -1,6 +1,6 @@
 title: Мы можем депортировать Гитлера.
 subtitle: В конце концов, он иностранный гражданин и преступник.
-unavailable-subtitle: [? if judicial_reform < 2 : К сожалению, <span style="color: #808080;">реакционная</span> судебная система не пойдёт на сотрудничество. ?] [? if hitler_citizen : Гитлер уже получил гражданство Германии в преддверии президентских выборов. ?] [? if not spd_prussia : Мы не можем этого сделать без содействия прусской полиции, которая в данный момент нам не подчиняется. ?]
+unavailable-subtitle: [? if judicial_reform < 2 : К сожалению, <span style="color: #808080;">реакционная</span> судебная система не пойдёт на сотрудничество.  ?] [? if hitler_citizen : Гитлер уже получил гражданство Германии в преддверии президентских выборов. ?] [? if not spd_prussia : Мы не можем этого сделать без содействия прусской полиции, которая в данный момент нам не подчиняется. ?]
 view-if: nazi_urgency >= 3 and hitler_deported = 0 and chancellor != "Papen" and chancellor != "Schleicher" and investigate_far_right >= 2
 choose-if: judicial_reform >= 2 and not hitler_citizen and spd_prussia == 1
 

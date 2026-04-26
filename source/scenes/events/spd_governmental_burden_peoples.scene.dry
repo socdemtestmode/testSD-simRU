@@ -42,7 +42,7 @@ on-arrival: goal_spd_cancel_peoples = 0; economy_goal_spd_peoples = 0; finance_g
 
 [? if spd_in_government : - Увеличить финансирование науки. ?]
 
-[? if spd_in_government : - Сделать шаги к созданию <span style="color: #001489;">Европейского</span> <span style="color: #FFDD00;">союза</span> или заключению национального конкордата. ?]
+[? if spd_in_government : - Сделать шаги к созданию <span style="color: #001489;">Европейского</span> <span style="color: #FFDD00;">союза</span> или заключению национального конкордата.  ?]
 
 [? if spd_in_government : - Оказать помощь сельскому рабочему классу. ?]
 

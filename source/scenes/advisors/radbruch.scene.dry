@@ -21,7 +21,7 @@ new-page: true
 title: Провести крупную судебную реформу.
 subtitle: -1 к бюджету
 choose-if: advisor_action_timer = 0 and spd_in_government and justice_minister_party = "SPD" and budget > 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> в данный момент не входит в правительство. ?][? if justice_minister_party != "SPD" : Министерство юстиции не под нашим контролем. ?] [? if budget <= 0: Недостаточно бюджета. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> в данный момент не входит в правительство.  ?][? if justice_minister_party != "SPD" : Министерство юстиции не под нашим контролем. ?] [? if budget <= 0: Недостаточно бюджета. ?]
 on-arrival: advisor_action_timer = 6;
 go-to: judiciary.reform
 
@@ -30,7 +30,7 @@ go-to: judiciary.reform
 title: Провести небольшие судебные реформы.
 subtitle: Постепенно отстранять коррумпированных и предвзятых юристов.
 choose-if: advisor_action_timer = 0 and spd_in_government and justice_minister_party = "SPD" and budget > 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> в настоящее время не у власти. ?][? if justice_minister_party != "SPD" : У нас нет министерства юстиции. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> в настоящее время не у власти.  ?][? if justice_minister_party != "SPD" : У нас нет министерства юстиции. ?]
 on-arrival: advisor_action_timer = 6;
 go-to: judiciary.minor_reforms
 

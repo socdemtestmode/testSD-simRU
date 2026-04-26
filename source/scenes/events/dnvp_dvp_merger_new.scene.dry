@@ -1,5 +1,5 @@
-title: The <span style="color: #C0A054;">**ННП**</span> объединяется с[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]!
-subtitle: [+ dvp_leader +]и[? if dnvp_ideology == "Moderate": [+ dnvp_leader +] ?][? if kvp_formed: [+ kvp_leader +] ?]достигли соглашения.
+title: The <span style="color: #C0A054;">**ННП**</span> объединяется с[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span>  ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]!
+subtitle: [+ dvp_leader +]и[? if dnvp_ideology == "Moderate": [+ dnvp_leader +]  ?][? if kvp_formed: [+ kvp_leader +]  ?]достигли соглашения.
 view-if: dkp_merger_timer == time
 max-visits: 1
 tags: event
@@ -18,11 +18,11 @@ on-display: {!
 !}
 new-page: true
 
-= The <span style="color: #C0A054;">**ННП**</span> объединяется с[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]
+= The <span style="color: #C0A054;">**ННП**</span> объединяется с[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span>  ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]
 
-Глатцель давно и решительно выступал за углубление связей между двумя правыми партиями, конечной целью которого — их слияние. Ещё до того, как он возглавил <span style="color: #C0A054;">**ННП**</span>, он налаживал отношения с «младоконсерваторами» Тревирануса[? if dnvp_leader == "Lambach": &nbsp;и <span style="color: #6D5298;">христианско-социальным движением</span> Ламбаха ?]. Поскольку теперь во главе[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]путь к объединению кажется открытым.
+Глатцель давно и решительно выступал за углубление связей между двумя правыми партиями, конечной целью которого — их слияние. Ещё до того, как он возглавил <span style="color: #C0A054;">**ННП**</span>, он налаживал отношения с «младоконсерваторами» Тревирануса[? if dnvp_leader == "Lambach": &nbsp;и <span style="color: #6D5298;">христианско-социальным движением</span> Ламбаха ?]. Поскольку теперь во главе[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span>  ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]путь к объединению кажется открытым.
 
-Большинство членов <span style="color: #C0A054;">**ННП**</span> поддерживает стремление Глатцеля к объединению. Против выступает лишь небольшое, но громкое левое крыло во главе с Курциусом и Лютером, которое настаивает на сохранении <span style="color: #C0A054;">**ННП**</span> как либеральной силы. Внутри[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]сопротивление исходит в основном от её <span style="color: #385A38;">аграрного</span> крыла, не желающего объединяться с капиталистической и ориентированной на средний класс <span style="color: #C0A054;">**ННП**</span>. Старая гвардия партии во главе с Вестарпом также сохраняет скептицизм, ссылаясь на разногласия по национальным вопросам.
+Большинство членов <span style="color: #C0A054;">**ННП**</span> поддерживает стремление Глатцеля к объединению. Против выступает лишь небольшое, но громкое левое крыло во главе с Курциусом и Лютером, которое настаивает на сохранении <span style="color: #C0A054;">**ННП**</span> как либеральной силы. Внутри[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span>  ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]сопротивление исходит в основном от её <span style="color: #385A38;">аграрного</span> крыла, не желающего объединяться с капиталистической и ориентированной на средний класс <span style="color: #C0A054;">**ННП**</span>. Старая гвардия партии во главе с Вестарпом также сохраняет скептицизм, ссылаясь на разногласия по национальным вопросам.
 
 - @dnvp_dvp: Так или иначе, соглашение достигнуто.
 
@@ -164,23 +164,23 @@ new-page: true
 
 = <span style="color: #00C0FF;">**СКП**</span> Выборы руководства
 
-Теперь, когда <span style="color: #C0A054;">**ННП**</span> и[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?] объединились, новообразованная <span style="color: #00C0FF;">**СКП**</span> должна решить, кто поведёт её в новую эру. Несколько различных фракций — от промышленников и националистов до профсоюзных деятелей — уже борются за влияние в молодой партии. Выборы председателя на учредительном съезде <span style="color: #00C0FF;">**СКП**</span> определит внутренний баланс сил и будущий курс партии. Её ориентация ещё не ясна, и исход выборов председателя может определить, склонится ли <span style="color: #00C0FF;">**СКП**</span> к терпимости по отношению к республике или же встанет на более националистический курс.
+Теперь, когда <span style="color: #C0A054;">**ННП**</span> и[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span>  ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?] объединились, новообразованная <span style="color: #00C0FF;">**СКП**</span> должна решить, кто поведёт её в новую эру. Несколько различных фракций — от промышленников и националистов до профсоюзных деятелей — уже борются за влияние в молодой партии. Выборы председателя на учредительном съезде <span style="color: #00C0FF;">**СКП**</span> определит внутренний баланс сил и будущий курс партии. Её ориентация ещё не ясна, и исход выборов председателя может определить, склонится ли <span style="color: #00C0FF;">**СКП**</span> к терпимости по отношению к республике или же встанет на более националистический курс.
 
 Основные фракции:
 
-<span style="color: #3E88B3;">Национал-консерваторы</span> ([? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]) [+ natcons_fkp +]
+<span style="color: #3E88B3;">Национал-консерваторы</span> ([? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span>  ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]) [+ natcons_fkp +]
 
-<span style="color: #385A38;">Аграрии</span> ([? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]) [+ agrarians_fkp +]
+<span style="color: #385A38;">Аграрии</span> ([? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span>  ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]) [+ agrarians_fkp +]
 
 <span style="color: #8C7A3C;">Промышленники</span> (<span style="color: #C0A054;">**ННП**</span>) [+ industrialists_fkp +]
 
 <hr id="read-marker">
 
-<span style="color: #D8B868;">Правые профсоюзы</span> (<span style="color: #C0A054;">**ННП**</span> и[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]) [+ dhv_fkp +]
+<span style="color: #D8B868;">Правые профсоюзы</span> (<span style="color: #C0A054;">**ННП**</span> и[? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span>  ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]) [+ dhv_fkp +]
 
 <span style="color: #D8B868;">Штреземанисты</span> (<span style="color: #C0A054;">**ННП**</span>) [+ stressmanites_fkp +]
 
-<span style="color: #0087DC;">Народные консерваторы</span> ([? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]) [+ ppconservatives_fkp +]
+<span style="color: #0087DC;">Народные консерваторы</span> ([? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span>  ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]) [+ ppconservatives_fkp +]
 
 - @glatzel: Франк Глатцель.
 - @treviranus: Готфрид Тревиранус.
@@ -196,7 +196,7 @@ on-arrival: fkp_leader = "Glatzel"; fkp_ideology = "Paternalistic Conservatism";
 call: dnvp_dvp_formed
 face-image: img/portraits/glatzel.jpg
 
-Вопреки ожиданиям, Франк Глатцель одержал победу в ходе затяжного многотурового голосования на учредительном съезде <span style="color: #00C0FF;">**СКП**</span>е. Центристы, такие как Тревиранус и фон Раумер, первыми выбыли из борьбы, в конечном итоге поддержав Глатцеля, а не ярых монархистов, таких как Гергт и Вестарп. К последнему туру голосования Глатцель собрал коалицию из умеренных членов [? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?] и прочих раскольников, делегатов от профсоюзов служащих и оставшихся умеренных от <span style="color: #C0A054;">**ННП**</span>, завоевав пост председателя, несмотря на то, что он принадлежал к левому крылу партии.
+Вопреки ожиданиям, Франк Глатцель одержал победу в ходе затяжного многотурового голосования на учредительном съезде <span style="color: #00C0FF;">**СКП**</span>е. Центристы, такие как Тревиранус и фон Раумер, первыми выбыли из борьбы, в конечном итоге поддержав Глатцеля, а не ярых монархистов, таких как Гергт и Вестарп. К последнему туру голосования Глатцель собрал коалицию из умеренных членов [? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span>  ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?] и прочих раскольников, делегатов от профсоюзов служащих и оставшихся умеренных от <span style="color: #C0A054;">**ННП**</span>, завоевав пост председателя, несмотря на то, что он принадлежал к левому крылу партии.
 
 Этот исход — наилучший для нас сценарий, поскольку Глатцель по-прежнему открыт для переговоров с <span style="color: #c00000;">**СДПГ**</span>. Однако новая <span style="color: #00C0FF;">**СКП**</span> всё равно будет гораздо более несговорчивым партнёром, чем <span style="color: #C0A054;">**ННП**</span> Штреземана, учитывая сохраняющееся влияние аграрных и промышленных фракций. Любое сотрудничество, вероятно, будет куда более ограниченным, чем в прошлом. И всё же, по сравнению с бескомпромиссными сторонниками жёсткой линии, которые едва не победили в этой борьбе, победа Глацеля — настоящее облегчение.
 
@@ -214,7 +214,7 @@ face-image: img/portraits/von_raumer.jpg
 
 
 @treviranus
-subtitle: Тревиранус, пламенный реформатор и член [? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?], выдвинул свою кандидатуру.
+subtitle: Тревиранус, пламенный реформатор и член [? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span>  ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?], выдвинул свою кандидатуру.
 choose-if: winner_fkp = "Treviranus"
 on-arrival: fkp_leader = "Treviranus"; fkp_ideology = "Liberal Conservatism";
 call: dnvp_dvp_formed

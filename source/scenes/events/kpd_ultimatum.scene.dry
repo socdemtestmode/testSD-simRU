@@ -44,17 +44,17 @@ go-to: goals_success if kpd_goals_completed; goals_failed if not kpd_goals_compl
 
 В начале работы этого правительства <span style="color: #700000;">**КПГ**</span> представила список целей для коалиции:
 
-[? if welfare_goal = 1 : - Расширить программы социального обеспечения —[? if welfare_goal_completed : успех ?][? if not welfare_goal_completed: провал ?] ?]
+[? if welfare_goal = 1 : - Расширить программы социального обеспечения —[? if welfare_goal_completed : успех ?][? if not welfare_goal_completed: провал ?]  ?]
 
-[? if agriculture_goal = 1 : - Провести программу земельной реформы —[? if agriculture_goal_completed : успех ?][? if not agriculture_goal_completed: провал ?] ?]
+[? if agriculture_goal = 1 : - Провести программу земельной реформы —[? if agriculture_goal_completed : успех ?][? if not agriculture_goal_completed: провал ?]  ?]
 
-[? if economy_goal = 1 : - Начать существенную национализацию экономики —[? if economy_goal_completed : успех ?][? if not economy_goal_completed: провал ?] ?]
+[? if economy_goal = 1 : - Начать существенную национализацию экономики —[? if economy_goal_completed : успех ?][? if not economy_goal_completed: провал ?]  ?]
 
-[? if finance_goal = 1 : - Сделать налоги более прогрессивными —[? if finance_goal_completed : успех ?][? if not finance_goal_completed: провал ?] ?]
+[? if finance_goal = 1 : - Сделать налоги более прогрессивными —[? if finance_goal_completed : успех ?][? if not finance_goal_completed: провал ?]  ?]
 
-[? if labor_goal = 1 : - Поддержать рабочих в трудовых спорах —[? if labor_goal_completed : успех ?][? if not labor_goal_completed: провал ?] ?]
+[? if labor_goal = 1 : - Поддержать рабочих в трудовых спорах —[? if labor_goal_completed : успех ?][? if not labor_goal_completed: провал ?]  ?]
 
-[? if foreign_goal = 1 : - Улучшить наши отношения с <span style="color: #750e0e;">Советским Союзом</span> — [? if foreign_goal_completed : успех ?][? if not foreign_goal_completed: провал ?] ?]
+[? if foreign_goal = 1 : - Улучшить наши отношения с <span style="color: #750e0e;">Советским Союзом</span> — [? if foreign_goal_completed : успех ?][? if not foreign_goal_completed: провал ?]  ?]
 
 [? if reichswehr_goal = 1 : - Сократить финансирование рейхсвера —[? if reichswehr_goal_completed : успех ?][? if not reichswehr_goal_completed: провал ?] ?]
 

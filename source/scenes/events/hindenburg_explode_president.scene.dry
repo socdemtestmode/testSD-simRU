@@ -54,7 +54,7 @@ The <span style="color: #700000;">**Коммунисты**</span> слишком
 
 
 @eckener_r1
-subtitle: −1 ресурс — после его выдвижения нам ещё предстоит убедить другие партии поддержать его.
+subtitle: -−1 ресурс — после его выдвижения нам ещё предстоит убедить другие партии поддержать его.
 unavailable-subtitle: [? if resources < 1 : −1 ресурс — недостаточно ресурсов. ?]
 choose-if: resources >= 1
 on-arrival: spd_candidate = "Eckener"; is_unity_candidate = 1
@@ -133,7 +133,7 @@ if (Q.z_relation >= 40 || (Q.z_relation > 20 && Q.z_leader == "Joos")) {
 max-visits: 1
 go-to: z_failed if z_support_grzesinski = 0; z_success if z_support_grzesinski = 1; z_partial if z_support_grzesinski = 2
 
-Мы призываем[? if z_party_name != "CVP": <span style="color: #000000;">Партию Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] to support [+ spd_candidate +] нужен как единый кандидат против <span style="color: #7A3C00;">фашизма</span>. Вместе <span style="color: #000000;">Вей</span><span style="color: #DD0000;">ма</span><span style="color: #FFCC00;">рская</span> коалиция сможет одолеть <span style="color: #7A3C00;">нацистов</span> и вернуть Германию на демократический путь. [? if z_relation >= 50 : Мы также напоминаем им об истории сотрудничества между нашими партиями, которая началась ещё в 1918 году. ?]
+Мы призываем[? if z_party_name != "CVP": <span style="color: #000000;">Партию Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] to support [+ spd_candidate +] нужен как единый кандидат против <span style="color: #7A3C00;">фашизма</span>. Вместе <span style="color: #000000;">Вей</span><span style="color: #DD0000;">ма</span><span style="color: #FFCC00;">рская</span> коалиция сможет одолеть <span style="color: #7A3C00;">нацистов</span> и вернуть Германию на демократический путь. [? if z_relation >= 50 :  Мы также напоминаем им об истории сотрудничества между нашими партиями, которая началась ещё в 1918 году. ?]
 
 
 @convince_z_spd
@@ -155,7 +155,7 @@ if (Q.z_relation >= 60 || (Q.z_relation > 50 && Q.z_leader == "Joos")) {
 max-visits: 1
 go-to: z_failed if z_support_grzesinski = 0; z_success if z_support_grzesinski = 1; z_partial if z_support_grzesinski = 2
 
-Мы просим [? if z_party_name != "CVP": <span style="color: #000000;">Партию Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?]: им нужен [+ spd_candidate +]. Мы пытаемся убедить их в необходимости единства перед лицом <span style="color: #7A3C00;">фашизма</span>: если мы расколемся, то падём под натиском <span style="color: #7A3C00;">нацистов</span> во главе с Сектом. [? if z_relation >= 50 : Мы также напоминаем им об истории сотрудничества между нашими партиями, которая берёт начало в 1918 году. ?]
+Мы просим [? if z_party_name != "CVP": <span style="color: #000000;">Партию Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?]: им нужен [+ spd_candidate +]. Мы пытаемся убедить их в необходимости единства перед лицом <span style="color: #7A3C00;">фашизма</span>: если мы расколемся, то падём под натиском <span style="color: #7A3C00;">нацистов</span> во главе с Сектом. [? if z_relation >= 50 :  Мы также напоминаем им об истории сотрудничества между нашими партиями, которая берёт начало в 1918 году. ?]
 
 
 @z_failed
@@ -243,7 +243,7 @@ choose-if: spd_votes >= kpd_votes
 unavailable-subtitle: В <span style="color: #700000;">КПГ</span> знают, что популярнее нас, и не видят причин поддерживать нашего кандидата.
 max-visits: 1
 
-The <span style="color: #700000;">**КПГ**</span> на данный момент никого не поддерживает. [? if kpd_relation >= 50 : Однако их можно убедить снять свою кандидатуру. [+ spd_candidate +] — наш общий кандидат; но как нам их убедить в этом? ?][? if kpd_relation < 50 or kpd_leader != "Conciliators" : Кажется, их не убедить. ?]
+The <span style="color: #700000;">**КПГ**</span> на данный момент никого не поддерживает. [? if kpd_relation >= 50 : Однако их можно убедить снять свою кандидатуру. [+ spd_candidate +] — наш общий кандидат; но как нам их убедить в этом?  ?][? if kpd_relation < 50 or kpd_leader != "Conciliators" : Кажется, их не убедить. ?]
 
 - @kpd_resources: Задействовать наши ресурсы.
 - @kpd_relations: Использовать наши хорошие отношения.
@@ -353,15 +353,15 @@ go-to: r2_start if round = 1 and not has_majority; election_end if round > 1; r1
 
 Результаты выборов:
 
-[? if Seeckt_running : <span style="color: #808080;">**Сект**</span> - [+ Seeckt_votes_disp +]% ?]
+[? if Seeckt_running : <span style="color: #808080;">**Сект**</span> - [+ Seeckt_votes_disp +]%  ?]
 
-[? if Adenauer_running : <span style="color: #000000;">**Аденауэр**</span> - [+ Adenauer_votes_disp +]% ?]
+[? if Adenauer_running : <span style="color: #000000;">**Аденауэр**</span> - [+ Adenauer_votes_disp +]%  ?]
 
-[? if Gessler_running : [? if not lvp_formed: <span style="color: #D3C24D;">**Гесслер**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**Гесслер**</span> ?] - [+ Gessler_votes_disp +]% ?]
+[? if Gessler_running : [? if not lvp_formed: <span style="color: #D3C24D;">**Гесслер**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**Гесслер**</span> ?] - [+ Gessler_votes_disp +]%  ?]
 
-[? if Eckener_running : <span style="color: #000000;">**Эк**</span><span style="color: #DD0000;">**кен**</span><span style="color: #FFCC00;">**ер**</span> - [+ Eckener_votes_disp +]% ?]
+[? if Eckener_running : <span style="color: #000000;">**Эк**</span><span style="color: #DD0000;">**кен**</span><span style="color: #FFCC00;">**ер**</span> - [+ Eckener_votes_disp +]%  ?]
 
-[? if Grzesinski_running : <span style="color: #c00000;">**Гржезинский**</span> - [+ Grzesinski_votes_disp +]% ?] [? if Wels_running : <span style="color: #c00000;">**Вельс**</span> - [+ Wels_votes_disp +]% ?]
+[? if Grzesinski_running : <span style="color: #c00000;">**Гржезинский**</span> - [+ Grzesinski_votes_disp +]%  ?] [? if Wels_running : <span style="color: #c00000;">**Вельс**</span> - [+ Wels_votes_disp +]%  ?]
 
 [? if sapd_candidate == "Boycott" or kpd_candidate == "Boycott" : Испорченные бюллетени —[+ boycott_votes +]% ?]
 
@@ -417,7 +417,7 @@ go-to: r2_campaigning
 
 Мы поддержали Конрада Аденауэра из [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?].
 
-[? if not impeachment_bvp: Благодаря нашей поддержке Аденауэра наиболее консервативная часть <span style="color: #A2D8E0;">Баварской народной партии</span> откололась от [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?], перейдя на сторону фон Секта. ?]
+[? if not impeachment_bvp: Благодаря нашей поддержке Аденауэра наиболее консервативная часть <span style="color: #A2D8E0;">Баварской народной партии</span> откололась от [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?], перейдя на сторону фон Секта.  ?]
 
 [? if kpd_candidate = spd_candidate: Теперь <span style="color: #700000;">**КПГ**</span> выходит из нашей прежней коалиции и больше никого не поддерживает. ?]
 
@@ -430,7 +430,7 @@ go-to: r2_campaigning
 
 Мы поддержали Отто Гесслера, независимого кандидата, ранее состоявшего в <span style="color: #D3C24D;">**НДП**</span>.
 
-[? if not impeachment_dvp and dvp_exist and not lvp_formed : Из-за нашей поддержки Гесслера фракции <span style="color: #C0A054;">**ННП**</span>, поддерживавшие его, откололись и теперь перешли на сторону Секта. ?]
+[? if not impeachment_dvp and dvp_exist and not lvp_formed : Из-за нашей поддержки Гесслера фракции <span style="color: #C0A054;">**ННП**</span>, поддерживавшие его, откололись и теперь перешли на сторону Секта.  ?]
 
 [? if kpd_candidate = spd_candidate: The <span style="color: #700000;">**КПГ**</span> теперь выходит из нашей коалиции и никого не поддерживает. ?]
 
@@ -438,7 +438,7 @@ go-to: r2_campaigning
 @r2_endorse_eckener
 title: Убедить партии <span style="color: #000000;">Ве</span><span style="color: #DD0000;">йм</span><span style="color: #FFCC00;">ар</span>ской коалиции объединиться в поддержку Гуго Эккенера.
 subtitle: -2 ресурса
-unavailable-subtitle: [? if resources < 2 : -2 ресурса — недостаточно ресурсов. ?][? if (z_relation < 55 and z_ideology == "Right") or (z_relation < 35 and z_ideology == "Left") : Нам нужны более хорошие отношения с <span style="color: #000000;">Партией Центра</span>. ?][? if ddp_relation < 35 and not lvp_formed : Нам нужны более хорошие отношения с <span style="color: #D3C24D;">[+ ddp_name +]</span>. ?][? if lvp_relation < 45 and lvp_formed : Нам нужны лучшие отношения с <span style="color: #FFCC00;">ЛНП</span>. ?]
+unavailable-subtitle: [? if resources < 2 : -2 ресурса — недостаточно ресурсов. ?][? if (z_relation < 55 and z_ideology == "Right") or (z_relation < 35 and z_ideology == "Left") : Нам нужны более хорошие отношения с <span style="color: #000000;">Партией Центра</span>.  ?][? if ddp_relation < 35 and not lvp_formed : Нам нужны более хорошие отношения с <span style="color: #D3C24D;">[+ ddp_name +]</span>.  ?][? if lvp_relation < 45 and lvp_formed : Нам нужны лучшие отношения с <span style="color: #FFCC00;">ЛНП</span>. ?]
 choose-if: resources >= 2 and ((z_relation >= 55 and z_ideology == "Right") or (z_relation >= 45 and z_ideology = "Left")) and ((ddp_relation >= 35 and not lvp_formed) or lvp_relation >= 45 and lvp_formed)
 view-if: z_candidate = "Adenauer" and ((ddp_candidate = "Gessler" and not lvp_formed) or (lvp_candidate = "Gessler" and lvp_formed)) and spd_candidate != "Eckener"
 on-departure: kpd_candidate = "Boycott" if kpd_candidate == spd_candidate; sapd_candidate = kpd_candidate; spd_candidate = "Eckener"; z_candidate = "Eckener"; ddp_candidate = "Eckener"; lvp_candidate = "Eckener"; resources -= 2; is_unity_candidate = 1

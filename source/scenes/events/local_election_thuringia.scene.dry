@@ -424,19 +424,19 @@ go-to: thuringia_coalition_menu
 
 {!<table>!}  <tr><td>Партия{!</td><td>!}Доля голосов{!</td><td>!}Мест в ландтаге{!</td></tr>!} {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **СДПГ:** {!</td><td>!} **[+ spd_thuringia_elections_vote +]%** {!</td><td>!} [+ spd_r_thuringia +]% {!</td></tr>!}
 
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}СРПГ:{!</td><td>!} [+ sapd_thuringia_elections_vote +]% {!</td><td>!} [+ sapd_r_thuringia +]% {!</td></tr>!} ?]
+[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}СРПГ:{!</td><td>!} [+ sapd_thuringia_elections_vote +]% {!</td><td>!} [+ sapd_r_thuringia +]% {!</td></tr>!}  ?]
 
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}КПГ:{!</td><td>!} [+ kpd_thuringia_elections_vote +]% {!</td><td>!} [+ kpd_r_thuringia +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#C43988'> </div> !}КПО:{!</td><td>!} [+ kpo_thuringia_elections_vote +]% {!</td><td>!} 0% {!</td></tr>!}
 
-[? if not lvp_formed: {!<tr><td><div class="box" style='background-color:#D3C24D'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_thuringia_elections_vote +]% {!</td><td>!} [+ ddp_r_thuringia +]% {!</td></tr>!} ?]
+[? if not lvp_formed: {!<tr><td><div class="box" style='background-color:#D3C24D'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_thuringia_elections_vote +]% {!</td><td>!} [+ ddp_r_thuringia +]% {!</td></tr>!}  ?]
 
-[? if lvp_formed: {!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !}ЛНП:{!</td><td>!} [+ lvp_thuringia_elections_vote +]% {!</td><td>!} [+ lvp_r_thuringia +]% {!</td></tr>!} ?]
+[? if lvp_formed: {!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !}ЛНП:{!</td><td>!} [+ lvp_thuringia_elections_vote +]% {!</td><td>!} [+ lvp_r_thuringia +]% {!</td></tr>!}  ?]
 
 {!<tr><td><div class="box" style='background-color:#000000'> </div> !}Центр:{!</td><td>!} [+ z_thuringia_elections_vote +]% {!</td><td>!} [+ z_r_thuringia +]% {!</td></tr>!}
 
-[? if not lvp_formed: {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !}ННП:{!</td><td>!} [+ dvp_thuringia_elections_vote +]% {!</td><td>!} [+ dvp_r_thuringia +]% {!</td></tr>!} ?]
+[? if not lvp_formed: {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !}ННП:{!</td><td>!} [+ dvp_thuringia_elections_vote +]% {!</td><td>!} [+ dvp_r_thuringia +]% {!</td></tr>!}  ?]
  
 {!<tr><td><div class="box" style='background-color:#7FCEB1'> </div> !}ХНПКЗ:{!</td><td>!} [+ farm_thuringia_elections_vote +]% {!</td><td>!} [+ farm_r_thuringia +]% {!</td></tr>!}
 
@@ -444,19 +444,19 @@ go-to: thuringia_coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !}Прочие партии:{!</td><td>!} [+ true_other_thuringia_elections_vote +]% {!</td><td>!} 0% {!</td></tr>!}
 
-[? if kvp_formed : {!<tr><td><div class="box" style='background-color:#0087DC'> </div> !}КНП:{!</td><td>!} [+ kvp_thuringia_elections_vote +]% {!</td><td>!} [+ kvp_r_thuringia +]% {!</td></tr>!} ?]
+[? if kvp_formed : {!<tr><td><div class="box" style='background-color:#0087DC'> </div> !}КНП:{!</td><td>!} [+ kvp_thuringia_elections_vote +]% {!</td><td>!} [+ kvp_r_thuringia +]% {!</td></tr>!}  ?]
 
 {!<tr><td><div class="box" style='background-color:#3E88B3'> </div> !}НННП:{!</td><td>!} [+ dnvp_thuringia_elections_vote +]% {!</td><td>!} [+ dnvp_r_thuringia +]% {!</td></tr>!}
 
-[? if dnf_formed : {!<tr><td><div class="box" style='background-color:#003755'> </div> !}НФГ:{!</td><td>!} [+ dnf_thuringia_elections_vote +]% {!</td><td>!} [+ dnf_r_thuringia +]% {!</td></tr>!} ?]
+[? if dnf_formed : {!<tr><td><div class="box" style='background-color:#003755'> </div> !}НФГ:{!</td><td>!} [+ dnf_thuringia_elections_vote +]% {!</td><td>!} [+ dnf_r_thuringia +]% {!</td></tr>!}  ?]
 
 {!<tr><td><div class="box" style='background-color:#7A3C00'> </div> !}НСДАП:{!</td><td>!} [+ nsdap_thuringia_elections_vote +]% {!</td><td>!} [+ nsdap_r_thuringia +]% {!</td></tr>!} {!</table>!} <hr id="read-marker"> В настоящее время Тюрингией управляет широкая правоцентристская коалиция, которая занимает ровно половину мест в ландтаге. В эту коалицию входят все партии правее нас, а также партии, представляющие нишевые интересы, — <span style="color: #b8996f;">**ЭП**</span> и <span style="color: #7FCEB1;">**ХНПКЗ**</span>, обе из которых имеют значительное влияние в политике земли. <hr id="read-marker"> Объединенная левая коалиция (<span style="color: #c00000;">**СДПГ**</span> + <span style="color: #C43988;">**КПО**</span> + <span style="color: #700000;">**КПГ**</span>[? if sapd_formed: &nbsp;+ <span style="color: #9B0000;">**СРПГ**</span> ?]): [+ left_coalition_thuringia +]%
 
-Большая коалиция (<span style="color: #c00000;">**СДПГ**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?][? if z_r_thuringia: &nbsp;+&nbsp;<span style="color: #000000;">**[+ z_party_name +]**</span> ?][? if not lvp_formed: &nbsp;+&nbsp;<span style="color: #C0A054;">**ННП**</span> ?]): [+ spd_coalition_thuringia +]%
+Большая коалиция (<span style="color: #c00000;">**СДПГ**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?][? if z_r_thuringia: &nbsp;+&nbsp;<span style="color: #000000;">**[+ z_party_name +]**</span>  ?][? if not lvp_formed: &nbsp;+&nbsp;<span style="color: #C0A054;">**ННП**</span> ?]): [+ spd_coalition_thuringia +]%
 
-Буржуазная коалиция ([? if z_r_thuringia: <span style="color: #000000;">**[+ z_party_name +]**</span> + ?][? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**ННП**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] + <span style="color: #7FCEB1;">**ХНПКЗ**</span> + <span style="color: #b8996f;">**ЭП**</span>[? if kvp_formed: &nbsp;+ <span style="color: #0087DC;">**КНП**</span> ?] + <span style="color: #3E88B3;">**НННП**</span>): [+ bourgeois_coalition_thuringia +]%
+Буржуазная коалиция ([? if z_r_thuringia: <span style="color: #000000;">**[+ z_party_name +]**</span> +  ?][? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**ННП**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] + <span style="color: #7FCEB1;">**ХНПКЗ**</span> + <span style="color: #b8996f;">**ЭП**</span>[? if kvp_formed: &nbsp;+ <span style="color: #0087DC;">**КНП**</span>  ?] + <span style="color: #3E88B3;">**НННП**</span>): [+ bourgeois_coalition_thuringia +]%
 
-Правая коалиция ([? if z_r_thuringia: <span style="color: #000000;">**[+ z_party_name +]**</span> + ?][? if not lvp_formed: <span style="color: #C0A054;">**ННП**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] + <span style="color: #7FCEB1;">**ХНПКЗ**</span> + <span style="color: #b8996f;">**ЭП**</span>[? if kvp_formed: &nbsp;+ <span style="color: #0087DC;">**КНП**</span> ?] + <span style="color: #3E88B3;">**НННП**</span>[? if dnvp_ideology == "Moderate": &nbsp;+ <span style="color: #003755;">**НФГ**</span> ?] + <span style="color: #7A3C00;">**НСДАП**</span>): [+ far_right_coalition_thuringia +]%
+Правая коалиция ([? if z_r_thuringia: <span style="color: #000000;">**[+ z_party_name +]**</span> +  ?][? if not lvp_formed: <span style="color: #C0A054;">**ННП**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] + <span style="color: #7FCEB1;">**ХНПКЗ**</span> + <span style="color: #b8996f;">**ЭП**</span>[? if kvp_formed: &nbsp;+ <span style="color: #0087DC;">**КНП**</span>  ?] + <span style="color: #3E88B3;">**НННП**</span>[? if dnvp_ideology == "Moderate": &nbsp;+ <span style="color: #003755;">**НФГ**</span>  ?] + <span style="color: #7A3C00;">**НСДАП**</span>): [+ far_right_coalition_thuringia +]%
 
 [? if nsdap_thuringia_elections_vote >= 8: Стремительный рост популярности <span style="color: #7A3C00;">**НСДАП**</span> на земельных и местных выборах, безусловно, заслуживает пристального внимания. ?]
 
@@ -523,7 +523,7 @@ face-image: img/portraits/frick.jpg
 
 Вильгельм Фрик, осуждённый участник Пивного путча, становится первым <span style="color: #7A3C00;">нацистом</span> в Германии, занявшим министерский пост. Он получает контроль над министерствами внутренних дел и образования и, приняв простым большинством голосов «Закон о чрезвычайных полномочиях» в качестве чрезвычайного декрета, получает власть для коренного преобразования Тюрингии.
 
-Прошли времена <span style="color: #c00000;">Красной</span> Тюрингии. Подозреваемые <span style="color: #c00000;">социалисты</span> и <span style="color: #D3C24D;">демократы</span> массово изгоняются из госаппарата. Создается государственная полиция, в которую Фрик предпочитает набирать <span style="color: #7A3C00;">нацистских</span> чиновников. Все учителя и мэры из числа <span style="color: #700000;">коммунистов</span> уволены, а газеты, критикующие его политику, запрещаются. [? if prussia_leader == "Braun" and interior_minister_party == "SPD": К счастью, Карлу Зеверингу удаётся остановить приём <span style="color: #7A3C00;">нацистов</span> в полицию, приостановив государственные субсидии, что фактически положило конец этой практике. ?]
+Прошли времена <span style="color: #c00000;">Красной</span> Тюрингии. Подозреваемые <span style="color: #c00000;">социалисты</span> и <span style="color: #D3C24D;">демократы</span> массово изгоняются из госаппарата. Создается государственная полиция, в которую Фрик предпочитает набирать <span style="color: #7A3C00;">нацистских</span> чиновников. Все учителя и мэры из числа <span style="color: #700000;">коммунистов</span> уволены, а газеты, критикующие его политику, запрещаются. [? if prussia_leader == "Braun" and interior_minister_party == "SPD": К счастью, Карлу Зеверингу удаётся остановить приём <span style="color: #7A3C00;">нацистов</span> в полицию, приостановив государственные субсидии, что фактически положило конец этой практике.  ?]
 
 Контролируя министерство образования, Фрик назначает исследователей расовых теорий и известных <span style="color: #7A3C00;">нацистов</span> на руководящие посты во многих университетах и запрещает антивоенную книгу *«На Западном фронте без перемен»* к прочтению и постановке. Его попытки предоставить Гитлеру германское гражданство до сих пор не увенчались успехом, что вынуждает Гитлера искать другие пути.
 
@@ -540,7 +540,7 @@ on-arrival: thuringia_right = 1; new_middle_dvp += 2; old_middle_dvp += 2; new_m
 @grand_coalition_thuringia
 title: Сформирована [? if lvp_formed: <span style="color: #000000;">Вей</span><span style="color: #DD0000;">ма</span><span style="color: #FFCC00;">рская</span> ?][? if not lvp_formed: Большая ?] Коалиция!
 subtitle: Нам каким-то образом удалось примириться с буржуазными партиями: теперь они снова готовы править вместе с нами.
-unavailable-subtitle: [? if z_relation < 60 and stegerwald_path: Нам нужно улучшить отношения с [? if z_party_name != "CVP": <span style="color: #000000;">Партией Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?]. ?][? if dvp_toleration_threshold_fail: Нам нужно улучшить отношения с [? if not lvp_formed: <span style="color: #C0A054;">ННП</span> ?][? if lvp_formed: <span style="color: #FFCC00;">ЛНП</span> ?]. ?]
+unavailable-subtitle: [? if z_relation < 60 and stegerwald_path: Нам нужно улучшить отношения с [? if z_party_name != "CVP": <span style="color: #000000;">Партией Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?].  ?][? if dvp_toleration_threshold_fail: Нам нужно улучшить отношения с [? if not lvp_formed: <span style="color: #C0A054;">ННП</span> ?][? if lvp_formed: <span style="color: #FFCC00;">ЛНП</span> ?]. ?]
 view-if: spd_coalition_thuringia >= 50
 choose-if: spd_coalition_possible
 on-arrival: thuringia_spd = 1; rural_nsdap -= 2; new_middle_nsdap -= 2; old_middle_nsdap -= 2; new_middle_spd += 2; old_middle_spd += 2; rural_spd += 2; z_relation += 3; ddp_relation += 3; lvp_relation += 3; pro_republic += 3; prussian_police_loyalty += 0.03; sa_strength -= 25
@@ -586,7 +586,7 @@ on-arrival: thuringia_spd = 1; rural_nsdap -= 3; new_middle_nsdap -= 4; old_midd
 
 @no_majority
 title: Большинство собрать не удаётся!
-subtitle: [? if bourgeois_coalition_thuringia < 50 and far_right_coalition_thuringia < 50 and spd_coalition_thuringia < 50: Ни одна из возможных коалиций не набирает большинства. ?][? if (bourgeois_coalition_thuringia < 50 and not toleration_possible) or (spd_coalition_thuringia >= 50 and not spd_coalition_possible): Буржуазные партии всё ещё не простили нас. ?]
+subtitle: [? if bourgeois_coalition_thuringia < 50 and far_right_coalition_thuringia < 50 and spd_coalition_thuringia < 50: Ни одна из возможных коалиций не набирает большинства. ?][? if (bourgeois_coalition_thuringia < 50 and not toleration_possible) or (spd_coalition_thuringia >= 50 and not spd_coalition_possible):  Буржуазные партии всё ещё не простили нас. ?]
 view-if: bourgeois_coalition_thuringia < 50 and far_right_coalition_thuringia < 50 and not toleration_possible and not spd_coalition_possible
 on-arrival: {!
 let dvp_toleration_threshold = 30;
@@ -630,6 +630,6 @@ title: Сформировать большинство так и не удало
 subtitle: [? if not toleration_possible: Это становится абсурдным. ?][? if toleration_possible: Мы откажемся воздерживаться от вотума недоверия буржуазному правительству, что спровоцирует новые выборы. ?]
 on-arrival: thuringia_election_2_trigger_time = time + 3; thuringia_no_majority = 1 if not thuringia_no_majority; thuringia_no_majority += 1 if thuringia_no_majority; new_middle_nsdap += 4; old_middle_nsdap += 4; rural_nsdap += 2; unemployed_nsdap += 4; pro_republic -= 3; new_middle_spd -= 3 if toleration_possible; old_middle_spd -= 3 if toleration_possible; rural_spd -= 2 if toleration_possible
 
-[? if not toleration_possible: Буржуазные партии по-прежнему не желают принимать наше предложение воздержаться от вотума недоверия.[? if far_right_coalition_thuringia + ddp_r_thuringia >= 50: Один из вариантов, который рассматривала действующая коалиция, — включить в состав как <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, так и <span style="color: #7A3C00;">**НСДАП**</span>, но по очевидным причинам обе партии наложили вето на это предложение. ?] ?][? if toleration_possible: Из-за нашего отказа от любого соглашения о поддержке и нежелания буржуазных партий позволить нам возглавить правительство, большинство сформировать невозможно. В результате на нас возложили большую часть вины за этот тупик, и мы, вероятно, понесём потери на следующих выборах. ?]
+[? if not toleration_possible: Буржуазные партии по-прежнему не желают принимать наше предложение воздержаться от вотума недоверия.[? if far_right_coalition_thuringia + ddp_r_thuringia >= 50:  Один из вариантов, который рассматривала действующая коалиция, — включить в состав как <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, так и <span style="color: #7A3C00;">**НСДАП**</span>, но по очевидным причинам обе партии наложили вето на это предложение.  ?] ?][? if toleration_possible: Из-за нашего отказа от любого соглашения о поддержке и нежелания буржуазных партий позволить нам возглавить правительство, большинство сформировать невозможно. В результате на нас возложили большую часть вины за этот тупик, и мы, вероятно, понесём потери на следующих выборах.  ?]
 
 В отсутствие реальных альтернатив ландтагу грозит роспуск и новые выборы — возможность, которой <span style="color: #7A3C00;">**НСДАП**</span> надеется воспользоваться, сыграв на политической нестабильности и предполагаемом крахе парламентской демократии.

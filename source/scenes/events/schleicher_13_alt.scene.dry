@@ -12,7 +12,7 @@ max-visits: 1
 
 Это делает <span style="color: #FFCC00;">**ЛНП**</span> естественным кандидатом на вхождение в состав <span style="color: #BFC8CC;">**ФНЕГ**</span>, поскольку та давно выступала за <i>Фольксгемайншафт</i> — национальное сообщество для примирения классов на службе нации, предлагаемое в качестве альтернативы <span style="color: #9B0000;">марксистской</span> классовой борьбе.
 
-[? if industrialists_dnef: The <span style="color: #FFCC00;">**ЛНП**</span>, однако, оказывается более восприимчивой к обещаниям Шлейхера промышленникам, которые доминируют в руководстве партии. ?][? if not industrialists_dnef: Разочарование в парламентаризме и демократии заставило большую часть партии поддержать сильного лидера, способного восстановить стабильность и разорвать позорные условия Версальского договора. Убеждённые демократы, преимущественно из левого крыла партии — такие деятели, как Хойс и Дитрих, — бессильны это остановить. ?]
+[? if industrialists_dnef: The <span style="color: #FFCC00;">**ЛНП**</span>, однако, оказывается более восприимчивой к обещаниям Шлейхера промышленникам, которые доминируют в руководстве партии.  ?][? if not industrialists_dnef: Разочарование в парламентаризме и демократии заставило большую часть партии поддержать сильного лидера, способного восстановить стабильность и разорвать позорные условия Версальского договора. Убеждённые демократы, преимущественно из левого крыла партии — такие деятели, как Хойс и Дитрих, — бессильны это остановить. ?]
 
 - @schleicher_2: <span style="color: #BFC8CC;">Фронт Национального Единства Германии</span> приветствует нового члена.
 
@@ -33,23 +33,23 @@ Q.lvp_r = 0;
 
 Текущий состав <span style="color: #BFC8CC;">Фронта Национального Единства Германии</span>:
 
-[? if dnef_formed: - <span style="color: #BFC8CC;">**ФНЕГ**</span> ?]
+[? if dnef_formed: - <span style="color: #BFC8CC;">**ФНЕГ**</span>  ?]
 
-[? if dstp_dnef: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
+[? if dstp_dnef: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span>  ?]
 
-[? if lvp_dnef: - <span style="color: #FFCC00;">**ЛНП**</span> ?]
+[? if lvp_dnef: - <span style="color: #FFCC00;">**ЛНП**</span>  ?]
 
-[? if z_dnef: - <span style="color: #000000;">Партия Центра</span> ?]
+[? if z_dnef: - <span style="color: #000000;">Партия Центра</span>  ?]
 
-[? if z_dnef: - <span style="color: #A2D8E0;">**БНП**</span> ?]
+[? if z_dnef: - <span style="color: #A2D8E0;">**БНП**</span>  ?]
 
-[? if dvp_dnef: - <span style="color: #C0A054;">**ННП**</span> ?]
+[? if dvp_dnef: - <span style="color: #C0A054;">**ННП**</span>  ?]
 
-[? if other_dnef: - **Прочие** ?]
+[? if other_dnef: - **Прочие**  ?]
 
-[? if kvp_dnef: - <span style="color: #0087DC;">**КНП**</span> ?]
+[? if kvp_dnef: - <span style="color: #0087DC;">**КНП**</span>  ?]
 
-[? if dnvp_dnef: - <span style="color: #3E88B3;">**НННП**</span> ?]
+[? if dnvp_dnef: - <span style="color: #3E88B3;">**НННП**</span>  ?]
 
 [? if nvf_dnef: - <span style="color: #142e20;">**ННФ**</span> ?]
 

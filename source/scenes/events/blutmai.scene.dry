@@ -46,7 +46,7 @@ on-display: {!
 @corrupt_police
 on-arrival: kpd_relation += 10; z_relation -= 2; dvp_relation -= 2; lvp_relation -= 2; prussian_police_loyalty += 0.05; hindenburg_angry += 4; prussian_police_loyalty += 0.05 if judicial_reform > 0; kpd_relation += 10 if judicial_reform > 0;
 
-Мы арестовали полицейских, виновных в убийствах, и предали их суду. [? if judicial_reform = 0 : К сожалению, <span style="color: #808080;">реакционная</span> судебная система отпустила их на свободу практически без всякого наказания. ?]
+Мы арестовали полицейских, виновных в убийствах, и предали их суду. [? if judicial_reform = 0 : К сожалению, <span style="color: #808080;">реакционная</span> судебная система отпустила их на свободу практически без всякого наказания.  ?]
 
 Это несколько смягчило гнев <span style="color: #700000;">**коммунистов**</span>, но, конечно, далеко не всех.
 
@@ -83,4 +83,4 @@ unavailable-subtitle: <span style="color: #700000;">Коммунисты</span> 
 on-arrival: kpd_relation += 15; workers_kpd += 3; unemployed_kpd += 5; workers_spd += 5; unemployed_spd += 5; new_middle_spd -= 5; old_middle_spd -= 5; z_relation -= 10; dvp_relation -= 10; coalition_dissent += 2; communist_coalition += 2; rb_strength += 100; rfb_strength += 100; rfb_militancy += 0.1; sa_strength += 50; sh_strength += 50; dvp_right += 3; ddp_right += 3; ddp_relation -= 8; ddp_cohesion -= 1; lvp_right += 3; lvp_relation -= 10; hindenburg_angry += 20
 achievement: die_rote_fahne
 
-Трудно убедить <span style="color: #700000;">**Коммунистов**</span> пойти на демонстрацию вместе с нами, учитывая историю их и нашей партий. Однако в конце концов они уступают. Эта демонстрация пролетарского единства вдохновляет рабочих и ужасает буржуазию и средний класс. [? if in_grand_coalition or in_weimar_coalition: Наши партнёры по правительственной коалиции возмущены нашим совместным выступлением с <span style="color: #700000;">коммунистами</span> и угрожают развалить правительство. ?] <span style="color: #7A3C00;">Ультра</span><span style="color: #3E88B3;">правые</span> военизированные организации активизируют вербовку, чтобы противостоять нам.
+Трудно убедить <span style="color: #700000;">**Коммунистов**</span> пойти на демонстрацию вместе с нами, учитывая историю их и нашей партий. Однако в конце концов они уступают. Эта демонстрация пролетарского единства вдохновляет рабочих и ужасает буржуазию и средний класс. [? if in_grand_coalition or in_weimar_coalition: Наши партнёры по правительственной коалиции возмущены нашим совместным выступлением с <span style="color: #700000;">коммунистами</span> и угрожают развалить правительство.  ?] <span style="color: #7A3C00;">Ультра</span><span style="color: #3E88B3;">правые</span> военизированные организации активизируют вербовку, чтобы противостоять нам.

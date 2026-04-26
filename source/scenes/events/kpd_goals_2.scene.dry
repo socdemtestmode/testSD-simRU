@@ -18,7 +18,7 @@ The <span style="color: #700000;">**КПГ**</span> выдвигает нам н
 
 [? if labor_goal = 1 : - Продолжить поддерживать рабочих в трудовых спорах. ?]
 
-[? if foreign_goal = 1 : - Улучшить наши отношения с <span style="color: #750e0e;">Советским Союзом</span>. ?]
+[? if foreign_goal = 1 : - Улучшить наши отношения с <span style="color: #750e0e;">Советским Союзом</span>.  ?]
 
 #[? if interior_goal = 1 : - Ban the <span style="color: #7A3C00;">**SA**</span> and <span style="color: #3E88B3;">**Stahlhelm**</span>. ?]
 

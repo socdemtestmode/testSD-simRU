@@ -30,7 +30,7 @@ on-arrival: resources -= 1; west_relation += 1; reformist_strength += 3; pacifis
 
 
 @austria
-subtitle: –1 ресурс[? if austrian_parliament_seen and not austrian_civil_war_seen: - Мы также поможем австрийцам противостоять их диктатуре. ?]
+subtitle: -–1 ресурс[? if austrian_parliament_seen and not austrian_civil_war_seen: - Мы также поможем австрийцам противостоять их диктатуре. ?]
 view-if: not rb_explode
 choose-if: resources >= 1
 unavailable-subtitle: Недостаточно ресурсов.
