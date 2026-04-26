@@ -5186,10 +5186,30 @@ if (this.ui && this.ui.show_portraits) {
         }
     }
 }
+
+Q.has_tutorial_even = 0;
+// check if there are any cards in #event, and then go to main if not.
+var scene = this.game.scenes['post_event.tutorial_events_choice'];
+var choices = this._compileChoices(scene);
+if (choices && choices[0].title != "Продолжить...") {
+    Q.has_tutorial_event = 1;
+} else {
+    Q.has_tutorial_even = 0;
+}
+// pre-load all of the event images
+if (this.ui && this.ui.show_portraits) {
+    for (var choice of choices) {
+        var cc = this.game.scenes[choice.id];
+        if (cc.faceImage) {
+            var im = new Image();
+            im.url = cc.faceImage;
+        }
+    }
+}
 if (typeof window !== "undefined" && window.generateBar) {
 }
 !}
-go-to: tutorial_events_main if tutorial_started = 1; bg_change if rubicon; events_choice if has_event = 1 and not rubicon and tutorial_started != 1; main if has_event = 0 and difficulty >= 0 and not rubicon; main.main_easy if has_event = 0 and difficulty < 0 and not rubicon
+go-to: tutorial_events_choice if tutorial_started = 1 and has_tutorial_event = 1; bg_change if rubicon; events_choice if has_event = 1 and not rubicon and tutorial_started != 1; main if has_event = 0 and difficulty >= 0 and not rubicon and tutorial_started != 1; main.main_easy if has_event = 0 and difficulty < 0 and not rubicon and tutorial_started != 1
 
 = [+ month : month +] [+ year +][? if rubicon: , неделя [+ week +] ?]
 
@@ -5202,5 +5222,13 @@ go-to: events_choice if has_event = 1; main if has_event = 0 and difficulty >= 0
 @events_choice
 
 - #event
+
+# This scene is solely for updating numbers after events, and routing to special events.
+
+
+
+@tutorial_events_choice
+
+- #tutorial_event
 
 # This scene is solely for updating numbers after events, and routing to special events.
