@@ -37,11 +37,11 @@ on-arrival: advisor_action_timer = 6
 
 Какую фракцию нам следует поддержать?
 
-- @support_left: Левые
-- @support_center: Центристы
+- @support_left: Левые 
+- @support_center: Центристы 
 - @support_labor: Профсоюзники
-- @support_reform: Реформисты
-- @support_neorev: Неоревизионисты
+- @support_reform: Реформисты 
+- @support_neorev: Неоревизионисты 
 
 
 @support_left
