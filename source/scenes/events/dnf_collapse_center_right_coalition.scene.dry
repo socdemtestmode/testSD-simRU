@@ -60,7 +60,7 @@ on-arrival: prussia_coalition_trigger = 1 if center_right_coalition_prussia < 50
 
 - @prussia_coalition
 - @new_prussia_election_oppo: Мы останемся в оппозиции.
-- @prussian_coalition_formation: Negotiate a new Prussian coalition.
+- @prussian_coalition_formation: Договориться о новой прусской коалиции.
 - @new_prussia_election_called: Отказаться от формирования коалиции и объявить новые выборы.
 
 
@@ -74,7 +74,7 @@ on-arrival: resources -= 1; ddp_left += 2; ddp_cohesion -= 1; liberal_cooperatio
 
 Мы успешно подкупили <span style="color: #D3C24D;">**[+ ddp_name +]**</span>.
 
-- @prussian_coalition_formation: Negotiate a new Prussian coalition.
+- @prussian_coalition_formation: Провести переговоры о новой прусской коалиции.
 
 
 @new_prussia_election_oppo

@@ -1,4 +1,4 @@
-title: The <span style="color: #3E88B3;">**НННП**</span> разрывает отношения с Брюнингом
+title: <span style="color: #3E88B3;">**НННП**</span> разрывает отношения с Брюнингом
 new-page: true
 subtitle: Рост <span style="color: #7A3C00;">национальной</span> <span style="color: #003755;">оппозиции</span> вынудил их действовать.
 tags: event
@@ -7,7 +7,7 @@ on-arrival: pro_republic -= dnvp_votes / 2; hindenburg_angry_bruning += 25; mode
 max-visits: 1
 face-image: img/dnvp4.jpg
 
-= The <span style="color: #3E88B3;">**НННП**</span> разрывает отношения с Брюнингом
+= <span style="color: #3E88B3;">**НННП**</span> разрывает отношения с Брюнингом
 
 Резкий рост популярности <span style="color: #003755;">**НФГ**</span> и <span style="color: #7A3C00;">**НСДАП**</span> на местных выборах вызвал панику в рядах <span style="color: #3E88B3;">**НННП**</span>, поскольку в некогда конструктивной «демократической» партии стремительно распространяются пессимизм и заметный отход от демократии. Теперь они считают, что лишь более тесное сотрудничество с <span style="color: #7A3C00;">национальной</span> <span style="color: #003755;">оппозицией</span> и сдвиг вправо, созвучный настроениям нации, могут спасти их падающие рейтинги.
 
@@ -220,4 +220,4 @@ on-arrival: prussia_coalition_trigger = 1
 
 Прусской коалиции также не удаётся удержаться. Давление со стороны национал-консерваторов в рядах <span style="color: #3E88B3;">**НННП**</span> вынуждает их также выйти из <span style="color: #000000;">буржуазно</span>-<span style="color: #3E88B3;">правой</span> коалиции.
 
-- @prussian_coalition_formation: Negotiate a new Prussian coalition.
+- @prussian_coalition_formation: Провести переговоры о новой прусской коалиции.

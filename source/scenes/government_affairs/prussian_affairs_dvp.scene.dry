@@ -9,7 +9,7 @@ card-image: img/braun.jpg
 
 = Прусский оплот
 
-Пруссия, безусловно крупнейшая и важнейшая земля Германии, управляется нашей партией в коалиции с [? if z_party_name != "ХНП": <span style="color: #000000;">Центром</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?], [? if ddp_name == "НДП": <span style="color: #D3C24D;">**демократами**</span> ?][? if ddp_name == "НГП": <span style="color: #D3C24D;">**Государственной**</span> ?] и <span style="color: #C0A054;">**Народной**</span> партии. Это стабильное и демократическое правительство Германии, возглавляемое [? if prussia_leader == "Браун": умелым Отто Брауном ?][? if prussia_leader == "Брюнинг": Генрихом Брюнингом ?][? if prussia_leader == "Штегервальд": Адамом Штегервальдом ?]. [? if prussia_leader != "Браун":  Без Брауна во главе Пруссии темпы нашей деятельности заметно снизились. ?]
+Пруссия, безусловно крупнейшая и важнейшая земля Германии, управляется нашей партией в коалиции с [? if z_party_name != "ХНП": <span style="color: #000000;">Центром</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?], [? if ddp_name == "НДП": <span style="color: #D3C24D;">**демократами**</span> ?][? if ddp_name == "НГП": <span style="color: #D3C24D;">**Государственной**</span> ?] и <span style="color: #C0A054;">**Народной**</span> партии. Это стабильное и демократическое правительство Германии, возглавляемое [? if prussia_leader == "Браун": умелым Отто Брауном ?][? if prussia_leader == "Брюнинг": Генрихом Брюнингом ?][? if prussia_leader == "Штегервальд": Адамом Штегервальдом ?].[? if prussia_leader != "Браун":  Без Брауна во главе Пруссии темпы нашей деятельности заметно снизились. ?]
 
 Мы можем проводить политику в Пруссии. Включение <span style="color: #C0A054;">**ННП**</span> ослабит наше влияние.
 
@@ -18,14 +18,14 @@ card-image: img/braun.jpg
 - @bureaucracy: Очистить бюрократию от <span style="color: #808080;">реакционных</span> элементов.
 - @ban_sa: Запретить <span style="color: #7A3C00;">**СА**</span>, военизированную организацию <span style="color: #7A3C00;">нацистов</span>.
 - @prosecute_sa: Противодействовать <span style="color: #7A3C00;">**СА**</span> и свести к минимуму создаваемые ими беспорядки.
-- @unban_sa: Отменить запрет на <span style="color: #7A3C00;">**СА**</span> ban.
+- @unban_sa: Отменить запрет на <span style="color: #7A3C00;">**СА**</span>.
 - @ban_rfb: Запретить <span style="color: #8B0000;">**СКФ**</span>, военизированную организацию <span style="color: #700000;">коммунистов</span>.
-- @unban_rfb: Отменить запрет на <span style="color: #8B0000;">**СКФ**</span> ban.
+- @unban_rfb: Отменить запрет на <span style="color: #8B0000;">**СКФ**</span>.
 - @ban_sh: Запретить <span style="color: #3E88B3;">**Стальной Шлем**</span>, военизированную организацию националистов.
-- @unban_sh: Отменить запрет <span style="color: #3E88B3;">**Стального Шлема**</span> ban.
+- @unban_sh: Отменить запрет <span style="color: #3E88B3;">**Стального Шлема**</span>.
 - @negotiate_concordat: Провести переговоры о конкордате с Ватиканом.
 - @sign_concordat: Подписать конкордат с Ватиканом.
-- @root: No new policies are needed.
+- @root: Новые меры не требуются.
 - @easy_discard
 - @cancel_advisor_action
 
@@ -36,7 +36,7 @@ on-arrival: prussian_police_loyalty += 0.08
 
 Исторически сложилось так: полиция наводнена <span style="color: #808080;">реакционерами</span>, но мы понемногу пытаемся это изменить. Мы улучшили процесс обучения и набора кадров, чтобы отбирать людей из более широких слоёв населения и чтобы строже контролировать их политическую деятельность. Кроме того, мы создали комитеты для проверки личного состава полиции и удаления тех, кто симпатизирует <span style="color: #7A3C00;">ультра</span>-<span style="color: #3E88B3;">правым</span>. Это медленная и тяжёлая работа.
 
-The <span style="color: #C0A054;">**ННП**</span> саботирует наши усилия в пользу правых и ослабляет эффективность наших действий.
+<span style="color: #C0A054;">**ННП**</span> саботирует наши усилия в пользу правых и ослабляет эффективность наших действий.
 
 Текущая верность полиции: [+ prussian_police_loyalty : loyalty +].
 
@@ -52,7 +52,7 @@ on-arrival: prussia_purge += 1; prussian_police_loyalty += 0.03; nationalism -= 
 
 Бюрократия глубоко <span style="color: #808080;">реакционна</span>, и многие злоупотребляют своей властью в пользу <span style="color: #3E88B3;">правых сил</span>. Устранив <span style="color: #3E88B3;">промонархические</span> и <span style="color: #7A3C00;">продиктаторские</span> элементы, мы сможем демократизировать ее. Некоторые из наших оппонентов утверждают, что мы посягаем на свободы личности, но, возможно, этого требует безопасность республики.
 
-The <span style="color: #C0A054;">**ННП**</span> наполняет бюрократический аппарат своими сторонниками-монархистами и промышленниками.
+<span style="color: #C0A054;">**ННП**</span> наполняет бюрократический аппарат своими сторонниками-монархистами и промышленниками.
 
 
 @ban_sa
@@ -77,11 +77,11 @@ on-arrival: sa_strength *= 0.97; sa_militancy -= 0.02; prussian_police_loyalty -
 view-if: sa_banned = 1
 on-arrival: sa_banned = 0; sa_strength += 100; sa_militancy += 0.05; coup_progress += 2 if sa_coup_progress >= 6
 
-The <span style="color: #7A3C00;">**СА**</span> больше не под запретом. Они немедленно начинают массовую вербовку.
+<span style="color: #7A3C00;">**СА**</span> больше не под запретом. Они немедленно начинают массовую вербовку.
 
 
 @ban_sh
-subtitle: The <span style="color: #C0A054;">**ННП**</span> это не понравится.
+subtitle: <span style="color: #C0A054;">**ННП**</span> это не понравится.
 on-arrival: sh_strength *= 0.9; sh_strength *= 0.75 if prussian_police_loyalty >= 0.75; sh_banned = 1; dvp_relation -= 6; prussian_police_loyalty -= 0.1; coalition_dissent += 1 if spd_in_government = 1 and in_grand_coalition = 1 and president = "Гинденбург"; sh_ban_timer = 6; coalition_dissent += 1 if in_social_catholic_coalition_prussia and cvp_formed; coalition_dissent += 1 if in_grand_coalition; sh_coup_progress = coup_progress; coup_progress -= 1 if coup_progress >= 6; hindenburg_angry += 8
 view-if: sh_banned == 0
 
@@ -92,7 +92,7 @@ view-if: sh_banned == 0
 view-if: sh_banned = 1
 on-arrival: sh_banned = 0; sh_strength += 100; coup_progress += 2 if sh_coup_progress >= 6; hindenburg_angry -= 5
 
-The <span style="color: #3E88B3;">**Стальной Шлем**</span> больше не запрещён.
+<span style="color: #3E88B3;">**Стальной Шлем**</span> больше не запрещён.
 
 
 
@@ -111,7 +111,7 @@ on-arrival: rfb_banned = 0; rfb_strength += 50; prussian_police_loyalty -= 0.1; 
 
 
 @negotiate_concordat
-subtitle: Это не понравится <span style="color: #C0A054;">**ННП**</span> won't like this.
+subtitle: Это не понравится <span style="color: #C0A054;">**ННП**</span>.
 view-if: (prussian_concordat_progress < 2 and z_leader != "Каас") or (prussian_concordat_progress < 1 and z_leader = "Каас") and prussian_concordat = 0
 on-arrival: prussian_concordat_progress += 1; z_relation += 2*(1-dissent); dvp_relation -= 2; ddp_relation -= 1
 
@@ -119,10 +119,10 @@ on-arrival: prussian_concordat_progress += 1; z_relation += 2*(1-dissent); dvp_r
 
 
 @sign_concordat
-subtitle: The <span style="color: #C0A054;">**ННП**</span> это не понравится.
+subtitle: <span style="color: #C0A054;">**ННП**</span> это не понравится.
 view-if: (prussian_concordat_progress >= 2 and not z_leader = "Каас") or (prussian_concordat_progress >= 1 and z_leader = "Каас") and prussian_concordat = 0
 on-arrival: prussian_concordat = 1; z_relation += 5; catholics_spd += 3*(1-dissent); catholics_dnvp -= 2 if dnvp_ideology == "Радикалы"; coalition_dissent += 1 if in_grand_coalition; dvp_relation -= 5; ddp_relation -= 3; ddp_cohesion -= 1
 
 Мы подписали конкордат между Свободным государством Пруссия и Римско-католической церковью, гарантирующий свободу вероисповедания для католиков в Пруссии. Это создаёт основу для переговоров о заключении общегерманского конкордата.
 
-[? if dnvp_ideology == "Радикалы": Члены-католики <span style="color: #3E88B3;">**НННП**</span> в Пруссии открыто конфликтуют со своим руководством из-за голосования: многие покидают партию.  ?] The <span style="color: #C0A054;">**ННП**</span> вступила в острые разногласия с [? if z_party_name != "ХНП": партией <span style="color: #000000;">Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?].
+[? if dnvp_ideology == "Радикалы": Члены-католики <span style="color: #3E88B3;">**НННП**</span> в Пруссии открыто конфликтуют со своим руководством из-за голосования: многие покидают партию.  ?] <span style="color: #C0A054;">**ННП**</span> вступила в острые разногласия с [? if z_party_name != "ХНП": партией <span style="color: #000000;">Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?].

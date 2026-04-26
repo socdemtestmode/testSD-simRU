@@ -10,7 +10,7 @@ max-visits: 6
 
 = Рейхсбаннер
 
-The *Рейхсбаннер* <span style="color: #000000;"><b><i>Шварц</i></b></span>-<span style="color: #DD0000;"><b><i>Рот</i></b></span>-<span style="color: #FFCC00;"><b><i>Гольд</i></b></span> (Союз республиканских фронтовиков - Черный-Красный-Золотой) наша массовая организация, нацеленная на защиту Республики от угрожающих ей экстремистов. Некоторые называют ее парамилитарной, хотя едва ли в ней что-то военное. Она официально связана с демократическими партиями: <span style="color: #c00000;">**СДПГ**</span>, [? if z_party_name != "ХНП": <span style="color: #000000;">Центр</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?], и <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, но, все-таки, главной составная часть — <span style="color: #c00000;">**СДПГ**</span>.
+*Рейхсбаннер* <span style="color: #000000;"><b><i>Шварц</i></b></span>-<span style="color: #DD0000;"><b><i>Рот</i></b></span>-<span style="color: #FFCC00;"><b><i>Гольд</i></b></span> (Союз республиканских фронтовиков - Черный-Красный-Золотой) наша массовая организация, нацеленная на защиту Республики от угрожающих ей экстремистов. Некоторые называют ее парамилитарной, хотя едва ли в ней что-то военное. Она официально связана с демократическими партиями: <span style="color: #c00000;">**СДПГ**</span>, [? if z_party_name != "ХНП": <span style="color: #000000;">Центр</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?], и <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, но, все-таки, главной составная часть — <span style="color: #c00000;">**СДПГ**</span>.
 
 [? if workers_spd < 46 or workers_spd < workers_nsdap or workers_spd < workers_kpd : Рейхсбаннер всё труднее набирать новобранцев, поскольку <span style="color: #c00000;">**СДПГ**</span> больше не доминирующая среди рабочих партия. Многие её члены покинули организацию. ?]
 
@@ -33,7 +33,7 @@ on-arrival: resources -= rb_militarization_cost; rb_investment += 1; rb_strength
 
 Некоторые в нашей партии критикуют растущую милитаризацию Рейхсбаннера. Они говорят, что он подражает <span style="color: #3E88B3;">правым националистам</span> и <span style="color: #700000;">коммунистам</span>, а также рискует оттолкнуть наших союзников из центристских партий. С другой стороны, всё больше левых радикалов переходят в наши организации, уходя от <span style="color: #700000;">коммунистов</span>.
 
-[? if not cvp_leave_reichsbanner and not rb_exit: [? if strife < 5: The [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] осуждает милитаризацию Рейхсбаннера, и её члены покидают <span style="color: #000000;">рес</span><span style="color: #DD0000;">пуб</span><span style="color: #FFCC00;">ликанскую</span> организацию.  ?][? if strife >= 5: Видя беспорядки, что заполонили улицы Германии, [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] и [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] похоже, убеждены в необходимости милитаризации Рейхсбаннер. Они смягчают свою критику.  ?] ?]
+[? if not cvp_leave_reichsbanner and not rb_exit: [? if strife < 5: [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] осуждает милитаризацию Рейхсбаннера, и её члены покидают <span style="color: #000000;">рес</span><span style="color: #DD0000;">пуб</span><span style="color: #FFCC00;">ликанскую</span> организацию.  ?][? if strife >= 5: Видя беспорядки, что заполонили улицы Германии, [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] и [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] похоже, убеждены в необходимости милитаризации Рейхсбаннер. Они смягчают свою критику.  ?] ?]
 
 
 
@@ -49,7 +49,7 @@ on-arrival: rb_militancy += 0.02; funded_reichsbanner -= 1
 
 Рейхсбаннер уже выполняет свою задачу. Нет причин менять то, что и так работает.
 
-- @return: Continue...
+- @return: Продолжить…
 
 
 

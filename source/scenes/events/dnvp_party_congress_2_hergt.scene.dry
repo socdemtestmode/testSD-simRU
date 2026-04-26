@@ -1,4 +1,4 @@
-title: Съезд <span style="color: #3E88B3;">**НННП**</span> Congress
+title: Съезд <span style="color: #3E88B3;">**НННП**</span>
 subtitle: <span style="color: #3E88B3;">НННП</span> решает свою судьбу...
 view-if: year = 1929 and month = 11 and dnvp_leader = "Хергт"
 on-arrival: pro_republic += 3
@@ -7,7 +7,7 @@ tags: event
 face-image: img/dnvp2.jpg
 new-page: true
 
-= Съезд <span style="color: #3E88B3;">**НННП**</span> Congress
+= Съезд <span style="color: #3E88B3;">**НННП**</span>
 
 Разногласия в <span style="color: #3E88B3;">**НННП**</span> вспыхнули с новой силой из-за неоднозначных решений руководства. Позиция о референдуме по плану Юнга, [? if was_in_right_coalition == 1:  выход из правительства[? if spd_in_government == 1: , который привел социалистов к власти ?] ?].
 

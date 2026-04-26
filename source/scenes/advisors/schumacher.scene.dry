@@ -12,7 +12,7 @@ new-page: true
 - @emergency_fundraising
 - @build_reichsbanner
 - @moderate_economic_plan
-- @root: Return to main
+- @root: Вернуться
 
 
 @emergency_fundraising

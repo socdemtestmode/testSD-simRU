@@ -34,7 +34,7 @@ on-arrival: lautenbach_plan_time = time + 12 if time >= lautenbach_plan_time; la
 
 Наконец-то в экономике наметились признаки улучшения. Буржуазные партии рады, что мы реализуем их план восстановления экономики, и оказывают нам полную поддержку. Доверие инвесторов, порождённое нашими успехами, привело к небольшому оживлению в частном секторе, а также к притоку капитала от иностранных инвесторов. [? if not lautenbach_wtb: Однако рабочие недовольны медленными темпами повышения заработной платы. ?]
 
-[? if in_popular_front or in_left_front: The <span style="color: #700000;">**КПГ**</span> выступает против экономического плана, видя в нём спасение капитализма, а не шаг к настоящему <span style="color: #9b0000;">социализму</span>. ?]
+[? if in_popular_front or in_left_front: <span style="color: #700000;">**КПГ**</span> выступает против экономического плана, видя в нём спасение капитализма, а не шаг к настоящему <span style="color: #9b0000;">социализму</span>. ?]
 
 
 @lautenbach_wtb
@@ -50,7 +50,7 @@ max-visits: 1
 
 Наши расходы на общественные работы снизили потребность в страховании по безработице и социальном обеспечении, а также, благодаря эффекту мультипликатора, увеличили налоговые поступления по мере обращения новых денег в экономике, что помогает возместить часть наших затрат. Мы продолжаем реинвестировать большую часть этих новых доходов в программу.
 
-[? if in_popular_front or in_left_front: The <span style="color: #700000;">**КПГ**</span> выступает против экономического плана, считая его спасением капитализма, а не шагом к настоящему <span style="color: #9b0000;">социализму</span>. ?]
+[? if in_popular_front or in_left_front: <span style="color: #700000;">**КПГ**</span> выступает против экономического плана, считая его спасением капитализма, а не шагом к настоящему <span style="color: #9b0000;">социализму</span>. ?]
 
 
 @economic_plan_menu
@@ -65,7 +65,7 @@ max-visits: 1
 - @moderate_plan
 - @moderate_plan_limited_budget
 - @austerity
-- @root: Do not implement the economic plan.
+- @root: Не реализовывать экономический план.
 - @easy_discard
 - @cancel_advisor_action
 
@@ -142,7 +142,7 @@ on-arrival: wtb_enactment_continuation_finish = time + 6 if wtb_implemented == 1
 @implement_wtb_no_deficit
 title: Реализовать план ВТБ.
 subtitle: -[+ wtb_budget +] Бюджет.[? if wtb_budget == 3 : Наша политика в интересах рабочих снизила стоимость этого плана. ?]
-unavailable-subtitle: [? if unemployed < 8: Безработица достаточно низка, так что время для плана ВТБ прошло. ?] [? if in_grand_coalition and (finance_minister_party == "ННП" or economic_minister_party == "ННП" and dvp_ideology != "Левые") and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span> будет мешать нам, используя свои позиции в [? if finance_minister_party == "ННП": Министерстве финансов ?][? if economic_minister_party == "ННП" and finance_minister_party == "ННП": &nbsp;и ?][? if economic_minister_party == "ННП": Министерстве экономики ?].  ?][? if (in_weimar_coalition or in_grand_coalition) and (finance_minister_party == "ЛНП" or economic_minister_party == "ЛНП" and lvp_ideology != "Левые") and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span> будет мешать нам, используя свои позиции в [? if finance_minister_party == "ЛНП": Министерстве финансов ?][? if economic_minister_party == "ЛНП" and finance_minister_party == "ЛНП": &nbsp;и ?][? if economic_minister_party == "ЛНП": Министерстве экономики ?].  ?] [? if in_grand_coalition and dvp_ideology == "Правые" and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span> инициирует превентивный вотум недоверия. ?][? if in_weimar_coalition or in_grand_coalition and lvp_ideology == "Правые" and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span> инициирует превентивный вотум недоверия. ?]
+unavailable-subtitle: [? if unemployed < 8: Безработица достаточно низка, так что время для плана ВТБ прошло. ?] [? if in_grand_coalition and (finance_minister_party == "ННП" or economic_minister_party == "ННП" and dvp_ideology != "Левые") and not lvp_formed: <span style="color: #C0A054;">**ННП**</span> будет мешать нам, используя свои позиции в [? if finance_minister_party == "ННП": Министерстве финансов ?][? if economic_minister_party == "ННП" and finance_minister_party == "ННП": &nbsp;и ?][? if economic_minister_party == "ННП": Министерстве экономики ?]. ?][? if (in_weimar_coalition or in_grand_coalition) and (finance_minister_party == "ЛНП" or economic_minister_party == "ЛНП" and lvp_ideology != "Левые") and lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> будет мешать нам, используя свои позиции в [? if finance_minister_party == "ЛНП": Министерстве финансов ?][? if economic_minister_party == "ЛНП" and finance_minister_party == "ЛНП": &nbsp;и ?][? if economic_minister_party == "ЛНП": Министерстве экономики ?]. ?] [? if in_grand_coalition and dvp_ideology == "Правые" and not lvp_formed: <span style="color: #C0A054;">**ННП**</span> инициирует превентивный вотум недоверия. ?][? if in_weimar_coalition or in_grand_coalition and lvp_ideology == "Правые" and lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> инициирует превентивный вотум недоверия. ?]
 view-if: budget >= wtb_budget and wtb_implemented == 0 and wtb_adopted == 1
 choose-if: unemployed > 8 and ((((economic_minister_party != "ННП" and finance_minister_party != "ННП") or dvp_ideology == "Левые") and (dvp_ideology != "Правые" and in_grand_coalition) or not in_grand_coalition) and not lvp_formed) or ((((economic_minister_party != "ЛНП" and finance_minister_party != "ЛНП") or lvp_ideology == "Левые") and (lvp_ideology != "Правые" and (in_grand_coalition or in_weimar_coalition)) or (not in_grand_coalition and not in_weimar_coalition)) and lvp_formed)
 on-arrival: budget -= wtb_budget; coalition_dissent += 1 if (in_grand_coalition or in_minority_government); works_program += 1; unemployed -= 4; workers_spd += 8*(1-dissent); unemployed_spd += 8*(1-dissent); workers_spd -= 4*(1-dissent) if schleicher_spd; unemployed_spd -= 4*(1-dissent) if schleicher_spd; reichswehr_strength += 20 if schleicher_spd; reichswehr_loyalty += 0.05 if reichswehr_spd; reichswehr_militancy += 0.5 if reichswehr_spd; wtb_implemented += 1; kpd_coalition_dissent += 1; kpd_relation -= 5 if in_popular_front or in_left_front; inflation += 2; dvp_right += 1; ddp_left += 1; ddp_cohesion -= 1; lvp_right += 1; pro_republic += 3*(1-dissent); economic_growth += 2.8; economic_growth -= 0.8 if schleicher_spd; economic_plan_goal_spd += 1; wtb_rally = 0
@@ -150,13 +150,13 @@ achievement: wirtschaftspolitik
 
 Мы начали реализацию плана ВТБ. Деньги поступают в экономику через инвестиции в масштабные общественные работы. Буржуазные партии выражают обеспокоенность инфляцией и расходами, предпочитая для борьбы с экономическим кризисом снижение налогов. Однако они неохотно принимают наш план, успокоенные созданным нами профицитом.
 
-[? if in_popular_front or in_left_front: The <span style="color: #700000;">**КПГ**</span> выступает против плана ВТБ, видя в нём спасение капитализма, а не шаг к настоящему <span style="color: #9b0000;">социализму</span>. ?]
+[? if in_popular_front or in_left_front: <span style="color: #700000;">**КПГ**</span> выступает против плана ВТБ, видя в нём спасение капитализма, а не шаг к настоящему <span style="color: #9b0000;">социализму</span>. ?]
 
 
 @implement_wtb_deficit
 title: Реализовать план ВТБ.
 subtitle: -[+ wtb_budget +] бюджет — мы перейдём к дефициту бюджета.[? if wtb_budget == 3 : Наша политика в интересах рабочих снизила стоимость плана. ?]
-unavailable-subtitle: [? if unemployed < 8: Уровень безработицы достаточно низок, и время для плана ВТБ уже прошло. ?] [? if in_grand_coalition and (finance_minister_party == "ННП" or economic_minister_party == "ННП") and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span> будет мешать нам, используя своё положение в [? if finance_minister_party == "ННП": Министерстве финансов ?][? if economic_minister_party == "ННП" and finance_minister_party == "ННП": &nbsp;и ?][? if economic_minister_party == "ННП": Министерстве экономики ?].  ?][? if (in_grand_coalition or in_weimar_coalition) and (finance_minister_party == "ЛНП" or economic_minister_party == "ЛНП") and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span> будет мешать нам, используя своё положение в [? if finance_minister_party == "ЛНП": Министерстве финансов ?][? if economic_minister_party == "ЛНП" and finance_minister_party == "ЛНП": &nbsp;и ?][? if economic_minister_party == "ЛНП": Министерстве экономики ?].  ?] [? if in_grand_coalition and dvp_ideology != "Левые" and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span> инициирует упреждающий вотум недоверия. ?][? if (in_grand_coalition or in_weimar_coalition) and lvp_ideology != "Левые" and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span> инициирует упреждающий вотум недоверия. ?]
+unavailable-subtitle: [? if unemployed < 8: Уровень безработицы достаточно низок, и время для плана ВТБ уже прошло. ?] [? if in_grand_coalition and (finance_minister_party == "ННП" or economic_minister_party == "ННП") and not lvp_formed: <span style="color: #C0A054;">**ННП**</span> будет мешать нам, используя своё положение в [? if finance_minister_party == "ННП": Министерстве финансов ?][? if economic_minister_party == "ННП" and finance_minister_party == "ННП": &nbsp;и ?][? if economic_minister_party == "ННП": Министерстве экономики ?]. ?][? if (in_grand_coalition or in_weimar_coalition) and (finance_minister_party == "ЛНП" or economic_minister_party == "ЛНП") and lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> будет мешать нам, используя своё положение в [? if finance_minister_party == "ЛНП": Министерстве финансов ?][? if economic_minister_party == "ЛНП" and finance_minister_party == "ЛНП": &nbsp;и ?][? if economic_minister_party == "ЛНП": Министерстве экономики ?]. ?] [? if in_grand_coalition and dvp_ideology != "Левые" and not lvp_formed: <span style="color: #C0A054;">**ННП**</span> инициирует упреждающий вотум недоверия. ?][? if (in_grand_coalition or in_weimar_coalition) and lvp_ideology != "Левые" and lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> инициирует упреждающий вотум недоверия. ?]
 view-if: budget < wtb_budget and wtb_implemented == 0 and wtb_adopted == 1
 choose-if: unemployed > 8 and (((economic_minister_party != "ННП" and finance_minister_party != "ННП" and (dvp_ideology == "Левые" and in_grand_coalition) or not in_grand_coalition) and not lvp_formed) or ((economic_minister_party != "ЛНП" and finance_minister_party != "ЛНП" and (lvp_ideology == "Левые" and (in_grand_coalition or in_weimar_coalition)) or (not in_grand_coalition and not in_weimar_coalition)) and lvp_formed))
 on-arrival: coalition_dissent += 2; coalition_dissent += 1 if in_minority_government; coalition_dissent += 1 if chancellor == "Брюнинг"; coalition_dissent -= 1 if z_leader == "Кайзер"; works_program += 1; budget -= wtb_budget; unemployed -= 4; workers += 2; workers_spd += 8*(1-dissent); unemployed_spd += 8*(1-dissent); workers_spd -= 4*(1-dissent) if schleicher_spd; unemployed_spd -= 4*(1-dissent) if schleicher_spd; reichswehr_strength += 20 if schleicher_spd; reichswehr_loyalty += 0.05 if reichswehr_spd; reichswehr_militancy += 0.5 if reichswehr_spd; capital_strike_progress += 1; wtb_implemented += 1; kpd_coalition_dissent += 1; kpd_relation -= 5 if in_popular_front or in_left_front; inflation += 3; dvp_right += 3; ddp_right += 1; ddp_cohesion -= 1; dvp_relation -= 10; ddp_relation -= 5; z_relation -= 5; lvp_relation -= 8; lvp_right += 2; pro_republic += 3*(1-dissent); economic_growth += 3; economic_growth -= 1 if schleicher_spd; economic_plan_goal_spd += 1; wtb_rally = 0
@@ -164,7 +164,7 @@ achievement: wirtschaftspolitik
 
 Мы перешли к дефицитному финансированию. Наши партнёры по коалиции возмущены, но план работ всё равно принят. Деньги начинают поступать в экономику благодаря инвестициям в масштабные общественные работы.
 
-[? if in_popular_front or in_left_front: The <span style="color: #700000;">**КПГ**</span> выступает против плана ВТБ, видя в нём спасение капитализма, а не шаг к настоящему <span style="color: #9b0000;">социализму</span>. ?]
+[? if in_popular_front or in_left_front: <span style="color: #700000;">**КПГ**</span> выступает против плана ВТБ, видя в нём спасение капитализма, а не шаг к настоящему <span style="color: #9b0000;">социализму</span>. ?]
 
 
 ####################### left economic policies (socializations)
@@ -198,7 +198,7 @@ achievement: wirtschaftspolitik
 - @nationalize_deficit_1
 - @nationalize_without_compensation
 - @empower_workers
-- @return: No, we should not do this.
+- @return: Нет, нам не следует этого делать.
 
 
 
@@ -277,7 +277,7 @@ achievement: wirtschaftspolitik
 
 [? if unemployed < 10 : Уровень безработицы достаточно низок, и план, похоже, не даёт ожидаемого эффекта.  ?]
 
-[? if in_popular_front or in_left_front: The <span style="color: #700000;">**КПГ**</span> выступает против этого экономического плана, видя в нём спасение капитализма, а не шаг к настоящему <span style="color: #9b0000;">социализму</span>. ?]
+[? if in_popular_front or in_left_front: <span style="color: #700000;">**КПГ**</span> выступает против этого экономического плана, видя в нём спасение капитализма, а не шаг к настоящему <span style="color: #9b0000;">социализму</span>. ?]
 
 
 @moderate_plan_limited_budget
@@ -297,4 +297,4 @@ achievement: wirtschaftspolitik
 
 [? if unemployed < 10 : Уровень безработицы достаточно низок, поэтому план, похоже, не даёт желаемого эффекта.  ?]
 
-[? if in_popular_front or in_left_front: The <span style="color: #700000;">**КПГ**</span> выступает против экономического плана, видя в нём спасение капитализма, а не шаг к настоящему <span style="color: #9b0000;">социализму</span>. ?]
+[? if in_popular_front or in_left_front: <span style="color: #700000;">**КПГ**</span> выступает против экономического плана, видя в нём спасение капитализма, а не шаг к настоящему <span style="color: #9b0000;">социализму</span>. ?]

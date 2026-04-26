@@ -20,14 +20,14 @@ card-image: img/braun.jpg
 - @bureaucracy: Очистить бюрократический аппарат от <span style="color: #808080;">реакционных</span> элементов.
 - @ban_sa: Запретить <span style="color: #7A3C00;">**СА**</span>, военизированное крыло <span style="color: #7A3C00;">нацистов</span>.
 - @prosecute_sa: Принять меры против <span style="color: #7A3C00;">**СА**</span> и свести к минимуму организуемые ими беспорядки.
-- @unban_sa: Отменить запрет на <span style="color: #7A3C00;">**СА**</span> ban.
+- @unban_sa: Отменить запрет на <span style="color: #7A3C00;">**СА**</span>.
 - @ban_rfb: Запретить <span style="color: #8B0000;">**СКФ**</span>, военизированное крыло <span style="color: #700000;">коммунистов</span>.
-- @unban_rfb: Отменить запрет на <span style="color: #8B0000;">**СКФ**</span> ban.
+- @unban_rfb: Отменить запрет на <span style="color: #8B0000;">**СКФ**</span>.
 - @ban_sh: Запретить <span style="color: #3E88B3;">**Стальной Шлем**</span>, военизированную организацию националистов.
-- @unban_sh: Отменить запрет <span style="color: #3E88B3;">**Стального Шлема**</span> ban.
+- @unban_sh: Отменить запрет <span style="color: #3E88B3;">**Стального Шлема**</span>.
 - @negotiate_concordat: Провести переговоры с Ватиканом о конкордате.
 - @sign_concordat: Подписать конкордат с Ватиканом.
-- @root: No new policies are needed.
+- @root: В новых мерах нет необходимости.
 - @easy_discard
 - @cancel_advisor_action
 
@@ -75,7 +75,7 @@ on-arrival: sa_strength *= 0.95; sa_militancy -= 0.02; prussian_police_loyalty -
 view-if: sa_banned = 1
 on-arrival: sa_banned = 0; sa_strength += 100; sa_militancy += 0.05; coup_progress += 2 if sa_coup_progress >= 6
 
-The <span style="color: #7A3C00;">**СА**</span> больше не находятся под запретом. Они немедленно начинают массовый набор новобранцев.
+<span style="color: #7A3C00;">**СА**</span> больше не находятся под запретом. Они немедленно начинают массовый набор новобранцев.
 
 
 @ban_sh
@@ -89,7 +89,7 @@ view-if: sh_banned == 0 and not in_social_catholic_coalition_prussia
 view-if: sh_banned = 1
 on-arrival: sh_banned = 0; sh_strength += 100; coup_progress += 2 if sh_coup_progress >= 6; hindenburg_angry -= 5
 
-The <span style="color: #3E88B3;">**Стальной Шлем**</span> больше не запрещён.
+<span style="color: #3E88B3;">**Стальной Шлем**</span> больше не запрещён.
 
 
 

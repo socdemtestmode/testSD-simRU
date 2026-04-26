@@ -28,7 +28,7 @@ on-arrival: spd_in_government = 1; spd_toleration = 0; spd_toleration_right = 0;
 
 Генрих Брюнинг приветствует нас в своём новом кабинете. Теперь мы можем выбрать министерские посты.
 
-- @election_1928.ministries: Now, we must select our ministries.
+- @election_1928.ministries: Теперь мы должны выбрать наши министерства.
 
 
 @vonc_yes
@@ -68,4 +68,4 @@ on-arrival: prussia_coalition_trigger = 1
 
 Прусская коалиция также не смогла выстоять: давление со стороны национал-консерваторов в рядах <span style="color: #3E88B3;">**НННП**</span> заставляет их выйти из <span style="color: #000000;">буржуазно</span>-<span style="color: #3E88B3;">правой</span> коалиции и там.
 
-- @prussian_coalition_formation: Negotiate a new Prussian coalition.
+- @prussian_coalition_formation: Провести переговоры о новой прусской коалиции.

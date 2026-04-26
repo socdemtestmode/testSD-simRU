@@ -1,5 +1,5 @@
 title: <span style="color: #C0A054;">**ННП**</span>: партийное голосование
-subtitle: The <span style="color: #C0A054;">**ННП**</span> выбирает своего нового лидера…
+subtitle: <span style="color: #C0A054;">**ННП**</span> выбирает своего нового лидера…
 view-if: year = 1929 and month = 12 and dvp_reform = 0 and not lvp_formed and not (lvp_timer_1_trigger and (lvp_merger_1_timer or lvp_trigger_1_time))
 on-arrival: dvp_right += 3 if dvp_relation < 30; dvp_left += 2 if dvp_relation >= 50; dvp_right += 2 if not in_grand_coalition
 max-visits: 1
@@ -35,7 +35,7 @@ face-image: img/portraits/curtius.jpg
 
 Юлиус Курциус неожиданно победил и стал председатем партии, сменив Штреземана. Однако правое крыло создало специальный пост вице-председателя, чтобы сохранить своё влияние. Делегация рейхстага также может действовать независимо: её лидером остаётся Шольц.
 
-Это всё равно отличные новости для нас и для наших отношений с <span style="color: #C0A054;">**ННП**</span>. [? if in_grand_coalition:  Мы заметили снижение напряжённости в коалиции. ?]
+Это всё равно отличные новости для нас и для наших отношений с <span style="color: #C0A054;">**ННП**</span>.[? if in_grand_coalition:  Мы заметили снижение напряжённости в коалиции. ?]
 
 
 @scholz

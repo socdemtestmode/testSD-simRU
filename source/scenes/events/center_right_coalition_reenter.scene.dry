@@ -1,4 +1,4 @@
-title: The <span style="color: #3E88B3;">**НННП**</span> возвращается в правительство
+title: <span style="color: #3E88B3;">**НННП**</span> возвращается в правительство
 new-page: true
 subtitle: Правоцентристская коалиция восстановлена.
 tags: event
@@ -6,7 +6,7 @@ view-if: year = 1930 and young_plan_ratified and was_in_center_right_coalition a
 on-arrival: still_in_center_right_coalition = 1
 max-visits: 1
 
-= The <span style="color: #3E88B3;">**НННП**</span> возвращается в правительство
+= <span style="color: #3E88B3;">**НННП**</span> возвращается в правительство
 
 План Юнга ратифицирован, и споры вокруг него в основном утихли, что побудило <span style="color: #3E88B3;">**НННП**</span> вернуться в состав кабинета, который она ранее покинула. Главная причина их возвращения в правительство — страх перед <span style="color: #c00000;">социалистическим</span> влиянием на политику Брюнинга, которое стало возможным, поскольку мы воздерживаемся от вотума недоверия его администрации. В результате Брюнинг больше не зависит от наших голосов.
 
@@ -14,7 +14,7 @@ max-visits: 1
 
 
 @center_right_coalition
-title: Нас в правительстве заменяет <span style="color: #3E88B3;">**НННП**</span> replaces us in government.
+title: Нас в правительстве заменяет <span style="color: #3E88B3;">**НННП**</span>.
 on-arrival: spd_toleration = 0; in_right_coalition = 0; in_center_right_coalition = 1
 
 Мы ничего не можем поделать. Хотя на самом деле вы, игрок, могли кое-что сделать. Зачем вы так поступили?

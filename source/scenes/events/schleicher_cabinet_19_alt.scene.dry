@@ -17,7 +17,7 @@ tags: event
 
 @treviranus
 title: Куно фон Вестарп — [? if dnvp_ideology == "Радикалы": &nbsp;Бывший лидер ?] <span style="color: #3E88B3;">**НННП**</span>
-subtitle: вновь предпочтительный кандидат Гинденбурга и [? if dnvp_leader != "Вестарп":  бывший  ?] <span style="color: #3E88B3;">** лидер НННП**</span> party leader.
+subtitle: вновь предпочтительный кандидат Гинденбурга и [? if dnvp_leader != "Вестарп":  бывший  ?] <span style="color: #3E88B3;">** лидер НННП**</span>.
 face-image: img/portraits/Treviranus.jpg
 on-arrival: {!
 Q.chancellor = "Тревиранус";

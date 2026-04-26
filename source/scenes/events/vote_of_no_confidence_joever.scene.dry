@@ -20,9 +20,9 @@ go-to: vonc_menu
 
 @social_liberal_coalition
 title: Мы можем сформировать <span style="color: #c00000;">социал-</span>[? if not lvp_formed: <span style="color: #D3C24D;">либерально-</span> ?][? if lvp_formed: <span style="color: #FFCC00;">либеральную</span> ?]коалицию.
-subtitle: <span style="color: #c00000;">**СДПГ**</span> + [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] ([+ social_liberal_coalition +]%)
+subtitle: <span style="color: #c00000;">**СДПГ**</span> +[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?]([+ social_liberal_coalition +]%)
 view-if: social_liberal_coalition >= 50 and liberal_parliament == 0 and bourgeois_parliament_ddp == 0 and cvp_formed
-unavailable-subtitle: <span style="color: #c00000;">СДПГ</span> + [? if not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span> ?][? if lvp_formed: <span style="color: #FFCC00;">ЛНП</span> ?] ([+ social_liberal_coalition +]%) [? if not ((ddp_relation >= 65 and ddp_ideology == "Правые") or (ddp_relation >= 55 and ddp_ideology == "Умеренные") or (ddp_relation >= 45 and ddp_ideology == "Левые")) and not lvp_formed: - У нас нет надлежащих отношений с <span style="color: #D3C24D;">[+ ddp_name +]</span>.  ?] [? if not ((lvp_relation >= 75 and lvp_ideology == "Правые") or (lvp_relation >= 65 and lvp_ideology == "Умеренные") or (lvp_relation >= 55 and lvp_ideology == "Левые")) and lvp_formed: - У нас нет надлежащих отношений с <span style="color: #FFCC00;">**ЛНП**</span> ?]
+unavailable-subtitle: <span style="color: #c00000;">СДПГ</span> + [? if not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span> ?][? if lvp_formed: <span style="color: #FFCC00;">ЛНП</span> ?]([+ social_liberal_coalition +]%)[? if not ((ddp_relation >= 65 and ddp_ideology == "Правые") or (ddp_relation >= 55 and ddp_ideology == "Умеренные") or (ddp_relation >= 45 and ddp_ideology == "Левые")) and not lvp_formed: - У нас нет надлежащих отношений с <span style="color: #D3C24D;">[+ ddp_name +]</span>. ?] [? if not ((lvp_relation >= 75 and lvp_ideology == "Правые") or (lvp_relation >= 65 and lvp_ideology == "Умеренные") or (lvp_relation >= 55 and lvp_ideology == "Левые")) and lvp_formed: - У нас нет надлежащих отношений с <span style="color: #FFCC00;">**ЛНП**</span> ?]
 choose-if: ((((ddp_relation >= 65 and ddp_ideology == "Правые") or (ddp_relation >= 55 and ddp_ideology == "Умеренные") or (ddp_relation >= 45 and ddp_ideology == "Левые")) and not lvp_formed) or (((lvp_relation >= 75 and lvp_ideology == "Правые") or (lvp_relation >= 65 and lvp_ideology == "Умеренные") or (lvp_relation >= 55 and lvp_ideology == "Левые")) and lvp_formed))
 on-arrival: leverage = spd_r
 go-to: election_1928.social_liberal_coalition_cvp
@@ -45,13 +45,13 @@ on-arrival: communist_coalition += 1; workers_kpd += 3; kpd_relation += 5
 go-to: support_kpd_weimar if in_weimar_coalition; support_kpd_grand if in_grand_coalition
 
 
-The <span style="color: #700000;">**КПГ**</span> не заинтересована в соглашении о «воздержании от вотума недоверия»; они поддержат нас, только если смогут войти в правительство в составе коалиции. А если это соглашение состоится, правые партии уже не будут склонны нас поддерживать.
+<span style="color: #700000;">**КПГ**</span> не заинтересована в соглашении о «воздержании от вотума недоверия»; они поддержат нас, только если смогут войти в правительство в составе коалиции. А если это соглашение состоится, правые партии уже не будут склонны нас поддерживать.
 
 
 @support_kpd_grand
 on-arrival: support_kpd_grand = 1
 
-- @election_1928.popular_front_coalition: Form a "Popular Front" coalition?
+- @election_1928.popular_front_coalition: Сформировать коалицию «Народного фронта»?
 - @election_1928.left_coalition
 - @let_it_happen: Неважно. Пусть голосование состоится.
 

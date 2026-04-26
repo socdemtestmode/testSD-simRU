@@ -1,4 +1,4 @@
-title: Первый съезд <span style="color: #000000;">**[+ z_party_name +]**</span> Congress
+title: Первый съезд <span style="color: #000000;">**[+ z_party_name +]**</span>
 subtitle: Будущее этой новой партии решится здесь.
 view-if: cvp_formed
 on-arrival: {!
@@ -238,7 +238,7 @@ tags: event
 face-image: img/cvp.jpg
 new-page: true
 
-= Первый съезд <span style="color: #000000;">**[+ z_party_name +]**</span> Congress
+= Первый съезд <span style="color: #000000;">**[+ z_party_name +]**</span>
 
 Официально основана <span style="color: #000000;">Христианская народная партия</span> (<span style="color: #000000;">**[+ z_party_name +]**</span>)! Адам Штегервальд, инициатор этого объединения и лидер бывшей партии <span style="color: #000000;">Центра</span>, избран временным лидером новой партии.
 
@@ -255,9 +255,9 @@ subtitle: Фракции обеих партий будут реорганизо
 
 Реорганизованные фракции:
 
-<span style="color: #003755;">Крайне правые протестанты</span> (<span style="color: #3E88B3;">**НННП**</span>) - ??? - [? if (cvp_ideology != "Правые" or nsdap_votes < 35): Ничтожная ?][? if (cvp_ideology == "Правые" and nsdap_votes >= 30): Незначительная ?]
+<span style="color: #003755;">Крайне правые протестанты</span> (<span style="color: #3E88B3;">**НННП**</span>) - ??? -[? if (cvp_ideology != "Правые" or nsdap_votes < 35): Ничтожная ?][? if (cvp_ideology == "Правые" and nsdap_votes >= 30): Незначительная ?]
 
-<span style="color: #3E3B2D;">Крайне правые католики</span> (<span style="color: #000000;">**Центр**</span>) - ??? - [? if (cvp_ideology != "Правые" or nsdap_votes < 30): Ничтожная ?][? if (cvp_ideology == "Правые" and nsdap_votes >= 30): Незначительная ?]
+<span style="color: #3E3B2D;">Крайне правые католики</span> (<span style="color: #000000;">**Центр**</span>) - ??? -[? if (cvp_ideology != "Правые" or nsdap_votes < 30): Ничтожная ?][? if (cvp_ideology == "Правые" and nsdap_votes >= 30): Незначительная ?]
 
 <span style="color: #3E88B3;">Национал-консерваторы</span> (<span style="color: #3E88B3;">**НННП**</span>) — Гереке —[? if cvp_ideology == "Левые": Незначительная ?][? if cvp_ideology != "Левые" and not presidential_points_lead: Ограниченная ?][? if cvp_ideology != "Левые" and presidential_points_lead and not conservative_right_points_lead: Влиятельная ?][? if cvp_ideology != "Левые" and conservative_right_points_lead: Могущественная ?]
 
@@ -427,9 +427,9 @@ if (!Q.goerdeler_unlock && !Q.bolz_unlock && !Q.westarp_unlock && !Q.lejeune_jun
 
 В первых нескольких турах голосования ни одному кандидату не удаётся заручиться поддержкой большинства партии. Ввиду сложившегося тупика предложены новые компромиссные кандидатуры.
 
-<span style="color: #003755;">Ультраправые протестанты</span> (<span style="color: #3E88B3;">**НННП**</span>) - ??? - [? if (cvp_ideology != "Правые" or nsdap_votes < 35): Периферийные ?][? if (cvp_ideology == "Правые" and nsdap_votes >= 30): Незначительные ?]
+<span style="color: #003755;">Ультраправые протестанты</span> (<span style="color: #3E88B3;">**НННП**</span>) - ??? -[? if (cvp_ideology != "Правые" or nsdap_votes < 35): Периферийные ?][? if (cvp_ideology == "Правые" and nsdap_votes >= 30): Незначительные ?]
 
-<span style="color: #3E3B2D;">Ультраправые католики</span> (<span style="color: #000000;">Центр**[+ z_party_name +]**</span>) - ??? - [? if (cvp_ideology != "Правые" or nsdap_votes < 30): Периферийные ?][? if (cvp_ideology == "Правые" and nsdap_votes >= 25): Незначительные ?]
+<span style="color: #3E3B2D;">Ультраправые католики</span> (<span style="color: #000000;">Центр**[+ z_party_name +]**</span>) - ??? -[? if (cvp_ideology != "Правые" or nsdap_votes < 30): Периферийные ?][? if (cvp_ideology == "Правые" and nsdap_votes >= 25): Незначительные ?]
 
 <span style="color: #3E88B3;">Национал-консерваторы</span> (<span style="color: #3E88B3;">**НННП**</span>) — Вестарп / Лежен-Юнг / Гёрделер —[? if cvp_ideology == "Левые": Незначительные ?][? if cvp_ideology != "Левые" and not presidential_points_lead: Ограниченные ?][? if cvp_ideology != "Левые" and presidential_points_lead: Влиятельные ?][? if cvp_ideology != "Левые" and conservative_right_points_lead: Могущественные ?]
 

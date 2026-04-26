@@ -18,7 +18,7 @@ max-visits: 4
 - @build_support: Мы должны заручиться дополнительной поддержкой, прежде чем стать Народной Партией.
 - @support_peoples_party_hard: Несмотря на протесты от фракции центристов и левых, мы станем Народной партией.
 - @no_new_ideas: Нет, мы всегда будем партией рабочего класса.
-- @root: Perhaps we can discuss this at a later time.
+- @root: Возможно, мы сможем обсудить это позже.
 - @easy_discard
 - @cancel_advisor_action
 

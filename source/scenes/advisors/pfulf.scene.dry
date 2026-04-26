@@ -13,7 +13,7 @@ new-page: true
 - @build_peoples_party
 - @campaigning_peoples_party
 - @womens_rights_
-- @root: Return to main
+- @root: Назад
 
 
 @support_peoples_party

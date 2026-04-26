@@ -1,4 +1,4 @@
-title: The <span style="color: #c00000;">**СДПГ**</span> ускользает!
+title: <span style="color: #c00000;">**СДПГ**</span> ускользает!
 subtitle: Мы дали Шлейхеру слишком много влияния на нас.
 view-if: chancellor = "Шляйхер" and dnef_formed and schleicher_spd_influence >= 10
 new-page: true
@@ -33,7 +33,7 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= The <span style="color: #c00000;">**СДПГ**</span> «приручена»!
+= <span style="color: #c00000;">**СДПГ**</span> «приручена»!
 
 Рядовые члены партии, верные Шлейхеру, постепенно продвигались по карьерной лестнице, пока новый исполнительный комитет наконец не сменил старую гвардию, служившую партии со времён основания республики.
 

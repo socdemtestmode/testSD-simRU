@@ -1,5 +1,5 @@
 title: <span style="color: #C0A054;">**ННП**</span> проводит съезд
-subtitle: The <span style="color: #C0A054;">**ННП**</span> решает свою судьбу…
+subtitle: <span style="color: #C0A054;">**ННП**</span> решает свою судьбу…
 view-if: year = 1928 and month = 12 and dvp_congress_trigger = 1 and dnvp_ideology = "Радикалы" and not lvp_formed and lvp_timer_trigger == 0
 on-arrival: dvp_left += 1 if dvp_relation >= 50; dvp_right += 1 if dvp_relation < 35; dvp_right += 1 if not in_grand_coalition
 max-visits: 1
@@ -7,9 +7,9 @@ tags: event
 face-image: img/dvp.jpg
 new-page: true
 
-= Съезд <span style="color: #C0A054;">**ННП**</span> Congress
+= Съезд <span style="color: #C0A054;">**ННП**</span>
 
-A party congress has been called within the <span style="color: #C0A054;">**ННП**</span> созвала съезд по внутренней реформы, которая превратила бы ее в настоящую народную партию, а не в партию промышленников.
+<span style="color: #C0A054;">**ННП**</span> созвала съезд по внутренней реформы, которая превратила бы ее в настоящую народную партию, а не в партию промышленников.
 
 Немецкие промышленники не собираются отказываться от своего голоса в <span style="color: #C0A054;">**ННП**</span> так просто, и, учитывая ухудшающееся здоровье Штреземана, это, вероятно, его последний шанс сохранить контроль над партией. [? if not in_grand_coalition: Левое крыло <span style="color: #C0A054;">**ННП**</span> также ослабло из-за отсутствия коалиций с социалистами.  ?]
 

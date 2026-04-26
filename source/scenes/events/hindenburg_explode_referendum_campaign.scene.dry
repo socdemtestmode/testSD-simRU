@@ -42,7 +42,7 @@ max-visits: 1
 title: Создать межпартийный предвыборный комитет совместно с <span style="color: #000000;">Вей</span><span style="color: #DD0000;">ма</span><span style="color: #FFCC00;">рской</span> коалицией.
 view-if: not reichsbanner_campaign_hindenburg
 choose-if: impeachment_z and ((impeachment_ddp and not lvp_formed) or (impeachment_lvp and lvp_formed)) and z_relation >= 50 and ((ddp_relation >= 50 and not lvp_formed) or (lvp_relation >= 50 and lvp_formed))
-unavailable-subtitle: [? if not impeachment_z: <span style="color: #000000;">Партия Центра</span> не на нашей стороне.  ?][? if not impeachment_ddp and not lvp_formed: The <span style="color: #D3C24D;">[+ ddp_name +]</span> не на нашей стороне. ?][? if not impeachment_lvp and lvp_formed: <span style="color: #FFCC00;">ЛНП</span> не на нашей стороне.  ?][? if z_relation < 50 and impeachment_z: Нам нужно улучшить отношения с <span style="color: #000000;">Партией Центра</span>.  ?][? if ddp_relation < 50 and impeachment_ddp: Нам нужно улучшить отношения с <span style="color: #D3C24D;">[+ ddp_name +]</span>.  ?][? if lvp_relation < 50 and impeachment_lvp: Нам нужны лучшие отношения с <span style="color: #FFCC00;">ЛНП</span>. ?]
+unavailable-subtitle: [? if not impeachment_z: <span style="color: #000000;">Партия Центра</span> не на нашей стороне.  ?][? if not impeachment_ddp and not lvp_formed: <span style="color: #D3C24D;">[+ ddp_name +]</span> не на нашей стороне. ?][? if not impeachment_lvp and lvp_formed: <span style="color: #FFCC00;">ЛНП</span> не на нашей стороне.  ?][? if z_relation < 50 and impeachment_z: Нам нужно улучшить отношения с <span style="color: #000000;">Партией Центра</span>.  ?][? if ddp_relation < 50 and impeachment_ddp: Нам нужно улучшить отношения с <span style="color: #D3C24D;">[+ ddp_name +]</span>. ?][? if lvp_relation < 50 and impeachment_lvp: Нам нужны лучшие отношения с <span style="color: #FFCC00;">ЛНП</span>. ?]
 on-arrival: pro_republic += 3; catholics_nsdap -= 4; catholics_z += 3; catholics_spd += 1; z_relation += 3; dvp_relation += 3; ddp_relation += 3; ddp_left += 2; ddp_cohesion += 2; dvp_left += 3; bourgeois_campaign_hindenburg = 1
 face-image: img/weimar_coalition.jpg
 go-to: do_campaign
@@ -74,7 +74,7 @@ face-image: img/reichsbanner_2.jpg
 go-to: do_campaign
 max-visits: 1
 
-The <span style="color: #3E88B3;">**Стальной Шлем**</span> и <span style="color: #7A3C00;">**СА**</span> слишком долго донимали нас — пора нанести ответный удар. Буржуазные партии критикуют нас за то, что мы превращаем Рейхсбаннер в <span style="color: #c00000;">социалистическое</span> ополчение.
+<span style="color: #3E88B3;">**Стальной Шлем**</span> и <span style="color: #7A3C00;">**СА**</span> слишком долго донимали нас — пора нанести ответный удар. Буржуазные партии критикуют нас за то, что мы превращаем Рейхсбаннер в <span style="color: #c00000;">социалистическое</span> ополчение.
 
 
 @hope

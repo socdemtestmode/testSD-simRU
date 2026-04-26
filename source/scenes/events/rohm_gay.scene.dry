@@ -21,7 +21,7 @@ face-image: img/portraits/rohm.jpg
  - — Die Weltbühne, немецкий еженедельный журнал
 
 - @expose_rohm: Мы опубликуем письма, так как разоблачение <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">льности</span> столь высокопоставленного <span style="color: #7A3C00;">нацистского</span> чиновника, несомненно, снизит их привлекательность для основного электората.
-- @no_expose_rohm: The <span style="color: #c00000;">**СДПГ**</span> формально выступает в защиту прав <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">лов</span>, и предавать огласке столь личное дело — дурной тон.
+- @no_expose_rohm: <span style="color: #c00000;">**СДПГ**</span> формально выступает в защиту прав <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">лов</span>, и предавать огласке столь личное дело — дурной тон.
 
 
 @expose_rohm

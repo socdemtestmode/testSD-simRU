@@ -27,7 +27,7 @@ tags: event
 
 С приближением президентских выборов Гитлер, вероятно, предпримет последнюю попытку получить гражданство.
 
-- @brunswick: The [? if dvp_exist: <span style="color: #C0A054;">**ННП**</span> ?][? if not dvp_exist: [? if not cvp_formed: <span style="color: #3E88B3;">**НННП**</span> ?][? if cvp_formed: <span style="color: #000000;">**[+ z_party_name +]**</span> ?] ?], в сотрудничестве с <span style="color: #7A3C00;">**НСДАП**</span> в Брауншвейге, назначает Гитлера на государственную службу.
+- @brunswick: …[? if dvp_exist: <span style="color: #C0A054;">**ННП**</span> ?][? if not dvp_exist: [? if not cvp_formed: <span style="color: #3E88B3;">**НННП**</span> ?][? if cvp_formed: <span style="color: #000000;">**[+ z_party_name +]**</span> ?] ?], в сотрудничестве с <span style="color: #7A3C00;">**НСДАП**</span> в Брауншвейге, назначает Гитлера на государственную службу.
 - @brunswick_fail: Правительство Брауншвейга делает ещё одну попытку назначить Гитлера на государственную службу.
 - @nothing: Поскольку <span style="color: #7A3C00;">нацисты</span> не входят ни в одно земельное правительство, Гитлер по-прежнему не может получить гражданство.
 

@@ -1,4 +1,4 @@
-title: Съезд <span style="color: #C0A054;">**ННП**</span> Congress
+title: Съезд <span style="color: #C0A054;">**ННП**</span>
 subtitle: Здесь решится будущее либерального движения.
 view-if: lvp_merger_timer == 1
 max-visits: 1
@@ -6,7 +6,7 @@ tags: event
 face-image: img/dvp.jpg
 new-page: true
 
-= Съезд <span style="color: #C0A054;">**ННП**</span> Congress
+= Съезд <span style="color: #C0A054;">**ННП**</span>
 
 Штреземан созвал экстренный съезд <span style="color: #C0A054;">**ННП**</span> по спорному вопросу о слиянии с <span style="color: #D3C24D;">**[+ ddp_name +]**</span>. Либеральное объединение уже добилось значительных успехов в подготовке основы для <span style="color: #FFCC00;">единой либеральной партии</span>, включая создание общенациональной структуры и разработку политической программы, ориентированной на средний класс и в целом поддерживаемой обеими партиями.
 

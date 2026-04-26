@@ -29,7 +29,7 @@ go-to: fiscal_menu
 - @raise_progressive: Сделать налоговую систему более прогрессивной, повысив налоги для богатых и снизив их для бедных.
 - @regressive
 - @tariffs
-- @root: Do not change the tax system.
+- @root: Не менять налоговую систему.
 - @easy_discard
 - @cancel_advisor_action
 
@@ -125,7 +125,7 @@ title: Вместо этого изменить тарифы.
 - @raise_tariffs
 - @lower_tariffs
 - @fiscal_menu: Изменить внутренние налоги вместо тарифов.
-- @root: Do not change tariffs or taxes.
+- @root: Не менять тарифы или налоги.
 - @easy_discard
 
 

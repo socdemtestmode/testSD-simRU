@@ -52,7 +52,7 @@ achievement: drei_pfeile
 
 Наши силы вступают в столкновение с правительственными войсками и их сторонниками на улицах Берлина, и вспыхивают вооружённые бои. <span style="color: #808080;">Реакционеры</span> не отступают со своих позиций. Мы оказались в невыгодном положении.
 
-- @civil_war: It is a civil war.
+- @civil_war: Это гражданская война.
 
 
 
@@ -60,7 +60,7 @@ achievement: drei_pfeile
 
 @surrender
 title: Отказаться от прусского правительства.
-subtitle: The <span style="color: #700000;">**СКФ**</span> будет сражаться в одиночку.
+subtitle: <span style="color: #700000;">**СКФ**</span> будет сражаться в одиночку.
 on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; spd_prussia = 0; prussia_leader = "Гёрделер"; workers_spd -= 5; workers_kpd -= 5; unemployed_kpd -= 5; unemployed_spd -= 5; left_dissent += 10; labor_dissent += 10; rb_militancy = rb_militancy/2; rb_strength -= 1000; rfb_banned = 1; rfb_strength -= 200; rfb_militancy -= 0.25; kpd_relation -= 30; communist_coalition -= 3; next_election_time_prussia = time + 48; next_election_year_prussia = year + 4
 
 Оказавшие сопротивление <span style="color: #700000;">коммунисты</span> жестоко подавлены, и без поддержки Рейхсбаннера мы вынуждены сдать прусское правительство <span style="color: #808080;">реакционерам</span>. На <span style="color: #c00000;">социал-демократию</span> опускается покров безнадёжности и отчаяния. Мы проиграли. <span style="color: #700000;">**КПГ**</span> никогда нам не доверится снова. Многие члены Рейхсбаннера, деморализованные отсутствием призыва к действию, просто покинули его ряды.

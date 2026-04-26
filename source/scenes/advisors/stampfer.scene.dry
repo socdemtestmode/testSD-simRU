@@ -14,7 +14,7 @@ new-page: true
 - @media_
 - @faction_support_
 - @kpd_cooperation
-- @root: Return to main
+- @root: Вернуться на главный экран
 
 
 

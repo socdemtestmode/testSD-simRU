@@ -20,7 +20,7 @@ card-image: img/braun.jpg
 - @ban_sh: Запретить <span style="color: #3E88B3;">**Стальной Шлем**</span> — националистическую военизированную организацию.
 - @unban_rfb: Отменить введённый против <span style="color: #8B0000;">**СКФ**</span> запрет.
 - @free_kpd: Защитить <span style="color: #8B0000;">**КПГ**</span> демонстрации от <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правых</span>.
-- @root: No new policies are needed.
+- @root: Новые меры не нужны.
 - @easy_discard
 - @cancel_advisor_action
 

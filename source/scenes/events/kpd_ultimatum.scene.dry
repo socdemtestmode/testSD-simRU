@@ -1,4 +1,4 @@
-title: The <span style="color: #700000;">**КПГ**</span> проверяет, как мы справляемся с достижением целей коалиции…
+title: <span style="color: #700000;">**КПГ**</span> проверяет, как мы справляемся с достижением целей коалиции…
 view-if: (in_popular_front or in_left_front) and (kpd_ultimatum_timer = 0 or (welfare_goal_completed and agriculture_goal_completed and economy_goal_completed and finance_goal_completed and labor_goal_completed and reichswehr_goal_completed)) and kpd_goals_seen = 1 and kpd_ultimatum_seen = 0 and spd_in_government
 on-arrival: {!
 Q.kpd_ultimatum_seen = 1;
@@ -65,8 +65,8 @@ on-arrival: kpd_relation -= 10; workers_spd -= 8; unemployed_spd -= 8;
 К сожалению, нам не удалось достичь всех целей, которые поставила <span style="color: #700000;">**КПГ**</span>. Они планируют вынести вотум недоверия нашему правительству и уже начали пропагандистскую кампанию по его делегитимизации в глазах рабочих.
 
 - @appeal: Призвать <span style="color: #700000;">коммунистов</span> к терпению — мы стараемся!
-- @kpd_vote_of_no_confidence.support_center: Could we form a new government based on the [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist: (and possibly <span style="color: #C0A054;">**DVP**</span>)?]?][? if lvp_formed: <span style="color: #FFCC00;">**LVP**</span>?]?
-- @kpd_vote_of_no_confidence.let_it_happen: Let the vote happen.
+- @kpd_vote_of_no_confidence.support_center: Сформировать новое правительство на основе[? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?]и[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist: (и, возможно, <span style="color: #C0A054;">**ННП**</span>) ?] ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?]?
+- @kpd_vote_of_no_confidence.let_it_happen: Позволить голосованию состояться.
 - @no_vonc: Они не могут вынести вотум недоверия из-за конституционных реформ, но могут препятствовать работе нашего правительства при любой возможности.
 - @spd_majority: У нас и без них есть большинство.
 

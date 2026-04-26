@@ -1,5 +1,5 @@
 title: Кризис страхования по безработице
-subtitle: The <span style="color: #FFCC00;">**ЛНП**</span> выдвигает ультиматум.
+subtitle: <span style="color: #FFCC00;">**ЛНП**</span> выдвигает ультиматум.
 new-page: true
 view-if: spd_in_government = 1 and (year = 1929 and month >= 10) and (in_grand_coalition or in_weimar_coalition) and lvp_formed and not ui0_seen and not constructive_vonc
 on-arrival: budget -= 1 if budget >= 1; lvp_relation -= 3; ui1_seen = 1
@@ -12,7 +12,7 @@ face-image: img/Kollwitz_Arbeitslosigkeit.jpg
 
 План Юнга не принёс ожидаемого многими облегчения для бюджета, и <span style="color: #FFCC00;">**ЛНП**</span> нацелилась на сокращение программы страхования по безработице, чтобы сбалансировать бюджет. Из-за растущего числа безработных программа оказалась на грани финансового краха, и нам нужно решить, как это предотвратить.
 
-[? if lvp_right - lvp_left > 6: The <span style="color: #FFCC00;">**ЛНП**</span> с момента своего основания значительно сместилась вправо, а её промышленные спонсоры желают ни много ни мало краха нашего правительства. ?][? if not lvp_right - lvp_left > 8: Наш кабинет предложил компромисс: немного урезать программу и слегка повысить взносы, но неясно, согласится ли <span style="color: #FFCC00;">**ЛНП**</span> сама на это. ?]
+[? if lvp_right - lvp_left > 6: <span style="color: #FFCC00;">**ЛНП**</span> с момента своего основания значительно сместилась вправо, а её промышленные спонсоры желают ни много ни мало краха нашего правительства. ?][? if not lvp_right - lvp_left > 8: Наш кабинет предложил компромисс: немного урезать программу и слегка повысить взносы, но неясно, согласится ли <span style="color: #FFCC00;">**ЛНП**</span> сама на это. ?]
 
 - @destroy: Что ж. Мы разорвём эту коалицию.
 - @accept: К сожалению, мы должны принять требования <span style="color: #FFCC00;">**ЛНП**</span> ради сохранения стабильности.

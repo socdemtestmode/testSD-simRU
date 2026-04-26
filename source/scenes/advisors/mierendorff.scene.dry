@@ -13,7 +13,7 @@ new-page: true
 - @iron_front_buildup
 - @form_iron_front
 - @nazi_urgency
-- @root: Return to main
+- @root: Вернуться на главный экран
 
 
 @iron_front_buildup

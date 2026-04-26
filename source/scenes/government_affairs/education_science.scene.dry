@@ -37,7 +37,7 @@ view-if: not last_advisor_action
 - @increase_science
 - @structure
 - @curriculum
-- @return: Do not enact any policies for now.
+- @return: Пока не принимать никаких мер.
 - @easy_discard
 - @cancel_advisor_action
 
@@ -133,7 +133,7 @@ go-to: vote_of_no_confidence.vonc_menu if ((in_weimar_coalition and not in_socia
 
 # instant VONC from zentrum
 
-The <span style="color: #c00000;">**СДПГ**</span>, [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, [? if not dvp_exist: бывшая ?]<span style="color: #C0A054;">**ННП**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?], и <span style="color: #700000;">**КПГ**</span> голосуют за светское образование, преодолевая сопротивление религиозно ориентированных [? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] и <span style="color: #3E88B3;">**НННП**</span>. Мы профинансировали создание светских общественных школ, которые заменят некоторые из прежних конфессиональных школ.
+<span style="color: #c00000;">**СДПГ**</span>, [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, [? if not dvp_exist: бывшая ?]<span style="color: #C0A054;">**ННП**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?], и <span style="color: #700000;">**КПГ**</span> голосуют за светское образование, преодолевая сопротивление религиозно ориентированных [? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] и <span style="color: #3E88B3;">**НННП**</span>. Мы профинансировали создание светских общественных школ, которые заменят некоторые из прежних конфессиональных школ.
 
 [? if in_weimar_coalition or in_grand_coalition or in_popular_front or in_emergency_government: Конечно, [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] бунтует против этого предложения[? if not constructive_vonc: , и призвали к вынесению вотума недоверия нашему правительству ?]. ?]
 

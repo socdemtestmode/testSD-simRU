@@ -9,7 +9,7 @@ card-image: img/braun.jpg
 
 = Прусский оплот
 
-Пруссией, бесспорно крупнейшей и важнейшей землёй Германии, управляет наша партия в коалиции с [? if not in_social_liberal_coalition_prussia: [? if z_party_name != "ХНП": <span style="color: #000000;">Партией Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] ?][? if not in_social_catholic_coalition_prussia: &nbsp;и [? if ddp_name == "НДП" and not lvp_formed: <span style="color: #D3C24D;">**Демократической партией**</span> ?][? if ddp_name == "НГП" and not lvp_formed: <span style="color: #D3C24D;">**Государственной партией**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**Либеральной Народной партией**</span> ?] партиями ?]. Это самое стабильное и демократическое правительство земли в Германии, во главе которого стоит [? if prussia_leader == "Браун": умелый Отто Браун ?][? if prussia_leader == "Брюнинг": Генрих Брюнинг ?][? if prussia_leader == "Штегервальд": Адам Штегервальд ?]. [? if prussia_leader != "Браун": Без Брауна у руля Пруссии темпы нашей деятельности заметно снизились. ?]
+Пруссией, бесспорно крупнейшей и важнейшей землёй Германии, управляет наша партия в коалиции с [? if not in_social_liberal_coalition_prussia: [? if z_party_name != "ХНП": <span style="color: #000000;">Партией Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] ?][? if not in_social_catholic_coalition_prussia: &nbsp;и [? if ddp_name == "НДП" and not lvp_formed: <span style="color: #D3C24D;">**Демократической партией**</span> ?][? if ddp_name == "НГП" and not lvp_formed: <span style="color: #D3C24D;">**Государственной партией**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**Либеральной Народной партией**</span> ?] партиями ?]. Это самое стабильное и демократическое правительство земли в Германии, во главе которого стоит [? if prussia_leader == "Браун": умелый Отто Браун ?][? if prussia_leader == "Брюнинг": Генрих Брюнинг ?][? if prussia_leader == "Штегервальд": Адам Штегервальд ?].[? if prussia_leader != "Браун": Без Брауна у руля Пруссии темпы нашей деятельности заметно снизились. ?]
 
 Мы можем проводить политику в Пруссии.
 
@@ -18,14 +18,14 @@ card-image: img/braun.jpg
 - @bureaucracy: Очистить бюрократический аппарат от <span style="color: #808080;">реакционных</span> элементов.
 - @ban_sa: Запретить <span style="color: #7A3C00;">**СА**</span>, <span style="color: #7A3C00;">нацистскую</span> военизированную группировку.
 - @prosecute_sa: Противодействовать <span style="color: #7A3C00;">**СА**</span> и свести к минимуму создаваемые ими беспорядки.
-- @unban_sa: Отменить запрет <span style="color: #7A3C00;">**СА**</span> ban.
+- @unban_sa: Отменить запрет <span style="color: #7A3C00;">**СА**</span>.
 - @ban_rfb: Запретить <span style="color: #8B0000;">**СКФ**</span>, <span style="color: #700000;">коммунистическую</span> военизированную группировку.
-- @unban_rfb: Отменить запрет <span style="color: #8B0000;">**СКФ**</span> ban.
+- @unban_rfb: Отменить запрет <span style="color: #8B0000;">**СКФ**</span>.
 - @ban_sh: Запретить <span style="color: #3E88B3;">**Стальной Шлем**</span>, националистическую военизированную группировку.
-- @unban_sh: Отменить запрет <span style="color: #3E88B3;">**Стального Шлема**</span> ban.
+- @unban_sh: Отменить запрет <span style="color: #3E88B3;">**Стального Шлема**</span>.
 - @negotiate_concordat: Провести переговоры о конкордате с Ватиканом.
 - @sign_concordat: Подписать конкордат с Ватиканом.
-- @root: No new policies are needed.
+- @root: Новые политические меры не требуются.
 - @easy_discard
 - @cancel_advisor_action
 
@@ -73,7 +73,7 @@ on-arrival: sa_strength *= 0.97; sa_militancy -= 0.02; prussian_police_loyalty -
 view-if: sa_banned = 1
 on-arrival: sa_banned = 0; sa_strength += 100; sa_militancy += 0.05; coup_progress += 2 if sa_coup_progress >= 6
 
-The <span style="color: #7A3C00;">**СА**</span> больше не под запретом. Они немедленно начинают массовую вербовку.
+<span style="color: #7A3C00;">**СА**</span> больше не под запретом. Они немедленно начинают массовую вербовку.
 
 
 @ban_sh
@@ -87,7 +87,7 @@ view-if: sh_banned == 0 and not in_social_catholic_coalition_prussia
 view-if: sh_banned = 1
 on-arrival: sh_banned = 0; sh_strength += 100; coup_progress += 2 if sh_coup_progress >= 6; hindenburg_angry -= 5
 
-The <span style="color: #3E88B3;">**Стальной Шлем**</span> больше не запрещён.
+<span style="color: #3E88B3;">**Стальной Шлем**</span> больше не запрещён.
 
 
 

@@ -75,7 +75,7 @@ view-if: not hindenburg_run
 
 Отсутствие кандидата, вокруг которого могли бы сплотиться немецкие центристы и умеренные правые, создаёт вакуум, который, вероятно, будет заполнен, когда другие партии в ближайшем будущем объявят своих кандидатов.
 
-- @presidential_election_1932_candidate: Who will the candidates be now that Hindenburg is retiring?
+- @presidential_election_1932_candidate: Что же будут за кандидаты, если Гинденбург уходит на покой?
 
 
 @hindenburg_running
@@ -87,4 +87,4 @@ on-arrival: new_middle_kvp += 4; old_middle_kvp += 4; rural_kvp += 2
 
 Комитет Зама по переизбранию Гинденбурга распущен и заменён гораздо более крупной общенациональной организацией «Объединённые комитеты в поддержку Гинденбурга», которая будет координировать работу с различными местными комитетами по всей стране. Назначением Вестарпа и Гереке на высшие посты и исключением <span style="color: #c00000;">социалистических</span> и [? if z_party_name != "ХНП": <span style="color: #000000;">центристских</span> ?][? if z_party_name == "ХНП": аффилированных с <span style="color: #000000;">**ХНП**</span> ?] политиков, они пытаются позиционировать Гинденбурга как кандидата от умеренных правых.
 
-- @presidential_election_1932_candidate: Who will the candidates be now that Hindenburg has decided to run for re-election?
+- @presidential_election_1932_candidate: Кто ещё выдвинулся, когда стало ясно, что Гинденбург баллотируется на второй срок?

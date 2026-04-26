@@ -140,7 +140,7 @@ on-arrival: war_choices += 1
 
 Имеется [+ rfb_strength +] тысяч бойцов-коммунистов в рядах <span style="color: #700000;"></span> <span style="color: #8B0000;">**СКФ**</span>, в дополнение к рабочим, которые поддерживают <span style="color: #700000;">**КПГ**</span>.
 
-[? if kpd_relation >= 60 : The <span style="color: #700000;">**КПГ**</span> полностью на нашей стороне благодаря нашим хорошим отношениям. ?][? if kpd_relation < 60 and kpd_relation >= 45 : Большая часть <span style="color: #700000;">**КПГ**</span> на нашей стороне благодаря хорошим отношениям с нами. ?][? if kpd_relation < 45 : The <span style="color: #700000;">**КПГ**</span> не поддерживает нас. ?]
+[? if kpd_relation >= 60 : <span style="color: #700000;">**КПГ**</span> полностью на нашей стороне благодаря нашим хорошим отношениям. ?][? if kpd_relation < 60 and kpd_relation >= 45 : Большая часть <span style="color: #700000;">**КПГ**</span> на нашей стороне благодаря хорошим отношениям с нами. ?][? if kpd_relation < 45 : <span style="color: #700000;">**КПГ**</span> не поддерживает нас. ?]
 
 
 @general_strike
@@ -186,7 +186,7 @@ go-to: defeat if total_defeat = 1; long_war if long_war = 1; republic_victory if
 
 Наше сопротивление останется на страницах истории, и в будущем наши имена будут чтить. Но сейчас всё потеряно.
 
-- @game_over: Game over.
+- @game_over: Игра окончена.
 
 
 @long_war
@@ -213,7 +213,7 @@ go-to: long_war_intervention if resist_coup == 0; game_over_menu if resist_coup 
 - @west_aid: Возможно, мы сможем получить помощь от западных держав — <span style="color: #002654;">Франции</span> и <span style="color: #C8102E;">Британии</span>.
 - @soviet_aid: Возможно, мы сможем получить помощь от <span style="color: #750e0e;">Советского Союза</span>.
 - @east_aid: Возможно, наши восточные соседи — <span style="color: #DC143C;">Поль</span><span style="color: #FFFFFF;">ша</span> и <span style="color: #11457E;">Чехо</span><span style="color: #FFFFFF;">сло</span><span style="color: #D7141A;">вакия</span> — смогут нам помочь. Уж кто-кто, а они точно не хотят прихода к власти <span style="color: #7A3C00;">фашистов</span> в Германии.
-- @game_over: Game over.
+- @game_over: Игра окончена.
 
 
 @west_aid
@@ -252,5 +252,5 @@ go-to: long_war_intervention
 
 Линия фронта устояла, и <span style="color: #7A3C00;">**СА**</span>, <span style="color: #3E88B3;">**Стальной Шлем**</span> и поддерживающие переворот силы рейхсвера разгромлены. Сегодня силы республики одержали верх над <span style="color: #7A3C00;">фашистами</span> и <span style="color: #3E88B3;">реакционерами</span>. В Германии новая революция. Будем надеяться, что она принесёт более прочный мир, чем предыдущая.
 
-- @game_over: Game over.
+- @game_over: Игра окончена.
 

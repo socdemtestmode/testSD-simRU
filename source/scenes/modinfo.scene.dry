@@ -15,8 +15,8 @@ new-page: true
 - @changelog: Список изменений и будущие обновления!
 - @discord: Discord* (Запрещен в Российской Федерации)
 - @source: Литература и источники (дополнительная информация)
-- @root.start: Start game
-- @root: Back
+- @root.start: Начать игру
+- @root: Назад
 
 
 @infotext
@@ -238,11 +238,11 @@ on-arrival: {!
 
 = Развилки партий
 
-- @ddp_paths: Развилки <span style="color: #D3C24D;">**НДП**</span> Paths!
-- @dvp_paths: Развилки <span style="color: #C0A054;">**ННП**</span> Paths!
-- @lvp_paths: Развилки <span style="color: #FFCC00;">**ЛНП**</span> Paths!
-- @zentrum_paths: Развилки <span style="color: #000000;">**Центра**</span> Paths!
-- @dnvp_paths: Развилки <span style="color: #3E88B3;">**НННП**</span> Paths!
+- @ddp_paths: Развилки <span style="color: #D3C24D;">**НДП**</span>!
+- @dvp_paths: Развилки <span style="color: #C0A054;">**ННП**</span>!
+- @lvp_paths: Развилки <span style="color: #FFCC00;">**ЛНП**</span>!
+- @zentrum_paths: Развилки <span style="color: #000000;">**Центра**</span>!
+- @dnvp_paths: Развилки <span style="color: #3E88B3;">**НННП**</span>!
 - @full_paths: Полная динамическая схема всех партий и их взаимодействий!
 - @back: Назад
 - @back2: Назад

@@ -75,7 +75,7 @@ on-arrival: time_to_election = 3; spd_toleration = 0; spd_toleration_right = 0; 
 face-image: img/wp2.jpg
 call: set_next_election_time
 
-Партия <span style="color: #b8996f;">**ЭП**</span> неожиданно отказалась от противостояния правительству Брюнинга после уступок, на которые канцлер пошёл в последнюю минуту. На решающем голосовании о вотуме недоверия она поддержала правительство[? if cnblp_defect or (dvp_defect and dvp_exist): , сведя на нет эффект от того, что [? if dvp_defect and dvp_exist: <span style="color: #C0A054;">**ННП**</span> и ?][? if not dvp_defect or not dvp_exist: [? if cnblp_defect: <span style="color: #7FCEB1;">**ХНПКЗ**</span>'s ?] ?]отозвали свою поддержку. ?].
+Партия <span style="color: #b8996f;">**ЭП**</span> неожиданно отказалась от противостояния правительству Брюнинга после уступок, на которые канцлер пошёл в последнюю минуту. На решающем голосовании о вотуме недоверия она поддержала правительство[? if cnblp_defect or (dvp_defect and dvp_exist): , сведя на нет эффект от того, что [? if dvp_defect and dvp_exist: <span style="color: #C0A054;">**ННП**</span> и ?][? if not dvp_defect or not dvp_exist: [? if cnblp_defect: <span style="color: #7FCEB1;">**ХНПКЗ**</span> ?] ?]отозвали свою поддержку. ?].
 
 Этот внезапный поворот со стороны <span style="color: #b8996f;">**ЭП**</span> практически предрешил её политическую гибель. Партия, и без того с трудом сохранявшая поддержку среднего класса, теперь столкнулась с массовым оттоком членов: местные отделения либо самораспускаются, либо полностью выходят из её состава.
 

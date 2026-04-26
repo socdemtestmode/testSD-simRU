@@ -35,4 +35,4 @@ on-arrival: sa_strength -= 25; sa_militancy -= 0.03; unemployed_nsdap -= 4; work
 
 В ответ [+ nsdap_leader +] лишил Штегмана всех полномочий и, сославшись на *принцип Фюрерства*, заставил его подписать заявление о подчинении лидеру партии. Однако, по всей видимости, это решение — временное.
 
-- @root: It's our chance to reclaim control of the streets.
+- @root: Это наш шанс вернуть контроль над улицами.

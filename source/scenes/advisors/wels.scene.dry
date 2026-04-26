@@ -15,7 +15,7 @@ new-page: true
 - @money_printer
 - @stimulation
 - @snap_election
-- @root: Return to main
+- @root: Вернуться к главному
 
 
 @clear_agenda

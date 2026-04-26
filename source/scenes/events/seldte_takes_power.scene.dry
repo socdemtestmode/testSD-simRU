@@ -12,7 +12,7 @@ new-page: true
 Что же нам теперь делать?
 
 - @fight: Мы будем сражаться на улицах, чтобы не дать Зельдте укрепить свою власть.
-- @game_over: We will vote against the government in the Reichstag.
+- @game_over: Мы проголосуем против правительства в рейхстаге.
 
 
 
@@ -20,5 +20,5 @@ new-page: true
 
 Мы понимаем, что это означает гражданскую войну, причём против всей мощи государства?
 
-- @civil_war: Yes.
-- @game_over: We are not ready for war. Instead, we will vote against the government in the Reichstag.
+- @civil_war: Да.
+- @game_over: Мы не готовы к войне. Вместо этого мы проголосуем против правительства в рейхстаге.

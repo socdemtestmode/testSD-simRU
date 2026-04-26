@@ -1,4 +1,4 @@
-title: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: предложение
+title: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: предложение
 subtitle: Предложить им помощь?
 view-if: (year >= 1932 and not lvp_formed and not dstp_maintained and next_election_time - time < 3) and (((ddp_ideology == "Левые" or ddp_leader == "Леммер") and ddp_votes < 3.0) or (ddp_ideology == "Умеренные" and ddp_votes < 2.0) or (ddp_ideology == "Правые" and ddp_votes < 1.2))
 on-arrival: ddp_alliance_seen = 1;
@@ -6,7 +6,7 @@ max-visits: 1
 tags: event
 new-page: true
 
-= The <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: предложение
+= <span style="color: #D3C24D;">**[+ ddp_name +]**</span>: предложение
 
 Падение результатов <span style="color: #D3C24D;">**[+ ddp_name +]**</span> угрожает полным исчезновением их фракции в Рейхстаге на следующих выборах. Многие в партии, такие как отошедший от дел Кох-Везер, лоббируют техническое объединение списков с <span style="color: #c00000;">**СДПГ**</span>.
 
@@ -88,4 +88,4 @@ on-arrival: ddp_relation -= 3; ddp_right += 3; ddp_cohesion -= 3
 @ddp_alliance_reject
 on-arrival: ddp_relation -= 5; ddp_right += 5
 
-The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> остались одни.
+<span style="color: #D3C24D;">**[+ ddp_name +]**</span> остались одни.

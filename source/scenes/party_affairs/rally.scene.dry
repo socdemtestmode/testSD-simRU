@@ -76,7 +76,7 @@ on-arrival: workers_nsdap += 3; rb_strength -= 50
 @cancel
 on-arrival: workers_nsdap += 3;
 
-The <span style="color: #7A3C00;">**СА**</span> одержали победу в этой демонстрации силы.
+<span style="color: #7A3C00;">**СА**</span> одержали победу в этой демонстрации силы.
 
 
 @main_rally

@@ -1,4 +1,4 @@
-title: The <span style="color: #700000;">**КПГ**</span> следит за нашим прогрессом в достижении целей коалиции в Пруссии…
+title: <span style="color: #700000;">**КПГ**</span> следит за нашим прогрессом в достижении целей коалиции в Пруссии…
 view-if: (in_popular_front_prussia or in_left_front_prussia) and kpd_ultimatum_prussia_timer = 0 and kpd_goals_seen_prussia = 1
 on-arrival: {!
 Q.kpd_goals_completed_prussia = 0;
@@ -24,9 +24,9 @@ go-to: goals_success if kpd_goals_completed_prussia >= 4; goals_failed if kpd_go
 
 В начале срока полномочий этого правительства <span style="color: #700000;">**КПГ**</span> выдвинула список целей для прусской коалиции:
 
-[? if interior_goal_seen_prussia = 1 : - Запретить <span style="color: #7A3C00;">**СА**</span> и <span style="color: #3E88B3;">**Стальной Шлем**</span>. - [? if interior_goal_prussia <= 0 : Успех ?][? if interior_goal_prussia >= 1: Провал ?]  ?]
+[? if interior_goal_seen_prussia = 1 : - Запретить <span style="color: #7A3C00;">**СА**</span> и <span style="color: #3E88B3;">**Стальной Шлем**</span>. -[? if interior_goal_prussia <= 0 : Успех ?][? if interior_goal_prussia >= 1: Провал ?]  ?]
 
-[? if rfb_goal_seen_prussia = 1 : - Отменить запрет <span style="color: #700000;">**СКФ**</span>. - [? if rfb_goal_prussia <= 0: Успех ?][? if rfb_goal_prussia >= 1: Провал ?]  ?]
+[? if rfb_goal_seen_prussia = 1 : - Отменить запрет <span style="color: #700000;">**СКФ**</span>. -[? if rfb_goal_prussia <= 0: Успех ?][? if rfb_goal_prussia >= 1: Провал ?]  ?]
 
 [? if bureaucracy_goal_seen_prussia = 1 : - Провести чистку в госаппарате. -[? if bureaucracy_goal_prussia <= 0: Успех ?][? if bureaucracy_goal_prussia >= 1: Провал ?]  ?]
 
@@ -45,7 +45,7 @@ on-arrival: kpd_relation -= 8; workers_spd -= 4; unemployed_spd -= 4; workers_kp
 @goals_success
 on-arrival: workers_spd += 4; unemployed_spd += 4; kpd_relation += 6; workers_kpd += 4; kpd_coalition_success += 1; rfb_strength += 150; rfb_militancy += 0.1; reichsexekution += 1
 
-Как и ожидалось, мы выполнили цели, поставленные <span style="color: #700000;">**КПГ**</span>. [? if president == "Гинденбург": Однако за последние несколько месяцев опасения президента Гинденбурга по поводу нашего коалиционного правительства возросли… ?]
+Как и ожидалось, мы выполнили цели, поставленные <span style="color: #700000;">**КПГ**</span>.[? if president == "Гинденбург": Однако за последние несколько месяцев опасения президента Гинденбурга по поводу нашего коалиционного правительства возросли… ?]
 
 
 @skibidi

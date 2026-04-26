@@ -146,7 +146,7 @@ new-page: true
 @heuss
 title: Теодор Хойс избран!
 subtitle: Хойс — <span style="color: #c00000;">социальный</span> <span style="color: #000000;">респ</span><span style="color: #DD0000;">убл</span><span style="color: #FFCC00;">иканец</span> и бывший член <span style="color: #D3C24D;">**[+ ddp_name +]**</span>.
-unavailable-subtitle: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к предпринимательнскому крылу <span style="color: #D3C24D;">[+ ddp_name +]</span>'s business wing.
+unavailable-subtitle: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к предпринимательнскому крылу <span style="color: #D3C24D;">[+ ddp_name +]</span>.
 choose-if: heuss_lead
 on-arrival: lvp_relation += 10; lvp_left += 7; lvp_leader = "Хойс"; pro_republic += (lvp_votes / 2); workers_lvp += 2; workers_spd -= 2; new_middle_lvp += 2; old_middle_lvp -= 4; old_middle_other += 4 if (dnvp_ideology == "Радикалы"); old_middle_dnvp += 4 if dnvp_ideology == "Умеренные"; old_middle_kvp += 4; rural_lvp -= 4; rural_other += 4 if (dnvp_ideology == "Радикалы" and not kvp_formed); rural_dnvp += 4 if dnvp_ideology == "Умеренные"; rural_kvp += 4; catholics_lvp += 2; catholics_spd -= 2; coalition_dissent -= 1; heuss_explode_time = time + 8; heuss_election_time = time
 face-image: img/portraits/heuss.jpg
@@ -158,7 +158,7 @@ face-image: img/portraits/heuss.jpg
 
 @maier
 title: Рейнгольд Майер избран!
-subtitle: Крупная фигура в политике Вюртемберга и бывший член <span style="color: #D3C24D;">**[+ ddp_name +]**</span> member.
+subtitle: Крупная фигура в политике Вюртемберга и бывший член <span style="color: #D3C24D;">**[+ ddp_name +]**</span>.
 unavailable-subtitle: [? if not heuss_lead: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к <span style="color: #D3C24D;">[+ ddp_name +]деловому крылу </span>. ?][? if heuss_lead: Удивительно, но партия сочла Майера слишком консервативным. ?]
 choose-if: maier_lead
 on-arrival: lvp_leader = "Майер"; lvp_relation += 3; lvp_left += 1; pro_republic += 5; new_middle_lvp += 6; old_middle_lvp += 2; rural_lvp += 4; catholics_lvp += 8

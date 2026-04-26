@@ -1,4 +1,4 @@
-title: Политика <span style="color: #6A1E1E;">**НСС**</span> Policy
+title: Политика <span style="color: #6A1E1E;">**НСС**</span>
 subtitle: Министры-<span style="color: #7A3C00;">нацисты</span> проводят собственную политику.
 view-if: chancellor == "Шляйхер" and dsu_in_gov and dsu_policy_timer <= 0
 on-arrival: {!
@@ -21,7 +21,7 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Политика <span style="color: #6A1E1E;">**НСС**</span> Policy
+= Политика <span style="color: #6A1E1E;">**НСС**</span>
 
 Имея представителей в правительстве, <span style="color: #7A3C00;">нацисты</span> проводят собственный политический курс.
 

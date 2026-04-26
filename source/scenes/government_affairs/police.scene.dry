@@ -15,9 +15,9 @@ card-image: img/portraits/SeveringCarl.jpg
 - @loyalty: Повысить верность сил Министерства внутренних дел.
 - @investigate_corruption: Расследовать коррупцию в крупном бизнесе.
 - @investigate_far_right: Расследовать незаконную деятельность среди <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правых</span>.
-- @domestic_enemies: Investigate or ban our domestic enemies.
+- @domestic_enemies: Расследовать деятельность наших внутренних врагов или запретить их.
 - @deport_hitler
-- @root: Take no action for now.
+- @root: Пока не предпринимать никаких действий.
 - @easy_discard
 - @cancel_advisor_action
 

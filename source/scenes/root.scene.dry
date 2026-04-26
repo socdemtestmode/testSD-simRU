@@ -13,8 +13,8 @@ go-to: start_menu_2
 @start_menu_2
 
 - @start_1: Начать игру
-- @modinfo: Mod Info - Last Updated 2026/01/25
-- @credits: Credits
+- @modinfo: Информация о моде - последнее обновление 2026/01/25
+- @credits: Авторы
 - @game_over.achievements
 
 
@@ -28,7 +28,7 @@ go-to: start if achievement_game_completed; pls_player if not achievement_game_c
 
 Пожалуйста, прочитайте
 
-- @modinfo.infotext: Mod Info - Last Updated 2026/01/25
+- @modinfo.infotext: Информация о моде - Последнее обновление 2026/01/25
 
 
 
@@ -1315,7 +1315,7 @@ view-if: achievement_holy
 
 @joever_mode
 title: <div style="text-align: center;"><img src="img/joever.png" alt="Joever"></div>
-subtitle: The <span style="color: #c00000;">**СДПГ**</span> начнёт с 0% поддержки.
+subtitle: <span style="color: #c00000;">**СДПГ**</span> начнёт с 0% поддержки.
 on-arrival: {!
 Q.workers_spd = 0;
 Q.new_middle_spd = 0;
@@ -1396,7 +1396,7 @@ go-to: 1928_mod_mode_lite
 
 @hitler_mode
 title: Демократия в осаде
-subtitle: The <span style="color: #7A3C00;">**НСДАП**</span> начнёт с 40% поддержки, и её поддержка не сможет достичь пика.
+subtitle: <span style="color: #7A3C00;">**НСДАП**</span> начнёт с 40% поддержки, и её поддержка не сможет достичь пика.
 on-arrival: {!
 Q.hitler_mode = 1;
 

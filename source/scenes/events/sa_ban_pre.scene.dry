@@ -1,4 +1,4 @@
-title: Обнаружен план переворота <span style="color: #7A3C00;">**СА**</span> Planned Coup Discovered!
+title: Обнаружен план переворота <span style="color: #7A3C00;">**СА**</span>!
 subtitle: Карл Зеверинг обнаруживает веские доказательства заговора…
 view-if: year == 1932 and month == 4 and not hindenburg_term_extended and spd_prussia
 priority: 4
@@ -8,7 +8,7 @@ on-arrival: nazi_urgency += 1; interior_goal_prussia -= 1
 max-visits: 1
 go-to: sa_ban_braun if president_ideology == "Левые"; sa_ban_normal if president_ideology != "Левые"
 
-= Обнаружен план переворота <span style="color: #7A3C00;">**СА**</span> Planned Coup Discovered!
+= Обнаружен план переворота <span style="color: #7A3C00;">**СА**</span>!
 
 
 @sa_ban_normal

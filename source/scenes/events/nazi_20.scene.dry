@@ -1,5 +1,5 @@
 title: Гитлер совершает самоубийство!
-subtitle: The <span style="color: #7A3C00;">**НСДАП**</span> распадается!
+subtitle: <span style="color: #7A3C00;">**НСДАП**</span> распадается!
 view-if: chancellor = "Шляйхер" and schleicher_time == 9 and nsdap_leader == "Гитлер"
 new-page: true
 tags: event

@@ -1,4 +1,4 @@
-title: The <span style="color: #700000;">**КПГ**</span> запрещена!
+title: <span style="color: #700000;">**КПГ**</span> запрещена!
 subtitle: Министерство внутренних дел обнаружило «тревожные доказательства» планируемой революции.
 view-if: chancellor == "Шляйхер" and dsu_in_gov and not dsu_was_gov and dsu_policy and reichstag_joever_time >= 1 and not kpd_explode
 on-arrival: kpd_relation = 40 if kpd_relation < 40
@@ -19,7 +19,7 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= The <span style="color: #700000;">**КПГ**</span> запрещена!
+= <span style="color: #700000;">**КПГ**</span> запрещена!
 
 Министр внутренних дел Вильгельм Фрик объявил о чрезвычайной мере, фактически запрещающей <span style="color: #700000;">**КПГ**</span>, после удобного «обнаружения» доказательств планируемой революции с участием <span style="color: #700000;">**СКФ**</span> — включая несколько складов, предположительно забитых оружием. Рейд на <span style="color: #700000;">**Коммунистическую**</span> партию; её штаб также изготовил так называемый план по созданию новой «<span style="color: #750e0e;">Советской Германии</span>» после мятежа.
 
@@ -97,7 +97,7 @@ audio: music/1930_1933/Einheitsfrontlied.mp3
 
 [? if prussia_leader == "Штрассер": Кроме того, Штрассер, используя свои полномочия министра-президента Пруссии, санкционировал масштабные репрессии против предполагаемых <span style="color: #700000;">коммунистов</span>, даже если те не представляют серьёзной угрозы.  ?]
 
-[? if sapd_formed: Наряду с <span style="color: #700000;">**КПГ**</span>, the <span style="color: #9B0000;">**СРПГ**</span> считается соучастницей — её члены подвергаются таким же преследованиям. Неужели мы позволим правительству бросать в тюрьмы наших бывших однопартийцев и товарищей?  ?][? if not sapd_formed: Неужели мы позволим правительству бросать в тюрьмы наших товарищей? ?]
+[? if sapd_formed: Наряду с <span style="color: #700000;">**КПГ**</span>, <span style="color: #9B0000;">**СРПГ**</span> считается соучастницей — её члены подвергаются таким же преследованиям. Неужели мы позволим правительству бросать в тюрьмы наших бывших однопартийцев и товарищей?  ?][? if not sapd_formed: Неужели мы позволим правительству бросать в тюрьмы наших товарищей? ?]
 
 - @do_nothing
 - @fight_mild
@@ -297,55 +297,55 @@ if (d3 && window) {
 
 {!<table>!} [? if not dnef_formed: {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div>{!</td><td>!}!} **СДПГ:** {!</td><td>!} **[+ spd_r +]%** {!</td></tr>!}  ?] [? if dnef_formed: {!<tr><td><div class="box" style='background-color:#BFC8CC; outline: 2px; outline-style: solid;'> </div>{!</td><td>!}!} **ФНЕГ:** {!</td><td>!} **[+ dnef_r +]%** {!</td></tr>!}  ?]
 
-[? if not lvp_formed and dstp_dnef: {!<tr><td><div class="box2" style='background-color:#A79A3F'> </div>{!</td><td>!}!} [+ ddp_name +]: {!</td><td>!} [+ ddp_r +]% {!</td></tr>!}  ?]
+[? if not lvp_formed and dstp_dnef: {!<tr><td><div class="box2" style='background-color:#A79A3F'> </div>{!</td><td>!}!} [+ ddp_name +]:{!</td><td>!} [+ ddp_r +]%{!</td></tr>!}  ?]
 
-[? if lvp_formed and lvp_dnef: <tr><td><div class="box2" style='background-color:#CC9900'> </div>{!</td><td>!}ЛНП:{!</td><td>!} [+ lvp_r +]% {!</td></tr>!}  ?]
+[? if lvp_formed and lvp_dnef: <tr><td><div class="box2" style='background-color:#CC9900'> </div>{!</td><td>!}ЛНП:{!</td><td>!} [+ lvp_r +]%{!</td></tr>!}  ?]
 
-[? if z_dnef: <tr><td><div class="box2" style='background-color:#1A0000'> </div>{!</td><td>!} [+ z_party_name +]: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td></tr>!}  ?]
+[? if z_dnef: <tr><td><div class="box2" style='background-color:#1A0000'> </div>{!</td><td>!} [+ z_party_name +]:{!</td><td>!} [+ z_minus_bvp_r +]%{!</td></tr>!}  ?]
 
-[? if z_dnef: <tr><td><div class="box2" style='background-color:#7aa7af'> </div>{!</td><td>!}БНП:{!</td><td>!} [+ bvp_r +]% {!</td></tr>!}  ?]
+[? if z_dnef: <tr><td><div class="box2" style='background-color:#7aa7af'> </div>{!</td><td>!}БНП:{!</td><td>!} [+ bvp_r +]%{!</td></tr>!}  ?]
 
-[? if not lvp_formed and dvp_exist and dvp_dnef: {!<tr><td><div class="box2" style='background-color:#AA861F'> </div>{!</td><td>!}!}ННП:{!</td><td>!} [+ dvp_r +]% {!</td></tr>!}  ?]
+[? if not lvp_formed and dvp_exist and dvp_dnef: {!<tr><td><div class="box2" style='background-color:#AA861F'> </div>{!</td><td>!}!}ННП:{!</td><td>!} [+ dvp_r +]%{!</td></tr>!}  ?]
 
-[? if other_dnef: <tr><td><div class="box2" style='background-color:#707070'> </div>{!</td><td>!}Прочие:{!</td><td>!} [+ other_r +]% {!</td></tr>!}  ?]
+[? if other_dnef: <tr><td><div class="box2" style='background-color:#707070'> </div>{!</td><td>!}Прочие:{!</td><td>!} [+ other_r +]%{!</td></tr>!}  ?]
 
-[? if kvp_formed and not cvp_kvp_formed and kvp_dnef: <tr><td><div class="box2" style='background-color:#0072C0'> </div>{!</td><td>!}КНП:{!</td><td>!} [+ kvp_r +]% {!</td></tr>!}  ?]
+[? if kvp_formed and not cvp_kvp_formed and kvp_dnef: <tr><td><div class="box2" style='background-color:#0072C0'> </div>{!</td><td>!}КНП:{!</td><td>!} [+ kvp_r +]%{!</td></tr>!}  ?]
 
-[? if not cvp_formed and dnvp_dnef: <tr><td><div class="box2" style='background-color:#316B8F'> </div>{!</td><td>!}НННП:{!</td><td>!} [+ dnvp_r +]% {!</td></tr>!}  ?]
+[? if not cvp_formed and dnvp_dnef: <tr><td><div class="box2" style='background-color:#316B8F'> </div>{!</td><td>!}НННП:{!</td><td>!} [+ dnvp_r +]%{!</td></tr>!}  ?]
 
-[? if nvf_exist and nvf_dnef: <tr><td><div class="box2" style='background-color:#0F2116'> </div>{!</td><td>!}ННФ:{!</td><td>!} [+ nvf_r +]% {!</td></tr>!}  ?]
+[? if nvf_exist and nvf_dnef: <tr><td><div class="box2" style='background-color:#0F2116'> </div>{!</td><td>!}ННФ:{!</td><td>!} [+ nvf_r +]%{!</td></tr>!}  ?]
 
 [? if dnef_formed: <tr><td colspan="3" style="text-align: center;"><hr id="read-marker"></td></tr>  ?]
 
-[? if dnef_formed: {!<tr><td><div class="box" style='background-color:#E3000F;'> </div>{!</td><td>!}!}СДПГ:{!</td><td>!} [+ spd_r +]% {!</td></tr>!}  ?]
+[? if dnef_formed: {!<tr><td><div class="box" style='background-color:#E3000F;'> </div>{!</td><td>!}!}СДПГ:{!</td><td>!} [+ spd_r +]%{!</td></tr>!}  ?]
 
-[? if sapd_formed : <tr><td><div class="box" style='background-color:#9B0000'> </div>{!</td><td>!}СРПГ:{!</td><td>!} [+ sapd_r +]% {!</td></tr>!}  ?]
+[? if sapd_formed : <tr><td><div class="box" style='background-color:#9B0000'> </div>{!</td><td>!}СРПГ:{!</td><td>!} [+ sapd_r +]%{!</td></tr>!}  ?]
 
-<tr><td><div class="box" style='background-color:#700000'> </div>{!</td><td>!}КПГ:{!</td><td>!} [+ kpd_r +]% {!</td></tr>!}
+<tr><td><div class="box" style='background-color:#700000'> </div>{!</td><td>!}КПГ:{!</td><td>!} [+ kpd_r +]%{!</td></tr>!}
 
-[? if not lvp_formed and not dstp_dnef: <tr><td><div class="box" style='background-color:#D3C24D'> </div>{!</td><td>!} [+ ddp_name +]: {!</td><td>!} [+ ddp_r +]% {!</td></tr>!}  ?]
+[? if not lvp_formed and not dstp_dnef: <tr><td><div class="box" style='background-color:#D3C24D'> </div>{!</td><td>!} [+ ddp_name +]:{!</td><td>!} [+ ddp_r +]%{!</td></tr>!}  ?]
 
-[? if lvp_formed and not lvp_dnef: {!<tr><td><div class="box" style='background-color:#FFCC00'> </div>{!</td><td>!}!}ЛНП:{!</td><td>!} [+ lvp_r +]% {!</td></tr>!}  ?]
+[? if lvp_formed and not lvp_dnef: {!<tr><td><div class="box" style='background-color:#FFCC00'> </div>{!</td><td>!}!}ЛНП:{!</td><td>!} [+ lvp_r +]%{!</td></tr>!}  ?]
 
-[? if not z_dnef: {!<tr><td><div class="box" style='background-color:#000'> </div>{!</td><td>!}!} [+ z_party_name +]: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td></tr>!}  ?]
+[? if not z_dnef: {!<tr><td><div class="box" style='background-color:#000'> </div>{!</td><td>!}!} [+ z_party_name +]:{!</td><td>!} [+ z_minus_bvp_r +]%{!</td></tr>!}  ?]
 
-[? if not z_dnef: {!<tr><td><div class="box" style='background-color:#A2D8E0'> </div>{!</td><td>!}!}БНП:{!</td><td>!} [+ bvp_r +]% {!</td></tr>!}  ?]
+[? if not z_dnef: {!<tr><td><div class="box" style='background-color:#A2D8E0'> </div>{!</td><td>!}!}БНП:{!</td><td>!} [+ bvp_r +]%{!</td></tr>!}  ?]
 
-[? if not lvp_formed and dvp_exist and not dvp_dnef: <tr><td><div class="box" style='background-color:#D5AC27'> </div>{!</td><td>!}ННП:{!</td><td>!} [+ dvp_r +]% {!</td></tr>!}  ?]
+[? if not lvp_formed and dvp_exist and not dvp_dnef: <tr><td><div class="box" style='background-color:#D5AC27'> </div>{!</td><td>!}ННП:{!</td><td>!} [+ dvp_r +]%{!</td></tr>!}  ?]
 
-[? if not other_dnef: <tr><td><div class="box" style='background-color:#a0a0a0'> </div>{!</td><td>!}Прочие партии:{!</td><td>!} [+ other_r +]% {!</td></tr>!}  ?]
+[? if not other_dnef: <tr><td><div class="box" style='background-color:#a0a0a0'> </div>{!</td><td>!}Прочие партии:{!</td><td>!} [+ other_r +]%{!</td></tr>!}  ?]
 
-[? if kvp_formed and not cvp_kvp_formed and not kvp_dnef: <tr><td><div class="box" style='background-color:#0087DC'> </div>{!</td><td>!}КНП:{!</td><td>!} [+ kvp_r +]% {!</td></tr>!}  ?]
+[? if kvp_formed and not cvp_kvp_formed and not kvp_dnef: <tr><td><div class="box" style='background-color:#0087DC'> </div>{!</td><td>!}КНП:{!</td><td>!} [+ kvp_r +]%{!</td></tr>!}  ?]
 
-[? if not cvp_formed and not dnvp_dnef: <tr><td><div class="box" style='background-color:#3E88B3'> </div>{!</td><td>!}НННП:{!</td><td>!} [+ dnvp_r +]% {!</td></tr>!}  ?]
+[? if not cvp_formed and not dnvp_dnef: <tr><td><div class="box" style='background-color:#3E88B3'> </div>{!</td><td>!}НННП:{!</td><td>!} [+ dnvp_r +]%{!</td></tr>!}  ?]
 
-[? if dnf_formed: {!<tr><td><div class="box" style='background-color:#003755'> </div>{!</td><td>!}!}НФГ:{!</td><td>!} [+ dnf_r +]% {!</td></tr>!}  ?]
+[? if dnf_formed: {!<tr><td><div class="box" style='background-color:#003755'> </div>{!</td><td>!}!}НФГ:{!</td><td>!} [+ dnf_r +]%{!</td></tr>!}  ?]
 
-[? if dsu_exist: <tr><td><div class="box" style='background-color:#6A1E1E'> </div>{!</td><td>!}НСС:{!</td><td>!} [+ dsu_r +]% {!</td></tr>!}  ?]
+[? if dsu_exist: <tr><td><div class="box" style='background-color:#6A1E1E'> </div>{!</td><td>!}НСС:{!</td><td>!} [+ dsu_r +]%{!</td></tr>!}  ?]
 
-[? if not nsdap_split: {!<tr><td><div class="box" style='background-color:#7A3C00'> </div>{!</td><td>!}!}НСДАП:{!</td><td>!} [+ nsdap_r +]% {!</td></tr>!}  ?] [? if nsdap_split: {!<tr><td><div class="box" style='background-color:#7A3C00'> </div>{!</td><td>!}!}НСДАП:{!</td><td>!} [+ nsdap_hitler_r +]% {!</td></tr>!}  ?]
+[? if not nsdap_split: {!<tr><td><div class="box" style='background-color:#7A3C00'> </div>{!</td><td>!}!}НСДАП:{!</td><td>!} [+ nsdap_r +]%{!</td></tr>!}  ?] [? if nsdap_split: {!<tr><td><div class="box" style='background-color:#7A3C00'> </div>{!</td><td>!}!}НСДАП:{!</td><td>!} [+ nsdap_hitler_r +]%{!</td></tr>!}  ?]
 
-[? if nvf_exist and not nvf_dnef: {!<tr><td><div class="box" style='background-color:#142e20'> </div>{!</td><td>!}!}ННФ:{!</td><td>!} [+ nvf_r +]% {!</td></tr>!}  ?] {!</table>!}
+[? if nvf_exist and not nvf_dnef: {!<tr><td><div class="box" style='background-color:#142e20'> </div>{!</td><td>!}!}ННФ:{!</td><td>!} [+ nvf_r +]%{!</td></tr>!}  ?] {!</table>!}
 
 - @soviet_union_aid
 
@@ -453,7 +453,7 @@ Q.schleicher_fight = 1;
 
 Мы не одни.[? if spd_alone: Что ж, на самом деле мы одни. Неважно.  ?]
 
-<span style="color: #000000;">[? if not stegerwald_path: Католики ?][? if stegerwald_path: Христиане ?]</span> - [? if z_against_schleicher: За ?][? if not z_against_schleicher: Политический нейтралитет ?]
+<span style="color: #000000;">[? if not stegerwald_path: Католики ?][? if stegerwald_path: Христиане ?]</span> — [? if z_against_schleicher: За ?][? if not z_against_schleicher: Политический нейтралитет ?]
 
 <span style="color: #FFCC00;">Левые либералы</span> — [? if libs_against_schleicher: За ?][? if not libs_against_schleicher: Политический нейтралитет ?]
 
@@ -632,6 +632,6 @@ choose-if: schleicher_spd_influence < 4
 
 Возможно, пришло наше время нанести удар?
 
-- @civil_war: The <span style="color: #c00000;">**SPD**</span> stands with the <span style="color: #700000;">**Communists**</span>.
+- @civil_war: <span style="color: #c00000;">**СДПГ**</span> поддерживает <span style="color: #700000;">**Коммунистов**</span>.
 - @fight_mild
 - @do_nothing: Это не наша война.

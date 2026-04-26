@@ -1,4 +1,4 @@
-title: Предложение <span style="color: #D3C24D;">**[+ ddp_name +]**</span>'s Proposal
+title: Предложение <span style="color: #D3C24D;">**[+ ddp_name +]**</span>
 subtitle: Предложение <span style="color: #D3C24D;">[+ ddp_name +]</span> пересмотрела свою прежнюю позицию.
 view-if: (year >= 1933 and not lvp_formed and not dstp_maintained and next_election_time - time < 3) and ddp_alliance_seen and ddp_r < 1
 on-arrival: ddp_alliance_2_seen = 1;
@@ -6,7 +6,7 @@ max-visits: 1
 tags: event
 new-page: true
 
-= Предложение <span style="color: #D3C24D;">**[+ ddp_name +]**</span>'s Proposal
+= Предложение <span style="color: #D3C24D;">**[+ ddp_name +]**</span>
 
 В связи с <span style="color: #D3C24D;">**[+ ddp_name +]**</span> провальным результатом на прошлых выборах, получив всего [+ ddp_r +]% мест, они пересмотрели наше предложение об общем избирательном списке. Даже Хойс убеждён, что нужно что-то делать.
 

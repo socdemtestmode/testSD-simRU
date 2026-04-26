@@ -342,14 +342,14 @@ achievement: christliche_volkspartei
 
 Соглашение достигнуто, и рождается <i>Christliche Volkspartei</i> (<span style="color: #000000;">Христианская народная партия</span>).
 
-The <span style="color: #000000;">**ХНП**</span> стремится следовать Эссенской программе 1920 года, преобразуя немецких правых в партию, которая сплачивается вокруг <span style="color: #000000;">христианских</span>, <span style="color: #586593;">демократических</span>, <span style="color: #000000;">национальных</span> и <span style="color: #c00000;">социальных</span> принципов.
+<span style="color: #000000;">**ХНП**</span> стремится следовать Эссенской программе 1920 года, преобразуя немецких правых в партию, которая сплачивается вокруг <span style="color: #000000;">христианских</span>, <span style="color: #586593;">демократических</span>, <span style="color: #000000;">национальных</span> и <span style="color: #c00000;">социальных</span> принципов.
 
 - @cvp_party_congress_go
 - @cvp_dvp_merger
 
 
 @cvp_party_congress_go
-title: Первый съезд <span style="color: #000000;">**[+ z_party_name +]**</span> Congress
+title: Первый съезд <span style="color: #000000;">**[+ z_party_name +]**</span>
 subtitle: Здесь решится будущее этой новой партии.
 view-if: not cvp_dvp_trigger
 go-to: cvp_party_congress

@@ -1,4 +1,4 @@
-title: The <span style="color: #6A1E1E;">**НСС**</span> входит в правительство
+title: <span style="color: #6A1E1E;">**НСС**</span> входит в правительство
 subtitle: Оказывается, наш выбор не имеет значения.
 view-if: chancellor == "Шляйхер" and not dsu_in_gov and not dsu_was_gov and z_in_gov and z_leader == "Брахт" and schleicher_post_time >= 8
 max-visits: 1
@@ -17,7 +17,7 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= The <span style="color: #6A1E1E;">**НСС**</span> входит в правительство
+= <span style="color: #6A1E1E;">**НСС**</span> входит в правительство
 
 С приходом лояльного Брахта к руководству <span style="color: #000000;">Партией Центра</span> она перестала громко возражать против включения «благоразумного» <span style="color: #6A1E1E;">**НСС**</span> в кабинет Шлейхера, чтобы усилить его народную поддержку и «приручить» тех <span style="color: #7A3C00;">нацистов</span>, которых можно укротить.
 

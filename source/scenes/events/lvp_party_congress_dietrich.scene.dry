@@ -130,7 +130,7 @@ new-page: true
 @heuss
 title: Теодор Хойс избран!
 subtitle: Хойс — <span style="color: #c00000;">социальный</span> <span style="color: #000000;">респуб</span><span style="color: #DD0000;">лик</span><span style="color: #FFCC00;">анец</span> и член бывшей <span style="color: #D3C24D;">**[+ ddp_name +]**</span>.
-unavailable-subtitle: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к предпринимательскому крылу <span style="color: #D3C24D;">[+ ddp_name +]</span>'s business wing.
+unavailable-subtitle: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к предпринимательскому крылу <span style="color: #D3C24D;">[+ ddp_name +]</span>.
 choose-if: heuss_lead
 on-arrival: lvp_relation += 15; lvp_left += 8; lvp_leader = "Хойс"; pro_republic += (lvp_votes / 2); workers_lvp += 2; workers_spd -= 2; new_middle_lvp += 8; old_middle_lvp -= 3; old_middle_other += 5 if (dnvp_ideology == "Радикалы"); old_middle_dnvp += 5 if dnvp_ideology == "Умеренные"; old_middle_kvp += 5; rural_lvp -= 5; rural_other += 5 if (dnvp_ideology == "Радикалы" and not kvp_formed); rural_dnvp += 5 if dnvp_ideology == "Умеренные"; rural_kvp += 5; catholics_lvp += 3; catholics_spd -= 3; coalition_dissent -= 1; heuss_explode_time = time + 8; heuss_election_time = time
 face-image: img/portraits/heuss.jpg

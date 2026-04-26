@@ -1,4 +1,4 @@
-title: The <span style="color: #FFCC00;">**ЛНП**</span> и Рейхсбаннер
+title: <span style="color: #FFCC00;">**ЛНП**</span> и Рейхсбаннер
 subtitle: Из-за милитаризации <span style="color: #FFCC00;">либералы</span> покидают Рейхсбаннер.
 view-if: rb_militancy >= 0.04 and not rb_exit and not rb_stay and lvp_formed and lvp_ideology != "Левые"
 new-page: true
@@ -17,9 +17,9 @@ on-display: {!
 !}
 max-visits: 1
 
-= The <span style="color: #FFCC00;">**ЛНП**</span> и Рейхсбаннер
+= <span style="color: #FFCC00;">**ЛНП**</span> и Рейхсбаннер
 
-Рейхсбаннер всё больше милитаризируется, приобретает оружие, проводит военизированные учения и привлекает поток <span style="color: #9B0000;">радикально настроенных</span> <span style="color: #c00000;">**СДПГ**</span> members. The <span style="color: #FFCC00;">**ЛНП**</span> в особенности оскорблена этим, поскольку многие её члены выходцы из полумонархической <span style="color: #C0A054;">**ННП**</span> и даже состоят в <span style="color: #3E88B3;">**Стальном Шлеме**</span>. Милитаризация организации дала им повод разорвать формальные связи с этой <span style="color: #000000;">респу</span><span style="color: #DD0000;">блика</span><span style="color: #FFCC00;">нской</span> организацией.
+Рейхсбаннер всё больше милитаризируется, приобретает оружие, проводит военизированные учения и привлекает поток <span style="color: #9B0000;">радикально настроенных</span> <span style="color: #c00000;">**СДПГ**</span>. <span style="color: #FFCC00;">**ЛНП**</span> в особенности оскорблена этим, поскольку многие её члены выходцы из полумонархической <span style="color: #C0A054;">**ННП**</span> и даже состоят в <span style="color: #3E88B3;">**Стальном Шлеме**</span>. Милитаризация организации дала им повод разорвать формальные связи с этой <span style="color: #000000;">респу</span><span style="color: #DD0000;">блика</span><span style="color: #FFCC00;">нской</span> организацией.
 
 - @let_go: Пусть <span style="color: #FFCC00;">либералы</span> уходят.
 - @lower_militancy: Мы должны снизить воинственность Рейхсбаннера.

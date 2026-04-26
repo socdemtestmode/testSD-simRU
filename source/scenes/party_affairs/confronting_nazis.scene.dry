@@ -64,7 +64,7 @@ achievement: eiserne_front
 
 - @unity: Единство, активность и дисциплина.
 - @anti: Борьба против <span style="color: #7A3C00;">фашизма</span>, <span style="color:rgb(90, 0, 0);">сталинизма</span> и <span style="color: #808080;">монархизма</span>.
-- @orgs: The <span style="color: #c00000;">**СДПГ**</span>, АДГБ и Рейхсбаннер.
+- @orgs: <span style="color: #c00000;">**СДПГ**</span>, АДГБ и Рейхсбаннер.
 - @wtb: Войтинский, Тарнов и Бааде (план ВТБ)
 - @all: Все вышеперечисленное.
 
@@ -92,4 +92,4 @@ go-to: if_end
 
 @if_end
 
-The <span style="color: #c00000;">**Железный**</span> <span style="color: #1A1A1A;">**фронт**</span> вдохнул в нашу партию новую энергию.
+<span style="color: #c00000;">**Железный**</span> <span style="color: #1A1A1A;">**фронт**</span> вдохнул в нашу партию новую энергию.

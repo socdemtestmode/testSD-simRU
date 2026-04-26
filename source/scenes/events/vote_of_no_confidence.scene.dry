@@ -9,7 +9,7 @@ go-to: vonc_menu
 
 = Вотум недоверия
 
-[? if in_grand_coalition and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span>  ?][? if (in_grand_coalition or in_social_liberal_coalition) and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span>  ?][? if in_weimar_coalition or in_popular_front or in_minority_government and not in_social_liberal_coalition: The [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?][? if lvp_formed and not in_social_catholic_coalition: &nbsp;и <span style="color: #FFCC00;">**ЛНП**</span> ?] ?][? if in_social_liberal_coalition and not lvp_formed: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span>  ?] потребовала вынести нам вотум недоверия из-за проводимой нами политики и возникших разногласий. В случае успеха через несколько месяцев, вероятно, будут назначены выборы.
+[? if in_grand_coalition and not lvp_formed: <span style="color: #C0A054;">**ННП**</span> ?][? if (in_grand_coalition or in_social_liberal_coalition) and lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?][? if in_weimar_coalition or in_popular_front or in_minority_government and not in_social_liberal_coalition: [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?][? if lvp_formed and not in_social_catholic_coalition: &nbsp;и <span style="color: #FFCC00;">**ЛНП**</span> ?] ?][? if in_social_liberal_coalition and not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?] потребовала вынести нам вотум недоверия из-за проводимой нами политики и возникших разногласий. В случае успеха через несколько месяцев, вероятно, будут назначены выборы.
 
 
 @vonc_menu
@@ -64,7 +64,7 @@ on-arrival: coalition_dissent = 0; workers_spd -= 10; unemployed_spd -= 10; work
 @resources
 view-if: secularized = 0
 choose-if: (resources >= 3 and in_weimar_coalition or in_popular_front or in_minority_government) or ((resources >= 3 and in_grand_coalition and not (dvp_ideology == "Правые" and year >= 1930) and not lvp_formed) or (resources >= 3 and (in_grand_coalition or in_weimar_coalition) and not (lvp_ideology == "Правые" and year >= 1930) and lvp_formed))
-unavailable-subtitle: [? if resources < 3: У нас недостаточно ресурсов. ?] [? if in_grand_coalition and (dvp_ideology == "Правые" and year >= 1930) and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span> больше не нужны наши ресурсы. ?] [? if (in_grand_coalition or in_weimar_coalition) and (lvp_ideology == "Правые" and year >= 1930) and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span> больше не нужны наши ресурсы. ?]
+unavailable-subtitle: [? if resources < 3: У нас недостаточно ресурсов. ?] [? if in_grand_coalition and (dvp_ideology == "Правые" and year >= 1930) and not lvp_formed: <span style="color: #C0A054;">**ННП**</span> больше не нужны наши ресурсы. ?] [? if (in_grand_coalition or in_weimar_coalition) and (lvp_ideology == "Правые" and year >= 1930) and lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> больше не нужны наши ресурсы. ?]
 subtitle: -3 ресурса
 on-arrival: resources -= 3; coalition_dissent -= 1;
 
@@ -88,13 +88,13 @@ on-arrival: communist_coalition += 1; workers_kpd += 3; kpd_relation += 5
 go-to: support_kpd_weimar if in_weimar_coalition; support_kpd_grand if in_grand_coalition
 
 
-The <span style="color: #700000;">**КПГ**</span> не заинтересована в том, чтобы лишь «воздерживаться от вотума недоверия»; она поддержит нас, только если войдёт в правительственную коалицию. Если же мы договоримся об этом, нас не поддержат правые партии.
+<span style="color: #700000;">**КПГ**</span> не заинтересована в том, чтобы лишь «воздерживаться от вотума недоверия»; она поддержит нас, только если войдёт в правительственную коалицию. Если же мы договоримся об этом, нас не поддержат правые партии.
 
 
 @support_kpd_grand
 on-arrival: support_kpd_grand = 1
 
-- @election_1928.popular_front_coalition: Form a "Popular Front" coalition?
+- @election_1928.popular_front_coalition: Сформировать коалицию «Народного фронта»?
 - @election_1928.left_coalition
 - @try_assuage: Неважно. Мы должны действовать иначе.
 
@@ -107,8 +107,8 @@ on-arrival: support_kpd_weimar = 1
 
 
 @support_kpd_left
-subtitle: <span style="color: #c00000;">**СДПГ**</span> + <span style="color: #700000;">**КПГ**</span> [? if sapd_formed: + <span style="color: #9B0000;">**СРПГ**</span>  ?] ([+ left_coalition +]%)
-unavailable-subtitle: <span style="color: #c00000;">СДПГ</span> + <span style="color: #700000;">КПГ</span> [? if sapd_formed: + <span style="color: #9B0000;">СРПГ</span>  ?] ([+ left_coalition +]%). [? if kpd_relation < 50 : У нас недостаточно хорошие отношения с <span style="color: #700000;">КПГ</span>.  ?][? if communist_coalition < 3 : <span style="color: #700000;">Коммунисты</span> слишком привержены своим радикальным методам, чтобы участвовать в работе правительства.  ?] [? if rubicon: – Какого чёрта Гинденбург это допустит? ?] [? if president_ideology != "Левые" and president != "Гинденбург": – Президент[+ president +] категорически против правления <span style="color: #9B0000;">социалистов</span>. ?]
+subtitle: <span style="color: #c00000;">**СДПГ**</span> + <span style="color: #700000;">**КПГ**</span>[? if sapd_formed: + <span style="color: #9B0000;">**СРПГ**</span> ?]([+ left_coalition +]%)
+unavailable-subtitle: <span style="color: #c00000;">СДПГ</span> + <span style="color: #700000;">КПГ</span> [? if sapd_formed: + <span style="color: #9B0000;">СРПГ</span>  ?]([+ left_coalition +]%).[? if kpd_relation < 50 : У нас недостаточно хорошие отношения с <span style="color: #700000;">КПГ</span>.  ?][? if communist_coalition < 3 : <span style="color: #700000;">Коммунисты</span> слишком привержены своим радикальным методам, чтобы участвовать в работе правительства.  ?] [? if rubicon: – Какого чёрта Гинденбург это допустит? ?] [? if president_ideology != "Левые" and president != "Гинденбург": – Президент[+ president +] категорически против правления <span style="color: #9B0000;">социалистов</span>. ?]
 view-if: in_popular_front
 choose-if: left_coalition >= 50 and (kpd_relation >= 50 or (kpd_leader == "Примиренцы" and kpd_relation >= 40)) and communist_coalition >= 3 and not rubicon and president_ideology == "Левые" or president == "Гинденбург"
 go-to: election_1928.left_coalition_success

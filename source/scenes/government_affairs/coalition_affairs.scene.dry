@@ -9,7 +9,7 @@ card-image: img/muller_cabinet.jpg
 
 = Коалиционные вопросы
 
-Наша коалиция в беде. Правые члены [? if not in_social_liberal_coalition: [? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] ?] [? if not in_social_catholic_coalition: [? if in_grand_coalition and not lvp_formed:  и <span style="color: #C0A054;">**ННП**</span>  ?][? if not lvp_formed and in_weimar_coalition: [? if not in_social_liberal_coalition:  и  ?] <span style="color: #D3C24D;">**[+ ddp_name +]**</span>  ?][? if lvp_formed: [? if not in_social_liberal_coalition:  и  ?] <span style="color: #FFCC00;">**ЛНП**</span>  ?] ?] постоянно критикуют нашу политику и угрожают объявить вотум недоверия, чтобы свергнуть наше правительство [? if spd_prussia :  или сделать то же самое с нашим правительством в Пруссии ?].
+Наша коалиция в беде. Правые члены [? if not in_social_liberal_coalition: [? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] ?] [? if not in_social_catholic_coalition: [? if in_grand_coalition and not lvp_formed:  и <span style="color: #C0A054;">**ННП**</span> ?][? if not lvp_formed and in_weimar_coalition: [? if not in_social_liberal_coalition:  и  ?] <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: [? if not in_social_liberal_coalition:  и  ?] <span style="color: #FFCC00;">**ЛНП**</span> ?] ?] постоянно критикуют нашу политику и угрожают объявить вотум недоверия, чтобы свергнуть наше правительство [? if spd_prussia :  или сделать то же самое с нашим правительством в Пруссии ?].
 
 Как нам снизить напряжённость в коалиции?
 
@@ -53,7 +53,7 @@ on-arrival: workers_spd -= 5; unemployed_spd -= 6; workers_kpd += 5; unemployed_
 subtitle: -2 ресурса
 view-if: historical_mode = 0
 choose-if: (resources >= 2 and in_weimar_coalition or in_popular_front or in_minority_government) or ((resources >= 2 and in_grand_coalition and not (dvp_ideology == "Правые" and year >= 1930) and not lvp_formed) or (resources >= 2 and (in_grand_coalition or in_weimar_coalition) and not (lvp_ideology == "Правые" and year >= 1930) and lvp_formed))
-unavailable-subtitle: [? if resources < 2: У нас недостаточно ресурсов. ?] [? if in_grand_coalition and (dvp_ideology == "Правые" and year >= 1930) and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span> больше не хочет получать от нас ресурсы. ?] [? if (in_grand_coalition or in_weimar_coalition) and (lvp_ideology == "Правые" and year >= 1930) and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span> больше не хочет получать от нас ресурсы. ?]
+unavailable-subtitle: [? if resources < 2: У нас недостаточно ресурсов. ?] [? if in_grand_coalition and (dvp_ideology == "Правые" and year >= 1930) and not lvp_formed: <span style="color: #C0A054;">**ННП**</span> больше не хочет получать от нас ресурсы. ?] [? if (in_grand_coalition or in_weimar_coalition) and (lvp_ideology == "Правые" and year >= 1930) and lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> больше не хочет получать от нас ресурсы. ?]
 on-arrival: resources -= 2; coalition_dissent -= 1
 
 Передав часть средств на избирательную кампанию нашим партнёрам по коалиции, мы можем сделать нашу политику более приемлемой для них. Кто-то назовёт это коррупцией, но, возможно, это необходимо для спасения демократии.

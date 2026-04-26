@@ -44,7 +44,7 @@ view-if: (z_in_gov_mini and pro_republic < 30) or far_right_coalition >= 50
 
 Мы осознаём, что это означает гражданскую войну против всей мощи государства?
 
-- @civil_war: Yes.
+- @civil_war: Да.
 - @give_up: Мы не готовы к войне. Вместо этого мы проголосуем против <span style="color: #7A3C00;">нацистов</span> в рейхстаге.
 
 
@@ -56,11 +56,11 @@ view-if: (z_in_gov_mini and pro_republic < 30) or far_right_coalition >= 50
 
 Германия потеряна.
 
-- @game_over: Game over.
+- @game_over: Игра окончена.
 
 
 @hitler_2
-title: The [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] голосует против!
+title: [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] голосует против!
 view-if: (not z_in_gov_mini or pro_republic >= 30) and far_right_coalition < 50
 on-arrival: rubicon_mini = 0; rubicon_mini_leave = 1;
 
@@ -152,4 +152,4 @@ Q.z_in_gov_mini = 0;
 
 Германия погибла.
 
-- @game_over: Game over.
+- @game_over: Игра окончена.

@@ -14,7 +14,7 @@ card-image: img/portraits/LeberJulius.jpg
 - @increase_funding: Увеличить финансирование армии, чтобы купить её лояльность.
 - @decrease_funding: Сократить финансирование армии, чтобы направить больше средств на социальные расходы.
 - @reform: Провести основательную реформу личного состава, чтобы уменьшить влияние <span style="color: #808080;">реакционеров</span> и сделать армию более лояльной к нам.
-- @root: No change to military policy.
+- @root: Оставить военную политику без изменений.
 - @easy_discard
 - @cancel_advisor_action
 

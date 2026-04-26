@@ -12,7 +12,7 @@ new-page: true
 - @campaign_pacifism
 - @structure_
 - @curriculum_
-- @root: Return to main
+- @root: Вернуться
 
 
 @campaign_pacifism

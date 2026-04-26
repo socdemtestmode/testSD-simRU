@@ -1,4 +1,4 @@
-title: First <span style="color: #FFCC00;">**ЛНП**</span> проводит первый съезд
+title: <span style="color: #FFCC00;">**ЛНП**</span> проводит первый съезд
 subtitle: Здесь решится будущее этой новой партии.
 view-if: lvp_trigger_1_time == time
 max-visits: 1
@@ -6,7 +6,7 @@ tags: event
 face-image: img/weimar_coalition_3.jpg
 new-page: true
 
-= First <span style="color: #FFCC00;">**ЛНП**</span> проводит первый партийный съезд
+= <span style="color: #FFCC00;">**ЛНП**</span> проводит первый партийный съезд
 
 <span style="color: #FFCC00;">Либеральная народная партия</span> (<span style="color: #FFCC00;">**ЛНП**</span>) официально основана! Ганс Лютер, бывший канцлер и член <span style="color: #C0A054;">**ННП**</span>, избран временным лидером новой партии.
 
@@ -49,7 +49,7 @@ Q.agriculture_minister_party = 'Центр';
 
 В результате слияния леволиберальной <span style="color: #D3C24D;">**[+ ddp_name +]**</span> и консервативно-либеральной <span style="color: #C0A054;">**ННП**</span> они требуют, чтобы их члены, ранее состоявшие в <span style="color: #C0A054;">**ННП**</span>, были включены в состав правительства. Нам придётся произвести перестановки в кабинете.
 
-- @election_1928.ministries: Shuffle the cabinet.
+- @election_1928.ministries: Произвести перестановки в кабинете.
 
 
 @lvp_groko

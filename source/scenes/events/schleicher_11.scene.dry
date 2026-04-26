@@ -1,4 +1,4 @@
-title: The <span style="color: #0087DC;">**КНП**</span> присоединяется к <span style="color: #BFC8CC;">**ФНЕГ**</span>
+title: <span style="color: #0087DC;">**КНП**</span> присоединяется к <span style="color: #BFC8CC;">**ФНЕГ**</span>
 subtitle: Партия пытается войти в состав правительства, влившись в блок Шлейхера.
 view-if: chancellor = "Шляйхер" and schleicher_post and kvp_formed and not kvp_dnef and ((kvp_votes < 6 and not bourgeois_list_kvp) or kvp_leader == "Тревиранус") and nationalists_schleicher >= 6 and dnef_formed and not schleicher_cabinet_weak
 new-page: true
@@ -34,22 +34,22 @@ Q.kvp_leader = "Тревиранус";
 
 Текущий состав <span style="color: #BFC8CC;">Фронта Национального Единства Германии</span>:
 
-[? if dnef_formed: - <span style="color: #BFC8CC;">**ФНЕГ**</span>  ?]
+[? if dnef_formed: - <span style="color: #BFC8CC;">**ФНЕГ**</span> ?]
 
-[? if dstp_dnef: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span>  ?]
+[? if dstp_dnef: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
 
-[? if lvp_dnef: - <span style="color: #FFCC00;">**ЛНП**</span>  ?]
+[? if lvp_dnef: - <span style="color: #FFCC00;">**ЛНП**</span> ?]
 
 [? if z_dnef: - <span style="color: #000000;">Партия Центра</span>  ?]
 
-[? if z_dnef: - <span style="color: #A2D8E0;">**БНП**</span>  ?]
+[? if z_dnef: - <span style="color: #A2D8E0;">**БНП**</span> ?]
 
-[? if dvp_dnef: - <span style="color: #C0A054;">**ННП**</span>  ?]
+[? if dvp_dnef: - <span style="color: #C0A054;">**ННП**</span> ?]
 
-[? if other_dnef: - **Прочие**  ?]
+[? if other_dnef: -**Прочие**  ?]
 
-[? if kvp_dnef: - <span style="color: #0087DC;">**КНП**</span>  ?]
+[? if kvp_dnef: - <span style="color: #0087DC;">**КНП**</span> ?]
 
-[? if dnvp_dnef: - <span style="color: #3E88B3;">**НННП**</span>  ?]
+[? if dnvp_dnef: - <span style="color: #3E88B3;">**НННП**</span> ?]
 
 [? if nvf_dnef: - <span style="color: #142e20;">**ННФ**</span> ?]

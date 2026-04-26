@@ -14,9 +14,9 @@ tags: party_affairs
 [? if enemies != 0 : Ранее мы считали своими главными врагами [+ enemies +]. Не пора ли сменить курс? ?]
 
 - @anti_dem: Антидемократические партии <span style="color: #7A3C00;">ультра</span>-[? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">правых</span>, ?][? if dnvp_ideology == "Умеренные": <span style="color: #003755;">правых</span> ?] и <span style="color: #700000;">ультралевых</span>: <span style="color: #700000;">**КПГ**</span>, <span style="color: #7A3C00;">**НСДАП**</span> и [? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Умеренные": <span style="color: #003755;">**НФГ**</span> ?].
-- @far_right: <span style="color: #7A3C00;">Ультра</span>-[? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">правые</span> ?][? if dnvp_ideology == "Умеренные": <span style="color: #003755;">правые</span> ?] - the <span style="color: #7A3C00;">**НСДАП**</span> и [? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Умеренные": <span style="color: #003755;">**НФГ**</span> ?].
-- @nsdap: The <span style="color: #7A3C00;">**НСДАП**</span> — наш главный враг.
-- @kpd: The <span style="color: #700000;">**КПГ**</span>.
+- @far_right: <span style="color: #7A3C00;">Ультра</span>-[? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">правые</span> ?][? if dnvp_ideology == "Умеренные": <span style="color: #003755;">правые</span> ?]: <span style="color: #7A3C00;">**НСДАП**</span> и [? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Умеренные": <span style="color: #003755;">**НФГ**</span> ?].
+- @nsdap: <span style="color: #7A3C00;">**НСДАП**</span> — наш главный враг.
+- @kpd: <span style="color: #700000;">**КПГ**</span>.
 - @bourgeois: Буржуазные партии: [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] и [? if not lvp_formed and dvp_exist: <span style="color: #C0A054;">**ННП**</span> ?][? if not lvp_formed and not dvp_exist: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?].
 - @easy_discard
 

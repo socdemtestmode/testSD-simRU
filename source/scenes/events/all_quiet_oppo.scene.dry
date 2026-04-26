@@ -24,7 +24,7 @@ face-image: img/All_Quiet.jpg
 view-if: z_ideology == "Правые" and not (spd_toleration_prussia and prussian_police_loyalty >= 0.65)
 on-arrival: old_middle_nsdap += 4; new_middle_nsdap += 3; workers_nsdap += 2; unemployed_nsdap += 2; sa_strength += 50; nationalism += 5; pro_republic -= 4
 
-The [? if in_right_coalition_prussia: Правая коалиция ?][? if in_center_right_coalition_prussia: Правоцентристская коалиция ?] уступила требованиям <span style="color: #7A3C00;">нацистов</span> и запретила скандальный фильм. <span style="color: #7A3C00;">Нацисты</span> объявляют это решение триумфом. Это приводит к заметному подъёму их боевого духа и политической уверенности.
+[? if in_right_coalition_prussia: Правая коалиция ?][? if in_center_right_coalition_prussia: Правоцентристская коалиция ?] уступила требованиям <span style="color: #7A3C00;">нацистов</span> и запретила скандальный фильм. <span style="color: #7A3C00;">Нацисты</span> объявляют это решение триумфом. Это приводит к заметному подъёму их боевого духа и политической уверенности.
 
 
 

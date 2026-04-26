@@ -1,4 +1,4 @@
-title: The <span style="color: #7A3C00;">**СА**</span> на грани развала!
+title: <span style="color: #7A3C00;">**СА**</span> на грани развала!
 subtitle: Наступило разочарование.
 view-if: chancellor = "Шляйхер" and schleicher_time == 8
 new-page: true
@@ -18,7 +18,7 @@ on-display: {!
     contentDiv.appendChild(cardEl);
 !}
 
-= Распад <span style="color: #7A3C00;">**СА**</span> Disintegration
+= Распад <span style="color: #7A3C00;">**СА**</span>
 
 Конфликт со Штегманом стал началом конца для <span style="color: #7A3C00;">**СА**</span>: организация столкнулась с волной дезертирства, растратой средств, неподчинением и отставками. [+ nsdap_leader +]овская стратегия «всё или ничего» оказалась губительной: <span style="color: #7A3C00;">нацистское</span> движение упустило свой шанс.
 

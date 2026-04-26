@@ -1,4 +1,4 @@
-title: Политика <span style="color: #700000;">**КПГ**</span> policy
+title: Политика <span style="color: #700000;">**КПГ**</span>
 subtitle: Министры от <span style="color: #700000;">**КПГ**</span> реализуют политику в своих сферах ответственности.
 new-page: true
 view-if: (in_popular_front or in_left_front) and (labor_minister_party = "КПГ" or economic_minister_party = "КПГ" or finance_minister_party = "КПГ") and (kpd_policy_timer = 0)
@@ -14,7 +14,7 @@ on-arrival: kpd_policy_timer = 5
 # LaPorte, Norman H. “The German Communist Party in Saxony, 1924-1933 : Factionalism, Fratricide and Political Failure,” 1998. http://dspace.stir.ac.uk/handle/1893/3259.
 
 
-= Политика <span style="color: #700000;">**КПГ**</span> Policy
+= Политика <span style="color: #700000;">**КПГ**</span>
 
 # The Communist-run ministries are pursuing their own policy course. It is up to us whether to support or oppose these policies.
 
@@ -68,7 +68,7 @@ view-if: economic_minister_party = "КПГ"
 @economy_support
 on-arrival: nationalization_progress += 1; capital_strike_progress += 4; unemployed -= 2.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; budget -= 3; works_program += 1; workers_spd += 4*(1-dissent); workers_kpd += 8*(1-dissent); unemployed_kpd += 4*(1-dissent); coalition_dissent += 2; dvp_relation -= 6; lvp_relation -= 6; z_relation -= 4; new_middle_spd -= 3; old_middle_spd -= 3; economy_goal_completed += 1; kpd_influence += 2
 
-The <span style="color: #700000;">**КПГ**</span> завоевали доверие рабочих за то, что позволили многим сохранить свои рабочие места. Тем временем буржуазные партии и избиратели среднего класса винят <span style="color: #c00000;">**СДПГ**</span> за то, что они допустили национализации.
+<span style="color: #700000;">**КПГ**</span> завоевали доверие рабочих за то, что позволили многим сохранить свои рабочие места. Тем временем буржуазные партии и избиратели среднего класса винят <span style="color: #c00000;">**СДПГ**</span> за то, что они допустили национализации.
 
 
 @economy_oppose

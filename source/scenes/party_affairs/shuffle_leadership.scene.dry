@@ -35,7 +35,7 @@ console.log(Q.advisor_1)
 frequency: 1
 go-to: rm_main_menu
 
-The <span style="color: #c00000;">**СДПГ**</span> — это многоликая и динамичная партия, но её внутренние противоречия со временем приводят к постепенному росту внутренних разногласий. [? if nsdap_votes >= 20: Однако угроза, исходящая от <span style="color: #7A3C00;">**НСДАП**</span> для Республики, заставила утихнуть многие внутренние споры.  ?]
+<span style="color: #c00000;">**СДПГ**</span> — это многоликая и динамичная партия, но её внутренние противоречия со временем приводят к постепенному росту внутренних разногласий. [? if nsdap_votes >= 20: Однако угроза, исходящая от <span style="color: #7A3C00;">**НСДАП**</span> для Республики, заставила утихнуть многие внутренние споры.  ?]
 
 Назначение отдельных советников повысит лояльность и влияние их фракций, но приведёт к росту недовольства среди оттеснённых фракций.
 
@@ -539,7 +539,7 @@ tags: reformist_advisor
 
 @add_levi
 title: Пауль Леви
-subtitle: Пауль Леви — бывший председатель <span style="color: #700000;">**КПГ,**</span>, которого исключили из партии за критику путчистской тактики <span style="color: #700000;">**коммунистов**</span> policies. {!<br><br>!}[? if difficulty < 0 : Действия: усиление фракции левых, сотрудничество с <span style="color: #700000;">**КПГ**</span> ?]
+subtitle: Пауль Леви — бывший председатель <span style="color: #700000;">**КПГ,**</span>, которого исключили из партии за критику путчистской тактики <span style="color: #700000;">**коммунистов**</span>.{!<br><br>!}[? if difficulty < 0 : Действия: усиление фракции левых, сотрудничество с <span style="color: #700000;">**КПГ**</span> ?]
 is-card: true
 card-image: img/portraits/LeviPaul.jpg
 view-if: levi_advisor = 0 and levi_dead = 0 and n_advisors < 3 and left_split = 0
@@ -720,7 +720,7 @@ tags: neorev_advisor
 
 @add_baade
 title: Фриц Бааде
-subtitle: Фриц Бааде — один из немногих экспертов по сельскому хозяйству в <span style="color: #c00000;">**СДПГ**</span>. {!<br><br>!}[? if difficulty < 0 : Действия: аграрная политика, агитация в сельской местности, поддержать экономический план профсоюзников ?]
+subtitle: Фриц Бааде — один из немногих экспертов по сельскому хозяйству в <span style="color: #c00000;">**СДПГ**</span>.{!<br><br>!}[? if difficulty < 0 : Действия: аграрная политика, агитация в сельской местности, поддержать экономический план профсоюзников ?]
 is-card: true
 card-image: img/portraits/BaadeFritz.jpg
 view-if: baade_advisor = 0 and n_advisors < 3
@@ -748,7 +748,7 @@ tags: nonfactional_advisor
 
 @add_radbruch
 title: Густав Радбрух
-subtitle: Густав Радбрух — известный правовед и министр юстиции от <span style="color: #c00000;">**СДПГ**</span> justice minister. {!<br><br>!}[? if difficulty < 0 : Действия: судебная реформа, конституционная реформа ?]
+subtitle: Густав Радбрух — известный правовед и министр юстиции от <span style="color: #c00000;">**СДПГ**</span>.{!<br><br>!}[? if difficulty < 0 : Действия: судебная реформа, конституционная реформа ?]
 is-card: true
 card-image: img/portraits/RadbruchGustav.jpg
 view-if: radbruch_advisor = 0 and n_advisors < 3

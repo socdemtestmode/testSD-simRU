@@ -1,5 +1,5 @@
 title: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> проводит съезд
-subtitle: The <span style="color: #D3C24D;">[+ ddp_name +]</span> решает свою судьбу…
+subtitle: <span style="color: #D3C24D;">[+ ddp_name +]</span> решает свою судьбу…
 view-if: year == 1930 and month >= 11 and not lvp_formed and not dstp_formed
 on-arrival: {!
 Q.lemmer_points = 0;

@@ -13,7 +13,7 @@ view-if: muller_advisor = 1
 - @coalition
 - @toleration
 - @snap_election
-- @root: Return to main
+- @root: Назад
 
 
 @coalition

@@ -39,4 +39,4 @@ on-arrival: resources -= 1; workers_kpd += 5; new_middle_spd += 6; old_middle_sp
 @nothing
 on-arrival: zentrum_disintegration += 1; 
 
-The [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] продолжает оттягивать на себя голоса нашего основного электората.
+[? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] продолжает оттягивать на себя голоса нашего основного электората.

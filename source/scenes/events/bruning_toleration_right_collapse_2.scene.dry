@@ -59,4 +59,4 @@ on-arrival: prussia_coalition_trigger = 1
 
 Прусская коалиция тоже не может удержаться — давление со стороны национал-консерваторов в <span style="color: #3E88B3;">**НННП**</span> заставляет их выйти из <span style="color: #000000;">буржуазно-</span><span style="color: #3E88B3;">правой</span> коалиции.
 
-- @prussian_coalition_formation: Negotiate a new Prussian coalition.
+- @prussian_coalition_formation: Переговоры о новой коалиции в Пруссии.

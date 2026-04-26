@@ -15,7 +15,7 @@ tags: govt_affairs, cabinet
 - @repeal_175: Отменить параграф 175.
 - @reform_183: Реформировать параграф 183.
 - @change_sex: Создать юридическую процедуру смены пола.
-- @return: Do not enact any changes for now.
+- @return: Пока не вносить никаких изменений.
 - @easy_discard
 - @cancel_advisor_action
 
@@ -30,7 +30,7 @@ choose-if: progressive_coalition >= 50
 on-arrival: repealed_175 = 1; homosexual_rights += 1; z_relation -= 5; kpd_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); catholics_spd -= 4; ddp_left += 1; ddp_cohesion -= 1; economic_growth += 0.1;
 go-to: heuchelei if rohm_explode
 
-Вместе с прогрессистами из <span style="color: #700000;">**КПГ**</span> и [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: левыми членами <span style="color: #FFCC00;">**ЛНП**</span> members ?] мы фактически декриминализовали <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">льные</span> связи в Германии. Преследование <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">ксу</span><span style="color: blue;">ал</span><span style="color: purple;">ов</span> за их частную жизнь прекратится, если полиция сохранит верность республике. <i>(ЛГБТ — экстремистское международное движение, запрещенное Верховным Судом России)</i>.
+Вместе с прогрессистами из <span style="color: #700000;">**КПГ**</span> и [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: левыми членами <span style="color: #FFCC00;">**ЛНП**</span> ?] мы фактически декриминализовали <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">льные</span> связи в Германии. Преследование <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">ксу</span><span style="color: blue;">ал</span><span style="color: purple;">ов</span> за их частную жизнь прекратится, если полиция сохранит верность республике. <i>(ЛГБТ — экстремистское международное движение, запрещенное Верховным Судом России)</i>.
 
 Разумеется, консерваторы и <span style="color: #7A3C00;">крайне</span> <span style="color: #3E88B3;">правые</span> обвиняют нас в «дегенеративности».
 
@@ -46,7 +46,7 @@ view-if: reformed_183 == 0
 choose-if: progressive_coalition >= 50 
 on-arrival: reformed_183 = 1; homosexual_rights += 1; z_relation -= 5; kpd_relation += 4*(1-dissent); ddp_relation += 4*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or in_weimar_coalition); catholics_spd -= 4; ddp_left += 1; ddp_cohesion -= 1; economic_growth += 0.1;
 
-Проголосовав вместе с прогрессивистами из <span style="color: #700000;">**КПГ**</span> и [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: левыми членами <span style="color: #FFCC00;">**ЛНП**</span> members ?] Мы реформировали Параграф 183: он больше не предусматривает уголовной ответственности за публичную <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">льность</span> и <span style="color: deepskyblue;">кросс</span><span style="color: deeppink;">дрессинг</span>. <i>(ЛГБТ — экстремистское международное движение, запрещенное Верховным Судом России)</i>.
+Проголосовав вместе с прогрессивистами из <span style="color: #700000;">**КПГ**</span> и [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: левыми членами <span style="color: #FFCC00;">**ЛНП**</span> ?] Мы реформировали Параграф 183: он больше не предусматривает уголовной ответственности за публичную <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">льность</span> и <span style="color: deepskyblue;">кросс</span><span style="color: deeppink;">дрессинг</span>. <i>(ЛГБТ — экстремистское международное движение, запрещенное Верховным Судом России)</i>.
 
 
 

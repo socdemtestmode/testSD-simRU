@@ -21,7 +21,7 @@ view-if: spd_in_government = 1 and interior_minister_party = "СДПГ"
 - @ban_rfb: Запретить <span style="color: #700000;">коммунистический</span> <span style="color: #8B0000;">**СКФ**</span>.
 - @unban_rfb: Разрешить <span style="color: #8B0000;">**СКФ**</span>.
 - @persecute_rfb
-- @root: Take no action for now.
+- @root: Пока не предпринимать никаких действий.
 
 
 @ban_sa
@@ -37,7 +37,7 @@ on-arrival: sa_strength *= 0.85; sa_strength *= 0.7 if interior_police_loyalty >
 view-if: sa_banned = 1 and in_popular_front_prussia == 0 and in_left_front_prussia == 0
 on-arrival: sa_banned = 0; sa_strength += 100; sa_militancy += 0.05; coup_progress += 2 if sa_coup_progress >= 6
 
-The <span style="color: #7A3C00;">**СА**</span> более не под запретом. Они немедленно начинают массовую вербовку.
+<span style="color: #7A3C00;">**СА**</span> более не под запретом. Они немедленно начинают массовую вербовку.
 
 
 @persecute_sa
@@ -63,7 +63,7 @@ view-if: sh_banned == 0
 view-if: sh_banned = 1 and in_popular_front_prussia == 0 and in_left_front_prussia == 0
 on-arrival: sh_banned = 0; sh_strength += 100; coup_progress += 2 if sh_coup_progress >= 6; hindenburg_angry -= 5
 
-The <span style="color: #3E88B3;">**Стальной Шлем**</span> больше не запрещён.
+<span style="color: #3E88B3;">**Стальной Шлем**</span> больше не запрещён.
 
 
 @persecute_sh

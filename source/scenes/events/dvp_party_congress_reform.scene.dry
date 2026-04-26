@@ -1,5 +1,5 @@
 title: <span style="color: #C0A054;">**ННП**</span> — Голосование в партии
-subtitle: The <span style="color: #C0A054;">**ННП**</span> выбирает своего нового лидера…
+subtitle: <span style="color: #C0A054;">**ННП**</span> выбирает своего нового лидера…
 view-if: year = 1929 and month = 12 and dvp_reform = 1 and not lvp_formed and not (lvp_timer_1_trigger and (lvp_merger_1_timer or lvp_trigger_1_time))
 on-arrival: dvp_right += 3 if dvp_relation < 30; dvp_left += 2 if dvp_relation >= 50; dvp_right += 2 if not in_grand_coalition
 max-visits: 1
@@ -9,9 +9,9 @@ new-page: true
 
 = <span style="color: #C0A054;">**ННП**</span> проводит съезд
 
-The <span style="color: #C0A054;">**ННП**</span> проводит внутрипартийные выборы преемника бывшего лидера партии Густава Штреземана. Несмотря на недавние реформы, в последние годы и сама партия, и её электорат смещаются вправо. [? if not in_grand_coalition: Левое крыло <span style="color: #C0A054;">**ННП**</span> также ослабло из-за отсутствия коалиций с социалистами.  ?]
+<span style="color: #C0A054;">**ННП**</span> проводит внутрипартийные выборы преемника бывшего лидера партии Густава Штреземана. Несмотря на недавние реформы, в последние годы и сама партия, и её электорат смещаются вправо. [? if not in_grand_coalition: Левое крыло <span style="color: #C0A054;">**ННП**</span> также ослабло из-за отсутствия коалиций с социалистами.  ?]
 
-Кандидат от правого крыла — действующий лидер партии Эрнст Шольц. Шольц тесно связан с промышленниками и известный противник буржуазного единства. Хотя правое крыло партии и ослаблено, после смерти Штреземана национализм усилился. От левого крыла выступает Юлиус Курциус, [? if in_grand_coalition or in_right_coalition or in_center_right_coalition: представитель <span style="color: #C0A054;">**ННП**</span>'s [? if (foreign_minister_party == "ННП" and economic_minister_party != "ННП") or (foreign_minister_party == "ННП" and economic_minister_party == "ННП"): министр иностранных дел, сменивший Штреземана на этом посту. ?][? if economic_minister_party == "ННП" and foreign_minister_party != "ННП": министр экономики и близкий соратник Штреземана. ?] ?][? if not in_grand_coalition: близкий соратник Штреземана, которого многие считают его естественным преемником. ?]. Выдвижение кандидатуры бывшего канцлера Ганса Лютера застопорилось из-за его нежелания, но он остаётся возможным компромиссным кандидатом.
+Кандидат от правого крыла — действующий лидер партии Эрнст Шольц. Шольц тесно связан с промышленниками и известный противник буржуазного единства. Хотя правое крыло партии и ослаблено, после смерти Штреземана национализм усилился. От левого крыла выступает Юлиус Курциус, [? if in_grand_coalition or in_right_coalition or in_center_right_coalition: представитель <span style="color: #C0A054;">**ННП**</span>[? if (foreign_minister_party == "ННП" and economic_minister_party != "ННП") or (foreign_minister_party == "ННП" and economic_minister_party == "ННП"): министр иностранных дел, сменивший Штреземана на этом посту. ?][? if economic_minister_party == "ННП" and foreign_minister_party != "ННП": министр экономики и близкий соратник Штреземана. ?] ?][? if not in_grand_coalition: близкий соратник Штреземана, которого многие считают его естественным преемником. ?]. Выдвижение кандидатуры бывшего канцлера Ганса Лютера застопорилось из-за его нежелания, но он остаётся возможным компромиссным кандидатом.
 
 - @resultsdvp: Партия голосует…
 
@@ -35,7 +35,7 @@ face-image: img/portraits/curtius.jpg
 
 Юлиус Курциус победил в голосовании за пост председателя и стал преемником Штреземана. Похоже, промышленники проиграли борьбу за контроль над <span style="color: #C0A054;">**ННП**</span>, которая теперь стала подлинно Народной партией согласно заветам Штреземана.
 
-Это отличные новости для нас и наших отношений с <span style="color: #C0A054;">**ННП**</span>. [? if in_grand_coalition:  Мы заметили снижение напряжённости в коалиции. ?]
+Это отличные новости для нас и наших отношений с <span style="color: #C0A054;">**ННП**</span>.[? if in_grand_coalition:  Мы заметили снижение напряжённости в коалиции. ?]
 
 
 @scholz
@@ -51,6 +51,6 @@ face-image: img/portraits/ernst_scholz.jpg
 on-arrival: dvp_leader = "Лютер"; dvp_left += 3 if in_grand_coalition; liberal_cooperation += 4; bourgeois_cooperation += 4; dvp_relation += 3 if in_grand_coalition; new_middle_dvp += 3; old_middle_dvp += 5; rural_dvp += 3; pro_republic += 5; old_middle_dnvp -= 2 if (dnvp_ideology == "Радикалы" and not kvp_formed); old_middle_dvp += 2 if (dnvp_ideology == "Радикалы" and not kvp_formed); new_middle_dnvp -= 2 if (dnvp_ideology == "Радикалы" and not kvp_formed); new_middle_dvp += 2 if (dnvp_ideology == "Радикалы" and not kvp_formed); rural_dnvp -= 1 if (dnvp_ideology == "Радикалы" and not kvp_formed); rural_dvp += 1 if (dnvp_ideology == "Радикалы" and not kvp_formed); ddp_left += 1; ddp_cohesion += 2
 face-image: img/portraits/luther.jpg
 
-Ганс Лютер неожиданно победил на выборах председателя партии и сменил Штреземана. Лютер пользуется поддержкой как промышленников, так и левого крыла партии, что даёт ему возможность оказывать на неё сильное влияние, в отличие от предшественников. Возможно, именно он поможет <span style="color: #C0A054;">**ННП**</span> пережить кризис немецкой демократии. [? if (dnvp_ideology == "Радикалы" and not kvp_formed): Лютеру также удаётся привлечь на свою сторону раскольников из <span style="color: #3E88B3;">**НННП**</span>.  ?]
+Ганс Лютер неожиданно победил на выборах председателя партии и сменил Штреземана. Лютер пользуется поддержкой как промышленников, так и левого крыла партии, что даёт ему возможность оказывать на неё сильное влияние, в отличие от предшественников. Возможно, именно он поможет <span style="color: #C0A054;">**ННП**</span> пережить кризис немецкой демократии. [? if (dnvp_ideology == "Радикалы" and not kvp_formed): Лютеру также удаётся привлечь на свою сторону раскольников из <span style="color: #3E88B3;">**НННП**</span>. ?]
 
 Лютер — активный сторонник объединения либеральных партий и даже создания широкой буржуазной партии.[? if in_grand_coalition: Он также высказался в поддержку сохранения Большой коалиции и сотрудничества с нами. ?][? if not in_grand_coalition and dvp_relation >= 40: Он высказался в поддержку коалиционного правительства с нашим участием и сотрудничества с нами. ?][? if not in_grand_coalition and dvp_relation < 40: Он выразил скептицизм в отношении любых возможных коалиций с нашим участием: в настоящее время нет коалиции, включающей обе партии. ?]
