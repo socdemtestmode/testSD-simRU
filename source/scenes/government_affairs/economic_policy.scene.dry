@@ -15,7 +15,7 @@ go-to: economic_plan_menu if not lautenbach_adopted; economic_plan_dilemma if la
 
 @economic_plan_dilemma
 
-Этот[+ public_works_name +] план уже реализован кабинетом Брюнинга до нас. Стоит ли нам продолжать его реализацию и, возможно, расширить его охват, или же мы должны следовать нашей собственной экономической стратегии?
+[+ public_works_name +] план уже реализован кабинетом Брюнинга до нас. Стоит ли нам продолжать его реализацию и, возможно, расширить его охват, или же мы должны следовать нашей собственной экономической стратегии?
 
 - @lautenbach_continuation
 - @lautenbach_wtb
@@ -25,7 +25,7 @@ go-to: economic_plan_menu if not lautenbach_adopted; economic_plan_dilemma if la
 
 
 @lautenbach_continuation
-title: Мы продолжим реализацию[+ public_works_name +]плана.
+title: Мы продолжим реализацию [+ public_works_name +] плана.
 choose-if: unemployed >= 10
 unavailable-subtitle: [? if unemployed < 10: Уровень безработицы достаточно низок, поэтому в создании рабочих мест нет необходимости.  ?] [? if inflation >= 5: Угроза инфляции вынуждает Рейхсбанк приостановить реализацию плана. ?]
 on-arrival: lautenbach_plan_time = time + 12 if time >= lautenbach_plan_time; lautenbach_plan_time += 12 if lautenbach_plan_time >= time; works_program += 1; workers_spd += 3*(1-dissent); unemployed_spd += 4*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); rural_spd += 2*(1-dissent); workers_spd += 3*(1-dissent) if lautenbach_wtb; unemployed_spd += 4*(1-dissent) if lautenbach_wtb; new_middle_spd += 3*(1-dissent) if lautenbach_wtb; old_middle_spd += 2*(1-dissent) if lautenbach_wtb; rural_spd += 2*(1-dissent) if lautenbach_wtb; workers_nsdap -= 4 if lautenbach_wtb; workers_nsdap -= 2; z_relation += 5; ddp_relation += 5; dvp_relation += 5; lvp_relation += 5; coalition_dissent -= 1 if coalition_dissent >= 1; capital_strike_progress -= 1 if capital_strike_progress >= 0; dvp_left += 2; ddp_left += 4; ddp_cohesion += 2; lvp_left += 3; pro_republic += 3; economic_plan_goal_spd += 1; unemployed -= 2 if unemployed >= 25; unemployed -= 1; inflation += 1; economic_growth += 1.6; economy_goal_spd_peoples += 1; kpd_relation -= 8 if in_popular_front or in_left_front; kpd_coalition_dissent += 1

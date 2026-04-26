@@ -22,7 +22,7 @@ subtitle: Пожалуй, пора сократить наши потери.
 on-arrival: time_to_election = 3; spd_in_government = 0; in_right_coalition = 0; in_center_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 0; spd_toleration_right = 0; pro_republic -= 3; z_relation -= 5; ddp_relation -= 3; lvp_relation -= 3; dvp_right += 1; ddp_right += 1; lvp_right += 1
 call: set_next_election_time
 
-Мы официально порвали с[+ chancellor +]ом и возглавляемым им правительством, проголосовав против него при вынесении вотума недоверия. Буржуазные партии также присоединились, отказавшись от тщетных попыток спасти правительство Брюнинга.
+Мы официально порвали с [+ chancellor +]ом и возглавляемым им правительством, проголосовав против него при вынесении вотума недоверия. Буржуазные партии также присоединились, отказавшись от тщетных попыток спасти правительство Брюнинга.
 
 Новые выборы назначены на [+ next_election_month : month +] [+ next_election_year +].
 

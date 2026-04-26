@@ -11,14 +11,14 @@ go-to: menu if chancellor != "Вирт"; wirth_resign_hindenburg if chancellor =
 
 @menu
 
-Канцлер [+ chancellor +] объявил о своих намерениях президенту[+ president +] провести перестановки в кабинете, уволив и заменив всех действующих министров от <span style="color: #c00000;">**СДПГ**</span> на представителей буржуазии. [? if bourgeois_coalition < 50 and (right_coalition < 50 or dnvp_ideology == "Радикалы" and not dnvp_westarp) and (center_right_coalition < 50 or dnvp_ideology == "Радикалы") : К счастью, без нас у них нет большинства, поэтому мы можем свергнуть их простым вотумом недоверия. ?]
+Канцлер [+ chancellor +] объявил о своих намерениях президенту [+ president +] провести перестановки в кабинете, уволив и заменив всех действующих министров от <span style="color: #c00000;">**СДПГ**</span> на представителей буржуазии. [? if bourgeois_coalition < 50 and (right_coalition < 50 or dnvp_ideology == "Радикалы" and not dnvp_westarp) and (center_right_coalition < 50 or dnvp_ideology == "Радикалы") : К счастью, без нас у них нет большинства, поэтому мы можем свергнуть их простым вотумом недоверия. ?]
 
 - @try_assuage: Попытаться успокоить наших партнёров.
 - @right_coalition: <span style="color: #3E88B3;">**НННП**</span> сменяет нас в правительстве.
 - @center_right_coalition: <span style="color: #3E88B3;">**НННП**</span> сменяет нас в правительстве.
 - @minority_bruning: Кабинет Брюнинга сохраняется у власти как правительство меньшинства.
 - @breitscheid_vonc: Вынести конструктивный вотум недоверия совместно с <span style="color: #700000;">**КПГ**</span>!
-- @sack_bruning: Президент[+ president +]назначит досрочные выборы.
+- @sack_bruning: Президент [+ president +] назначит досрочные выборы.
 - @bourgeois_coalition: Буржуазные партии получили парламентское большинство.
 - @bruning_chain: Что дальше?
 - @tolerate: Допустить перестановки в правительстве и воздержаться от вотума недоверия новому правительству меньшинства.
@@ -166,6 +166,6 @@ on-arrival: chancellor = "Брюнинг"; chancellor_party = "Центр"
 
 Не в силах выносить напряжение, связанное с сохранением коалиции, Вирт объявил о намерении уйти в отставку с поста канцлера.
 
-[+ president +]назначает преемником Брюнинга от[? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП,**</span> ?]который немедленно реформирует правительство.
+[+ president +] назначает преемником Брюнинга от[? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП,**</span> ?]который немедленно реформирует правительство.
 
 - @menu: Брюнинг смещает наших министров.

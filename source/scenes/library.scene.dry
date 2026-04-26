@@ -85,9 +85,9 @@ go-to: cabinet if spd_in_government; menu if not spd_in_government
 
 [? if bruning_time and president == "Гинденбург": Отношение Гинденбурга: [+ hindenburg_angry_bruning : hindenburg_angry_bruning +]  ?]
 
-[? if spd_government_burden_seen: Цели правительства: [? if goal_spd_cancel == 0: [+ goal_spd_total +] ?][? if goal_spd_cancel >= 1: Провалено ?] / 2 выполнено, осталось [+ spd_government_burden_timer +]месяцев ?]
+[? if spd_government_burden_seen: Цели правительства: [? if goal_spd_cancel == 0: [+ goal_spd_total +] ?][? if goal_spd_cancel >= 1: Провалено ?] / 2 выполнено, осталось [+ spd_government_burden_timer +] месяцев ?]
 
-[? if spd_government_burden_peoples: Второстепенные цели правительства: [? if goal_spd_cancel_peoples == 0: [+ goal_spd_total_peoples +] ?][? if goal_spd_cancel_peoples >= 1: Провалено ?] / 1 выполнено, осталось [+ spd_government_burden_timer +]месяцев ?]
+[? if spd_government_burden_peoples: Второстепенные цели правительства: [? if goal_spd_cancel_peoples == 0: [+ goal_spd_total_peoples +] ?][? if goal_spd_cancel_peoples >= 1: Провалено ?] / 1 выполнено, осталось [+ spd_government_burden_timer +] месяцев ?]
 
 [? if spd_in_government and not in_spd_majority and not in_left_front : Разногласия в коалиции: [+ coalition_dissent : coalition_dissent +]  ?]
 

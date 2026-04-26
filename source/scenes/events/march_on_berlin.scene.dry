@@ -30,7 +30,7 @@ go-to: accept_election if (nsdap_normalized + dnvp_normalized >= 0.5 and far_rig
 @accept_election
 on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_election_month = month + 1 if next_election_time >= time+1; next_election_year = year if next_election_time >= time+1; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; old_middle_nsdap += 10; new_middle_nsdap += 10; workers_nsdap += 10; rural_nsdap += 10; unemployed_nsdap += 8; workers_spd -= 10; workers_kpd -= 10; sa_strength += 100;
 
-Президент[+ president +] объявил о проведении досрочных выборов, которые состоятся в следующем месяце под руководством временного правительства. <span style="color: #7A3C00;">**СА**</span> получили разрешение действовать безнаказанно, запугивая избирателей и принуждая их поддерживать <span style="color: #7A3C00;">фашистов</span>.
+Президент [+ president +] объявил о проведении досрочных выборов, которые состоятся в следующем месяце под руководством временного правительства. <span style="color: #7A3C00;">**СА**</span> получили разрешение действовать безнаказанно, запугивая избирателей и принуждая их поддерживать <span style="color: #7A3C00;">фашистов</span>.
 
 
 
@@ -158,7 +158,7 @@ on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_e
 
 @new_elections_moderate
 
-Хотя президент[+ president +] и выступил вместе с нами против <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правых</span> демонстрантов, он всё ещё находится под давлением уличных <span style="color: #7A3C00;">фашистов</span> и ставит мирное урегулирование превыше всего.
+Хотя президент [+ president +] и выступил вместе с нами против <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правых</span> демонстрантов, он всё ещё находится под давлением уличных <span style="color: #7A3C00;">фашистов</span> и ставит мирное урегулирование превыше всего.
 
 Тем не менее, [+ president +] он отказывается признавать любые новые выборы, которые не будут по-настоящему свободными и честными.
 
@@ -172,7 +172,7 @@ choose-if: far_right_coalition < 50 and nsdap_normalized + dnvp_normalized >= 0.
 unavailable-subtitle: <span style="color: #7A3C00;">Фашистам</span> нужно лишь одно — сфальсифицировать выборы.
 go-to: new_elections_2
 
-<span style="color: #7A3C00;">Фашисты</span>, уверенные в своих шансах, соглашаются на [+ president +]предложение провести выборы в следующем месяце.
+<span style="color: #7A3C00;">Фашисты</span>, уверенные в своих шансах, соглашаются на выдвинутое [+ president +]ом предложение провести выборы в следующем месяце.
 
 
 @new_elections_moderate_2_alt
@@ -209,7 +209,7 @@ on-arrival: chancellor = "Гитлер"; chancellor_party = "НСДАП"; spd_in
 title: Мы не можем сделать ничего, кроме как назначить Штрассера канцлером.
 view-if: president_ideology == "Левые" and president == "Розенфельд"
 choose-if: time >= hitler_explode and hitler_explode
-unavailable-subtitle: Президент ни за что не[+ president +]пошёл бы на столь вопиюще недемократический шаг.
+unavailable-subtitle: Президент ни за что не [+ president +] пошёл бы на столь вопиюще недемократический шаг.
 on-arrival: chancellor = "Штрассер"; chancellor_party = "НСДАП"; spd_in_government = 0
 
 Под угрозой гражданской войны и не желая больше сражаться, президент [+ president +] отправляет в отставку действующее правительство и назначает Штрассера от <span style="color: #7A3C00;">**НСДАП**</span> канцлером.

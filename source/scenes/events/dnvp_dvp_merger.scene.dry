@@ -1,5 +1,5 @@
 title: <span style="color: #C0A054;">**ННП**</span> объединяется с <span style="color: #3E88B3;">**НННП**</span>!
-subtitle: Дингельдей и[+ dnvp_leader +]достигли соглашения.
+subtitle: Дингельдей и [+ dnvp_leader +] достигли соглашения.
 view-if: year == 2000
 max-visits: 1
 tags: event

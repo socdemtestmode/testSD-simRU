@@ -82,7 +82,7 @@ on-arrival: in_center_right_coalition_prussia = 1; in_right_coalition_prussia = 
 @snap_election
 title: Досрочные выборы
 subtitle: Назначить досрочные выборы.
-unavailable-subtitle: [? if chancellor != "Розенфельд" and president != "Розенфельд" : Канцлером или президентом должен быть Розенфельд. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +]месяца до следующего действия советника. ?] [? if president = "Розенфельд" and presidential_powers : Мы лишили президента этих полномочий посредством конституционной реформы. ?]
+unavailable-subtitle: [? if chancellor != "Розенфельд" and president != "Розенфельд" : Канцлером или президентом должен быть Розенфельд. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца до следующего действия советника. ?] [? if president = "Розенфельд" and presidential_powers : Мы лишили президента этих полномочий посредством конституционной реформы. ?]
 choose-if: advisor_action_timer == 0 and (chancellor == "Розенфельд" or (president == "Розенфельд" and not presidential_powers))
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; 
 

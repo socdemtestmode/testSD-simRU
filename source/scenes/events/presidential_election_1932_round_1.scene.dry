@@ -712,7 +712,7 @@ go-to: round2_menu
 
 [? if hitler_support_hindenburg : Чтобы консолидировать голоса <span style="color: #808080;">правых</span> и не допустить избрания <span style="color: #c00000;">социалиста</span> на пост президента, <span style="color: #7A3C00;">[+ nsdap_candidate_1932 +]</span> больше не участвует во втором туре и теперь поддерживает <span style="color: #808080;">Гинденбурга</span>.  ?]
 
-[? if lib_drop_out_bourgeois : Чтобы консолидировать буржуазный электорат вокруг единого кандидата, [+ liberal_reactionary_candidate_1932_name +]снял свою кандидатуру с выборов и поддержал[+ center_reactionary_candidate_1932_name +]. ?][? if z_drop_out_bourgeois : Чтобы консолидировать буржуазный электорат вокруг единого кандидата, [+ center_reactionary_candidate_1932_name +]снял свою кандидатуру с выборов и поддержал[+ liberal_reactionary_candidate_1932_name +]. ?]
+[? if lib_drop_out_bourgeois : Чтобы консолидировать буржуазный электорат вокруг единого кандидата, [+ liberal_reactionary_candidate_1932_name +] снял свою кандидатуру с выборов и поддержал [+ center_reactionary_candidate_1932_name +]. ?][? if z_drop_out_bourgeois : Чтобы консолидировать буржуазный электорат вокруг единого кандидата, [+ center_reactionary_candidate_1932_name +] снял свою кандидатуру с выборов и поддержал [+ liberal_reactionary_candidate_1932_name +]. ?]
 
 
 @round2_menu
@@ -857,7 +857,7 @@ go-to: round2_menu
 
 @round2_organizational_endorsement
 title: А как насчёт поддержки со стороны беспартийных организаций?
-subtitle: Поскольку [+ dnvp_candidate_1932 +] вышел из гонки, выбор стоит между двумя кандитами:  [+ reactionary_candidate_1932 +]или[+ nsdap_candidate_1932 +].
+subtitle: Поскольку [+ dnvp_candidate_1932 +] вышел из гонки, выбор стоит между двумя кандитами:  [+ reactionary_candidate_1932 +] или [+ nsdap_candidate_1932 +].
 on-arrival: {!
 Q.organizational_endorsements_seen = 1;
 if (Q.rlb_nazi) {
@@ -899,7 +899,7 @@ go-to: round2_menu
 
 Поддержка многими правыми организацими кандидатуры [+ nsdap_candidate_1932 +]а ослабит партии, зажатые между <span style="color: #000000;">Центром</span> и радикалами, расколов электорат на сторонников <span style="color: #7A3C00;">нацистов</span> и <span style="color: #9B0000;">марксистов</span> — стратегия, которую когда-то отстаивал Гугенберг, теперь обернулась против него же усилиями его бывшего союзника.
 
-[? if not rlb_hindenburg: Решение RLB поддержать <span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span>, а не воздержаться, спровоцировало резкий разрыв с умеренными филиалами организации. Их Вюртембергское отделение, <span style="color: #006400;">**ВКСВ**</span>, высказывался особенно громко, ведя активную кампанию против этой поддержки и в пользу [+ reactionary_candidate_1932 +]. Ни эта негативная реакция, ни призыв Гугенберга воздержаться от голосования не убедили RLB изменить курс, и теперь ожидается, что миллионы сельских избирателей придут на выборы, чтобы проголосовать за [+ nsdap_candidate_1932 +]на следующих выборах. ?]
+[? if not rlb_hindenburg: Решение RLB поддержать <span style="color: #7A3C00;">**[+ nsdap_candidate_1932 +]**</span>, а не воздержаться, спровоцировало резкий разрыв с умеренными филиалами организации. Их Вюртембергское отделение, <span style="color: #006400;">**ВКСВ**</span>, высказывался особенно громко, ведя активную кампанию против этой поддержки и в пользу [+ reactionary_candidate_1932 +]. Ни эта негативная реакция, ни призыв Гугенберга воздержаться от голосования не убедили RLB изменить курс, и теперь ожидается, что миллионы сельских избирателей придут на выборы, чтобы проголосовать за [+ nsdap_candidate_1932 +] на следующих выборах. ?]
 
 
 @round2_convince_z
@@ -963,7 +963,7 @@ go-to: round2_menu
 
 Иронично, если учесть, что семь лет назад мы заключили сделку, чтобы Вильгельм Маркс ушёл в отставку в пользу Брауна в обмен на нашу поддержку на президентских выборах. В любом случае, [? if z_party_name != "ХНП": <span style="color: #000000;">Центр</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] теперь убеждён поддержать Брауна, а не Гинденбурга.
 
-Должность министра-президента переходит к члену [? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span>  ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП **</span> ?]у.[+ prussia_leader +] Надеемся, их поддержка перевесит потерю популярности и внутренние разногласия, вызванные отставкой нашей самой известной фигуры.
+Должность министра-президента переходит к члену [? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span>  ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП **</span> ?]у. [+ prussia_leader +] Надеемся, их поддержка перевесит потерю популярности и внутренние разногласия, вызванные отставкой нашей самой известной фигуры.
 
 
 @pay_z
@@ -1129,7 +1129,7 @@ on-arrival: spd_campaign = 0; spd_support_thalmann = 0; spd_support_reactionary 
 view-if: not hindenburg_run and reactionary_candidate_1932 and reactionary_candidate_1932 != "Вестарп" and reactionary_candidate_1932 != "Леттов-Форбек" and not (lib_drop_out_bourgeois and liberal_reactionary_candidate_1932_name == reactionary_candidate_1932) and not (z_drop_out_bourgeois and center_reactionary_candidate_1932_name == reactionary_candidate_1932) and not (lib_drop_out_2 and liberal_reactionary_candidate_1932_name == reactionary_candidate_1932) and not (z_drop_out_2 and center_reactionary_candidate_1932_name == reactionary_candidate_1932) and spd_choice != reactionary_candidate_1932
 on-arrival: spd_support_reactionary = 1; spd_support_reactionary_1 = 1; spd_campaign = 0; braun_campaign = 0; rosenfeld_campaign = 0; eckener_campaign = 0; z_choice = reactionary_candidate_1932 if spd_campaign; ddp_choice = reactionary_candidate_1932 if spd_campaign; lvp_choice = reactionary_candidate_1932 if spd_campaign; dvp_choice = reactionary_candidate_1932 if spd_campaign; spd_choice = reactionary_candidate_1932; left_dissent += 15; labor_dissent += 10; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
 
-Мы переключили свою поддержку на[+ reactionary_candidate_1932 +].
+Мы переключили свою поддержку на [+ reactionary_candidate_1932 +].
 
 - @round2_vote: Второй тур голосования начнётся в следующем месяце.
 
@@ -1138,7 +1138,7 @@ on-arrival: spd_support_reactionary = 1; spd_support_reactionary_1 = 1; spd_camp
 view-if: not hindenburg_run and secondary_reactionary_candidate_1932 and secondary_reactionary_candidate_1932 != "Вестарп" and secondary_reactionary_candidate_1932 != "Леттов-Форбек" and not (lib_drop_out_bourgeois and liberal_reactionary_candidate_1932_name == secondary_reactionary_candidate_1932) and not (z_drop_out_bourgeois and center_reactionary_candidate_1932_name == secondary_reactionary_candidate_1932) and not (lib_drop_out_2 and liberal_reactionary_candidate_1932_name == secondary_reactionary_candidate_1932) and not (z_drop_out_2 and center_reactionary_candidate_1932_name == secondary_reactionary_candidate_1932) and spd_choice != secondary_reactionary_candidate_1932
 on-arrival: spd_support_reactionary = 1; spd_support_reactionary_2 = 1; spd_campaign = 0; braun_campaign = 0; rosenfeld_campaign = 0; eckener_campaign = 0; z_choice = secondary_reactionary_candidate_1932 if spd_campaign; ddp_choice = secondary_reactionary_candidate_1932 if spd_campaign; lvp_choice = secondary_reactionary_candidate_1932 if spd_campaign; dvp_choice = secondary_reactionary_candidate_1932 if spd_campaign; spd_choice = secondary_reactionary_candidate_1932; left_dissent += 15; labor_dissent += 10; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
 
-Теперь мы поддерживаем[+ reactionary_candidate_1932 +].
+Теперь мы поддерживаем [+ reactionary_candidate_1932 +].
 
 - @round2_vote: Второй тур голосования начнётся в следующем месяце.
 
@@ -1262,7 +1262,7 @@ if (!Q.hindenburg_run) {
 
 [? if lib_drop_out_2: К счастью для нас, [+ liberal_reactionary_candidate_1932_name +] выбыл из гонки благодаря нашим заигрываниям с <span style="color: #FFCC00;">либералами</span>.  ?][? if z_drop_out_2: К счастью для нас, [+ center_reactionary_candidate_1932_name +] выбыл из гонки благодаря нашим заигрываниям с [? if z_party_name != "ХНП": <span style="color: #000000;">Центром</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?]. ?]
 
-[? if vorbeck_trolling: Однако снятие кандидатур[? if liberal_reactionary_candidate_1932: [+ liberal_reactionary_candidate_1932_name +]и ?][+ center_reactionary_candidate_1932_name +]вынудило вступить в гонку[+ reactionary_candidate_1932 +] …, который выступил кандидатом от умеренно правых. ?]
+[? if vorbeck_trolling: Однако снятие кандидатур[? if liberal_reactionary_candidate_1932: [+ liberal_reactionary_candidate_1932_name +] и ?][+ center_reactionary_candidate_1932_name +] вынужден вступить в гонку [+ reactionary_candidate_1932 +] …, который выступил кандидатом от умеренно правых. ?]
 
 
 @hindenburg_wins
@@ -1282,7 +1282,7 @@ on-arrival: president = "Тельман"; kpd_relation = 80;
 @hitler_wins
 on-arrival: president = nsdap_candidate_1932; chancellor = "Гитлер"; chancellor_party = "НСДАП"
 
-[? if nsdap_candidate_1932 == "Гитлер" : Адольф Гитлер из <span style="color: #7A3C00;">**НСДАП**</span> победил на президентских выборах. Он без промедления приступает к консолидации власти. ?] [? if nsdap_candidate_1932 != "Гитлер" : <span style="color: #7A3C00;">**НСДАП**</span> кандидат[+ president +]победил. Первым делом президент [+ president +] возвращает Гитлера в Германию и назначает его канцлером. <span style="color: #7A3C00;">Нацисты</span> без промедления приступают к консолидации власти. ?]
+[? if nsdap_candidate_1932 == "Гитлер" : Адольф Гитлер из <span style="color: #7A3C00;">**НСДАП**</span> победил на президентских выборах. Он без промедления приступает к консолидации власти. ?] [? if nsdap_candidate_1932 != "Гитлер" : <span style="color: #7A3C00;">**НСДАП**</span> кандидат [+ president +] победил. Первым делом президент [+ president +] возвращает Гитлера в Германию и назначает его канцлером. <span style="color: #7A3C00;">Нацисты</span> без промедления приступают к консолидации власти. ?]
 
 - @hitler_takes_power: Что же нам теперь делать?
 

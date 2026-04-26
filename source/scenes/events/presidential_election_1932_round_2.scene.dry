@@ -674,7 +674,7 @@ on-arrival: president = "Тельман"; kpd_relation = 80;
 @hitler_wins
 on-arrival: president = nsdap_candidate_1932; chancellor = "Гитлер"; chancellor_party = "НСДАП"
 
-[? if nsdap_candidate_1932 == "Гитлер" : Адольф Гитлер из <span style="color: #7A3C00;">**НСДАП**</span> победил на президентских выборах. Он без промедления приступает к консолидации власти. ?] [? if nsdap_candidate_1932 != "Гитлер" : Кандидат от <span style="color: #7A3C00;">**НСДАП**</span>[+ president +]победил. Первым делом президент[+ president +] возвращает Гитлера в Германию и назначает его канцлером. <span style="color: #7A3C00;">Нацисты</span> без промедления приступают к консолидации власти. ?]
+[? if nsdap_candidate_1932 == "Гитлер" : Адольф Гитлер из <span style="color: #7A3C00;">**НСДАП**</span> победил на президентских выборах. Он без промедления приступает к консолидации власти. ?] [? if nsdap_candidate_1932 != "Гитлер" : Кандидат от <span style="color: #7A3C00;">**НСДАП**</span>[+ president +] победил. Первым делом президент [+ president +] возвращает Гитлера в Германию и назначает его канцлером. <span style="color: #7A3C00;">Нацисты</span> без промедления приступают к консолидации власти. ?]
 
 - @hitler_takes_power: Что нам теперь делать?
 

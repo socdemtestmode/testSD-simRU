@@ -315,7 +315,7 @@ go-to: cvp_dnvp_menu
 on-arrival: cvp_dnvp_balance -= 10; cvp_left += 5; z_relation += 15; rural_z -= 4; rural_dnf += 2; rural_other += 4; old_middle_z -= 6; old_middle_dnf += 2; old_middle_other += 4; new_middle_z -= 4; new_middle_other += 4; workers_z += 3; workers_spd += 3; unemployed_z += 3; unemployed_spd += 3; cvp_coalition_left = 1
 go-to: cvp_dnvp_menu
 
-<span style="color: #3E88B3;">Националисты</span> и <span style="color: #385A38;">аграрии</span> попытались использовать свое влияние, чтобы внести свою ярую анти<span style="color: #c00000;">социалистическую</span> позицию в партийную платформу. Однако <span style="color: #FF7F00;">Христианские левые</span> и [+ z_leader +]сумели оставить дверь для будущего сотрудничества открытой.
+<span style="color: #3E88B3;">Националисты</span> и <span style="color: #385A38;">аграрии</span> попытались использовать свое влияние, чтобы внести свою ярую анти<span style="color: #c00000;">социалистическую</span> позицию в партийную платформу. Однако <span style="color: #FF7F00;">Христианские левые</span> и [+ z_leader +] сумели оставить дверь для будущего сотрудничества открытой.
 
 <span style="color: #c00000;">**СДПГ**</span> — Готовы к соглашению
 

@@ -896,7 +896,7 @@ on-arrival: spd_support_reactionary = 1; spd_support_reactionary_2 = 1; spd_choi
 choose-if: kpd_relation >= 50 and reformist_strength < left_strength and not schleicher_spd
 unavailable-subtitle: [? if kpd_relation < 50 : У нас недостаточно хорошие отношения с <span style="color: #700000;">коммунистами</span>, поэтому они даже не хотят принимать нашу поддержку.  ?] [? if reformist_strength >= left_strength : Реформистской фракции удаётся отговорить партию от поддержки соглашения. ?][? if schleicher_spd: По условиям нашей сделки со Шлейхером мы теперь обязаны поддержать переизбрание Гинденбурга. ?]
 
-Поддержка[+ communist_candidate_1932 +] весьма непопулярна в нашей партии, даже если <span style="color: #700000;">**коммунисты**</span> примут нашу поддержку. Вы уверены?
+Поддержка [+ communist_candidate_1932 +] весьма непопулярна в нашей партии, даже если <span style="color: #700000;">**коммунисты**</span> примут нашу поддержку. Вы уверены?
 
 - @support_thalmann_2: Да, мы поддержим <span style="color: #700000;">**[+ communist_candidate_1932 +]**</span>, несмотря на протесты реформистов.
 - @run_braun: Вместо этого поддержать <span style="color: #c00000;">Брауна</span>.
@@ -909,7 +909,7 @@ unavailable-subtitle: [? if kpd_relation < 50 : У нас недостаточн
 @support_thalmann_2
 on-arrival: spd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_spd -= 5; workers_spd -= 3; workers_kpd += 5; kpd_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15; ddp_relation -= 10; dvp_right += 10; ddp_right += 6; ddp_cohesion -= 6; lvp_right += 10
 
-Хорошо. Мы поддержали председателя[+ communist_candidate_1932 +] из <span style="color: #700000;">**КПГ**</span>, к неудовольствию наших буржуазных союзников.
+Хорошо. Мы поддержали председателя [+ communist_candidate_1932 +] из <span style="color: #700000;">**КПГ**</span>, к неудовольствию наших буржуазных союзников.
 
 
 @endorsements_braun
@@ -1138,7 +1138,7 @@ go-to: endorsements_braun
 
 По иронии судьбы, семь лет назад мы заключили сделку, по которой Вильгельм Маркс ушёл в отставку в пользу Брауна в обмен на нашу поддержку на президентских выборах. Так или иначе, [? if z_party_name != "ХНП": <span style="color: #000000;">Центр</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] теперь убеждён поддержать Брауна, а не [? if not hindenburg_run: [+ z_choice +] ?][? if hindenburg_run: Гинденбурга ?].
 
-Должность министра-президента передаётся члену [? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span>  ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП **</span> ?]у.[+ prussia_leader +] Надеемся, их поддержка перевесит потерю популярности и внутренние разногласия, вызванные отставкой нашей самой известной фигуры.
+Должность министра-президента передаётся члену [? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span>  ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП **</span> ?]у. [+ prussia_leader +] Надеемся, их поддержка перевесит потерю популярности и внутренние разногласия, вызванные отставкой нашей самой известной фигуры.
 
 
 @z_failed
@@ -1184,7 +1184,7 @@ go-to: endorsements_braun
 Нам не победить на этих выборах в одиночку, нам нужна поддержка других партий. [? if spd_votes >= 50: Неважно. На самом деле мы можем победить на этих выборах в одиночку. ?]
 
 - @convince_kpd_rosenfeld: Убедить <span style="color: #700000;">**коммунистов**</span> поддержать <span style="color: #c00000;">Розенфельда</span>.
-- @convince_z_rosenfeld: Убедить [? if z_party_name != "ХНП": <span style="color: #000000;">Партию Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] поддержать <span style="color: #c00000;">Розенфельда</span>[? if center_reactionary_candidate_1932: &nbsp;и отказать в поддержке[+ center_reactionary_candidate_1932_name +] ?].
+- @convince_z_rosenfeld: Убедить [? if z_party_name != "ХНП": <span style="color: #000000;">Партию Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] поддержать <span style="color: #c00000;">Розенфельда</span>[? if center_reactionary_candidate_1932: &nbsp;и отказать в поддержке [+ center_reactionary_candidate_1932_name +] ?].
 - @view_candidates: Посмотреть поддержку партий.
 - @hope: Мы завершили переговоры с другими партиями.
 

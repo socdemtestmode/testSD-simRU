@@ -58,7 +58,7 @@ Q.impeachment_votes = parseFloat(Q.impeachment_votes.toFixed(1));
 !}
 max-visits: 1
 
-Мы можем заручиться поддержкой[+ spd_r + kpd_r + sapd_r +]% депутатов Рейхстага, при этом все депутаты от <span style="color: #c00000;">**СДПГ**</span>, <span style="color: #700000;">**КПГ**</span>[? if sapd_formed: &nbsp;и <span style="color: #9B0000;">**СРПГ**</span> ?], как ожидается, проголосуют «за».
+Мы можем заручиться поддержкой [+ spd_r + kpd_r + sapd_r +]% депутатов Рейхстага, при этом все депутаты от <span style="color: #c00000;">**СДПГ**</span>, <span style="color: #700000;">**КПГ**</span>[? if sapd_formed: &nbsp;и <span style="color: #9B0000;">**СРПГ**</span> ?], как ожидается, проголосуют «за».
 
 [? if impeachment_ddp: Партия <span style="color: #D3C24D;">**[+ ddp_name +]**</span> — одна из немногих буржуазных партий, защищавших <span style="color: #000000;">Вей</span><span style="color: #DD0000;">мар</span><span style="color: #FFCC00;">скую</span> республику и конституцию, разработанную её основателями. Ожидается, что её депутаты проголосуют вместе с нами.  ?][? if not impeachment_ddp and not lvp_formed: К сожалению, <span style="color: #D3C24D;">**[+ ddp_name +]**</span> слишком далеко отошла от своих прежних <span style="color: #000000;">рес</span><span style="color: #DD0000;">пуб</span><span style="color: #FFCC00;">ликанских</span> идеалов и теперь рассматривает поддержку Гинденбурга как тяжёлый, но необходимый выбор в национальных интересах.  ?]
 

@@ -1,5 +1,5 @@
 title: <span style="color: #C0A054;">**ННП**</span> объединяется с[? if dnvp_ideology == "Умеренные": <span style="color: #3E88B3;">**НННП**</span> ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?]!
-subtitle: [+ dvp_leader +]и[? if dnvp_ideology == "Умеренные": [+ dnvp_leader +]  ?][? if kvp_formed: [+ kvp_leader +]  ?]достигли соглашения.
+subtitle: [+ dvp_leader +] и[? if dnvp_ideology == "Умеренные": [+ dnvp_leader +]  ?][? if kvp_formed: [+ kvp_leader +]  ?]достигли соглашения.
 view-if: dkp_merger_timer == time
 max-visits: 1
 tags: event

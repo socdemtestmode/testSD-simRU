@@ -41,7 +41,7 @@ go-to: election_set if hindenburg_angry_bruning >= 100 or bruning_coalition < 50
 on-arrival: spd_in_government = 0; in_right_coalition = 0; in_center_right_coalition = 0; in_grand_coalition = 0; spd_toleration = 1; spd_toleration_right = 0
 go-to: new_prussia_election if (in_center_right_coalition_prussia or in_right_coalition_prussia)
 
-Президент[+ president +] позволил Брюнингу провести перестановки в кабинете, заменив близких к <span style="color: #3E88B3;">**НННП**</span> министров буржуазными. По крайней мере, это улучшение.
+Президент [+ president +] позволил Брюнингу провести перестановки в кабинете, заменив близких к <span style="color: #3E88B3;">**НННП**</span> министров буржуазными. По крайней мере, это улучшение.
 
 
 @election_set
@@ -49,7 +49,7 @@ on-arrival: time_to_election = 3; spd_in_government = 0; in_right_coalition = 0;
 call: set_next_election_time
 go-to: new_prussia_election if (in_center_right_coalition_prussia or in_right_coalition_prussia)
 
-Президент[+ president +], устав от этой нестабильности, добился отставки Брюнинга, чтобы подготовить почву для новых выборов, в надежде, что успехи <span style="color: #7A3C00;">национальной</span> <span style="color: #003755;">оппозиции</span> убедят его вступить с ними в коалицию.
+Президент [+ president +], устав от этой нестабильности, добился отставки Брюнинга, чтобы подготовить почву для новых выборов, в надежде, что успехи <span style="color: #7A3C00;">национальной</span> <span style="color: #003755;">оппозиции</span> убедят его вступить с ними в коалицию.
 
 <span style="color: #000000;">Правобуржуазная</span> <span style="color: #3E88B3;">коалиция</span> пала. Новые выборы назначены на [+ next_election_month : month +] [+ next_election_year +].
 

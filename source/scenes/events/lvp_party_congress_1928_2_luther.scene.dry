@@ -159,7 +159,7 @@ face-image: img/portraits/heuss.jpg
 @maier
 title: Рейнгольд Майер избран!
 subtitle: Крупная фигура в политике Вюртемберга и бывший член <span style="color: #D3C24D;">**[+ ddp_name +]**</span>.
-unavailable-subtitle: [? if not heuss_lead: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к <span style="color: #D3C24D;">[+ ddp_name +]деловому крылу </span>. ?][? if heuss_lead: Удивительно, но партия сочла Майера слишком консервативным. ?]
+unavailable-subtitle: [? if not heuss_lead: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к <span style="color: #D3C24D;">[+ ddp_name +] </span>. ?] и деловому крылу его партии. [? if heuss_lead: Удивительно, но партия сочла Майера слишком консервативным. ?]
 choose-if: maier_lead
 on-arrival: lvp_leader = "Майер"; lvp_relation += 3; lvp_left += 1; pro_republic += 5; new_middle_lvp += 6; old_middle_lvp += 2; rural_lvp += 4; catholics_lvp += 8
 face-image: img/portraits/maier.jpg
@@ -172,7 +172,7 @@ face-image: img/portraits/maier.jpg
 @dieckmann
 title: Йоханнес Дикман избран!
 subtitle: Дикман — член саксонского ландтага и бывший член <span style="color: #C0A054;">**ННП**</span>. Он убеждённый последователь Штреземана.
-unavailable-subtitle: [? if dingeldey_lead: В <span style="color: #FFCC00;">ЛНП</span> его считают слишком левым и малоизвестным.  ?][? if maier_lead or heuss_lead: Левое крыло <span style="color: #FFCC00;">ЛНП</span> хочет избрать бывшего члена <span style="color: #D3C24D;">[+ ddp_name +]НДП</span>. ?][? if lvp_deadlock: Левое крыло <span style="color: #FFCC00;">ЛНП</span> хочет избрать бывшего члена <span style="color: #D3C24D;">[+ ddp_name +]</span>, в то время как правое крыло партии предпочитает более правого бывшего члена <span style="color: #C0A054;">ННП</span>. ?]
+unavailable-subtitle: [? if dingeldey_lead: В <span style="color: #FFCC00;">ЛНП</span> его считают слишком левым и малоизвестным.  ?][? if maier_lead or heuss_lead: Левое крыло <span style="color: #FFCC00;">ЛНП</span> хочет избрать бывшего члена <span style="color: #D3C24D;">[+ ddp_name +] НДП</span>. ?][? if lvp_deadlock: Левое крыло <span style="color: #FFCC00;">ЛНП</span> хочет избрать бывшего члена <span style="color: #D3C24D;">[+ ddp_name +]</span>, в то время как правое крыло партии предпочитает более правого бывшего члена <span style="color: #C0A054;">ННП</span>. ?]
 choose-if: dieckmann_lead
 on-arrival: lvp_relation += 5; lvp_left += 2; lvp_leader = "Дикман"; pro_republic += 3; new_middle_lvp += 4; old_middle_lvp += 4; rural_lvp -= 2
 face-image: img/portraits/dieckmann.jpg

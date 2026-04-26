@@ -63,7 +63,7 @@ title: Напечатать СДПГ-иллион долларов.
 view-if: achievement_moly and ((difficulty == -1 and not dynamic_mode) or difficulty == 0)
 subtitle: Это может вызвать инфляцию.
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 and not rubicon : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if advisor_action_timer > 0 and rubicon : [+ advisor_action_timer +]недель до следующего экстренного сбора средств. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 and not rubicon : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if advisor_action_timer > 0 and rubicon : [+ advisor_action_timer +] недель до следующего экстренного сбора средств. ?]
 on-arrival: advisor_action_timer = 6; resources += 10; inflation += 1; data_miner_detected = 1; ip_grabber = 1
 
 Мы получили +10 ресурсов.
