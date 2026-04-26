@@ -1,0 +1,7 @@
+title: tutorial event scene
+
+@events_choice
+
+- #tutorial_event
+
+# This scene is solely for updating numbers after events, and routing to special events.

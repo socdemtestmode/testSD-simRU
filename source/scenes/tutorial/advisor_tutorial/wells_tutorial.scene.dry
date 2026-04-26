@@ -1,0 +1,69 @@
+title: Отто Вельс
+is-pinned-card: true
+tags: advisor_tutorial
+card-image: img/portraits/WelsOtto.jpg
+view-if: tutorial_stage = 2
+new-page: true
+
+= Отто Вельс
+
+Вельс — многолетний председатель <span style="color: #c00000;">**СДПГ**</span>. Талантливый организатор и член центристской фракции.
+
+- @clear_agenda
+- @party_discipline
+- @emergency_fundraising
+- @money_printer
+- @stimulation
+- @snap_election
+- @root: Вернуться к главному
+
+
+@clear_agenda
+title: Очистить повестку дня
+subtitle: Убирает все карты с руки.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?] В рамках обучения Вам нужно сделать иное.
+on-arrival: {!
+Q.advisor_action_timer = 6;
+if (Q.difficulty >= 0) {
+    window.dendryUI.dendryEngine.state.currentHands['main'] = [];
+} else {
+    window.dendryUI.dendryEngine.state.currentHands['main.main_easy'] = [];
+}
+!}
+
+Все пункты нашей повестки дня убраны.
+
+
+@party_discipline
+title: Партийная дисциплина
+subtitle: Уменьшить разногласия в партии.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?] 
+on-arrival: advisor_action_timer = 6; left_dissent -= 5; labor_dissent -= 10; center_dissent -= 10; reformist_dissent -= 10; neorevisionist_dissent -= 5; dissent -= 0.3;
+
+Мы укрепили партийную дисциплину, чтобы уменьшить недовольство во всех фракциях. Теперь уровень раскола в партии [+ dissent_percent : dissent +]. Это позволит эффективно осуществлять большую часть действий.
+
+
+@emergency_fundraising
+title: Экстренный сбор средств
+view-if: difficulty < 1
+subtitle: Экстренное вливание ресурсов.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?] В рамках обучения Вам нужно сделать иное.
+on-arrival: advisor_action_timer = 6; emergency_used += 1; resources += 2; workers_spd -= 2 if emergency_used > 1; labor_dissent += 5 if emergency_used > 1; unemployed_spd -= 2 if emergency_used > 1; workers_spd -= 2 if emergency_used > 2; unemployed_spd -= 2 if emergency_used > 2; labor_dissent += 5 if emergency_used > 2; labor_dissent += 5 if emergency_used > 2
+
+[? if emergency_used <= 1: Вельс использовал своё положение председателя партии, чтобы привлечь пожертвования и организовать получение быстрых займов.  ?][? if emergency_used > 1 and emergency_used < 3: Среди рядовых членов <span style="color: #c00000;">**СДПГ**</span> зреет недовольство из-за слишком частых и настойчивых попыток выпросить деньги. Наша популярность падает. ?][? if emergency_used > 2: Мы уже по сусекам скребём: на преданных членов партии давят, чтобы они продавали свои ценности, а многие другие в разочаровании покидают её ряды.  ?]
+
+Мы получили +2 ед. ресурсов.
+
+
+@snap_election
+title: Досрочные выборы
+subtitle: Назначить досрочные выборы.
+unavailable-subtitle: [? if chancellor != "Вельс" and president != "Вельс" : Вельс должен быть канцлером или президентом. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?] В рамках обучения Вам нужно сделать иное.
+choose-if: advisor_action_timer == 0 and (chancellor == "Вельс" or president == "Вельс")
+on-arrival: advisor_action_timer = 6; time_to_election = 3
+call: set_next_election_time
+
+Мы назначили новые выборы на [+ next_election_month : month +] [+ next_election_year +].

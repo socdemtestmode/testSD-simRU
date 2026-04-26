@@ -49,7 +49,7 @@ on-arrival: rb_militancy += 0.02; funded_reichsbanner -= 1
 
 Рейхсбаннер уже выполняет свою задачу. Нет причин менять то, что и так работает.
 
-- @return: Continue...
+- @return: Продолжить...
 
 
 

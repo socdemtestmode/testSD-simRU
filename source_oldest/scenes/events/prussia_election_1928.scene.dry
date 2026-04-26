@@ -1154,13 +1154,13 @@ The <span style="color: #700000;">**КПГ**</span> выдвигает нам с
 @popular_front_success_federal
 on-arrival: prussia_negotiations_kpd_trigger = 0
 
-- @election_1928.popular_front_success: Continue negotiations.
+- @election_1928.popular_front_success: Продолжить negotiations.
 
 
 @left_front_success_federal
 on-arrival: prussia_negotiations_kpd_left_trigger = 0
 
-- @election_1928.left_coalition_success: Continue negotiations.
+- @election_1928.left_coalition_success: Продолжить negotiations.
 
 
 @right_coalition_prussia

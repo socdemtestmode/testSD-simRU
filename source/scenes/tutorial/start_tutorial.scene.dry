@@ -1,0 +1,61 @@
+title: Следующий месяц
+is-hand: true
+on-arrival: {!
+Q.deckDescription = 'Колоды — нажмите на колоду, чтобы взять карту.';
+Q.handDescription = 'Рука — нажмите на карточку, чтобы разыграть её.';
+Q.tutorial_started = 1;
+if (!Q.rubicon) {
+    if (Q.advisor_action_timer <= 0) {
+        Q.pinnedCardsDescription = 'Советники доступны';
+    } else if (Q.advisor_action_timer == 1) {
+        Q.pinnedCardsDescription = 'Советники будут доступны через 1 мес.';
+    } else {
+        Q.pinnedCardsDescription = 'Советники будут доступны через ' + Q.advisor_action_timer + ' мес.';
+    }
+} else {
+    if (Q.advisor_action_timer <= 0) {
+        Q.pinnedCardsDescription = 'Советники доступны';
+    } else if (Q.advisor_action_timer == 1) {
+        Q.pinnedCardsDescription = 'Советники будут доступны через 1 нед.';
+    } else {
+        Q.pinnedCardsDescription = 'Советники будут доступны через ' + Q.advisor_action_timer + ' нед.';
+    }
+}
+
+if (!Q.rubicon) {
+    if (Q.shuffle_leadership_timer <= 0) {
+        Q.pinnedCardsDescription += '\n- смена доступна.';
+    } else if (Q.shuffle_leadership_timer == 1) {
+        Q.pinnedCardsDescription += '\n- смена через 1 мес.';
+    } else {
+        Q.pinnedCardsDescription += '\n- смена через ' + Q.    shuffle_leadership_timer + ' мес.';
+    }
+} else if (Q.rubicon) {
+    if (Q.shuffle_leadership_timer <= 0) {
+        Q.pinnedCardsDescription += '\n- смена доступна.';
+    } else if (Q.shuffle_leadership_timer == 1) {
+        Q.pinnedCardsDescription += '\n- смена через 1 нед.';
+    } else {
+        Q.pinnedCardsDescription += '\n- смена через ' + Q.    shuffle_leadership_timer + ' нед.';
+    }
+}
+Q.last_time_updated = Q.time;
+if (Q.week) Q.last_week_updated = Q.week;
+!}
+!}
+max-cards: 1
+
+#Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
+
+Добро пожаловать в обучение. Сейчас мы поочередно ознакомимся с основными игровыми механиками. [? if tutorial_stage < 2: Нажмите на колоду "Партийные дела" и на появившуюся карточку. ?] [? if tutorial_stage = 2 ?]
+
+
+- @party
+
+@party
+title: Партийные дела
+card-image: img/Vorwaerts_nr_1.png
+is-deck: true
+
+- #party_tutorial_campaign_affairs
+- #advisor_tutorial

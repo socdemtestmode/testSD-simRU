@@ -1,0 +1,82 @@
+title: Агитация
+new-page: true
+on-arrival: month_actions += 1; workers_spd = tutorial_workers_spd; tutorial_stage += 1
+max-visits: 2
+is-card: true
+card-image: img/flags.jpg
+frequency: 100
+tags: party_tutorial_campaign_affairs
+
+= Агитация
+
+Идёт ли сейчас избирательная кампания или нет, партия всё равно стремится расширить электорат. На ком нам сосредоточить агитацию?
+
+[? if tutorial_campaign = 1: В рамках обучения вам доступен один вариант.  ?]
+
+[? if tutorial_campaign = 0: Теперь мы можем выбрать что-то другое]
+- @workers: Городской рабочий класс, наша традиционная опора.
+- @new_middle: «Новый средний класс»: госслужащие и „белые воротнички“.
+- @old_middle: «Старый средний класс»: малый бизнес, индивидуальные предприниматели и ремесленники.
+- @rural: Сельские рабочие и мелкие крестьяне, которые в прошлом чувствовали себя обделёнными нашим вниманием.
+- @unemployed: Безработные.
+- @catholics: Католики, которые обычно поддерживают [? if z_party_name != "ХНП": <span style="color: #000000;">Партию Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?].
+- @root: Мы либо не хотим, либо не можем сейчас вести агитацию.
+- @easy_discard
+
+
+@workers
+subtitle: -1 ресурс. Вам лучше всего выбрать этот вариант. Рабочие действительно основа нашей партии.
+choose-if: resources >= 1 and tutorial_campaign = 0
+unavailable-subtitle: В рамках обучения вам лучше выбрать другой вариант.
+on-arrival: workers_spd += 10*(1-dissent); workers_spd -= 1 if unemployed >= 20; workers_spd -= 1 if unemployed >= 30; workers_spd += 3*(1-dissent) if wtb_adopted = 1; resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1; tutorial_workers_dynamic = (workers_spd-tutorial_workers_spd)
+
+Мы усилили агитацию среди рабочих.[? if unemployed >= 15:  Высокий уровень безработицы осложняет нашу кампанию. ?][? if wtb_adopted = 1 :  Принятие плана ВТБ даёт нам новую идею для митингов, которая помогает привлечь больше рабочих. ?] Теперь нас поддерживает на [+ tutorial_workers_dynamic +]% больше рабочих, чем раньше.
+
+@new_middle
+subtitle: -1 ресурс
+choose-if: resources >= 1 and tutorial_campaign = 1
+unavailable-subtitle: В рамках обучения вам лучше выбрать другой вариант.
+on-arrival: new_middle_spd += 6*(1-dissent); new_middle_spd -= 4 if socialism <= 49 and peoples_party == 0; resources -= 1; peoples_party_support += 1;
+
+Мы усилили агитацию среди нового среднего класса. [? if socialism <= 49 and peoples_party == 0: Народная неприязнь к <span style="color: #c00000;">социализму</span> в этой среде осложняет нашу агитацию.  ?] [? if peoples_party > 0: Как Народной Партии, нам стало проще находить поддержку среди среднего класса. ?] Уровень поддержки вырос незначительно, потому что уровень раскола в партии теперь [+ dissent_percent : dissent +].
+
+
+
+@old_middle
+subtitle: -1 ресурс
+choose-if: resources >= 1 and tutorial_campaign = 1
+unavailable-subtitle: В рамках обучения вам лучше выбрать другой вариант.
+on-arrival: old_middle_spd += 5*(1-dissent); resources -= 1; old_middle_spd -= 3 if nationalism >= 51 and peoples_party == 0; peoples_party_support += 1
+
+Мы усилили нашу агитацию среди старого среднего класса. [? if nationalism >= 51 and peoples_party == 0: Высокий уровень национализма в этой группе затрудняет нашу кампанию. ?] [? if peoples_party > 0: Поскольку мы Народная Партия, теперь нам легче заручиться поддержкой среднего класса. ?] Уровень поддержки вырос незначительно, потому что уровень раскола в партии теперь [+ dissent_percent : dissent +].
+
+
+
+@rural
+subtitle: -1 ресурс
+choose-if: resources >= 1 and tutorial_campaign = 1
+unavailable-subtitle: В рамках обучения вам лучше выбрать другой вариант.
+on-arrival: rural_spd += 5*(1-dissent); rural_spd -= 3*(1-dissent) if peoples_party == 0; resources -= 1; peoples_party_support += 1; rural_spd += 3*(1-dissent) if rural_policy >= 2
+
+Мы усилили нашу агитацию среди крестьян. [? if peoples_party == 0: Исторически мы не вели активной агитации среди крестьян — они нам не доверяют.  ?][? if peoples_party > 0: Как народной партии, нам стало проще заручиться поддержкой крестьян, чем раньше.  ?][? if rural_policy >= 2 : Наша аграрная политика упростила нам задачу по завоеванию поддержки среди крестьян. ?] Уровень поддержки вырос незначительно, потому что уровень раскола в партии теперь [+ dissent_percent : dissent +].
+
+
+
+@unemployed
+subtitle: -1 ресурс
+choose-if: resources >= 1 and tutorial_campaign = 1
+unavailable-subtitle: В рамках обучения вам лучше выбрать другой вариант.
+on-arrival: unemployed_spd += 6*(1-dissent); resources -= 1; unemployed_spd -= 3 if welfare < 0; unemployed_spd -= 2 if unemployed >= 30; unemployed_spd += 6*(1-dissent) if wtb_adopted = 1; unemployed_spd += 3*(1-dissent) if welfare >= 2;
+
+Мы усилили нашу агитацию среди безработных.[? if welfare < 0: Сокращение социальных выплат и вызванная этим бедность осложняют нашу кампанию, поскольку нас ассоциируют с правительством, которое провело эти сокращения — наша агитация может даже иметь обратный эффект.  ?][? if wtb_adopted = 1 : Принятие плана ВТБ дало нам новую объединяющую идею, которая поможет привлечь на нашу сторону безработных. ?] Уровень поддержки вырос незначительно, потому что уровень раскола в партии теперь [+ dissent_percent : dissent +].
+
+
+
+@catholics
+subtitle: -1 ресурс
+choose-if: resources >= 1 and tutorial_campaign = 1
+unavailable-subtitle: В рамках обучения вам лучше выбрать другой вариант.
+on-arrival: catholics_spd += 6*(1-dissent); resources -= 1
+
+Мы усилили агитацию среди католиков. Уровень поддержки вырос незначительно, потому что уровень раскола в партии теперь [+ dissent_percent : dissent +].
+

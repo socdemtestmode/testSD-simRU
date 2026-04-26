@@ -1225,12 +1225,17 @@ new-page: true
 
 **Если вы играете в этот мод через загрузчик модов в основной игре, некоторые элементы будут отсутствовать (цвета партий в парламенте, изображения, стрелки и т. д.). Для полноценной игры, пожалуйста, играйте по <a href="https://originn0.github.io/dynamic_social_democracy/" style="color: #0077FF">этой</a> ссылке.**
 
+- @1928_tutorial: Начать обучение (рекомендуется для тех, кто не играл в подобные игры)
 - @1928_mod_mode: Начать (<span style="color: #0077FF;">динамический</span> режим)
 - @1928_easy: Начать (<span style="color: #5B9A8D;">лёгкий</span> уровень: рекомендуется для новичков)
 - @1928_main: Начать (<span style="color: #C4B156;">средний</span> уровень)
 - @1928_hard: Начать (<span style="color: #A05252;">сложный</span> уровень)
 - @1928_historical: Начать (<span style="color: #611813;">исторический</span> режим)
 - @1928_challenge: Пользовательские режимы
+
+@1928_tutorial
+on-arrival: difficulty = -1; resources = 4; dues = 5; base_dues = 5; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; ddp_relation = 65; budget = 5;
+go-to: start_tutorial
 
 
 @1928_easy
