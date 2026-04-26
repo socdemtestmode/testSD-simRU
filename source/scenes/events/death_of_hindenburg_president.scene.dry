@@ -21,10 +21,10 @@ Q.lettow_vorbeck_run_1934 = 0;
 Q.hugenberg_run_1934 = 0;
 
 Q.president = "Бумке (и.о.)";
-if (Q.judicial_reform >= 4) Q.president = "Großmann (acting)";
+if (Q.judicial_reform >= 4) Q.president = "Гроссман (и.о.)";
 
 Q.reactionary_candidate_1934 = "Зельдте";
-Q.reactionary_candidate_1934_disp = "Franz Seldte";
+Q.reactionary_candidate_1934_disp = "Франц Зельдте";
 Q.lib_candidate_1934 = "Гесслер";
 Q.lib_candidate_1934_disp = "Otto Gessler";
 Q.center_candidate_1934 = "Аденауэр";

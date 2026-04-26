@@ -73,7 +73,7 @@ for (var party of Q.parties) {
 Q.round = 0;
 Q.hindenburg_dead = 1;
 Q.president = "Бумке (и.о.)";
-if (Q.judicial_reform >= 4) Q.president = "Großmann (acting)"
+if (Q.judicial_reform >= 4) Q.president = "Гроссман (и.о.)"
 
 Q.Heuss_votes_pre = 0;
 
