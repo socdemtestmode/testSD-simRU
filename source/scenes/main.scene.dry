@@ -599,8 +599,8 @@ const boxes = document.querySelectorAll('.scrollable-box');
 if (boxes.length >= 2) {
     boxes[1].remove();
 }
-Q.deckDescription = 'Колоды - нажмите на колоду чтобы взять карту.';
-Q.handDescription = 'Рука - нажмите на карточку чтобы разыграть её.';
+var deckDescription = 'Колоды - нажмите на колоду чтобы взять карту.';
+var handDescription = 'Рука - нажмите на карточку чтобы разыграть её.';
 !}
 max-cards: 3
 
@@ -1314,9 +1314,9 @@ if (!Q.rubicon) {
     if (Q.shuffle_leadership_timer <= 0) {
         Q.pinnedCardsDescription += '\n- смена доступна.';
     } else if (Q.shuffle_leadership_timer == 1) {
-        Q.pinnedCardsDescription += '\n- смена через 1 month';
+        Q.pinnedCardsDescription += '\n- смена через 1 мес.';
     } else {
-        Q.pinnedCardsDescription += '\n- смена через ' + Q.    shuffle_leadership_timer + ' months.';
+        Q.pinnedCardsDescription += '\n- смена через ' + Q.    shuffle_leadership_timer + ' мес.';
     }
 } else if (Q.rubicon) {
     if (Q.shuffle_leadership_timer <= 0) {
