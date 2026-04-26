@@ -5189,7 +5189,7 @@ if (this.ui && this.ui.show_portraits) {
 if (typeof window !== "undefined" && window.generateBar) {
 }
 !}
-go-to: tutorial_events_main if tutorial_started = 1; bg_change if rubicon; events_choice if has_event = 1 and not rubicon; main if has_event = 0 and difficulty >= 0 and not rubicon; main.main_easy if has_event = 0 and difficulty < 0 and not rubicon
+go-to: tutorial_events_main if tutorial_started = 1; bg_change if rubicon; events_choice if has_event = 1 and not rubicon and tutorial_started != 1; main if has_event = 0 and difficulty >= 0 and not rubicon; main.main_easy if has_event = 0 and difficulty < 0 and not rubicon
 
 = [+ month : month +] [+ year +][? if rubicon: , неделя [+ week +] ?]
 

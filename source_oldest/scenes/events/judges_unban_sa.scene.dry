@@ -1,8 +1,0 @@
-title: <span style="color: #7A3C00;">**СА**</span> снова разрешены
-subtitle: Судьи вновь легализовали <span style="color: #7A3C00;">**СА**</span>.
-view-if: sa_banned == 1 and sa_ban_timer == 0 and judicial_reform < 2 and not sa_nationwide_ban
-on-arrival: sa_banned = 0; sa_strength += 100; sa_militancy += 0.04; interior_goal_prussia += 1 if interior_goal_seen_prussia; coup_progress += 2 if sa_coup_progress >= 6
-tags: event
-
-Судьи постановили легализовать <span style="color: #7A3C00;">нацистские</span> <span style="color: #7A3C00;">**СА**</span>. Они немедленно возобновляют массовую вербовку и вооружаются.
-
