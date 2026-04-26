@@ -15,7 +15,7 @@ new-page: true
 - @changelog: Список изменений и будущие обновления!
 - @discord: Discord* (Запрещен в Российской Федерации)
 - @source: Литература и источники (дополнительная информация)
-- @root.start: Start game
+- @root.start: Начать игру.
 - @root: Back
 
 
