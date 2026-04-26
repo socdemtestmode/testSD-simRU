@@ -864,7 +864,7 @@ go-to: coalition_menu
 @schleicher_majority_coalition_prussia
 title: Шлейхер формирует правительство большинства при поддержке лишь <span style="color: #BFC8CC;">**ФНЕГ**</span>.
 subtitle: <span style="color: #BFC8CC;">**ФНЕГ**</span> ([+ dnef_r_prussia +]%)
-view-if: dnef_r_prussia >= 50 and chancellor == "Шляйхер" and schleicher_time and dnef_formed
+view-if: dnef_r_prussia >= 50 and chancellor == "Шлейхер" and schleicher_time and dnef_formed
 unavailable-subtitle: <span style="color: #BFC8CC;">ФНЕГ</span> ([+ dnef_r_prussia +]%)
 on-arrival: in_schleicher_majority_coalition_prussia = 1; prussia_leader = "Гёрделер"; workers_dnef += 3; new_middle_dnef += 3; old_middle_dnef += 3; rural_dnef += 3; unemployed_dnef += 3; catholics_dnef += 3; workers_kpd -= 3; workers_spd -= 3; rfb_banned = 1; rfb_strength -= 50; rb_strength -= 200; prussian_police_loyalty = 0; pro_republic -= 10
 
@@ -874,7 +874,7 @@ on-arrival: in_schleicher_majority_coalition_prussia = 1; prussia_leader = "Гё
 @schleicher_left_coalition_prussia
 title: Шлейхер формирует большинство с левыми.
 subtitle: <span style="color: #BFC8CC;">**ФНЕГ**</span> + <span style="color: #c00000;">**СДПГ**</span>[? if not z_dnef: &nbsp;+ <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**БНП**</span> ?][? if not lvp_formed and not dstp_dnef: &nbsp;+ <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed and not lvp_dnef: &nbsp;+ <span style="color: #FFCC00;">**ЛНП**</span> ?]([+ schleicher_left_coalition_prussia +]%)
-view-if: schleicher_left_coalition_prussia >= 50 and chancellor == "Шляйхер" and schleicher_time and dnef_formed
+view-if: schleicher_left_coalition_prussia >= 50 and chancellor == "Шлейхер" and schleicher_time and dnef_formed
 unavailable-subtitle: <span style="color: #BFC8CC;">ФНЕГ</span> + <span style="color: #c00000;">СДПГ</span>[? if not z_dnef: &nbsp;+ <span style="color: #000000;">[+ z_party_name +]</span> + <span style="color: #A2D8E0;">БНП</span> ?][? if not lvp_formed and not dstp_dnef: &nbsp;+ <span style="color: #D3C24D;">[+ ddp_name +]</span> ?][? if lvp_formed and not lvp_dnef: &nbsp;+ <span style="color: #FFCC00;">ЛНП</span> ?]([+ schleicher_left_coalition_prussia +]%)[? if not super_secret_mode: - Шлейхер никогда бы не вступил с нами в открытую коалицию. ?]
 choose-if: president != "Гинденбург" and super_secret_mode
 on-arrival: in_schleicher_left_coalition_prussia = 1; prussia_leader = "Гёрделер"; workers_dnef += 3; new_middle_dnef += 3; old_middle_dnef += 3; rural_dnef += 3; unemployed_dnef += 3; catholics_dnef += 3; workers_kpd -= 3; workers_spd -= 3; rfb_banned = 1; rfb_strength -= 50; rb_strength -= 200; prussian_police_loyalty = 0; pro_republic -= 10
@@ -885,7 +885,7 @@ on-arrival: in_schleicher_left_coalition_prussia = 1; prussia_leader = "Гёрд
 @schleicher_right_coalition_prussia
 title: Шлейхер формирует большинство с правыми.
 subtitle: <span style="color: #BFC8CC;">**ФНЕГ**</span>[? if not z_dnef: &nbsp;+ <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**БНП**</span> ?][? if not lvp_formed and not dstp_dnef: &nbsp;+ <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if not lvp_formed and dvp_exist and not dvp_dnef: &nbsp;+ <span style="color: #C0A054;">**ННП**</span> ?][? if lvp_formed and not lvp_dnef: &nbsp;+ <span style="color: #FFCC00;">**ЛНП**</span> ?][? if not other_dnef: &nbsp;+**Прочие** ?][? if kvp_formed and not kvp_dnef: &nbsp;+ <span style="color: #0087DC;">**КНП**</span> ?][? if dnvp_ideology == "Умеренные": &nbsp;+ <span style="color: #3E88B3;">**НННП**</span> ?][? if dsu_exist: &nbsp;+ <span style="color: #6A1E1E;">**НСС**</span> ?]([+ schleicher_right_coalition_prussia +]%)
-view-if: schleicher_right_coalition_prussia >= 50 and chancellor == "Шляйхер" and schleicher_time and dnef_formed
+view-if: schleicher_right_coalition_prussia >= 50 and chancellor == "Шлейхер" and schleicher_time and dnef_formed
 choose-if: dsu_leader != "Отто Штрассер"
 unavailable-subtitle: <span style="color: #BFC8CC;">ФНЕГ</span>[? if not z_dnef: &nbsp;+ <span style="color: #000000;">[+ z_party_name +]</span> + <span style="color: #A2D8E0;">БНП</span> ?][? if not lvp_formed and not dstp_dnef: &nbsp;+ <span style="color: #D3C24D;">[+ ddp_name +]</span> ?][? if not lvp_formed and dvp_exist and not dvp_dnef: &nbsp;+ <span style="color: #C0A054;">ННП</span> ?][? if lvp_formed and not lvp_dnef: &nbsp;+ <span style="color: #FFCC00;">ЛНП</span> ?][? if not other_dnef: &nbsp;+ Прочие ?][? if kvp_formed and not kvp_dnef: &nbsp;+ <span style="color: #0087DC;">КНП</span> ?][? if dnvp_ideology == "Умеренные": &nbsp;+ <span style="color: #3E88B3;">НННП</span> ?][? if dsu_exist: &nbsp;+ <span style="color: #6A1E1E;">НСС</span> ?]([+ schleicher_right_coalition_prussia +]%)[? if dsu_leader == "Отто Штрассер": - <span style="color: #6A1E1E;">НСС</span> окончательно сошли с ума. ?]
 on-arrival: in_schleicher_right_coalition_prussia = 1; prussia_leader = "Гёрделер" if prussia_leader != "Штрассер"; prussia_leader = "Штрассер" if prussia_leader != "Гёрделер"; workers_kpd -= 2; workers_spd -= 2; rfb_banned = 1; rfb_strength -= 40; rb_strength -= 150; prussian_police_loyalty = 0; pro_republic -= 8

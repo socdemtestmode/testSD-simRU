@@ -1,6 +1,6 @@
 title: Рейхстаг горит!
 subtitle: Предполагаемый поджог, якобы совершённый иностранным <span style="color: #700000;">**коммунистом**</span>.
-view-if: chancellor == "Шляйхер" and (not dsu_in_gov or dsu_was_gov) and reichstag_joever_time >= 1 and not kpd_explode
+view-if: chancellor == "Шлейхер" and (not dsu_in_gov or dsu_was_gov) and reichstag_joever_time >= 1 and not kpd_explode
 on-arrival: kpd_relation = 30 if kpd_relation < 40; reichstag_fire_decree_schleicher = 1
 max-visits: 1
 new-page: true
@@ -405,7 +405,7 @@ if (Q.spd_prussia && Q.prussia_leader == "Браун" || Q.prussia_leader == "Р
 } else if (Q.spd_prussia && Q.prussia_leader !== "Браун" && Q.prussia_leader !== "Розенфельд") {
     Q.spd_points += (Q.prussian_police_power / 20);
 }
-if (Q.prussia_leader == "Шляйхер" || Q.prussia_leader == "Гёрделер" || Q.prussia_leader == "Штрассер") {
+if (Q.prussia_leader == "Шлейхер" || Q.prussia_leader == "Гёрделер" || Q.prussia_leader == "Штрассер") {
     Q.schleicher_points += Q.evil_prussian_police_power / 50;
 }
 Q.reichswehr_power = Q.reichswehr_strength*Q.reichswehr_militancy;

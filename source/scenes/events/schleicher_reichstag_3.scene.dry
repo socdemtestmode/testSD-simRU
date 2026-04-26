@@ -1,8 +1,8 @@
 title: Комитет Рейхстага обсуждает возобновление заседаний
 subtitle: Новый шанс для Шлейхера?
-view-if: chancellor = "Шляйхер" and schleicher_time and (next_reichstag_time - 1) == rubicon_time
+view-if: chancellor = "Шлейхер" and schleicher_time and (next_reichstag_time - 1) == rubicon_time
 on-arrival: {!
-if (((Q.reichswehr_strength*Q.reichswehr_militancy + Q.prussian_police_strength*Q.prussian_police_militancy)*2 < Q.total_force && Q.prussia_leader == "Шляйхер") || (Q.reichswehr_strength*Q.reichswehr_militancy)*2 < (Q.total_force + Q.prussian_police_strength*Q.prussian_police_militancy*Q.prussian_police_loyalty) && Q.prussia_leader != "Шляйхер") {
+if (((Q.reichswehr_strength*Q.reichswehr_militancy + Q.prussian_police_strength*Q.prussian_police_militancy)*2 < Q.total_force && Q.prussia_leader == "Шлейхер") || (Q.reichswehr_strength*Q.reichswehr_militancy)*2 < (Q.total_force + Q.prussian_police_strength*Q.prussian_police_militancy*Q.prussian_police_loyalty) && Q.prussia_leader != "Шлейхер") {
   Q.schleicher_reichstag_smart = 1;
 }
 if (Q.schleicher_economy_time) Q.schleicher_reichstag_smart = 1;
@@ -107,6 +107,6 @@ if (Q.next_reichstag_month > 12) {
 }
 !}
 
-[? if not schleicher_economy_time: Однако Шлейхер, узнав о планах Фрика отложить созыв рейхстага, внезапно передумал. Новый раунд штабных учений — на этот раз без подтасовок — показал, что рейхсвер не выстоит в борьбе против всех военизированных формирований[? if prussia_leader == "Шляйхер": , даже с прусской полицией ?][? if prussia_leader != "Шляйхер": , а также с прусскими полицейскими силами ?]. Несмотря на его усилия по оснащению армии снаряжением для уличных боёв и соответствующей подготовке, ограниченные, но хорошо обученные силы всё равно неспособны противостоять значительно превосходящему по численности противнику.  ?][? if schleicher_economy_time: Шлейхер, стремясь извлечь выгоду из своей программы общественных работ, прежде чем идти на конфронтацию в рейхстаге, которая, скорее всего, приведёт к новым выборам, решил: предложение Фрика наиболее благоразумное.  ?]
+[? if not schleicher_economy_time: Однако Шлейхер, узнав о планах Фрика отложить созыв рейхстага, внезапно передумал. Новый раунд штабных учений — на этот раз без подтасовок — показал, что рейхсвер не выстоит в борьбе против всех военизированных формирований[? if prussia_leader == "Шлейхер": , даже с прусской полицией ?][? if prussia_leader != "Шлейхер": , а также с прусскими полицейскими силами ?]. Несмотря на его усилия по оснащению армии снаряжением для уличных боёв и соответствующей подготовке, ограниченные, но хорошо обученные силы всё равно неспособны противостоять значительно превосходящему по численности противнику.  ?][? if schleicher_economy_time: Шлейхер, стремясь извлечь выгоду из своей программы общественных работ, прежде чем идти на конфронтацию в рейхстаге, которая, скорее всего, приведёт к новым выборам, решил: предложение Фрика наиболее благоразумное.  ?]
 
 [? if not schleicher_economy_time: Канцлер ясно даёт понять, что всё ещё надеется: [+ nsdap_leader +] может внезапно передумать, но, поскольку его запасной план более нежизнеспособен, он настаивает на принятии предложения Фрика.  ?]Заседание рейхстага отложено до [+ next_reichstag_month : month +] [+ next_reichstag_year +], недели [+ next_reichstag_week +], и ожидается, что за это время Шлейхер представит программу общественных работ.

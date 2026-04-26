@@ -3,7 +3,7 @@ subtitle: Правые силы объединяются против дейст
 new-page: true
 on-arrival: harzburg_front_seen = 1; harzburg_front_time = time; sa_strength += 50; sa_militancy += 0.1; sh_militancy += 0.1; old_middle_nsdap += 3; unemployed_nsdap += 3; rural_nsdap += 3; nazi_urgency += 1; iron_front_timer = 0; dvp_right += 3 if dvp_leader == "Дингельдей"; lvp_right += 1; hindenburg_angry += 15; hindenburg_angry_bruning += 15
 tags: event
-view-if: year = 1931 and month >= 10 and chancellor != "Шляйхер" and chancellor != "Папен" and dnvp_ideology == "Радикалы"
+view-if: year = 1931 and month >= 10 and chancellor != "Шлейхер" and chancellor != "Папен" and dnvp_ideology == "Радикалы"
 max-visits: 1
 
 = Гарцбургский фронт

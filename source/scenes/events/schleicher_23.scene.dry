@@ -1,6 +1,6 @@
 title: Возникновение «социал-патриотизма»
 subtitle: В рядах <span style="color: #c00000;">**СДПГ**</span>...
-view-if: chancellor = "Шляйхер" and dnef_total_votes >= 20 and schleicher_spd_influence >= 6
+view-if: chancellor = "Шлейхер" and dnef_total_votes >= 20 and schleicher_spd_influence >= 6
 new-page: true
 priority: 1
 tags: event

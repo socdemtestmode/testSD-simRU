@@ -1,6 +1,6 @@
 title: Замысел Папена заходит в тупик
 subtitle: Шлейхер в безопасности?
-view-if: chancellor = "Шляйхер" and schleicher_time == 7 and not schleicher_explode
+view-if: chancellor = "Шлейхер" and schleicher_time == 7 and not schleicher_explode
 new-page: true
 tags: event
 priority: 4
@@ -29,7 +29,7 @@ on-display: {!
 
 @nazi_2
 title: Канцлер в безопасности, пока что.
-on-arrival: papen_goal = "Добиваться собственного переназначения"; meissner_goal = "Примирить Шляйхера и Гинденбурга"; oskar_goal = "Добиваться переназначения Папена"
+on-arrival: papen_goal = "Добиваться собственного переназначения"; meissner_goal = "Примирить Шлейхера и Гинденбурга"; oskar_goal = "Добиваться переназначения Папена"
 
 Назойливость Папена остаётся для Шлейхера занозой: бывший канцлер живёт всего в нескольких метрах от резиденции президента, — а Оскар фон Гинденбург продолжает влиять на своего отца.
 

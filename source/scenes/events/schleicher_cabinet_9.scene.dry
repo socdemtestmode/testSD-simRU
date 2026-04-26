@@ -1,6 +1,6 @@
 title: Шлейхер идёт на уступки профсоюзам!
 subtitle: <span style="color: #000000;">Христианские</span> и <span style="color: #c00000;">свободные профсоюзы</span> в восторге!
-view-if: chancellor == "Шляйхер" and schleicher_post and not schleicher_labor and next_reichstag_time == (rubicon_time + 1) and next_reichstag_time > 0
+view-if: chancellor == "Шлейхер" and schleicher_post and not schleicher_labor and next_reichstag_time == (rubicon_time + 1) and next_reichstag_time > 0
 max-visits: 1
 new-page: true
 priority: 2

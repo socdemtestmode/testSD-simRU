@@ -1,5 +1,5 @@
 title: Объявлены досрочные выборы
-view-if: chancellor = "Шляйхер" and schleicher_time and not schleicher_post_protests and reichstag_break and dnef_total_votes >= 35
+view-if: chancellor = "Шлейхер" and schleicher_time and not schleicher_post_protests and reichstag_break and dnef_total_votes >= 35
 on-arrival: {!
 Q.reichstag_rubicon = 0;
 Q.reichstag_break = 0;

@@ -1,6 +1,6 @@
 title: Демонстрация силы <span style="color: #7A3C00;">**СА**</span>
 subtitle: <span style="color: #7A3C00;">**СА**</span> прямо возле штаб-квартиры <span style="color: #700000;">**коммунистов**</span>.
-view-if: chancellor = "Шляйхер" and schleicher_time == 7 and not democracy_paramilitary and prussia_leader == "Шляйхер"
+view-if: chancellor = "Шлейхер" and schleicher_time == 7 and not democracy_paramilitary and prussia_leader == "Шлейхер"
 new-page: true
 tags: event
 priority: 5

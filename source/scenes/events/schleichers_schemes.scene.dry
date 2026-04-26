@@ -1,6 +1,6 @@
 title: Интриги Шлейхера
 subtitle: Канцлер Шлейхер утверждает, что у него есть план по спасению Германии…
-view-if: year >= 1932 and president = "Гинденбург" and chancellor = "Шляйхер" and spd_in_government = 0 and largest_party = "НСДАП" and hitler_deported = 0 and not presidential_powers
+view-if: year >= 1932 and president = "Гинденбург" and chancellor = "Шлейхер" and spd_in_government = 0 and largest_party = "НСДАП" and hitler_deported = 0 and not presidential_powers
 on-arrival: economic_growth += 1; budget -= 1; unemployed -= 3 if unemployed > 10; rural_dnvp += 3; old_middle_dnvp += 3; new_middle_dnvp += 3; workers_dnvp += 3
 new-page: true
 max-visits: 1

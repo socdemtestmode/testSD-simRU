@@ -1,6 +1,6 @@
 title: Политика <span style="color: #6A1E1E;">**НСС**</span>
 subtitle: Министры-<span style="color: #7A3C00;">нацисты</span> проводят собственную политику.
-view-if: chancellor == "Шляйхер" and dsu_in_gov and dsu_policy_timer <= 0
+view-if: chancellor == "Шлейхер" and dsu_in_gov and dsu_policy_timer <= 0
 on-arrival: {!
 Q.dsu_policy_timer += 4;
 !}

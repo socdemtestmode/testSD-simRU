@@ -1,5 +1,5 @@
 title: Отношения с «красным генералом»
-on-arrival: month_actions += 1; red_general_timer += 4 if not schleicher_spd_adopted; red_general_timer += 6 if schleicher_spd_adopted; red_general_timer -= 2 if chancellor == "Шляйхер"
+on-arrival: month_actions += 1; red_general_timer += 4 if not schleicher_spd_adopted; red_general_timer += 6 if schleicher_spd_adopted; red_general_timer -= 2 if chancellor == "Шлейхер"
 view-if: (rubicon and red_general_unlock and red_general_timer <= 0 and not schleicher_fight) and not schleicher_dead
 card-image: img/portraits/schleicher.jpg
 is-card: true
@@ -36,13 +36,13 @@ max-visits: 1
 
 
 @convince_spd_schleicher
-subtitle: [? if chancellor == "Папен": Убедить партию следовать этому курсу почти невозможно, по крайней мере, пока Папен остаётся канцлером.  ?][? if chancellor == "Шляйхер": Сотрудничество с самим генералом не исключено, учитывая его уступки профсоюзам. ?]
+subtitle: [? if chancellor == "Папен": Убедить партию следовать этому курсу почти невозможно, по крайней мере, пока Папен остаётся канцлером.  ?][? if chancellor == "Шлейхер": Сотрудничество с самим генералом не исключено, учитывая его уступки профсоюзам. ?]
 unavailable-subtitle: Прошлейхеровские фракции недостаточно сильны, чтобы повлиять на политику АДГБ.
 view-if: schleicher_spd_support < 10
 choose-if: labor_strength + reformist_strength + social_patriot_strength >= (center_strength*1.5) + left_strength
 on-arrival: schleicher_spd_support += 3; schleicher_spd_support += 1 if wtb_adopted; schleicher_spd_support -= 1 if chancellor == "Папен"; schleicher_spd_support -= 1 if otl_prussian_coup_seen; workers_spd -= 1; unemployed_spd -= 1; workers_kpd += 1; unemployed_kpd += 1; center_dissent += 5; left_dissent += 5
 
-Медленно, но верно руководство АДГБ начинает склоняться к идее конструктивного сотрудничества с так называемым «красным генералом». Однако предстоит ещё много работы: многие члены профсоюза и подавляющее большинство <span style="color: #c00000;">**СДПГ**</span> по-прежнему твёрдо выступают против сотрудничества с этим человеком, [? if chancellor == "Папен": поддерживающим повсеместно презираемый кабинет Папена. ?][? if chancellor == "Шляйхер": который теперь возглавляет крайне непопулярное правительство. ?]. [? if wtb_adopted:  Принятие нами плана ВТБ — а также публичная поддержка Шлейхером аналогичных инициатив в области общественных работ — несколько повысило готовность партии рассмотреть возможность сотрудничества. ?]
+Медленно, но верно руководство АДГБ начинает склоняться к идее конструктивного сотрудничества с так называемым «красным генералом». Однако предстоит ещё много работы: многие члены профсоюза и подавляющее большинство <span style="color: #c00000;">**СДПГ**</span> по-прежнему твёрдо выступают против сотрудничества с этим человеком, [? if chancellor == "Папен": поддерживающим повсеместно презираемый кабинет Папена. ?][? if chancellor == "Шлейхер": который теперь возглавляет крайне непопулярное правительство. ?]. [? if wtb_adopted:  Принятие нами плана ВТБ — а также публичная поддержка Шлейхером аналогичных инициатив в области общественных работ — несколько повысило готовность партии рассмотреть возможность сотрудничества. ?]
 
 [? if otl_prussian_coup_seen: Более того, его роль в путче против нашего прусского правительства лишь усугубила враждебность как к нему, так и к <span style="color: #c00000;">**СДПГ**</span>. ?] Слухи о нашем сотрудничестве нанесли ущерб нашему положению среди рабочего класса.
 
@@ -86,10 +86,10 @@ on-arrival: schleicher_spd_r -= 1; schleicher_spd_support -= 2; schleicher_spd_i
 
 
 @concessions
-view-if: chancellor == "Шляйхер" and schleicher_time >= 8 and schleicher_spd_concession < 2
+view-if: chancellor == "Шлейхер" and schleicher_time >= 8 and schleicher_spd_concession < 2
 subtitle: Есть предел тому, чего мы можем требовать, но мы можем рассмотреть наши варианты.
 
-[? if prussia_leader == "Шляйхер": Браун требует восстановления своего правительства в Пруссии. ?]
+[? if prussia_leader == "Шлейхер": Браун требует восстановления своего правительства в Пруссии. ?]
 
 Трудящиеся требуют восстановления своих прав и социального обеспечения.
 
@@ -107,7 +107,7 @@ title: Потребовать восстановления нашего прав
 subtitle: Восстановить контроль над прусской полицией и обеспечить участие в правительстве земли.
 unavailable-subtitle: [? if schleicher_spd_r < 5: Сперва нам нужно улучшить отношения со Шлейхером. ?][? if hindenburg_schleicher_r < 5: Гинденбург крайне неохотно возвращает Пруссию в руки <span style="color: #c00000;">социалистов</span>.  ?][? if not schleicher_post: Шлейхер призывает нас подождать до следующих выборов. ?][? if dsu_in_gov or dsu_was_gov: Шлейхер твёрдо намерен сохранить в правительстве[? if dsu_was_gov: &nbsp;бывших ?] <span style="color: #7A3C00;">нацистов</span>. ?]
 choose-if: schleicher_post and schleicher_spd_r >= 7 and hindenburg_schleicher_r >= 5 and not dsu_in_gov and not dsu_was_gov
-view-if: prussia_leader == "Шляйхер"
+view-if: prussia_leader == "Шлейхер"
 on-arrival: schleicher_spd_concession += 1; schleicher_spd_influence += 4; schleicher_spd_support += 2; schleicher_spd_r -= 2; prussia_returned = 1; prussia_leader = older_prussia_leader; in_weimar_coalition_prussia = 1 if pre_in_weimar_coalition_prussia; in_grand_coalition_prussia = 1 if pre_in_grand_coalition_prussia; in_minority_weimar_coalition_prussia = 1 if in_weimar_coalition_prussia and weimar_coalition_prussia < 50; in_minority_grand_coalition_prussia = 1 if in_grand_coalition_prussia and grand_coalition_prussia < 50; pro_republic += 10; workers_spd += 5; new_middle_spd += 5; unemployed_spd += 3; new_middle_ddp += 3; labor_dissent -= 15; reformist_dissent -= 15; reformist_strength += 15; left_dissent -= 15; prussian_police_loyalty += 0.3; rb_strength *= 1.1; rb_militancy *= 1.1; papen_strength += 1; schleicher_strength -= 1; hindenburg_schleicher_r -= 2; schleicher_approval += 1; nationalists_schleicher_bonus -= 2; industrialists_schleicher_bonus -= 1; republicans_schleicher_bonus += 2
 
 Несмотря на то, что несколько месяцев назад Шлейхер отверг предложение Брауна, он изменил своё решение. С таким популярным государственным деятелем на своей стороне его правление обретёт легитимность в глазах <span style="color: #000000;">респу</span><span style="color: #DD0000;">бли</span><span style="color: #FFCC00;">канцев</span> и общественности. Браун, в свою очередь, будет неустанно продвигать прошлейхеровскую политику внутри партии.

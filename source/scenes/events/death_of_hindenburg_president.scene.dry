@@ -20,7 +20,7 @@ Q.hergt_run_1934 = 0;
 Q.lettow_vorbeck_run_1934 = 0;
 Q.hugenberg_run_1934 = 0;
 
-Q.president = "Bumke (acting)";
+Q.president = "Бумке (и.о.)";
 if (Q.judicial_reform >= 4) Q.president = "Großmann (acting)";
 
 Q.reactionary_candidate_1934 = "Зельдте";

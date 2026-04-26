@@ -1,6 +1,6 @@
 title: Шлейхер и <span style="color: #385A38;">аграрии</span>
 subtitle: RLB разочарован аграрной политикой Шлейхера.
-view-if: chancellor = "Шляйхер" and schleicher_time == 5 and eastern_aid and dnvp_ideology == "Радикалы" and rlb_nazi
+view-if: chancellor = "Шлейхер" and schleicher_time == 5 and eastern_aid and dnvp_ideology == "Радикалы" and rlb_nazi
 new-page: true
 tags: event
 max-visits: 1

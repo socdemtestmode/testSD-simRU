@@ -1,6 +1,6 @@
 title: Комитет Рейхстага по повестке дня обсуждает возобновление заседаний
 subtitle: Удивительно, но канцлер горит желанием возобновить работу палаты.
-view-if: chancellor = "Шляйхер" and schleicher_time == 4
+view-if: chancellor = "Шлейхер" and schleicher_time == 4
 new-page: true
 tags: event
 max-visits: 1

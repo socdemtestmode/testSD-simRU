@@ -1,6 +1,6 @@
 title: Рейхстаг снова созван
 subtitle: Настало первое испытание для Шлейхера.
-view-if: chancellor = "Шляйхер" and next_reichstag_time == rubicon_time and next_reichstag_time > 0
+view-if: chancellor = "Шлейхер" and next_reichstag_time == rubicon_time and next_reichstag_time > 0
 on-arrival: reichstag_rubicon = 1; reichstag_schleicher_seen = 1
 new-page: true
 tags: event
@@ -41,6 +41,6 @@ on-arrival: pro_republic += 5
 
 @reichstag_2
 title: Декрет Папена о заработной плате отменён!
-on-arrival: workers_kpd -= 4; unemployed_kpd -= 4; workers_z += 2; workers_spd += 2; unemployed_spd += 4; pro_republic += 3; reichstag_break = 1; reichstag_rubicon = 0; oskar_goal = "Плести интриги против Шляйхера"; papen_goal = "Плести интриги против Шляйхера"; schleicher_approval += 1
+on-arrival: workers_kpd -= 4; unemployed_kpd -= 4; workers_z += 2; workers_spd += 2; unemployed_spd += 4; pro_republic += 3; reichstag_break = 1; reichstag_rubicon = 0; oskar_goal = "Плести интриги против Шлейхера"; papen_goal = "Плести интриги против Шлейхера"; schleicher_approval += 1
 
 Шлейхер дал рейхстагу согласие на отмену одного из самых вопиющих декретов Папена, который особенно возмутил профсоюзы, — так он выполнил своё обещание и усмирил их ярость, направленную против правительства.

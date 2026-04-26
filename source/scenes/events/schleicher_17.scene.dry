@@ -1,6 +1,6 @@
 title: Гугенберг смещён!
 subtitle: Даже его слепо преданная партия больше его не поддерживает.
-view-if: chancellor = "Шляйхер" and dnef_formed and ((nationalists_schleicher >= 10 and industrialists_schleicher >= 8 and not press_censorship) or (nationalists_schleicher >= 8 and industrialists_schleicher >= 6 and press_censorship))
+view-if: chancellor = "Шлейхер" and dnef_formed and ((nationalists_schleicher >= 10 and industrialists_schleicher >= 8 and not press_censorship) or (nationalists_schleicher >= 8 and industrialists_schleicher >= 6 and press_censorship))
 new-page: true
 priority: 1
 tags: event

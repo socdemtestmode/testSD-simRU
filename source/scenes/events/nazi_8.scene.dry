@@ -1,6 +1,6 @@
 title: [+ nsdap_leader +] и Гугенберг
 subtitle: Гарцбургский фронт мёртв, но, возможно, жив его дух?
-view-if: chancellor = "Шляйхер" and hindenburg_hitler_r >= 1 and (lippe_good or not lippe_election_seen)
+view-if: chancellor = "Шлейхер" and hindenburg_hitler_r >= 1 and (lippe_good or not lippe_election_seen)
 new-page: true
 tags: event
 priority: 1

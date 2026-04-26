@@ -1,6 +1,6 @@
 title: Ход Шлейхера
 subtitle: Выстоит ли генерал?
-view-if: chancellor == "Шляйхер" and kpd_explode and schleicher_fight
+view-if: chancellor == "Шлейхер" and kpd_explode and schleicher_fight
 max-visits: 1
 new-page: true
 priority: -1

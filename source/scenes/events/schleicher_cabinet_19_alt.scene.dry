@@ -1,6 +1,6 @@
 title: Шлейхер уходит в отставку!
 subtitle: Гинденбург недоволен канцлером.
-view-if: chancellor == "Шляйхер" and schleicher_post and schleicher_pause
+view-if: chancellor == "Шлейхер" and schleicher_post and schleicher_pause
 face-image: img/portraits/schleicher_stare.jpg
 max-visits: 1
 new-page: true

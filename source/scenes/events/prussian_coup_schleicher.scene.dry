@@ -1,6 +1,6 @@
 title: Путч в Пруссии
 subtitle: Канцлер пытается свергнуть правительство Пруссии.
-view-if: chancellor == "Шляйхер" and no_majority_elections_prussia_schleicher and not presidential_powers
+view-if: chancellor == "Шлейхер" and no_majority_elections_prussia_schleicher and not presidential_powers
 on-arrival: schleicher_spd_r -= 2; schleicher_spd_support -= 4; schleicher_spd_influence -= 2;
 new-page: true
 #tags: event

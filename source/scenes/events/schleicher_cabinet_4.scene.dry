@@ -1,6 +1,6 @@
 title: Шлейхер узнаёт о заговоре
 subtitle: Благожелательность Гинденбурга подвергается проверке.
-view-if: chancellor = "Шляйхер" and schleicher_time == 7 and schleicher_explode
+view-if: chancellor = "Шлейхер" and schleicher_time == 7 and schleicher_explode
 on-arrival: {!
 if ((Q.hindenburg_schleicher_r <= 0 || Q.schleicher_strength <= 1) && (Q.schleicher_spd_adopted || Q.schleicher_spd_r >= 4) && Q.pro_republic >= 40 || Q.constructive_vonc) {
     Q.schleicher_cabinet_smart = 1;

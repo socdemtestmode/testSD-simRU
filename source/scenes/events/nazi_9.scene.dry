@@ -1,6 +1,6 @@
 title: [+ nsdap_leader +] и Папен
 subtitle: Они снова видятся.
-view-if: chancellor = "Шляйхер" and hindenburg_hitler_r >= 1 and lippe_good
+view-if: chancellor = "Шлейхер" and hindenburg_hitler_r >= 1 and lippe_good
 new-page: true
 tags: event
 priority: 1

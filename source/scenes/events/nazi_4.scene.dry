@@ -1,6 +1,6 @@
 title: [+ nsdap_chancellor +] и Папен. Тайная встреча
 subtitle: Готовится заговор против канцлера.
-view-if: chancellor = "Шляйхер" and schleicher_time == 4
+view-if: chancellor = "Шлейхер" and schleicher_time == 4
 new-page: true
 tags: event
 max-visits: 1

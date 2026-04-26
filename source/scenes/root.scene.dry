@@ -460,7 +460,7 @@ Q.lvp_votes = 0;
 
 Q.dnef_left = 0;
 Q.dnef_right = 0;
-Q.dnef_leader = "Шляйхер";
+Q.dnef_leader = "Шлейхер";
 Q.dnef_ideology = "Умеренные";
 Q.dnef_normalized = 0;
 Q.dnef_votes = 0;

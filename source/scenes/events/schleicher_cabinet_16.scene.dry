@@ -1,6 +1,6 @@
 title: Рейхсбаннер запрещён!
 subtitle: Наше так называемое «революционное ополчение» теперь официально объявлено вне закона по всей стране.
-view-if: chancellor == "Шляйхер" and (dsu_in_gov or dsu_was_gov) and dsu_policy and ((reichstag_joever_time >= 8 and not schleicher_post_protests) or (reichstag_joever_time >= 18 and schleicher_post_protests)) and rb_force < 20 and (state_force + far_right_force) >= 80 and not schleicher_pause and (prussia_leader == "Штрассер" or prussia_leader == "Гёрделер")
+view-if: chancellor == "Шлейхер" and (dsu_in_gov or dsu_was_gov) and dsu_policy and ((reichstag_joever_time >= 8 and not schleicher_post_protests) or (reichstag_joever_time >= 18 and schleicher_post_protests)) and rb_force < 20 and (state_force + far_right_force) >= 80 and not schleicher_pause and (prussia_leader == "Штрассер" or prussia_leader == "Гёрделер")
 max-visits: 1
 new-page: true
 priority: -1

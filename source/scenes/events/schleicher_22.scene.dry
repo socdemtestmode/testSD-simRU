@@ -1,6 +1,6 @@
 title: <span style="color: #6A1E1E;">**НСС**</span> разрывает отношения со Шлейхером!
 subtitle: Штрассер понимает, что попал в ловушку Шлейхера.
-view-if: chancellor = "Шляйхер" and dsu_policy >= 4 and dnef_formed and kpd_explode and dnef_total_votes >= 30
+view-if: chancellor = "Шлейхер" and dsu_policy >= 4 and dnef_formed and kpd_explode and dnef_total_votes >= 30
 new-page: true
 priority: 1
 tags: event

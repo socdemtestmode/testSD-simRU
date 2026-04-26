@@ -1,6 +1,6 @@
 title: Шлейхер уступает
 subtitle: Канцлер практически оставил попытки удержаться у власти.
-view-if: chancellor = "Шляйхер" and schleicher_time == 7 and schleicher_explode and not constructive_schleicher
+view-if: chancellor = "Шлейхер" and schleicher_time == 7 and schleicher_explode and not constructive_schleicher
 new-page: true
 tags: event
 priority: -1

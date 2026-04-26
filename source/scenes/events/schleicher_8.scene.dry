@@ -1,6 +1,6 @@
 title: Шлейхер основывает политическую партию!
 subtitle: Он стремится воспользоваться новообретённой популярностью.
-view-if: chancellor = "Шляйхер" and schleicher_time >= 12
+view-if: chancellor = "Шлейхер" and schleicher_time >= 12
 new-page: true
 priority: 1
 tags: event

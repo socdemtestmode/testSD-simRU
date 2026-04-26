@@ -1,6 +1,6 @@
 title: <span style="color: #FFCC00;">**ЛНП**</span> присоединяется к <span style="color: #BFC8CC;">**ФНЕГ**</span>
 subtitle: Немецкий <span style="color: #FFCC00;">либерализм</span> мёртв.
-view-if: chancellor = "Шляйхер" and schleicher_post and ((republicans_schleicher >= 10 and lvp_leader != "Дингельдей") or (industrialists_dnef and lvp_leader == "Дингельдей")) and lvp_formed and dnef_formed
+view-if: chancellor = "Шлейхер" and schleicher_post and ((republicans_schleicher >= 10 and lvp_leader != "Дингельдей") or (industrialists_dnef and lvp_leader == "Дингельдей")) and lvp_formed and dnef_formed
 new-page: true
 priority: 1
 tags: event

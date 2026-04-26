@@ -1,6 +1,6 @@
 title: Разногласия в рядах <span style="color: #7A3C00;">**СА**</span>
 subtitle: Единичный случай или начало конца?
-view-if: chancellor = "Шляйхер" and schleicher_time == 5 and nazi_funds <= 3
+view-if: chancellor = "Шлейхер" and schleicher_time == 5 and nazi_funds <= 3
 new-page: true
 tags: event
 priority: 3

@@ -68,8 +68,8 @@ on-display: {!
 @papen_3
 title: Генерал Курт фон Шлейхер назначен канцлером!
 on-arrival: {!
-Q.chancellor = "Шляйхер";
-if (Q.prussia_leader == "Папен") Q.prussia_leader = "Шляйхер"
+Q.chancellor = "Шлейхер";
+if (Q.prussia_leader == "Папен") Q.prussia_leader = "Шлейхер"
 Q.schleicher_time = 0
 
 Q.pro_republic += 5;

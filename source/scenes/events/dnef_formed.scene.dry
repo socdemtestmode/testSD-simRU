@@ -103,7 +103,7 @@ if (Q.dnef_relation > 50) Q.dnef_relation = 50;
 Q.dnef_ideology = "Умеренные";
 Q.dnef_left = 0;
 Q.dnef_right = 0;
-Q.dnef_leader = "Шляйхер";
+Q.dnef_leader = "Шлейхер";
 
 if (Q.dnef_right > (Q.dnef_left + 3)) {
     Q.dnef_ideology = "Правые"

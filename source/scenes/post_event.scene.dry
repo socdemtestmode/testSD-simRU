@@ -288,7 +288,7 @@ Q.sh_force = Q.sh_strength*Q.sh_militancy;
 Q.rb_force = Q.rb_strength*Q.rb_militancy;
 Q.rfb_force = Q.rfb_strength*Q.rfb_militancy;
 Q.prussia_force = Q.prussian_police_strength*Q.prussian_police_militancy*Q.prussian_police_loyalty;
-if (Q.prussia_leader == "Штрассер" || Q.prussia_leader == "Шляйхер" || Q.prussia_leader == "Папен") Q.prussia_force = Q.prussian_police_strength*Q.prussian_police_militancy*(1 - Q.prussian_police_loyalty);
+if (Q.prussia_leader == "Штрассер" || Q.prussia_leader == "Шлейхер" || Q.prussia_leader == "Папен") Q.prussia_force = Q.prussian_police_strength*Q.prussian_police_militancy*(1 - Q.prussian_police_loyalty);
 Q.reichswehr_force = Q.reichswehr_strength*Q.reichswehr_militancy*(1 - Q.reichswehr_loyalty);
 Q.total_force = (Q.sa_force+Q.sh_force+Q.rb_force+Q.rfb_force);
 var total_force = (Q.sa_force+Q.sh_force+Q.rb_force+Q.rfb_force+Q.prussia_force);
@@ -305,7 +305,7 @@ Q.far_right_force = Q.sh_force + Q.sa_force;
 Q.democracy_force = Q.rb_force + Q.prussia_force;
 Q.state_force = 0;
 if (Q.reichswehr_street) Q.state_force += Q.reichswehr_force;
-if (Q.prussia_leader == "Штрассер" || Q.prussia_leader == "Шляйхер" || Q.prussia_leader == "Папен") {
+if (Q.prussia_leader == "Штрассер" || Q.prussia_leader == "Шлейхер" || Q.prussia_leader == "Папен") {
     Q.state_force += Q.prussia_force;
     Q.democracy_force -= Q.prussia_force;
 }
@@ -699,13 +699,13 @@ if (Q.rubicon && Q.month_actions >= 1 && Q.month_actions != Q.month_actions_chec
     Q.rubicon_time += 1;
     Q.week += 1;
     Q.pro_republic -= 1;
-    if (!Q.dnef_formed && Q.chancellor == "Шляйхер") Q.pro_republic += 0.5;
+    if (!Q.dnef_formed && Q.chancellor == "Шлейхер") Q.pro_republic += 0.5;
     if (Q.workers_spd_normalized >= 45) Q.workers_spd *= 0.99;
     if (Q.unemployed_spd_normalized >= 15) Q.unemployed_spd *= 0.99;
     if (Q.pro_republic < (Q.spd_votes + Q.ddp_votes + (Q.lvp_votes / 2) + Q.z_votes - Q.bvp_votes)) {
         if (Q.workers_spd_normalized >= 45) Q.workers_spd *= 0.99;
         if (Q.unemployed_spd_normalized >= 15) Q.unemployed_spd *= 0.99;
-        if (Q.dnef_formed && Q.chancellor == "Шляйхер") {
+        if (Q.dnef_formed && Q.chancellor == "Шлейхер") {
             Q.workers_dnef += 2/12;
             Q.new_middle_dnef += 4/12;
             Q.old_middle_dnef += 4/12;
@@ -727,7 +727,7 @@ if (Q.rubicon && Q.month_actions >= 1 && Q.month_actions != Q.month_actions_chec
         Q.papen_time += 1;
         if (Q.marburg_trigger) Q.marburg_time += 1;
     }
-    if (Q.chancellor == "Шляйхер") {
+    if (Q.chancellor == "Шлейхер") {
         Q.schleicher_time += 1;
         if (Q.schleicher_post) {
             Q.schleicher_post_time += 1;
@@ -809,7 +809,7 @@ if (Q.rubicon && Q.month_actions >= 1 && Q.month_actions != Q.month_actions_chec
             Q[timer+'_timer'] -= 1;
         }
     }
-    if (Q.prussia_leader == "Папен" || Q.prussia_leader == "Шляйхер") {
+    if (Q.prussia_leader == "Папен" || Q.prussia_leader == "Шлейхер") {
         Q.new_middle_spd -= 4/12;
         Q.new_middle_ddp -= 2/12;
         Q.new_middle_dnvp += 2/12;
@@ -1001,7 +1001,7 @@ if ((Q.month_actions >= 1 && !Q.rubicon) || (Q.month_actions >= 4 && Q.rubicon))
     if (Q.chancellor == "Папен" && !Q.papen_time) {
         Q.papen_time += 1;
     }
-    if (Q.chancellor == "Шляйхер" && !Q.schleicher_time) {
+    if (Q.chancellor == "Шлейхер" && !Q.schleicher_time) {
         Q.papen_time += 1;
     }
     // decrement timers
@@ -1411,12 +1411,12 @@ if ((Q.month_actions >= 1 && !Q.rubicon) || (Q.month_actions >= 4 && Q.rubicon))
         Q.reformist_dissent_decay *= 0.5;
     }
 
-    if (Q.chancellor == "Шляйхер" && Q.schleicher_spd_influence) {
+    if (Q.chancellor == "Шлейхер" && Q.schleicher_spd_influence) {
         Q.left_dissent_decay += Q.schleicher_spd_influence*2;
     }
     // to represent schleicher glazers bullying lefties out of the party
 
-    if (Q.chancellor == "Шляйхер" && Q.schleicher_spd_r) {
+    if (Q.chancellor == "Шлейхер" && Q.schleicher_spd_r) {
         Q.left_dissent_decay += Q.schleicher_spd_r*2;
         Q.center_dissent_decay += Q.schleicher_spd_r*2;
         Q.labor_dissent_decay += Q.schleicher_spd_r;
@@ -4755,7 +4755,7 @@ Q.nsdap_votes_post_event = Q.nsdap_votes;
 if (Q.chancellor != "Папен") {
     Q.papen_chancellor_timer = 0;
 }
-if (Q.chancellor != "Шляйхер") {
+if (Q.chancellor != "Шлейхер") {
     Q.schleicher_chancellor_timer = 0;
 }
 

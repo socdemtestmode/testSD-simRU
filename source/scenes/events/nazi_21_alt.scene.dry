@@ -1,6 +1,6 @@
 title: <span style="color: #7A3C00;">**НСДАП**</span> раскалывается!
 subtitle: Их внутренние противоречия наконец взяли своё.
-view-if: chancellor = "Шляйхер" and schleicher_time >= 10 and nazi_explode >= 4 and not hitler_dead
+view-if: chancellor = "Шлейхер" and schleicher_time >= 10 and nazi_explode >= 4 and not hitler_dead
 new-page: true
 tags: event
 max-visits: 1

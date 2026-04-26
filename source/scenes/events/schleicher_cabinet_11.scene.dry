@@ -1,6 +1,6 @@
 title: <i>Reichskonkordat</i> подписан!
 subtitle: Права католиков по всей Германии теперь официально гарантированы.
-view-if: chancellor == "Шляйхер" and z_in_gov and z_in_gov_time >= 6 and z_leader == "Каас" and reichskonkordat = 0 
+view-if: chancellor == "Шлейхер" and z_in_gov and z_in_gov_time >= 6 and z_leader == "Каас" and reichskonkordat = 0 
 max-visits: 1
 new-page: true
 tags: event

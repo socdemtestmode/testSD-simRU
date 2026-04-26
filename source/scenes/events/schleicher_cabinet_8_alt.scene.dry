@@ -1,6 +1,6 @@
 title: Расширение общественных работ
 subtitle: Выделено дополнительное финансирование.
-view-if: chancellor == "Шляйхер" and not dsu_in_gov and not dsu_was_gov and schleicher_post_time >= 4
+view-if: chancellor == "Шлейхер" and not dsu_in_gov and not dsu_was_gov and schleicher_post_time >= 4
 max-visits: 1
 new-page: true
 priority: -1

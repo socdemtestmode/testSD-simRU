@@ -1,6 +1,6 @@
 title: Вотум недоверия Шлейхеру!
 subtitle: Без указа наготове канцлер обречён.
-view-if: chancellor = "Шляйхер" and schleicher_time and next_reichstag_time == rubicon_time and next_reichstag_time > 0 and not schleicher_post
+view-if: chancellor = "Шлейхер" and schleicher_time and next_reichstag_time == rubicon_time and next_reichstag_time > 0 and not schleicher_post
 on-arrival: reichstag_rubicon = 1
 new-page: true
 tags: event

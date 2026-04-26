@@ -1,6 +1,6 @@
 title: Влияние Шлейхера
 new-page: true
-view-if: chancellor == "Шляйхер" and schleicher_time >= 8 and schleicher_spd_influence >= 2
+view-if: chancellor == "Шлейхер" and schleicher_time >= 8 and schleicher_spd_influence >= 2
 max-visits: 1
 tags: event
 face-image: img/portraits/schleicher.jpg

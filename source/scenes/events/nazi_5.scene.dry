@@ -1,6 +1,6 @@
 title: Штрассер и Гинденбург
 subtitle: Слухи о встрече этих двоих?
-view-if: chancellor = "Шляйхер" and schleicher_time == 4
+view-if: chancellor = "Шлейхер" and schleicher_time == 4
 on-arrival: nazi_explode += 1; schleicher_goal = "Молиться, чтобы Штрассер что-нибудь предпринял";
 new-page: true
 tags: event

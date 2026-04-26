@@ -2,7 +2,7 @@ title: Профсоюзы объявляют о независимости
 new-page: true 
 subtitle: Разногласия рабочего движения с нашей политикой стали слишком серьёзными.
 tags: event
-view-if: labor_dissent >= 60 and not unions_independent and chancellor == "Шляйхер"
+view-if: labor_dissent >= 60 and not unions_independent and chancellor == "Шлейхер"
 on-arrival: {!
 Q.unions_independent = 1;
 Q.unions_schleicher = 1;

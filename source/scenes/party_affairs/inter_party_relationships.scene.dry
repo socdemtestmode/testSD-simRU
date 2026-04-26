@@ -81,7 +81,7 @@ view-if: not cvp_formed
 choose-if: resources >= 1
 unavailable-subtitle: Недостаточно ресурсов.
 on-arrival: resources -= 1; z_relation += 2 if z_ideology == "Левые"
-go-to: center_op if not spd_in_government and chancellor != "Брюнинг" and ((chancellor != "Папен" and chancellor != "Шляйхер" and chancellor != "Гёрделер") or (z_in_gov or z_in_gov_mini)); center_op_2 if not spd_in_government and (chancellor == "Папен" or chancellor == "Шляйхер") and not z_in_gov; center_coalition if spd_in_government; center_bruning if chancellor = "Брюнинг" and not spd_in_government
+go-to: center_op if not spd_in_government and chancellor != "Брюнинг" and ((chancellor != "Папен" and chancellor != "Шлейхер" and chancellor != "Гёрделер") or (z_in_gov or z_in_gov_mini)); center_op_2 if not spd_in_government and (chancellor == "Папен" or chancellor == "Шлейхер") and not z_in_gov; center_coalition if spd_in_government; center_bruning if chancellor = "Брюнинг" and not spd_in_government
 
 
 @center_op

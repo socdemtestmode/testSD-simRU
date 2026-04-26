@@ -1,6 +1,6 @@
 title: «<span style="color: #3E88B3;">**НННП**</span>» вступает в «<span style="color: #BFC8CC;">**ФНЕГ**</span>
 subtitle: Ламбах заставляет партию вступить во Фронт.
-view-if: chancellor = "Шляйхер" and nationalists_schleicher >= 8 and dnef_formed and dnvp_leader == "Ламбах"
+view-if: chancellor = "Шлейхер" and nationalists_schleicher >= 8 and dnef_formed and dnvp_leader == "Ламбах"
 new-page: true
 priority: 3
 tags: event

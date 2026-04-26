@@ -1,6 +1,6 @@
 title: Камарилья присоединяется к заговору
 subtitle: Оскар фон Гинденбург и Отто Мейснер встречаются с [+ nsdap_leader +]ом и Папеном.
-view-if: chancellor = "Шляйхер" and schleicher_time == 7 and schleicher_explode
+view-if: chancellor = "Шлейхер" and schleicher_time == 7 and schleicher_explode
 new-page: true
 tags: event
 priority: 4

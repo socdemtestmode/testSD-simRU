@@ -1,5 +1,5 @@
 title: Шлейхер объявляет имя преемника
-view-if: year >= 1934 and month >= 2 and chancellor == "Шляйхер" and schleicher_post and schleicher_successor_time == rubicon_time
+view-if: year >= 1934 and month >= 2 and chancellor == "Шлейхер" and schleicher_post and schleicher_successor_time == rubicon_time
 on-arrival: {!
 Q.schleicher_resign = 1;
 Q.goerdeler_dnef_unlock = 0;

@@ -1,7 +1,7 @@
 title: Мы можем депортировать Гитлера.
 subtitle: В конце концов, он иностранный гражданин и преступник.
 unavailable-subtitle: [? if judicial_reform < 2 : К сожалению, <span style="color: #808080;">реакционная</span> судебная система не пойдёт на сотрудничество.  ?] [? if hitler_citizen : Гитлер уже получил гражданство Германии в преддверии президентских выборов. ?] [? if not spd_prussia : Мы не можем этого сделать без содействия прусской полиции, которая в данный момент нам не подчиняется. ?]
-view-if: nazi_urgency >= 3 and hitler_deported = 0 and chancellor != "Папен" and chancellor != "Шляйхер" and investigate_far_right >= 2
+view-if: nazi_urgency >= 3 and hitler_deported = 0 and chancellor != "Папен" and chancellor != "Шлейхер" and investigate_far_right >= 2
 choose-if: judicial_reform >= 2 and not hitler_citizen and spd_prussia == 1
 
 Неужели всё так просто? Разве его сторонники не ответят насилием на это предложение? И даже если депортация увенчается успехом, разве он просто не вернётся в страну или не станет действовать из Австрии? Кроме того, некоторые сочтут это антидемократическим злоупотреблением властью — использованием закона для устранения политического оппонента.

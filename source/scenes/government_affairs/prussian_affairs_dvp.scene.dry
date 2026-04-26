@@ -67,7 +67,7 @@ on-arrival: sa_strength *= 0.92; sa_strength *= 0.8 if prussian_police_loyalty >
 
 
 @prosecute_sa
-view-if: nazi_urgency >= 3 and not sa_banned and (chancellor == "Папен" or chancellor == "Шляйхер")
+view-if: nazi_urgency >= 3 and not sa_banned and (chancellor == "Папен" or chancellor == "Шлейхер")
 on-arrival: sa_strength *= 0.97; sa_militancy -= 0.02; prussian_police_loyalty -= 0.02; sa_strength *= 0.98 if prussian_police_loyalty >= 0.75
 
 Хотя полный запрет <span style="color: #7A3C00;">**СА**</span>, может, и недостижим, мы можем максимально осложнить жизнь <span style="color: #7A3C00;">штурмовикам</span>. Самых безрассудных из них можно привлечь к ответственности по обвинению в убийствах и сопутствующих преступлениях, а также обеспечить защиту законных публичных демонстраций и собраний от их незаконного вмешательства.

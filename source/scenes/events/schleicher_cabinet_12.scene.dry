@@ -1,6 +1,6 @@
 title: <span style="color: #700000;">**КПГ**</span> запрещена!
 subtitle: Министерство внутренних дел обнаружило «тревожные доказательства» планируемой революции.
-view-if: chancellor == "Шляйхер" and dsu_in_gov and not dsu_was_gov and dsu_policy and reichstag_joever_time >= 1 and not kpd_explode
+view-if: chancellor == "Шлейхер" and dsu_in_gov and not dsu_was_gov and dsu_policy and reichstag_joever_time >= 1 and not kpd_explode
 on-arrival: kpd_relation = 40 if kpd_relation < 40
 max-visits: 1
 new-page: true
@@ -408,7 +408,7 @@ if (Q.spd_prussia && Q.prussia_leader == "Браун" || Q.prussia_leader == "Р
 } else if (Q.spd_prussia && Q.prussia_leader !== "Браун" && Q.prussia_leader !== "Розенфельд") {
     Q.spd_points += (Q.prussian_police_power / 20);
 }
-if (Q.prussia_leader == "Шляйхер" || Q.prussia_leader == "Гёрделер" || Q.prussia_leader == "Штрассер") {
+if (Q.prussia_leader == "Шлейхер" || Q.prussia_leader == "Гёрделер" || Q.prussia_leader == "Штрассер") {
     Q.schleicher_points += Q.evil_prussian_police_power / 50;
 }
 Q.reichswehr_power = Q.reichswehr_strength*Q.reichswehr_militancy;

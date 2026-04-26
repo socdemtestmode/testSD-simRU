@@ -1,6 +1,6 @@
 title: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> присоединяется к <span style="color: #BFC8CC;">**ФНЕГ**</span>
 subtitle: Крошечная партия больше не может существовать самостоятельно.
-view-if: chancellor = "Шляйхер" and schleicher_time >= 35 and republicans_schleicher >= 12 and not lvp_formed and ddp_r < 2 and dnef_formed
+view-if: chancellor = "Шлейхер" and schleicher_time >= 35 and republicans_schleicher >= 12 and not lvp_formed and ddp_r < 2 and dnef_formed
 new-page: true
 priority: 1
 tags: event

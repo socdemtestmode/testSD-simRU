@@ -1,6 +1,6 @@
 title: Папен предлагает свой план Гинденбургу
 subtitle: Старик никогда не назначит [+ nsdap_chancellor +]а! Это ни к чему не приведёт.
-view-if: chancellor = "Шляйхер" and schleicher_time == 7 and schleicher_explode
+view-if: chancellor = "Шлейхер" and schleicher_time == 7 and schleicher_explode
 new-page: true
 tags: event
 priority: 3

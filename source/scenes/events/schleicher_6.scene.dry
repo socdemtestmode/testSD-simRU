@@ -1,6 +1,6 @@
 title: Браун встречается со Шлейхером
 subtitle: Несанкционированная встреча, но, возможно, она кстати?
-view-if: chancellor = "Шляйхер" and schleicher_time == 4 and prussia_leader == "Шляйхер"
+view-if: chancellor = "Шлейхер" and schleicher_time == 4 and prussia_leader == "Шлейхер"
 new-page: true
 tags: event
 max-visits: 1

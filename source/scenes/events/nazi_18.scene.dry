@@ -1,6 +1,6 @@
 title: <span style="color: #7A3C00;">**СА**</span> на грани развала!
 subtitle: Наступило разочарование.
-view-if: chancellor = "Шляйхер" and schleicher_time == 8
+view-if: chancellor = "Шлейхер" and schleicher_time == 8
 new-page: true
 tags: event
 priority: 2

@@ -1,6 +1,6 @@
 title: <span style="color: #000000;">Партия Центра</span> входит в правительство
 subtitle: Обещание <i>Reichskonkordat</i> склоняет их к сотрудничеству.
-view-if: chancellor == "Шляйхер" and dsu_in_gov and not dsu_was_gov and not z_in_gov and z_relation < 70 and z_leader == "Каас" and schleicher_post_time >= 2 and reichskonkordat = 0
+view-if: chancellor == "Шлейхер" and dsu_in_gov and not dsu_was_gov and not z_in_gov and z_relation < 70 and z_leader == "Каас" and schleicher_post_time >= 2 and reichskonkordat = 0
 max-visits: 1
 new-page: true
 tags: event
