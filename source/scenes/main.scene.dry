@@ -1,8 +1,8 @@
 title: Следующий месяц
 is-hand: true
 on-arrival: {!
-var deckDescription = 'Колоды — нажмите на колоду, чтобы взять карту.';
-var handDescription = 'Рука — нажмите на карточку чтобы разыграть её.';
+Q.deckDescription = 'Колоды — нажмите на колоду, чтобы взять карту.';
+Q.handDescription = 'Рука — нажмите на карточку, чтобы разыграть её.';
 if (!Q.rubicon) {
     if (Q.advisor_action_timer <= 0) {
         Q.pinnedCardsDescription = 'Советники доступны';
@@ -1292,8 +1292,8 @@ max-cards: 3
 @main_easy
 is-hand: true
 on-arrival: {!
-var deckDescription = 'Колоды — нажмите на колоду, чтобы взять карту.';
-var handDescription = 'Рука — нажмите на карточку чтобы разыграть её.';
+Q.deckDescription = 'Колоды — нажмите на колоду, чтобы взять карту.';
+Q.handDescription = 'Рука — нажмите на карточку, чтобы разыграть её.';
 if (!Q.rubicon) {
     if (Q.advisor_action_timer <= 0) {
         Q.pinnedCardsDescription = 'Советники доступны';
@@ -1892,8 +1892,6 @@ const boxes = document.querySelectorAll('.scrollable-box');
 if (boxes.length >= 2) {
     boxes[1].remove();
 }
-var deckDescription = 'Колоды - нажмите на колоду чтобы взять карту.';
-var handDescription = 'Рука - нажмите на карточку чтобы разыграть её.';
 !}
 max-cards: 4
 
