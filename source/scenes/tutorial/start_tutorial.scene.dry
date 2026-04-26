@@ -4,6 +4,7 @@ on-arrival: {!
 Q.deckDescription = 'Колоды — нажмите на колоду, чтобы взять карту.';
 Q.handDescription = 'Рука — нажмите на карточку, чтобы разыграть её.';
 Q.tutorial_started = 1;
+Q.tutorial_campaign = 1;
 if (!Q.rubicon) {
     if (Q.advisor_action_timer <= 0) {
         Q.pinnedCardsDescription = 'Советники доступны';
