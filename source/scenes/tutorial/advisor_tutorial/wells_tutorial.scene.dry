@@ -12,8 +12,6 @@ new-page: true
 - @clear_agenda
 - @party_discipline
 - @emergency_fundraising
-- @money_printer
-- @stimulation
 - @snap_election
 - @root: Вернуться к главному
 
