@@ -600,8 +600,7 @@ if (boxes.length >= 2) {
     boxes[1].remove();
 }
 Q.deckDescription = 'Колоды - нажмите на колоду чтобы взять карту.';
-Q.handDescription = 'Рука - нажмите на карточку чтобы разыграть её.'; 
-}
+Q.handDescription = 'Рука - нажмите на карточку чтобы разыграть её.';
 !}
 max-cards: 3
 
