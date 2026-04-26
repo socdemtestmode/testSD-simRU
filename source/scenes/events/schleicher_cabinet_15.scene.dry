@@ -1,6 +1,6 @@
 title: Прусская полиция расформирована
 subtitle: Вместо неё создаётся <i>Staatsschutzamt</i>.
-view-if: chancellor == "Schleicher" and (dsu_in_gov or dsu_was_gov) and ((reichstag_joever_time >= 6 and not schleicher_post_protests) or (reichstag_joever_time >= 16 and schleicher_post_protests)) and not schleicher_rights and prussia_leader == "Strasser"
+view-if: chancellor == "Шляйхер" and (dsu_in_gov or dsu_was_gov) and ((reichstag_joever_time >= 6 and not schleicher_post_protests) or (reichstag_joever_time >= 16 and schleicher_post_protests)) and not schleicher_rights and prussia_leader == "Штрассер"
 max-visits: 1
 new-page: true
 priority: -1

@@ -1,6 +1,6 @@
 title: The <span style="color: #FFCC00;">**ЛНП**</span> и Рейхсбаннер
 subtitle: Из-за милитаризации <span style="color: #FFCC00;">либералы</span> покидают Рейхсбаннер.
-view-if: rb_militancy >= 0.04 and not rb_exit and not rb_stay and lvp_formed and lvp_ideology != "Left"
+view-if: rb_militancy >= 0.04 and not rb_exit and not rb_stay and lvp_formed and lvp_ideology != "Левые"
 new-page: true
 tags: event
 on-display: {!  
@@ -29,7 +29,7 @@ max-visits: 1
 @let_go
 on-arrival: rb_strength *= 0.95; z_relation -= 3; lvp_relation -= 5; lvp_right += 3; pro_republic -= 3; lvp_leave_reichsbanner = 1
 
-Мы сочли, что воинственность Рейхсбаннера важнее сохранения коалиции с <span style="color: #FFCC00;">**ЛНП**</span>. Участники Рейхсбаннера, связанные с <span style="color: #FFCC00;">либералами</span>, покидают организацию: это может побудить [? if z_party_name != "CVP": <span style="color: #000000;">Партию Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] последовать их примеру.
+Мы сочли, что воинственность Рейхсбаннера важнее сохранения коалиции с <span style="color: #FFCC00;">**ЛНП**</span>. Участники Рейхсбаннера, связанные с <span style="color: #FFCC00;">либералами</span>, покидают организацию: это может побудить [? if z_party_name != "ХНП": <span style="color: #000000;">Партию Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] последовать их примеру.
 
 # TODO: this should make it harder to form Weimar coalitions
 
@@ -44,7 +44,7 @@ on-arrival: rb_militancy *= 0.5
 
 @keep_them
 unavailable-subtitle: В данный момент их переубедить невозможно.
-choose-if: strife >= 3 and lvp_relation >= 55 and lvp_ideology != "Right"
+choose-if: strife >= 3 and lvp_relation >= 55 and lvp_ideology != "Правые"
 on-arrival: lvp_left += 3; lvp_relation += 3; old_middle_dnvp += 3; old_middle_lvp -= 3; pro_republic += 3
 
 Видя беспорядки, охватившие улицы Германии, <span style="color: #FFCC00;">**ЛНП**</span>, кажется, убеждены в необходимости милитаризации Рейхсбаннера и не покинут организацию. К сожалению, многие убеждённые члены <span style="color: #3E88B3;">**Стального Шлема**</span> внутри партии постоянно настаивают на пересмотре этой политики.

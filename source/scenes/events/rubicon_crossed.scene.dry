@@ -1,6 +1,6 @@
 title: Рубикон перейдён
 subtitle: Судьба Германии в руках президента Гинденбурга.
-view-if: chancellor = "Papen" and president == "Hindenburg" and papen_time == 1
+view-if: chancellor = "Папен" and president == "Гинденбург" and papen_time == 1
 priority: 3
 new-page: true
 tags: event

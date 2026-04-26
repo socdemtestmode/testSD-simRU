@@ -6,6 +6,8 @@ on-arrival: confronting_nazis_seen += 1; confronting_nazis_timer = 5; month_acti
 card-image: img/iron_front.png
 tags: party_affairs; antifascism
 
+# Forming the Iron Front
+
 <span style="color: #7A3C00;">Нацисты</span> набирают силу, о чём свидетельствуют результаты недавних выборов и их насильственное присутствие на улицах. Их <span style="color: #7A3C00;">фашизм</span> угрожает вновь ввергнуть Германию в бездну.
 
 Многие в нашей партии призывают к немедленным действиям. «Неоревизионистская» фракция во главе с молодыми <span style="color: #c00000;">социалистами</span> Карло Мерендорффом и Юлиусом Лебером объединилась именно вокруг этой цели. Но к действию призывают члены всех партийных фракций.
@@ -91,4 +93,3 @@ go-to: if_end
 @if_end
 
 The <span style="color: #c00000;">**Железный**</span> <span style="color: #1A1A1A;">**фронт**</span> вдохнул в нашу партию новую энергию.
-

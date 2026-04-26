@@ -1,6 +1,6 @@
 title: Вотум недоверия Папену!
 subtitle: Его первая проверка на прочность в Рейхстаге.
-view-if: chancellor = "Papen" and papen_time and next_reichstag_time == rubicon_time and next_reichstag_time > 0 and papen_back
+view-if: chancellor = "Папен" and papen_time and next_reichstag_time == rubicon_time and next_reichstag_time > 0 and papen_back
 on-arrival: reichstag_rubicon = 1
 new-page: true
 tags: event

@@ -1,0 +1,275 @@
+title: [+ nsdap_chancellor +] назначен канцлером!
+subtitle: Начало конца…
+view-if: chancellor = "Schleicher" and schleicher_time == 7 and schleicher_explode and schleicher_coup
+new-page: true
+tags: event
+priority: -6
+max-visits: 1
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/joever.jpg";  
+
+    cardEl.appendChild(image);
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+= [+ nsdap_chancellor +] назначен канцлером!
+
+Момент настал — [+ nsdap_chancellor +] сегодня будет приведён к присяге в качестве канцлера, если всё не сорвётся в последнюю минуту.
+
+В ответ на слухи о готовящемся путче Шлейхера президент Гинденбург рано утром неконституционным образом приводит к присяге генерала фон Бломберга.
+
+- @nazi_2
+
+
+@nazi_2
+title: Будущий кабинет [+ nsdap_chancellor +]а встречается с президентом.
+
+Гугенберг прибывает в квартиру Папена в сопровождении лидеров <span style="color: #3E88B3;">**Стального Шлема**</span>. Их встречает взволнованный Папен, который подчёркивает крайнюю срочность ситуации.
+
+*«Если новый кабинет не будет сформирован до одиннадцати часов, армия выступит. Нам угрожает военная диктатура под руководством Шлейхера и Хаммерштейна».*- Франц фон Папен, лидерам [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**НФГ**</span> ?], [+ year +]
+
+- @nazi_3
+
+
+@nazi_3
+title: Теодор Дюстерберг высказывает свои возражения.
+on-arrival: {!
+Q.hugenberg_hitler_r = 0;
+
+if (Q.dnvp_r < 6 && !Q.hugenberg_dvp) Q.hugenberg_hitler_r += 1;
+if (Q.dnvp_r < 8 && !Q.hugenberg_dvp) Q.hugenberg_hitler_r += 1;
+if (Q.dnvp_r >= 8 && !Q.hugenberg_dvp) Q.hugenberg_hitler_r -= 1;
+if (Q.dnvp_r >= 10 && !Q.hugenberg_dvp) Q.hugenberg_hitler_r -= 1;
+
+if (Q.prussia_leader != "Schleicher") Q.hugenberg_hitler_r -= 1;
+
+if (Q.dnvp_r + Q.dvp_r < 8 && Q.hugenberg_dvp) Q.hugenberg_hitler_r += 1;
+if (Q.dnvp_r + Q.dvp_r < 10 && Q.hugenberg_dvp) Q.hugenberg_hitler_r += 1;
+if (Q.dnvp_r + Q.dvp_r >= 10 && Q.hugenberg_dvp) Q.hugenberg_hitler_r -= 1;
+if (Q.dnvp_r + Q.dvp_r >= 12 && Q.hugenberg_dvp) Q.hugenberg_hitler_r -= 1;
+!}
+
+Один из лидеров <span style="color: #3E88B3;">**Стального Шлема**</span>, наряду с Отто Шмидтом-Ганновером из [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**НФГ**</span> ?], выражает серьёзные сомнения по поводу [+ nsdap_chancellor +]а и его канцлерства.
+
+Согласие Дюстерберга крайне важно, чтобы другой лидер организации, Зельдте, вошёл в кабинет. Но Дюстерберг, ставший мишенью для атак <span style="color: #7A3C00;">нацистов</span> из-за своего <span style="color: #005EB8;">еврейского</span> происхождения, по-прежнему с большим недоверием относится к правительству [+ nsdap_chancellor +]а.
+
+Заметив его опасения, [+ nsdap_chancellor +] сразу же подходит к Дустербергу и заверяет его, что никогда не одобрял эти нападки. Видя столь искренние чувства, Дустерберг смягчается и снимает свои возражения.
+
+- @nazi_4
+- @nazi_6
+
+
+@nazi_4
+title: Гитлер приведён к присяге.
+subtitle: Мы потерпели поражение.
+on-arrival: {!
+Q.chancellor = Q.nsdap_chancellor;
+Q.chancellor_party = "NSDAP";
+Q.vice_chancellor = "Papen";
+if (Q.prussia_leader == "Schleicher") {
+    Q.in_right_coalition_prussia = 0;
+    Q.in_weimar_coalition_prussia = 0;
+    Q.in_grand_coalition_prussia = 0;
+    Q.in_minority_grand_coalition_prussia = 0;
+    Q.in_popular_front_prussia = 0;
+    Q.in_left_front_prussia = 0;
+    Q.in_spd_majority_prussia = 0;
+    Q.in_center_right_coalition_prussia = 0;
+    Q.in_minority_weimar_coalition_prussia = 0;
+    Q.spd_prussia = 0;
+    Q.right_prussia = 0;
+    Q.prussia_leader = "Papen"
+}
+!}
+
+Ещё нет. До присяги кабинета остаются считаные минуты, и один нерешённый вопрос даёт о себе знать.
+
+Гугенберг не знал об обещании Папена [+ nsdap_leader +]у: после присяги будут назначены досрочные выборы. Он застигнут врасплох просьбой [+ nsdap_chancellor +]а «подтвердить» приверженность обещанию, о котором узнал лишь сейчас. Гугенберг наотрез отказался принять требование [+ nsdap_leader +]а
+
+Гугенберг как всегда оказался непреклонен, что бы ему ни уступали. Хоть на этот раз его высокомерие может быть во благо. Однако вмешался Мейснер — в итоге Гугенберг осознал: он остался единственным препятствием, поэтому нехотя согласился на новые выборы.
+
+Нагло обманывая, лидер <span style="color: #7A3C00;">нацистов</span> поклялся защищать и соблюдать конституцию и законы республики, которую он так долго грозился уничтожить.
+
+Полагая, что он назначает парламентского канцлера, Гинденбург приказал начать переговоры с <span style="color: #000000;">Партией Центра</span>, которые намеренно саботировались усилиями Папена — и в конечном счёте провалились.
+
+Что нам делать?
+
+- @nazi_5
+
+
+@nazi_5
+title: Рассмотреть наши варианты.
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/hitler_og.jpg";  
+
+    cardEl.appendChild(image);
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+Хотя заклятый враг демократии и назначен канцлером, к всеобщему удивлению, этот день ознаменовался лишь привычным политическим насилием. <span style="color: #000000;">Респу</span><span style="color: #DD0000;">блика</span><span style="color: #FFCC00;">нские</span> партии не отреагировали на его назначение так, как ожидалось: многие считают: нам следует выжидать и готовиться к решающей схватке, когда [+ nsdap_chancellor +] , вероятно, нарушит конституцию. Многие также верят, что Гинденбург будет держать [+ nsdap_chancellor +] узде и спасёт немецкую демократию от гибели.
+
+Большинство людей не представляет, что их постигло; назначение очередного канцлера стало настолько обыденным явлением, что большая часть простых людей стала безразличной.
+
+Этот поразительный поворот в судьбе [+ nsdap_leader +]а подтвердил его веру: он — человек судьбы, которому суждено преуспеть в плане по очищению Германии от <span style="color: #005EB8;">евреев</span> и ведению бесконечных захватнических войн по всей Европе. Гитлер не захватил власть; она передана ему людьми, которые в тот момент вершили судьбу Германии.
+
+Что же нам теперь делать?
+
+- @bide_time
+- @civil_war_pre
+
+
+@bide_time
+title: Выжидаем. Надо дождаться, пока [+ nsdap_chancellor +] первым не пойдёт на антиконституционный шаг — тогда мы нанесем удар.
+
+На что мы здесь надеемся?
+
+- @nothing_1
+- @nothing_2
+- @nothing_3
+- @nothing_4
+
+
+@nothing_1
+title: Папен и консерваторы будут контролировать [+ nsdap_chancellor +]а.
+go-to: something_1
+
+
+
+
+@nothing_2
+title: Гинденбург будет держать [+ nsdap_chancellor +]а в узде.
+go-to: something_1
+
+
+
+
+@nothing_3
+title: Организованное рабочее движение и <span style="color: #000000;">рес</span><span style="color: #DD0000;">публ</span><span style="color: #FFCC00;">иканские</span> партии будут препятствовать ему в парламенте.
+go-to: something_1
+
+
+
+
+@nothing_4
+title: После [+ nsdap_chancellor +]а — наш черёд.
+go-to: something_1
+
+
+
+
+@something_1
+on-arrival: month += 2; week -= 1; month -= 1 if week < 1; year += 1 if month > 12; month -= 12 if month > 12; chancellor = "Hitler"
+
+Звучат речи. Проходят голосования. На улицах свистят пули. Некоторых <span style="color: #c00000;">социалистов</span> убивают или сажают в тюрьму. Другие бегут из страны. Что вообще могут решить голоса в такой момент?
+
+Рейхстаг сожжён, якобы иностранным <span style="color: #700000;">коммунистом</span>. Вслед за этим <span style="color: #7A3C00;">нацисты</span> издают указы, дающие им неограниченную власть. Они, вместе с [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnf_formed: <span style="color: #003755;">**НФГ**</span> ?], получат большинство на следующих выборах. [? if nsdap_chancellor != "Hitler": Гитлера возвращают из Австрии и назначают канцлером. ?]
+
+- @enabling_act
+
+
+@enabling_act
+title: [+ nsdap_chancellor +] пытается принять закон о чрезвычайных полномочиях.
+on-arrival: {!
+const contentElement = document.getElementById('content');
+contentElement.style.backgroundColor = '#312115';
+
+const toolsWrapper = document.getElementById('tools_wrapper');
+if (toolsWrapper) {
+  toolsWrapper.style.display = 'none';
+}
+
+const header = document.querySelector('header');
+header.style.color = '#ffffff';
+!}
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/enabling_act.jpg";  
+
+    cardEl.appendChild(image);
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+audio: music/1930_1933/Burgundian_Lullaby.ogg
+set-bg: img/reichstag_fire.jpg
+
+= Закон о чрезвычайных полномочиях
+
+Вместе с [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnf_formed: <span style="color: #003755;">**НФГ**</span> ?], а также благодаря диктаторским полномочиям, предоставленным Декретом о поджоге Рейхстага, <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правые</span> получили больше, чем просто абсолютное большинство.
+
+Закон считается конституционной поправкой, для принятия которой требуется одобрение двух третей голосов депутатов Рейхстага. <span style="color: #700000;">**Коммунисты**</span> фактически запрещены и многие представляющие <span style="color: #c00000;">**СДПГ**</span> депутаты заключены в тюрьму на основании Декрета о поджоге Рейхстага. Решающим фактором становится <span style="color: #000000;">Партия Центра</span>, стремящаяся спасти католическое население от преследований и нового «Культуркампфа».
+
+Штурмовики <span style="color: #7A3C00;">**СА**</span> расположились внутри и снаружи зала заседаний. Над номинально конституционной <span style="color: #000000;">Партией Центра</span> сгущается атмосфера страха. Вирт и Брюнинг выступают против законопроекта, в то время как большинство партии его поддерживает. По просьбе Гугенберга и <span style="color: #000000;">Партии Центра</span> <span style="color: #7A3C00;">нацисты</span> обещали конституционные гарантии, но отказались закрепить их в письменной форме.
+
+- @enabling_act_2: <span style="color: #000000;">Партия Центра</span> голосует за закон о чрезвычайных полномочиях!
+- @enabling_act_3: <span style="color: #000000;">Партия Центра</span> голосует против закона о чрезвычайных полномочиях!
+
+
+@enabling_act_2
+subtitle: В конце концов, это не имеет значения.
+
+Несколько месяцев спустя подписан конкордат с Ватиканом, защищавший миллионы немецких католиков от возможных <span style="color: #7A3C00;">нацистских</span> преследований. <span style="color: #7A3C00;">**НСДАП**</span> становится единственной политической партией. Франца фон Папена смещают с его поста в Пруссии: он остаётся на номинальной должности вице-канцлера. Гугенберг вынужден уйти в отставку.
+
+Попытки «приручить» <span style="color: #7A3C00;">нацистов</span> провалились; их неумолимая консолидация власти продолжается: лишь стареющий Гинденбург остаётся последним, кто может сдержать их безграничную власть. Шлейхер убит во время «Ночи длинных ножей», Папен произносит свою печально известную «Марбургскую речь», после чего уходит в отставку, а со смертью 86-летнего Гинденбурга Германия обречена.
+
+- @game_over
+
+
+@enabling_act_3
+unavailable-subtitle: В конечном счёте это не имеет значения.
+choose-if: super_secret_mode
+
+Да.
+
+
+@civil_war_pre
+title: Мы не должны позволить [+ nsdap_chancellor +]у укрепиться! Мы будем сражаться на улицах, чтобы не дать [+ nsdap_chancellor +]у удержать власть.
+
+К сожалению, немногие <span style="color: #000000;">респу</span><span style="color: #DD0000;">блик</span><span style="color: #FFCC00;">анцы</span> готовы взяться за оружие против новоиспечённого правительства [+ nsdap_chancellor +]а.
+
+Мы осознаём, что это означает гражданскую войну против всей мощи государства?
+
+- @civil_war: Yes.
+- @bide_time: Мы не готовы к войне. Мы должны выждать.
+
+
+@nazi_6
+title: Гугенберг спасает демократию?
+subtitle: Его высокомерие наконец-то оказалось полезным.
+unavailable-subtitle: Он доволен полученными министерскими портфелями.
+choose-if: hugenberg_hitler_r <= -2
+
+Ещё нет. До приведения кабинета к присяге остаются считаные минуты, но тут даёт о себе знать одна неувязка.
+
+Гугенберг, не знавший об обещании Папена [+ nsdap_leader +]у о немедленном проведении выборов, застигнут врасплох. Когда [+ nsdap_chancellor +] потребовал обязательств по этому вопросу, он твёрдо отказался принять требование [+ nsdap_leader +]а. Его относительно сильные результаты на последних выборах лишь раздули его эго.
+
+Гугенберг был как никогда непреклонен, и, несмотря на все уступки, на этот раз его высокомерие сослужило ему добрую службу.
+
+Даже когда вмешивается Мейснер, Гугенберг — единственное препятствие на пути [+ nsdap_chancellor +]а к восхождению — в ярости уходит, ведь [+ nsdap_leader +] продолжает упорно отвергать его требование. Когда лидер единственной подходящей для коалиции партии ушёл, иллюзии Гинденбурга о возможности <span style="color: #7A3C00;">**НСДАП**</span> сформировать парламентский кабинет — рухнули.
+
+- @nazi_7
+
+
+@nazi_7
+title: Кто теперь сменит Шлейхера?
+on-arrival: chancellor = "Papen"; prussia_leader = "Papen"; papen_back = 1
+
+Пока фон Папен продолжает умолять Гинденбурга пересмотреть решение о назначении [+ nsdap_chancellor +]а, он, по сути, исключил свою кандидатуру из рассмотрения. Тем не менее, Гинденбург по-прежнему считает своей первоочередной задачей сместить с должности Шлейхера — канцлера, который, по слухам, готовил против него переворот.
+
+Папен снова неохотно соглашается сформировать президентский кабинет во главе с самим собой, сохранив большинство министров Шлейхера. Однако Гинденбург подчёркивает, что это лишь временное решение — сугубо исполняющее обязанности правительство, пока не будет собран новый <i>парламентский</i> кабинет. Надвигается вотум недоверия.
+

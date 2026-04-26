@@ -1,0 +1,30 @@
+title: Смерть Гинденбурга
+subtitle: Герой Великой войны и бывший президент скончался…
+new-page: true
+view-if: year = 1934 and month >= 7 and president != "Hindenburg"
+on-arrival: hindenburg_dead = 1
+max-visits: 1
+tags: event
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/Hindenburg_head.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+= Смерть Гинденбурга
+
+Пауль фон Гинденбург скончался в возрасте 86 лет.
+
+Народ погружается в глубокую скорбь по герою войны и бывшему президенту. Даже для убежденных <span style="color: #c00000;">социалистов</span> и <span style="color: #000000;">рес</span><span style="color: #DD0000;">публ</span><span style="color: #FFCC00;">иканцев</span> это момент, оставляющий горько-сладкое чувство. Хоть он и живое воплощение прусского милитаризма и монархизма, Гинденбург все же провел нацию через тяжелые времена, не разрушив демократию. Всегда могло быть и хуже.
+
+С уходом Гинденбурга, кажется, завершается целая историческая эпоха. Худшие годы кризиса позади, и дни <span style="color: #7A3C00;">нацизма</span> сочтены. Возможно, Германия наконец вступит в новую эру истинного мира…
+
+- @game_over_1934: Trigger game over.
+- @root: Nah.

@@ -1,6 +1,6 @@
 title: Кабинет Папена уходит в отставку!
 subtitle: Это не более чем символический жест, так как он остается исполняющим обязанности.
-view-if: chancellor = "Papen" and papen_time == 23 and papen_post_2
+view-if: chancellor = "Папен" and papen_time == 23 and papen_post_2
 new-page: true
 tags: event
 max-visits: 1

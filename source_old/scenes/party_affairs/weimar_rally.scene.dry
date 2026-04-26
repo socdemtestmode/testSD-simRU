@@ -41,4 +41,3 @@ on-arrival: pro_republic += 6
 on-arrival: z_relation += 5*(1-dissent); ddp_relation += 5*(1-dissent); lvp_relation += 5*(1-dissent); ddp_left += 1; lvp_left += 1
 
 Нам удалось укрепить наши отношения с вовлечёнными сторонами благодаря участию Хойса и Вирта — членов [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] и <span style="color: #000000;">Партии Центра</span> соответственно.
-

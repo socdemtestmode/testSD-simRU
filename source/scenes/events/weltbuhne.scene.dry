@@ -15,7 +15,7 @@ tags: event
 
 Новостной и литературный журнал <span style="color: #c00000;">левого толка</span> „Вельтбюне“ стал объектом преследования со стороны властей по обвинению в разглашении государственной тайны. В журнале опубликованы статьи о тайной программе перевооружения рейхсвера в нарушение Версальского договора. Военные, разумеется, не желают огласки этой информации. Ситуацию усугубляет один факт: редактор журнала Карл фон Осецкий — известный пацифист.
 
-[? if spd_in_government and justice_minister_party = "SPD" : Контролируя министерство юстиции, мы могли бы просто закрыть это дело.  ?] [? if spd_in_government and justice_minister_party != "SPD" : Министерство юстиции пытается привлечь к ответственности редактора и журналиста „Вельтбюне“. Мы можем попытаться убедить наших партнёров по коалиции закрыть дело, но они, скорее всего, будут сопротивляться. ?]
+[? if spd_in_government and justice_minister_party = "СДПГ" : Контролируя министерство юстиции, мы могли бы просто закрыть это дело.  ?] [? if spd_in_government and justice_minister_party != "СДПГ" : Министерство юстиции пытается привлечь к ответственности редактора и журналиста „Вельтбюне“. Мы можем попытаться убедить наших партнёров по коалиции закрыть дело, но они, скорее всего, будут сопротивляться. ?]
 
 - @drop_case: Прекратить дело.
 - @let_persecute: Пусть правосудие свершится.
@@ -25,8 +25,8 @@ tags: event
 
 @drop_case
 view-if: spd_in_government
-choose-if: spd_in_government and justice_minister_party = "SPD"
-unavailable-subtitle: [? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> не в правительстве.  ?] [? if spd_in_government and justice_minister_party != "SPD": <span style="color: #c00000;">СДПГ</span> не контролирует министерство юстиции. ?]
+choose-if: spd_in_government and justice_minister_party = "СДПГ"
+unavailable-subtitle: [? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> не в правительстве.  ?] [? if spd_in_government and justice_minister_party != "СДПГ": <span style="color: #c00000;">СДПГ</span> не контролирует министерство юстиции. ?]
 on-arrival: weltbuhne_dropped = 1; dvp_relation -= 4; nationalism -= 3*(1-dissent); coalition_dissent += 1 if (in_grand_coalition or (in_weimar_coalition and lvp_formed)); reichswehr_loyalty -= 0.05; west_relation += 1; east_relation += 1; coup_progress += 1; reparations_negotiation += 1; pacifism += 1; ddp_relation += 3; ddp_left += 1; lvp_relation -= 2; hindenburg_angry += 5
 
 Министерство юстиции прекратило преследование Карла фон Осецкого и Вальтера Крайзера, журналиста, ответственного за скандальную публикацию. Более того, некоторые считают, что журналистов „Вельтбюне“ следует чествовать как героев.
@@ -42,7 +42,7 @@ on-arrival: weltbuhne_dropped = 0; dvp_relation += 4; reichswehr_loyalty += 0.05
 
 
 @pressure_drop
-view-if: spd_in_government and justice_minister_party != "SPD"
+view-if: spd_in_government and justice_minister_party != "СДПГ"
 on-arrival: weltbuhne_dropped = 1; dvp_relation -= 5; lvp_relation -= 3; nationalism += 3*(1-dissent); coalition_dissent += 1; coalition_dissent += 1 if (in_grand_coalition or (in_weimar_coalition and lvp_formed)); reichswehr_loyalty -= 0.05; coup_progress += 1; west_relation += 1; east_relation += 1; reparations_negotiation += 1; ddp_left += 1; hindenburg_angry += 5
 
 Мы оказали давление на Министерство юстиции, чтобы оно прекратило дело против «Вельтбюне», что обострило отношения с нашими партнёрами по коалиции.

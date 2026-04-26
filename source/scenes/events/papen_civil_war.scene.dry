@@ -28,16 +28,16 @@ if (Q.dissent > 0.15) {
 }
 Q.total_power += Q.rb_power;
 Q.prussian_police_power = Q.prussian_police_strength*Q.prussian_police_militancy*Q.prussian_police_loyalty;
-if (Q.spd_prussia && Q.prussia_leader == "Braun" || Q.prussia_leader == "Rosenfeld") {
+if (Q.spd_prussia && Q.prussia_leader == "Браун" || Q.prussia_leader == "Розенфельд") {
     Q.total_power += Q.prussian_police_power;
-} else if (Q.spd_prussia && Q.prussia_leader !== "Braun" && Q.prussia_leader !== "Rosenfeld") {
+} else if (Q.spd_prussia && Q.prussia_leader !== "Браун" && Q.prussia_leader !== "Розенфельд") {
     Q.total_power += (Q.prussian_police_power / 2);
 }
 if (Q.reichswehr_loyalty < 0) {
     Q.reichswehr_loyalty = 0;
 }
 Q.loyal_reichswehr_power = Q.reichswehr_strength*Q.reichswehr_militancy*Q.reichswehr_loyalty;
-if (Q.spd_in_government && Q.chancellor_party == "SPD") {
+if (Q.spd_in_government && Q.chancellor_party == "СДПГ") {
     Q.total_power += Q.loyal_reichswehr_power;
 } else {
     Q.total_power += Q.loyal_reichswehr_power/4;
@@ -85,7 +85,7 @@ if (Q.total_defeat) {
     Q.papen_power = 0;
     Q.nsdap_power = 0;
     if (Q.hostile_reichswehr_power) Q.papen_power += Q.hostile_reichswehr_power;
-    if (Q.prussia_leader == "Papen") Q.papen_power += Q.prussian_police_strength*Q.prussian_police_militancy*(1-Q.prussian_police_loyalty);
+    if (Q.prussia_leader == "Папен") Q.papen_power += Q.prussian_police_strength*Q.prussian_police_militancy*(1-Q.prussian_police_loyalty);
     Q.papen_power += Q.sh_strength*Q.sh_militancy;
     Q.nsdap_power += Q.sa_strength*Q.sa_militancy;
     Q.nsdap_power += (Q.workers_nsdap_normalized + Q.unemployed_nsdap_normalized);
@@ -135,7 +135,7 @@ on-arrival: war_choices += 1
 
 @kpd_help
 max-visits: 1
-view-if: chancellor_party != "KPD" and president != "Thälmann" 
+view-if: chancellor_party != "КПГ" and president != "Тельман" 
 go-to: war_menu
 on-arrival: war_choices += 1
 

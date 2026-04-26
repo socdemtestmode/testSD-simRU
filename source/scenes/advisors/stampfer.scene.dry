@@ -45,32 +45,32 @@ on-arrival: advisor_action_timer = 6
 
 
 @support_left
-on-arrival: left_dissent -= 8; left_strength += 8; editorial_line = "Left"
+on-arrival: left_dissent -= 8; left_strength += 8; editorial_line = "Левые"
 
 «Форвертс» печатает передовицы в поддержку левых позиций.
 
 
 @support_center
-on-arrival: center_dissent -= 8; center_strength += 8; editorial_line = "Center"
+on-arrival: center_dissent -= 8; center_strength += 8; editorial_line = "Центр"
 
 Газета «Форвертс» публикует редакционные статьи в поддержку центристских позиций.
 
 
 @support_labor
-on-arrival: labor_dissent -= 8; labor_strength += 8; editorial_line = "Labor"
+on-arrival: labor_dissent -= 8; labor_strength += 8; editorial_line = "Труд"
 
 «Форвертс» публикует редакционные статьи в поддержку политики профсоюзов.
 
 
 @support_reform
-on-arrival: reformist_dissent -= 8; reformist_strength += 8; editorial_line = "Reformists"
+on-arrival: reformist_dissent -= 8; reformist_strength += 8; editorial_line = "Реформисты"
 
 «Форвертс» печатает передовицы в поддержку реформистской политики.
 
 
 @support_neorev
 view-if: neorevisionism
-on-arrival: neorevisionist_dissent -= 8; neorevisionist_strength += 8; editorial_line = "Neorevisionists"; nazi_urgency += 1
+on-arrival: neorevisionist_dissent -= 8; neorevisionist_strength += 8; editorial_line = "Неоревизионисты"; nazi_urgency += 1
 
 В газете «Форвертс» печатают статьи в поддержку неоревизионистских идей.
 

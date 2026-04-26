@@ -1,6 +1,6 @@
 title: Шлейхер узнаёт о заговоре
 subtitle: Благожелательность Гинденбурга подвергается проверке.
-view-if: chancellor = "Schleicher" and schleicher_time == 7 and schleicher_explode
+view-if: chancellor = "Шляйхер" and schleicher_time == 7 and schleicher_explode
 on-arrival: {!
 if ((Q.hindenburg_schleicher_r <= 0 || Q.schleicher_strength <= 1) && (Q.schleicher_spd_adopted || Q.schleicher_spd_r >= 4) && Q.pro_republic >= 40 || Q.constructive_vonc) {
     Q.schleicher_cabinet_smart = 1;
@@ -53,7 +53,7 @@ view-if: not schleicher_cabinet_smart
 
 @schleicher_3
 title: Момент истины.
-on-arrival: schleicher_strength -= 1; schleicher_goal = "Concede defeat";
+on-arrival: schleicher_strength -= 1; schleicher_goal = "Признать поражение";
 
 Шлейхер просит издать указ о роспуске Рейхстага и показывает: палата, по всей видимости, вынесет вотум недоверия на следующем же заседании. Предвидя, что новые выборы не сильно изменят состав Рейхстага в его пользу, он просит издать указ и об отсрочке запланированных выборов.
 

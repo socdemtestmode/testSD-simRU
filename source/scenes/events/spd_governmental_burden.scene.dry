@@ -2,11 +2,11 @@ title: Бремя власти
 view-if: spd_government_burden_trigger == 1 and not (peoples_party or (new_middle_spd_normalized >= 30 or (new_middle_spd_normalized + old_middle_spd_normalized >= 40) or rural_spd_normalized >= 20 or catholics_spd_normalized >= 40 or spd_votes >= 40))
 new-page: true
 tags: event
-on-arrival: spd_government_burden_trigger = 0; spd_government_burden_seen = 1; spd_government_burden_timer = 6; workers_spd -= 5 if labor_minister_party != "SPD"; labor_dissent += 15 if labor_minister_party != "SPD"
+on-arrival: spd_government_burden_trigger = 0; spd_government_burden_seen = 1; spd_government_burden_timer = 6; workers_spd -= 5 if labor_minister_party != "СДПГ"; labor_dissent += 15 if labor_minister_party != "СДПГ"
 
 = Бремя власти
 
-Бремя власти теперь на нашхи плечах. Наша задача — поддерживать хрупкий баланс между уступками партнёрам по коалиции и продвижением программы партии. Наш коренной электорат — рабочий класс и безработные. Они ждут, что за время пребывания у власти мы претворим в жизнь часть наших предвыборных обещаний, иначе они отвернуться от нас, как и многие партийцы. [? if labor_minister_party != "SPD": Передача контроля над министерством труда буржуазным партиям производит на рабочих плохое впечатление. ?]
+Бремя власти теперь на нашхи плечах. Наша задача — поддерживать хрупкий баланс между уступками партнёрам по коалиции и продвижением программы партии. Наш коренной электорат — рабочий класс и безработные. Они ждут, что за время пребывания у власти мы претворим в жизнь часть наших предвыборных обещаний, иначе они отвернуться от нас, как и многие партийцы. [? if labor_minister_party != "СДПГ": Передача контроля над министерством труда буржуазным партиям производит на рабочих плохое впечатление. ?]
 
 [? if spd_in_government : - Расширить программы социального обеспечения. ?]
 

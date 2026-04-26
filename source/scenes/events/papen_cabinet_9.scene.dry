@@ -1,6 +1,6 @@
 title: Папен готовит масштабные поправки к конституции!
 subtitle: Несмотря на тотальную непопулярность, канцлер приказал кабинету разработать масштабные поправки к конституции.
-view-if: chancellor = "Papen" and papen_time and papen_post_2
+view-if: chancellor = "Папен" and papen_time and papen_post_2
 new-page: true
 tags: event
 max-visits: 1

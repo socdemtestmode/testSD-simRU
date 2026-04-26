@@ -17,7 +17,7 @@ tags: party_affairs
 - @old_middle: «Старый средний класс»: малый бизнес, индивидуальные предприниматели и ремесленники.
 - @rural: Сельские рабочие и мелкие крестьяне, которые в прошлом чувствовали себя обделёнными нашим вниманием.
 - @unemployed: Безработные.
-- @catholics: Католики, которые обычно поддерживают [? if z_party_name != "CVP": <span style="color: #000000;">Партию Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?].
+- @catholics: Католики, которые обычно поддерживают [? if z_party_name != "ХНП": <span style="color: #000000;">Партию Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?].
 - @root: We either don't want to or cannot campaign right now.
 - @easy_discard
 

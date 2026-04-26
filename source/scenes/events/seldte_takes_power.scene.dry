@@ -1,6 +1,6 @@
 title: Подъём <span style="color: #7A3C00;">крайне</span> <span style="color: #3E88B3;">правых</span>?
 subtitle: Начало конца.
-view-if: chancellor == "Seldte"
+view-if: chancellor == "Зельдте"
 on-arrival: spd_in_government = 0
 tags: event
 new-page: true

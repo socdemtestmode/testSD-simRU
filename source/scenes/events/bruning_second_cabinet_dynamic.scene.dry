@@ -1,7 +1,7 @@
 title: Второй кабинет Брюнинга
 subtitle: Канцлер [+ chancellor +] сформировал кабинет!
 new-page: true
-view-if: total_bruning_time > 0 and bruning_toleration_time and not in_center_right_coalition and not in_right_coalition and banking_crisis_seen and (emergency_decree_alt_seen or emergency_decree_seen) and not second_bruning_cabinet_seen and hindenburg_angry_bruning >= 120 and year >= 1932 and president == "Hindenburg" and not flavour_24_trigger_time
+view-if: total_bruning_time > 0 and bruning_toleration_time and not in_center_right_coalition and not in_right_coalition and banking_crisis_seen and (emergency_decree_alt_seen or emergency_decree_seen) and not second_bruning_cabinet_seen and hindenburg_angry_bruning >= 120 and year >= 1932 and president == "Гинденбург" and not flavour_24_trigger_time
 on-arrival: {!
 Q.second_bruning_cabinet_seen = 1;
 Q.judicial_reform -= 1;
@@ -22,7 +22,7 @@ max-visits: 1
 
 Этот шаг может на время успокоить недовольного Гинденбурга, но он существенно ослабляет позиции Брюнинга и ставит его во всё большую зависимость от прихотей президентского дворца.
 
-Теперь мы должны решить, продолжать ли воздерживаться от вотума недоверия этому правительству Брюнинга с его усилившимся правым уклоном — из которого теперь выведены левые фигуры, такие как член [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] Йозеф Вирт, — или же наконец использовать это как предлог для разрыва с ним. Ведь Брюнинг издал уже третий чрезвычайный указ, который ещё больше снижает зарплаты, урезает пенсии и социальные пособия, чтобы покрыть дефицит, вызванный банковским кризисом.
+Теперь мы должны решить, продолжать ли воздерживаться от вотума недоверия этому правительству Брюнинга с его усилившимся правым уклоном — из которого теперь выведены левые фигуры, такие как член [? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] Йозеф Вирт, — или же наконец использовать это как предлог для разрыва с ним. Ведь Брюнинг издал уже третий чрезвычайный указ, который ещё больше снижает зарплаты, урезает пенсии и социальные пособия, чтобы покрыть дефицит, вызванный банковским кризисом.
 
 - @vote_yes
 - @vote_no

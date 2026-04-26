@@ -4,14 +4,14 @@ new-page: true
 on-arrival: {!
 Q.the_decision_2010 = 1;
 Q.hindenburg_run_points = 0;
-if (Q.nsdap_votes + Q.dnf_votes > Q.dnvp_votes + Q.other_votes + Q.dvp_votes + Q.z_votes + Q.ddp_votes + Q.lvp_votes && Q.dnvp_ideology == "Moderate") {
+if (Q.nsdap_votes + Q.dnf_votes > Q.dnvp_votes + Q.other_votes + Q.dvp_votes + Q.z_votes + Q.ddp_votes + Q.lvp_votes && Q.dnvp_ideology == "Умеренные") {
     Q.hindenburg_run_points += 4;
-} else if (Q.nsdap_votes + Q.dnvp_votes > Q.kvp_votes + Q.other_votes + Q.dvp_votes + Q.z_votes + Q.ddp_votes + Q.lvp_votes && Q.dnvp_ideology == "Radical") {
+} else if (Q.nsdap_votes + Q.dnvp_votes > Q.kvp_votes + Q.other_votes + Q.dvp_votes + Q.z_votes + Q.ddp_votes + Q.lvp_votes && Q.dnvp_ideology == "Радикалы") {
     Q.hindenburg_run_points += 4;
 }
-if (Q.dnvp_ideology == "Radical") {
+if (Q.dnvp_ideology == "Радикалы") {
     Q.hindenburg_run_points += 1;
-} else if (Q.dnvp_ideology == "Moderate") {
+} else if (Q.dnvp_ideology == "Умеренные") {
     Q.hindenburg_run_points += 3;
 }
 if (Q.schleicher_spd) Q.hindenburg_run_points += 8;
@@ -83,8 +83,8 @@ title: Мы ждём его решения.
 view-if: hindenburg_run
 on-arrival: new_middle_kvp += 4; old_middle_kvp += 4; rural_kvp += 2
 
-[? if dnvp_ideology == "Moderate": Разрыв <span style="color: #3E88B3;">**Стального Шлема**</span> с <span style="color: #7A3C00;">национальной</span> <span style="color: #003755;">оппозицией</span> ради поддержки кандидатуры Гинденбурга, а также безоговорочная поддержка со стороны Кифхойзербунда, побудили Гинденбурга баллотироваться на новый срок. Теперь он убеждён: основную поддержку ему окажут правые. ?][? if dnvp_ideology == "Radical": Хоть Гинденбург и отверг требования <span style="color: #7A3C00;">национальной</span> <span style="color: #3E88B3;">оппозиции</span>, он всё ещё (ошибочно) полагает, что дружественное руководство <span style="color: #3E88B3;">**Стального Шлема**</span>, несмотря на его отказ выполнить их требования, безоговорочно его поддержит. Это, вкупе с безоговорочной поддержкой со стороны Кифхойзербунда, побудило Гинденбурга баллотироваться на новый срок. Ведь он убежден: ядро его сторонников — правые ?] Разумеется, свою роль сыграло и множество других факторов, включая кампанию по сбору подписей и настойчивость Шлейхера.
+[? if dnvp_ideology == "Умеренные": Разрыв <span style="color: #3E88B3;">**Стального Шлема**</span> с <span style="color: #7A3C00;">национальной</span> <span style="color: #003755;">оппозицией</span> ради поддержки кандидатуры Гинденбурга, а также безоговорочная поддержка со стороны Кифхойзербунда, побудили Гинденбурга баллотироваться на новый срок. Теперь он убеждён: основную поддержку ему окажут правые. ?][? if dnvp_ideology == "Радикалы": Хоть Гинденбург и отверг требования <span style="color: #7A3C00;">национальной</span> <span style="color: #3E88B3;">оппозиции</span>, он всё ещё (ошибочно) полагает, что дружественное руководство <span style="color: #3E88B3;">**Стального Шлема**</span>, несмотря на его отказ выполнить их требования, безоговорочно его поддержит. Это, вкупе с безоговорочной поддержкой со стороны Кифхойзербунда, побудило Гинденбурга баллотироваться на новый срок. Ведь он убежден: ядро его сторонников — правые ?] Разумеется, свою роль сыграло и множество других факторов, включая кампанию по сбору подписей и настойчивость Шлейхера.
 
-Комитет Зама по переизбранию Гинденбурга распущен и заменён гораздо более крупной общенациональной организацией «Объединённые комитеты в поддержку Гинденбурга», которая будет координировать работу с различными местными комитетами по всей стране. Назначением Вестарпа и Гереке на высшие посты и исключением <span style="color: #c00000;">социалистических</span> и [? if z_party_name != "CVP": <span style="color: #000000;">центристских</span> ?][? if z_party_name == "CVP": аффилированных с <span style="color: #000000;">**ХНП**</span> ?] политиков, они пытаются позиционировать Гинденбурга как кандидата от умеренных правых.
+Комитет Зама по переизбранию Гинденбурга распущен и заменён гораздо более крупной общенациональной организацией «Объединённые комитеты в поддержку Гинденбурга», которая будет координировать работу с различными местными комитетами по всей стране. Назначением Вестарпа и Гереке на высшие посты и исключением <span style="color: #c00000;">социалистических</span> и [? if z_party_name != "ХНП": <span style="color: #000000;">центристских</span> ?][? if z_party_name == "ХНП": аффилированных с <span style="color: #000000;">**ХНП**</span> ?] политиков, они пытаются позиционировать Гинденбурга как кандидата от умеренных правых.
 
 - @presidential_election_1932_candidate: Who will the candidates be now that Hindenburg has decided to run for re-election?

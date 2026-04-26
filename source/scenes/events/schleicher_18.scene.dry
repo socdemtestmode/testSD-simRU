@@ -1,6 +1,6 @@
 title: Организованное рабочее движение под угрозой
 subtitle: Предложение о едином рабочем фронте между <span style="color: #000000;">рес</span><span style="color: #DD0000;">публ</span><span style="color: #FFCC00;">иканскими</span> профсоюзами.
-view-if: chancellor = "Schleicher" and dnef_formed and schleicher_post_time >= 6
+view-if: chancellor = "Шляйхер" and dnef_formed and schleicher_post_time >= 6
 new-page: true
 priority: 2
 tags: event

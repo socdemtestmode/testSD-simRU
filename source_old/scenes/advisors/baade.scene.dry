@@ -19,10 +19,9 @@ new-page: true
 title: Аграрная политика
 subtitle: Бааде — министр сельского хозяйства.
 choose-if: advisor_action_timer <= 0 and spd_in_government and agriculture_minister_party == "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> не входит в состав правительства. ?][? if agriculture_minister_party != "SPD": <span style="color: #c00000;">СДПГ</span> не контролирует министерство сельского хозяйства. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> не входит в состав правительства.  ?][? if agriculture_minister_party != "SPD": <span style="color: #c00000;">СДПГ</span> не контролирует министерство сельского хозяйства. ?]
 on-arrival: advisor_action_timer = 6; agricultural_policy_timer -= 6; last_advisor_action = 1
 go-to: agricultural_policy
-
 
 
 
@@ -43,5 +42,4 @@ choose-if: advisor_action_timer <= 0 and wtb_adopted = 0 and black_thursday_seen
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if black_thursday_seen == 0 : В данный момент экономического кризиса нет. ?][? if wtb_adopted > 0 : Мы уже приняли план ВТБ. ?]
 on-arrival: advisor_action_timer = 6; wtb_support += 2; center_dissent += 10; labor_strength += 5; wtb_points += 15
 
-[? if not wtb_concept: Войтинский, Тарнов и Бааде совместно работали над планом по выводу страны из депрессии. Бааде агитирует за этот план по всей партии. ?][? if wtb_concept: План ВТБ, названный в честь его главных сторонников — Войтинского, Тарнова и Бааде, — принят профсоюзами как план по выводу страны из депрессии. Бааде агитирует за этот план по всей партии. ?]
-
+[? if not wtb_concept: Войтинский, Тарнов и Бааде совместно работали над планом по выводу страны из депрессии. Бааде агитирует за этот план по всей партии.  ?][? if wtb_concept: План ВТБ, названный в честь его главных сторонников — Войтинского, Тарнова и Бааде, — принят профсоюзами как план по выводу страны из депрессии. Бааде агитирует за этот план по всей партии. ?]

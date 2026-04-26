@@ -5,10 +5,11 @@ tags: govt_affairs
 on-arrival: month_actions += 1; coalition_affairs_timer = 5
 view-if: spd_in_government = 1 and coalition_dissent >= 1 and coalition_affairs_timer = 0 and (in_grand_coalition or in_weimar_coalition or in_popular_front)
 card-image: img/muller_cabinet.jpg
+#subtitle: There is dissent within our coalition.
 
 = Коалиционные вопросы
 
-Наша коалиция в беде. Правые члены [? if not in_social_liberal_coalition: [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] ?] [? if not in_social_catholic_coalition: [? if in_grand_coalition and not lvp_formed: и <span style="color: #C0A054;">**ННП**</span> ?][? if not lvp_formed and in_weimar_coalition: [? if not in_social_liberal_coalition: и ?] <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: [? if not in_social_liberal_coalition: и ?] <span style="color: #FFCC00;">**ЛНП**</span> ?] ?] постоянно критикуют нашу политику и угрожают объявить вотум недоверия, чтобы свергнуть наше правительство [? if spd_prussia : или сделать то же самое с нашим правительством в Пруссии ?].
+Наша коалиция в беде. Правые члены [? if not in_social_liberal_coalition: [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] ?] [? if not in_social_catholic_coalition: [? if in_grand_coalition and not lvp_formed:  и <span style="color: #C0A054;">**ННП**</span>  ?][? if not lvp_formed and in_weimar_coalition: [? if not in_social_liberal_coalition:  и  ?] <span style="color: #D3C24D;">**[+ ddp_name +]**</span>  ?][? if lvp_formed: [? if not in_social_liberal_coalition:  и  ?] <span style="color: #FFCC00;">**ЛНП**</span>  ?] ?] постоянно критикуют нашу политику и угрожают объявить вотум недоверия, чтобы свергнуть наше правительство [? if spd_prussia :  или сделать то же самое с нашим правительством в Пруссии ?].
 
 Как нам снизить напряжённость в коалиции?
 
@@ -78,4 +79,3 @@ go-to: elections if bruning_event_seen or year < 1930
 call: set_next_election_time
 
 Новые выборы назначены на [+ next_election_month : month +] [+ next_election_year +].
-

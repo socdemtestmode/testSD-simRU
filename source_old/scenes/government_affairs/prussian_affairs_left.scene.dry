@@ -5,6 +5,7 @@ view-if: prussia_leader = "Rosenfeld" and in_popular_front_prussia = 1 or in_lef
 on-arrival: prussian_affairs_timer += 6; month_actions += 1
 tags: govt_affairs
 card-image: img/braun.jpg
+#subtitle: The state government of Prussia is a bulwark of democracy...
 
 = Прусский оплот
 
@@ -58,7 +59,7 @@ on-arrival: sa_strength *= 0.9; sa_strength *= 0.75 if prussian_police_loyalty >
 on-arrival: sh_strength *= 0.85; sh_strength *= 0.7 if prussian_police_loyalty >= 0.75; sh_banned = 1; dvp_relation -= 5; lvp_relation -= 2; prussian_police_loyalty -= 0.1; coalition_dissent += 1 if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg"; sh_ban_timer = 6; interior_goal_prussia -= 1; sh_coup_progress = coup_progress; coup_progress -= 1 if coup_progress >= 6; hindenburg_angry += 5
 view-if: sh_banned == 0
 
-[? if president == "Hindenburg": Запрет <span style="color: #3E88B3;">**Стального Шлема**</span> ослабит наши отношения с президентом Гинденбургом, а также с политическими <span style="color: #3E88B3;">правыми</span> и полицией. ?][? if president != "Hindenburg": Запрет <span style="color: #3E88B3;">**Стального Шлема**</span> ослабит наши отношения с политическими <span style="color: #3E88B3;">правыми</span> и полицией. ?] [? if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg" : Это также ослабляет нашу коалицию из-за влияния Гинденбурга на <span style="color: #C0A054;">правое</span> крыло нашей коалиции. ?] Кроме того, <span style="color: #3E88B3;">**Стальной Шлем**</span> всё ещё действует тайно.
+[? if president == "Hindenburg": Запрет <span style="color: #3E88B3;">**Стального Шлема**</span> ослабит наши отношения с президентом Гинденбургом, а также с политическими <span style="color: #3E88B3;">правыми</span> и полицией.  ?][? if president != "Hindenburg": Запрет <span style="color: #3E88B3;">**Стального Шлема**</span> ослабит наши отношения с политическими <span style="color: #3E88B3;">правыми</span> и полицией.  ?] [? if spd_in_government = 1 and in_grand_coalition = 1 and president = "Hindenburg" : Это также ослабляет нашу коалицию из-за влияния Гинденбурга на <span style="color: #C0A054;">правое</span> крыло нашей коалиции.  ?] Кроме того, <span style="color: #3E88B3;">**Стальной Шлем**</span> всё ещё действует тайно.
 
 
 @unban_rfb
@@ -73,4 +74,3 @@ view-if: rfb_banned = 0
 on-arrival: rfb_banned = 0; rfb_strength += 50; rfb_militancy += 0.03; prussian_police_loyalty -= 0.05; workers_kpd += 4; unemployed_kpd += 4; free_kpd_goal_prussia -= 1; reichsexekution += 1; dvp_relation -= 5; ddp_relation -= 4; lvp_relation -= 5; z_relation -= 4; dvp_right += 2; ddp_right += 1; ddp_cohesion -= 0.5; lvp_right += 1.5; left_dissent -= 5; reformist_dissent += 5
 
 Ограничения снимаются, и полиция направляется для защиты <span style="color: #700000;">коммунистических</span> демонстраций и организаций от <span style="color: #7A3C00;">ультра</span>-<span style="color: #3E88B3;">правых</span>.
-

@@ -6,6 +6,7 @@ on-arrival: month_actions += 1; foreign_policy_timer += 8
 view-if: spd_in_government = 1 and foreign_minister_party = "SPD" and  foreign_policy_timer <= 0
 card-image: img/portraits/BreitscheidRudolf.jpg
 go-to: fp_menu
+#subtitle: International relations and dealing with Versailles.
 
 = Внешняя политика
 
@@ -98,6 +99,7 @@ on-arrival: soviet_aid_forpol = 1; budget -= 1; soviet_relation += 2; coalition_
 <span style="color: #940000;">Советы</span> несколько расстроены, но, похоже, они ожидали такого ответа.
 
 
+
 @kpd
 on-arrival: kpd_relation += 8*(1-dissent); communist_coalition += 1 if kpd_foreign_seen == 0; kpd_foreign_seen = 1
 
@@ -111,6 +113,7 @@ on-arrival: wittorf_soviet_union = 1; kpd_relation += 6*(1-dissent); kpd_foreign
 max-visits: 1
 
 Конечно, <span style="color: #8B0000;">Сталин</span> и различные лидеры <span style="color: #D50000;">Коминтерна</span> знают о Деле Витторфа, но, похоже, они не в курсе, что мы тоже знаем. <span style="color: #D50000;">Коминтерн</span> планировал выстроить вокруг этого дела версию событий, оправдывающую Тельмана, но теперь они, возможно, будут менее склонны его защищать.
+
 
 
 @customs_union
@@ -137,13 +140,15 @@ max-visits: 1
 Незамедлительно <span style="color: #002654;">Франция</span> и другие соседние страны заявляют протест. Какова будет их реакция в долгосрочной перспективе, ещё предстоит увидеть.
 
 
+
 @negotiate
 title: Провести переговоры о наших оставшихся обязательствах по Версальскому договору.
-subtitle: [? if young_plan_seen == 1 and black_thursday_seen : После принятия плана Юнга <span style="color: #002654;">Франция</span> обязалась вывести войска из Рейнской области. Теперь мы должны выяснить, смогут ли они ещё больше сократить наши репарации, учитывая экономическую депрессию. ?][? if young_plan_seen == 1 and not black_thursday_seen : После принятия плана Юнга <span style="color: #002654;">Франция</span> обязалась вывести войска из Рейнской области. Теперь мы должны выяснить, смогут ли они ещё больше сократить наши репарации. ?]
+subtitle: [? if young_plan_seen == 1 and black_thursday_seen : После принятия плана Юнга <span style="color: #002654;">Франция</span> обязалась вывести войска из Рейнской области. Теперь мы должны выяснить, смогут ли они ещё больше сократить наши репарации, учитывая экономическую депрессию.  ?][? if young_plan_seen == 1 and not black_thursday_seen : После принятия плана Юнга <span style="color: #002654;">Франция</span> обязалась вывести войска из Рейнской области. Теперь мы должны выяснить, смогут ли они ещё больше сократить наши репарации. ?]
 view-if: reparations > -2 and reparations_negotiation < 3
 on-arrival: west_relation += 1; reparations_negotiation += 1; reparations_negotiation += 1 if pacifism >= 3; reparations_negotiation += 1 if nationalism <= 50; reparations_negotiation += 1 if west_relation >= 3
 
 Переговоры в целом проходят гладко. Западные державы убеждены в искренности и доброй воле Германии.[? if nationalism <= 50 or pacifism >= 3 : Они рады видеть, что мы отказываемся от милитаризма. ?]
+
 
 
 @reduce_reparations
@@ -163,7 +168,7 @@ max-visits: 1
 @settle_reparations
 title: Мы наконец-то урегулируем вопрос репараций с <span style="color: #0A3161;">западными</span> <span style="color: #C8102E;">союзниками</span>!
 subtitle: Вопрос о репарациях и будущих выплатах будет наконец решён.
-unavailable-subtitle: [? if west_relation < 6: У правительства <span style="color: #002654;">Франции</span> серьезные разногласия с другими западными державами относительно полной отмены репараций. ?][? if not france_left_seen and year < 1932: Правое правительство <span style="color: #002654;">Франции</span> не одобрит этого; мы должны дождаться, пока к власти придёт более благосклонный кабинет. ?][? if not france_left_seen and year >= 1932: Правительство <span style="color: #002654;">Франции</span> не сможет принять решение в связи с приближающимися в мае выборами. ?]
+unavailable-subtitle: [? if west_relation < 6: У правительства <span style="color: #002654;">Франции</span> серьезные разногласия с другими западными державами относительно полной отмены репараций.  ?][? if not france_left_seen and year < 1932: Правое правительство <span style="color: #002654;">Франции</span> не одобрит этого; мы должны дождаться, пока к власти придёт более благосклонный кабинет.  ?][? if not france_left_seen and year >= 1932: Правительство <span style="color: #002654;">Франции</span> не сможет принять решение в связи с приближающимися в мае выборами. ?]
 choose-if: west_relation >= 6 and france_left_seen
 view-if: reparations == -2 and not lausanne_seen
 on-arrival: west_relation += 1; eu_progress += 1; reparations_resolved = 1; budget += 1; coalition_dissent -= 3 if coalition_dissent > 0; workers_spd += 8*(1-dissent); old_middle_spd += 6*(1-dissent); new_middle_spd += 6*(1-dissent); rural_spd += 6*(1-dissent); catholics_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); coup_progress -= 4 if coup_progress > 4; dvp_left += 8; ddp_left += 4; ddp_cohesion += 4; pro_republic += 15; lvp_left += 8; hindenburg_angry -= 100; economic_growth += 2.5; unemployed -= 3; labor_dissent -= 15; workers_nsdap -= 5; unemployed_nsdap -= 5; new_middle_nsdap -= 5; old_middle_nsdap -= 5; rural_nsdap -= 5; catholics_nsdap -= 5; dvp_relation += 10; ddp_relation += 10; z_relation += 10; lvp_relation += 10
@@ -184,7 +189,7 @@ on-arrival: military_parity = 1 if eu or (west_relation >= 8 and reformist_stren
 
 Генерал Шлейхер потребовал, чтобы мы подняли вопрос о перевооружении, которое до сих пор ограничено Версальским договором. Однако <span style="color: #002654;">французский</span> премьер-министр Эдуар Эррио ухватился за это как за признание того, что Германия на самом деле способна выплачивать репарации и просто направит высвободившиеся средства на перевооружение.
 
-[? if military_parity: [? if eu: Однако с образованием <span style="color: #001489;">Европейского</span> <span style="color: #FFDD00;">союза</span> и заключением его оборонных соглашений предотвращение перевооружения Германии стало практически неактуальным. В результате военные ограничения снимаются! ?][? if not eu: Однако наши исключительно дружеские отношения с <span style="color: #0A3161;">западными</span> <span style="color: #C8102E;">союзниками</span> привели к тому, что они нехотя предоставили нам послабления в вопросе перевооружения, полагая, что мы можем стать оплотом против <span style="color: #700000;">большевиков</span>. ?] В результате <span style="color: #7A3C00;">**НСДАП**</span> лишились еще одного инструмента пропаганды. Тем не менее, мы продолжаем нести тяжелые потери, уступая <span style="color: #700000;">**Коммунистам **</span>[? if not lvp_formed: &nbsp;и <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, к которым перешло множество наших сторонников ?]. ?]
+[? if military_parity: [? if eu: Однако с образованием <span style="color: #001489;">Европейского</span> <span style="color: #FFDD00;">союза</span> и заключением его оборонных соглашений предотвращение перевооружения Германии стало практически неактуальным. В результате военные ограничения снимаются! ?][? if not eu: Однако наши исключительно дружеские отношения с <span style="color: #0A3161;">западными</span> <span style="color: #C8102E;">союзниками</span> привели к тому, что они нехотя предоставили нам послабления в вопросе перевооружения, полагая, что мы можем стать оплотом против <span style="color: #700000;">большевиков</span>. ?] В результате <span style="color: #7A3C00;">**НСДАП**</span> лишились еще одного инструмента пропаганды. Тем не менее, мы продолжаем нести тяжелые потери, уступая <span style="color: #700000;">**Коммунистам **</span>[? if not lvp_formed: &nbsp;и <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, к которым перешло множество наших сторонников ?].  ?]
 
 [? if not military_parity: Это сильно повредило нашему пацифистскому и демократическому имиджу как внутри страны, так и за рубежом. Будь ты проклят, Шлейхер! ?]
 
@@ -228,7 +233,7 @@ on-arrival: sdapo_strength += 1; left_dissent -= 3; center_dissent -= 3
 
 @support_austria_2
 title: Оказать материальную поддержку австрийской демократии в борьбе с диктатурой Дольфуса.
-subtitle: Бюджет: -1
+subtitle: -Бюджет: -1
 choose-if: budget >= 1
 view-if: austrian_parliament_seen = 1 and austrian_civil_war_seen = 0
 on-arrival: budget -= 1; sdapo_strength += 3; left_dissent -= 6; center_dissent -= 6
@@ -247,6 +252,7 @@ on-arrival: eu_negotiation = 1; eu_progress += 1; west_relation += 1; foreign_go
 Создание «<span style="color: #FFDD00;">Соединённых Штатов</span> <span style="color: #001489;">Европы</span>» — давняя часть <span style="color: #c00000;">**социал-демократической**</span> программы внешней политики. Наконец, мы предпринимаем шаги в этом направлении. Учитывая наши позитивные отношения с другими странами <span style="color: #001489;">Европы</span>, мы можем начать многосторонние переговоры о расширении <span style="color: #001489;">европейского</span> <span style="color: #FFDD00;">федерализма</span>. Однако потребуется время, чтобы выработать точные очертания этого будущего «<span style="color: #001489;">Европейского</span> <span style="color: #FFDD00;">союза</span>».
 
 
+
 @european_union_2
 title: Мы можем подписать договор о создании <span style="color: #001489;">Европейского</span> <span style="color: #FFDD00;">союза</span>!
 view-if: west_relation >= 5 and east_relation >= 4 and eu_progress >= 3 and not eu and france_left_seen
@@ -259,4 +265,3 @@ achievement: eu
 Важнейшие компоненты союза — свободное перемещение людей и товаров между странами Европы, а также стабилизация обменных курсов валют. Это открывает новые рынки для немецких товаров и новые источники инвестиций.
 
 <span style="color: #7A3C00;">Фашистская</span> Италия остаётся проблемой, и <span style="color: #750e0e;">Советский Союз</span> также находится за рамками этой системы. Но сейчас на всём континенте появилась новая надежда на мир и процветание.
-

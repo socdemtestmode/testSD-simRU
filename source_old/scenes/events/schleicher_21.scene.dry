@@ -52,4 +52,3 @@ go-to: game_over if not (dynamic_mode or historical_mode or difficulty == 1); so
 @sozialdemokratische_blockpartei
 achievement: sozialdemokratische_blockpartei
 go-to: game_over
-

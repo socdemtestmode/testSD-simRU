@@ -27,8 +27,8 @@ go-to: prussian_affairs if in_grand_coalition_prussia == 0 and not in_popular_fr
 @police_affairs
 title: Дела полиции
 subtitle: Мы можем определить нашу политику в отношении полиции.
-choose-if: advisor_action_timer == 0 and spd_in_government and interior_minister_party == "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> не у власти.  ?][? if interior_minister_party != "SPD": <span style="color: #c00000;">СДПГ</span> не контролирует министерство внутренних дел. ?]
+choose-if: advisor_action_timer == 0 and spd_in_government and interior_minister_party == "СДПГ"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> не у власти.  ?][? if interior_minister_party != "СДПГ": <span style="color: #c00000;">СДПГ</span> не контролирует министерство внутренних дел. ?]
 on-arrival: advisor_action_timer = 6; police_timer -= 6; last_advisor_action = 1
 go-to: police
 

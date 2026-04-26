@@ -1,6 +1,6 @@
 title: Встреча между рейхсвером и <span style="color: #7A3C00;">**НСДАП**</span>
 subtitle: Разведка <span style="color: #c00000;">**СДПГ**</span> получила сведения о тайной встрече…
-view-if: chancellor = "Papen" and papen_time == 8
+view-if: chancellor = "Папен" and papen_time == 8
 on-arrival: red_general_unlock = 1
 new-page: true
 tags: event

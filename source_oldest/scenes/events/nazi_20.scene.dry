@@ -1,0 +1,34 @@
+title: Гитлер совершает самоубийство!
+subtitle: The <span style="color: #7A3C00;">**НСДАП**</span> распадается!
+view-if: chancellor = "Schleicher" and schleicher_time == 9 and nsdap_leader == "Hitler"
+new-page: true
+tags: event
+max-visits: 1
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/hitler_dead.jpg";  
+
+    cardEl.appendChild(image);
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+= Гитлер совершает самоубийство!
+
+Сам Гитлер утратил веру в свою некогда непоколебимую убеждённость, что судьба на его стороне, а его назначение на пост канцлера неизбежно. Теперь, когда Рём и большая часть <span style="color: #7A3C00;">**СА**</span> откололись, а Штрассер подал в отставку несколькими месяцами ранее, <span style="color: #7A3C00;">нацизм</span> упустил свой шанс.
+
+Сдержав обещание покончить с собой за три минуты в случае раскола партии, он так и поступил.
+
+- @nazi_2: Конец движения.
+
+
+@nazi_2
+on-arrival: nsdap_leader = "Goebbels"; nsdap_chancellor = "Göring"; hitler_dead = 1; hindenburg_hitler_r -= 10; papen_strength -= 2; schleicher_strength += 1; nazi_funds -= 3
+achievement: hitler_tot
+
+Йозеф Геббельс сменяет Гитлера на посту лидера партии при сильном влиянии Германа Геринга. Движение серьёзно ослаблено и вряд ли когда-нибудь вернёт былое влияние.
+

@@ -53,7 +53,7 @@ on-arrival: welfare -= 1 if budget <= 0; workers_spd -= 3; workers_spd += 2 if b
 view-if: spd_in_government = 0 and spd_toleration = 0 and (in_right_coalition = 1 or in_center_right_coalition = 1 or in_bourgeois_coalition = 1)
 on-arrival: welfare -= 1 if budget <= 0; unemployed_spd += 3 if budget <= 0; workers_nsdap -= 2 if budget > 0; pro_republic -= 3; pro_republic += 2 if budget > 0; economic_growth -= 1; economic_growth += 0.4 if budget > 0; unemployed -= 1 if budget > 0; inflation += 0.8 if inflation < 0 and budget > 0; budget -= 1 if budget > 0
 
-[? if budget <= 0: Chancellor [+ chancellor +] responds to the banking crisis with more cuts to welfare. ?][? if budget > 0: Surprisingly, Chancellor [+ chancellor +] has refrained from cutting social spending, owing to the budget surplus, and has taken measures to stabilize the economy and banking system. ?] [? if budget <= 0: As we are firmly in opposition to the current cabinet, we have free rein to rally against these austerity measures. ?]
+[? if budget <= 0: Chancellor [+ chancellor +] responds to the banking crisis with more cuts to welfare. ?][? if budget > 0: Surprisingly, Chancellor [+ chancellor +] has refrained from cutting social spending, owing to the budget surplus, and has taken measures to stabilize the economy and banking system.  ?] [? if budget <= 0: As we are firmly in opposition to the current cabinet, we have free rein to rally against these austerity measures. ?]
 
 
 @austerity_snaps
@@ -67,14 +67,14 @@ on-arrival: welfare -= 1 if budget <= 0; workers_spd -= 1; workers_spd += 1 if b
 view-if: chancellor = "Goerdeler"
 on-arrival: welfare -= 1 if budget <= 0; unemployed_spd += 3 if budget <= 0; workers_nsdap -= 2 if budget > 0; pro_republic -= 3; pro_republic += 2 if budget > 0; economic_growth -= 1; economic_growth += 0.4 if budget > 0; unemployed -= 1 if budget > 0; inflation += 0.8 if inflation < 0 and budget > 0; budget -= 1 if budget > 0
 
-[? if budget <= 0: Chancellor [+ chancellor +] responds to the banking crisis with more cuts to welfare. ?][? if budget > 0: Surprisingly, Chancellor [+ chancellor +] has refrained from cutting social spending, owing to the budget surplus, and has taken measures to stabilize the economy and banking system. ?] [? if budget <= 0: As we are firmly in opposition to the current cabinet, we have free rein to rally against these austerity measures. ?]
+[? if budget <= 0: Chancellor [+ chancellor +] responds to the banking crisis with more cuts to welfare. ?][? if budget > 0: Surprisingly, Chancellor [+ chancellor +] has refrained from cutting social spending, owing to the budget surplus, and has taken measures to stabilize the economy and banking system.  ?] [? if budget <= 0: As we are firmly in opposition to the current cabinet, we have free rein to rally against these austerity measures. ?]
 
 
 @austerity_hitler
 view-if: chancellor = "Hitler"
 on-arrival: welfare -= 1 if budget <= 0; unemployed_spd += 3 if budget <= 0; workers_nsdap -= 5; workers_nsdap += 4 if budget > 0; unemployed_nsdap -= 5; unemployed_nsdap += 4 if budget > 0; pro_republic -= 5; pro_republic += 2 if budget > 0; economic_growth -= 1; economic_growth += 0.4 if budget > 0; unemployed -= 1 if budget > 0; inflation += 0.8 if inflation < 0 and budget > 0; budget -= 1 if budget > 0
 
-[? if budget <= 0: Chancellor [+ chancellor +] responds to the banking crisis with more cuts to welfare. He blames the crisis on a "Judeo-Bolshevik plot" and argues his hand has been forced here, but nevertheless, this move has damaged his credibility as an anti-austerity figure. ?][? if budget > 0: Surprisingly, Chancellor [+ chancellor +] has refrained from cutting social spending, owing to the budget surplus, and has taken measures to stabilize the economy and banking system. ?]  [? if budget <= 0: As we are firmly in opposition to the current cabinet, we have free rein to rally against these austerity measures. ?]
+[? if budget <= 0: Chancellor [+ chancellor +] responds to the banking crisis with more cuts to welfare. He blames the crisis on a "Judeo-Bolshevik plot" and argues his hand has been forced here, but nevertheless, this move has damaged his credibility as an anti-austerity figure.  ?][? if budget > 0: Surprisingly, Chancellor [+ chancellor +] has refrained from cutting social spending, owing to the budget surplus, and has taken measures to stabilize the economy and banking system.  ?]  [? if budget <= 0: As we are firmly in opposition to the current cabinet, we have free rein to rally against these austerity measures. ?]
 
 
 @austerity_wirth
@@ -112,4 +112,3 @@ on-arrival: in_center_right_coalition_prussia = 1; in_right_coalition_prussia = 
 The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] объявила ответный вотум недоверия в Пруссии, заменив наше правительство правоцентристской коалицией, состоящей из всех партий правее нас, за исключением <span style="color: #003755;">**НФГ**</span> и <span style="color: #7A3C00;">**НСДАП**</span>. Хотя это и неудача, это не худший из возможных исходов, поскольку новые выборы могли бы привести к значительному усилению экстремистских партий.
 
 [? if z_leader != "Stegerwald": Адам Штегервальд ?][? if z_leader == "Stegerwald": Генрих Брюнинг ?] из [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] избран министром-президентом Пруссии.
-

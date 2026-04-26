@@ -1,6 +1,6 @@
 title: Величайшая из коалиций
 subtitle: Рейхстаг возобновляет работу.
-view-if: chancellor == "Treviranus" and next_reichstag_time == rubicon_time and next_reichstag_time > 0
+view-if: chancellor == "Тревиранус" and next_reichstag_time == rubicon_time and next_reichstag_time > 0
 on-arrival: pro_republic += 8
 max-visits: 1
 new-page: true
@@ -22,8 +22,8 @@ tags: event
 title: Голосовать за вотум недоверия и тем самым добиться назначения новых выборов.
 subtitle: Опять новые выборы?
 on-arrival: {!
-if (Q.prussia_leader == "Strasser") Q.prussia_leader = "Goerdeler";
-if (Q.vice_chancellor == "Strasser") Q.vice_chancellor = "Stegerwald";
+if (Q.prussia_leader == "Штрассер") Q.prussia_leader = "Гёрделер";
+if (Q.vice_chancellor == "Штрассер") Q.vice_chancellor = "Штегервальд";
 
 Q.next_election_week = Q.week + 6;
 Q.next_election_month = Q.month;

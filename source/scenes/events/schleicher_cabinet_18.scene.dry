@@ -1,6 +1,6 @@
 title: Здоровье Шлейхера ухудшается
 subtitle: Канцлеру осталось жить всего несколько месяцев.
-view-if: year >= 1934 and month >= 2 and chancellor == "Schleicher" and schleicher_post
+view-if: year >= 1934 and month >= 2 and chancellor == "Шляйхер" and schleicher_post
 on-arrival: schleicher_dead = 1; schleicher_successor_time = rubicon_time + 1
 max-visits: 1
 new-page: true

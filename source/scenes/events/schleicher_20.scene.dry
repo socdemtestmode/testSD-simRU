@@ -1,6 +1,6 @@
 title: Шлейхер и <span style="color: #3E88B3;">**Стальной Шлем**</span>
 subtitle: Ветеранская организация интегрирована в государство.
-view-if: chancellor = "Schleicher" and dnef_formed and (nationalists_schleicher >= 10 and (dnvp_dnef or dnvp_dnef_alt)) and schleicher_post_time >= 6
+view-if: chancellor = "Шляйхер" and dnef_formed and (nationalists_schleicher >= 10 and (dnvp_dnef or dnvp_dnef_alt)) and schleicher_post_time >= 6
 new-page: true
 priority: 2
 tags: event

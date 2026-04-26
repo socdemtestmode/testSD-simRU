@@ -7,6 +7,7 @@ card-image: img/Reichstagsfraktion_der_SPD.jpg
 frequency: 200
 tags: party_affairs
 
+
 = Разлад в партии
 
 Партию раздирают внутренние разногласия. Недовольные руководством и общим курсом, фракции начали саботировать действия своих соперников, что мешает нам завоёвывать голоса и проводить в жизнь нашу политику.
@@ -30,6 +31,10 @@ title: Укрепить партийную дисциплину.
 on-arrival: reformist_dissent -= 8; center_dissent -= 8; labor_dissent -= 8; left_dissent -= 8; neorevisionist_dissent -= 8; workers_spd -= (dissent * 10); new_middle_spd -= (dissent * 5); unemployed_spd -= (dissent * 5)
 
 Укрепление партийной дисциплины уменьшает разногласие фракций, но приводит к выходу некоторых несогласных из партии.
+
+# enforcing party discipline applies to all parties.
+
+# each party has a concessions action and an expulsions action.
 
 
 @concessions_reformists
@@ -72,11 +77,13 @@ on-arrival: neorevisionist_dissent -= 15; center_dissent += 10;
 Усиление влияния неоревизионистов вызовет растущее недовольство среди центристов.
 
 
+
 @do_nothing
 title: Пусть фракции спорят между собой.
 on-arrival: labor_dissent += 1; left_dissent += 1; center_dissent += 1; reformist_dissent += 1
 
 Пусть фракции препираются; возможно, внутренние разногласия полезны для партии.
+
 
 
 @expel_reformists
@@ -97,4 +104,3 @@ view-if: center_dissent > 30
 @expel_labor
 title: Исключить сторонников рабочих.
 view-if: labor_dissent > 30
-

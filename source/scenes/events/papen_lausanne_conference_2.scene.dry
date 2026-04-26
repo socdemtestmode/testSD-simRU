@@ -1,6 +1,6 @@
 title: Лозаннская конференция завершена
 subtitle: Репарационные выплаты Германии практически полностью отменены!
-view-if: chancellor == "Papen" and papen_time == 5 and not reparations_resolved
+view-if: chancellor == "Папен" and papen_time == 5 and not reparations_resolved
 new-page: true
 max-visits: 1
 tags: event

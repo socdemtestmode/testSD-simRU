@@ -1,6 +1,6 @@
 title: Прусский конкордат
 subtitle: Правительство Пруссии достигло соглашения с Ватиканом.
-view-if: year = 1929 and month = 7 and prussia_leader != "Braun" and spd_prussia and prussian_concordat = 0
+view-if: year = 1929 and month = 7 and prussia_leader != "Браун" and spd_prussia and prussian_concordat = 0
 max-visits: 1
 tags: event
 new-page: true
@@ -13,8 +13,8 @@ new-page: true
 
 
 @sign_concordat
-on-arrival: prussian_concordat = 1; z_relation += 4; catholics_spd += 3*(1-dissent); catholics_dnvp -= 2 if dnvp_ideology == "Radical"; ddp_relation -= 2; ddp_cohesion -= 0.5; lvp_relation -= 2
+on-arrival: prussian_concordat = 1; z_relation += 4; catholics_spd += 3*(1-dissent); catholics_dnvp -= 2 if dnvp_ideology == "Радикалы"; ddp_relation -= 2; ddp_cohesion -= 0.5; lvp_relation -= 2
 
 Мы подписали конкордат между Свободным государством Пруссия и Римско-католической церковью, гарантирующий свободу вероисповедания для католиков в Пруссии. Это создаёт предпосылки для переговоров о заключении общенационального конкордата, который бы охватывал всю Германию.
 
-[? if dnvp_ideology == "Radical": Католики в рядах <span style="color: #3E88B3;">**НННП**</span> в Пруссии вступили в открытый конфликт со своим руководством из-за голосования, в результате чего многие покинули партию. ?]
+[? if dnvp_ideology == "Радикалы": Католики в рядах <span style="color: #3E88B3;">**НННП**</span> в Пруссии вступили в открытый конфликт со своим руководством из-за голосования, в результате чего многие покинули партию. ?]

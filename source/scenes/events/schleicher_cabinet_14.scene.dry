@@ -1,6 +1,6 @@
 title: Ограничение свободы слова
 subtitle: Некоторые «проблемные» газеты переходят под контроль государства.
-view-if: chancellor == "Schleicher" and (dsu_in_gov or dsu_was_gov) and dsu_policy and ((reichstag_joever_time >= 2 and not schleicher_post_protests) or (reichstag_joever_time >= 6 and schleicher_post_protests)) and not schleicher_rights
+view-if: chancellor == "Шляйхер" and (dsu_in_gov or dsu_was_gov) and dsu_policy and ((reichstag_joever_time >= 2 and not schleicher_post_protests) or (reichstag_joever_time >= 6 and schleicher_post_protests)) and not schleicher_rights
 max-visits: 1
 new-page: true
 priority: -1
@@ -93,7 +93,7 @@ if (Q.lvp_formed && !Q.lvp_dnef) {
     Q.old_middle_lvp *= 0.75;
     Q.rural_lvp *= 0.9;
 }
-if (!Q.dnvp_dnef && Q.dnvp_ideology == "Radical") {
+if (!Q.dnvp_dnef && Q.dnvp_ideology == "Радикалы") {
     Q.new_middle_dnvp *= 0.8;
     Q.old_middle_dnvp *= 0.8;
     Q.rural_dnvp *= 0.8;

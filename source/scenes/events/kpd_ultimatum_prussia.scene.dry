@@ -34,18 +34,18 @@ go-to: goals_success if kpd_goals_completed_prussia >= 4; goals_failed if kpd_go
 
 
 @goals_failed
-on-arrival: kpd_relation -= 8; workers_spd -= 4; unemployed_spd -= 4; workers_kpd += 4; rfb_strength += 100; rfb_militancy += 0.05; in_popular_front_prussia = 0; in_left_front_prussia = 0; prussia_leader = "Braun"; kpd_coalition_dissent += 2
+on-arrival: kpd_relation -= 8; workers_spd -= 4; unemployed_spd -= 4; workers_kpd += 4; rfb_strength += 100; rfb_militancy += 0.05; in_popular_front_prussia = 0; in_left_front_prussia = 0; prussia_leader = "Браун"; kpd_coalition_dissent += 2
 
 К сожалению, нам не удалось достичь всех целей, которые поставила <span style="color: #700000;">**КПГ**</span>. Они планируют вынести вотум недоверия нашему правительству и уже начали пропагандистскую кампанию по его делегитимизации в глазах рабочих.
 
 - @new_elections: Будут назначены новые выборы.
-- @skibidi: Сформировать новое правительство на основе[? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?]и[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist: (и, возможно, <span style="color: #C0A054;">**ННП**</span>) ?] ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?]?
+- @skibidi: Сформировать новое правительство на основе[? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?]и[? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>[? if dvp_exist: (и, возможно, <span style="color: #C0A054;">**ННП**</span>) ?] ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?]?
 
 
 @goals_success
 on-arrival: workers_spd += 4; unemployed_spd += 4; kpd_relation += 6; workers_kpd += 4; kpd_coalition_success += 1; rfb_strength += 150; rfb_militancy += 0.1; reichsexekution += 1
 
-Как и ожидалось, мы выполнили цели, поставленные <span style="color: #700000;">**КПГ**</span>. [? if president == "Hindenburg": Однако за последние несколько месяцев опасения президента Гинденбурга по поводу нашего коалиционного правительства возросли… ?]
+Как и ожидалось, мы выполнили цели, поставленные <span style="color: #700000;">**КПГ**</span>. [? if president == "Гинденбург": Однако за последние несколько месяцев опасения президента Гинденбурга по поводу нашего коалиционного правительства возросли… ?]
 
 
 @skibidi

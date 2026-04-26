@@ -1,6 +1,6 @@
 title: Папен уходит в отставку!
 subtitle: Провал *переворота в Пруссии *вынудил его уйти в отставку.
-view-if: chancellor = "Papen" and prussia_coup_win
+view-if: chancellor = "Папен" and prussia_coup_win
 on-arrival: papen_explode = 1
 new-page: true
 tags: event

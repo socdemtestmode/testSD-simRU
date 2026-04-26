@@ -55,6 +55,6 @@ on-arrival: panzerkreuzer_b_funded = 0; budget += 1 if panzerkreuzer_funded = 0;
 
 @ministry
 on-arrival: panzerkreuzer_b_funded = 0; budget += 1 if panzerkreuzer_funded = 0; hindenburg_angry += 5; coup_progress += 1
-view-if: reichswehr_minister_party == "SPD"
+view-if: reichswehr_minister_party == "СДПГ"
 
 Используя наш контроль над министерством рейхсвера, мы вынудили флот отказаться от планов перевооружения. Корабль не будет построен. [? if panzerkreuzer_funded == 0 : Мы сэкономили бюджетные средства, отказавшись от финансирования двух кораблей. ?]

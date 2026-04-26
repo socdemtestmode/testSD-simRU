@@ -33,18 +33,18 @@ title: Пересмотр правящей коалиции.
 view-if: in_weimar_coalition and not in_social_catholic_coalition and spd_in_government
 on-arrival: {!
 Q.leverage = Q.spd_r;
-if (Q.z_ideology == "Left") Q.leverage += 5;
-if (Q.lvp_formed) Q.foreign_minister_party = 'LVP'; 
-if (!Q.lvp_formed) Q.foreign_minister_party = 'DVP';
-Q.interior_minister_party = 'Z';
+if (Q.z_ideology == "Левые") Q.leverage += 5;
+if (Q.lvp_formed) Q.foreign_minister_party = 'ЛНП'; 
+if (!Q.lvp_formed) Q.foreign_minister_party = 'ННП';
+Q.interior_minister_party = 'Центр';
 Q.justice_minister_party = 'I';
-Q.labor_minister_party = 'Z';
+Q.labor_minister_party = 'Центр';
 Q.reichswehr_minister_party = 'I';
-if (Q.lvp_formed) Q.economic_minister_party = 'LVP'; 
+if (Q.lvp_formed) Q.economic_minister_party = 'ЛНП'; 
 if (!Q.lvp_formed) Q.economic_minister_party = Q.ddp_name;
-if (Q.lvp_formed) Q.finance_minister_party = 'LVP'; 
-if (!Q.lvp_formed) Q.finance_minister_party = 'DVP';
-Q.agriculture_minister_party = 'Z';
+if (Q.lvp_formed) Q.finance_minister_party = 'ЛНП'; 
+if (!Q.lvp_formed) Q.finance_minister_party = 'ННП';
+Q.agriculture_minister_party = 'Центр';
 !}
 
 В результате того что леволиберальная <span style="color: #D3C24D;">**[+ ddp_name +]**</span> и консервативно-либеральная <span style="color: #C0A054;">**ННП**</span> объединились, они требуют, чтобы их члены, ранее входившие в состав <span style="color: #C0A054;">**ННП**</span>, были включены в состав правительства. Нам придётся произвести перестановки в кабинете.
@@ -78,97 +78,97 @@ go-to: cabinet_reformation
 
 @cabinet_reformation
 on-arrival: {!
-if (Q.labor_minister_party !== "SPD") Q.labor_minister_party = "Z";
-if (Q.labor_minister !== "Wissell") Q.labor_minister = "Stegerwald";
+if (Q.labor_minister_party !== "СДПГ") Q.labor_minister_party = "Центр";
+if (Q.labor_minister !== "Виссель") Q.labor_minister = "Штегервальд";
 
-if (Q.labor_minister_party !== "SPD" && Q.in_social_liberal_coalition) Q.labor_minister_party = Q.ddp_name;
-if (Q.labor_minister_party !== "SPD" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.labor_minister_party = "LVP";
-if (Q.labor_minister !== "Wissell" && Q.in_social_liberal_coalition) Q.labor_minister = "Lemmer";
+if (Q.labor_minister_party !== "СДПГ" && Q.in_social_liberal_coalition) Q.labor_minister_party = Q.ddp_name;
+if (Q.labor_minister_party !== "СДПГ" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.labor_minister_party = "ЛНП";
+if (Q.labor_minister !== "Виссель" && Q.in_social_liberal_coalition) Q.labor_minister = "Леммер";
 
-if (Q.interior_minister_party !== "SPD") Q.interior_minister_party = "Z";
-if (Q.interior_minister !== "Severing") Q.interior_minister = "Wirth";
+if (Q.interior_minister_party !== "СДПГ") Q.interior_minister_party = "Центр";
+if (Q.interior_minister !== "Зеверинг") Q.interior_minister = "Вирт";
 
-if (Q.interior_minister_party !== "SPD" && Q.in_social_liberal_coalition) Q.interior_minister_party = Q.ddp_name;
-if (Q.interior_minister_party !== "SPD" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.interior_minister_party = "LVP";
-if (Q.interior_minister !== "Severing" && Q.in_social_liberal_coalition) Q.interior_minister = "Külz";
+if (Q.interior_minister_party !== "СДПГ" && Q.in_social_liberal_coalition) Q.interior_minister_party = Q.ddp_name;
+if (Q.interior_minister_party !== "СДПГ" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.interior_minister_party = "ЛНП";
+if (Q.interior_minister !== "Зеверинг" && Q.in_social_liberal_coalition) Q.interior_minister = "Кюльц";
 
-if (Q.finance_minister_party !== "SPD" && Q.in_grand_coalition && !Q.lvp_formed) {
-    Q.finance_minister_party = "DVP";
-} else if (Q.finance_minister_party !== "SPD" && (Q.in_grand_coalition || Q.in_weimar_coalition) && Q.lvp_formed) {
-    Q.finance_minister_party = "LVP";
+if (Q.finance_minister_party !== "СДПГ" && Q.in_grand_coalition && !Q.lvp_formed) {
+    Q.finance_minister_party = "ННП";
+} else if (Q.finance_minister_party !== "СДПГ" && (Q.in_grand_coalition || Q.in_weimar_coalition) && Q.lvp_formed) {
+    Q.finance_minister_party = "ЛНП";
 }
-if (Q.finance_minister !== "Hilferding" && (Q.in_grand_coalition)) Q.finance_minister = "Moldenhauer";
+if (Q.finance_minister !== "Гильфердинг" && (Q.in_grand_coalition)) Q.finance_minister = "Мольденхауэр";
 
-if (Q.finance_minister_party !== "SPD" && (Q.in_weimar_coalition && !Q.lvp_formed || Q.in_popular_front || Q.in_social_catholic_coalition)) Q.finance_minister_party = "Z";
-if (Q.finance_minister !== "Hilferding" && (Q.in_weimar_coalition && !Q.lvp_formed || Q.in_popular_front || Q.in_social_catholic_coalition)) Q.finance_minister = "Köhler";
+if (Q.finance_minister_party !== "СДПГ" && (Q.in_weimar_coalition && !Q.lvp_formed || Q.in_popular_front || Q.in_social_catholic_coalition)) Q.finance_minister_party = "Центр";
+if (Q.finance_minister !== "Гильфердинг" && (Q.in_weimar_coalition && !Q.lvp_formed || Q.in_popular_front || Q.in_social_catholic_coalition)) Q.finance_minister = "Кёлер";
 
-if (Q.finance_minister_party !== "SPD" && Q.in_social_liberal_coalition) Q.finance_minister_party = Q.ddp_name;
-if (Q.finance_minister_party !== "SPD" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.finance_minister_party = "LVP";
-if (Q.finance_minister !== "Hilferding" && Q.in_social_liberal_coalition) Q.finance_minister = "Reinhold";
-if (Q.finance_minister !== "Hilferding" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.finance_minister = "Moldenhauer";
+if (Q.finance_minister_party !== "СДПГ" && Q.in_social_liberal_coalition) Q.finance_minister_party = Q.ddp_name;
+if (Q.finance_minister_party !== "СДПГ" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.finance_minister_party = "ЛНП";
+if (Q.finance_minister !== "Гильфердинг" && Q.in_social_liberal_coalition) Q.finance_minister = "Райнхольд";
+if (Q.finance_minister !== "Гильфердинг" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.finance_minister = "Мольденхауэр";
 
-if (Q.economic_minister_party !== "SPD" && Q.in_grand_coalition && !Q.lvp_formed) {
-    Q.economic_minister_party = "DVP";
-} else if (Q.economic_minister_party !== "SPD" && (Q.in_grand_coalition || Q.in_weimar_coalition) && Q.lvp_formed) {
-    Q.economic_minister_party = "LVP";
+if (Q.economic_minister_party !== "СДПГ" && Q.in_grand_coalition && !Q.lvp_formed) {
+    Q.economic_minister_party = "ННП";
+} else if (Q.economic_minister_party !== "СДПГ" && (Q.in_grand_coalition || Q.in_weimar_coalition) && Q.lvp_formed) {
+    Q.economic_minister_party = "ЛНП";
 }
-if (Q.economic_minister !== "Schmidt" && Q.in_grand_coalition) Q.economic_minister = "Curtius";
+if (Q.economic_minister !== "Шмидт" && Q.in_grand_coalition) Q.economic_minister = "Курциус";
 
-if (Q.economic_minister_party !== "SPD" && (Q.in_weimar_coalition && !Q.lvp_formed || (Q.in_popular_front && Q.liberal_parliament === 0 && Q.bourgeois_parliament_ddp == 0 && !Q.lvp_formed))) Q.economic_minister_party = Q.ddp_name;
-if (Q.economic_minister_party !== "SPD" && (Q.in_weimar_coalition && Q.lvp_formed || (Q.in_popular_front && Q.liberal_parliament === 0 && Q.lvp_formed))) Q.economic_minister_party = "LVP";
-if (Q.economic_minister !== "Schmidt" && (Q.in_weimar_coalition || (Q.in_popular_front && Q.liberal_parliament === 0 && Q.bourgeois_parliament_ddp == 0 && !Q.lvp_formed))) Q.economic_minister = "Dietrich";
+if (Q.economic_minister_party !== "СДПГ" && (Q.in_weimar_coalition && !Q.lvp_formed || (Q.in_popular_front && Q.liberal_parliament === 0 && Q.bourgeois_parliament_ddp == 0 && !Q.lvp_formed))) Q.economic_minister_party = Q.ddp_name;
+if (Q.economic_minister_party !== "СДПГ" && (Q.in_weimar_coalition && Q.lvp_formed || (Q.in_popular_front && Q.liberal_parliament === 0 && Q.lvp_formed))) Q.economic_minister_party = "ЛНП";
+if (Q.economic_minister !== "Шмидт" && (Q.in_weimar_coalition || (Q.in_popular_front && Q.liberal_parliament === 0 && Q.bourgeois_parliament_ddp == 0 && !Q.lvp_formed))) Q.economic_minister = "Дитрих";
 
-if (Q.economic_minister_party !== "SPD" && Q.in_social_liberal_coalition) Q.economic_minister_party = Q.ddp_name;
-if (Q.economic_minister_party !== "SPD" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.economic_minister_party = "LVP";
-if (Q.economic_minister !== "Schmidt" && Q.in_social_liberal_coalition) Q.economic_minister = "Trendelenburg";
-if (Q.economic_minister !== "Schmidt" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.economic_minister = "Curtius";
+if (Q.economic_minister_party !== "СДПГ" && Q.in_social_liberal_coalition) Q.economic_minister_party = Q.ddp_name;
+if (Q.economic_minister_party !== "СДПГ" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.economic_minister_party = "ЛНП";
+if (Q.economic_minister !== "Шмидт" && Q.in_social_liberal_coalition) Q.economic_minister = "Тренделенбург";
+if (Q.economic_minister !== "Шмидт" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.economic_minister = "Курциус";
 
-if (Q.economic_minister_party !== "SPD" && (Q.in_social_catholic_coalition || (Q.in_popular_front && (Q.liberal_parliament === 1 || Q.bourgeois_parliament_ddp == 1 || Q.lvp_formed)))) Q.economic_minister_party = "Z";
-if (Q.economic_minister !== "Schmidt" && (Q.in_social_catholic_coalition || (Q.in_popular_front && (Q.liberal_parliament === 1 || Q.bourgeois_parliament_ddp == 1 || Q.lvp_formed)))) Q.economic_minister = "Brüning";
+if (Q.economic_minister_party !== "СДПГ" && (Q.in_social_catholic_coalition || (Q.in_popular_front && (Q.liberal_parliament === 1 || Q.bourgeois_parliament_ddp == 1 || Q.lvp_formed)))) Q.economic_minister_party = "Центр";
+if (Q.economic_minister !== "Шмидт" && (Q.in_social_catholic_coalition || (Q.in_popular_front && (Q.liberal_parliament === 1 || Q.bourgeois_parliament_ddp == 1 || Q.lvp_formed)))) Q.economic_minister = "Брюнинг";
 
-if (Q.justice_minister_party !== "SPD" && !Q.lvp_formed) {
+if (Q.justice_minister_party !== "СДПГ" && !Q.lvp_formed) {
     Q.justice_minister_party = Q.ddp_name;
-} else if (Q.justice_minister_party !== "SPD" && Q.lvp_formed) {
-    Q.justice_minister_party = "LVP";
+} else if (Q.justice_minister_party !== "СДПГ" && Q.lvp_formed) {
+    Q.justice_minister_party = "ЛНП";
 }
-if (Q.justice_minister !== "Radbruch") Q.justice_minister = "Koch-Weser";
+if (Q.justice_minister !== "Радбрух") Q.justice_minister = "Кох-Везер";
 
-if (Q.justice_minister_party !== "SPD" && (Q.in_popular_front && (Q.liberal_parliament === 1 || Q.bourgeois_parliament_ddp == 1 || Q.lvp_formed) || Q.in_social_catholic_coalition)) Q.justice_minister_party = "Z";
-if (Q.justice_minister !== "Radbruch" && (Q.in_popular_front && (Q.liberal_parliament === 1 || Q.bourgeois_parliament_ddp == 1 || Q.lvp_formed) || Q.in_social_catholic_coalition)) Q.justice_minister = "Guérard";
+if (Q.justice_minister_party !== "СДПГ" && (Q.in_popular_front && (Q.liberal_parliament === 1 || Q.bourgeois_parliament_ddp == 1 || Q.lvp_formed) || Q.in_social_catholic_coalition)) Q.justice_minister_party = "Центр";
+if (Q.justice_minister !== "Радбрух" && (Q.in_popular_front && (Q.liberal_parliament === 1 || Q.bourgeois_parliament_ddp == 1 || Q.lvp_formed) || Q.in_social_catholic_coalition)) Q.justice_minister = "Герар";
 
-if (Q.justice_minister_party !== "SPD" && Q.in_social_liberal_coalition) Q.justice_minister_party = Q.ddp_name;
-if (Q.justice_minister_party !== "SPD" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.justice_minister_party = "LVP";
-if (Q.justice_minister !== "Radbruch" && Q.in_social_liberal_coalition) Q.justice_minister = "Koch-Weser";
+if (Q.justice_minister_party !== "СДПГ" && Q.in_social_liberal_coalition) Q.justice_minister_party = Q.ddp_name;
+if (Q.justice_minister_party !== "СДПГ" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.justice_minister_party = "ЛНП";
+if (Q.justice_minister !== "Радбрух" && Q.in_social_liberal_coalition) Q.justice_minister = "Кох-Везер";
 
-if (Q.foreign_minister_party !== "SPD" && !Q.lvp_formed) {
-    Q.foreign_minister_party = "DVP";
-} else if (Q.foreign_minister_party !== "SPD" && Q.lvp_formed) {
-    Q.foreign_minister_party = "LVP";
+if (Q.foreign_minister_party !== "СДПГ" && !Q.lvp_formed) {
+    Q.foreign_minister_party = "ННП";
+} else if (Q.foreign_minister_party !== "СДПГ" && Q.lvp_formed) {
+    Q.foreign_minister_party = "ЛНП";
 }
-if (Q.foreign_minister !== "Breitscheid") Q.foreign_minister = "Stresemann";
-if (Q.foreign_minister !== "Breitscheid" && Q.stresemann_dead === 1) Q.foreign_minister = "Curtius";
-if (Q.foreign_minister_party !== "SPD" && (Q.in_weimar_coalition && !Q.lvp_formed || Q.in_popular_front || Q.in_social_catholic_coalition)) Q.foreign_minister_party = "Z";
-if (Q.foreign_minister_party !== "SPD" && (Q.in_weimar_coalition && Q.lvp_formed)) Q.foreign_minister_party = "LVP";
-if (Q.foreign_minister !== "Breitscheid" && (Q.in_weimar_coalition && !Q.lvp_formed || Q.in_popular_front || Q.in_social_catholic_coalition)) Q.foreign_minister = "Wirth";
+if (Q.foreign_minister !== "Брайтшайд") Q.foreign_minister = "Stresemann";
+if (Q.foreign_minister !== "Брайтшайд" && Q.stresemann_dead === 1) Q.foreign_minister = "Курциус";
+if (Q.foreign_minister_party !== "СДПГ" && (Q.in_weimar_coalition && !Q.lvp_formed || Q.in_popular_front || Q.in_social_catholic_coalition)) Q.foreign_minister_party = "Центр";
+if (Q.foreign_minister_party !== "СДПГ" && (Q.in_weimar_coalition && Q.lvp_formed)) Q.foreign_minister_party = "ЛНП";
+if (Q.foreign_minister !== "Брайтшайд" && (Q.in_weimar_coalition && !Q.lvp_formed || Q.in_popular_front || Q.in_social_catholic_coalition)) Q.foreign_minister = "Вирт";
 
-if (Q.foreign_minister_party !== "SPD" && Q.in_social_liberal_coalition) Q.foreign_minister_party = Q.ddp_name;
-if (Q.foreign_minister_party !== "SPD" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.foreign_minister_party = "LVP";
-if (Q.foreign_minister !== "Breitscheid" && Q.in_social_liberal_coalition) Q.foreign_minister = "Prittwitz";
+if (Q.foreign_minister_party !== "СДПГ" && Q.in_social_liberal_coalition) Q.foreign_minister_party = Q.ddp_name;
+if (Q.foreign_minister_party !== "СДПГ" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.foreign_minister_party = "ЛНП";
+if (Q.foreign_minister !== "Брайтшайд" && Q.in_social_liberal_coalition) Q.foreign_minister = "Притвиц";
 
-if (Q.agriculture_minister_party !== "SPD" && !Q.lvp_formed) {
+if (Q.agriculture_minister_party !== "СДПГ" && !Q.lvp_formed) {
     Q.agriculture_minister_party = Q.ddp_name;
-} else if (Q.agriculture_minister_party !== "SPD" && Q.lvp_formed) {
-    Q.agriculture_minister_party = "LVP";
+} else if (Q.agriculture_minister_party !== "СДПГ" && Q.lvp_formed) {
+    Q.agriculture_minister_party = "ЛНП";
 }
-if (Q.agriculture_minister !== "Baade") Q.agriculture_minister = "Dietrich";
+if (Q.agriculture_minister !== "Бааде") Q.agriculture_minister = "Дитрих";
 
-if (Q.agriculture_minister_party !== "SPD" && (Q.in_weimar_coalition && !Q.lvp_formed || Q.in_popular_front || Q.in_social_catholic_coalition)) Q.agriculture_minister_party = "Z";
-if (Q.agriculture_minister !== "Baade" && (Q.in_weimar_coalition && !Q.lvp_formed || Q.in_popular_front || Q.in_social_catholic_coalition)) Q.agriculture_minister = "Hermes";
+if (Q.agriculture_minister_party !== "СДПГ" && (Q.in_weimar_coalition && !Q.lvp_formed || Q.in_popular_front || Q.in_social_catholic_coalition)) Q.agriculture_minister_party = "Центр";
+if (Q.agriculture_minister !== "Бааде" && (Q.in_weimar_coalition && !Q.lvp_formed || Q.in_popular_front || Q.in_social_catholic_coalition)) Q.agriculture_minister = "Гермес";
 
-if (Q.agriculture_minister_party !== "SPD" && Q.in_social_liberal_coalition) Q.agriculture_minister_party = Q.ddp_name;
-if (Q.agriculture_minister_party !== "SPD" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.agriculture_minister_party = "LVP";
-if (Q.agriculture_minister !== "Baade" && Q.in_social_liberal_coalition) Q.agriculture_minister = "Dietrich";
+if (Q.agriculture_minister_party !== "СДПГ" && Q.in_social_liberal_coalition) Q.agriculture_minister_party = Q.ddp_name;
+if (Q.agriculture_minister_party !== "СДПГ" && Q.in_social_liberal_coalition && Q.lvp_formed) Q.agriculture_minister_party = "ЛНП";
+if (Q.agriculture_minister !== "Бааде" && Q.in_social_liberal_coalition) Q.agriculture_minister = "Дитрих";
 
-if (Q.reichswehr_minister_party !== "SPD") Q.reichswehr_minister_party = "I";
-if (Q.reichswehr_minister !== "Leber") Q.reichswehr_minister = "Groener";
+if (Q.reichswehr_minister_party !== "СДПГ") Q.reichswehr_minister_party = "I";
+if (Q.reichswehr_minister !== "Лебер") Q.reichswehr_minister = "Грёнер";
 !}

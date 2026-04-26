@@ -1,6 +1,6 @@
 title: Папен планирует объявить военное положение!
 subtitle: Канцлер встречается со своим кабинетом…
-view-if: chancellor = "Papen" and papen_post_2 and next_reichstag_time == rubicon_time and next_reichstag_time > 0
+view-if: chancellor = "Папен" and papen_post_2 and next_reichstag_time == rubicon_time and next_reichstag_time > 0
 new-page: true
 tags: event
 max-visits: 1
@@ -68,8 +68,8 @@ on-display: {!
 @papen_3
 title: Генерал Курт фон Шлейхер назначен канцлером!
 on-arrival: {!
-Q.chancellor = "Schleicher";
-if (Q.prussia_leader == "Papen") Q.prussia_leader = "Schleicher"
+Q.chancellor = "Шляйхер";
+if (Q.prussia_leader == "Папен") Q.prussia_leader = "Шляйхер"
 Q.schleicher_time = 0
 
 Q.pro_republic += 5;

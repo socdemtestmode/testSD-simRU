@@ -1,6 +1,6 @@
 title: Консолидация нового государства
 subtitle: Гёрделер уступает должность Папену.
-view-if: chancellor == "Papen" and papen_time == 7 and prussia_leader == "Goerdeler"
+view-if: chancellor == "Папен" and papen_time == 7 and prussia_leader == "Гёрделер"
 new-page: true
 tags: event
 max-visits: 1
@@ -16,6 +16,6 @@ face-image: img/portraits/goerdeler.jpg
 
 
 @surrender
-on-arrival: prussia_leader = "Papen"; workers_spd -= 2; unemployed_spd -= 2; rb_militancy *= 0.95; rb_strength -= 100; prussian_police_loyalty -= 0.1; next_election_time_prussia = time + 48; next_election_year_prussia = year + 4; papen_strength += 1
+on-arrival: prussia_leader = "Папен"; workers_spd -= 2; unemployed_spd -= 2; rb_militancy *= 0.95; rb_strength -= 100; prussian_police_loyalty -= 0.1; next_election_time_prussia = time + 48; next_election_year_prussia = year + 4; papen_strength += 1
 go-to: root
 

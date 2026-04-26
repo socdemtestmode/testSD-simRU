@@ -28,16 +28,16 @@ if (Q.dissent > 0.15) {
 }
 Q.total_power += Q.rb_power;
 Q.prussian_police_power = Q.prussian_police_strength*Q.prussian_police_militancy*Q.prussian_police_loyalty;
-if (Q.spd_prussia && Q.prussia_leader == "Braun" || Q.prussia_leader == "Rosenfeld") {
+if (Q.spd_prussia && Q.prussia_leader == "Браун" || Q.prussia_leader == "Розенфельд") {
     Q.total_power += Q.prussian_police_power;
-} else if (Q.spd_prussia && Q.prussia_leader !== "Braun" && Q.prussia_leader !== "Rosenfeld") {
+} else if (Q.spd_prussia && Q.prussia_leader !== "Браун" && Q.prussia_leader !== "Розенфельд") {
     Q.total_power += (Q.prussian_police_power / 2);
 }
 if (Q.reichswehr_loyalty < 0) {
     Q.reichswehr_loyalty = 0;
 }
 Q.loyal_reichswehr_power = Q.reichswehr_strength*Q.reichswehr_militancy*Q.reichswehr_loyalty;
-if (Q.spd_in_government && Q.chancellor_party == "SPD") {
+if (Q.spd_in_government && Q.chancellor_party == "СДПГ") {
     Q.total_power += Q.loyal_reichswehr_power;
 } else {
     Q.total_power += Q.loyal_reichswehr_power/4;
@@ -104,7 +104,7 @@ go-to: war_menu
 
 Наши враги — <span style="color: #808080;">националистический</span> <span style="color: #3E88B3;">**Стальной Шлем**</span> численностью [+ sh_strength +] тысяч бойцов и <span style="color: #7A3C00;">нацистские</span> <span style="color: #7A3C00;">**СА**</span> численностью [+ sa_strength +] тысяч бойцов. Верность рейхсвера, насчитывающего [+ reichswehr_strength +] тысяч солдат регулярной армии, и прусской полиции, насчитывающей [+ prussian_police_strength +] тысяч человек, неясна.
 
-[? if chancellor_party == "KPD" or president == "Thälmann" or kpd_reichsex_sax : Боевую группу <span style="color: #700000;">**КПГ**</span> военизированной организацией, <span style="color: #8B0000;">**СКФ**</span> возглавляют коммунисты, а мы — их соратники.  ?]
+[? if chancellor_party == "КПГ" or president == "Тельман" or kpd_reichsex_sax : Боевую группу <span style="color: #700000;">**КПГ**</span> военизированной организацией, <span style="color: #8B0000;">**СКФ**</span> возглавляют коммунисты, а мы — их соратники.  ?]
 
 На нашей стороне — Рейхсбаннер численностью [+ rb_strength +] тысяч человек. [? if dissent > 0.15 and dissent <= 0.25: Организация несколько ослаблена разногласиями в партии: некоторые её члены отказываются сражаться.  ?][? if dissent > 0.25 and dissent < 0.5: Организация ослаблена разногласиями в партии: многие её члены отказываются сражаться.  ?][? if dissent >= 0.5: Организация сильно ослаблена разногласиями в партии: значительная часть её членов отказывается сражаться.  ?]
 
@@ -134,7 +134,7 @@ on-arrival: war_choices += 1
 
 @kpd_help
 max-visits: 1
-view-if: chancellor_party != "KPD" and president != "Thälmann" and not kpd_reichsex_sax
+view-if: chancellor_party != "КПГ" and president != "Тельман" and not kpd_reichsex_sax
 go-to: war_menu
 on-arrival: war_choices += 1
 

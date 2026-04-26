@@ -7,7 +7,7 @@ new-page: true
 
 = Образована буржуазная парламентская группа
 
-Лишь благодаря дальнейшей поддержке со стороны промышленных спонсоров буржуазные партии объединились в парламентский союз, в который входят <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, <span style="color: #C0A054;">**ННП**</span>, <span style="color: #b8996f;">**ЭП**</span> и <span style="color: #7FCEB1;">**ХНПКЗ**</span>. Позже к этому союзу присоединилась <span style="color: #007A00;">Немецкая крестьянская партия</span>[? if dnvp_ideology == "Radical": &nbsp;и даже [? if not kvp_formed: отколовшиеся от <span style="color: #3E88B3;">**НННП**</span> ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?] ?].
+Лишь благодаря дальнейшей поддержке со стороны промышленных спонсоров буржуазные партии объединились в парламентский союз, в который входят <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, <span style="color: #C0A054;">**ННП**</span>, <span style="color: #b8996f;">**ЭП**</span> и <span style="color: #7FCEB1;">**ХНПКЗ**</span>. Позже к этому союзу присоединилась <span style="color: #007A00;">Немецкая крестьянская партия</span>[? if dnvp_ideology == "Радикалы": &nbsp;и даже [? if not kvp_formed: отколовшиеся от <span style="color: #3E88B3;">**НННП**</span> ?][? if kvp_formed: <span style="color: #0087DC;">**КНП**</span> ?] ?].
 
 - @bourgeois_parliament: Ладно…
 

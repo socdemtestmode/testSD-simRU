@@ -2,7 +2,7 @@ title: Уличные бои
 new-page: true
 is-card: true
 on-arrival: streetfighting_timer = 6; month_actions += 1; rb_militarization_cost = 2 if rb_militancy > 0.1 else rb_militarization_cost = 1; rb_militarization_cost = 3 if rb_militancy > 0.25; strife += 1
-view-if: year >= 1930 and far_right_force >= 30 and streetfighting_timer == 0 and not return_to_normalcy and (chancellor != "Schleicher" or schleicher_time < 8)
+view-if: year >= 1930 and far_right_force >= 30 and streetfighting_timer == 0 and not return_to_normalcy and (chancellor != "Шляйхер" or schleicher_time < 8)
 card-image: img/blutmai_2.jpg
 tags: party_affairs; antifascism
 
@@ -37,7 +37,7 @@ on-arrival: resources -= rb_militarization_cost; rb_militancy += 0.06; rb_streng
 
 Мы усилили подготовку и закупили больше вооружения для Рейхсбаннера.
 
-[? if not cvp_leave_reichsbanner and not rb_exit: [? if strife < 5: The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] осуждает милитаризацию Рейхсбаннера: её члены покидают <span style="color: #000000;">рес</span><span style="color: #DD0000;">публ</span><span style="color: #FFCC00;">иканскую</span> организацию.  ?][? if strife >= 5: Видя беспорядки, что заполнили улицы Германии, [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] и [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?], похоже, убеждены в необходимости милитаризации Рейхсбаннера и приглушают свою критику.  ?] ?]
+[? if not cvp_leave_reichsbanner and not rb_exit: [? if strife < 5: The [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] осуждает милитаризацию Рейхсбаннера: её члены покидают <span style="color: #000000;">рес</span><span style="color: #DD0000;">публ</span><span style="color: #FFCC00;">иканскую</span> организацию.  ?][? if strife >= 5: Видя беспорядки, что заполнили улицы Германии, [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] и [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?], похоже, убеждены в необходимости милитаризации Рейхсбаннера и приглушают свою критику.  ?] ?]
 
 
 @if_training
@@ -49,7 +49,7 @@ max-visits: 2
 
 
 @prussian_police_training
-view-if: prussia_leader = "Braun" or prussia_leader = "Rosenfeld" and prussian_police_loyalty > 0.5
+view-if: prussia_leader = "Браун" or prussia_leader = "Розенфельд" and prussian_police_loyalty > 0.5
 on-arrival: rb_militancy += 0.05; sa_strength += 50; prussian_police_training += 1
 
 Лояльные подразделения прусской полиции могут помочь в подготовке Рейхсбаннера.

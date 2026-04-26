@@ -2,7 +2,7 @@ title: Марш <span style="color: #7A3C00;">нацистов</span> в Аль�
 new-page: true
 subtitle: An <span style="color: #7A3C00;">**Демонстрация <span style="color: #7A3C00;">СА**</span> может перерасти в насилие.
 tags: event
-view-if: papen_time == 7 and spd_prussia == 1 and chancellor == "Papen" and not altona_seen
+view-if: papen_time == 7 and spd_prussia == 1 and chancellor == "Папен" and not altona_seen
 on-arrival: altona_seen = 1
 max-visits: 1
 

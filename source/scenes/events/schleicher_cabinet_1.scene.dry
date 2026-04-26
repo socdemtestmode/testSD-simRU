@@ -1,6 +1,6 @@
 title: Шлейхер представляет новое правительство
 subtitle: Для проведения запланированных общественных работ учреждён пост комиссара по занятости…
-view-if: chancellor = "Schleicher" and next_reichstag_time == rubicon_time and next_reichstag_time > 0
+view-if: chancellor = "Шляйхер" and next_reichstag_time == rubicon_time and next_reichstag_time > 0
 new-page: true
 tags: event
 max-visits: 1

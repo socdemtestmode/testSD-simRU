@@ -1,6 +1,6 @@
 title: <span style="color: #C0A054;">**ННП**</span> — Голосование в партии
 subtitle: Юлиус Курциус ушёл в отставку!
-view-if: curtius_explosion_timer == time and dvp_leader == "Curtius" and not lvp_formed
+view-if: curtius_explosion_timer == time and dvp_leader == "Курциус" and not lvp_formed
 on-arrival: {!
 
 if (Q.dvp_relation < 35) Q.dvp_right += 3;
@@ -10,17 +10,17 @@ if (Q.liberal_parliament) Q.dvp_left += 2;
 Q.dvp_right += 8;
 
 if (Q.dvp_right > (Q.dvp_left*1.5) || (Q.dvp_right > (Q.dvp_left + 4))) {
-    Q.dvp_ideology = "Right"
+    Q.dvp_ideology = "Правые"
 } else if (Q.dvp_left > (Q.dvp_right*1.5) || (Q.dvp_left > (Q.dvp_right + 4))) {
-    Q.dvp_ideology = "Left"
+    Q.dvp_ideology = "Левые"
 } else {
-    Q.dvp_ideology = "Moderate"
+    Q.dvp_ideology = "Умеренные"
 }
 
-if ((Q.pro_republic >= 80 && Q.dvp_ideology == "Left") && Q.dvp_reform && Q.dnvp_leader != "Lambach") Q.thiel_unlock = 1;
-if ((Q.pro_republic < 80 || Q.dvp_ideology != "Left") && Q.dvp_reform && Q.dnvp_leader != "Lambach") Q.glatzel_unlock = 1;
-if (Q.dvp_ideology == "Right" && !Q.thiel_unlock && !Q.glatzel_unlock) Q.dingeldey_unlock = 1;
-if ((Q.dvp_ideology == "Moderate" || Q.dvp_ideology == "Left") && !Q.thiel_unlock && !Q.glatzel_unlock) Q.kardorff_unlock = 1;
+if ((Q.pro_republic >= 80 && Q.dvp_ideology == "Левые") && Q.dvp_reform && Q.dnvp_leader != "Ламбах") Q.thiel_unlock = 1;
+if ((Q.pro_republic < 80 || Q.dvp_ideology != "Левые") && Q.dvp_reform && Q.dnvp_leader != "Ламбах") Q.glatzel_unlock = 1;
+if (Q.dvp_ideology == "Правые" && !Q.thiel_unlock && !Q.glatzel_unlock) Q.dingeldey_unlock = 1;
+if ((Q.dvp_ideology == "Умеренные" || Q.dvp_ideology == "Левые") && !Q.thiel_unlock && !Q.glatzel_unlock) Q.kardorff_unlock = 1;
 
 !}
 max-visits: 1
@@ -44,7 +44,7 @@ new-page: true
 subtitle: Тиль — вызывающий споры профсоюзник партии, придерживающийся более левых взглядов, чем Глатцель.
 unavailable-subtitle: [? if not glatzel_unlock: У рабочих нет влияния внутри <span style="color: #C0A054;">ННП</span>: партия не поддержит профсоюзного лидера.  ?][? if glatzel_unlock: Тиль по-прежнему кажется слишком левым для партии: многие предпочитают поддержать его более правого коллегу Глатцеля. ?]
 choose-if: thiel_unlock
-on-arrival: dvp_leader = "Thiel"; bourgeois_cooperation -= 3; dvp_left += 10; coalition_dissent -= 1 if in_grand_coalition; dvp_relation += 15; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_spd -= 2; new_middle_dvp += 6; new_middle_nsdap -= 3; new_middle_other -= 3; catholics_dvp += 3; catholics_other -= 3; old_middle_dvp -= 4; old_middle_dnvp += 2; old_middle_kvp += 2 if kvp_formed; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Moderate"; rural_kvp += 2 if kvp_formed; pro_republic += 5; ddp_left += 3; ddp_relation += 5
+on-arrival: dvp_leader = "Тиль"; bourgeois_cooperation -= 3; dvp_left += 10; coalition_dissent -= 1 if in_grand_coalition; dvp_relation += 15; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_spd -= 2; new_middle_dvp += 6; new_middle_nsdap -= 3; new_middle_other -= 3; catholics_dvp += 3; catholics_other -= 3; old_middle_dvp -= 4; old_middle_dnvp += 2; old_middle_kvp += 2 if kvp_formed; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Умеренные"; rural_kvp += 2 if kvp_formed; pro_republic += 5; ddp_left += 3; ddp_relation += 5
 face-image: img/portraits/thiel.jpg
 
 Неожиданно Отто Тиль избран новым лидером <span style="color: #C0A054;">**ННП**</span>! По сравнению со своим коллегой Глатцелем, Тиль занимает более левую позицию. Он даже высказался в поддержку увеличения расходов на социальное обеспечение и утверждает: жёсткая экономия лишь усугубит трудности, с которыми столкнулся народ. В своём стремлении к *Фольксгемайншафт* он вводит в партийную программу больше прорабочих обещаний: поддерживает право на заключение коллективных договоров и защиту прав трудящихся.
@@ -56,7 +56,7 @@ face-image: img/portraits/thiel.jpg
 subtitle: Глатцель, будучи бывшим членом <span style="color: #3E88B3;">**НННП**</span>, имеет националистический уклон.
 unavailable-subtitle: [? if not thiel_unlock: У рабочих нет влияния внутри <span style="color: #C0A054;">ННП</span>: партия не поддержит профсоюзного лидера.  ?][? if thiel_unlock: Глатцель чересчур правый и националистический для партии с учетом нынешних настроений в стране. ?]
 choose-if: glatzel_unlock
-on-arrival: dvp_leader = "Glatzel"; bourgeois_cooperation += 1; dvp_right += 3; dvp_relation -= 5; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_nsdap -= 2; new_middle_dvp += 6; new_middle_nsdap -= 4; new_middle_other -= 2; catholics_dvp += 4; catholics_other -= 2; catholics_dnvp -= 2; old_middle_dvp += 2; old_middle_dnvp -= 2; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Moderate"; rural_kvp += 2 if kvp_formed
+on-arrival: dvp_leader = "Глацель"; bourgeois_cooperation += 1; dvp_right += 3; dvp_relation -= 5; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_nsdap -= 2; new_middle_dvp += 6; new_middle_nsdap -= 4; new_middle_other -= 2; catholics_dvp += 4; catholics_other -= 2; catholics_dnvp -= 2; old_middle_dvp += 2; old_middle_dnvp -= 2; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Умеренные"; rural_kvp += 2 if kvp_formed
 face-image: img/portraits/glatzel.jpg
 achievement: neuer_nationalismus
 
@@ -69,7 +69,7 @@ achievement: neuer_nationalismus
 subtitle: Кардорффу удаётся сохранить за Курциусом пост председателя.
 unavailable-subtitle: [? if dingeldey_unlock: Близость к Курциусу подорвала его позиции. ?][? if thiel_unlock or glatzel_unlock: Партия предпочитает нового и энергичного лидера, желательно не близкого к Курциусу. ?]
 choose-if: kardorff_unlock
-on-arrival: dvp_leader = "Kardorff"; dvp_left += 3 if in_grand_coalition; liberal_cooperation += 3; bourgeois_cooperation += 3; dvp_relation += 5 if in_grand_coalition; new_middle_dvp += 4; catholics_dvp += 2; rural_dvp += 2; old_middle_dvp += 2; pro_republic += 3
+on-arrival: dvp_leader = "Кардорф"; dvp_left += 3 if in_grand_coalition; liberal_cooperation += 3; bourgeois_cooperation += 3; dvp_relation += 5 if in_grand_coalition; new_middle_dvp += 4; catholics_dvp += 2; rural_dvp += 2; old_middle_dvp += 2; pro_republic += 3
 face-image: img/portraits/kardorff.jpg
 
 Кардорфф избран преемником Курциуса на посту председателя <span style="color: #C0A054;">**ННП**</span>. Ожидается, что он продолжит линию Курциуса, будучи верным последователем Штреземана и сторонником конструктивного сотрудничества с <span style="color: #c00000;">**СДПГ**</span>. [? if ui0_seen: В 1929 году он даже сплотил парламентскую фракцию, чтобы спасти нашу большую коалицию. ?]
@@ -81,12 +81,12 @@ face-image: img/portraits/kardorff.jpg
 subtitle: Дингельдей хочет обратить вспять все успехи Курциуса.
 unavailable-subtitle: Право-промышленной фракции <span style="color: #C0A054;">ННП</span> не хватает влияния.
 choose-if: dingeldey_unlock
-on-arrival: old_dvp_leader = dvp_leader; dvp_leader = "Dingeldey"; dvp_right += 10; dvp_relation -= 25; old_middle_dvp -= 3; new_middle_dvp -= 6; rural_dvp -= 4; pro_republic -= 5; ddp_cohesion -= 1; liberal_cooperation -= 5; bourgeois_cooperation -= 5
+on-arrival: old_dvp_leader = dvp_leader; dvp_leader = "Дингельдей"; dvp_right += 10; dvp_relation -= 25; old_middle_dvp -= 3; new_middle_dvp -= 6; rural_dvp -= 4; pro_republic -= 5; ddp_cohesion -= 1; liberal_cooperation -= 5; bourgeois_cooperation -= 5
 face-image: img/portraits/dingeldey.jpg
 
 Эдуард Дингельдей неожиданно победил на выборах и заменил [+ old_dvp_leader +]а на посту председателя <span style="color: #C0A054;">**ННП**</span>. При единой поддержке правого крыла партии и с одобрения Эрнста Шольца он с небольшим перевесом одержал победу над Кардорфом.
 
-Избрание Дингельдея знаменует значительный и необратимый сдвиг вправо,[? if dvp_reform: &nbsp;он даже отменил проведённую Штреземаном реформу внутрипартийной структуры, ?] вернув промышленникам их утраченное влияние в <span style="color: #C0A054;">**ННП**</span>'s decision making. [? if chancellor == "Brüning" and not spd_in_government: Дингельдей не испытывает доверия к правительству Брюнинга и считает, что партия сможет выполнить свою миссию по консолидации буржуазии, лишь когда освободится от бремени власти. ?]
+Избрание Дингельдея знаменует значительный и необратимый сдвиг вправо,[? if dvp_reform: &nbsp;он даже отменил проведённую Штреземаном реформу внутрипартийной структуры, ?] вернув промышленникам их утраченное влияние в <span style="color: #C0A054;">**ННП**</span>'s decision making. [? if chancellor == "Брюнинг" and not spd_in_government: Дингельдей не испытывает доверия к правительству Брюнинга и считает, что партия сможет выполнить свою миссию по консолидации буржуазии, лишь когда освободится от бремени власти. ?]
 
 Более того, Дингельдей не заинтересован в более тесных отношениях с <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, и с нами. Его взгляд направлен к правым партиям: <span style="color: #3E88B3;">**НННП**</span> и даже <span style="color: #7A3C00;">**НСДАП**</span>, чтобы превратить их в «конструктивный элемент государства». Это не сулит ничего хорошего будущему <span style="color: #000000;">Вей</span><span style="color: #DD0000;">мар</span><span style="color: #FFCC00;">ской</span> демократии.
 

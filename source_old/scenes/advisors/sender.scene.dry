@@ -78,4 +78,3 @@ choose-if: advisor_action_timer <= 0 and nationalization_adopted == 0 and black_
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if black_thursday_seen == 0 : В данный момент у нас нет экономического кризиса. ?][? if nationalization_adopted > 0 : Мы уже приняли левый план. ?]
 on-arrival: advisor_action_timer = 6;
 go-to: crisis_program.support_left
-

@@ -1,6 +1,6 @@
 title: Камарилья присоединяется к заговору
 subtitle: Оскар фон Гинденбург и Отто Мейснер встречаются с [+ nsdap_leader +]ом и Папеном.
-view-if: chancellor = "Schleicher" and schleicher_time == 7 and schleicher_explode
+view-if: chancellor = "Шляйхер" and schleicher_time == 7 and schleicher_explode
 new-page: true
 tags: event
 priority: 4
@@ -31,7 +31,7 @@ on-display: {!
 
 @nazi_2
 title: Переговоры завершаются…
-on-arrival: meissner_goal = "Advocate for a Hitler chancellorship"; oskar_goal = "Advocate for a Papen chancellorship"; papen_goal = "Advocate for a Hitler chancellorship"; schleicher_strength -= 1
+on-arrival: meissner_goal = "Выступать за назначение Гитлера канцлером"; oskar_goal = "Выступать за назначение Папена канцлером"; papen_goal = "Выступать за назначение Гитлера канцлером"; schleicher_strength -= 1
 
 [+ nsdap_leader +] ищет личной встречи с сыном Гинденбурга, а Геринг тем временем отдельно беседует с Мейснером. Попытка [+ nsdap_leader +]а убедить колеблющегося Оскара поддержать его назначение на пост президентского канцлера проваливается — что побуждает Геббельса назвать Оскара «олицетворением глупости». В свою очередь, Геринг, теперь выступающий в качестве представителя [+ nsdap_leader +]а, придерживается более взвешенного подхода. Опираясь на свою репутацию уважаемого героя войны и умение вести себя в обществе, он заверяет Мейснера: <span style="color: #7A3C00;">**НСДАП**</span> будет претендовать лишь на один министерский портфель, при этом президент сохранит контроль над ключевыми министерствами — иностранных дел и обороны.
 

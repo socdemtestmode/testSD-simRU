@@ -1,6 +1,6 @@
 title: Создан Германский трудовой фронт
 subtitle: Создана подконтрольная государству рабочая организация.
-view-if: chancellor = "Schleicher" and dnef_formed and ((workers_schleicher >= 10 and (rb_force < 30 or unions_independent or labor_dissent >= 40)) or schleicher_spd_labor) and schleicher_post_time >= 14 and z_relation < 50 and not schleicher_pause
+view-if: chancellor = "Шляйхер" and dnef_formed and ((workers_schleicher >= 10 and (rb_force < 30 or unions_independent or labor_dissent >= 40)) or schleicher_spd_labor) and schleicher_post_time >= 14 and z_relation < 50 and not schleicher_pause
 on-arrival: {!
 Q.workers_schleicher_bonus += 2;
 
@@ -135,12 +135,12 @@ Q.spd_points += Q.rb_power / 50;
 
 Q.prussian_police_power = Q.prussian_police_strength*Q.prussian_police_militancy*Q.prussian_police_loyalty;
 Q.evil_prussian_police_power = Q.prussian_police_strength*Q.prussian_police_militancy*(1 - Q.prussian_police_loyalty);
-if (Q.spd_prussia && Q.prussia_leader == "Braun" || Q.prussia_leader == "Rosenfeld") {
+if (Q.spd_prussia && Q.prussia_leader == "Браун" || Q.prussia_leader == "Розенфельд") {
     Q.spd_points += Q.prussian_police_power / 10;
-} else if (Q.spd_prussia && Q.prussia_leader !== "Braun" && Q.prussia_leader !== "Rosenfeld") {
+} else if (Q.spd_prussia && Q.prussia_leader !== "Браун" && Q.prussia_leader !== "Розенфельд") {
     Q.spd_points += (Q.prussian_police_power / 20);
 }
-if (Q.prussia_leader == "Schleicher" || Q.prussia_leader == "Strasser") {
+if (Q.prussia_leader == "Шляйхер" || Q.prussia_leader == "Штрассер") {
     Q.schleicher_points += Q.evil_prussian_police_power / 50;
 }
 Q.reichswehr_power = Q.reichswehr_strength*Q.reichswehr_militancy;

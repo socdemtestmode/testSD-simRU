@@ -3,7 +3,7 @@ new-page: true
 is-card: true
 tags: govt_affairs, cabinet
 on-arrival: month_actions += 1; foreign_policy_timer += 8
-view-if: spd_in_government = 1 and foreign_minister_party = "SPD" and  foreign_policy_timer <= 0
+view-if: spd_in_government = 1 and foreign_minister_party = "СДПГ" and  foreign_policy_timer <= 0
 card-image: img/portraits/BreitscheidRudolf.jpg
 go-to: fp_menu
 #subtitle: International relations and dealing with Versailles.
@@ -58,7 +58,7 @@ max-visits: 1
 
 <span style="color: #750e0e;">Советский Союз</span> с его централизованной плановой экономикой и изоляцией от мировых рынков сумел оградить себя от последствий Великой депрессии. С тех пор там проходит стремительная индустриализация в соответствии с их пятилетним планом, что делает их ключевым партнёром для экспорта, особенно на фоне роста тарифов у наших номинальных торговых партнёров на Западе и их общей изоляции от международных рынков.
 
-<span style="color: #940000;">Советы</span> этим довольны, а мы получим экономическую выгоду. Единственный недостаток в том, что машина правой пропаганды осудила этот шаг и оказывает давление на [? if president == "Hindenburg": президента Гинденбурга и ?] буржуазные партии, чтобы те порвали с нами.
+<span style="color: #940000;">Советы</span> этим довольны, а мы получим экономическую выгоду. Единственный недостаток в том, что машина правой пропаганды осудила этот шаг и оказывает давление на [? if president == "Гинденбург": президента Гинденбурга и ?] буржуазные партии, чтобы те порвали с нами.
 
 
 @improve_soviet
@@ -182,10 +182,10 @@ max-visits: 1
 
 
 @schleicher_spd
-view-if: schleicher_spd and president == "Hindenburg"
+view-if: schleicher_spd and president == "Гинденбург"
 title: Но, разумеется, Шлейхер оговаривает, что мы должны потребовать военного паритета.
 subtitle: Это будет серьёзным предательством наших ценностей!
-on-arrival: military_parity = 1 if eu or (west_relation >= 8 and reformist_strength >= left_strength + center_strength and soviet_relation == 0 and kpd_relation < 30); reichswehr_strength += 300 if military_parity; sh_strength -= 100 if military_parity; sa_strength -= 50 if military_parity; rb_strength -= 150 if military_parity; nationalism += 5; nationalism += 15 if military_parity; pacifism -= 3; reichswehr_loyalty += 0.5 if military_parity; reichswehr_militancy += 2 if military_parity; workers_spd -= 6; old_middle_spd -= 2; new_middle_spd -= 4; rural_spd -= 2; catholics_spd -= 2; unemployed_spd -= 4; workers_kpd += 6; old_middle_ddp += 2; new_middle_ddp += 4; rural_ddp += 2; catholics_kpd += 2; unemployed_kpd += 4; old_middle_spd += 20 if military_parity; workers_nsdap -= 3 if military_parity; unemployed_nsdap -= 4 if military_parity; new_middle_nsdap -= 3 if military_parity; old_middle_nsdap -= 15 if military_parity; rural_nsdap -= 3 if military_parity; catholics_nsdap -= 3 if military_parity; left_dissent += 50; center_dissent += 40; labor_dissent += 30; reformist_dissent += 20; neorevisionist_dissent += 20; left_strength -= 20; center_strength -= 10; ddp_relation -= 5; dvp_relation += 15; dvp_left += 5; ddp_left += 10; ddp_cohesion += 5; lvp_relation += 5; new_middle_ddp += 10 if ddp_leader == "Lüders"; new_middle_spd -= 10 if ddp_leader == "Lüders"; workers_ddp += 5 if ddp_leader == "Lüders"; workers_spd -= 5 if ddp_leader == "Lüders"; west_relation -= 4; eu_progress -= 2
+on-arrival: military_parity = 1 if eu or (west_relation >= 8 and reformist_strength >= left_strength + center_strength and soviet_relation == 0 and kpd_relation < 30); reichswehr_strength += 300 if military_parity; sh_strength -= 100 if military_parity; sa_strength -= 50 if military_parity; rb_strength -= 150 if military_parity; nationalism += 5; nationalism += 15 if military_parity; pacifism -= 3; reichswehr_loyalty += 0.5 if military_parity; reichswehr_militancy += 2 if military_parity; workers_spd -= 6; old_middle_spd -= 2; new_middle_spd -= 4; rural_spd -= 2; catholics_spd -= 2; unemployed_spd -= 4; workers_kpd += 6; old_middle_ddp += 2; new_middle_ddp += 4; rural_ddp += 2; catholics_kpd += 2; unemployed_kpd += 4; old_middle_spd += 20 if military_parity; workers_nsdap -= 3 if military_parity; unemployed_nsdap -= 4 if military_parity; new_middle_nsdap -= 3 if military_parity; old_middle_nsdap -= 15 if military_parity; rural_nsdap -= 3 if military_parity; catholics_nsdap -= 3 if military_parity; left_dissent += 50; center_dissent += 40; labor_dissent += 30; reformist_dissent += 20; neorevisionist_dissent += 20; left_strength -= 20; center_strength -= 10; ddp_relation -= 5; dvp_relation += 15; dvp_left += 5; ddp_left += 10; ddp_cohesion += 5; lvp_relation += 5; new_middle_ddp += 10 if ddp_leader == "Людерс"; new_middle_spd -= 10 if ddp_leader == "Людерс"; workers_ddp += 5 if ddp_leader == "Людерс"; workers_spd -= 5 if ddp_leader == "Людерс"; west_relation -= 4; eu_progress -= 2
 
 Генерал Шлейхер потребовал, чтобы мы подняли вопрос о перевооружении, которое до сих пор ограничено Версальским договором. Однако <span style="color: #002654;">французский</span> премьер-министр Эдуар Эррио ухватился за это как за признание того, что Германия на самом деле способна выплачивать репарации и просто направит высвободившиеся средства на перевооружение.
 
@@ -207,11 +207,11 @@ on-arrival: west_relation += 2; east_relation += 1; nationalism -= 5*(1-dissent)
 @concordat_negotiate
 title: Заключить конкордат между Германией и Ватиканом.
 view-if: (prussian_concordat = 1 or not spd_prussia) and reichskonkordat = 0 and reichskonkordat_progress < 4
-on-arrival: reichskonkordat_progress += 1; reichskonkordat_progress += 1 if z_leader == "Kaas"; reichskonkordat_progress -= 1 if abortion_rights; reichskonkordat_progress -= 1 if family_law; z_relation += 3*(1-dissent); dvp_relation -= 1; ddp_relation -= 2; ddp_cohesion -= 0.25; lvp_relation -= 1; foreign_goal_spd_peoples += 1
+on-arrival: reichskonkordat_progress += 1; reichskonkordat_progress += 1 if z_leader == "Каас"; reichskonkordat_progress -= 1 if abortion_rights; reichskonkordat_progress -= 1 if family_law; z_relation += 3*(1-dissent); dvp_relation -= 1; ddp_relation -= 2; ddp_cohesion -= 0.25; lvp_relation -= 1; foreign_goal_spd_peoples += 1
 
-Римско-католическая церковь заинтересована в развитии отношений с Германской республикой, считая нас предпочтительнее старой антикатолической политики Империи. Мы работаем над подписанием конкордата — соглашения между Ватиканом и республикой, которое официально признаёт права и интересы Церкви в стране. [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] особенно заинтересована в заключении этого соглашения. Либеральные партии выступают против этой идеи. 
+Римско-католическая церковь заинтересована в развитии отношений с Германской республикой, считая нас предпочтительнее старой антикатолической политики Империи. Мы работаем над подписанием конкордата — соглашения между Ватиканом и республикой, которое официально признаёт права и интересы Церкви в стране. [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] особенно заинтересована в заключении этого соглашения. Либеральные партии выступают против этой идеи. 
 
-[? if family_law : Наше либерализованное бракоразводное законодательство затрудняет выстраивание отношений с Ватиканом. ?] [? if abortion : Легализация абортов затрудняет налаживание связей с Церковью. ?] [? if z_leader == "Kaas" : Каас из [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] может использовать свои связи, чтобы ускорить переговоры. ?]
+[? if family_law : Наше либерализованное бракоразводное законодательство затрудняет выстраивание отношений с Ватиканом. ?] [? if abortion : Легализация абортов затрудняет налаживание связей с Церковью. ?] [? if z_leader == "Каас" : Каас из [? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] может использовать свои связи, чтобы ускорить переговоры. ?]
 
 
 @concordat
@@ -220,7 +220,7 @@ view-if: reichskonkordat_progress >= 4 and reichskonkordat = 0
 on-arrival: reichskonkordat = 1; z_relation += 15*(1-dissent); catholics_spd += 8*(1-dissent); catholics_z += 5 if in_weimar_coalition or in_grand_coalition or in_popular_front; foreign_goal_spd_peoples += 1
 achievement: reichskonkordat
 
-Мы успешно подписали Конкордат между Германией и Римско-католической церковью! Этот договор определяет официальные отношения между Церковью и германским государством, гарантируя свободу вероисповедания для католиков и право церкви назначать собственное духовенство. Католики Германии довольны, как и их представители в [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?].
+Мы успешно подписали Конкордат между Германией и Римско-католической церковью! Этот договор определяет официальные отношения между Церковью и германским государством, гарантируя свободу вероисповедания для католиков и право церкви назначать собственное духовенство. Католики Германии довольны, как и их представители в [? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?].
 
 
 @support_austria

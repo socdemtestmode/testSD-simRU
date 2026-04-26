@@ -1,6 +1,6 @@
 title: В <span style="color: #7A3C00;">**НСДАП**</span> раскол!
 subtitle: Их внутренние противоречия наконец-то дали о себе знать.
-view-if: chancellor = "Schleicher" and schleicher_time == 10 and hitler_dead
+view-if: chancellor = "Шляйхер" and schleicher_time == 10 and hitler_dead
 new-page: true
 tags: event
 max-visits: 1
@@ -32,7 +32,7 @@ on-display: {!
 on-arrival: {!
 Q.nsdap_split = 1;
 Q.dsu_exist = 1;
-Q.dsu_leader = "Strasser";
+Q.dsu_leader = "Штрассер";
 Q.nvf_exist = 1;
 
 Q.nazi_funds -= 3;

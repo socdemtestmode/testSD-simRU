@@ -1,6 +1,6 @@
 title: Съезд <span style="color: #C0A054;">**ННП**</span> Congress
 subtitle: The <span style="color: #C0A054;">**ННП**</span> решает свою судьбу…
-view-if: year = 1928 and month = 12 and dvp_congress_trigger = 1 and dnvp_ideology != "Radical" and not lvp_formed and lvp_timer_trigger == 0
+view-if: year = 1928 and month = 12 and dvp_congress_trigger = 1 and dnvp_ideology != "Радикалы" and not lvp_formed and lvp_timer_trigger == 0
 on-arrival: {!
 if (Q.dvp_relation >= 50) {
     Q.dvp_left += 1;
@@ -12,18 +12,18 @@ if (!Q.in_grand_coalition) {
 }
 
 if (Q.dvp_right > (Q.dvp_left*1.5) || (Q.dvp_right > (Q.dvp_left + 4))) {
-    Q.dvp_ideology = "Right"
+    Q.dvp_ideology = "Правые"
 } else if (Q.dvp_left > (Q.dvp_right*1.5) || (Q.dvp_left > (Q.dvp_right + 4))) {
-    Q.dvp_ideology = "Left"
+    Q.dvp_ideology = "Левые"
 } else {
-    Q.dvp_ideology = "Moderate"
+    Q.dvp_ideology = "Умеренные"
 }
 
-if (Q.dvp_ideology == "Left" || (Q.dvp_left - Q.dvp_right >= 3)) {
+if (Q.dvp_ideology == "Левые" || (Q.dvp_left - Q.dvp_right >= 3)) {
     Q.stresemann_reform_yay = 1;
 }
 
-if (Q.dvp_ideology == "Right" || (Q.dvp_right - Q.dvp_left >= 3)) {
+if (Q.dvp_ideology == "Правые" || (Q.dvp_right - Q.dvp_left >= 3)) {
     Q.stresemann_reform_nay = 1;
 }
 

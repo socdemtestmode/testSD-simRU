@@ -1,0 +1,36 @@
+title: Завершение дела «Вельтбюне»
+subtitle: Карл фон Осецкий и его сообщники наконец осуждены.
+new-page: true
+view-if: year = 1931 and month >= 11 and weltbuhne_seen = 1 and not weltbuhne_dropped
+max-visits: 1
+on-arrival: weltbuhne_conclusion = 1
+face-image: img/weltbune.jpg
+tags: event
+go-to: weltbuhne_dropped if judicial_reform >= 3; weltbuhne_convicted if judicial_reform < 3
+
+= Процесс «Вельтбюне»: завершение
+
+
+@weltbuhne_convicted
+on-arrival: west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; nationalism += 5; pacifism -= 1; ddp_right += 0.5; lvp_right += 1
+
+Наконец, суд вынес решение по делу «Вельтбюне», приговорив редактора Карла фон Осецкого и журналиста Вальтера Крайзера к 18 месяцам тюремного заключения за разглашение военных тайн. Это вызвало возмущение в международном сообществе, которое видит в этом очередной пример сползания Германии к милитаризму.
+
+- @drop_case: Постойте! Может, мы сможем помиловать журналистов?
+- @root: Accept the court's decision.
+
+
+@drop_case
+choose-if: justice_minister_party = "SPD"
+view-if: spd_in_government
+unavailable-subtitle: Мы не контролируем Министерство юстиции.
+on-arrival: west_relation += 1; east_relation += 1; reparations_negotiation += 1; pacifism += 1; ddp_left += 0.5; hindenburg_angry += 5
+
+Контроль над Министерством юстиции позволяет нам помиловать фон Осецкого и Крайзера. Это частично восстанавливает нашу репутацию в глазах пацифистов и международного сообщества.
+
+
+@weltbuhne_dropped
+on-arrival: west_relation += 1; east_relation += 1; reparations_negotiation += 1; ddp_relation += 3; pacifism += 1; ddp_left += 1.5; lvp_left += 1; hindenburg_angry += 5
+
+Наконец, суд вынес решение по делу «Вельтбюне», полностью оправдав редактора Карла фон Осецкого и журналиста Вальтера Крайзера! Мировая общественность и пацифисты в Германии ликуют, приветствуя это решение. Наконец-то можно сказать, что Германия преодолела старый имперский милитаризм.
+

@@ -1,6 +1,6 @@
 title: Гугенберг смещён!
 subtitle: Даже его слепо преданная партия больше его не поддерживает.
-view-if: chancellor = "Schleicher" and dnef_formed and ((nationalists_schleicher >= 10 and industrialists_schleicher >= 8 and not press_censorship) or (nationalists_schleicher >= 8 and industrialists_schleicher >= 6 and press_censorship))
+view-if: chancellor = "Шляйхер" and dnef_formed and ((nationalists_schleicher >= 10 and industrialists_schleicher >= 8 and not press_censorship) or (nationalists_schleicher >= 8 and industrialists_schleicher >= 6 and press_censorship))
 new-page: true
 priority: 1
 tags: event
@@ -17,7 +17,7 @@ on-display: {!
     var contentDiv = document.querySelector("#page #mid_panel #content");
     contentDiv.appendChild(cardEl);
 !}
-go-to: hugenberg_dnvp if dnvp_ideology == "Radical"; hugenberg_dnf if dnvp_ideology == "Moderate"
+go-to: hugenberg_dnvp if dnvp_ideology == "Радикалы"; hugenberg_dnf if dnvp_ideology == "Умеренные"
 
 = Гугенберг смещён
 
@@ -49,7 +49,7 @@ go-to: schleicher_2_dnvp_post
 
 При поддержке Шлейхера отколовшиеся фракции вошли в состав[? if not kvp_formed: недавно возрождённой <span style="color: #0087DC;">**КНП**</span>, которая по настоянию рейхсканцлера превратилась в <i>Rechtsblock</i>, где могут сплотиться все <span style="color: #3E88B3;">националисты</span>.  ?][? if kvp_formed and kvp_dnef: <span style="color: #0087DC;">**КНП**</span>, которая по настоянию Шлейхера превратилась в <i>Rechtsblock</i>, где могут сплотиться все <span style="color: #3E88B3;">националисты</span>.  ?][? if kvp_formed and not kvp_dnef: <span style="color: #0087DC;">**КНП**</span>, которую также силой заставили вступить в <span style="color: #BFC8CC;">Фронт Национального Единства Германии</span>.  ?]
 
-То, что осталось от гугенберговской <span style="color: #3E88B3;">**НННП**</span>, — лишь бледная тень самой себя, а его влияние на политической арене страны практически сошло на нет. Но этот человек никогда не сдаётся. [? if kvp_leader != "Treviranus": Тревиранус с тех пор поставлен во главе теперь уже примкнувшей к <i>Blocpartei</i> <span style="color: #0087DC;">**КНП**</span>. ?]
+То, что осталось от гугенберговской <span style="color: #3E88B3;">**НННП**</span>, — лишь бледная тень самой себя, а его влияние на политической арене страны практически сошло на нет. Но этот человек никогда не сдаётся. [? if kvp_leader != "Тревиранус": Тревиранус с тех пор поставлен во главе теперь уже примкнувшей к <i>Blocpartei</i> <span style="color: #0087DC;">**КНП**</span>. ?]
 
 
 @schleicher_2_dnvp_post
@@ -97,7 +97,7 @@ if (!Q.kvp_formed) {
 
     Q.kvp_relation = 10;
 
-    Q.kvp_leader = "Treviranus";
+    Q.kvp_leader = "Тревиранус";
     Q.old_workers_kvp_display = 0;
     Q.old_new_middle_kvp_display = 0;
     Q.old_old_middle_kvp_display = 0;
@@ -117,7 +117,7 @@ Q.dnef_relation -= 15;
 Q.dnef_r += Q.kvp_r;
 Q.kvp_r = 0;
 
-Q.kvp_leader = "Treviranus";
+Q.kvp_leader = "Тревиранус";
 !}
 
 Текущий состав <span style="color: #BFC8CC;">Фронта Национального Единства Германии</span>:
@@ -148,7 +148,7 @@ go-to: schleicher_2_dnf_post
 
 При поддержке Шлейхера оппозиционные фракции поглощены <span style="color: #3E88B3;">**НННП**</span>, которую «убедили» преобразоваться в <i>Rechtsblock</i>[? if not dnvp_dnef: , а также принудили вступить во <span style="color: #BFC8CC;">Фронт Национального Единства Германии</span> ?], который твёрдо поддерживает правительство Шлейхера.
 
-Теперь у Гугенберга осталась лишь его крошечная <span style="color: #003755;">**НФГ**</span> — без друзей, без денег и без влияния на национальной арене. Велика вероятность, что он сдастся окончательно. Но пока что он упрямо цепляется за остатки влияния в своей медиаимперии. [? if dnvp_leader != "Treviranus" and dnvp_leader != "Lambach": Тревиранус с тех пор назначен лидером ныне ставшей <i>Blocpartei</i> <span style="color: #3E88B3;">**НННП**</span>. ?]
+Теперь у Гугенберга осталась лишь его крошечная <span style="color: #003755;">**НФГ**</span> — без друзей, без денег и без влияния на национальной арене. Велика вероятность, что он сдастся окончательно. Но пока что он упрямо цепляется за остатки влияния в своей медиаимперии. [? if dnvp_leader != "Тревиранус" and dnvp_leader != "Ламбах": Тревиранус с тех пор назначен лидером ныне ставшей <i>Blocpartei</i> <span style="color: #3E88B3;">**НННП**</span>. ?]
 
 
 @schleicher_2_dnf_post
@@ -184,7 +184,7 @@ Q.dnf_r = Math.round((Q.dnf_r) * 10 / 10)
 Q.dnef_r += Q.dnvp_r;
 Q.dnvp_r = 0;
 
-if (Q.dnvp_leader != "Lambach") Q.dnvp_leader = "Treviranus";
+if (Q.dnvp_leader != "Ламбах") Q.dnvp_leader = "Тревиранус";
 !}
 
 Текущий состав <span style="color: #BFC8CC;">Фронта Национального Единства Германии</span>:

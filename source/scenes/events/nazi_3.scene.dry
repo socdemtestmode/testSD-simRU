@@ -1,6 +1,6 @@
 title: Грегор Штрассер покидает <span style="color: #7A3C00;">**НСДАП**</span>!
 subtitle: Единичная отставка или нечто большее?
-view-if: chancellor = "Schleicher" and not reichstag_rubicon and reichstag_schleicher_seen
+view-if: chancellor = "Шляйхер" and not reichstag_rubicon and reichstag_schleicher_seen
 new-page: true
 tags: event
 max-visits: 1

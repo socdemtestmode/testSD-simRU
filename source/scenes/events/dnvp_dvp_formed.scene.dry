@@ -44,8 +44,8 @@ Q.dvp_normalized = 0;
 Q.liberal_parliament = 0;
 Q.parties = Q.parties.filter(party => party !== 'dvp');
 
-if (Q.winner_fkp = "Glatzel") {
-    if (Q.dnvp_ideology == "Moderate") {
+if (Q.winner_fkp = "Глацель") {
+    if (Q.dnvp_ideology == "Умеренные") {
         Q.old_middle_dnf += Q.old_middle_kvp * 0.2;
         Q.old_middle_kvp = Q.old_middle_kvp * 0.8;
     } else {
@@ -57,8 +57,8 @@ if (Q.winner_fkp = "Glatzel") {
     Q.new_middle_kvp = Q.new_middle_kvp * 0.9;
 }
 
-if (Q.winner_fkp = "Raumer") {
-    if (Q.dnvp_ideology == "Moderate") {
+if (Q.winner_fkp = "Раумер") {
+    if (Q.dnvp_ideology == "Умеренные") {
         Q.rural_dnf += Q.rural_kvp * 0.2;
         Q.rural_kvp = Q.rural_kvp * 0.8;
         Q.new_middle_kvp += Q.new_middle_dnf * 0.4;
@@ -76,8 +76,8 @@ if (Q.winner_fkp = "Raumer") {
     Q.workers_kvp = Q.workers_kvp * 0.5;
 }
 
-if (Q.winner_fkp = "Treviranus") {
-    if (Q.dnvp_ideology == "Moderate") {
+if (Q.winner_fkp = "Тревиранус") {
+    if (Q.dnvp_ideology == "Умеренные") {
         Q.rural_dnf += Q.rural_kvp * 0.1;
         Q.rural_kvp = Q.rural_kvp * 0.9;
         Q.new_middle_kvp += Q.new_middle_dnf * 0.3;
@@ -95,8 +95,8 @@ if (Q.winner_fkp = "Treviranus") {
     Q.workers_kvp = Q.workers_kvp * 0.6;
 }
 
-if (Q.winner_fkp = "Hergt") {
-    if (Q.dnvp_ideology == "Moderate") {
+if (Q.winner_fkp = "Хергт") {
+    if (Q.dnvp_ideology == "Умеренные") {
         Q.rural_kvp += Q.rural_dnf * 0.2;
         Q.rural_dnf = Q.rural_dnf * 0.8;
         Q.old_middle_kvp += Q.old_middle_dnf * 0.3;
@@ -112,8 +112,8 @@ if (Q.winner_fkp = "Hergt") {
     Q.new_middle_kvp = Q.new_middle_kvp * 0.7;
 }
 
-if (Q.winner_fkp = "Westarp") {
-    if (Q.dnvp_ideology == "Moderate") {
+if (Q.winner_fkp = "Вестарп") {
+    if (Q.dnvp_ideology == "Умеренные") {
         Q.rural_kvp += Q.rural_dnf * 0.4;
         Q.rural_dnf = Q.rural_dnf * 0.6;
         Q.old_middle_kvp += Q.old_middle_dnf * 0.3;
@@ -151,7 +151,7 @@ Q.center_right_coalition = parseFloat((Q.z_r + Q.ddp_r  + Q.other_r + Q.dnvp_r +
 
 Q.right_coalition = parseFloat((Q.z_r + Q.dvp_r + Q.other_r + Q.kvp_r + Q.dnvp_r).toFixed(1));
 
-if (Q.dnvp_ideology === "Moderate") {
+if (Q.dnvp_ideology === "Умеренные") {
     Q.far_right_coalition = parseFloat((Q.dnf_r + Q.nsdap_r).toFixed(1));
 } else {
     Q.far_right_coalition = parseFloat((Q.dnvp_r + Q.nsdap_r).toFixed(1));
@@ -167,7 +167,7 @@ if (Q.lvp_formed) {
     Q.popular_front_coalition = parseFloat((Q.spd_r + Q.kpd_r + Q.z_r - Q.bvp_r + Q.sapd_r).toFixed(1));
 }
 
-if (Q.dnvp_ideology === "Moderate") {
+if (Q.dnvp_ideology === "Умеренные") {
     Q.anti_democratic_coalition = parseFloat((Q.kpd_r + Q.nsdap_r + Q.dnf_r).toFixed(1));
 } else {
     Q.anti_democratic_coalition = parseFloat((Q.kpd_r + Q.nsdap_r + Q.dnvp_r).toFixed(1));
@@ -250,13 +250,13 @@ if (Q.lvp_formed) {
     Q.right_coalition_prussia = parseFloat((Q.z_r_prussia + Q.dvp_r_prussia + Q.other_r_prussia + Q.dnvp_r_prussia).toFixed(1));
 }
 
-if (Q.dnvp_ideology === "Moderate") {
+if (Q.dnvp_ideology === "Умеренные") {
     Q.far_right_coalition_prussia = parseFloat((Q.dnf_r_prussia + Q.nsdap_r_prussia).toFixed(1));
 } else {
     Q.far_right_coalition_prussia = parseFloat((Q.dnvp_r_prussia + Q.nsdap_r_prussia).toFixed(1));
 }
 
-if (Q.dvp_leader == "Dingeldey" && Q.dvp_ideology == "Right" && Q.dvp_right - Q.dvp_left >= 15 || Q.hugenberg_dvp) {
+if (Q.dvp_leader == "Дингельдей" && Q.dvp_ideology == "Правые" && Q.dvp_right - Q.dvp_left >= 15 || Q.hugenberg_dvp) {
     Q.far_right_coalition_prussia = parseFloat((Q.far_right_coalition_prussia + Q.dvp_r_prussia).toFixed(1));
 }
 
@@ -270,7 +270,7 @@ if (Q.lvp_formed) {
     Q.popular_front_coalition_prussia = parseFloat((Q.spd_r_prussia + Q.kpd_r_prussia + Q.z_r_prussia + Q.sapd_r_prussia).toFixed(1));
 }
 
-if (Q.dnvp_ideology === "Moderate") {
+if (Q.dnvp_ideology === "Умеренные") {
     Q.anti_democratic_coalition_prussia = parseFloat((Q.kpd_r_prussia + Q.nsdap_r_prussia + Q.dnf_r_prussia).toFixed(1));
 } else {
     Q.anti_democratic_coalition_prussia = parseFloat((Q.kpd_r_prussia + Q.nsdap_r_prussia + Q.dnvp_r_prussia).toFixed(1));

@@ -26,6 +26,7 @@ go-to: recalculate
 Новые выборы назначены на [+ next_election_month : month +] [+ next_election_year +].
 
 
+
 @vote_yes
 title: Проголосовать против вотума и перейти к политике терпимости.
 subtitle: Наша парламентская фракция может ослушаться приказа.
@@ -36,6 +37,7 @@ go-to: recalculate
 Мы вновь проголосовали в поддержку правительства [+ chancellor +]а при голосовании по вотуму недоверия. Однако наша парламентская фракция открыто восстала против этого решения и объявила, что ослушается нашего приказа, что в итоге привело к падению правительства [+ chancellor +]а вопреки всему. Умеренные в рядах <span style="color: #3E88B3;">**НННП**</span> во главе с Вестарпом наконец покинули свою партию,[? if kvp_formed: &nbsp;чтобы присоединиться к <span style="color: #0087DC;">**КНП**</span> и ?] проголосовать за вотум, хотя этого всё равно недостаточно, чтобы ему воспрепятствовать.
 
 Новые выборы назначены на [+ next_election_month : month +] [+ next_election_year +].
+
 
 
 @recalculate
@@ -56,4 +58,3 @@ if (Q.bourgeois_negotiations_elections_1930_timer > 0 && Q.bourgeois_negotiation
     Q.bourgeois_negotiations_election_soon = 1;
 }
 !}
-

@@ -249,4 +249,3 @@ for (var record of Q.party_support_records) {
     record['dnf'] = 0;
 }
 !}
-

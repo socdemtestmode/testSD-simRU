@@ -1,6 +1,6 @@
 title: Гонка Брюнинга со временем
 subtitle: Ближайшее окружение Гинденбурга плетёт против него заговор…
-view-if: chancellor = "Brüning" and (year = 1932 and month >= 5) and president = "Hindenburg" and spd_in_government = 0 and (hindenburg_angry_bruning >= 200 or (hindenburg_angry_bruning >= 175 and hindenburg_sacked)) and not presidential_powers and not cvp_formed and not reparations_resolved
+view-if: chancellor = "Брюнинг" and (year = 1932 and month >= 5) and president = "Гинденбург" and spd_in_government = 0 and (hindenburg_angry_bruning >= 200 or (hindenburg_angry_bruning >= 175 and hindenburg_sacked)) and not presidential_powers and not cvp_formed and not reparations_resolved
 on-arrival: bruning_joever = 1
 new-page: true
 tags: event
@@ -36,7 +36,7 @@ go-to: successor_menu
 
 @goerdeler
 title: Карл Фридрих Гёрделер?
-subtitle: Рейхскомиссар по ценам и обер-бургомистр Лейпцига, [? if dnvp_ideology == "Radical": бывший  ?]член <span style="color: #3E88B3;">**НННП**</span> member.
+subtitle: Рейхскомиссар по ценам и обер-бургомистр Лейпцига, [? if dnvp_ideology == "Радикалы": бывший  ?]член <span style="color: #3E88B3;">**НННП**</span> member.
 max-visits: 1
 on-arrival: goerdeler_seen = 1
 face-image: img/portraits/goerdeler.jpg
@@ -49,13 +49,13 @@ go-to: successor_menu
 
 @westarp
 title: Куно фон Вестарп?
-subtitle: Предпочтительный кандидат Гинденбурга, и [? if dnvp_leader != "Westarp": бывший лидер ?] <span style="color: #3E88B3;">**НННП**</span> party leader.
+subtitle: Предпочтительный кандидат Гинденбурга, и [? if dnvp_leader != "Вестарп": бывший лидер ?] <span style="color: #3E88B3;">**НННП**</span> party leader.
 max-visits: 1
 on-arrival: westarp_seen = 1
 face-image: img/portraits/Kuno_von_Westarp.jpg
 go-to: successor_menu
 
-Любимчик Гинденбурга — [? if dnvp_leader != "Westarp": бывший  ?]лидер<span style="color: #3E88B3;">** НННП**</span>, сыгравший важнейшую роль в переизбрании Гинденбурга. Все эти годы они поддерживали связь, и их объединяет ненависть к Гугенбергу. Несмотря на это, на встрече с Гинденбургом Вестарп отказался от поста канцлера и высказался против отставки Брюнинга и проведения новых выборов, которые уничтожили бы немецкие центристские партии.
+Любимчик Гинденбурга — [? if dnvp_leader != "Вестарп": бывший  ?]лидер<span style="color: #3E88B3;">** НННП**</span>, сыгравший важнейшую роль в переизбрании Гинденбурга. Все эти годы они поддерживали связь, и их объединяет ненависть к Гугенбергу. Несмотря на это, на встрече с Гинденбургом Вестарп отказался от поста канцлера и высказался против отставки Брюнинга и проведения новых выборов, которые уничтожили бы немецкие центристские партии.
 
 Даже когда Гинденбург расплакался — стратегия, которая раньше срабатывала с Брюнингом, — Вестарп остался твёрд в своём отказе. Вестарп не станет новым канцлером.
 
@@ -63,7 +63,7 @@ go-to: successor_menu
 @papen
 title: Франц фон Папен?
 subtitle: Относительно неизвестный католический консерватор из <span style="color: #000000;">Партии Центра</span>. Предпочтительный кандидат Шлейхера.
-on-arrival: spd_toleration = 0; spd_toleration_right = 0; chancellor = "Papen"; chancellor_party = "I"; schleicher_papen_r -= 1
+on-arrival: spd_toleration = 0; spd_toleration_right = 0; chancellor = "Папен"; chancellor_party = "I"; schleicher_papen_r -= 1
 view-if: westarp_seen and goerdeler_seen
 face-image: img/portraits/PapenFranz.jpg
 

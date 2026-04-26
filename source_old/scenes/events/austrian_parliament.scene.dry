@@ -18,11 +18,18 @@ on-display: {!
 !}
 tags: event
 
+# Must control foreign ministry or have made contact with Austrian socialists.
+
 = Приостановка деятельности австрийского парламента
 
 Из-за спорного законопроекта о забастовке железнодорожников в Национальном совете Австрии все три его председателя подали в отставку, оставив совет без руководства. Это вылилось в конституционный кризис. Австрийский канцлер Энгельберт Дольфус воспользовался им, приостановив деятельность парламента и начав править с помощью чрезвычайных указов, сформировав «<span style="color: #7A3C00;">австрофашистское</span>» правительство. Дольфус укрепляет свою власть, преследуя политических оппонентов, в особенности наших товарищей <span style="color: #A50034;">социал-демократов</span> из <span style="color: #A50034;">**СДПА**</span> (<span style="color: #A50034;">Социал-демократической рабочей партии Австрии</span>).
 
 Мы можем что-нибудь предпринять?
+
+# - use EU to sanction Austria (will prevent civil war and restore democracy)
+# - apply diplomatic pressure to Austria (without EU)
+# - fund the Schutzbund
+# after this, supporting Austrians will raise sdapo_strength; if sdapo_strength >= 2, they'll enter a long civil war; if sdapo_strength >= 5, they'll win.
 
 - @eu_sanctions: Призвать <span style="color: #001489;">Европейский</span> <span style="color: #FFDD00;">союз</span> ввести санкции против Австрии, если Национальный совет не будет восстановлен.
 - @diplomatic_pressure: Оказать дипломатическое давление на Австрию с целью восстановления Национального совета.
@@ -61,4 +68,3 @@ choose-if: resources >= 1
 @nothing
 
 К сожалению, мы ничем не можем помочь нашим австрийским товарищам.
-

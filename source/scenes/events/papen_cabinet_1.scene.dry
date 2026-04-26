@@ -1,7 +1,7 @@
 title: Папен представляет кабинет
 subtitle: «Кабинет баронов» — так его называют.
-view-if: chancellor = "Papen" and papen_time == 1
-on-arrival: chancellor_party = "I"; finance_minister_party = "I"; interior_minister_party = "DNVP"; economic_minister_party = "I"; labor_minister_party = "I"; justice_minister_party = "DNVP"; foreign_minister_party = "I"; agriculture_minister_party = "DNVP"; reichswehr_minister = "I"
+view-if: chancellor = "Папен" and papen_time == 1
+on-arrival: chancellor_party = "I"; finance_minister_party = "I"; interior_minister_party = "НННП"; economic_minister_party = "I"; labor_minister_party = "I"; justice_minister_party = "НННП"; foreign_minister_party = "I"; agriculture_minister_party = "НННП"; reichswehr_minister = "I"
 new-page: true
 tags: event
 max-visits: 1
@@ -24,7 +24,7 @@ on-display: {!
 
 Единственная партия, формально представленная в кабинете, — это <span style="color: #3E88B3;">**НННП**</span>, которой достались три министерских портфеля. Остальные посты заняты независимыми политиками правого толка, что соответствует заявленной Папеном цели сформировать правительство, «свободное от партийного влияния». Шлейхер получил повышение до министра обороны, откуда он намерен управлять правительством из-за кулис.
 
-Сейчас только гугенберговская [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**НФГ**</span> ?] готова поддержать кабинет, когда вновь соберётся рейхстаг.
+Сейчас только гугенберговская [? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Умеренные": <span style="color: #003755;">**НФГ**</span> ?] готова поддержать кабинет, когда вновь соберётся рейхстаг.
 
 - @papen
 

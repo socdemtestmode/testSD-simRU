@@ -1,0 +1,24 @@
+title: Подъём <span style="color: #7A3C00;">крайне</span> <span style="color: #3E88B3;">правых</span>?
+subtitle: Начало конца.
+view-if: chancellor == "Seldte"
+on-arrival: spd_in_government = 0
+tags: event
+new-page: true
+
+Когда во главе Германии стоят Зельдте и Гергт, а <span style="color: #7A3C00;">крайне</span> <span style="color: #3E88B3;">правая</span> коалиция «Новый Гарцбург» правит с помощью президентских указов, начало конца близко.
+
+Однако у двух партий коалиции есть непримиримые разногласия по вопросу о германской <span style="color: #808080;">монархии</span> и дальнейших действиях, и поскольку <span style="color: #3E88B3;">националисты</span> имеют преимущество над своими <span class="tooltip-text" title="good mod">динамичными</span> коллегами, похоже, этому союзу не суждено просуществовать долго. Более того, ожидается, что нынешнее правительство будет воздерживаться от любых шагов по восстановлению монархии до референдума 1935 года, и кабинет министров должен продержаться до этого момента.
+
+Что же нам теперь делать?
+
+- @fight: Мы будем сражаться на улицах, чтобы не дать Зельдте укрепить свою власть.
+- @game_over: We will vote against the government in the Reichstag.
+
+
+
+@fight
+
+Мы понимаем, что это означает гражданскую войну, причём против всей мощи государства?
+
+- @civil_war: Yes.
+- @game_over: We are not ready for war. Instead, we will vote against the government in the Reichstag.

@@ -78,12 +78,12 @@ Q.ddp_thuringia_elections_vote = Q.ddp_votes*thuringia_adjustment_factors.ddp;
 Q.lvp_thuringia_elections_vote = Q.lvp_votes*thuringia_adjustment_factors.lvp;
 if (!Q.stegerwald_path) Q.z_thuringia_elections_vote = Q.z_votes*thuringia_adjustment_factors.z;
 if (Q.stegerwald_path) Q.z_thuringia_elections_vote = Q.z_votes * 0.8;
-if (Q.dvp_leader != "Scholz") thuringia_adjustment_factors.dvp += 0.1;
+if (Q.dvp_leader != "Шольц") thuringia_adjustment_factors.dvp += 0.1;
 Q.dvp_thuringia_elections_vote = Q.dvp_votes*thuringia_adjustment_factors.dvp;
-if (Q.dnvp_ideology == "Moderate") thuringia_adjustment_factors.dnvp += 1.0;
+if (Q.dnvp_ideology == "Умеренные") thuringia_adjustment_factors.dnvp += 1.0;
 Q.dnvp_thuringia_elections_vote = Q.dnvp_votes*thuringia_adjustment_factors.dnvp;
 Q.nsdap_thuringia_elections_vote = Q.nsdap_votes*thuringia_adjustment_factors.nsdap;
-if (Q.dvp_leader != "Scholz") thuringia_adjustment_factors.other -= 0.1;
+if (Q.dvp_leader != "Шольц") thuringia_adjustment_factors.other -= 0.1;
 if (Q.stolper_program_adopted) thuringia_adjustment_factors.other -= 0.1;
 Q.other_thuringia_elections_vote = Q.other_votes*thuringia_adjustment_factors.other;
 Q.kvp_thuringia_elections_vote = Q.kvp_votes*thuringia_adjustment_factors.kvp;
@@ -209,10 +209,10 @@ if (Q.total_r_thuringia > 0) {
 }
 
 let farm_share = 0.6;
-if (Q.dnvp_ideology == "Moderate") farm_share -= 0.3;
+if (Q.dnvp_ideology == "Умеренные") farm_share -= 0.3;
 let wp_share = 0.35;
 if (Q.stolper_program_adopted) wp_share -= 0.1;
-if (Q.dvp_leader != "Scholz") wp_share -= 0.1;
+if (Q.dvp_leader != "Шольц") wp_share -= 0.1;
 let other_share = 0.05;
 
 let total_share = wp_share + farm_share + other_share;
@@ -298,8 +298,8 @@ Q.spd_coalition_thuringia = parseFloat((Q.spd_r_thuringia + Q.ddp_r_thuringia + 
 on-display: {!
 data = [{
     "id": "kpd",
-    "legend": "KPD",
-    "name": "KPD",
+    "legend": "КПГ",
+    "name": "КПГ",
     "seats": Math.round(Q.kpd_r_thuringia * 0.53),
 }];
 
@@ -314,8 +314,8 @@ if (Q.sapd_formed && Q.sapd_r_thuringia) {
 
 data = data.concat([{
     "id": "spd",
-    "legend": "SPD",
-    "name": "SPD",
+    "legend": "СДПГ",
+    "name": "СДПГ",
     "seats": Math.round(Q.spd_r_thuringia * 0.53),
 }]);
 
@@ -331,8 +331,8 @@ if (Q.ddp_r_thuringia && !Q.lvp_formed) {
 if (Q.lvp_r_thuringia && Q.lvp_formed) {
     data.push({
         "id": "lvp",
-        "legend": "LVP",
-        "name": "LVP",
+        "legend": "ЛНП",
+        "name": "ЛНП",
         "seats": Math.round(Q.lvp_r_thuringia * 0.53),
     });
 }
@@ -340,8 +340,8 @@ if (Q.lvp_r_thuringia && Q.lvp_formed) {
 if (Q.z_r_thuringia) {
     data.push({
         "id": "z",
-        "legend": "Center",
-        "name": "Center",
+        "legend": "Центр",
+        "name": "Центр",
         "seats": Math.round(Q.z_r_thuringia * 0.53),
     });
 }
@@ -349,8 +349,8 @@ if (Q.z_r_thuringia) {
 if (Q.dvp_r_thuringia && !Q.lvp_formed && Q.dvp_exist) {
     data.push({
         "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
+        "legend": "ННП",
+        "name": "ННП",
         "seats": Math.round(Q.dvp_r_thuringia * 0.53),
     });
 }
@@ -380,8 +380,8 @@ if (Q.kvp_formed && Q.kvp_r_thuringia) {
 
 data = data.concat([{
     "id": "dnvp",
-    "legend": "DNVP",
-    "name": "DNVP",
+    "legend": "НННП",
+    "name": "НННП",
     "seats": Math.round(Q.dnvp_r_thuringia * 0.53),
 }]);
 if (Q.dnf_formed && Q.dnf_r_thuringia) {
@@ -394,8 +394,8 @@ if (Q.dnf_formed && Q.dnf_r_thuringia) {
 }
 data = data.concat([{
     "id": "nsdap",
-    "legend": "NSDAP",
-    "name": "NSDAP",
+    "legend": "НСДАП",
+    "name": "НСДАП",
     "seats": Math.round(Q.nsdap_r_thuringia * 0.53),
 }, ]);
 
@@ -456,7 +456,7 @@ go-to: thuringia_coalition_menu
 
 Буржуазная коалиция ([? if z_r_thuringia: <span style="color: #000000;">**[+ z_party_name +]**</span> +  ?][? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> + <span style="color: #C0A054;">**ННП**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] + <span style="color: #7FCEB1;">**ХНПКЗ**</span> + <span style="color: #b8996f;">**ЭП**</span>[? if kvp_formed: &nbsp;+ <span style="color: #0087DC;">**КНП**</span>  ?] + <span style="color: #3E88B3;">**НННП**</span>): [+ bourgeois_coalition_thuringia +]%
 
-Правая коалиция ([? if z_r_thuringia: <span style="color: #000000;">**[+ z_party_name +]**</span> +  ?][? if not lvp_formed: <span style="color: #C0A054;">**ННП**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] + <span style="color: #7FCEB1;">**ХНПКЗ**</span> + <span style="color: #b8996f;">**ЭП**</span>[? if kvp_formed: &nbsp;+ <span style="color: #0087DC;">**КНП**</span>  ?] + <span style="color: #3E88B3;">**НННП**</span>[? if dnvp_ideology == "Moderate": &nbsp;+ <span style="color: #003755;">**НФГ**</span>  ?] + <span style="color: #7A3C00;">**НСДАП**</span>): [+ far_right_coalition_thuringia +]%
+Правая коалиция ([? if z_r_thuringia: <span style="color: #000000;">**[+ z_party_name +]**</span> +  ?][? if not lvp_formed: <span style="color: #C0A054;">**ННП**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] + <span style="color: #7FCEB1;">**ХНПКЗ**</span> + <span style="color: #b8996f;">**ЭП**</span>[? if kvp_formed: &nbsp;+ <span style="color: #0087DC;">**КНП**</span>  ?] + <span style="color: #3E88B3;">**НННП**</span>[? if dnvp_ideology == "Умеренные": &nbsp;+ <span style="color: #003755;">**НФГ**</span>  ?] + <span style="color: #7A3C00;">**НСДАП**</span>): [+ far_right_coalition_thuringia +]%
 
 [? if nsdap_thuringia_elections_vote >= 8: Стремительный рост популярности <span style="color: #7A3C00;">**НСДАП**</span> на земельных и местных выборах, безусловно, заслуживает пристального внимания. ?]
 
@@ -465,19 +465,19 @@ go-to: thuringia_coalition_menu
 on-arrival: {!
 let dvp_toleration_threshold = 50;
 let lvp_toleration_threshold = 60;
-if (Q.dvp_leader == "Scholz") {
+if (Q.dvp_leader == "Шольц") {
     dvp_toleration_threshold += 5;
-} else if (Q.dvp_leader == "Curtius") {
+} else if (Q.dvp_leader == "Курциус") {
     dvp_toleration_threshold -= 5;
 }
-if (Q.dvp_ideology == "Right") {
+if (Q.dvp_ideology == "Правые") {
     dvp_toleration_threshold += 10;
-} else if (Q.dvp_ideology == "Left") {
+} else if (Q.dvp_ideology == "Левые") {
     dvp_toleration_threshold -= 10;
 }
-if (Q.lvp_ideology == "Right") {
+if (Q.lvp_ideology == "Правые") {
     lvp_toleration_threshold += 15;
-} else if (Q.lvp_ideology == "Left") {
+} else if (Q.lvp_ideology == "Левые") {
     lvp_toleration_threshold -= 5;
 }
 if (Q.united_left_thuringia >= 50) {
@@ -523,7 +523,7 @@ face-image: img/portraits/frick.jpg
 
 Вильгельм Фрик, осуждённый участник Пивного путча, становится первым <span style="color: #7A3C00;">нацистом</span> в Германии, занявшим министерский пост. Он получает контроль над министерствами внутренних дел и образования и, приняв простым большинством голосов «Закон о чрезвычайных полномочиях» в качестве чрезвычайного декрета, получает власть для коренного преобразования Тюрингии.
 
-Прошли времена <span style="color: #c00000;">Красной</span> Тюрингии. Подозреваемые <span style="color: #c00000;">социалисты</span> и <span style="color: #D3C24D;">демократы</span> массово изгоняются из госаппарата. Создается государственная полиция, в которую Фрик предпочитает набирать <span style="color: #7A3C00;">нацистских</span> чиновников. Все учителя и мэры из числа <span style="color: #700000;">коммунистов</span> уволены, а газеты, критикующие его политику, запрещаются. [? if prussia_leader == "Braun" and interior_minister_party == "SPD": К счастью, Карлу Зеверингу удаётся остановить приём <span style="color: #7A3C00;">нацистов</span> в полицию, приостановив государственные субсидии, что фактически положило конец этой практике.  ?]
+Прошли времена <span style="color: #c00000;">Красной</span> Тюрингии. Подозреваемые <span style="color: #c00000;">социалисты</span> и <span style="color: #D3C24D;">демократы</span> массово изгоняются из госаппарата. Создается государственная полиция, в которую Фрик предпочитает набирать <span style="color: #7A3C00;">нацистских</span> чиновников. Все учителя и мэры из числа <span style="color: #700000;">коммунистов</span> уволены, а газеты, критикующие его политику, запрещаются. [? if prussia_leader == "Браун" and interior_minister_party == "СДПГ": К счастью, Карлу Зеверингу удаётся остановить приём <span style="color: #7A3C00;">нацистов</span> в полицию, приостановив государственные субсидии, что фактически положило конец этой практике.  ?]
 
 Контролируя министерство образования, Фрик назначает исследователей расовых теорий и известных <span style="color: #7A3C00;">нацистов</span> на руководящие посты во многих университетах и запрещает антивоенную книгу *«На Западном фронте без перемен»* к прочтению и постановке. Его попытки предоставить Гитлеру германское гражданство до сих пор не увенчались успехом, что вынуждает Гитлера искать другие пути.
 
@@ -540,7 +540,7 @@ on-arrival: thuringia_right = 1; new_middle_dvp += 2; old_middle_dvp += 2; new_m
 @grand_coalition_thuringia
 title: Сформирована [? if lvp_formed: <span style="color: #000000;">Вей</span><span style="color: #DD0000;">ма</span><span style="color: #FFCC00;">рская</span> ?][? if not lvp_formed: Большая ?] Коалиция!
 subtitle: Нам каким-то образом удалось примириться с буржуазными партиями: теперь они снова готовы править вместе с нами.
-unavailable-subtitle: [? if z_relation < 60 and stegerwald_path: Нам нужно улучшить отношения с [? if z_party_name != "CVP": <span style="color: #000000;">Партией Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?].  ?][? if dvp_toleration_threshold_fail: Нам нужно улучшить отношения с [? if not lvp_formed: <span style="color: #C0A054;">ННП</span> ?][? if lvp_formed: <span style="color: #FFCC00;">ЛНП</span> ?]. ?]
+unavailable-subtitle: [? if z_relation < 60 and stegerwald_path: Нам нужно улучшить отношения с [? if z_party_name != "ХНП": <span style="color: #000000;">Партией Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?].  ?][? if dvp_toleration_threshold_fail: Нам нужно улучшить отношения с [? if not lvp_formed: <span style="color: #C0A054;">ННП</span> ?][? if lvp_formed: <span style="color: #FFCC00;">ЛНП</span> ?]. ?]
 view-if: spd_coalition_thuringia >= 50
 choose-if: spd_coalition_possible
 on-arrival: thuringia_spd = 1; rural_nsdap -= 2; new_middle_nsdap -= 2; old_middle_nsdap -= 2; new_middle_spd += 2; old_middle_spd += 2; rural_spd += 2; z_relation += 3; ddp_relation += 3; lvp_relation += 3; pro_republic += 3; prussian_police_loyalty += 0.03; sa_strength -= 25
@@ -553,7 +553,7 @@ on-arrival: thuringia_spd = 1; rural_nsdap -= 2; new_middle_nsdap -= 2; old_midd
 @united_left_thuringia
 title: The <span style="color: #c00000;">**СДПГ**</span> сформирует коалиционное правительство с <span style="color: #700000;">**КПГ**</span>.
 subtitle: История повторится.
-view-if: left_coalition_thuringia >= 50 and (kpd_relation >= 40 and kpd_leader == "Conciliators") or (kpd_relation >= 60 and kpd_leader != "Conciliators")
+view-if: left_coalition_thuringia >= 50 and (kpd_relation >= 40 and kpd_leader == "Примиренцы") or (kpd_relation >= 60 and kpd_leader != "Примиренцы")
 on-arrival: red_thuringia = 1; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5; lvp_relation -= 5; coup_progress += 3; hindenburg_angry += 40; rfb_militancy += 0.05; rfb_strength += 100; sa_strength += 50; sh_strength += 50; strife += 1; workers_spd += 3; workers_kpd += 3; unemployed_spd += 3; new_middle_spd -= 3; old_middle_spd -= 3; rural_spd -= 3; communist_coalition += 3; kpd_relation += 10
 on-display: {!  
     var cardEl = document.createElement('div');  
@@ -591,19 +591,19 @@ view-if: bourgeois_coalition_thuringia < 50 and far_right_coalition_thuringia < 
 on-arrival: {!
 let dvp_toleration_threshold = 30;
 let lvp_toleration_threshold = 40;
-if (Q.dvp_leader == "Scholz") {
+if (Q.dvp_leader == "Шольц") {
     dvp_toleration_threshold += 5;
-} else if (Q.dvp_leader == "Curtius") {
+} else if (Q.dvp_leader == "Курциус") {
     dvp_toleration_threshold -= 5;
 }
-if (Q.dvp_ideology == "Right") {
+if (Q.dvp_ideology == "Правые") {
     dvp_toleration_threshold += 10;
-} else if (Q.dvp_ideology == "Left") {
+} else if (Q.dvp_ideology == "Левые") {
     dvp_toleration_threshold -= 10;
 }
-if (Q.lvp_ideology == "Right") {
+if (Q.lvp_ideology == "Правые") {
     lvp_toleration_threshold += 15;
-} else if (Q.lvp_ideology == "Left") {
+} else if (Q.lvp_ideology == "Левые") {
     lvp_toleration_threshold -= 5;
 }
 if (Q.left_coalition_thuringia >= 50) {

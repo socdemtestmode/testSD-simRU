@@ -89,4 +89,3 @@ on-arrival: ddp_relation -= 3; ddp_right += 3; ddp_cohesion -= 3
 on-arrival: ddp_relation -= 5; ddp_right += 5
 
 The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> остались одни.
-

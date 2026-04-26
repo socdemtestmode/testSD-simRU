@@ -17,4 +17,3 @@ new-page: true
 @back
 on-arrival: last_cabinet_action = 0
 go-to: root
-

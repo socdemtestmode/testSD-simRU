@@ -1,6 +1,6 @@
 title: [+ nsdap_chancellor +] назначен канцлером!
 subtitle: Начало конца…
-view-if: chancellor = "Schleicher" and schleicher_time == 7 and schleicher_explode and schleicher_coup
+view-if: chancellor = "Шляйхер" and schleicher_time == 7 and schleicher_explode and schleicher_coup
 new-page: true
 tags: event
 priority: -6
@@ -34,7 +34,7 @@ title: Будущий кабинет [+ nsdap_chancellor +]а встречает
 
 > *«Если новый кабинет не будет сформирован до одиннадцати часов, армия выступит. Нам угрожает военная диктатура под руководством Шлейхера и Хаммерштейна».*
 
- - Франц фон Папен, лидерам [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**НФГ**</span> ?], [+ year +]
+ - Франц фон Папен, лидерам [? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Умеренные": <span style="color: #003755;">**НФГ**</span> ?], [+ year +]
 
 - @nazi_3
 
@@ -49,7 +49,7 @@ if (Q.dnvp_r < 8 && !Q.hugenberg_dvp) Q.hugenberg_hitler_r += 1;
 if (Q.dnvp_r >= 8 && !Q.hugenberg_dvp) Q.hugenberg_hitler_r -= 1;
 if (Q.dnvp_r >= 10 && !Q.hugenberg_dvp) Q.hugenberg_hitler_r -= 1;
 
-if (Q.prussia_leader != "Schleicher") Q.hugenberg_hitler_r -= 1;
+if (Q.prussia_leader != "Шляйхер") Q.hugenberg_hitler_r -= 1;
 
 if (Q.dnvp_r + Q.dvp_r < 8 && Q.hugenberg_dvp) Q.hugenberg_hitler_r += 1;
 if (Q.dnvp_r + Q.dvp_r < 10 && Q.hugenberg_dvp) Q.hugenberg_hitler_r += 1;
@@ -57,7 +57,7 @@ if (Q.dnvp_r + Q.dvp_r >= 10 && Q.hugenberg_dvp) Q.hugenberg_hitler_r -= 1;
 if (Q.dnvp_r + Q.dvp_r >= 12 && Q.hugenberg_dvp) Q.hugenberg_hitler_r -= 1;
 !}
 
-Один из лидеров <span style="color: #3E88B3;">**Стального Шлема**</span>, наряду с Отто Шмидтом-Ганновером из [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**НФГ**</span> ?], выражает серьёзные сомнения по поводу [+ nsdap_chancellor +]а и его канцлерства.
+Один из лидеров <span style="color: #3E88B3;">**Стального Шлема**</span>, наряду с Отто Шмидтом-Ганновером из [? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Умеренные": <span style="color: #003755;">**НФГ**</span> ?], выражает серьёзные сомнения по поводу [+ nsdap_chancellor +]а и его канцлерства.
 
 Согласие Дюстерберга крайне важно, чтобы другой лидер организации, Зельдте, вошёл в кабинет. Но Дюстерберг, ставший мишенью для атак <span style="color: #7A3C00;">нацистов</span> из-за своего <span style="color: #005EB8;">еврейского</span> происхождения, по-прежнему с большим недоверием относится к правительству [+ nsdap_chancellor +]а.
 
@@ -72,9 +72,9 @@ title: Гитлер приведён к присяге.
 subtitle: Мы потерпели поражение.
 on-arrival: {!
 Q.chancellor = Q.nsdap_chancellor;
-Q.chancellor_party = "NSDAP";
-Q.vice_chancellor = "Papen";
-if (Q.prussia_leader == "Schleicher") {
+Q.chancellor_party = "НСДАП";
+Q.vice_chancellor = "Папен";
+if (Q.prussia_leader == "Шляйхер") {
     Q.in_right_coalition_prussia = 0;
     Q.in_weimar_coalition_prussia = 0;
     Q.in_grand_coalition_prussia = 0;
@@ -86,7 +86,7 @@ if (Q.prussia_leader == "Schleicher") {
     Q.in_minority_weimar_coalition_prussia = 0;
     Q.spd_prussia = 0;
     Q.right_prussia = 0;
-    Q.prussia_leader = "Papen"
+    Q.prussia_leader = "Папен"
 }
 !}
 
@@ -168,11 +168,11 @@ go-to: something_1
 
 
 @something_1
-on-arrival: month += 2; week -= 1; month -= 1 if week < 1; year += 1 if month > 12; month -= 12 if month > 12; chancellor = "Hitler"
+on-arrival: month += 2; week -= 1; month -= 1 if week < 1; year += 1 if month > 12; month -= 12 if month > 12; chancellor = "Гитлер"
 
 Звучат речи. Проходят голосования. На улицах свистят пули. Некоторых <span style="color: #c00000;">социалистов</span> убивают или сажают в тюрьму. Другие бегут из страны. Что вообще могут решить голоса в такой момент?
 
-Рейхстаг сожжён, якобы иностранным <span style="color: #700000;">коммунистом</span>. Вслед за этим <span style="color: #7A3C00;">нацисты</span> издают указы, дающие им неограниченную власть. Они, вместе с [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnf_formed: <span style="color: #003755;">**НФГ**</span> ?], получат большинство на следующих выборах. [? if nsdap_chancellor != "Hitler": Гитлера возвращают из Австрии и назначают канцлером. ?]
+Рейхстаг сожжён, якобы иностранным <span style="color: #700000;">коммунистом</span>. Вслед за этим <span style="color: #7A3C00;">нацисты</span> издают указы, дающие им неограниченную власть. Они, вместе с [? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnf_formed: <span style="color: #003755;">**НФГ**</span> ?], получат большинство на следующих выборах. [? if nsdap_chancellor != "Гитлер": Гитлера возвращают из Австрии и назначают канцлером. ?]
 
 - @enabling_act
 
@@ -208,7 +208,7 @@ set-bg: img/reichstag_fire.jpg
 
 = Закон о чрезвычайных полномочиях
 
-Вместе с [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnf_formed: <span style="color: #003755;">**НФГ**</span> ?], а также благодаря диктаторским полномочиям, предоставленным Декретом о поджоге Рейхстага, <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правые</span> получили больше, чем просто абсолютное большинство.
+Вместе с [? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnf_formed: <span style="color: #003755;">**НФГ**</span> ?], а также благодаря диктаторским полномочиям, предоставленным Декретом о поджоге Рейхстага, <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правые</span> получили больше, чем просто абсолютное большинство.
 
 Закон считается конституционной поправкой, для принятия которой требуется одобрение двух третей голосов депутатов Рейхстага. <span style="color: #700000;">**Коммунисты**</span> фактически запрещены и многие представляющие <span style="color: #c00000;">**СДПГ**</span> депутаты заключены в тюрьму на основании Декрета о поджоге Рейхстага. Решающим фактором становится <span style="color: #000000;">Партия Центра</span>, стремящаяся спасти католическое население от преследований и нового «Культуркампфа».
 
@@ -265,7 +265,7 @@ choose-if: hugenberg_hitler_r <= -2
 
 @nazi_7
 title: Кто теперь сменит Шлейхера?
-on-arrival: chancellor = "Papen"; prussia_leader = "Papen"; papen_back = 1
+on-arrival: chancellor = "Папен"; prussia_leader = "Папен"; papen_back = 1
 
 Пока фон Папен продолжает умолять Гинденбурга пересмотреть решение о назначении [+ nsdap_chancellor +]а, он, по сути, исключил свою кандидатуру из рассмотрения. Тем не менее, Гинденбург по-прежнему считает своей первоочередной задачей сместить с должности Шлейхера — канцлера, который, по слухам, готовил против него переворот.
 

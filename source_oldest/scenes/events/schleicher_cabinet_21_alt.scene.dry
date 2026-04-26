@@ -1,0 +1,57 @@
+title: Величайшая из коалиций
+subtitle: Рейхстаг возобновляет работу.
+view-if: chancellor == "Treviranus" and next_reichstag_time == rubicon_time and next_reichstag_time > 0
+on-arrival: pro_republic += 8
+max-visits: 1
+new-page: true
+tags: event
+
+= Рейхстаг возобновляет работу
+
+Гинденбург ясно дал понять: он ожидает от Тревирануса формирования парламентского кабинета. Канцлер предпринял шаги к значительному расширению правящей коалиции за счёт левых партий. Главным сюрпризом стало возвращение Брюнинга на пост министра иностранных дел.
+
+Хотя Тревиранус и его союзники заинтересованы в «приручении» <span style="color: #7A3C00;">нацистов</span>, <span style="color: #6A1E1E;">**НСС**</span> не желает становиться младшим партнёром в узкопартийном консервативном правительстве.
+
+На прошлой неделе Тревиранус официально представил новый кабинет, в который вошли министры от <span style="color: #fe9e00;">**СДПГ(с)**</span> слева и до его собственной партии справа. Тем не менее, эта разношёрстная коалиция вряд ли сможет заручиться поддержкой большинства: над ней нависла угроза вотума недоверия.
+
+- @reichstag_yay
+- @reichstag_nay
+
+
+@reichstag_yay
+title: Голосовать за вотум недоверия и тем самым добиться назначения новых выборов.
+subtitle: Опять новые выборы?
+on-arrival: {!
+if (Q.prussia_leader == "Strasser") Q.prussia_leader = "Goerdeler";
+if (Q.vice_chancellor == "Strasser") Q.vice_chancellor = "Stegerwald";
+
+Q.next_election_week = Q.week + 6;
+Q.next_election_month = Q.month;
+Q.next_election_year = Q.year;
+Q.next_election_time = Q.time;
+
+let added_months = Math.floor(Q.next_election_week / 4);
+Q.next_election_month += added_months;
+Q.next_election_time += added_months;
+Q.next_election_week = Q.next_election_week % 4;
+if (Q.next_election_week === 0) Q.next_election_week = 1;
+
+if (Q.next_election_month > 12) {
+    Q.next_election_month -= 12;
+    Q.next_election_year += 1;
+}
+!}
+
+Как и ожидалось, Тревиранус не в состоянии сколотить большинство без <span style="color: #c00000;">**СДПГ**</span> или <span style="color: #6A1E1E;">**НСС**</span>. Его правительство пока что остаётся временно исполняющим обязанности.
+
+Новые выборы в Рейхстаг назначены на [+ next_election_month : month +] [+ next_election_year +], неделя [+ next_election_week +].
+
+
+@reichstag_nay
+title: Проголосовать против вотума недоверия и «терпеть» работу кабинета.
+subtitle: Парламентская система Германии отчаянно нуждается в легитимности. Проведение новых выборов сейчас рискует ещё сильнее подтолкнуть избирателей к радикалам.
+choose-if: super_secret_mode
+unavailable-subtitle: Наша парламентская фракция всё равно нас не послушает.
+
+Чёрт.
+

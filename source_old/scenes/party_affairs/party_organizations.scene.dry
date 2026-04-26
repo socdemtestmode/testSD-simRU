@@ -6,6 +6,7 @@ view-if: party_organizations_timer <= 0
 on-arrival: month_actions += 1; party_organizations_timer = 6;
 card-image: img/Mann_der_Arbeit.jpg
 max-visits: 6
+#subtitle: Outside of electoral politics, the SPD runs a social world onto itself.
 
 = Партийные организации
 
@@ -36,7 +37,7 @@ unavailable-subtitle: Недостаточно ресурсов.
 subtitle: -1 ресурс
 on-arrival: resources -= 1; workers_aid += 1; unemployed_spd += 5*(1 - dissent);
 
-Мы увеличили финансирование «Рабочего благосостояния».[? if black_thursday_seen > 0 : В эпоху экономического кризиса это поможет нам укрепить свои позиции среди безработных. ?]
+Мы увеличили финансирование «Рабочего благосостояния».[? if black_thursday_seen > 0 :  В эпоху экономического кризиса это поможет нам укрепить свои позиции среди безработных. ?]
 
 
 @culture

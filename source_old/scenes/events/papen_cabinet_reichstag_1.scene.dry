@@ -46,7 +46,6 @@ go-to: goring if largest_party == "NSDAP" and z_relation < 55 and hitler_right_c
 
 
 
-
 @goring
 on-arrival: {!
 Q.next_reichstag_time = Q.rubicon_time + 2;
@@ -107,9 +106,8 @@ Q.reichstag_president = "Löbe";
 if (!(Q.largest_party != "NSDAP" && ((Q.weimar_coalition >= 40) || (Q.popular_front_coalition >= 50 && Q.kpd_relation >= 50)))) Q.reichstag_president = "Eßer";
 !}
 
-[? if largest_party != "NSDAP": По традиции рейхстага, поскольку <span style="color: #c00000;">**СДПГ**</span> — крупнейшая партия, <span style="color: #000000;">Партия центра</span> считает себя обязанной поддержать нас, независимо от наших с ними отношений. ?][? if (z_relation >= 55 or hitler_right_coalition < 50) and largest_party == "NSDAP": Однако <span style="color: #000000;">«Партия Центра»</span>, не в силах поддержать избрание <span style="color: #7A3C00;">нациста</span> на пост председателя Рейхстага, нарушает традицию и избирает нашего кандидата. ?]
+[? if largest_party != "NSDAP": По традиции рейхстага, поскольку <span style="color: #c00000;">**СДПГ**</span> — крупнейшая партия, <span style="color: #000000;">Партия центра</span> считает себя обязанной поддержать нас, независимо от наших с ними отношений.  ?][? if (z_relation >= 55 or hitler_right_coalition < 50) and largest_party == "NSDAP": Однако <span style="color: #000000;">«Партия Центра»</span>, не в силах поддержать избрание <span style="color: #7A3C00;">нациста</span> на пост председателя Рейхстага, нарушает традицию и избирает нашего кандидата.  ?]
 
-[? if largest_party != "NSDAP" and ((weimar_coalition >= 40) or (popular_front_coalition >= 50 and kpd_relation >= 50)): Пауль Лёбе вновь избран председателем Рейхстага — этот пост он занимал на протяжении большей части существования республики. ?][? if not (largest_party != "NSDAP" and ((weimar_coalition >= 40) or (popular_front_coalition >= 50 and kpd_relation >= 50))): К сожалению, очень немногие другие партии готовы — или имеют достаточно голосов — поддержать нашего кандидата, Пауля Лёбе, и палата вместо этого останавливается на представителе <span style="color: #000000;">Центра</span> Томасе Эссере. ?]
+[? if largest_party != "NSDAP" and ((weimar_coalition >= 40) or (popular_front_coalition >= 50 and kpd_relation >= 50)): Пауль Лёбе вновь избран председателем Рейхстага — этот пост он занимал на протяжении большей части существования республики. ?][? if not (largest_party != "NSDAP" and ((weimar_coalition >= 40) or (popular_front_coalition >= 50 and kpd_relation >= 50))): К сожалению, очень немногие другие партии готовы — или имеют достаточно голосов — поддержать нашего кандидата, Пауля Лёбе, и палата вместо этого останавливается на представителе <span style="color: #000000;">Центра</span> Томасе Эссере.  ?]
 
 Однако комитет старейшин Рейхстага, вопреки нашим возражениям и при поддержке партий справа от нас, проголосовал за двухнедельный перерыв в работе.
-

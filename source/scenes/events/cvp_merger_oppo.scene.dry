@@ -1,6 +1,6 @@
 title: Партия <span style="color: #000000;">Центра</span> объединяется с <span style="color: #3E88B3;">**НННП**</span>!
 subtitle: Рождается гигант немецких правых сил…
-view-if: year >= 1931 and (100 - z_relation) >= spd_votes and z_ideology == "Right" and (z_leader == "Stegerwald" or z_leader == "Adenauer") and (((in_spd_majority or in_left_front) and (not spd_prussia or in_left_front_prussia or in_spd_majority_prussia)) or (spd_votes + pro_republic + left_strength >= 150)) and dnvp_leader == "Treviranus" and stegerwald_transformation_timer == 0 and not cvp_formed and not dkp_merger_waiting
+view-if: year >= 1931 and (100 - z_relation) >= spd_votes and z_ideology == "Правые" and (z_leader == "Штегервальд" or z_leader == "Аденауэр") and (((in_spd_majority or in_left_front) and (not spd_prussia or in_left_front_prussia or in_spd_majority_prussia)) or (spd_votes + pro_republic + left_strength >= 150)) and dnvp_leader == "Тревиранус" and stegerwald_transformation_timer == 0 and not cvp_formed and not dkp_merger_waiting
 max-visits: 1
 tags: event
 priority: 3

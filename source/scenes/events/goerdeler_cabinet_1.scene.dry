@@ -1,7 +1,7 @@
 title: Гёрделер представляет кабинет
 subtitle: Исключительно «временная мера» до тех пор, пока <span style="color: #7A3C00;">национальная</span> <span style="color: #3E88B3;">оппозиция</span> не войдёт в правительство.
-view-if: chancellor = "Goerdeler" and goerdeler_pre_time == 1
-on-arrival: finance_minister_party = "I"; interior_minister_party = "DNVP"; economic_minister_party = "I"; labor_minister_party = "I"; justice_minister_party = "I"; foreign_minister_party = "I"; agriculture_minister_party = "DNVP"; reichswehr_minister = "I"
+view-if: chancellor = "Гёрделер" and goerdeler_pre_time == 1
+on-arrival: finance_minister_party = "I"; interior_minister_party = "НННП"; economic_minister_party = "I"; labor_minister_party = "I"; justice_minister_party = "I"; foreign_minister_party = "I"; agriculture_minister_party = "НННП"; reichswehr_minister = "I"
 new-page: true
 tags: event
 max-visits: 1
@@ -13,7 +13,7 @@ face-image: img/portraits/goerdeler.jpg
 
 Министры-<span style="color: #D3C24D;">леволибералы</span> отправлены в отставку, что знаменует разрыв Гёрделера с прежним курсом. <span style="color: #3E88B3;">**НННП**</span> получила значительную роль в правительстве: Вильгельм фон Гайль получил портфель министра внутренних дел, а Тревиранус — министра транспорта. Мартин Шиле, работавший в правительстве Маркса, снова станет министром сельского хозяйства.
 
-Партия[? if z_party_name != "CVP": <span style="color: #000000;">Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] всё больше опасается за свою роль в кабинете Гёрделера, отказываясь выдвигать таких министров, как Адам Штегервальд и Брюнинг, на посты министров труда и иностранных дел соответственно. Их отказ работать вместе с антисоциалистом Гугенбергом серьёзно осложнил текущие переговоры.
+Партия[? if z_party_name != "ХНП": <span style="color: #000000;">Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] всё больше опасается за свою роль в кабинете Гёрделера, отказываясь выдвигать таких министров, как Адам Штегервальд и Брюнинг, на посты министров труда и иностранных дел соответственно. Их отказ работать вместе с антисоциалистом Гугенбергом серьёзно осложнил текущие переговоры.
 
 - @goerdeler
 
@@ -92,7 +92,7 @@ if (Q.stegerwald_path) {
     Q.rural_z += 4;
 }
 
-if (Q.dnvp_ideology === "Radical") {
+if (Q.dnvp_ideology === "Радикалы") {
     Q.new_middle_dnvp += 6;
     Q.old_middle_dnvp += 6;
     Q.rural_dnvp += 6;

@@ -1,7 +1,7 @@
 title: Приостановка деятельности австрийского парламента
 new-page: true
 subtitle: Наш южный сосед скатывается к диктатуре.
-view-if: year = 1933 and month = 3 and ((spd_in_government and foreign_minister_party = "SPD") or (austria_relation >= 1))
+view-if: year = 1933 and month = 3 and ((spd_in_government and foreign_minister_party = "СДПГ") or (austria_relation >= 1))
 max-visits: 1
 on-arrival: austrian_parliament_seen = 1
 on-display: {!  
@@ -47,7 +47,7 @@ on-arrival: sdapo_strength += 3; sdapo_strength += 1 if customs_union; eu_austri
 
 
 @diplomatic_pressure
-view-if: foreign_minister_party = "SPD"
+view-if: foreign_minister_party = "СДПГ"
 on-arrival: sdapo_strength += 1; sdapo_strength += 2 if customs_union
 
 У нас всё ещё есть значительное экономическое влияние в Австрии и возможность ввести санкции.

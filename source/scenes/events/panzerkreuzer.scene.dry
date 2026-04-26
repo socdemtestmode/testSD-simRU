@@ -4,7 +4,7 @@ tags: event, govt_affairs
 is-card: true
 on-arrival: panzerkreuzer_seen = 1
 face-image: img/panzerkreuzer.jpg
-view-if: panzerkreuzer_seen = 0 and year = 1928 and month >= 8 and month < 10 and reichswehr_minister_party != "SPD" and spd_in_government = 1
+view-if: panzerkreuzer_seen = 0 and year = 1928 and month >= 8 and month < 10 and reichswehr_minister_party != "СДПГ" and spd_in_government = 1
 new-page: true
 
 = Броненосец
@@ -28,11 +28,11 @@ on-arrival: left_dissent += 10; labor_dissent += 5; center_dissent += 5; reformi
 
 @vote_no
 on-arrival: dvp_relation -= 8; lvp_relation -= 5; z_relation -= 5; pacifism += 1; nationalism -= 2*(1-dissent); coalition_dissent += 1; dvp_right += 1; ddp_left += 1; ddp_cohesion -= 1; lvp_right += 1; hindenburg_angry += 5; panzerkreuzer_no = 1;
-go-to: vote_no_chancellor if chancellor_party = "SPD"; vote_no_pass if chancellor_party != "SPD"
+go-to: vote_no_chancellor if chancellor_party = "СДПГ"; vote_no_pass if chancellor_party != "СДПГ"
 
 
 @vote_no_chancellor
-go-to: braun if chancellor = "Braun"; muller if chancellor = "Müller"
+go-to: braun if chancellor = "Браун"; muller if chancellor = "Мюллер"
 
 
 @braun

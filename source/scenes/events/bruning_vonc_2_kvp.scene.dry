@@ -42,7 +42,7 @@ go-to: recalculate
 
 @recalculate
 on-arrival: {!
-if (Q.year >= 1930 && Q.year < 1932 && !Q.spd_in_government && Q.chancellor == "Brüning" && Q.bourgeois_negotiations == 0 && Q.dvp_exist) {
+if (Q.year >= 1930 && Q.year < 1932 && !Q.spd_in_government && Q.chancellor == "Брюнинг" && Q.bourgeois_negotiations == 0 && Q.dvp_exist) {
     Q.bourgeois_negotiations = 1;
     Q.bourgeois_negotiations_1 = 1;
     Q.bourgeois_negotiations_1930_timer = 6;

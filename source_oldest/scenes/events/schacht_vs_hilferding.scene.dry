@@ -1,0 +1,40 @@
+title: Ялмар Шахт против Гильфердинга
+new-page: true
+view-if: year = 1929 and month >= 11 and spd_in_government = 1 and finance_minister = "Hilferding" and finance_minister_party = "SPD"
+tags: event
+max-visits: 1
+face-image: img/portraits/SchachtHjalmar.jpg
+
+= Шахт против Гильфердинга
+
+Президент Рейхсбанка Ялмар Шахт раскритиковал министра финансов Гильфердинга из <span style="color: #c00000;">**СДПГ**</span> за предложенный им бюджет, который, по его словам, несбалансирован, содержит слишком много расходов на социальное обеспечение и недостаточно снижает налоги для самых состоятельных граждан и предприятий. Что ещё важнее, он отказывается предоставлять кредиты, необходимые для функционирования правительства, до тех пор, пока Гильфердинг либо кардинально не изменит проект бюджета, либо не уйдёт в отставку.
+
+Разумеется, эта критика необоснованна, но буржуазным кругам на это наплевать.
+
+- @expose_him: Разоблачить его <span style="color: #7A3C00;">реакционные</span> махинации!
+- @work_with: Работать с ним над проектом бюджета.
+- @hilferding_resign: Гильфердинг должен уйти в отставку.
+
+
+@expose_him
+on-arrival: schacht_exposed = 1
+view-if: investigate_far_right >= 1
+
+Мы предаём огласке связи Шахта с <span style="color: #7A3C00;">нацистами</span>. Так или иначе, он запуган и воздерживается от дальнейших действий против нас.
+
+
+@work_with
+
+После второго проекта бюджета Шахт всё ещё считает бюджет Гильфердинга неприемлемым, несмотря на введение более регрессивных налогов и сокращение расходов.
+
+- @hilferding_resign: Гильфердинг должен уйти в отставку.
+
+
+
+@hilferding_resign
+on-arrival: finance_minister_party = "DVP" if in_grand_coalition; finance_minister_party = "LVP" if (in_grand_coalition or in_weimar_coalition) and lvp_formed; finance_minister_party = "I" if (in_weimar_coalition and not lvp_formed) or in_popular_front or in_left_front; finance_minister = "Moldenhauer"; finance_minister = "Köhler" if (in_weimar_coalition and not lvp_formed) or in_popular_front; economic_minister_granted = 1 if economic_minister_party != "SPD"; economic_minister_party = "SPD" if economic_minister_party != "SPD"; economic_minister = "Schmidt" if economic_minister_party = "SPD"
+
+Не имея другого выбора, Гильфердинг подал в отставку с поста министра финансов. Его место займёт [? if (in_grand_coalition or (in_weimar_coalition and lvp_formed)): правоцентрист ?][? if not in_grand_coalition: технократ ?] candidate.
+
+[? if economic_minister_granted = 1: В качестве компенсации наши партнёры по коалиции передали нам министерство экономики. ?]
+

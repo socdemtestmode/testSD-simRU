@@ -20,4 +20,3 @@ call: set_next_election_time_prussia
 Как и ожидалось, демократический процесс возвращается в Пруссию. [+ prussia_leader +] назначил новые выборы.
 
 Новые выборы в Пруссии назначены на [+ next_election_month_prussia : month +] [+ next_election_year_prussia +].
-

@@ -8,7 +8,7 @@ max-visits: 1
 
 = Вотум недоверия
 
-После распада нашей коалиции президент [+ president +] назначил главой правительства Генриха Брюнинга от [? if z_party_name != "CVP": партии <span style="color: #000000;">Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП,**</span> ?] главой правительства, поддерживаемого буржуазными силами.[? if center_right_coalition < 50: Однако, несмотря на размер его коалиции, у <span style="color: #000000;">**[+ z_party_name +]**</span> нет большинства, даже с их предпочтительным партнёром, <span style="color: #FFCC00;">либералами</span>. ?][? if center_right_coalition >= 50: Большинства можно достичь, если <span style="color: #000000;">**[+ z_party_name +]**</span> сформирует коалицию с их предпочтительным партнёром, <span style="color: #FFCC00;">либералами</span>. ?]
+После распада нашей коалиции президент [+ president +] назначил главой правительства Генриха Брюнинга от [? if z_party_name != "CVP": партии <span style="color: #000000;">Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП,**</span> ?] главой правительства, поддерживаемого буржуазными силами.[? if center_right_coalition < 50: Однако, несмотря на размер его коалиции, у <span style="color: #000000;">**[+ z_party_name +]**</span> нет большинства, даже с их предпочтительным партнёром, <span style="color: #FFCC00;">либералами</span>.  ?][? if center_right_coalition >= 50: Большинства можно достичь, если <span style="color: #000000;">**[+ z_party_name +]**</span> сформирует коалицию с их предпочтительным партнёром, <span style="color: #FFCC00;">либералами</span>.  ?]
 
 Брюнинг реорганизовал кабинет, включив в него более мелкие партии правее нас, такие как <span style="color: #b8996f;">**ЭП**</span> и различные другие мелкие буржуазные партии.[? if center_right_coalition < 50: Теперь перед нами стоит выбор: либо «терпеть» правительство, чтобы не допустить усиления экстремистов в рейхстаге, либо проголосовать за отставку Брюнинга и добиваться новых выборов. ?]
 
@@ -56,4 +56,3 @@ view-if: center_right_coalition >= 50
 on-arrival: spd_in_government = 0; spd_toleration = 0; spd_toleration_right = 0; in_grand_coalition = 0; in_center_right_coalition = 1; in_right_coalition = 0; ddp_relation -= 5; dvp_relation -= 5; z_relation -= 5; lvp_relation -= 5; old_middle_dnf -= 2; ddp_right += 1; bourgeois_cooperation += 2; liberal_cooperation += 1
 
 Буржуазия выстояла и без нашей поддержки, оставив нас в оппозиции.
-

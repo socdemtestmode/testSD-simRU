@@ -19,7 +19,7 @@ go-to: main_rally; sa_disrupt if sa_force > 25 and not sa_banned and not return_
 
 
 @police_protect
-view-if: prussia_leader = "Braun" or prussia_leader = "Rosenfeld"
+view-if: prussia_leader = "Браун" or prussia_leader = "Розенфельд"
 on-arrival: police_protect_success = prussian_police_loyalty * prussian_police_militancy * prussian_police_strength*2 - sa_militancy*sa_strength;
 go-to: police_protect_win if police_protect_success >= 0; police_protect_lose if police_protect_success < 0
 
@@ -54,7 +54,7 @@ on-arrival: workers_nsdap += 3; rb_strength -= 50
 
 
 @both_protect
-view-if: prussia_leader = "Braun" or prussia_leader = "Rosenfeld"
+view-if: prussia_leader = "Браун" or prussia_leader = "Розенфельд"
 choose-if: prussian_police_training > 0
 unavailable-subtitle: Лояльные подразделения полиции никогда прежде не координировали свои действия с Рейхсбаннером.
 on-arrival: rb_success = rb_strength*rb_militancy - sa_strength*sa_militancy + prussian_police_loyalty*prussian_police_militancy*prussian_police_strength*2; strife += 1

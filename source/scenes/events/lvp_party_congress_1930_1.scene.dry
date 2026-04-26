@@ -17,11 +17,11 @@ if (Q.in_grand_coalition || Q.in_weimar_coalition) {
     Q.lvp_relation -= 8;
 }
 
-if (Q.agriculture_minister_party == "LVP" || Q.economic_minister_party == "LVP" || (Q.chancellor == "Brüning" && !Q.spd_in_government)) {
+if (Q.agriculture_minister_party == "ЛНП" || Q.economic_minister_party == "ЛНП" || (Q.chancellor == "Брюнинг" && !Q.spd_in_government)) {
     Q.dietrich_points += 1;
 }
 
-if (Q.foreign_minister_party == "LVP" || (Q.chancellor == "Brüning" && !Q.spd_in_government)) {
+if (Q.foreign_minister_party == "ЛНП" || (Q.chancellor == "Брюнинг" && !Q.spd_in_government)) {
     Q.curtius_points += 1;
 }
 
@@ -29,7 +29,7 @@ if (Q.spd_votes >= 30) {
     Q.dingeldey_points += 2;
 }
 
-if (Q.chancellor == "Brüning" && Q.spd_toleration) {
+if (Q.chancellor == "Брюнинг" && Q.spd_toleration) {
     Q.dietrich_points += 1;
     Q.curtius_points -= 1;
     Q.luther_points -= 1;
@@ -60,36 +60,36 @@ if (Q.pro_republic >= 60) {
 }
 
 if (Q.lvp_votes >= 11.5) {
-    if (Q.lvp_ideology == "Right") {
+    if (Q.lvp_ideology == "Правые") {
         Q.lvp_left += 3;
-    } else if (Q.lvp_ideology == "Left") {
+    } else if (Q.lvp_ideology == "Левые") {
         Q.lvp_right += 3;
     }
     Q.luther_points += 5;
 }
 
-if (Q.prussia_leader == "Luther") {
+if (Q.prussia_leader == "Лютер") {
     Q.luther_points += 3;
 }
 
 if (Q.lvp_right > (Q.lvp_left*1.5) || (Q.lvp_right > (Q.lvp_left + 5))) {
-    Q.lvp_ideology = "Right"
+    Q.lvp_ideology = "Правые"
 } else if (Q.lvp_left > (Q.lvp_right*1.5) || (Q.lvp_left > (Q.lvp_right + 5))) {
-    Q.lvp_ideology = "Left"
+    Q.lvp_ideology = "Левые"
 } else {
-    Q.lvp_ideology = "Moderate"
+    Q.lvp_ideology = "Умеренные"
 }
 
-if (Q.lvp_ideology == "Right") {
+if (Q.lvp_ideology == "Правые") {
    Q.dingeldey_points += 2;
    Q.curtius_points += 1;
 }
-if (Q.lvp_ideology == "Moderate") {
+if (Q.lvp_ideology == "Умеренные") {
     Q.luther_points += 3;
     Q.dietrich_points += 1;
     Q.curtius_points += 1;
 }
-if (Q.lvp_ideology == "Left") {
+if (Q.lvp_ideology == "Левые") {
     Q.heuss_points += 3;
     Q.dietrich_points += 1;
 }
@@ -143,7 +143,7 @@ new-page: true
 
 Неудивительно, что слияние двух партий, печально известных своей фракционной борьбой, привело к сильному разладу во внутренней политике <span style="color: #FFCC00;">**ЛНП**</span>. Даже такой объединяющей фигуре, как Ганс Лютер, не удалось подавить бесконечные склоки между партийными фракциями. Экономическая депрессия лишь усугубила эти разногласия: споры возникают даже по таким широко поддерживаемым вопросам, как парламентское правление, что делает согласованные действия практически невозможными.
 
-[? if chancellor == "Brüning" and not spd_in_government: The <span style="color: #FFCC00;">**ЛНП**</span> значительно сместилась вправо из-за своего участия в [? if in_right_coalition: правоцентристской коалиции Брюнинга ?][? if not in_right_coalition: чрезвычайном правительстве Брюнинга ?]. Эти выборы сыграют ключевую роль в определении их политики сотрудничества с нами в обозримом будущем. ?] Хотя ожидается, что Ганс Лютер будет переизбран, отдельные кандидаты от разных фракций партии могут заявить о себе, если большинство утратит доверие к его руководству.
+[? if chancellor == "Брюнинг" and not spd_in_government: The <span style="color: #FFCC00;">**ЛНП**</span> значительно сместилась вправо из-за своего участия в [? if in_right_coalition: правоцентристской коалиции Брюнинга ?][? if not in_right_coalition: чрезвычайном правительстве Брюнинга ?]. Эти выборы сыграют ключевую роль в определении их политики сотрудничества с нами в обозримом будущем. ?] Хотя ожидается, что Ганс Лютер будет переизбран, отдельные кандидаты от разных фракций партии могут заявить о себе, если большинство утратит доверие к его руководству.
 
 - @luther: Партия голосует…
 - @luther_fail: Партия голосует…
@@ -162,11 +162,11 @@ view-if: opposition_points > luther_points
 on-arrival: {!
 Q.luther_endorsed_candidate = "None"
 
-if (Q.lvp_ideology == "Right") {
+if (Q.lvp_ideology == "Правые") {
     Q.luther_endorsed_candidate = "Eduard Dingeldey"
-} else if (Q.lvp_ideology == "Moderate") {
+} else if (Q.lvp_ideology == "Умеренные") {
     Q.luther_endorsed_candidate = "Julius Curtius"
-} else if (Q.lvp_ideology == "Left") {
+} else if (Q.lvp_ideology == "Левые") {
     Q.luther_endorsed_candidate = "Hermann Dietrich"
 }
 
@@ -234,7 +234,7 @@ title: Теодор Хойс избран!
 subtitle: Хойс — <span style="color: #c00000;">социал-</span><span style="color: #000000;">респуб</span><span style="color: #DD0000;">ликан</span><span style="color: #FFCC00;">ец</span>, член бывшей <span style="color: #D3C24D;">**[+ ddp_name +]**</span>.
 unavailable-subtitle: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к <span style="color: #D3C24D;">[+ ddp_name +]</span> и её деловым крылом.
 choose-if: heuss_lead
-on-arrival: lvp_relation += 12; lvp_left += 7; lvp_leader = "Heuss"; pro_republic += (lvp_votes / 2); workers_lvp += 2; workers_spd -= 2; new_middle_lvp += 6; old_middle_lvp -= 3; old_middle_other += 5 if (dnvp_ideology == "Radical"); old_middle_dnvp += 5 if dnvp_ideology == "Moderate"; old_middle_kvp += 5; rural_lvp -= 5; rural_other += 5 if (dnvp_ideology == "Radical" and not kvp_formed); rural_dnvp += 5 if dnvp_ideology == "Moderate"; rural_kvp += 5; catholics_lvp += 3; catholics_spd -= 3; coalition_dissent -= 1; heuss_explode_time = time + 8; heuss_election_time = time
+on-arrival: lvp_relation += 12; lvp_left += 7; lvp_leader = "Хойс"; pro_republic += (lvp_votes / 2); workers_lvp += 2; workers_spd -= 2; new_middle_lvp += 6; old_middle_lvp -= 3; old_middle_other += 5 if (dnvp_ideology == "Радикалы"); old_middle_dnvp += 5 if dnvp_ideology == "Умеренные"; old_middle_kvp += 5; rural_lvp -= 5; rural_other += 5 if (dnvp_ideology == "Радикалы" and not kvp_formed); rural_dnvp += 5 if dnvp_ideology == "Умеренные"; rural_kvp += 5; catholics_lvp += 3; catholics_spd -= 3; coalition_dissent -= 1; heuss_explode_time = time + 8; heuss_election_time = time
 face-image: img/portraits/heuss.jpg
 
 Теодор Хойс, восходящая звезда и бывший член <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, избран председателем <span style="color: #FFCC00;">Либеральной народной партии</span>. В основном его поддерживает «Социально-республиканский кружок», состоящий из бывших членов <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, а также либеральных интеллектуалов и газет. Кроме того, Хойс заручился поддержкой и более широких партийных кругов благодаря своим умеренно-консервативным взглядам на экономические и национальные вопросы.
@@ -247,12 +247,12 @@ title: Герман Дитрих избран!
 subtitle: Дитрих — бывший лидер <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, делового крыла партии, и он несколько скептически относится к сотрудничеству с нами.
 unavailable-subtitle: [? if not heuss_lead: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к <span style="color: #D3C24D;">[+ ddp_name +]</span> деловым крылом партии. ?][? if heuss_lead: Его недостаток энергии и бремя правительственных обязанностей привели к тому, что партия предпочла ему Хойса. ?]
 choose-if: dietrich_lead
-on-arrival: lvp_relation += 7; lvp_left += 3; lvp_leader = "Dietrich"; pro_republic += 5; old_middle_lvp += 4; rural_lvp += 4; new_middle_lvp -= 4; dietrich_lvp_explode_time = time + 8; dietrich_election_time = time
+on-arrival: lvp_relation += 7; lvp_left += 3; lvp_leader = "Дитрих"; pro_republic += 5; old_middle_lvp += 4; rural_lvp += 4; new_middle_lvp -= 4; dietrich_lvp_explode_time = time + 8; dietrich_election_time = time
 face-image: img/portraits/dietrich.jpg
 
-Герман Дитрих, ранее связанный с деловым крылом <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, избран председателем <span style="color: #FFCC00;">**ЛНП**</span>. Дитриха в основном поддерживают мелкие предприниматели и сельские жители, и [? if chancellor == "Brüning" and not spd_in_government: он известен тем, что разрабатывал чрезвычайные указы Брюнинга, когда занимал пост министра финансов. ?][? if not (chancellor == "Brüning" and not spd_in_government): он известен своим бюджетным консерватизмом. ?]
+Герман Дитрих, ранее связанный с деловым крылом <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, избран председателем <span style="color: #FFCC00;">**ЛНП**</span>. Дитриха в основном поддерживают мелкие предприниматели и сельские жители, и [? if chancellor == "Брюнинг" and not spd_in_government: он известен тем, что разрабатывал чрезвычайные указы Брюнинга, когда занимал пост министра финансов. ?][? if not (chancellor == "Брюнинг" and not spd_in_government): он известен своим бюджетным консерватизмом. ?]
 
-Несмотря на это, Дитрих не так радикален, как промышленники из правого крыла партии, и готов сотрудничать с нами, если другого большинства не будет. Однако его лидерские качества, мягко говоря, не впечатляют. [? if agriculture_minister_party == "LVP" or economic_minister_party == "LVP": Обязанности в министерстве не позволяют ему заниматься повседневным руководством партией, которое теперь передано группе его соратников из делового крыла. ?]
+Несмотря на это, Дитрих не так радикален, как промышленники из правого крыла партии, и готов сотрудничать с нами, если другого большинства не будет. Однако его лидерские качества, мягко говоря, не впечатляют. [? if agriculture_minister_party == "ЛНП" or economic_minister_party == "ЛНП": Обязанности в министерстве не позволяют ему заниматься повседневным руководством партией, которое теперь передано группе его соратников из делового крыла. ?]
 
 
 @curtius
@@ -261,12 +261,12 @@ subtitle: Курциус, член бывшей <span style="color: #C0A054;">**
 unavailable-subtitle: [? if dingeldey_lead: В <span style="color: #FFCC00;">ЛНП</span> его воспринимают как слишком левого и указывают на его тусклый послужной список в качестве преемника Штреземана.  ?][? if dietrich_lead or heuss_lead: Левое крыло <span style="color: #FFCC00;">ЛНП</span> хочет избрать бывшего члена <span style="color: #D3C24D;">[+ ddp_name +]</span>, чтобы заменить Лютера.  ?][? if lvp_deadlock: Левое крыло <span style="color: #FFCC00;">ЛНП</span> хочет избрать бывшего члена <span style="color: #D3C24D;">[+ ddp_name +]</span>, в то время как правое крыло партии предпочитает более правого бывшего члена <span style="color: #C0A054;">ННП</span>. ?]
 choose-if: curtius_lead
 view-if: not curtius_resign_lvp and not (curtius_banking_crisis and banking_crisis_seen)
-on-arrival: lvp_relation += 7; lvp_left += 4; lvp_leader = "Curtius"; pro_republic += 5; old_middle_lvp += 6; new_middle_lvp += 6
+on-arrival: lvp_relation += 7; lvp_left += 4; lvp_leader = "Курциус"; pro_republic += 5; old_middle_lvp += 6; new_middle_lvp += 6
 face-image: img/portraits/curtius.jpg
 
 Юлиус Курциус, преемник Штреземана на посту министра иностранных дел и бывший член <span style="color: #C0A054;">**ННП**</span>, победил на выборах председателя партии и сменит на этом посту Лютера. Курциуса поддерживает „Прагматический центр“, и он выдвинут в качестве компромиссного кандидата.
 
-Как бывший член <span style="color: #C0A054;">**ННП**</span>, её левого крыла, он выступает за более тесное сотрудничество с нами. Однако его лидерство, мягко говоря, весьма невдохновляюще. [? if foreign_minister_party == "LVP": Обязанности в министерстве иностранных дел не позволяют ему заниматься повседневным управлением партией, которое теперь поручено группе его соратников из „Прагматического центра“. ?]
+Как бывший член <span style="color: #C0A054;">**ННП**</span>, её левого крыла, он выступает за более тесное сотрудничество с нами. Однако его лидерство, мягко говоря, весьма невдохновляюще. [? if foreign_minister_party == "ЛНП": Обязанности в министерстве иностранных дел не позволяют ему заниматься повседневным управлением партией, которое теперь поручено группе его соратников из „Прагматического центра“. ?]
 
 
 @dingeldey
@@ -274,7 +274,7 @@ title: Эдуард Дингельдей избран.
 subtitle: Дингельдей, член бывшей <span style="color: #C0A054;">**ННП**</span>: обычно ассоциировался с её промышленно-правым крылом.
 unavailable-subtitle: Право-промышленной фракции <span style="color: #FFCC00;">ЛНП</span> не хватает влияния, чтобы продвинуть своего кандидата.
 choose-if: dingeldey_lead
-on-arrival: lvp_relation -= 8; lvp_right += 5; lvp_leader = "Dingeldey"; new_middle_lvp -= 4; workers_lvp -= 2; old_middle_lvp += 3; coalition_dissent += 1; dingeldey_explode_time = time + 8; dingeldey_election_time = time
+on-arrival: lvp_relation -= 8; lvp_right += 5; lvp_leader = "Дингельдей"; new_middle_lvp -= 4; workers_lvp -= 2; old_middle_lvp += 3; coalition_dissent += 1; dingeldey_explode_time = time + 8; dingeldey_election_time = time
 face-image: img/portraits/dingeldey.jpg
 
 Эдуард Дингельдей, ранее участвовавший в движении за буржуазное единство, теперь избран председателем <span style="color: #FFCC00;">**ЛНП**</span>. Дингельдея поддерживают промышленники правого крыла партии, а также бывшие члены <span style="color: #C0A054;">**ННП**</span>. Похоже, он сосредоточен на содействии более тесному сотрудничеству с рядом партий между <span style="color: #FFCC00;">**ЛНП**</span> и <span style="color: #3E88B3;">**НННП**</span>.

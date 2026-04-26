@@ -1,15 +1,15 @@
-title: [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] трансформируется
+title: [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] трансформируется
 subtitle: Христианское рабочее движение переманивает рабочий класс.
-view-if: (year == 1929 and month >= 3) or (stegerwald_transformation_timer == 9) and z_leader == "Stegerwald"
+view-if: (year == 1929 and month >= 3) or (stegerwald_transformation_timer == 9) and z_leader == "Штегервальд"
 new-page: true
-on-arrival: workers_z += 5; new_middle_z += 10; old_middle_z += 10; rural_z += 10; unemployed_z += 4; workers_kpd -= 2; catholics_z -= 3; catholics -= 3; catholics_dnvp += 2 if dnvp_ideology == "Moderate"; workers_dnvp += 2 if dnvp_ideology == "Moderate"; new_middle_dnvp += 2 if dnvp_ideology == "Moderate"; catholics_other += 1; catholics_spd += 4; workers_ddp += 1; workers_lvp += 1; labor_dissent += 15; zentrum_disintegration += 1; dvp_right += 1; ddp_left += 1; lvp_right += 1; new_middle_other -= 3; old_middle_other -= 3; workers_other -= 1; rural_other -= 1; unemployed_other -= 1; liberal_cooperation += 8; bourgeois_cooperation += 3; pro_republic += 5; z_relation -= 5
+on-arrival: workers_z += 5; new_middle_z += 10; old_middle_z += 10; rural_z += 10; unemployed_z += 4; workers_kpd -= 2; catholics_z -= 3; catholics -= 3; catholics_dnvp += 2 if dnvp_ideology == "Умеренные"; workers_dnvp += 2 if dnvp_ideology == "Умеренные"; new_middle_dnvp += 2 if dnvp_ideology == "Умеренные"; catholics_other += 1; catholics_spd += 4; workers_ddp += 1; workers_lvp += 1; labor_dissent += 15; zentrum_disintegration += 1; dvp_right += 1; ddp_left += 1; lvp_right += 1; new_middle_other -= 3; old_middle_other -= 3; workers_other -= 1; rural_other -= 1; unemployed_other -= 1; liberal_cooperation += 8; bourgeois_cooperation += 3; pro_republic += 5; z_relation -= 5
 max-visits: 1
 tags: event
 face-image: img/campaign.jpg
 
-= [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] трансформируется в Народную партию.
+= [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] трансформируется в Народную партию.
 
-Будучи новоизбранным председателем [? if z_party_name != "CVP": <span style="color: #000000;">Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?], Адам Штегервальд расширяет агитацию в протестантских регионах и подавляет внутрипартийную оппозицию. Как профсоюзника, его уважают в христианском рабочем движении, которое и до того имело прочные связи с различными правыми организациями. [? if dnvp_ideology == "Moderate": Сотрудничество между различными христианскими профсоюзами усилилось. Теперь они переманивают рабочий электорат.  ?][? if dnvp_ideology == "Radical": Однако <span style="color: #3E88B3;">**Гугенберг**</span> следит за <span style="color: #6D5298;">христианско-социальным движением</span> и не потерпит никакого сотрудничества. Это значительно усложняет процесс без поддержки аффилированных с <span style="color: #3E88B3;">**НННП**</span> профсоюзов. Гугенберг бездействует, пока <span style="color: #3E88B3;">**НННП**</span> теряет избирателей, что разжигает серьёзные внутренние споры о будущем партии.  ?]
+Будучи новоизбранным председателем [? if z_party_name != "ХНП": <span style="color: #000000;">Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?], Адам Штегервальд расширяет агитацию в протестантских регионах и подавляет внутрипартийную оппозицию. Как профсоюзника, его уважают в христианском рабочем движении, которое и до того имело прочные связи с различными правыми организациями. [? if dnvp_ideology == "Умеренные": Сотрудничество между различными христианскими профсоюзами усилилось. Теперь они переманивают рабочий электорат.  ?][? if dnvp_ideology == "Радикалы": Однако <span style="color: #3E88B3;">**Гугенберг**</span> следит за <span style="color: #6D5298;">христианско-социальным движением</span> и не потерпит никакого сотрудничества. Это значительно усложняет процесс без поддержки аффилированных с <span style="color: #3E88B3;">**НННП**</span> профсоюзов. Гугенберг бездействует, пока <span style="color: #3E88B3;">**НННП**</span> теряет избирателей, что разжигает серьёзные внутренние споры о будущем партии.  ?]
 
 Это вызвало обеспокоенность у профсоюзников. Мы не можем сдать профсоюзы буржуазии.
 
@@ -39,4 +39,4 @@ on-arrival: resources -= 1; workers_kpd += 5; new_middle_spd += 6; old_middle_sp
 @nothing
 on-arrival: zentrum_disintegration += 1; 
 
-The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] продолжает оттягивать на себя голоса нашего основного электората.
+The [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] продолжает оттягивать на себя голоса нашего основного электората.

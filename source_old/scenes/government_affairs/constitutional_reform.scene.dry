@@ -7,8 +7,15 @@ on-arrival: month_actions += 1; constitutional_reform_timer += 12; pass_threshol
 card-image: img/portraits/RadbruchGustav.jpg
 go-to: reforms_menu
 tags: govt_affairs, cabinet
+#subtitle: Major changes to government.
+
+# technically you could do some trickery to get a 2/3 quorum in the Reichstag by stopping some people from attending... if the <span style="color: #7A3C00;">**NSDAP**</span> is boycotting the Reichstag, or if the <span style="color: #7A3C00;">**NSDAP**</span> or <span style="color: #3E88B3;">**DNVP**</span> are banned in the aftermath of a coup atempt...
+
+# alternatively, a constitutional referendum can be initiated, that requires a simple majority of voters to pass (as I understand article 76). This should depend on support for the republic and for democracy, and the relationships with the other parties (more similar to the presidential election).
 
 = Конституционная реформа
+
+# the ideas for constitutional reform here are based on the bundesrepublik basic law... I'm not sure if it's totally realistic to what someone like Mierendorff would've wanted.
 
 Многие неоревизионисты считают <span style="color: #000000;">Вей</span><span style="color: #DD0000;">мар</span><span style="color: #FFCC00;">скую</span> конституцию несовершенной. Они полагают, что ее статьи отчасти ответственны за нестабильность в стране, и их необходимо изменить, чтобы построить более стабильную демократическую республику. Свои идеи предлагают как <span style="color: #c00000;">социалисты</span>, так и <span style="color: #D3C24D;">либералы</span>.
 
@@ -42,9 +49,11 @@ if (Q.nsdap_normalized >= 0.2 ) {
 !}
 view-if: electoral_threshold = 0
 
+# The left is opposed to this.
+
 Некоторые политические мыслители считают, что в нестабильности республики виновато засилье мелких партий, и полагают, что повышение избирательного порога ослабит влияние небольших радикальных группировок. Партии, набравшие большинство голосов в том или ином избирательном округе, сохранят своё представительство — настоящий подарок для таких региональных партий, как <span style="color: #A2D8E0;">**БНП**</span>.
 
-Разумеется, малые партии выступят против этой реформы. [? if z_relation > 30 : The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] поддерживает эту реформу, в то время как её партнёры из <span style="color: #A2D8E0;">**БНП**</span> выступают против. ?] [? if kpd_relation > 50 and kpd_normalized >= 0.1 : Как ни странно, <span style="color: #700000;">**КПГ**</span> поддерживает эту реформу. ?] [? if nsdap_normalized >= 0.2 : The <span style="color: #7A3C00;">**НСДАП**</span> поддерживает эту реформу, так как считает, что может извлечь из неё выгоду. ?]
+Разумеется, малые партии выступят против этой реформы. [? if z_relation > 30 : The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] поддерживает эту реформу, в то время как её партнёры из <span style="color: #A2D8E0;">**БНП**</span> выступают против. ?] [? if kpd_relation > 50 and kpd_normalized >= 0.1 : Как ни странно, <span style="color: #700000;">**КПГ**</span> поддерживает эту реформу. ?] [? if nsdap_normalized >= 0.2 : The <span style="color: #7A3C00;">**НСДАП**</span> поддерживает эту реформу, так как считает, что может извлечь из неё выгоду.  ?]
 
 Левое крыло <span style="color: #c00000;">**СДПГ**</span> выступает против этого изменения, считая его антидемократическим.
 
@@ -55,11 +64,17 @@ view-if: electoral_threshold = 0
 
 @vote_threshold_2
 choose-if: reform_support >= pass_threshold
-unavailable-subtitle: У нас недостаточно поддержки для проведения этой политики.[? if pro_republic < 65 : У нас должен быть дополнительный запас голосов на референдуме, так как нам нужно большинство, а многие избиратели, не поддерживающие республику, не придут голосовать. ?] [? if z_relation <= 30 : Партия[? if z_party_name != "CVP": <span style="color: #000000;">Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] не доверяет нам настолько, чтобы поддержать эту политику. ?]
+unavailable-subtitle: У нас недостаточно поддержки для проведения этой политики.[? if pro_republic < 65 : У нас должен быть дополнительный запас голосов на референдуме, так как нам нужно большинство, а многие избиратели, не поддерживающие республику, не придут голосовать.  ?] [? if z_relation <= 30 : Партия[? if z_party_name != "CVP": <span style="color: #000000;">Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] не доверяет нам настолько, чтобы поддержать эту политику. ?]
 on-arrival: constitutional_reform += 1; electoral_threshold = 5; ddp_relation -= 25; dvp_relation -= 25; lvp_relation -= 5; left_dissent += 20; workers_dnvp += workers_other*0.4; workers_nsdap += workers_other*0.4; workers_other *= 0.1; new_middle_lvp += new_middle_other*0.5; old_middle_lvp += old_middle_other*0.5; new_middle_dvp += new_middle_other*0.3; new_middle_ddp += new_middle_other*0.15; new_middle_nsdap += new_middle_other*0.3; new_middle_other *= 0.1; old_middle_dvp += 0.3*old_middle_other; old_middle_ddp += old_middle_other*0.15; old_middle_nsdap += 0.3*old_middle_other; old_middle_dnvp += 0.3*old_middle_other; old_middle_other *= 0.1; rural_dvp += 0.1*rural_other; rural_lvp += 0.1*rural_other; rural_dnvp += 0.5*rural_other; rural_nsdap += 0.3*rural_other; rural_other *= 0.1; unemployed_nsdap += 0.3*unemployed_other; unemployed_kpd += 0.4*unemployed_other; unemployed_other *= 0.2; catholics_z += 0.6*catholics_other; catholics_other *= 0.1; ddp_right += 10; ddp_cohesion -= 3; lvp_right += 3; bourgeois_cooperation += 20; liberal_cooperation += 10
 achievement: verfassungsreform
 
+# this should result in a redistribution of votes - other parties should not get so many votes anymore. maybe ddp and dvp get a recovery of middle-class votes? or maybe they flow to the others.
+
+# TODO: add bourgeois mergers cuz of this
+
 Мы приняли конституционную поправку о повышении избирательного порога до 5%. Вероятно, это пойдёт на пользу крупным партиям и навредит малым.
+
+
 
 
 @constructive_vonc
@@ -75,7 +90,7 @@ if (!Q.stresemann_dead) {
 !}
 view-if: constructive_vonc = 0
 
-[? if z_relation >= 30 and not lvp_formed : Партии <span style="color: #000000;">Ве</span><span style="color: #DD0000;">йм</span><span style="color: #FFCC00;">ар</span>ской коалиции, <span style="color: #D3C24D;">**[+ ddp_name +]**</span> и [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?], поддерживают эту реформу, которая значительно повысит стабильность правительства. ?][? if z_relation >= 30 and lvp_formed : Партия[? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] поддерживает эту реформу, которая значительно повысит стабильность правительства, но <span style="color: #FFCC00;">**ЛНП**</span> по очевидным причинам остаётся категорически против. ?] [? if z_relation < 30 and not lvp_formed : The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> поддерживает эту реформу, но [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] недостаточно нам доверяет, чтобы поддержать конституционный референдум. ?][? if z_relation < 30 and lvp_formed : Партия[? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] недостаточно нам доверяет, чтобы поддержать конституционный референдум, а <span style="color: #FFCC00;">**ЛНП**</span> по очевидным причинам остаётся категорически против. ?] Более консервативные и радикальные правые партии и <span style="color: #700000;">**КПГ**</span> находятся в оппозиции, поскольку они, похоже, упиваются нестабильностью <span style="color: #000000;">рес</span><span style="color: #DD0000;">пуб</span><span style="color: #FFCC00;">ликанского</span> строя.
+[? if z_relation >= 30 and not lvp_formed : Партии <span style="color: #000000;">Ве</span><span style="color: #DD0000;">йм</span><span style="color: #FFCC00;">ар</span>ской коалиции, <span style="color: #D3C24D;">**[+ ddp_name +]**</span> и [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?], поддерживают эту реформу, которая значительно повысит стабильность правительства.  ?][? if z_relation >= 30 and lvp_formed : Партия[? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] поддерживает эту реформу, которая значительно повысит стабильность правительства, но <span style="color: #FFCC00;">**ЛНП**</span> по очевидным причинам остаётся категорически против. ?] [? if z_relation < 30 and not lvp_formed : The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> поддерживает эту реформу, но [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] недостаточно нам доверяет, чтобы поддержать конституционный референдум.  ?][? if z_relation < 30 and lvp_formed : Партия[? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] недостаточно нам доверяет, чтобы поддержать конституционный референдум, а <span style="color: #FFCC00;">**ЛНП**</span> по очевидным причинам остаётся категорически против. ?] Более консервативные и радикальные правые партии и <span style="color: #700000;">**КПГ**</span> находятся в оппозиции, поскольку они, похоже, упиваются нестабильностью <span style="color: #000000;">рес</span><span style="color: #DD0000;">пуб</span><span style="color: #FFCC00;">ликанского</span> строя.
 
 - @constructive_vonc_2: Проведите конституционный референдум, чтобы принять реформу!
 - @reforms_menu: Посмотреть другие варианты реформ.
@@ -83,7 +98,7 @@ view-if: constructive_vonc = 0
 
 @constructive_vonc_2
 choose-if: reform_support >= pass_threshold
-unavailable-subtitle: У нас недостаточно поддержки для проведения этой политики.[? if pro_republic < 65 : На референдуме нам потребуется дополнительный запас голосов, поскольку для победы нужно большинство от общего числа избирателей, а многие противники республики просто не придут голосовать. ?] [? if z_relation <= 30 : Партия[? if z_party_name != "CVP": <span style="color: #000000;">Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] не доверяет нам настолько, чтобы поддержать эту политику. ?]
+unavailable-subtitle: У нас недостаточно поддержки для проведения этой политики.[? if pro_republic < 65 : На референдуме нам потребуется дополнительный запас голосов, поскольку для победы нужно большинство от общего числа избирателей, а многие противники республики просто не придут голосовать.  ?] [? if z_relation <= 30 : Партия[? if z_party_name != "CVP": <span style="color: #000000;">Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] не доверяет нам настолько, чтобы поддержать эту политику. ?]
 on-arrival: constitutional_reform += 1; constructive_vonc = 1
 achievement: verfassungsreform
 
@@ -112,7 +127,7 @@ view-if: presidential_powers = 0
 
 Широкие президентские полномочия, предусмотренные конституцией, могут привести к <span style="color: #808080;">авторитаризму</span>. Поэтому мы можем поддержать реформы, которые ограничат полномочия президента, лишив его права в одностороннем порядке распускать избранное национальное правительство и смещать правительства земель.
 
-The <span style="color: #700000;">**КПГ**</span> выступает в поддержку этой реформы, оказавшись в жертвами <i>Reichsexekution (Имперской экзекуции)</i> в прошлом (когда поддерживаемые <span style="color: #700000;">**КПГ**</span> правительства земель в Тюрингии и Саксонии сместили). Демократы из [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] также поддерживают это.[? if president == "Hindenburg" or president_ideology == "Moderate": Однако консерваторы яростно выступают против, поскольку они рассматривают ограничение президентских полномочий как проявление неуважения к [+ president +]у. ?] [? if z_relation <= 65 and (president == "Hindenburg" or president_ideology == "Moderate") : Таким образом, [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] поддалась давлению и выступила против этих реформ[? if lvp_relation < 49 and (president == "Hindenburg" or president_ideology == "Moderate") and lvp_formed: &nbsp; вместе с большинством <span style="color: #FFCC00;">**ЛНП**</span> ?][? if lvp_relation >= 49 and (president == "Hindenburg" or president_ideology == "Moderate") and lvp_formed: &nbsp; однако большинство <span style="color: #FFCC00;">**ЛНП**</span> как-то удалось убедить ?]. ?] [? if z_relation > 65 and (president == "Hindenburg" or president_ideology == "Moderate") : Несмотря на это, [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] поддерживает предложенную реформу[? if lvp_relation < 49 and (president == "Hindenburg" or president_ideology == "Moderate") and lvp_formed: &nbsp; однако правых в <span style="color: #FFCC00;">**ЛНП**</span> убедить не удаётся ?][? if lvp_relation >= 49 and (president == "Hindenburg" or president_ideology == "Moderate") and lvp_formed: &nbsp; вместе с большинством <span style="color: #FFCC00;">**ЛНП**</span> ?]. ?] [? if president_ideology == "Left" : The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] поддерживает эту реформу. ?]
+The <span style="color: #700000;">**КПГ**</span> выступает в поддержку этой реформы, оказавшись в жертвами <i>Reichsexekution (Имперской экзекуции)</i> в прошлом (когда поддерживаемые <span style="color: #700000;">**КПГ**</span> правительства земель в Тюрингии и Саксонии сместили). Демократы из [? if not lvp_formed: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] также поддерживают это.[? if president == "Hindenburg" or president_ideology == "Moderate":  Однако консерваторы яростно выступают против, поскольку они рассматривают ограничение президентских полномочий как проявление неуважения к [+ president +]у. ?] [? if z_relation <= 65 and (president == "Hindenburg" or president_ideology == "Moderate") : Таким образом, [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] поддалась давлению и выступила против этих реформ[? if lvp_relation < 49 and (president == "Hindenburg" or president_ideology == "Moderate") and lvp_formed: &nbsp; вместе с большинством <span style="color: #FFCC00;">**ЛНП**</span> ?][? if lvp_relation >= 49 and (president == "Hindenburg" or president_ideology == "Moderate") and lvp_formed: &nbsp; однако большинство <span style="color: #FFCC00;">**ЛНП**</span> как-то удалось убедить  ?].  ?] [? if z_relation > 65 and (president == "Hindenburg" or president_ideology == "Moderate") : Несмотря на это, [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] поддерживает предложенную реформу[? if lvp_relation < 49 and (president == "Hindenburg" or president_ideology == "Moderate") and lvp_formed: &nbsp; однако правых в <span style="color: #FFCC00;">**ЛНП**</span> убедить не удаётся ?][? if lvp_relation >= 49 and (president == "Hindenburg" or president_ideology == "Moderate") and lvp_formed: &nbsp; вместе с большинством <span style="color: #FFCC00;">**ЛНП**</span> ?].  ?] [? if president_ideology == "Left" : The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] поддерживает эту реформу. ?]
 
 - @presidential_powers_2: Назначьте конституционный референдум, чтобы принять реформу!
 - @reforms_menu: Посмотреть другие варианты реформ.
@@ -120,7 +135,7 @@ The <span style="color: #700000;">**КПГ**</span> выступает в под
 
 @presidential_powers_2
 choose-if: reform_support >= pass_threshold
-unavailable-subtitle: У нас недостаточно поддержки для этой политики.[? if pro_republic < 65 : Нам потребуется дополнительный процент голосов на референдуме, так как нам нужно большинство, а многие сторонники монархии не будут участвовать. ?] [? if z_relation <= 49 and president != "Braun" : The [? if z_party_name != "CVP": <span style="color: #000000;">Партия центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] не доверяет нам настолько, чтобы поддержать эту политику. ?]
+unavailable-subtitle: У нас недостаточно поддержки для этой политики.[? if pro_republic < 65 : Нам потребуется дополнительный процент голосов на референдуме, так как нам нужно большинство, а многие сторонники монархии не будут участвовать.  ?] [? if z_relation <= 49 and president != "Braun" : The [? if z_party_name != "CVP": <span style="color: #000000;">Партия центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] не доверяет нам настолько, чтобы поддержать эту политику. ?]
 on-arrival: constitutional_reform += 1; presidential_powers = 1
 go-to: bundesrepublik if president == "Adenauer"
 achievement: verfassungsreform
@@ -133,12 +148,11 @@ achievement: bundesrepublik
 
 
 
-
 @constitutional_bans
 
+# Temporarily disable this for now - how would this interact with the already-extant law for the protection of the republic? This 
 
 
 
 @as_is
 go-to: root
-

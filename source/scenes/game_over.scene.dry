@@ -51,7 +51,7 @@ if (!dynamicMode && !historicalMode && Q.difficulty != 1) {
 
 if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1934 && Q.month > 7) || Q.year >= 1935)) {
   // Roter Zar von Preußen - At the end of the game, Otto Braun is president, chancellor, and minister-president of prussia at the same time.
-  if (Q.president == 'Braun' && Q.chancellor == 'Braun' && Q.prussia_leader == "Braun") {
+  if (Q.president == 'Браун' && Q.chancellor == 'Браун' && Q.prussia_leader == "Браун") {
       this.achieve('red_tzar_of_prussia');
   }
   // Bürgerkrieg - enter a long civil war.
@@ -90,7 +90,7 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
   }
 
   // Sohn seiner Klasse - elect Ernst Thälmann as president or chancellor.
-  if (Q.chancellor == "Thälmann" || Q.president == "Thälmann") {
+  if (Q.chancellor == "Тельман" || Q.president == "Тельман") {
       this.achieve('sohn_seiner_klasse');
   }
   // Die Rote Fahne - join the KPD in the May Day march.
@@ -117,7 +117,7 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
       this.achieve('raterepublik');
   }
   // Polykrise - survive both a fascist coup and a capital strike.
-  if (Q.march_on_berlin_seen && Q.capital_strike_seen && Q.chancellor != "Hitler" && Q.president != "Hitler" && !Q.total_defeat) {
+  if (Q.march_on_berlin_seen && Q.capital_strike_seen && Q.chancellor != "Гитлер" && Q.president != "Гитлер" && !Q.total_defeat) {
       this.achieve("polykrise");
   }
   // Wirtschaftsexperiment - implement two different economic plans.
@@ -129,17 +129,17 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
       this.achieve("syndikalismus");
   }
   // Stolperstein - lose the civil war against Hitler.
-  if ((Q.chancellor_party == "NSDAP" || Q.chancellor == "Hitler" || Q.president == "Göring" || Q.president == "Frick" || Q.president == "Hitler") && Q.total_defeat) {
+  if ((Q.chancellor_party == "НСДАП" || Q.chancellor == "Гитлер" || Q.president == "Геринг" || Q.president == "Фрик" || Q.president == "Гитлер") && Q.total_defeat) {
       this.achieve('stolperstein');
   }
   // Heidelberger Programm - fulfill the goals of the Heidelberg programm - increase welfare, reform justice, support women's rights, progressive taxation, works councils, build a European  Union.
   if ((Q.welfare > 0 && Q.judicial_reform >= 2 && Q.womens_work >= 1 && Q.family_law >= 1 && Q.upper_tax_rates > Q.lower_tax_rates && Q.works_councils > 0 && Q.eu > 0)) {
       this.achieve('heidelberger_programm');
   }
-  if (Q.chancellor == "Adenauer" && Q.president == "Heuss") {
+  if (Q.chancellor == "Аденауэр" && Q.president == "Хойс") {
       this.achieve('traumteam');
   }
-  if ((Q.president != "Hammerstein" && Q.president != "Hitler" && Q.president != "Göring" && Q.president != "Seldte" && Q.chancellor != "Hitler" && !Q.hammerstein_win) && (Q.return_to_normalcy || Q.spd_votes >= 50 || Q.spd_r >= 50 && Q.pro_republic >= 80 || Q.nsdap_votes < 8) && (Q.spd_votes >= 50 || Q.spd_r >= 50) && !Q.civil_war_seen && !Q.rubicon) {
+  if ((Q.president != "Хаммерштейн" && Q.president != "Гитлер" && Q.president != "Геринг" && Q.president != "Зельдте" && Q.chancellor != "Гитлер" && !Q.hammerstein_win) && (Q.return_to_normalcy || Q.spd_votes >= 50 || Q.spd_r >= 50 && Q.pro_republic >= 80 || Q.nsdap_votes < 8) && (Q.spd_votes >= 50 || Q.spd_r >= 50) && !Q.civil_war_seen && !Q.rubicon) {
       this.achieve('ldp');
   }
   if (Q.civil_war_seen && Q.long_war && Q.west_aid) {
@@ -174,7 +174,7 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
     Q.second_largest_party = 'dnvp';
   }
 
-  if (Q.true_christian_democracy && Q.dnvp_leader == "Treviranus" && Q.second_largest_party == "dnvp") {
+  if (Q.true_christian_democracy && Q.dnvp_leader == "Тревиранус" && Q.second_largest_party == "dnvp") {
       this.achieve('deutsche_tory_demokratie');
   }
 
@@ -182,7 +182,7 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
       this.achieve('schwarze_null');
   }
 
-  if (Q.dnvp_leader == "Lambach" && Q.dnvp_r >= 20 && Q.workers_dnvp_normalized >= Q.workers_spd_normalized && Q.workers_dnvp_normalized >= Q.workers_kpd_normalized && Q.workers_dnvp_normalized >= Q.workers_z_normalized && Q.workers_dnvp_normalized >= Q.workers_nsdap_normalized) {
+  if (Q.dnvp_leader == "Ламбах" && Q.dnvp_r >= 20 && Q.workers_dnvp_normalized >= Q.workers_spd_normalized && Q.workers_dnvp_normalized >= Q.workers_kpd_normalized && Q.workers_dnvp_normalized >= Q.workers_z_normalized && Q.workers_dnvp_normalized >= Q.workers_nsdap_normalized) {
       this.achieve('neue_arbeiterpartei');
   }
 
@@ -194,7 +194,7 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
       this.achieve('wer_braucht_schon_freunde');
   }
 
-  if (Q.ddp_ideology == "Right" && !Q.dstp_formed && Q.dvp_ideology == "Left" && Q.dvp_exist && !Q.lvp_formed) {
+  if (Q.ddp_ideology == "Правые" && !Q.dstp_formed && Q.dvp_ideology == "Левые" && Q.dvp_exist && !Q.lvp_formed) {
       this.achieve('warum_kampfen_wir_immer_noch');
   }
 
@@ -214,11 +214,11 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
       this.achieve('polizeistaat');
   }
 
-  if (Q.president == "Heuss" && Q.chancellor == "Adenauer" && Q.z_leader == "Adenauer" && Q.z_party_name == "CVP" && Q.lvp_formed && Q.constitutional_reform >= 3 && !Q.nsdap_r && !Q.kpd_r && Q.neorevisionism && Q.reformist_strength >= Q.left_strength && Q.reformist_strength >= Q.center_strength && Q.reformist_strength >= Q.labor_strength) {
+  if (Q.president == "Хойс" && Q.chancellor == "Аденауэр" && Q.z_leader == "Аденауэр" && Q.z_party_name == "ХНП" && Q.lvp_formed && Q.constitutional_reform >= 3 && !Q.nsdap_r && !Q.kpd_r && Q.neorevisionism && Q.reformist_strength >= Q.left_strength && Q.reformist_strength >= Q.center_strength && Q.reformist_strength >= Q.labor_strength) {
       this.achieve('wahre_bundesrepublik');
   }
 
-  if ((Q.kvp_r > Q.dnvp_r && Q.kvp_formed && Q.kvp_r && !Q.cvp_kvp_formed || Q.dnf_r > Q.dnvp_r && Q.dnvp_ideology == "Moderate" && Q.dnf_r) && !Q.cvp_formed) {
+  if ((Q.kvp_r > Q.dnvp_r && Q.kvp_formed && Q.kvp_r && !Q.cvp_kvp_formed || Q.dnf_r > Q.dnvp_r && Q.dnvp_ideology == "Умеренные" && Q.dnf_r) && !Q.cvp_formed) {
       this.achieve('das_blatt_hat_sich_gewendet');
   }
 
@@ -226,7 +226,7 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
       this.achieve('modeerscheinung');
   }
 
-  if (Q.peoples_party && Q.kvp_formed && (Q.lvp_formed || Q.dvp_exist) && Q.z_party_name == "CVP") {
+  if (Q.peoples_party && Q.kvp_formed && (Q.lvp_formed || Q.dvp_exist) && Q.z_party_name == "ХНП") {
       this.achieve('volkspartei_fur_das_volk');
   }
 
@@ -234,12 +234,12 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
       this.achieve('wir_schaffen_das');
   }
 
-  if (((Q.ddp_leader == "Lemmer" || Q.ddp_leader == "Lüders") && (Q.dvp_leader == "Thiel" && Q.dvp_exist) && !Q.lvp_formed || ((Q.lvp_leader == "Heuss" || Q.lvp_leader == "Bäumer" || Q.lvp_leader == "Stolper") && Q.lvp_formed)) && Q.true_christian_democracy && Q.dnvp_leader == "Treviranus" && Q.kpd_leader == "Conciliators" && (((Q.z_leader == "Kaiser" || Q.z_leader == "Joos" && !Q.fake_joos) && !Q.cvp_formed) || Q.cvp_leader == "Stegerwald" && Q.cvp_formed)) {
+  if (((Q.ddp_leader == "Леммер" || Q.ddp_leader == "Людерс") && (Q.dvp_leader == "Тиль" && Q.dvp_exist) && !Q.lvp_formed || ((Q.lvp_leader == "Хойс" || Q.lvp_leader == "Боймер" || Q.lvp_leader == "Штольпер") && Q.lvp_formed)) && Q.true_christian_democracy && Q.dnvp_leader == "Тревиранус" && Q.kpd_leader == "Примиренцы" && (((Q.z_leader == "Кайзер" || Q.z_leader == "Йоос" && !Q.fake_joos) && !Q.cvp_formed) || Q.cvp_leader == "Штегервальд" && Q.cvp_formed)) {
       this.achieve('blockparteien_parade');
   }
 
   if 
-    (((Q.ddp_leader == "Lemmer" || Q.lvp_formed) && (Q.dvp_leader == "Thiel" || Q.dvp_leader == "Glatzel" || !Q.dvp_exist || Q.lvp_formed) && (Q.lvp_leader == "Glatzel" || !Q.lvp_formed)) && ((Q.dnvp_leader == "Lambach" && Q.z_leader == "Kaiser") && !Q.cvp_formed || (Q.cvp_leader == "Lambach" || Q.cvp_leader == "Stegerwald") && Q.cvp_formed)) {
+    (((Q.ddp_leader == "Леммер" || Q.lvp_formed) && (Q.dvp_leader == "Тиль" || Q.dvp_leader == "Глацель" || !Q.dvp_exist || Q.lvp_formed) && (Q.lvp_leader == "Глацель" || !Q.lvp_formed)) && ((Q.dnvp_leader == "Ламбах" && Q.z_leader == "Кайзер") && !Q.cvp_formed || (Q.cvp_leader == "Ламбах" || Q.cvp_leader == "Штегервальд") && Q.cvp_formed)) {
       this.achieve('der_arbeiterstaat');
   }
 
@@ -247,7 +247,7 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
       this.achieve('gegen_papen_hitler_thalmann');
   }
 
-  if (Q.president == "Wels") {
+  if (Q.president == "Вельс") {
       this.achieve('wels');
   }
 
@@ -255,7 +255,7 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
       this.achieve('kommunistische_alternative');
   }
 
-  if (Q.labor_minister_party == "SPD" && Q.interior_minister_party == "SPD" && Q.finance_minister_party == "SPD" && Q.economic_minister_party == "SPD" && Q.foreign_minister_party == "SPD" && Q.justice_minister_party == "SPD" && Q.agriculture_minister_party == "SPD" && Q.reichswehr_minister_party == "SPD" && (Q.prussia_leader == "Braun" || Q.prussia_leader == "Rosenfeld") && Q.chancellor_party == "SPD" && (Q.president == "Braun" || Q.president == "Rosenfeld" && !Q.left_split || Q.president == "Schumacher" || Q.president == "Wels" || Q.president == "Grzesinski" || Q.president == "Juchacz" || (Q.president == "Rosenfeld" && !Q.left_split))) {
+  if (Q.labor_minister_party == "СДПГ" && Q.interior_minister_party == "СДПГ" && Q.finance_minister_party == "СДПГ" && Q.economic_minister_party == "СДПГ" && Q.foreign_minister_party == "СДПГ" && Q.justice_minister_party == "СДПГ" && Q.agriculture_minister_party == "СДПГ" && Q.reichswehr_minister_party == "СДПГ" && (Q.prussia_leader == "Браун" || Q.prussia_leader == "Розенфельд") && Q.chancellor_party == "СДПГ" && (Q.president == "Браун" || Q.president == "Розенфельд" && !Q.left_split || Q.president == "Шумахер" || Q.president == "Вельс" || Q.president == "Гржезинский" || Q.president == "Юхач" || (Q.president == "Розенфельд" && !Q.left_split))) {
       this.achieve('die_rote_republik');
   }
 
@@ -282,17 +282,17 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
       this.achieve('notwendigkeit');
   }
 
-  if (Q.president != "Hammerstein" && Q.president != "Hitler" && Q.president !=   "Göring" && Q.president != "Seldte" && Q.chancellor != "Hitler" && !Q.hammerstein_win && !(Q.president == "Hergt" && Q.chancellor == "Seldte")) {
-    if ((Q.president == "Rosenfeld" || Q.president == "Thälmann" || Q.president == "Münzenberg" || Q.president == "Ossietzky" || Q.president == "Mann") && Q.in_left_front && !Q.civil_war_seen) {
+  if (Q.president != "Хаммерштейн" && Q.president != "Гитлер" && Q.president !=   "Геринг" && Q.president != "Зельдте" && Q.chancellor != "Гитлер" && !Q.hammerstein_win && !(Q.president == "Хергт" && Q.chancellor == "Зельдте")) {
+    if ((Q.president == "Розенфельд" || Q.president == "Тельман" || Q.president == "Мюнценберг" || Q.president == "Осецкий" || Q.president == "Манн") && Q.in_left_front && !Q.civil_war_seen) {
       Q.kpd_points_calc = 0;
       Q.kpd_points_calc += Q.rfb_force;
       Q.kpd_points_calc += (100 - Q.pro_republic) / 2;
       Q.kpd_points_calc += Q.unemployed / 2;
       Q.kpd_points_calc += Q.kpd_votes;
       Q.kpd_points_calc += Q.soviet_relation;
-      if (Q.presid_calcent == "Thälmann") Q.kpd_points_calc += 16;
-      if (Q.president == "Münzenberg") Q.kpd_points_calc += 10;
-      if (Q.kpd_leader == "Conciliators") Q.kpd_points_calc += 6;
+      if (Q.presid_calcent == "Тельман") Q.kpd_points_calc += 16;
+      if (Q.president == "Мюнценберг") Q.kpd_points_calc += 10;
+      if (Q.kpd_leader == "Примиренцы") Q.kpd_points_calc += 6;
       if (Q.sapd_formed) {
         Q.kpd_points_calc += 2;
         Q.kpd_points_calc += Q.sapd_votes;
@@ -309,7 +309,7 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
       }
     }
   }
-  if (Q.president != "Hammerstein" && Q.president != "Hitler" && Q.president != "Göring" && Q.president != "Seldte" && Q.chancellor != "Hitler" && !Q.hammerstein_win && !(Q.president ==   "Hergt" && Q.chancellor == "Seldte")) {
+  if (Q.president != "Хаммерштейн" && Q.president != "Гитлер" && Q.president != "Геринг" && Q.president != "Зельдте" && Q.chancellor != "Гитлер" && !Q.hammerstein_win && !(Q.president ==   "Хергт" && Q.chancellor == "Зельдте")) {
     Q.weimar_win_calc = 1;
   } else {
     Q.weimar_win_calc = 0;
@@ -317,25 +317,25 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
   if ((Q.in_left_front || Q.in_popular_front) && Q.kpd_coalition_success && Q.wurttemberg_kpd && Q.bavaria_kpd && Q.red_thuringia && Q.red_saxony && Q.weimar_win_calc && !Q.kpd_points_calc && !Q.civil_war_seen && Q.year >= 1934) {
     this.achieve('eurokommunismus');
   }
-  if (Q.reichswehr_strength >= 200 && Q.unemployed < 15 && Q.budget > 0 && Q.tariffs > 5 && (Q.spd_in_government || Q.chancellor_party == "SPD")) {
+  if (Q.reichswehr_strength >= 200 && Q.unemployed < 15 && Q.budget > 0 && Q.tariffs > 5 && (Q.spd_in_government || Q.chancellor_party == "СДПГ")) {
     this.achieve('kriegswirtschaft');
   }
   if (Q.spd_votes >= 67 && Q.spd_r >= 67 && Q.in_social_liberal_coalition) {
     this.achieve('sechs_sieben');
   }
-  if (Q.rubicon_mini_trigger && Q.rubicon_mini_leave && Q.chancellor == "Hitler") {
+  if (Q.rubicon_mini_trigger && Q.rubicon_mini_leave && Q.chancellor == "Гитлер") {
     this.achieve('er_ist_wieder_da');
   }
   if (!Q.hammerstein_win && Q.schleicher_spd_concession >= 2) {
     this.achieve('abgrundlaufer');
   }
-  if (Q.chancellor == "Brüning" && Q.president == "Brüning" && Q.prussia_leader == "Brüning") {
+  if (Q.chancellor == "Брюнинг" && Q.president == "Брюнинг" && Q.prussia_leader == "Брюнинг") {
     this.achieve('bruning_uber_alles');
   }
   if (Q.der_aufstieg_skywalkers) {
     this.achieve('der_aufstieg_skywalkers');
   }
-  if (Q.chancellor == "Breitscheid" && Q.left_cartel_france && Q.reparations_resolved && (Q.sdapo_win || Q.austria_peace) && Q.radio) {
+  if (Q.chancellor == "Брайтшайд" && Q.left_cartel_france && Q.reparations_resolved && (Q.sdapo_win || Q.austria_peace) && Q.radio) {
     this.achieve('mr_breitscheid');
   }
   if (Q.year == 1934 && Q.month == 7 && Q.hilferding_advisor && Q.wels_advisor && Q.kleber_der_partei) {
@@ -350,7 +350,7 @@ this.achieve('game_completed');
 
 = Конец
 
-[? if (chancellor == nsdap_chancellor or president == "Hitler" or president == "Göring" or president == "Frick") and not republic_victory: <iframe src="https://en.wikipedia.org/wiki/The_Holocaust" height="800 " width="545" style=" margin-left: -20px; border: 1px solid #000; "></iframe> ?]
+[? if (chancellor == nsdap_chancellor or president == "Гитлер" or president == "Геринг" or president == "Фрик") and not republic_victory: <iframe src="https://en.wikipedia.org/wiki/The_Holocaust" height="800 " width="545" style=" margin-left: -20px; border: 1px solid #000; "></iframe> ?]
 
 
 @eg_menu
@@ -363,7 +363,7 @@ this.achieve('game_completed');
 
 
 @hitler_wins
-view-if: (chancellor == nsdap_chancellor or president == "Hitler" or president == "Göring" or president == "Frick") and (total_defeat==1 or civil_war_seen == 0)
+view-if: (chancellor == nsdap_chancellor or president == "Гитлер" or president == "Геринг" or president == "Фрик") and (total_defeat==1 or civil_war_seen == 0)
 title: Власть Адольфа Гитлера в Германии неоспорима.
 tags: endings
 go-to: eg_menu
@@ -374,7 +374,7 @@ go-to: eg_menu
 
 
 @war_against_hitler
-view-if: (chancellor == nsdap_chancellor or president == "Hitler" or president == "Göring" or president == "Frick") and (long_war == 1)
+view-if: (chancellor == nsdap_chancellor or president == "Гитлер" or president == "Геринг" or president == "Фрик") and (long_war == 1)
 title: Адольф Гитлер у власти, но мы боремся, чтобы его остановить.
 tags: endings
 go-to: eg_menu
@@ -384,18 +384,18 @@ go-to: eg_menu
 
 
 @no_hitler
-view-if: chancellor != "Hitler" and president != "Hitler" and president != "Göring" and chancellor_party != "NSDAP"
+view-if: chancellor != "Гитлер" and president != "Гитлер" and president != "Геринг" and chancellor_party != "НСДАП"
 title: Гитлер ещё не контролирует Германию…
 tags: endings
 go-to: eg_menu
 
-Гитлер ещё не контролирует Германию.[? if chancellor == "Papen" : Однако <span style="color: #808080;">авторитаризм</span> канцлера Папена и его <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правая</span> политика прокладывают путь к власти Гитлеру или кому-то подобному ему.  ?] [? if chancellor == "Schleicher" : Однако <span style="color: #808080;">авторитаризм</span> и интриги канцлера Шлейхера готовят почву для прихода к власти Гитлера или кого-то вроде него.  ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : После нашего поражения в Прусском перевороте <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правые</span>, похоже, берут верх.  ?][? if chancellor == "Brüning" : Однако политика жёсткой экономии канцлера Брюнинга и продолжающаяся депрессия готовят почву для прихода к власти Гитлера или кого-то вроде него. ?]
+Гитлер ещё не контролирует Германию.[? if chancellor == "Папен" : Однако <span style="color: #808080;">авторитаризм</span> канцлера Папена и его <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правая</span> политика прокладывают путь к власти Гитлеру или кому-то подобному ему.  ?] [? if chancellor == "Шляйхер" : Однако <span style="color: #808080;">авторитаризм</span> и интриги канцлера Шлейхера готовят почву для прихода к власти Гитлера или кого-то вроде него.  ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : После нашего поражения в Прусском перевороте <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правые</span>, похоже, берут верх.  ?][? if chancellor == "Брюнинг" : Однако политика жёсткой экономии канцлера Брюнинга и продолжающаяся депрессия готовят почву для прихода к власти Гитлера или кого-то вроде него. ?]
 
 [? if hitler_deported == 1 : Мы депортировали Гитлера обратно в Австрию. Надеемся, он никогда не вернётся. ?]
 
 
 @nsdap_win
-view-if: chancellor == "Goebbels" or chancellor == "Göring" or president == "Göring" or president == "Frick"
+view-if: chancellor == "Геббельс" or chancellor == "Геринг" or president == "Геринг" or president == "Фрик"
 title: Несмотря на депортацию Гитлера, <span style="color: #7A3C00;">нацисты</span> всё равно пришли к власти…
 tags: endings
 go-to: eg_menu
@@ -436,7 +436,7 @@ go-to: eg_menu
 
 @braun_victorious
 title: Победа Отто Брауна
-view-if: president == "Braun"
+view-if: president == "Браун"
 tags: endings
 go-to: eg_menu
 
@@ -445,7 +445,7 @@ go-to: eg_menu
 
 @rosenfeld_victorious
 title: Победа Курта Розенфельда
-view-if: president == "Rosenfeld"
+view-if: president == "Розенфельд"
 tags: endings
 go-to: eg_menu
 
@@ -454,7 +454,7 @@ go-to: eg_menu
 
 @president_schumacher
 title: Победа Курта Шумахера
-view-if: president == "Schumacher"
+view-if: president == "Шумахер"
 tags: endings
 go-to: eg_menu
 
@@ -463,7 +463,7 @@ go-to: eg_menu
 
 @president_grzesinski
 title: Альберт Гжезинский одержал победу
-view-if: president == "Grzesinski"
+view-if: president == "Гржезинский"
 tags: endings
 go-to: eg_menu
 
@@ -472,7 +472,7 @@ go-to: eg_menu
 
 @president_wels
 title: Победа Отто Вельса
-view-if: president == "Wels"
+view-if: president == "Вельс"
 tags: endings
 go-to: eg_menu
 
@@ -481,7 +481,7 @@ go-to: eg_menu
 
 @president_juchacz
 title: Мари Юхач — президент
-view-if: president == "Juchacz"
+view-if: president == "Юхач"
 tags: endings
 go-to: eg_menu
 
@@ -490,7 +490,7 @@ go-to: eg_menu
 
 @president_einstein
 title: Альберт Эйнштейн — президент
-view-if: president == "Einstein"
+view-if: president == "Эйнштейн"
 tags: endings
 go-to: eg_menu
 
@@ -501,7 +501,7 @@ go-to: eg_menu
 
 @spd_victorious
 title: <span style="color: #c00000;">**СДПГ**</span> по-прежнему в правительстве
-view-if: spd_in_government == 1 and chancellor_party == "SPD" and total_defeat == 0 and long_war == 0 and not schleicher_spd
+view-if: spd_in_government == 1 and chancellor_party == "СДПГ" and total_defeat == 0 and long_war == 0 and not schleicher_spd
 tags: endings
 go-to: eg_menu
 
@@ -521,7 +521,7 @@ go-to: eg_menu
 
 @communist_victory
 title: <span style="color: #700000;">**Коммунистическая**</span> победа
-view-if: chancellor_party == "KPD" or president == "Thälmann" and total_defeat == 0 and long_war == 0
+view-if: chancellor_party == "КПГ" or president == "Тельман" and total_defeat == 0 and long_war == 0
 tags: endings
 go-to: eg_menu
 
@@ -559,7 +559,7 @@ go-to: eg_menu
 
 @unemployment_high
 title: Безработица всё ещё слишком высока.
-view-if: unemployed >= 15 and (chancellor != "Hitler" and president != "Hitler") and (total_defeat == 0) and long_war == 0
+view-if: unemployed >= 15 and (chancellor != "Гитлер" and president != "Гитлер") and (total_defeat == 0) and long_war == 0
 tags: endings
 go-to: eg_menu
 

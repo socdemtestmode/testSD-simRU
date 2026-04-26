@@ -42,7 +42,7 @@ Q.workers_spd *= 0.96;
 Q.unemployed_spd *= 0.96;
 Q.kpd_relation -= 5;
 Q.bruning_coalition = Q.neo_weimar_coalition;
-if (Q.dnvp_ideology == "Moderate") Q.bruning_coalition = Q.cordon_sanitaire;
+if (Q.dnvp_ideology == "Умеренные") Q.bruning_coalition = Q.cordon_sanitaire;
 Q.bruning_coalition = Math.round((Q.bruning_coalition - Q.bruning_coalition_loss) * 10) / 10;
 if (Q.wp_defect && Q.bruning_coalition < 50) Q.wp_reversal = 1;
 if (Q.wp_defect && Q.bruning_coalition < 50) Q.bruning_coalition_loss -= Q.wp_r;

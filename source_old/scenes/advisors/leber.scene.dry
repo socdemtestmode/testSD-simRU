@@ -31,7 +31,7 @@ on-arrival: advisor_action_timer = 6; pro_republic += 5; democratization += 1; n
 title: Министерство Рейхсвера
 subtitle: Мы можем определять нашу военную политику.
 choose-if: advisor_action_timer == 0 and spd_in_government and reichswehr_minister_party == "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] мес. до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> не входит в правительство. ?][? if reichswehr_minister_party != "SPD": <span style="color: #c00000;">СДПГ</span> не контролирует министерство рейхсвера. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] мес. до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> не входит в правительство.  ?][? if reichswehr_minister_party != "SPD": <span style="color: #c00000;">СДПГ</span> не контролирует министерство рейхсвера. ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: military_policy
 
@@ -65,4 +65,3 @@ choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?]
 on-arrival: advisor_action_timer = 6;
 go-to: peoples_party_campaigning
-

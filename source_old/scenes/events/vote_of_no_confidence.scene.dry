@@ -9,7 +9,7 @@ go-to: vonc_menu
 
 = Вотум недоверия
 
-[? if in_grand_coalition and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span> ?][? if (in_grand_coalition or in_social_liberal_coalition) and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span> ?][? if in_weimar_coalition or in_popular_front or in_minority_government and not in_social_liberal_coalition: The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?][? if lvp_formed and not in_social_catholic_coalition: &nbsp;и <span style="color: #FFCC00;">**ЛНП**</span> ?] ?][? if in_social_liberal_coalition and not lvp_formed: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?] потребовала вынести нам вотум недоверия из-за проводимой нами политики и возникших разногласий. В случае успеха через несколько месяцев, вероятно, будут назначены выборы.
+[? if in_grand_coalition and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span>  ?][? if (in_grand_coalition or in_social_liberal_coalition) and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span>  ?][? if in_weimar_coalition or in_popular_front or in_minority_government and not in_social_liberal_coalition: The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?][? if lvp_formed and not in_social_catholic_coalition: &nbsp;и <span style="color: #FFCC00;">**ЛНП**</span> ?] ?][? if in_social_liberal_coalition and not lvp_formed: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span>  ?] потребовала вынести нам вотум недоверия из-за проводимой нами политики и возникших разногласий. В случае успеха через несколько месяцев, вероятно, будут назначены выборы.
 
 
 @vonc_menu
@@ -75,9 +75,9 @@ on-arrival: resources -= 3; coalition_dissent -= 1;
 choose-if: ((in_grand_coalition and communist_coalition >= 3 and kpd_relation >= 50 and kpd_r >= dvp_r and not lvp_formed) or (in_grand_coalition and communist_coalition >= 3 and kpd_relation >= 50 and kpd_r >= (lvp_r / 2) and lvp_formed)) or (in_weimar_coalition and kpd_relation >= 50 and kpd_r >= z_r and communist_coalition >= 3)
 view-if: tried_supporting_kpd = 0 and not in_popular_front
 on-arrival: tried_supporting_kpd = 1
-unavailable-subtitle: [? if communist_coalition < 3 : <span style="color: #700000;">КПГ</span> не станет участвовать в парламентском правительстве. ?] [? if kpd_relation < 50 : <span style="color: #700000;">КПГ</span> относится к нам недостаточно дружественно. ?] [? if ((in_grand_coalition and kpd_r < dvp_r and not lvp_formed) or (in_grand_coalition and kpd_r < (lvp_r / 2) and lvp_formed)) or (in_weimar_coalition and kpd_r < z_r): У <span style="color: #700000;">КПГ</span> недостаточно голосов. ?] [? if in_popular_front : Мы уже состоим в Народном фронте с <span style="color: #700000;">КПГ</span>. ?]
+unavailable-subtitle: [? if communist_coalition < 3 : <span style="color: #700000;">КПГ</span> не станет участвовать в парламентском правительстве.  ?] [? if kpd_relation < 50 : <span style="color: #700000;">КПГ</span> относится к нам недостаточно дружественно.  ?] [? if ((in_grand_coalition and kpd_r < dvp_r and not lvp_formed) or (in_grand_coalition and kpd_r < (lvp_r / 2) and lvp_formed)) or (in_weimar_coalition and kpd_r < z_r): У <span style="color: #700000;">КПГ</span> недостаточно голосов.  ?] [? if in_popular_front : Мы уже состоим в Народном фронте с <span style="color: #700000;">КПГ</span>. ?]
 
-Если <span style="color: #700000;">**коммунисты**</span> воздержатся, то мы, по сути, сможем сохранить правительство меньшинства[? if president=="Hindenburg": , хотя проводить политику без поддержки президента Гинденбурга, которой у нас нет, будет очень сложно ?]. Если это произойдёт, мы окажемся в огромном долгу перед <span style="color: #700000;">**КПГ**</span>. В будущем это может привести к более широкому сотрудничеству — к добру или к худу.
+Если <span style="color: #700000;">**коммунисты**</span> воздержатся, то мы, по сути, сможем сохранить правительство меньшинства[? if president=="Hindenburg": , хотя проводить политику без поддержки президента Гинденбурга, которой у нас нет, будет очень сложно  ?]. Если это произойдёт, мы окажемся в огромном долгу перед <span style="color: #700000;">**КПГ**</span>. В будущем это может привести к более широкому сотрудничеству — к добру или к худу.
 
 - @support_kpd_2: Убедить <span style="color: #700000;">**КПГ**</span> «проявить терпимость» к нам?
 - @let_it_happen: Неважно. Пусть голосуют.
@@ -86,6 +86,7 @@ unavailable-subtitle: [? if communist_coalition < 3 : <span style="color: #70000
 @support_kpd_2
 on-arrival: communist_coalition += 1; workers_kpd += 3; kpd_relation += 5
 go-to: support_kpd_weimar if in_weimar_coalition; support_kpd_grand if in_grand_coalition
+
 
 The <span style="color: #700000;">**КПГ**</span> не заинтересована в том, чтобы лишь «воздерживаться от вотума недоверия»; она поддержит нас, только если войдёт в правительственную коалицию. Если же мы договоримся об этом, нас не поддержат правые партии.
 
@@ -106,8 +107,8 @@ on-arrival: support_kpd_weimar = 1
 
 
 @support_kpd_left
-subtitle: <span style="color: #c00000;">**СДПГ**</span> + <span style="color: #700000;">**КПГ**</span> [? if sapd_formed: + <span style="color: #9B0000;">**СРПГ**</span> ?] ([+ left_coalition +]%)
-unavailable-subtitle: <span style="color: #c00000;">СДПГ</span> + <span style="color: #700000;">КПГ</span> [? if sapd_formed: + <span style="color: #9B0000;">СРПГ</span> ?] ([+ left_coalition +]%). [? if kpd_relation < 50 : У нас недостаточно хорошие отношения с <span style="color: #700000;">КПГ</span>. ?][? if communist_coalition < 3 : <span style="color: #700000;">Коммунисты</span> слишком привержены своим радикальным методам, чтобы участвовать в работе правительства. ?] [? if rubicon: – Какого чёрта Гинденбург это допустит? ?] [? if president_ideology != "Left" and president != "Hindenburg": – Президент[+ president +] категорически против правления <span style="color: #9B0000;">социалистов</span>. ?]
+subtitle: <span style="color: #c00000;">**СДПГ**</span> + <span style="color: #700000;">**КПГ**</span> [? if sapd_formed: + <span style="color: #9B0000;">**СРПГ**</span>  ?] ([+ left_coalition +]%)
+unavailable-subtitle: <span style="color: #c00000;">СДПГ</span> + <span style="color: #700000;">КПГ</span> [? if sapd_formed: + <span style="color: #9B0000;">СРПГ</span>  ?] ([+ left_coalition +]%). [? if kpd_relation < 50 : У нас недостаточно хорошие отношения с <span style="color: #700000;">КПГ</span>.  ?][? if communist_coalition < 3 : <span style="color: #700000;">Коммунисты</span> слишком привержены своим радикальным методам, чтобы участвовать в работе правительства.  ?] [? if rubicon: – Какого чёрта Гинденбург это допустит? ?] [? if president_ideology != "Left" and president != "Hindenburg": – Президент[+ president +] категорически против правления <span style="color: #9B0000;">социалистов</span>. ?]
 view-if: in_popular_front
 choose-if: left_coalition >= 50 and (kpd_relation >= 50 or (kpd_leader == "Conciliators" and kpd_relation >= 40)) and communist_coalition >= 3 and not rubicon and president_ideology == "Left" or president == "Hindenburg"
 go-to: election_1928.left_coalition_success
@@ -140,4 +141,3 @@ call: set_next_election_time
 Голосование прошло успешно: наше правительство ушло в отставку. Канцлер [+ chancellor +] остаётся исполняющим обязанности, но больше не имеет полномочий для проведения новой политики.
 
 Новые выборы назначены на [+ next_election_month : month +] [+ next_election_year +].
-

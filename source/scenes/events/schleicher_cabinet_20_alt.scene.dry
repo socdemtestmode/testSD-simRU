@@ -1,6 +1,6 @@
 title: Распад <span style="color: #BFC8CC;">**ФНЕГ**</span> Falls Apart!
 subtitle: Без Шлейхера <span style="color: #BFC8CC;">**ФНЕГ**</span> — ничто.
-view-if: chancellor == "Treviranus" and dnef_formed
+view-if: chancellor == "Тревиранус" and dnef_formed
 max-visits: 1
 new-page: true
 tags: event
@@ -9,7 +9,7 @@ tags: event
 
 После позорной отставки Шлейхера <span style="color: #BFC8CC;">**ФНЕГ**</span> больше не имеет богоподобной фигуры, вокруг которой можно сплотиться. Фракции и политики, некогда сплочённые его влиянием, теперь решили: лучше разойтись.
 
-Партии блока (<i>Blocparteis</i>) получили свободу, а основная часть организации — те, кто не входил в их ряды, — раскололась и разошлась в разные стороны. Правое, более националистическое крыло сохранило национальные структуры партии и продолжит своё существование, войдя в состав [? if dnvp_ideology == "Moderate": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Radical": <span style="color: #0087DC;">**КНП**</span> ?], которая теперь сплотилась вокруг Тревирануса.
+Партии блока (<i>Blocparteis</i>) получили свободу, а основная часть организации — те, кто не входил в их ряды, — раскололась и разошлась в разные стороны. Правое, более националистическое крыло сохранило национальные структуры партии и продолжит своё существование, войдя в состав [? if dnvp_ideology == "Умеренные": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Радикалы": <span style="color: #0087DC;">**КНП**</span> ?], которая теперь сплотилась вокруг Тревирануса.
 
 Более левые и, откровенно говоря, эксцентричные элементы движения сформировали новую <span style="color: #fe9e00;">Старую социал-демократическую партию</span> <span style="color: #fe9e00;">**(СДПГ(с))**</span>, основанную на принципах классового сотрудничества, национализма и лейборизма. Они призывают к «социализму фёлькише», «народному социализму» — что бы это ни значило.
 
@@ -26,7 +26,7 @@ Q.dnef_formed = 0;
 
 Q.parties = Q.parties.filter(party => party !== 'dnef');
 
-if (!Q.kvp_formed && Q.dnvp_ideology == "Radical") {
+if (!Q.kvp_formed && Q.dnvp_ideology == "Радикалы") {
     Q.kvp_formed = 1;
     Q.parties.push('kvp');  
     Q.parties_graph.push('kvp');
@@ -90,7 +90,7 @@ Q.old_middle_other += 2;
 Q.rural_other += 2;
 Q.catholics_other += 2;
 
-if (Q.dnvp_ideology == "Moderate") {
+if (Q.dnvp_ideology == "Умеренные") {
     Q.workers_dnvp += 4;
     Q.new_middle_dnvp += 6;
     Q.old_middle_dnvp += 6;
@@ -100,7 +100,7 @@ if (Q.dnvp_ideology == "Moderate") {
     Q.aspd_other = 1;
     Q.workers_other += 10;
     Q.unemployed_other += 6;
-} else if (Q.dnvp_ideology == "Radical") {
+} else if (Q.dnvp_ideology == "Радикалы") {
     Q.workers_kvp += 4;
     Q.new_middle_kvp += 8;
     Q.old_middle_kvp += 8;
@@ -119,14 +119,14 @@ Q.pro_republic += 15;
 if (Q.dstp_dnef) {
     Q.ddp_r = Q.ddp_r_last;
     Q.ddp_relation = Q.pro_republic;
-    if (Q.ddp_ideology == "Left" || Q.ddp_ideology == "Moderate") Q.ddp_relation += 20;
+    if (Q.ddp_ideology == "Левые" || Q.ddp_ideology == "Умеренные") Q.ddp_relation += 20;
     if (Q.ddp_relation < 30) Q.ddp_relation = 30;
     Q.dstp_dnef = 0;
 }
 if (Q.lvp_dnef) {
     Q.lvp_r = Q.lvp_r_last;
     Q.lvp_relation = Q.pro_republic - 10;
-    if (Q.lvp_ideology == "Left" || Q.lvp_ideology == "Moderate") Q.lvp_relation += 10;
+    if (Q.lvp_ideology == "Левые" || Q.lvp_ideology == "Умеренные") Q.lvp_relation += 10;
     if (Q.lvp_relation < 30) Q.lvp_relation = 30;
     Q.lvp_dnef = 0;
 }
@@ -160,9 +160,9 @@ if (Q.nvf_dnef) {
 }
 
 if (Q.dnef_r) {
-    if (Q.dnvp_ideology == "Radical") {
+    if (Q.dnvp_ideology == "Радикалы") {
         Q.kvp_r += Q.dnef_r;
-    } else if (Q.dnvp_ideology == "Moderate") {
+    } else if (Q.dnvp_ideology == "Умеренные") {
         Q.dnvp_r += Q.dnef_r*0.6;
         Q.other_r += Q.dnef_r*0.4;
     }
@@ -245,9 +245,9 @@ for (var party of Q.parties) {
     Q[party+'_votes'] = Math.round(Q[party+'_normalized']*1000)/ 10;
 }
 
-if (Q.z_leader == "Bracht") {
+if (Q.z_leader == "Брахт") {
     Q.old_z_leader = Q.z_leader;
-    Q.z_leader = "Stegerwald";
+    Q.z_leader = "Штегервальд";
     Q.workers_z += 6;
     Q.unemployed_z += 4; 
     Q.new_middle_z += 4;
@@ -255,8 +255,8 @@ if (Q.z_leader == "Bracht") {
     Q.rural_z -= 2; 
     Q.catholics_z -= 8;
     Q.catholics_spd += 2;
-    if (Q.dnvp_ideology == "Moderate") Q.catholics_dnvp += 2;
-    if (Q.dnvp_ideology == "Radical") Q.catholics_kvp += 2;
+    if (Q.dnvp_ideology == "Умеренные") Q.catholics_dnvp += 2;
+    if (Q.dnvp_ideology == "Радикалы") Q.catholics_kvp += 2;
     Q.catholics -= 5;
     Q.z_relation += 30;
 }
@@ -264,7 +264,7 @@ if (Q.z_leader == "Bracht") {
 if (Q.kvp_formed) {
     Q.treviranus_party = "KVP";
 } else {
-    Q.treviranus_party = "DNVP";
+    Q.treviranus_party = "НННП";
 }
 
 Q.chancellor_party = Q.treviranus_party;
@@ -315,7 +315,7 @@ if (Q.lvp_formed) {
     Q.right_coalition = parseFloat((Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r).toFixed(1));
 }
 
-if (Q.dnvp_ideology === "Moderate") {
+if (Q.dnvp_ideology === "Умеренные") {
     Q.far_right_coalition = parseFloat((Q.dnf_r + Q.nsdap_r).toFixed(1));
 } else {
     Q.far_right_coalition = parseFloat((Q.dnvp_r + Q.nsdap_r).toFixed(1));
@@ -331,7 +331,7 @@ if (Q.lvp_formed) {
     Q.popular_front_coalition = parseFloat((Q.spd_r + Q.kpd_r + Q.z_r - Q.bvp_r + Q.sapd_r).toFixed(1));
 }
 
-if (Q.dnvp_ideology === "Moderate") {
+if (Q.dnvp_ideology === "Умеренные") {
     Q.anti_democratic_coalition = parseFloat((Q.kpd_r + Q.nsdap_r + Q.dnf_r).toFixed(1));
 } else {
     Q.anti_democratic_coalition = parseFloat((Q.kpd_r + Q.nsdap_r + Q.dnvp_r).toFixed(1));
@@ -413,13 +413,13 @@ if (Q.lvp_formed) {
     Q.right_coalition_prussia = parseFloat((Q.z_r_prussia + Q.dvp_r_prussia + Q.other_r_prussia + Q.dnvp_r_prussia).toFixed(1));
 }
 
-if (Q.dnvp_ideology === "Moderate") {
+if (Q.dnvp_ideology === "Умеренные") {
     Q.far_right_coalition_prussia = parseFloat((Q.dnf_r_prussia + Q.nsdap_r_prussia).toFixed(1));
 } else {
     Q.far_right_coalition_prussia = parseFloat((Q.dnvp_r_prussia + Q.nsdap_r_prussia).toFixed(1));
 }
 
-if (Q.dvp_leader == "Dingeldey" && Q.dvp_ideology == "Right" && Q.dvp_right - Q.dvp_left >= 15 || Q.hugenberg_dvp) {
+if (Q.dvp_leader == "Дингельдей" && Q.dvp_ideology == "Правые" && Q.dvp_right - Q.dvp_left >= 15 || Q.hugenberg_dvp) {
     Q.far_right_coalition_prussia = parseFloat((Q.far_right_coalition_prussia + Q.dvp_r_prussia).toFixed(1));
 }
 
@@ -433,7 +433,7 @@ if (Q.lvp_formed) {
     Q.popular_front_coalition_prussia = parseFloat((Q.spd_r_prussia + Q.kpd_r_prussia + Q.z_r_prussia + Q.sapd_r_prussia).toFixed(1));
 }
 
-if (Q.dnvp_ideology === "Moderate") {
+if (Q.dnvp_ideology === "Умеренные") {
     Q.anti_democratic_coalition_prussia = parseFloat((Q.kpd_r_prussia + Q.nsdap_r_prussia + Q.dnf_r_prussia).toFixed(1));
 } else {
     Q.anti_democratic_coalition_prussia = parseFloat((Q.kpd_r_prussia + Q.nsdap_r_prussia + Q.dnvp_r_prussia).toFixed(1));

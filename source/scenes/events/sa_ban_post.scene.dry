@@ -1,6 +1,6 @@
 title: Предательство Шлейхера
 subtitle: Вильгельм Грёнер, многолетний министр обороны и сильнейший союзник Брюнинга, вынужден уйти в отставку…
-view-if: year == 1932 and month == 5 and sa_nationwide_ban and groener_death and president == "Hindenburg" and bruning_time
+view-if: year == 1932 and month == 5 and sa_nationwide_ban and groener_death and president == "Гинденбург" and bruning_time
 priority: 3
 tags: event
 new-page: true

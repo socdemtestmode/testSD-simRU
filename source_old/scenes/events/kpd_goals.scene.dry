@@ -18,9 +18,10 @@ The <span style="color: #700000;">**КПГ**</span> выдвигает нам с
 
 [? if labor_goal = 1 : - Поддерживать рабочих в трудовых спорах. ?]
 
-[? if foreign_goal = 1 : - Улучшить наши отношения с <span style="color: #750e0e;">Советским Союзом</span>. ?]
+[? if foreign_goal = 1 : - Улучшить наши отношения с <span style="color: #750e0e;">Советским Союзом</span>.  ?]
+
+#[? if interior_goal = 1 : - Ban the <span style="color: #7A3C00;">**SA**</span> and <span style="color: #3E88B3;">**Stahlhelm**</span>. ?]
 
 [? if interior_goal = 1 : - Сократить финансирование рейхсвера. ?]
 
 Они заявляют, что ожидают выполнения этих целей в течение [? if reichswehr_goal = 1 : месяцев. В противном случае они проголосуют за роспуск коалиции.
-

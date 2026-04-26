@@ -1,6 +1,6 @@
 title: Рейхстаг возобновляет работу
 subtitle: Рейхстаг не решается вступать в конфронтацию со Шлейхером и провоцировать очередную серию выборов.
-view-if: chancellor = "Schleicher" and schleicher_time and schleicher_post and next_reichstag_time == rubicon_time and next_reichstag_time > 0
+view-if: chancellor = "Шляйхер" and schleicher_time and schleicher_post and next_reichstag_time == rubicon_time and next_reichstag_time > 0
 on-arrival: reichstag_rubicon = 1
 new-page: true
 tags: event

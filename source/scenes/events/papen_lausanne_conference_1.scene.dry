@@ -1,6 +1,6 @@
 title: Начало Лозаннской конференции
 subtitle: К вопросу репараций…
-view-if: chancellor == "Papen" and papen_time == 3 and not reparations_resolved
+view-if: chancellor == "Папен" and papen_time == 3 and not reparations_resolved
 new-page: true
 max-visits: 1
 tags: event

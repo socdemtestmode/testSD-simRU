@@ -1,6 +1,6 @@
 title: The <span style="color: #C0A054;">**ННП**</span> и <span style="color: #3E88B3;">**НННП**</span> заключили союз!
 subtitle: Осталось ли что-нибудь «либеральное» в <span style="color: #C0A054;">**ННП**</span>?
-view-if: papen_time == 5 and not lvp_formed and not bourgeois_parliament and not bourgeois_list and dvp_exist and dvp_leader == "Dingeldey" and dnvp_ideology == "Radical"
+view-if: papen_time == 5 and not lvp_formed and not bourgeois_parliament and not bourgeois_list and dvp_exist and dvp_leader == "Дингельдей" and dnvp_ideology == "Радикалы"
 on-arrival: dvp_left += 2 if dvp_relation >= 35; dvp_left += 2 if in_grand_coalition
 max-visits: 1
 tags: event

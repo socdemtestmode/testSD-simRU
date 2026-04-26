@@ -1,7 +1,7 @@
 
-(..2) <span style="color: #A8D5BA;">insignificant</span>
-(2..4) <span style="color: #EBD97D;">suspicious</span>
-(4..6) <span style="color: #F7C27D;">disruptive</span>
-(6..8) <span style="color: #F4A984;">undermining</span>
-(8..10) <span style="color: #d42f2f;">subversive</span>
-(10..) <span style="color: #BA2929;">in control</span>
+(..2) <span style="color: #A8D5BA;">незначит.</span>
+(2..4) <span style="color: #EBD97D;">вызывает подозрения</span>
+(4..6) <span style="color: #F7C27D;">сеет раскол</span>
+(6..8) <span style="color: #F4A984;">подрывн.</span>
+(8..10) <span style="color: #d42f2f;">диверс.</span>
+(10..) <span style="color: #BA2929;">полный контроль</span>

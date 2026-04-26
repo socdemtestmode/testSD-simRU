@@ -1,6 +1,6 @@
 title: <span style="color: #3E88B3;">**НННП**</span> раскалывается!
 subtitle: Гугенберг и его сторонники уходят…
-view-if: year = 1928 and month = 11 and dnvp_leader = "Hergt"
+view-if: year = 1928 and month = 11 and dnvp_leader = "Хергт"
 max-visits: 1
 tags: event
 on-display: {!  

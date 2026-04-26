@@ -1,6 +1,6 @@
 title: Транспортная забастовка в Берлине
 subtitle: The <span style="color: #700000;">**Коммунисты**</span> и <span style="color: #7A3C00;">**нацисты**</span> объединяются, чтобы парализовать столицу.
-view-if: chancellor = "Papen" and papen_post and ((year = next_election_year and month >= next_election_month and (next_election_week == week or not rubicon)) or (year > next_election_year)) and kpd_relation < 50 and kpd_leader == "Thälmann"
+view-if: chancellor = "Папен" and papen_post and ((year = next_election_year and month >= next_election_month and (next_election_week == week or not rubicon)) or (year > next_election_year)) and kpd_relation < 50 and kpd_leader == "Тельман"
 new-page: true
 tags: event
 max-visits: 1

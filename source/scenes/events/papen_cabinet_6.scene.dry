@@ -1,6 +1,6 @@
 title: «Потемпская пятёрка» предстала перед судом за убийство
 subtitle: <span style="color: #7A3C00;">Нацисты</span> намерены использовать их осуждение в качестве инструмента пропаганды.
-view-if: chancellor = "Papen" and papen_time == 11
+view-if: chancellor = "Папен" and papen_time == 11
 new-page: true
 tags: event
 max-visits: 1
@@ -26,7 +26,7 @@ on-display: {!
 
 @papen
 title: Приговор вынесен…
-on-arrival: sa_militancy += 0.05; rfb_strength += 25; rfb_militancy += 0.02; new_middle_nsdap -= 3; new_middle_dvp += 2; new_middle_lvp += 3; old_middle_nsdap -= 5; old_middle_dnvp += 5 if dnvp_ideology == "Radical"; old_middle_dvp += 2; old_middle_dnf += 3; rural_nsdap -= 3; rural_dnvp += 3 if dnvp_ideology == "Radical"; rural_dvp += 1; rural_dnf += 3; pro_republic -= 3; workers_kpd += 4; unemployed_kpd += 4; hindenburg_hitler_r -= 1; potempa_five_convicted = 1
+on-arrival: sa_militancy += 0.05; rfb_strength += 25; rfb_militancy += 0.02; new_middle_nsdap -= 3; new_middle_dvp += 2; new_middle_lvp += 3; old_middle_nsdap -= 5; old_middle_dnvp += 5 if dnvp_ideology == "Радикалы"; old_middle_dvp += 2; old_middle_dnf += 3; rural_nsdap -= 3; rural_dnvp += 3 if dnvp_ideology == "Радикалы"; rural_dvp += 1; rural_dnf += 3; pro_republic -= 3; workers_kpd += 4; unemployed_kpd += 4; hindenburg_hitler_r -= 1; potempa_five_convicted = 1
 
 Осуждены! Пятеро штурмовиков <span style="color: #7A3C00;">**СА**</span> приговорены к смертной казни за своё чудовищное преступление. Однако <span style="color: #7A3C00;">нацисты</span> лишь усилили свою пропаганду, выставляя убийц национальными героями, а само убийство — патриотическим актом. Эта чудовищная кампания придала смелости <span style="color: #7A3C00;">**СА**</span>, а <span style="color: #7A3C00;">**НСДАП**</span> теперь призывает к эскалации насилия, чтобы сделать Германию «неуправляемой».
 

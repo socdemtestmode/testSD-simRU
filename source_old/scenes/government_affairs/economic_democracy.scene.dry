@@ -6,12 +6,13 @@ view-if: spd_in_government and (economic_minister_party == "SPD" or finance_mini
 card-image: img/portraits/HilferdingRudolf.jpg
 max-visits: 8
 tags: govt_affairs, cabinet
+#subtitle: How can we give workers more control over the means of production?
 
 = Демократия в экономике
 
 Ключевой пункт <span style="color: #c00000;">социал-демократической</span> программы заключается в том, что рабочие должны получить больше контроля над экономикой. Этого можно достичь либо напрямую на уровне предприятий, предоставив производственным советам большее влияние на руководство, либо косвенно, через демократическое правительство, передав ключевые отрасли из рук класса капиталистов под демократический контроль.
 
-Поскольку мы контролируем министерство труда, [? if economic_minister_party == "SPD" : экономики ?][? if finance_minister_party == "SPD" : и финансов, ?]мы наконец-то можем приступить к реализации наших давних целей.[? if in_grand_coalition or in_weimar_coalition: Однако наши буржуазные партнёры по коалиции могут не согласиться. ?]
+Поскольку мы контролируем министерство труда, [? if economic_minister_party == "SPD" : экономики ?][? if finance_minister_party == "SPD" : и финансов,  ?]мы наконец-то можем приступить к реализации наших давних целей.[? if in_grand_coalition or in_weimar_coalition:  Однако наши буржуазные партнёры по коалиции могут не согласиться. ?]
 
 - @expand_councils
 - @expand_councils_2
@@ -33,6 +34,7 @@ max-visits: 1
 Производственные советы, избираемые рабочими на каждом крупном предприятии, существуют со времён Ноябрьской революции 1918 года, но они бессильны перед лицом капитала. Теперь у нас будет представительство рабочих в советах директоров компаний, что даст им большее влияние на управленческие решения.
 
 
+
 @expand_councils_2
 title: Поддержать общенациональные и отраслевые рабочие советы.
 subtitle: Это шаг к установлению рабочего контроля над всей экономикой.
@@ -41,6 +43,7 @@ on-arrival: economic_democracy += 1; workers_spd += 7*(1-dissent); capital_strik
 max-visits: 1
 
 Общенациональные и отраслевые рабочие советы предусмотрены <span style="color: #000000;">Ве</span><span style="color: #DD0000;">йм</span><span style="color: #FFCC00;">ар</span>ской конституцией, но в прошлом их лишили реальных полномочий: они превратились в чисто консультативные органы. Мы можем это изменить.
+
 
 
 @expand_councils_3
@@ -69,10 +72,9 @@ max-visits: 3
 
 @cooperatives_1
 title: Поддержать рабочие и потребительские кооперативы.
-subtitle: Бюджет: -1
+subtitle: -Бюджет: -1
 on-arrival: economic_democracy += 1; cooperatives += 1; workers_spd += 4*(1-dissent); unemployed_spd += 4*(1-dissent); budget -= 1; unemployed -= 1 if unemployed > 9; economy_goal_spd += 1; economic_growth += 0.2
 choose-if: budget >= 1
 max-visits: 3
 
 Мы приняли законодательство, упрощающее создание кооперативных предприятий всех видов и предусматривающее финансовую поддержку кооперативам, испытывающим трудности.
-

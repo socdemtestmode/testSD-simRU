@@ -1,6 +1,6 @@
 title: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> присоединяется к <span style="color: #BFC8CC;">**ФНЕГ**</span>
 subtitle: Крошечная партия больше не может существовать самостоятельно.
-view-if: chancellor = "Schleicher" and schleicher_time >= 35 and republicans_schleicher >= 12 and not lvp_formed and ddp_r < 2 and dnef_formed
+view-if: chancellor = "Шляйхер" and schleicher_time >= 35 and republicans_schleicher >= 12 and not lvp_formed and ddp_r < 2 and dnef_formed
 new-page: true
 priority: 1
 tags: event
@@ -30,11 +30,11 @@ Q.ddp_relation = Q.dnef_relation;
 Q.dnef_r += Q.ddp_r;
 Q.ddp_r = 0;
 
-if (Q.ddp_ideology == "Left") Q.ddp_leader = "Lemmer";
-if (Q.ddp_ideology != "Left") Q.ddp_leader = "Hellpach";
+if (Q.ddp_ideology == "Левые") Q.ddp_leader = "Леммер";
+if (Q.ddp_ideology != "Левые") Q.ddp_leader = "Hellpach";
 
 Q.old_ddp_name = Q.ddp_name;
-Q.ddp_name = "DStP";
+Q.ddp_name = "НГП";
 !}
 
 Шлейхер считает более эффективным сохранить <span style="color: #D3C24D;">**[+ old_ddp_name +]**</span> в качестве отдельной, но тесно связанной <i>Blocpartei</i> для привлечения избирателей, и поэтому пока сохраняет её номинальную независимость[? if not dstp_formed: , хотя и под новым названием, чтобы избавиться от старого и ироничного ярлыка «Демократическая» ?]. [+ ddp_leader +] с тех пор назначен лидером теперь уже связанной с <i>Blocpartei</i> <span style="color: #D3C24D;">[+ ddp_name +]</span>.

@@ -2,11 +2,11 @@ title: Бремя власти
 view-if: spd_government_burden_trigger == 1 and (peoples_party or (new_middle_spd_normalized >= 30 or (new_middle_spd_normalized + old_middle_spd_normalized >= 40) or rural_spd_normalized >= 20 or catholics_spd_normalized >= 40 or spd_votes >= 40))
 new-page: true
 tags: event
-on-arrival: goal_spd_cancel_peoples = 0; economy_goal_spd_peoples = 0; finance_goal_spd_peoples = 0; tariff_goal_spd_peoples = 0; education_goal_spd_peoples = 0; labor_goal_spd_peoples = 0; agriculture_goal_spd_peoples = 0; foreign_goal_spd_peoples = 0; spd_government_burden_trigger = 0; spd_government_burden_seen = 1; spd_government_burden_peoples = 1; spd_government_burden_timer = 6; workers_spd -= 3 if labor_minister_party != "SPD"
+on-arrival: goal_spd_cancel_peoples = 0; economy_goal_spd_peoples = 0; finance_goal_spd_peoples = 0; tariff_goal_spd_peoples = 0; education_goal_spd_peoples = 0; labor_goal_spd_peoples = 0; agriculture_goal_spd_peoples = 0; foreign_goal_spd_peoples = 0; spd_government_burden_trigger = 0; spd_government_burden_seen = 1; spd_government_burden_peoples = 1; spd_government_burden_timer = 6; workers_spd -= 3 if labor_minister_party != "СДПГ"
 
 = Бремя власти
 
-Бремя власти ложится на наши плечи. Наш долг — сохранять хрупкое равновесие, угождая партнёрам по коалиции и одновременно продвигая программу нашей партии. Наш электорат состоит из представителей самых разных классов, но в основном это рабочий класс и безработные. Они ждут, что за время нашего пребывания у власти мы проведём в жизнь следующую политику, иначе нас ждут последствия. [? if labor_minister_party != "SPD": Пока что передача контроля над Министерством труда буржуазным партиям произвела на рабочих плохое впечатление. ?]
+Бремя власти ложится на наши плечи. Наш долг — сохранять хрупкое равновесие, угождая партнёрам по коалиции и одновременно продвигая программу нашей партии. Наш электорат состоит из представителей самых разных классов, но в основном это рабочий класс и безработные. Они ждут, что за время нашего пребывания у власти мы проведём в жизнь следующую политику, иначе нас ждут последствия. [? if labor_minister_party != "СДПГ": Пока что передача контроля над Министерством труда буржуазным партиям произвела на рабочих плохое впечатление. ?]
 
 **Основные цели**
 

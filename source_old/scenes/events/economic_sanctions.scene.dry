@@ -2,8 +2,12 @@ title: Экономические санкции
 subtitle: Наращивание нами военной мощи привело к санкциям со стороны Франции и других стран.
 new-page: true
 on-arrival: workers_nsdap += 3; new_middle_nsdap += 3; old_middle_nsdap += 4; rural_nsdap += 3; unemployed += 3; workers_spd -= 4 if spd_in_government; new_middle_spd -= 5 if spd_in_government; old_middle_spd -= 5 if spd_in_government; rural_spd -= 4 if spd_in_government; economic_growth -= 1; nationalism += 5; pacifism -= 1
+#tags: event
+view-if: reichswehr_strength > 140
+max-visits: 1
 
 = Экономические санкции
 
 В ответ на наше перевооружение в нарушение Версальского договора западные союзники ввели против Германии экономические санкции. Бремя санкций в основном ложится на пролетариат, народ всё больше нищает.
 
+# options: 

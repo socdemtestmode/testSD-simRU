@@ -64,7 +64,7 @@ go-to: recalculate
 
 @dstp_collapse
 view-if: dstp_collapse_points >= 4
-on-arrival: dstp_collapsed = 1; liberal_cooperation -= 1; bourgeois_cooperation -= 1; new_middle_ddp -= 4; old_middle_ddp -= 6; ddp_right += 1; ddp_relation -= 3; pro_republic -= ddp_votes; other_r += ddp_r*0.3 if dstp_election; ddp_r = ddp_r*0.7 if dstp_election; ddp_leader = "Dietrich"
+on-arrival: dstp_collapsed = 1; liberal_cooperation -= 1; bourgeois_cooperation -= 1; new_middle_ddp -= 4; old_middle_ddp -= 6; ddp_right += 1; ddp_relation -= 3; pro_republic -= ddp_votes; other_r += ddp_r*0.3 if dstp_election; ddp_r = ddp_r*0.7 if dstp_election; ddp_leader = "Дитрих"
 face-image: img/young_german_order.jpg
 go-to: recalculate
 

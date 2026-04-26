@@ -464,39 +464,40 @@ if (window && d3) {
 !}
 go-to: france_coalition_menu
 
+
 **Результаты выборов во Франции:**
 
-<svg id="france_chamber" style="width: 500px; height: 250px;"> </svg>
+{!<svg id="france_chamber" style="width: 500px; height: 250px;"> </svg>!}
 
-<table>  <tr><td>Партия</td><td>Доля голосов</td><td>% изм.</td><td>Мест в Ассамблее</td><td>% изм.</td></tr>
+{!<table>!}  <tr><td>Партия</td><td>Доля голосов</td><td>% изм.</td><td>Мест в Ассамблее</td><td>% изм.</td></tr>
 
 <tr><td colspan="5" style="text-align: center;"><strong>Картель Левых</strong></td></tr>
 
-<tr><td><div class="box" style='background-color:#ff0000; outline: 2px; outline-style: solid;'> </div>  <span class="tooltip-text" title="Французская секция Рабочего интернационала">SFIO</span> </td><td> **[+ sfio_france_elections_vote +]%** </td><td> **[+ str_votes_change_sfio_france +]** </td><td> **[+ sfio_r_france +]%** </td><td> **[+ str_change_sfio_france +]** </td></tr>
+{!<tr><td><div class="box" style='background-color:#ff0000; outline: 2px; outline-style: solid;'> </div> !} <span class="tooltip-text" title="Французская секция Рабочего интернационала">SFIO</span> {!</td><td>!} **[+ sfio_france_elections_vote +]%** {!</td><td>!} **[+ str_votes_change_sfio_france +]** {!</td><td>!} **[+ sfio_r_france +]%** {!</td><td>!} **[+ str_change_sfio_france +]** {!</td></tr>!}
 
-<tr><td><div class="box" style='background-color:#FF6699'> </div>  <span class="tooltip-text" title="Республиканско-социалистическая партия">PRS</span>: </td><td> [+ prs_france_elections_vote +]% </td><td> [+ str_votes_change_prs_france +] </td><td> [+ prs_r_france +]% </td><td> [+ str_change_prs_france +] </td></tr>
+{!<tr><td><div class="box" style='background-color:#FF6699'> </div> !} <span class="tooltip-text" title="Республиканско-социалистическая партия">PRS</span>: {!</td><td>!} [+ prs_france_elections_vote +]% {!</td><td>!} [+ str_votes_change_prs_france +] {!</td><td>!} [+ prs_r_france +]% {!</td><td>!} [+ str_change_prs_france +] {!</td></tr>!}
 
-<tr><td><div class="box" style='background-color:#E0B0FF'> </div>  <span class="tooltip-text" title="Республиканская, радикальная и радикал-социалистическая партия">PRRRS</span>: </td><td> [+ disp_rad_votes_france +]% </td><td> [+ str_votes_change_rad_france +] </td><td> [+ disp_rad_r_france +]% </td><td> [+ str_change_rad_france +] </td></tr>
+{!<tr><td><div class="box" style='background-color:#E0B0FF'> </div> !} <span class="tooltip-text" title="Республиканская, радикальная и радикал-социалистическая партия">PRRRS</span>: {!</td><td>!} [+ disp_rad_votes_france +]% {!</td><td>!} [+ str_votes_change_rad_france +] {!</td><td>!} [+ disp_rad_r_france +]% {!</td><td>!} [+ str_change_rad_france +] {!</td></tr>!}
 
 <tr><td colspan="5" style="text-align: center;"><strong>Республиканский и демократический союз</strong></td></tr>
 
-<tr><td><div class="box" style='background-color:#FFBF00'> </div>  <span class="tooltip-text" title="Демократический альянс">AD</span>: </td><td> [+ ad_france_elections_vote +]% </td><td> [+ str_votes_change_ad_france +] </td><td> [+ ad_r_france +]% </td><td> [+ str_change_ad_france +] </td></tr>
+{!<tr><td><div class="box" style='background-color:#FFBF00'> </div> !} <span class="tooltip-text" title="Демократический альянс">AD</span>: {!</td><td>!} [+ ad_france_elections_vote +]% {!</td><td>!} [+ str_votes_change_ad_france +] {!</td><td>!} [+ ad_r_france +]% {!</td><td>!} [+ str_change_ad_france +] {!</td></tr>!}
 
-<tr><td><div class="box" style='background-color:#005ACA'> </div>  <span class="tooltip-text" title="Республиканская федерация">FR</span>: </td><td> [+ disp_fr_votes_france +]% </td><td> [+ str_votes_change_fr_france +] </td><td> [+ disp_fr_r_france +]% </td><td> [+ str_change_fr_france +] </td></tr>
+{!<tr><td><div class="box" style='background-color:#005ACA'> </div> !} <span class="tooltip-text" title="Республиканская федерация">FR</span>: {!</td><td>!} [+ disp_fr_votes_france +]% {!</td><td>!} [+ str_votes_change_fr_france +] {!</td><td>!} [+ disp_fr_r_france +]% {!</td><td>!} [+ str_change_fr_france +] {!</td></tr>!}
 
-<tr><td><div class="box" style='background-color:#aa4fff'> </div>  <span class="tooltip-text" title="Независимые радикалы">RI</span>: </td><td> [+ disp_ind_rad_votes_france +]% </td><td> [+ str_votes_change_rad2_france +] </td><td> [+ disp_ind_rad_r_france +]% </td><td> [+ str_change_rad2_france +] </td></tr>
+{!<tr><td><div class="box" style='background-color:#aa4fff'> </div> !} <span class="tooltip-text" title="Независимые радикалы">RI</span>: {!</td><td>!} [+ disp_ind_rad_votes_france +]% {!</td><td>!} [+ str_votes_change_rad2_france +] {!</td><td>!} [+ disp_ind_rad_r_france +]% {!</td><td>!} [+ str_change_rad2_france +] {!</td></tr>!}
 
-<tr><td><div class="box" style='background-color:#00CCCC'> </div>  <span class="tooltip-text" title="Народно-демократическая партия">PDP</span>: </td><td> [+ pdp_france_elections_vote +]% </td><td> [+ str_votes_change_ad_france +] </td><td> [+ pdp_r_france +]% </td><td> [+ str_change_pdp_france +] </td></tr>
-
-<tr><td><div class="box" style='background-color:#ADC1FD'> </div>  <span class="tooltip-text" title="Разные правые">DVD</span>: </td><td> [+ disp_ind_fr_votes_france +]% </td><td> [+ str_votes_change_fr2_france +] </td><td> [+ disp_ind_fr_r_france +]% </td><td> [+ str_change_fr2_france +] </td></tr>
+{!<tr><td><div class="box" style='background-color:#00CCCC'> </div> !} <span class="tooltip-text" title="Народно-демократическая партия">PDP</span>: {!</td><td>!} [+ pdp_france_elections_vote +]% {!</td><td>!} [+ str_votes_change_ad_france +] {!</td><td>!} [+ pdp_r_france +]% {!</td><td>!} [+ str_change_pdp_france +] {!</td></tr>!}
+ 
+{!<tr><td><div class="box" style='background-color:#ADC1FD'> </div> !} <span class="tooltip-text" title="Разные правые">DVD</span>: {!</td><td>!} [+ disp_ind_fr_votes_france +]% {!</td><td>!} [+ str_votes_change_fr2_france +] {!</td><td>!} [+ disp_ind_fr_r_france +]% {!</td><td>!} [+ str_change_fr2_france +] {!</td></tr>!}
 
 <tr><td colspan="5" style="text-align: center;"><strong>Французская секция Коммунистического интернационала</strong></td></tr>
 
-<tr><td><div class="box" style='background-color:#700000'> </div> <span class="tooltip-text" title="Французская коммунистическая партия">PCF</span>: </td><td> [+ pcf_france_elections_vote +]% </td><td> [+ str_votes_change_pcf_france +] </td><td> [+ pcf_r_france +]% </td><td> [+ str_change_pcf_france +] </td></tr>
+{!<tr><td><div class="box" style='background-color:#700000'> </div> !}<span class="tooltip-text" title="Французская коммунистическая партия">PCF</span>: {!</td><td>!} [+ pcf_france_elections_vote +]% {!</td><td>!} [+ str_votes_change_pcf_france +] {!</td><td>!} [+ pcf_r_france +]% {!</td><td>!} [+ str_change_pcf_france +] {!</td></tr>!}
 
-<tr><td><div class="box" style='background-color:#B22222'> </div> <span class="tooltip-text" title="Партия пролетарского единства">PUP</span>: </td><td> [+ pup_france_elections_vote +]% </td><td> [+ str_votes_change_pup_france +] </td><td> [+ pup_r_france +]% </td><td> [+ str_change_pup_france +] </td></tr>
+{!<tr><td><div class="box" style='background-color:#B22222'> </div> !}<span class="tooltip-text" title="Партия пролетарского единства">PUP</span>: {!</td><td>!} [+ pup_france_elections_vote +]% {!</td><td>!} [+ str_votes_change_pup_france +] {!</td><td>!} [+ pup_r_france +]% {!</td><td>!} [+ str_change_pup_france +] {!</td></tr>!}
 
-</table> <hr id="read-marker"> Народный фронт (<span style="color: #700000;" class="tooltip-text" title="Французская коммунистическая партия">**ФКП**</span> + <span style="color: #B22222;" class="tooltip-text" title="Партия пролетарского единства">**ПЕП**</span> + <span style="color: #F0001C;" class="tooltip-text" title="Французская секция Рабочего интернационала">**СФИО**</span> + <span style="color: #FF6699;" class="tooltip-text" title="Республиканско-социалистическая партия">**ПРС**</span>): [+ pop_front_france +]%
+{!</table>!} <hr id="read-marker"> Народный фронт (<span style="color: #700000;" class="tooltip-text" title="Французская коммунистическая партия">**ФКП**</span> + <span style="color: #B22222;" class="tooltip-text" title="Партия пролетарского единства">**ПЕП**</span> + <span style="color: #F0001C;" class="tooltip-text" title="Французская секция Рабочего интернационала">**СФИО**</span> + <span style="color: #FF6699;" class="tooltip-text" title="Республиканско-социалистическая партия">**ПРС**</span>): [+ pop_front_france +]%
 
 Картель Левых (<span style="color: #F0001C;" class="tooltip-text" title="Французская секция Рабочего интернационала">**СФИО**</span> + <span style="color: #FF6699;" class="tooltip-text" title="Республиканско-социалистическая партия">**ПРС**</span> + <span style="color: #E0B0FF;" class="tooltip-text" title="Республиканская, радикальная и радикал-социалистическая партия">**ПРРРС**</span>): [+ left_coalition_france +]%
 
@@ -558,4 +559,3 @@ choose-if: bourgeois_coalition_france >= 50
 on-arrival: dataminer_detected = 1
 
 ок.
-

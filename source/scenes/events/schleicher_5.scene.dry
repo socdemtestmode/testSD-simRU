@@ -1,6 +1,6 @@
 title: Политическое перемирие со Шлейхером?
 subtitle: Мы должны либо подтвердить, либо опровергнуть слухи о предполагаемой сделке между АДГБ и канцлером.
-view-if: chancellor = "Schleicher" and schleicher_time and schleicher_time < 6 and schleicher_spd_r >= 3 and schleicher_spd_support >= 6 and not schleicher_plan
+view-if: chancellor = "Шляйхер" and schleicher_time and schleicher_time < 6 and schleicher_spd_r >= 3 and schleicher_spd_support >= 6 and not schleicher_plan
 new-page: true
 tags: event
 max-visits: 1

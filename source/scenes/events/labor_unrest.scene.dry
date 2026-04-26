@@ -1,6 +1,6 @@
 title: Рабочие волнения
 subtitle: Столкновения между рабочими и работодателями в Руре…
-view-if: year = 1928 and month = 12 and spd_in_government and labor_minister_party != "SPD"
+view-if: year = 1928 and month = 12 and spd_in_government and labor_minister_party != "СДПГ"
 max-visits: 1
 new-page: true
 face-image: img/Kollwitz_Weavers.jpg

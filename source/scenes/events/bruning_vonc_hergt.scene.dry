@@ -1,14 +1,14 @@
 title: Вотум недоверия новому правительству
 subtitle: Канцлеру [+ chancellor +]у грозит вотум недоверия.
 new-page: true
-view-if: bruning_event_timer = 5 and dnvp_ideology == "Moderate" and not kvp_formed and not bourgeois_coalition >= 50 and not cvp_formed
+view-if: bruning_event_timer = 5 and dnvp_ideology == "Умеренные" and not kvp_formed and not bourgeois_coalition >= 50 and not cvp_formed
 on-arrival: bruning_event_seen = 1; judicial_reform -= 1
 tags: event
 max-visits: 1
 
 = Вотум недоверия
 
-После распада нашей коалиции президент [+ president +] назначил Генриха Брюнинга от [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] главой правительства, поддерживаемого буржуазными силами. [? if center_right_coalition < 50: Однако они не смогут продержаться без нашей поддержки, учитывая, что <span style="color: #7A3C00;">**НСДАП**</span> не будет принимать участия. ?]
+После распада нашей коалиции президент [+ president +] назначил Генриха Брюнинга от [? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] главой правительства, поддерживаемого буржуазными силами. [? if center_right_coalition < 50: Однако они не смогут продержаться без нашей поддержки, учитывая, что <span style="color: #7A3C00;">**НСДАП**</span> не будет принимать участия. ?]
 
 Брюнинг реорганизовал кабинет, включив в него партии правее [? if not lvp_formed and dvp_exist: <span style="color: #C0A054;">**ННП**</span> ?][? if not lvp_formed and not dvp_exist: <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?], такие как <span style="color: #b8996f;">**ЭП**</span> и <span style="color: #3E88B3;">**НННП**</span>, чтобы создать [? if was_in_center_right_coalition == 0: новую  ?][? if was_in_center_right_coalition == 1: ещё одну  ?]правоцентристскую коалицию. [? if center_right_coalition < 50: Перед нами стоит выбор: «терпеть» правительство, чтобы предотвратить усиление экстремистов в рейхстаге, или проголосовать за отставку Брюнинга и объявление новых выборов. ?]
 

@@ -1,6 +1,6 @@
 title: «Потемпская пятёрка» помилована!
 subtitle: Убийство оправдано во имя политиканства.
-view-if: chancellor = "Papen" and papen_time == 13 and potempa_five_convicted and prussia_leader == "Papen"
+view-if: chancellor = "Папен" and papen_time == 13 and potempa_five_convicted and prussia_leader == "Папен"
 new-page: true
 tags: event
 max-visits: 1

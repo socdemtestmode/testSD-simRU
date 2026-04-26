@@ -40,11 +40,12 @@ priority: -1
 max-visits: 1
 go-to: candidate_selection
 
+
 = Агитация на президентских выборах
 
-[? if nsdap_candidate_1932: У <span style="color: #7A3C00;">**НСДАП**</span>, выступающей в одиночку в предвыборной борьбе за избрание [+ nsdap_candidate_1932_disp +], мало шансов на победу — по крайней мере, по мнению наших советников. Однако это не значит, что выборы не имеют значения. Широкомасштабная <span style="color: #7A3C00;">нацистская</span> пропагандистская кампания, которой руководит печально известный Йозеф Геббельс, в сочетании с грядущими местными выборами, которые пройдут всего через месяц после первого тура, может существенно изменить общественное мнение. Это, в свою очередь, может заставить президента Гинденбурга и его окружение занять более враждебную позицию по отношению к действующему правительству и добиваться реорганизации национального правительства с включением в него <span style="color: #7A3C00;">национальной</span> <span style="color: #3E88B3;">оппозиции</span>. [? if nsdap_candidate_1932 == "Hitler": Более того, Адольф Гитлер обладает выдающейся харизмой, и его стратегия — ежедневные перелёты по всей Германии для выступления перед сотнями тысяч в ином случае равнодушных избирателей — соперничает даже с кампанией Гинденбурга. ?][? if nsdap_candidate_1932 == "Göring": Поскольку Гитлер не имеет права баллотироваться, Герман Геринг взял на себя роль кандидата от <span style="color: #7A3C00;">**НСДАП**</span>. Будучи убеждённым представителем правого крыла партии и противником более радикальной политики Штрассера, Герингу будет легче заручиться поддержкой промышленников, обеспечив тем самым важнейшее финансирование для их обширной пропагандистской сети. ?] ?]
+[? if nsdap_candidate_1932: У <span style="color: #7A3C00;">**НСДАП**</span>, выступающей в одиночку в предвыборной борьбе за избрание [+ nsdap_candidate_1932_disp +], мало шансов на победу — по крайней мере, по мнению наших советников. Однако это не значит, что выборы не имеют значения. Широкомасштабная <span style="color: #7A3C00;">нацистская</span> пропагандистская кампания, которой руководит печально известный Йозеф Геббельс, в сочетании с грядущими местными выборами, которые пройдут всего через месяц после первого тура, может существенно изменить общественное мнение. Это, в свою очередь, может заставить президента Гинденбурга и его окружение занять более враждебную позицию по отношению к действующему правительству и добиваться реорганизации национального правительства с включением в него <span style="color: #7A3C00;">национальной</span> <span style="color: #3E88B3;">оппозиции</span>. [? if nsdap_candidate_1932 == "Hitler": Более того, Адольф Гитлер обладает выдающейся харизмой, и его стратегия — ежедневные перелёты по всей Германии для выступления перед сотнями тысяч в ином случае равнодушных избирателей — соперничает даже с кампанией Гинденбурга.  ?][? if nsdap_candidate_1932 == "Göring": Поскольку Гитлер не имеет права баллотироваться, Герман Геринг взял на себя роль кандидата от <span style="color: #7A3C00;">**НСДАП**</span>. Будучи убеждённым представителем правого крыла партии и противником более радикальной политики Штрассера, Герингу будет легче заручиться поддержкой промышленников, обеспечив тем самым важнейшее финансирование для их обширной пропагандистской сети.  ?]  ?]
 
-[? if spd_support_reactionary: Из-за нашей поддержки[+ spd_choice +], мы исключены из их предвыборных комитетов. Наша поддержка нежелательна для [+ spd_choice +] него самого, и он будет пытаться как можно сильнее дистанцироваться от нас, чтобы заручиться поддержкой умеренно правых и промышленных кругов. В результате наша роль в этой кампании будет заключаться в том, чтобы сплотить немецких левых, которые по-прежнему не хотят голосовать за такого консерватора, как он. ?][? if braun_campaign: Мы выдвигаем кандидатуру Отто Брауна, одного из наших самых известных и уважаемых государственных деятелей. Его реформистская позиция даёт нам шанс привлечь на свою сторону часть электората буржуазных партий. Однако многие за пределами нашей партии скорее умрут, чем поддержат <span style="color: #c00000;">социалиста</span>. Единственный реальный способ увеличить нашу долю голосов — это вернуть разочарованных <span style="color: #700000;">**коммунистов**</span> и мобилизовать энтузиазм рабочих. ?][? if spd_support_thalmann: Наше спорное решение поддержать[+ communist_candidate_1932_disp +] в качестве единого кандидата от левых сил глубоко поляризовало германскую политику, подготовив почву для решающей схватки между <span style="color: #9B0000;">марксизмом</span> и капитализмом. Не исключена даже гражданская война, и неважно, кто из кандидатов одержит победу. Поскольку все левые силы Германии объединились вокруг [+ communist_candidate_1932 +], нашей электоральной базе почти некуда расти — нам остаётся лишь надеяться, что рабочие в полном составе явятся на избирательные участки. ?][? if rosenfeld_campaign: Мы выдвигаем кандидатуру Курта Розенфельда, менее известного деятеля нашего левого крыла. Его левые взгляды дают нам шанс заручиться поддержкой <span style="color: #700000;">**коммунистов**</span>, но полностью закрывают для нас возможность поддержки со стороны буржуазных партий. Единственный реальный способ увеличить нашу долю голосов — это вернуть разочарованных рабочих, мобилизовать их энтузиазм и убедить наших более реформистски настроенных сторонников из среднего класса и сельской местности не отступать от намеченного плана. ?][? if eckener_campaign: Мы выдвигаем кандидатуру Гуго Эккенера, знаменитого беспартийного капитана дирижаблей и консерватора по личным убеждениям. Его правые взгляды ставят нас перед выбором: либо саму <span style="color: #c00000;">**СДПГ**</span> уязвимы перед оттоком к <span style="color: #700000;">**коммунистов**</span>, но зато полностью открыли дверь для единой поддержки со стороны буржуазных партий. Мы можем либо укрепить поддержку Эккенера внутри <span style="color: #c00000;">**СДПГ**</span>, либо сосредоточиться на максимальном привлечении сторонников других партий и укреплении сотрудничества с нашими буржуазными союзниками. ?]
+[? if spd_support_reactionary: Из-за нашей поддержки[+ spd_choice +], мы исключены из их предвыборных комитетов. Наша поддержка нежелательна для [+ spd_choice +] него самого, и он будет пытаться как можно сильнее дистанцироваться от нас, чтобы заручиться поддержкой умеренно правых и промышленных кругов. В результате наша роль в этой кампании будет заключаться в том, чтобы сплотить немецких левых, которые по-прежнему не хотят голосовать за такого консерватора, как он.  ?][? if braun_campaign: Мы выдвигаем кандидатуру Отто Брауна, одного из наших самых известных и уважаемых государственных деятелей. Его реформистская позиция даёт нам шанс привлечь на свою сторону часть электората буржуазных партий. Однако многие за пределами нашей партии скорее умрут, чем поддержат <span style="color: #c00000;">социалиста</span>. Единственный реальный способ увеличить нашу долю голосов — это вернуть разочарованных <span style="color: #700000;">**коммунистов**</span> и мобилизовать энтузиазм рабочих. ?][? if spd_support_thalmann: Наше спорное решение поддержать[+ communist_candidate_1932_disp +] в качестве единого кандидата от левых сил глубоко поляризовало германскую политику, подготовив почву для решающей схватки между <span style="color: #9B0000;">марксизмом</span> и капитализмом. Не исключена даже гражданская война, и неважно, кто из кандидатов одержит победу. Поскольку все левые силы Германии объединились вокруг [+ communist_candidate_1932 +], нашей электоральной базе почти некуда расти — нам остаётся лишь надеяться, что рабочие в полном составе явятся на избирательные участки.  ?][? if rosenfeld_campaign: Мы выдвигаем кандидатуру Курта Розенфельда, менее известного деятеля нашего левого крыла. Его левые взгляды дают нам шанс заручиться поддержкой <span style="color: #700000;">**коммунистов**</span>, но полностью закрывают для нас возможность поддержки со стороны буржуазных партий. Единственный реальный способ увеличить нашу долю голосов — это вернуть разочарованных рабочих, мобилизовать их энтузиазм и убедить наших более реформистски настроенных сторонников из среднего класса и сельской местности не отступать от намеченного плана.  ?][? if eckener_campaign: Мы выдвигаем кандидатуру Гуго Эккенера, знаменитого беспартийного капитана дирижаблей и консерватора по личным убеждениям. Его правые взгляды ставят нас перед выбором: либо саму <span style="color: #c00000;">**СДПГ**</span> уязвимы перед оттоком к <span style="color: #700000;">**коммунистов**</span>, но зато полностью открыли дверь для единой поддержки со стороны буржуазных партий. Мы можем либо укрепить поддержку Эккенера внутри <span style="color: #c00000;">**СДПГ**</span>, либо сосредоточиться на максимальном привлечении сторонников других партий и укреплении сотрудничества с нашими буржуазными союзниками. ?]
 
 
 @candidate_selection
@@ -54,79 +55,79 @@ go-to: candidate_selection
 
 @view_candidates
 
-[? if spd_campaign: [? if spd_candidate_1932 != "Eckener": <span style="color: #c00000;">**[+ spd_candidate_1932_disp +]**</span> ?][? if spd_candidate_1932 == "Eckener": <span style="color: #000000;">**Ек**</span><span style="color: #DD0000;">**ен**</span><span style="color: #FFCC00;">**ер**</span> ?] — поддерживают: ?]
+[? if spd_campaign: [? if spd_candidate_1932 != "Eckener": <span style="color: #c00000;">**[+ spd_candidate_1932_disp +]**</span> ?][? if spd_candidate_1932 == "Eckener": <span style="color: #000000;">**Ек**</span><span style="color: #DD0000;">**ен**</span><span style="color: #FFCC00;">**ер**</span>  ?] — поддерживают: ?]
 
-[? if spd_campaign: - <span style="color: #c00000;">**СДПГ**</span> ?]
+[? if spd_campaign: - <span style="color: #c00000;">**СДПГ**</span>  ?]
 
-[? if kpd_support_spd == 1 and sapd_formed and spd_campaign: - <span style="color: #9B0000;">**СРПГ**</span> ?]
+[? if kpd_support_spd == 1 and sapd_formed and spd_campaign: - <span style="color: #9B0000;">**СРПГ**</span>  ?]
 
-[? if kpd_support_spd == 1 and spd_campaign: - <span style="color: #700000;">**КПГ**</span> ?]
+[? if kpd_support_spd == 1 and spd_campaign: - <span style="color: #700000;">**КПГ**</span>  ?]
 
-[? if z_support_spd == 1 and spd_campaign: - [? if z_party_name != "CVP": <span style="color: #000000;">Партия центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] ?]
+[? if z_support_spd == 1 and spd_campaign: - [? if z_party_name != "CVP": <span style="color: #000000;">Партия центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?]  ?]
 
-[? if bvp_support_spd and spd_campaign: - <span style="color: #A2D8E0;">**БНП**</span> ?]
+[? if bvp_support_spd and spd_campaign: - <span style="color: #A2D8E0;">**БНП**</span>  ?]
 
-[? if ddp_support_spd == 1 and spd_campaign: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
+[? if ddp_support_spd == 1 and spd_campaign: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span>  ?]
 
-[? if lvp_support_spd == 1 and spd_campaign: - <span style="color: #FFCC00;">**ЛНП**</span> ?]
+[? if lvp_support_spd == 1 and spd_campaign: - <span style="color: #FFCC00;">**ЛНП**</span>  ?]
 
-[? if dvp_support_spd == 1 and spd_campaign: - <span style="color: #C0A054;">**ННП**</span> ?]
+[? if dvp_support_spd == 1 and spd_campaign: - <span style="color: #C0A054;">**ННП**</span>  ?]
 
 [? if reactionary_candidate_1932: [? if hindenburg_run: <span style="color: #808080;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if (reactionary_candidate_1932 == "Luther" or reactionary_candidate_1932 == "Gessler" or reactionary_candidate_1932 == "Jarres") and lvp_formed: <span style="color: #FFCC00;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if (reactionary_candidate_1932 == "Luther" or reactionary_candidate_1932 == "Jarres") and not lvp_formed: <span style="color: #C0A054;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if reactionary_candidate_1932 == "Gessler" and not lvp_formed: <span style="color: #D3C24D;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if ((reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or reactionary_candidate_1932 == "Westarp") and not kvp_formed: <span style="color: #3E88B3;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if ((reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or reactionary_candidate_1932 == "Westarp") and kvp_formed: <span style="color: #0087DC;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if reactionary_candidate_1932 == "Adenauer" or reactionary_candidate_1932 == "Brüning" or reactionary_candidate_1932 == "Stegerwald" or (reactionary_candidate_1932 == "Lettow-Vorbeck" and cvp_formed): <span style="color: #000000;">**[+ reactionary_candidate_1932_disp +]**</span> ?] — поддерживают: ?]
 
-[? if (spd_support_reactionary_1 or (spd_support_reactionary and hindenburg_run)) and reactionary_candidate_1932: - <span style="color: #c00000;">**СДПГ**</span> ?]
+[? if (spd_support_reactionary_1 or (spd_support_reactionary and hindenburg_run)) and reactionary_candidate_1932: - <span style="color: #c00000;">**СДПГ**</span>  ?]
 
-[? if z_support_spd != 1 and (z_choice == reactionary_candidate_1932 or hindenburg_run) and reactionary_candidate_1932: - [? if z_party_name != "CVP": <span style="color: #000000;">Партия центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] ?]
+[? if z_support_spd != 1 and (z_choice == reactionary_candidate_1932 or hindenburg_run) and reactionary_candidate_1932: - [? if z_party_name != "CVP": <span style="color: #000000;">Партия центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?]  ?]
 
-[? if (z_choice == reactionary_candidate_1932 or hindenburg_run) and not bvp_support_spd and reactionary_candidate_1932: - <span style="color: #A2D8E0;">**БНП**</span> ?]
+[? if (z_choice == reactionary_candidate_1932 or hindenburg_run) and not bvp_support_spd and reactionary_candidate_1932: - <span style="color: #A2D8E0;">**БНП**</span>  ?]
 
-[? if (lvp_choice == reactionary_candidate_1932 or hindenburg_run) and lvp_support_spd != 1 and lvp_formed and reactionary_candidate_1932: - <span style="color: #FFCC00;">**ЛНП**</span> ?]
+[? if (lvp_choice == reactionary_candidate_1932 or hindenburg_run) and lvp_support_spd != 1 and lvp_formed and reactionary_candidate_1932: - <span style="color: #FFCC00;">**ЛНП**</span>  ?]
 
-[? if (ddp_choice == reactionary_candidate_1932 or hindenburg_run) and ddp_support_spd != 1 and not lvp_formed and reactionary_candidate_1932: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
+[? if (ddp_choice == reactionary_candidate_1932 or hindenburg_run) and ddp_support_spd != 1 and not lvp_formed and reactionary_candidate_1932: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span>  ?]
 
-[? if (dvp_choice == reactionary_candidate_1932 or hindenburg_run) and dvp_support_spd != 1 and not lvp_formed and reactionary_candidate_1932: - <span style="color: #C0A054;">**ННП**</span> ?]
+[? if (dvp_choice == reactionary_candidate_1932 or hindenburg_run) and dvp_support_spd != 1 and not lvp_formed and reactionary_candidate_1932: - <span style="color: #C0A054;">**ННП**</span>  ?]
 
-[? if (kvp_choice == reactionary_candidate_1932 or hindenburg_run) and kvp_formed and reactionary_candidate_1932: - <span style="color: #0087DC;">**КНП**</span> ?]
+[? if (kvp_choice == reactionary_candidate_1932 or hindenburg_run) and kvp_formed and reactionary_candidate_1932: - <span style="color: #0087DC;">**КНП**</span>  ?]
 
-[? if (dnvp_choice == reactionary_candidate_1932 or hindenburg_run) and dnvp_ideology == "Moderate" and not cvp_formed: - <span style="color: #3E88B3;">**НННП**</span> ?]
+[? if (dnvp_choice == reactionary_candidate_1932 or hindenburg_run) and dnvp_ideology == "Moderate" and not cvp_formed: - <span style="color: #3E88B3;">**НННП**</span>  ?]
 
-[? if (other_choice == reactionary_candidate_1932 or hindenburg_run) and reactionary_candidate_1932: - **Прочие** ?]
+[? if (other_choice == reactionary_candidate_1932 or hindenburg_run) and reactionary_candidate_1932: - **Прочие**  ?]
 
 [? if secondary_reactionary_candidate_1932: [? if hindenburg_run: <span style="color: #808080;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if (secondary_reactionary_candidate_1932 == "Luther" or secondary_reactionary_candidate_1932 == "Gessler" or secondary_reactionary_candidate_1932 == "Jarres") and lvp_formed: <span style="color: #FFCC00;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if (secondary_reactionary_candidate_1932 == "Luther" or secondary_reactionary_candidate_1932 == "Jarres") and not lvp_formed: <span style="color: #C0A054;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if secondary_reactionary_candidate_1932 == "Gessler" and not lvp_formed: <span style="color: #D3C24D;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if (secondary_reactionary_candidate_1932 == "Lettow-Vorbeck" or secondary_reactionary_candidate_1932 == "Westarp") and not kvp_formed: <span style="color: #3E88B3;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if ((secondary_reactionary_candidate_1932 == "Lettow-Vorbeck" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Westarp") and kvp_formed: <span style="color: #0087DC;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if secondary_reactionary_candidate_1932 == "Adenauer" or secondary_reactionary_candidate_1932 == "Brüning" or secondary_reactionary_candidate_1932 == "Stegerwald": <span style="color: #000000;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?] — поддерживают: ?]
 
-[? if spd_support_reactionary_2 and reactionary_candidate_1932: - <span style="color: #c00000;">**СДПГ**</span> ?]
+[? if spd_support_reactionary_2 and reactionary_candidate_1932: - <span style="color: #c00000;">**СДПГ**</span>  ?]
 
-[? if z_support_spd != 1 and (z_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and secondary_reactionary_candidate_1932: - [? if z_party_name != "CVP": <span style="color: #000000;">Партия центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] ?]
+[? if z_support_spd != 1 and (z_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and secondary_reactionary_candidate_1932: - [? if z_party_name != "CVP": <span style="color: #000000;">Партия центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?]  ?]
 
-[? if (z_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and not bvp_support_spd and secondary_reactionary_candidate_1932: - <span style="color: #A2D8E0;">**БНП**</span> ?]
+[? if (z_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and not bvp_support_spd and secondary_reactionary_candidate_1932: - <span style="color: #A2D8E0;">**БНП**</span>  ?]
 
-[? if (lvp_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and lvp_support_spd != 1 and lvp_formed and secondary_reactionary_candidate_1932: - <span style="color: #FFCC00;">**ЛНП**</span> ?]
+[? if (lvp_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and lvp_support_spd != 1 and lvp_formed and secondary_reactionary_candidate_1932: - <span style="color: #FFCC00;">**ЛНП**</span>  ?]
 
-[? if (ddp_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and ddp_support_spd != 1 and not lvp_formed and secondary_reactionary_candidate_1932: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
+[? if (ddp_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and ddp_support_spd != 1 and not lvp_formed and secondary_reactionary_candidate_1932: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span>  ?]
 
-[? if (dvp_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and dvp_support_spd != 1 and not lvp_formed and secondary_reactionary_candidate_1932: - <span style="color: #C0A054;">**ННП**</span> ?]
+[? if (dvp_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and dvp_support_spd != 1 and not lvp_formed and secondary_reactionary_candidate_1932: - <span style="color: #C0A054;">**ННП**</span>  ?]
 
-[? if (kvp_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and kvp_formed and secondary_reactionary_candidate_1932: - <span style="color: #0087DC;">**КНП**</span> ?]
+[? if (kvp_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and kvp_formed and secondary_reactionary_candidate_1932: - <span style="color: #0087DC;">**КНП**</span>  ?]
 
-[? if (dnvp_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and dnvp_ideology == "Moderate" and not cvp_formed and secondary_reactionary_candidate_1932: - <span style="color: #3E88B3;">**НННП**</span> ?]
+[? if (dnvp_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and dnvp_ideology == "Moderate" and not cvp_formed and secondary_reactionary_candidate_1932: - <span style="color: #3E88B3;">**НННП**</span>  ?]
 
-[? if (other_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and secondary_reactionary_candidate_1932: - **Прочие** ?]
+[? if (other_choice == secondary_reactionary_candidate_1932 or hindenburg_run) and secondary_reactionary_candidate_1932: - **Прочие**  ?]
 
 [? if nsdap_candidate_1932: <span style="color: #7A3C00;">**[+ nsdap_candidate_1932_disp +]**</span> — поддерживают: ?]
 
-[? if nsdap_candidate_1932: - <span style="color: #7A3C00;">**НСДАП**</span> ?]
+[? if nsdap_candidate_1932: - <span style="color: #7A3C00;">**НСДАП**</span>  ?]
 
 [? if kpd_support_spd == 0 and communist_candidate_1932: <span style="color: #700000;">**[+ communist_candidate_1932_disp +]**</span> — поддерживают: ?]
 
-[? if kpd_support_spd == 0 and communist_candidate_1932: - <span style="color: #700000;">**КПГ**</span> ?]
+[? if kpd_support_spd == 0 and communist_candidate_1932: - <span style="color: #700000;">**КПГ**</span>  ?]
 
-[? if kpd_support_spd == 0 and communist_candidate_1932 and sapd_formed: - <span style="color: #9B0000;">**СРПГ**</span> ?]
+[? if kpd_support_spd == 0 and communist_candidate_1932 and sapd_formed: - <span style="color: #9B0000;">**СРПГ**</span>  ?]
 
-[? if spd_support_thalmann == 1: - <span style="color: #c00000;">**СДПГ**</span> ?]
+[? if spd_support_thalmann == 1: - <span style="color: #c00000;">**СДПГ**</span>  ?]
 
 [? if dnvp_candidate_1932: [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**[+ dnvp_candidate_1932_disp +]**</span> ?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**[+ dnvp_candidate_1932_disp +]**</span> ?] — поддерживают: ?]
 
-[? if dnvp_candidate_1932 and dnvp_ideology == "Radical": - <span style="color: #3E88B3;">**НННП**</span> ?]
+[? if dnvp_candidate_1932 and dnvp_ideology == "Radical": - <span style="color: #3E88B3;">**НННП**</span>  ?]
 
 [? if dnvp_candidate_1932 and dnvp_ideology == "Moderate": - <span style="color: #003755;">**НФГ**</span> ?]
 
@@ -178,7 +179,7 @@ go-to: campaigning_braun
 title: Мы убеждаем [? if z_party_name != "CVP": <span style="color: #000000;">Центр</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] принять более активное участие в нашей кампании.
 subtitle: The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] недостаточно выкладывается. −1 ресурс
 choose-if: z_support_spd == 1 and ((z_relation >= 60 and z_ideology == "Right") or (z_relation >= 45 and z_ideology == "Left")) and resources >= 1
-unavailable-subtitle: [? if z_support_spd != 1: The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] не поддерживает Брауна. ?][? if (z_relation < 60 and z_ideology == "Right") or (z_relation < 45 and z_ideology == "Left"): У нас недостаточно хорошие отношения. ?] [? if resources < 1: Недостаточно ресурсов. ?]
+unavailable-subtitle: [? if z_support_spd != 1: The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] не поддерживает Брауна. ?][? if (z_relation < 60 and z_ideology == "Right") or (z_relation < 45 and z_ideology == "Left"):  У нас недостаточно хорошие отношения. ?] [? if resources < 1:  Недостаточно ресурсов. ?]
 on-arrival: resources -= 1; pro_republic += 3; z_glaze_spd = 1; catholics_nsdap -= 3; catholics_spd += 3; catholics_z += 2; rural_spd += 1; z_relation += 5; ddp_left += 2; dvp_left += 3; ddp_cohesion += 1; lvp_left += 2
 face-image: img/center_poster.jpg
 max-visits: 1
@@ -191,7 +192,7 @@ The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Це
 title: Мы убеждаем <span style="color: #700000;">**коммунистов**</span> принять более активное участие в нашей кампании.
 subtitle: Это оттолкнёт избирателей из буржуазии! -2 ресурса
 choose-if: kpd_support_spd == 1 and (kpd_relation >= 70 or (kpd_relation >= 55 and kpd_leader == "Conciliators")) and resources >= 2
-unavailable-subtitle: [? if kpd_support_spd != 1: <span style="color: #700000;">КПГ</span> не поддерживает Брауна. ?][? if (kpd_relation < 70 or (kpd_relation < 55 and kpd_leader == "Conciliators")): Наши отношения недостаточно хороши. ?] [? if resources < 2: Недостаточно ресурсов (требуется 2). ?]
+unavailable-subtitle: [? if kpd_support_spd != 1: <span style="color: #700000;">КПГ</span> не поддерживает Брауна.  ?][? if (kpd_relation < 70 or (kpd_relation < 55 and kpd_leader == "Conciliators")): Наши отношения недостаточно хороши. ?] [? if resources < 2: Недостаточно ресурсов (требуется 2). ?]
 on-arrival: resources -= 2; kpd_glaze_spd = 1; workers_spd += 3; workers_kpd += 5; workers_nsdap -= 3; unemployed_kpd += 3; unemployed_nsdap -= 3; z_relation -= 10; ddp_relation -= 10; dvp_relation -= 10; lvp_relation -= 10; dvp_right += 5; ddp_right += 3; ddp_cohesion -= 2; lvp_right += 5; z_support_spd = 0 if (z_relation < 60 and z_ideology == "Right") or (z_relation < 50 and z_ideology == "Left"); new_middle_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3
 face-image: img/kpd_poster.jpg
 max-visits: 1
@@ -214,8 +215,8 @@ go-to: campaign_menu
 
 
 
-
 @campaign_menu
+
 
 Поскольку сейчас время выборов, мы можем усилить агитацию. Купите одну кампанию — и получите вторую совершенно бесплатно!
 
@@ -234,12 +235,10 @@ go-to: campaign_menu
 
 
 
-
 @middle_class
 view-if: campaigning_count < 2
 on-arrival: new_middle_spd += 3*(1 - dissent); old_middle_spd += 3*(1 - dissent); new_middle_spd += 2*(1 - dissent) if peoples_party; old_middle_spd += 2*(1 - dissent) if peoples_party; campaigning_count += 1
 go-to: campaign_menu
-
 
 
 
@@ -250,12 +249,10 @@ go-to: campaign_menu
 
 
 
-
 @unemployed
 view-if: campaigning_count < 2
 on-arrival: unemployed_spd += 3*(1 - dissent); campaigning_count += 1
 go-to: campaign_menu
-
 
 
 
@@ -266,11 +263,9 @@ go-to: campaign_menu
 
 
 
-
 @checkout
 title: Оформить заказ.
 go-to: campaigning_braun if braun_campaign; campaigning_eckener if eckener_campaign; campaigning_rosenfeld if rosenfeld_campaign; campaigning_thalmann if spd_support_thalmann; campaigning_reactionary if spd_support_reactionary
-
 
 
 
@@ -333,7 +328,7 @@ go-to: campaigning_rosenfeld
 title: Убедить <span style="color: #700000;">**коммунистов**</span> принять более активное участие в нашей агитационной работе.
 subtitle: Это оттолкнёт буржуазные партии! -1 ресурс
 choose-if: kpd_support_spd == 1 and (kpd_relation >= 60 or (kpd_relation >= 40 and kpd_leader == "Conciliators")) and resources >= 1
-unavailable-subtitle: [? if kpd_support_spd != 1: <span style="color: #700000;">КПГ</span> не поддерживает Розенфельда. ?][? if (kpd_relation < 60 or (kpd_relation < 40 and kpd_leader == "Conciliators")): Наши отношения недостаточно хороши. ?] [? if resources < 1: Недостаточно ресурсов. ?]
+unavailable-subtitle: [? if kpd_support_spd != 1: <span style="color: #700000;">КПГ</span> не поддерживает Розенфельда.  ?][? if (kpd_relation < 60 or (kpd_relation < 40 and kpd_leader == "Conciliators")): Наши отношения недостаточно хороши. ?] [? if resources < 1: Недостаточно ресурсов. ?]
 on-arrival: resources -= 1; kpd_glaze_spd = 1; workers_spd += 3; workers_kpd += 5; workers_nsdap -= 3; unemployed_kpd += 3; unemployed_nsdap -= 3; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 5; lvp_relation -= 5; dvp_right += 3; ddp_right += 1; ddp_cohesion -= 1; lvp_right += 3; new_middle_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3
 face-image: img/kpd_poster.jpg
 max-visits: 1
@@ -357,7 +352,7 @@ view-if: eckener_campaign
 
 @media_eckener
 title: Использовать наши радиостанции для агитации за Эккенера.
-subtitle: –1 ресурс
+subtitle: -–1 ресурс
 choose-if: radio >= 2 and resources >= 1
 unavailable-subtitle: [? if radio < 2: Наша радиоинфраструктура ещё недостаточно развита. ?] [? if resources < 1: Недостаточно ресурсов. ?]
 on-arrival: resources -= 1; media_eckener_seen = 1; new_middle_spd += (radio + commercialized_media); old_middle_spd += (radio + commercialized_media); workers_spd += (campaign_media + radio - 2); unemployed_spd += (campaign_media + radio); new_middle_kpd += 3; socialism += 3; nationalism -= 3
@@ -398,7 +393,7 @@ go-to: campaigning_eckener
 title: Убедить буржуазные партии включить нас в свои предвыборные комитеты.
 subtitle: Это позволит действовать более согласованно.
 choose-if: z_support_spd == 1 and ((z_relation >= 55 and z_ideology == "Right") or (z_relation >= 45 and z_ideology == "Left")) and ((ddp_relation >= 55 and not lvp_formed) or (lvp_relation >= 55 and lvp_formed)) and resources >= 1
-unavailable-subtitle: [? if z_support_spd != 1: The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">ХНП</span> ?]не поддерживает Эккенера. ?][? if ddp_support_spd != 1 and not lvp_formed: The <span style="color: #D3C24D;">[+ ddp_name +]</span> не поддерживает Эккенера. ?][? if lvp_support_spd != 1 and lvp_formed: <span style="color: #FFCC00;">ЛНП</span> не поддерживает Эккенера. ?][? if (z_relation < 50 and z_ideology == "Right") or (z_relation < 40 and z_ideology == "Left"): Наши отношения с[? if z_party_name != "CVP": <span style="color: #000000;">партией Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">ХНП</span> ?] недостаточно хороши. ?][? if ddp_relation < 55 and not lvp_formed: Наши отношения с <span style="color: #D3C24D;">[+ ddp_name +]</span> недостаточно хороши. ?][? if lvp_relation < 55 and lvp_formed: Наши отношения с <span style="color: #FFCC00;">ЛНП</span> недостаточно хороши. ?] [? if resources < 1: Недостаточно ресурсов. ?]
+unavailable-subtitle: [? if z_support_spd != 1: The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">ХНП</span> ?]не поддерживает Эккенера. ?][? if ddp_support_spd != 1 and not lvp_formed: The <span style="color: #D3C24D;">[+ ddp_name +]</span> не поддерживает Эккенера. ?][? if lvp_support_spd != 1 and lvp_formed: <span style="color: #FFCC00;">ЛНП</span> не поддерживает Эккенера.  ?][? if (z_relation < 50 and z_ideology == "Right") or (z_relation < 40 and z_ideology == "Left"): Наши отношения с[? if z_party_name != "CVP": <span style="color: #000000;">партией Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">ХНП</span> ?] недостаточно хороши. ?][? if ddp_relation < 55 and not lvp_formed: Наши отношения с <span style="color: #D3C24D;">[+ ddp_name +]</span> недостаточно хороши. ?][? if lvp_relation < 55 and lvp_formed: Наши отношения с <span style="color: #FFCC00;">ЛНП</span> недостаточно хороши.  ?] [? if resources < 1: Недостаточно ресурсов. ?]
 on-arrival: resources -= 1; pro_republic += 5; bourgeois_glaze_spd = 1; catholics_nsdap -= 2; catholics_spd += 2; catholics_z += 2; rural_spd += 2; new_middle_spd += 4; old_middle_spd += 4; z_relation += 5; ddp_relation += 5; lvp_relation += 5; dvp_relation += 5; ddp_left += 2; dvp_left += 3; ddp_cohesion += 1; lvp_left += 2
 face-image: img/center_poster.jpg
 max-visits: 1
@@ -550,4 +545,3 @@ max-visits: 1
 go-to: campaigning_thalmann
 
 Почему-то <span style="color: #700000;">**коммунисты**</span> не особенно благодарны за нашу поддержку[+ communist_candidate_1932 +]; возможно, дело в приказах из Москвы. В любом случае, нам удалось убедить их руководство позволить нам совместно участвовать в митингах и других мероприятиях.
-

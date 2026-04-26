@@ -1,6 +1,6 @@
 title: Общественные работы Шлейхера
 subtitle: План работает!
-view-if: chancellor = "Schleicher" and schleicher_time == 8 and not schleicher_economy_time
+view-if: chancellor = "Шляйхер" and schleicher_time == 8 and not schleicher_economy_time
 new-page: true
 tags: event
 priority: 2

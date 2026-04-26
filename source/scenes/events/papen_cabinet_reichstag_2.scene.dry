@@ -1,7 +1,7 @@
 title: Чрезвычайный указ о приостановке работы парламента?
 subtitle: Слухи о неконституционном указе, одобренном президентом…
-view-if: chancellor = "Papen" and papen_time and (next_reichstag_time - 1) == rubicon_time and next_reichstag_time > 0 and reichstag_pres_rubicon
-on-arrival: reichstag_decree_rubicon = 1; papen_strength += 1; papen_goal = "Postpone elections indefinitely"
+view-if: chancellor = "Папен" and papen_time and (next_reichstag_time - 1) == rubicon_time and next_reichstag_time > 0 and reichstag_pres_rubicon
+on-arrival: reichstag_decree_rubicon = 1; papen_strength += 1; papen_goal = "Отложить выборы на неопределенный срок"
 new-page: true
 tags: event
 max-visits: 1

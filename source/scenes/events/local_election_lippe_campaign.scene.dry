@@ -2,7 +2,7 @@ title: Предвыборная кампания в ландтаг Липпе
 subtitle: Крохотное Свободное государство готовится к выборам на следующей неделе.
 new-page: true
 tags: event
-view-if: rubicon and chancellor == "Schleicher" and year == 1933 and month == 1 and week == 2
+view-if: rubicon and chancellor == "Шляйхер" and year == 1933 and month == 1 and week == 2
 max-visits: 1
 on-display: {!  
     var cardEl = document.createElement('div');  

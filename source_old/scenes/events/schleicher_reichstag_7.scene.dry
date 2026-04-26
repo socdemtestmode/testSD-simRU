@@ -39,4 +39,3 @@ if (Q.next_election_month > 12) {
 Он принят.
 
 Новые выборы в Рейхстаг назначены на [+ next_election_month : month +] [+ next_election_year +], неделя [+ next_election_week +].
-

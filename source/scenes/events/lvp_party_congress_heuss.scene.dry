@@ -1,6 +1,6 @@
 title: <span style="color: #FFCC00;">**ЛНП**</span> — Голосование в партии
 subtitle: Хойсу вынесен вотум недоверия!
-view-if: time >= heuss_explode_time and ((lvp_votes_start - lvp_votes > 4 or (change_lvp_votes < -3 and (last_election_time >= heuss_election_time))) or ((lvp_ideology == "Right" and lvp_votes_start - lvp_votes > 2) or (lvp_ideology == "Right" and (change_lvp_votes < -1 and last_election_time >= heuss_election_time)))) and lvp_leader == "Heuss" and lvp_formed
+view-if: time >= heuss_explode_time and ((lvp_votes_start - lvp_votes > 4 or (change_lvp_votes < -3 and (last_election_time >= heuss_election_time))) or ((lvp_ideology == "Правые" and lvp_votes_start - lvp_votes > 2) or (lvp_ideology == "Правые" and (change_lvp_votes < -1 and last_election_time >= heuss_election_time)))) and lvp_leader == "Хойс" and lvp_formed
 on-arrival: {!
 Q.heuss_points = 1;
 Q.dietrich_points = 0;
@@ -17,11 +17,11 @@ if (Q.in_grand_coalition || Q.in_weimar_coalition) {
     Q.heuss_points -= 1;
 }
 
-if (Q.agriculture_minister_party == "LVP" || Q.economic_minister_party == "LVP") {
+if (Q.agriculture_minister_party == "ЛНП" || Q.economic_minister_party == "ЛНП") {
     Q.dietrich_points += 1;
 }
 
-if (Q.foreign_minister_party == "LVP") {
+if (Q.foreign_minister_party == "ЛНП") {
     Q.curtius_points += 1;
 }
 
@@ -42,11 +42,11 @@ if (Q.spd_votes >= 30) {
     Q.dingeldey_points += 2;
 }
 
-if (Q.chancellor == "Brüning") {
+if (Q.chancellor == "Брюнинг") {
     Q.dietrich_points += 1;
 }
 
-if (Q.chancellor == "Brüning" && Q.spd_toleration) {
+if (Q.chancellor == "Брюнинг" && Q.spd_toleration) {
     Q.dietrich_points += 1;
     Q.curtius_points -= 1;
     Q.dingeldey_points += 1;
@@ -86,21 +86,21 @@ if (Q.lvp_votes >= 8) {
 }
 
 if (Q.lvp_right > (Q.lvp_left*1.5) || (Q.lvp_right > (Q.lvp_left + 5))) {
-    Q.lvp_ideology = "Right"
+    Q.lvp_ideology = "Правые"
 } else if (Q.lvp_left > (Q.lvp_right*1.5) || (Q.lvp_left > (Q.lvp_right + 5))) {
-    Q.lvp_ideology = "Left"
+    Q.lvp_ideology = "Левые"
 } else {
-    Q.lvp_ideology = "Moderate"
+    Q.lvp_ideology = "Умеренные"
 }
 
-if (Q.lvp_ideology == "Right") {
+if (Q.lvp_ideology == "Правые") {
    Q.dingeldey_points += 2;
 }
-if (Q.lvp_ideology == "Moderate") {
+if (Q.lvp_ideology == "Умеренные") {
     Q.dietrich_points += 1;
     Q.curtius_points += 1;
 }
-if (Q.lvp_ideology == "Left") {
+if (Q.lvp_ideology == "Левые") {
     Q.heuss_points += 2;
 }
 
@@ -206,7 +206,7 @@ title: Эдуард Дингельдей избран.
 subtitle: Дингельдей, член бывшей <span style="color: #C0A054;">**ННП**</span>: обычно ассоциировался с промышленным правым крылом партии.
 unavailable-subtitle: Право-промышленной фракции <span style="color: #FFCC00;">ЛНП</span> не хватает влияния, чтобы продвинуть своего кандидата.
 choose-if: dingeldey_lead
-on-arrival: lvp_relation -= 15; lvp_right += 8; lvp_leader = "Dingeldey"; new_middle_lvp -= 8; workers_lvp -= 4; old_middle_lvp += 6; coalition_dissent += 1; dingeldey_explode_time = time + 8; dingeldey_election_time = time
+on-arrival: lvp_relation -= 15; lvp_right += 8; lvp_leader = "Дингельдей"; new_middle_lvp -= 8; workers_lvp -= 4; old_middle_lvp += 6; coalition_dissent += 1; dingeldey_explode_time = time + 8; dingeldey_election_time = time
 face-image: img/portraits/dingeldey.jpg
 
 Эдуард Дингельдей, ранее участвовавший в движении за буржуазное единство, теперь избран председателем <span style="color: #FFCC00;">**ЛНП**</span>. Дингельдея поддерживают промышленники из правого крыла партии, а также бывшие члены <span style="color: #C0A054;">**ННП**</span>. Похоже, он сосредоточен на содействии более тесному сотрудничеству с рядом партий между <span style="color: #FFCC00;">**ЛНП**</span> и <span style="color: #3E88B3;">**НННП**</span>.
@@ -220,12 +220,12 @@ subtitle: Дитрих, бывший лидер предпринимательс
 unavailable-subtitle: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к <span style="color: #D3C24D;">[+ ddp_name +]</span> деловым крылом.
 view-if: curtius_resign_lvp or (curtius_banking_crisis and banking_crisis_seen)
 choose-if: dietrich_lead
-on-arrival: lvp_relation += 3; lvp_left += 1; lvp_leader = "Dietrich"; pro_republic += 3; old_middle_lvp += 4; rural_lvp += 4; new_middle_lvp -= 2; dietrich_lvp_explode_time = time + 8; dietrich_election_time = time
+on-arrival: lvp_relation += 3; lvp_left += 1; lvp_leader = "Дитрих"; pro_republic += 3; old_middle_lvp += 4; rural_lvp += 4; new_middle_lvp -= 2; dietrich_lvp_explode_time = time + 8; dietrich_election_time = time
 face-image: img/portraits/dietrich.jpg
 
-Герман Дитрих, [? if not dietrich_resign_lvp: ранее связанный с деловым крылом <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if dietrich_resign_lvp: бывший председатель <span style="color: #FFCC00;">**ЛНП**</span> ?], has been [? if not dietrich_resign_lvp: избран председателем <span style="color: #FFCC00;">**ЛНП**</span> ?][? if dietrich_resign_lvp: переизбран на пост лидера ?]. Дитриха в основном поддерживают мелкие предприниматели и сельские жители, и [? if chancellor == "Brüning" and not spd_in_government: он известен тем, что в бытность министром финансов разработал чрезвычайные указы Брюнинга. ?][? if not (chancellor == "Brüning" and not spd_in_government): он известен своим фискальным консерватизмом. ?]
+Герман Дитрих, [? if not dietrich_resign_lvp: ранее связанный с деловым крылом <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?][? if dietrich_resign_lvp: бывший председатель <span style="color: #FFCC00;">**ЛНП**</span> ?], has been [? if not dietrich_resign_lvp: избран председателем <span style="color: #FFCC00;">**ЛНП**</span> ?][? if dietrich_resign_lvp: переизбран на пост лидера ?]. Дитриха в основном поддерживают мелкие предприниматели и сельские жители, и [? if chancellor == "Брюнинг" and not spd_in_government: он известен тем, что в бытность министром финансов разработал чрезвычайные указы Брюнинга. ?][? if not (chancellor == "Брюнинг" and not spd_in_government): он известен своим фискальным консерватизмом. ?]
 
-Несмотря на это, Дитрих — огромный шаг вперёд по сравнению с Дингельдеем, и он открыт для сотрудничества. Однако его лидерство, мягко говоря, весьма невыразительно. [? if agriculture_minister_party == "LVP" or economic_minister_party == "LVP": Обязанности в министерстве не позволяют ему заниматься повседневным управлением партией, которое теперь делегировано группе его соратников из делового крыла. ?]
+Несмотря на это, Дитрих — огромный шаг вперёд по сравнению с Дингельдеем, и он открыт для сотрудничества. Однако его лидерство, мягко говоря, весьма невыразительно. [? if agriculture_minister_party == "ЛНП" or economic_minister_party == "ЛНП": Обязанности в министерстве не позволяют ему заниматься повседневным управлением партией, которое теперь делегировано группе его соратников из делового крыла. ?]
 
 
 @curtius
@@ -234,10 +234,10 @@ subtitle: Курциус, член бывшей <span style="color: #C0A054;">**
 unavailable-subtitle: Право-промышленная фракция <span style="color: #FFCC00;">ЛНП</span> не в восторге от Курциуса.
 choose-if: curtius_lead
 view-if: not curtius_resign_lvp and not (curtius_banking_crisis and banking_crisis_seen)
-on-arrival: lvp_relation += 3; lvp_left += 1; lvp_leader = "Curtius"; pro_republic += 3; new_middle_lvp += 2; old_middle_lvp += 4; ruarl_lvp += 2
+on-arrival: lvp_relation += 3; lvp_left += 1; lvp_leader = "Курциус"; pro_republic += 3; new_middle_lvp += 2; old_middle_lvp += 4; ruarl_lvp += 2
 face-image: img/portraits/curtius.jpg
 
 Юлиус Курциус, преемник Штреземана в вопросах внешней политики и бывший член <span style="color: #C0A054;">**ННП**</span>, одержал победу на выборах председателя, сменив на этом посту Лютера. Куртиуса поддерживает «Прагматический центр», и его кандидатура выдвинута в качестве компромиссной.
 
-Как бывший член левого крыла <span style="color: #C0A054;">**ННП**</span>, он выступает за более тесное сотрудничество с нами. Однако его руководство, мягко говоря, не слишком вдохновляет. [? if foreign_minister_party == "LVP": Обязанности в министерстве иностранных дел не позволяют ему участвовать в повседневном управлении партией, которое теперь поручено группе его соратников из «Прагматического центра». ?]
+Как бывший член левого крыла <span style="color: #C0A054;">**ННП**</span>, он выступает за более тесное сотрудничество с нами. Однако его руководство, мягко говоря, не слишком вдохновляет. [? if foreign_minister_party == "ЛНП": Обязанности в министерстве иностранных дел не позволяют ему участвовать в повседневном управлении партией, которое теперь поручено группе его соратников из «Прагматического центра». ?]
 

@@ -44,17 +44,17 @@ go-to: goals_success if kpd_goals_completed; goals_failed if not kpd_goals_compl
 
 В начале работы этого правительства <span style="color: #700000;">**КПГ**</span> представила список целей для коалиции:
 
-[? if welfare_goal = 1 : - Расширить программы социального обеспечения —[? if welfare_goal_completed : успех ?][? if not welfare_goal_completed: провал ?] ?]
+[? if welfare_goal = 1 : - Расширить программы социального обеспечения —[? if welfare_goal_completed : успех ?][? if not welfare_goal_completed: провал ?]  ?]
 
-[? if agriculture_goal = 1 : - Провести программу земельной реформы —[? if agriculture_goal_completed : успех ?][? if not agriculture_goal_completed: провал ?] ?]
+[? if agriculture_goal = 1 : - Провести программу земельной реформы —[? if agriculture_goal_completed : успех ?][? if not agriculture_goal_completed: провал ?]  ?]
 
-[? if economy_goal = 1 : - Начать существенную национализацию экономики —[? if economy_goal_completed : успех ?][? if not economy_goal_completed: провал ?] ?]
+[? if economy_goal = 1 : - Начать существенную национализацию экономики —[? if economy_goal_completed : успех ?][? if not economy_goal_completed: провал ?]  ?]
 
-[? if finance_goal = 1 : - Сделать налоги более прогрессивными —[? if finance_goal_completed : успех ?][? if not finance_goal_completed: провал ?] ?]
+[? if finance_goal = 1 : - Сделать налоги более прогрессивными —[? if finance_goal_completed : успех ?][? if not finance_goal_completed: провал ?]  ?]
 
-[? if labor_goal = 1 : - Поддержать рабочих в трудовых спорах —[? if labor_goal_completed : успех ?][? if not labor_goal_completed: провал ?] ?]
+[? if labor_goal = 1 : - Поддержать рабочих в трудовых спорах —[? if labor_goal_completed : успех ?][? if not labor_goal_completed: провал ?]  ?]
 
-[? if foreign_goal = 1 : - Улучшить наши отношения с <span style="color: #750e0e;">Советским Союзом</span> — [? if foreign_goal_completed : успех ?][? if not foreign_goal_completed: провал ?] ?]
+[? if foreign_goal = 1 : - Улучшить наши отношения с <span style="color: #750e0e;">Советским Союзом</span> — [? if foreign_goal_completed : успех ?][? if not foreign_goal_completed: провал ?]  ?]
 
 [? if reichswehr_goal = 1 : - Сократить финансирование рейхсвера —[? if reichswehr_goal_completed : успех ?][? if not reichswehr_goal_completed: провал ?] ?]
 
@@ -79,11 +79,13 @@ on-arrival: kpd_ultimatum_seen = 0; kpd_ultimatum_timer += 6; kpd_appeal_seen = 
 Мы утверждаем, что прилагаем все усилия для достижения целей коалиции, и во имя пролетарской солидарности мы обязаны заставить эту коалицию работать. К нашему удивлению, <span style="color: #700000;">**КПГ**</span> прислушалась к нашим доводам и готова дать нам ещё шесть месяцев на достижение целей коалиции.
 
 
+
 @goals_success
 on-arrival: workers_spd += 8; unemployed_spd += 8; kpd_relation += 10; workers_kpd += 5; kpd_coalition_success += 1
 go-to: popular_front_achievement if in_popular_front; united_front_achievement if in_left_front
 
 Вопреки всем ожиданиям, требования <span style="color: #700000;">**КПГ**</span> выполнены! По всей видимости, <span style="color: #700000;">**коммунисты**</span> оказались не готовы к такому повороту событий — созданию рабочего правительства демократическим путём. Они продолжат «воздерживаться от вотума недоверия» нашему правительству до конца срока его полномочий, при этом зорко следя за недопущением буржуазного отката.
+
 
 
 @popular_front_achievement
@@ -108,4 +110,3 @@ view-if: spd_r >= 50
 on-arrival: in_popular_front = 0; in_left_front = 0; in_spd_majority = 1;
 
 А мы были так добры.
-

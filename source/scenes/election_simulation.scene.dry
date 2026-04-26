@@ -260,12 +260,12 @@ Q.nsdap_r = Q.nsdap_votes;
 Q.other_r = Q.other_votes;
 
 // The largest party can only be the NSDAP or the <span style="color: #c00000;">**SPD**</span>.
-Q.largest_party = 'SPD';
+Q.largest_party = 'СДПГ';
 if (Q.nsdap_r >= Q.spd_r && Q.nsdap_r >= Q.kpd_r) {
-    Q.largest_party = 'NSDAP';
+    Q.largest_party = 'НСДАП';
 }
 if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
-    Q.largest_party = 'KPD';
+    Q.largest_party = 'КПГ';
 }
 
 // coalitions

@@ -1,6 +1,6 @@
 title: The <span style="color: #c00000;">**СДПГ**</span> ускользает!
 subtitle: Мы дали Шлейхеру слишком много влияния на нас.
-view-if: chancellor = "Schleicher" and dnef_formed and schleicher_spd_influence >= 10
+view-if: chancellor = "Шляйхер" and dnef_formed and schleicher_spd_influence >= 10
 new-page: true
 priority: 2
 tags: event

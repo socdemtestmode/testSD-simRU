@@ -1,6 +1,6 @@
 title: Шлейхер и Рём?
 subtitle: Сделка заключена.
-view-if: chancellor = "Schleicher" and reichstag_joever_time >= 3 and dnef_formed and nvf_exist
+view-if: chancellor = "Шляйхер" and reichstag_joever_time >= 3 and dnef_formed and nvf_exist
 new-page: true
 priority: 1
 tags: event

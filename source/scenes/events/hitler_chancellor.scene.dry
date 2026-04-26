@@ -1,7 +1,7 @@
 title: Гитлер назначен канцлером!
 subtitle: Начало конца…
-view-if: year >= 1933 and president = "Hindenburg" and (chancellor = "Papen" or chancellor = "Schleicher") and schleicher_chancellor_timer == 1 and in_grand_coalition = 0 and spd_in_government = 0 and largest_party = "NSDAP" and hitler_deported = 0 and not presidential_powers and not schleichers_scheme_success
-on-departure: chancellor = "Hitler"; chancellor_party = "NSDAP"
+view-if: year >= 1933 and president = "Гинденбург" and (chancellor = "Папен" or chancellor = "Шляйхер") and schleicher_chancellor_timer == 1 and in_grand_coalition = 0 and spd_in_government = 0 and largest_party = "НСДАП" and hitler_deported = 0 and not presidential_powers and not schleichers_scheme_success
+on-departure: chancellor = "Гитлер"; chancellor_party = "НСДАП"
 #tags: event
 new-page: true
 
@@ -27,11 +27,11 @@ new-page: true
 
 
 @give_up
-on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; spd_prussia = 0; right_prussia = 0; prussia_leader = "Papen"
+on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; spd_prussia = 0; right_prussia = 0; prussia_leader = "Папен"
 
 Произносятся речи. Проходят голосования. На улицах свистят пули. Некоторых <span style="color: #c00000;">социалистов</span> убивают или сажают в тюрьмы. Другие бегут из страны. Что вообще могут решить голоса на этом этапе?
 
-Рейхстаг сожжён, якобы иностранным <span style="color: #700000;">коммунистом</span>. Вслед за этим <span style="color: #7A3C00;">нацисты</span> издают указы, дающие им неограниченную власть. Они, вместе с [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnf_formed: <span style="color: #003755;">**НФГ**</span> ?], получат большинство на следующих выборах.
+Рейхстаг сожжён, якобы иностранным <span style="color: #700000;">коммунистом</span>. Вслед за этим <span style="color: #7A3C00;">нацисты</span> издают указы, дающие им неограниченную власть. Они, вместе с [? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnf_formed: <span style="color: #003755;">**НФГ**</span> ?], получат большинство на следующих выборах.
 
 Германия потеряна.
 

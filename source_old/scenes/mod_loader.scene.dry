@@ -62,10 +62,10 @@ submit.onclick = function() {
 
 Отобранные модификации:
 
-<div id="mods_list"></div>
+{!<div id="mods_list"></div>!}
 
 Введите URL модификации:
 
-<input type="text" size="25" id="mod_url" name="mod_url"/> <button id="submit">Submit</button>
+{!<input type="text" size="25" id="mod_url" name="mod_url"/> <button id="submit">Submit</button>!}
 
 - @backSpecialScene: Назад

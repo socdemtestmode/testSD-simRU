@@ -1,5 +1,5 @@
 title: Объявлены досрочные выборы
-view-if: chancellor = "Schleicher" and schleicher_time and not schleicher_post_protests and reichstag_break and dnef_total_votes >= 35
+view-if: chancellor = "Шляйхер" and schleicher_time and not schleicher_post_protests and reichstag_break and dnef_total_votes >= 35
 on-arrival: {!
 Q.reichstag_rubicon = 0;
 Q.reichstag_break = 0;
@@ -36,7 +36,7 @@ priority: 2
 
 @prussia_election
 title: Шлейхер требует[+ prussia_leader +]двойного роспуска.
-view-if: prussia_leader != "Goerdeler" and prussia_leader != "Strasser"
+view-if: prussia_leader != "Гёрделер" and prussia_leader != "Штрассер"
 
 Шлейхер сообщает, [+ prussia_leader +] что двойной роспуск палат Рейха и Пруссии необходим для того, чтобы состав Рейхстага соответствовал изменившемуся общественному мнению. Также сохраняется угроза вмешательства со стороны центра.
 

@@ -8,10 +8,10 @@ if (Q.ddp_relation < 55) {
 if (Q.liberal_vote < 14) {
     Q.lvp_formation_points += 1;
 }
-if (Q.dvp_ideology == "Left") {
+if (Q.dvp_ideology == "Левые") {
     Q.lvp_formation_points += 1;
 }
-if (Q.ddp_ideology == "Right") {
+if (Q.ddp_ideology == "Правые") {
     Q.lvp_formation_points += 2;
 }
 if (Q.ddp_cohesion >= 12) {

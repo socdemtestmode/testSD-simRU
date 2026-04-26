@@ -28,4 +28,3 @@ if (this.state.visits[card.id]) {
     this.state.visits[card.id] -= 1;
 }
 !}
-

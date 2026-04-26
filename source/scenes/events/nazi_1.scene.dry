@@ -1,6 +1,6 @@
 title: Утечка с конференции гауляйтеров
 subtitle: Раскрыт «альтернативный» способ захвата власти, который планируют <span style="color: #7A3C00;">нацисты</span>…
-view-if: chancellor = "Papen" and papen_time == 9 and prussia_coup_lose
+view-if: chancellor = "Папен" and papen_time == 9 and prussia_coup_lose
 new-page: true
 tags: event
 max-visits: 1

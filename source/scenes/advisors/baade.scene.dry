@@ -18,8 +18,8 @@ new-page: true
 @agriculture
 title: Аграрная политика
 subtitle: Бааде — министр сельского хозяйства.
-choose-if: advisor_action_timer <= 0 and spd_in_government and agriculture_minister_party == "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> не входит в состав правительства.  ?][? if agriculture_minister_party != "SPD": <span style="color: #c00000;">СДПГ</span> не контролирует министерство сельского хозяйства. ?]
+choose-if: advisor_action_timer <= 0 and spd_in_government and agriculture_minister_party == "СДПГ"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> не входит в состав правительства.  ?][? if agriculture_minister_party != "СДПГ": <span style="color: #c00000;">СДПГ</span> не контролирует министерство сельского хозяйства. ?]
 on-arrival: advisor_action_timer = 6; agricultural_policy_timer -= 6; last_advisor_action = 1
 go-to: agricultural_policy
 

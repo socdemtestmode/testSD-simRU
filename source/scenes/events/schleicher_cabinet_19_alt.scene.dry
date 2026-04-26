@@ -1,6 +1,6 @@
 title: Шлейхер уходит в отставку!
 subtitle: Гинденбург недоволен канцлером.
-view-if: chancellor == "Schleicher" and schleicher_post and schleicher_pause
+view-if: chancellor == "Шляйхер" and schleicher_post and schleicher_pause
 face-image: img/portraits/schleicher_stare.jpg
 max-visits: 1
 new-page: true
@@ -16,19 +16,19 @@ tags: event
 
 
 @treviranus
-title: Куно фон Вестарп — [? if dnvp_ideology == "Radical": &nbsp;Бывший лидер ?] <span style="color: #3E88B3;">**НННП**</span>
-subtitle: вновь предпочтительный кандидат Гинденбурга и [? if dnvp_leader != "Westarp":  бывший  ?] <span style="color: #3E88B3;">** лидер НННП**</span> party leader.
+title: Куно фон Вестарп — [? if dnvp_ideology == "Радикалы": &nbsp;Бывший лидер ?] <span style="color: #3E88B3;">**НННП**</span>
+subtitle: вновь предпочтительный кандидат Гинденбурга и [? if dnvp_leader != "Вестарп":  бывший  ?] <span style="color: #3E88B3;">** лидер НННП**</span> party leader.
 face-image: img/portraits/Treviranus.jpg
 on-arrival: {!
-Q.chancellor = "Treviranus";
+Q.chancellor = "Тревиранус";
 Q.schleicher_approval -= 4;
 
-if (Q.dnvp_ideology == "Radical" && !Q.kvp_formed) {
-    Q.treviranus_party = "DNEF";
-} else if (Q.dnvp_ideology == "Radical" && Q.kvp_formed) {
+if (Q.dnvp_ideology == "Радикалы" && !Q.kvp_formed) {
+    Q.treviranus_party = "ФНЕГ";
+} else if (Q.dnvp_ideology == "Радикалы" && Q.kvp_formed) {
     Q.treviranus_party = "KVP";
-} else if (Q.dnvp_ideology == "Moderate") {
-    Q.treviranus_party = "DNVP";
+} else if (Q.dnvp_ideology == "Умеренные") {
+    Q.treviranus_party = "НННП";
 }
 
 Q.chancellor_party = Q.treviranus_party;

@@ -1,6 +1,6 @@
 title: *Пруссия против Рейха*
 subtitle: Начинаются слушания по делу об оспаривании <i>Reichsexekution (Имперская экзекуция)</i> Папена.
-view-if: chancellor = "Papen" and prussia_leader == "Papen" and papen_time == 20 and otl_prussian_coup_seen
+view-if: chancellor = "Папен" and prussia_leader == "Папен" and papen_time == 20 and otl_prussian_coup_seen
 new-page: true
 tags: event
 max-visits: 1

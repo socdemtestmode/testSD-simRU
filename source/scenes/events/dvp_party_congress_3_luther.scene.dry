@@ -1,6 +1,6 @@
 title: <span style="color: #C0A054;">**ННП**</span>. Съезд партии
 subtitle: Лютер уходит с партийных постов, чтобы занять пост президента.
-view-if: president == "Luther" and dvp_leader == "Luther" and not lvp_formed and dvp_exist
+view-if: president == "Лютер" and dvp_leader == "Лютер" and not lvp_formed and dvp_exist
 on-arrival: {!
 if (Q.dvp_relation < 35) Q.dvp_right += 3;
 if (Q.dvp_relation >= 60) Q.dvp_left += 3;
@@ -9,17 +9,17 @@ if (Q.liberal_parliament) Q.dvp_left += 2;
 Q.dvp_right += 4;
 
 if (Q.dvp_right > (Q.dvp_left*1.5) || (Q.dvp_right > (Q.dvp_left + 4))) {
-    Q.dvp_ideology = "Right"
+    Q.dvp_ideology = "Правые"
 } else if (Q.dvp_left > (Q.dvp_right*1.5) || (Q.dvp_left > (Q.dvp_right + 4))) {
-    Q.dvp_ideology = "Left"
+    Q.dvp_ideology = "Левые"
 } else {
-    Q.dvp_ideology = "Moderate"
+    Q.dvp_ideology = "Умеренные"
 }
 
-if ((Q.pro_republic >= 80 && Q.dvp_ideology == "Left") && Q.dvp_reform && Q.dnvp_leader != "Lambach") Q.thiel_unlock = 1;
-if ((Q.pro_republic < 80 || Q.dvp_ideology != "Left") && Q.dvp_reform && Q.dnvp_leader != "Lambach") Q.glatzel_unlock = 1;
-if (!Q.glatzel_unlock && !Q.thiel_unlock && Q.dvp_ideology == "Right") Q.hugo_unlock = 1;
-if ((Q.dvp_ideology == "Moderate" || Q.dvp_ideology == "Left") && !Q.thiel_unlock && !Q.glatzel_unlock) Q.kardorff_unlock = 1;
+if ((Q.pro_republic >= 80 && Q.dvp_ideology == "Левые") && Q.dvp_reform && Q.dnvp_leader != "Ламбах") Q.thiel_unlock = 1;
+if ((Q.pro_republic < 80 || Q.dvp_ideology != "Левые") && Q.dvp_reform && Q.dnvp_leader != "Ламбах") Q.glatzel_unlock = 1;
+if (!Q.glatzel_unlock && !Q.thiel_unlock && Q.dvp_ideology == "Правые") Q.hugo_unlock = 1;
+if ((Q.dvp_ideology == "Умеренные" || Q.dvp_ideology == "Левые") && !Q.thiel_unlock && !Q.glatzel_unlock) Q.kardorff_unlock = 1;
 
 if (!Q.kardorff_unlock && !Q.thiel_unlock && !Q.glatzel_unlock && !Q.hugo_unlock) Q.kardorff_unlock = 1;
 !}
@@ -57,7 +57,7 @@ new-page: true
 subtitle: Тиль — вызывающая споры фигура в партии, поскольку он придерживается более левых взглядов, чем Глатцель.
 unavailable-subtitle: [? if not glatzel_unlock: У рабочих нет влияния внутри <span style="color: #C0A054;">ННП</span>: партия не поддержит профсоюзного лидера.  ?][? if glatzel_unlock: Тиля всё ещё считают слишком левым для партии: многие предпочитают поддержать его коллегу Глатцеля. ?]
 choose-if: thiel_unlock
-on-arrival: dvp_leader = "Thiel"; bourgeois_cooperation -= 3; dvp_left += 10; coalition_dissent -= 1 if in_grand_coalition; dvp_relation += 15; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_spd -= 2; new_middle_dvp += 6; new_middle_nsdap -= 3; new_middle_other -= 3; catholics_dvp += 3; catholics_other -= 3; old_middle_dvp -= 4; old_middle_dnvp += 2; old_middle_kvp += 2 if kvp_formed; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Moderate"; rural_kvp += 2 if kvp_formed; pro_republic += 5; ddp_left += 3; ddp_relation += 5
+on-arrival: dvp_leader = "Тиль"; bourgeois_cooperation -= 3; dvp_left += 10; coalition_dissent -= 1 if in_grand_coalition; dvp_relation += 15; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_spd -= 2; new_middle_dvp += 6; new_middle_nsdap -= 3; new_middle_other -= 3; catholics_dvp += 3; catholics_other -= 3; old_middle_dvp -= 4; old_middle_dnvp += 2; old_middle_kvp += 2 if kvp_formed; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Умеренные"; rural_kvp += 2 if kvp_formed; pro_republic += 5; ddp_left += 3; ddp_relation += 5
 face-image: img/portraits/thiel.jpg
 
 Неожиданно Отто Тиль избран новым лидером <span style="color: #C0A054;">**ННП**</span>! По сравнению со своим коллегой Глатцелем, Тиль занимает более левые позиции в партии. Он даже высказался за рост социальных расходов и утверждает: жёсткая экономия лишь усугубит трудности, с которыми сталкивается народ. В своём стремлении к *Фольксгемайншафт* он включает в программу партии дружелюбные к рабочим положения: поддерживает право на заключение коллективных договоров и защиту прав трудящихся.
@@ -69,7 +69,7 @@ face-image: img/portraits/thiel.jpg
 subtitle: Глатцель, как бывший член <span style="color: #3E88B3;">**НННП**</span>, имеет националистический уклон.
 unavailable-subtitle: [? if not thiel_unlock: У рабочих нет влияния внутри <span style="color: #C0A054;">ННП</span>: партия не поддержит профсоюзного лидера.  ?][? if thiel_unlock: Глатцель чрезмерно правый и националистический для партии с учетом нынешних настроений в стране. ?]
 choose-if: glatzel_unlock
-on-arrival: dvp_leader = "Glatzel"; bourgeois_cooperation += 1; dvp_right += 3; dvp_relation -= 5; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_nsdap -= 2; new_middle_dvp += 6; new_middle_nsdap -= 4; new_middle_other -= 2; catholics_dvp += 4; catholics_other -= 2; catholics_dnvp -= 2; old_middle_dvp += 2; old_middle_dnvp -= 2; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Moderate"; rural_kvp += 2 if kvp_formed
+on-arrival: dvp_leader = "Глацель"; bourgeois_cooperation += 1; dvp_right += 3; dvp_relation -= 5; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_nsdap -= 2; new_middle_dvp += 6; new_middle_nsdap -= 4; new_middle_other -= 2; catholics_dvp += 4; catholics_other -= 2; catholics_dnvp -= 2; old_middle_dvp += 2; old_middle_dnvp -= 2; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Умеренные"; rural_kvp += 2 if kvp_formed
 face-image: img/portraits/glatzel.jpg
 achievement: neuer_nationalismus
 
@@ -82,7 +82,7 @@ achievement: neuer_nationalismus
 subtitle: Кардорффу удаётся сохранить за Лютером пост председателя.
 unavailable-subtitle: [? if hugo_unlock: Правые промышленники блокируют восхождение Кардорффа и гарантируют дальнейший сдвиг партии вправо.  ?][? if thiel_unlock or glatzel_unlock: Партия предпочитает нового и энергичного лидера, желательно не близкого к Лютеру. ?]
 choose-if: kardorff_unlock
-on-arrival: dvp_leader = "Kardorff"; dvp_left += 3 if in_grand_coalition; liberal_cooperation += 3; bourgeois_cooperation += 3; dvp_relation += 5 if in_grand_coalition; new_middle_dvp += 4; catholics_dvp += 2; rural_dvp += 2; old_middle_dvp += 2; pro_republic += 3
+on-arrival: dvp_leader = "Кардорф"; dvp_left += 3 if in_grand_coalition; liberal_cooperation += 3; bourgeois_cooperation += 3; dvp_relation += 5 if in_grand_coalition; new_middle_dvp += 4; catholics_dvp += 2; rural_dvp += 2; old_middle_dvp += 2; pro_republic += 3
 face-image: img/portraits/kardorff.jpg
 
 Кардорфф избран преемником Лютера на посту председателя <span style="color: #C0A054;">**ННП**</span>. Он продолжит линию Лютера, будучи верным последователем Штреземана и сторонником конструктивного сотрудничества с <span style="color: #c00000;">**СДПГ**</span>. [? if ui0_seen: Он даже сплотил свою парламентскую фракцию, чтобы спасти нашу Большую коалицию ещё в 1929 году. ?]
@@ -94,7 +94,7 @@ face-image: img/portraits/kardorff.jpg
 subtitle: Отто Гуго стремится сосредоточить контроль над партией в руках промышленников.
 unavailable-subtitle: Право-промышленной фракции <span style="color: #C0A054;">ННП</span> не хватает влияния.
 choose-if: hugo_unlock
-on-arrival: old_dvp_leader = dvp_leader; dvp_leader = "Hugo"; dvp_right += 10; dvp_relation -= 25; old_middle_ddp += 2; new_middle_ddp += 6; rural_ddp += 4; old_middle_dvp -= 2; new_middle_dvp -= 6; rural_dvp -= 4; pro_republic -= 5; ddp_cohesion -= 1; liberal_cooperation -= 5; bourgeois_cooperation -= 5; ddp_right += 5; ddp_cohesion -= 3; ddp_relation -= 10
+on-arrival: old_dvp_leader = dvp_leader; dvp_leader = "Хуго"; dvp_right += 10; dvp_relation -= 25; old_middle_ddp += 2; new_middle_ddp += 6; rural_ddp += 4; old_middle_dvp -= 2; new_middle_dvp -= 6; rural_dvp -= 4; pro_republic -= 5; ddp_cohesion -= 1; liberal_cooperation -= 5; bourgeois_cooperation -= 5; ddp_right += 5; ddp_cohesion -= 3; ddp_relation -= 10
 face-image: img/portraits/hugo.jpg
 
 Отто Гуго неожиданно победил на выборах и заменил [+ old_dvp_leader +]а на посту председателя <span style="color: #C0A054;">ННП</span>. Опираясь на единогласную поддержку правого крыла партии и одобрение Эрнста Шольца, он с небольшим перевесом победил Кардорфа.

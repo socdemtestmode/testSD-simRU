@@ -10,7 +10,7 @@ if (Q.ddp_votes < 3.7) {
 if (Q.next_election_time - Q.time < 6) {
     Q.dstp_formation_points += 1;
 }
-if (Q.dvp_ideology == "Right") {
+if (Q.dvp_ideology == "Правые") {
     Q.dstp_formation_points += 1;
 }
 if ((100 - Q.pro_republic) + Q.nationalism >= 90) {
@@ -55,7 +55,7 @@ The <span style="color: #D3C24D;">**НДП**</span> — любопытная п�
 
 @dstp_formed
 view-if: dstp_formation_points >= 3
-on-arrival: dstp_formed = 1; ddp_name = "DStP"; liberal_cooperation -= 5; bourgeois_cooperation -= 3; new_middle_ddp -= 2; old_middle_ddp += 4; rural_ddp += 2; ddp_right += 2; ddp_relation -= 5; pro_republic -= 3; nationalism += 5; justice_minister_party = ddp_name if justice_minister_party == "DDP"; agriculture_minister_party = ddp_name if agriculture_minister_party == "DDP"; economic_minister_party = ddp_name if economic_minister_party == "DDP"; finance_minister_party = ddp_name if finance_minister_party == "DDP"
+on-arrival: dstp_formed = 1; ddp_name = "НГП"; liberal_cooperation -= 5; bourgeois_cooperation -= 3; new_middle_ddp -= 2; old_middle_ddp += 4; rural_ddp += 2; ddp_right += 2; ddp_relation -= 5; pro_republic -= 3; nationalism += 5; justice_minister_party = ddp_name if justice_minister_party == "НДП"; agriculture_minister_party = ddp_name if agriculture_minister_party == "НДП"; economic_minister_party = ddp_name if economic_minister_party == "НДП"; finance_minister_party = ddp_name if finance_minister_party == "НДП"
 face-image: img/dstp.jpg
 achievement: dstp_dilemma
 go-to: recalculate

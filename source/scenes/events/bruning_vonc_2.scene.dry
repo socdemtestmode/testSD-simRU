@@ -1,7 +1,7 @@
 title: Конец правительства [+ chancellor +]а
 subtitle: Канцлер [+ chancellor +] предлагает спорный налоговый законопроект.
 new-page: true
-view-if: bruning_event_timer = 2 and dnvp_ideology == "Radical" and not dnvp_split_2 and dnvp_bruning == 1 and not bourgeois_coalition >= 50 and not cvp_formed
+view-if: bruning_event_timer = 2 and dnvp_ideology == "Радикалы" and not dnvp_split_2 and dnvp_bruning == 1 and not bourgeois_coalition >= 50 and not cvp_formed
 tags: event
 max-visits: 1
 
@@ -42,7 +42,7 @@ go-to: recalculate
 
 @recalculate
 on-arrival: {!
-if (Q.year >= 1930 && Q.year < 1932 && !Q.spd_in_government && Q.chancellor == "Brüning" && Q.bourgeois_negotiations == 0 && Q.dvp_exist) {
+if (Q.year >= 1930 && Q.year < 1932 && !Q.spd_in_government && Q.chancellor == "Брюнинг" && Q.bourgeois_negotiations == 0 && Q.dvp_exist) {
     Q.bourgeois_negotiations = 1;
     Q.bourgeois_negotiations_1 = 1;
     Q.bourgeois_negotiations_1930_timer = 6;

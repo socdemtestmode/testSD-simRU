@@ -1,7 +1,7 @@
 title: Второй кабинет Брюнинга
 subtitle: Канцлер [+ chancellor +] провёл реорганизацию своего кабинета.
 new-page: true
-view-if: total_bruning_time > 0 and bruning_toleration_time and not in_center_right_coalition and not in_right_coalition and banking_crisis_seen and emergency_decree_seen and not emergency_decree_mitigated and dvp_leader == "Dingeldey" and not lvp_formed and flavour_24_trigger and time == flavour_24_trigger_time + 3 and not second_bruning_cabinet_seen and dvp_exist
+view-if: total_bruning_time > 0 and bruning_toleration_time and not in_center_right_coalition and not in_right_coalition and banking_crisis_seen and emergency_decree_seen and not emergency_decree_mitigated and dvp_leader == "Дингельдей" and not lvp_formed and flavour_24_trigger and time == flavour_24_trigger_time + 3 and not second_bruning_cabinet_seen and dvp_exist
 on-arrival: {!
 Q.second_bruning_cabinet_seen = 1;
 Q.judicial_reform -= 1;
@@ -25,7 +25,7 @@ max-visits: 1
 
 Представитель <span style="color: #C0A054;">**ННП**</span> Юлиус Курциус ушёл в отставку с поста министра иностранных дел после катастрофического провала австро-германского таможенного союза, архитектором которого он и был. Когда в кабинете не осталось министров от <span style="color: #C0A054;">**ННП**</span>, последнее препятствие, мешавшее им разорвать отношения с правительством Брюнинга, устранено. В попытке заручиться их поддержкой Брюнинг сформировал второй, более консервативный кабинет, однако этого оказалось недостаточно — <span style="color: #C0A054;">**ННП**</span> присоединилась к <span style="color: #7A3C00;">национальной</span> <span style="color: #3E88B3;">оппозиции</span>, которая тоже отказывается от сотрудничества с его правительством.
 
-Когда <span style="color: #C0A054;">**ННП**</span> теперь, вероятно, будет голосовать заодно с экстремистскими партиями, и правительственное большинство окажется под угрозой. Если и другие буржуазные партии последуют её примеру, кабинет Брюнинга может лишиться власти. Теперь мы должны решить, продолжать ли воздерживаться от вотума недоверия этому поправевшему правительству Брюнинга, в котором не осталось левых деятелей, таких как [? if z_party_name != "CVP": <span style="color: #000000;">Центр</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?]Йозеф Вирт, — в надежде, что буржуазные партии пересмотрят свою оппозиционную позицию, или же окончательно порвать с ним.
+Когда <span style="color: #C0A054;">**ННП**</span> теперь, вероятно, будет голосовать заодно с экстремистскими партиями, и правительственное большинство окажется под угрозой. Если и другие буржуазные партии последуют её примеру, кабинет Брюнинга может лишиться власти. Теперь мы должны решить, продолжать ли воздерживаться от вотума недоверия этому поправевшему правительству Брюнинга, в котором не осталось левых деятелей, таких как [? if z_party_name != "ХНП": <span style="color: #000000;">Центр</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?]Йозеф Вирт, — в надежде, что буржуазные партии пересмотрят свою оппозиционную позицию, или же окончательно порвать с ним.
 
 Кроме того, Брюнинг выпустил третий чрезвычайный указ, который ещё больше сокращает зарплаты, а также урезает пенсии и социальные пособия, чтобы покрыть дефицит, вызванный банковским кризисом.
 

@@ -92,7 +92,7 @@ if (Q.aspd_other) {
 title: Кронпринц Вильгельм?..
 on-arrival: {!
 Q.chancellor = "Hohenzollern";
-Q.vice_chancellor = "Papen";
+Q.vice_chancellor = "Папен";
 
 const contentElement = document.getElementById('content');
 contentElement.style.backgroundColor = '#312115';

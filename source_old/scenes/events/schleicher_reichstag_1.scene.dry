@@ -44,4 +44,3 @@ title: Декрет Папена о заработной плате отменё
 on-arrival: workers_kpd -= 4; unemployed_kpd -= 4; workers_z += 2; workers_spd += 2; unemployed_spd += 4; pro_republic += 3; reichstag_break = 1; reichstag_rubicon = 0; oskar_goal = "Scheme against Schleicher"; papen_goal = "Scheme against Schleicher"; schleicher_approval += 1
 
 Шлейхер дал рейхстагу согласие на отмену одного из самых вопиющих декретов Папена, который особенно возмутил профсоюзы, — так он выполнил своё обещание и усмирил их ярость, направленную против правительства.
-

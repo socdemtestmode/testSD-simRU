@@ -1,0 +1,27 @@
+title: Возвращение к нормальной жизни
+subtitle: Неужели мы наконец-то выбрались из кризиса?
+new-page: true
+view-if: ((year = 1933 and month > 7) or (year >= 1934)) and pro_republic >= 50 and unemployed <= 13 and inflation < 7 and chancellor != "Papen" and chancellor != "Schleicher" and coup_progress < 9
+max-visits: 1
+on-arrival: return_to_normalcy = 1; workers_nsdap *= 0.7 if not nazi_peak_triggered or nsdap_votes >= 24; new_middle_nsdap *= 0.7 if not nazi_peak_triggered or nsdap_votes >= 24; old_middle_nsdap *= 0.7 if not nazi_peak_triggered or nsdap_votes >= 24; rural_nsdap *= 0.7 if not nazi_peak_triggered or nsdap_votes >= 24; unemployed_nsdap *= 0.7 if not nazi_peak_triggered or nsdap_votes >= 24; sa_strength *= 0.7 if not nazi_peak_triggered or nsdap_votes >= 24; sa_militancy -= 0.1 if not nazi_peak_triggered or nsdap_votes >= 24; coup_progress -= 4 if coup_progress > 4; new_middle_ddp += 5 if not nazi_peak_triggered or nsdap_votes >= 24; new_middle_dvp += 3 if not nazi_peak_triggered or nsdap_votes >= 24; old_middle_ddp += 3 if not nazi_peak_triggered or nsdap_votes >= 24; old_middle_dvp += 5 if not nazi_peak_triggered or nsdap_votes >= 24; old_middle_dnvp += 3; rural_dnvp += 6; rural_ddp += 2 if not nazi_peak_triggered or nsdap_votes >= 24; rural_dvp += 2 if not nazi_peak_triggered or nsdap_votes >= 24; new_middle_lvp += 8; old_middle_lvp += 8; rural_lvp += 5; catholics_nsdap *= 0.7 if not nazi_peak_triggered or nsdap_votes >= 24; unemployed_kpd += 3; unemployed_spd += 3; strife -= 2; ddp_cohesion += 5; ddp_left += 6; dvp_left += 12; lvp_left += 6
+tags: event
+
+= Возвращение к нормальной жизни
+
+Германия наконец-то оправляется от Великой депрессии. По мере постепенного улучшения экономической ситуации начинает ослабевать и политический кризис.
+
+Наконец-то внутренние противоречия <span style="color: #7A3C00;">**НСДАП**</span> дали о себе знать. С улучшением экономической ситуации многие бизнес-лидеры теряют интерес к их поддержке. Противоречия между оставшимися спонсорами из числа крупных капиталистов и рядовыми партийцами из мелкой буржуазии достигли апогея, что привело к дезертирству и публичным раздорам. Всё это подрывает ореол силы Гитлера и ослабляет поддержку <span style="color: #7A3C00;">нацистов</span> среди самых разных слоёв населения.
+
+- @celebrate: Это повод для праздника.
+- @complacency: <span style="color: #7A3C00;">Нацисты</span> всё ещё представляют угрозу. Нам нельзя быть слишком самонадеянными.
+
+
+@celebrate
+
+Это повод для праздника! Надеюсь, <span style="color: #7A3C00;">нацисты</span> больше не будут представлять угрозы для Республики.
+
+
+@complacency
+
+Даже в ослабленном состоянии <span style="color: #7A3C00;">нацисты</span> всё ещё представляют угрозу. Нам нельзя быть слишком самонадеянными.
+

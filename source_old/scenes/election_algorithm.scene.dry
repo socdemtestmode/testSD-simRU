@@ -103,5 +103,4 @@ for (var party of Q.parties) {
 !}
 go-to: jumpScene
 
-
-
+# note: this is a helpful utility to deal with elections and so on.

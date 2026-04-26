@@ -1,0 +1,133 @@
+title: Комитет Рейхстага по повестке дня обсуждает возобновление заседаний
+subtitle: Удивительно, но канцлер горит желанием возобновить работу палаты.
+view-if: chancellor = "Schleicher" and schleicher_time == 4
+new-page: true
+tags: event
+max-visits: 1
+priority: 2
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/reichstag.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+= Решение о возобновлении заседаний Рейхстага
+
+За закрытыми дверями комитет Рейхстага по повестке дня собирается, чтобы решить, когда возобновить заседания палаты после каникул: наши представители имеют право голоса. Помощник Шлейхера, представляющий кабинет министров, держится уверенно и заявляет: правительство готово предстать перед палатой в любое время и даже выступает против любого перерыва в заседаниях до тех пор, пока не будут рассмотрены вотумы недоверия.
+
+В ответ <span style="color: #700000;">**коммунисты**</span> вносят предложение возобновить заседания в начале следующей недели. [? if reichstag_president == "Göring": Но представители <span style="color: #7A3C00;">нацистов</span> не проявляют интереса, предлагая оставить решение на усмотрение председателя рейхстага Геринга, который в итоге так и не заручился поддержкой ни одной из партий. ?][? if reichstag_president != "Göring": Но представители <span style="color: #7A3C00;">нацистов</span> не проявляют интереса и предпочитают поддержать компромиссное предложение <span style="color: #000000;">Партии Центра</span>. ?]
+
+Вопрос в том, как должны голосовать наши представители?
+
+- @reichstag_1
+- @reichstag_2
+- @reichstag_3
+
+
+@reichstag_1
+title: Голосовать за предложение <span style="color: #700000;">**коммунистов**</span> о возобновлении заседаний палаты.
+on-arrival: {!
+Q.reichstag_schleicher = 1;
+Q.reichstag_break = 0;
+
+Q.next_reichstag_time = Q.rubicon_time + 3;
+Q.next_reichstag_week = Q.week + 3;
+Q.next_reichstag_month = Q.month;
+Q.next_reichstag_year = Q.year;
+
+if (Q.next_reichstag_week > 4) {
+  Q.next_reichstag_week -= 4;
+  Q.next_reichstag_month += 1;
+}
+
+if (Q.next_reichstag_week > 4) {
+  Q.next_reichstag_week -= 4;
+  Q.next_reichstag_month += 1;
+}
+
+if (Q.next_reichstag_month > 12) {
+  Q.next_reichstag_month -= 12;
+  Q.next_reichstag_year += 1;
+}
+!}
+
+Мы должны как можно скорее добиться отставки кабинета Шлейхера. Но у <span style="color: #c00000;">**СДПГ**</span> и <span style="color: #700000;">**КПГ **</span> не хватает голосов в комитете, чтобы провести это предложение, поскольку <span style="color: #7A3C00;">нацисты</span> голосуют против.
+
+Вместо этого <span style="color: #000000;">Партия Центра</span> предлагает компромисс: рейхстаг возобновит работу в начале недели [+ next_reichstag_week +], [+ next_reichstag_month : month +] [+ next_reichstag_year +], с условием, что комитет повторно рассмотрит этот вопрос за неделю до этого.
+
+Это предложение принимается всеми партиями.
+
+
+@reichstag_2
+title: Проголосовать за предложение <span style="color: #7A3C00;">нацистов</span> о передаче полномочий Герингу.
+view-if: reichstag_president == "Göring"
+unavailable-subtitle: На кой чёрт нам это?
+choose-if: nsdap_relation >= 100
+on-arrival: {!
+Q.reichstag_schleicher = 1;
+Q.reichstag_break = 0;
+
+Q.next_reichstag_time = Q.rubicon_time + 3;
+Q.next_reichstag_week = Q.week + 3;
+Q.next_reichstag_month = Q.month;
+Q.next_reichstag_year = Q.year;
+
+if (Q.next_reichstag_week > 4) {
+  Q.next_reichstag_week -= 4;
+  Q.next_reichstag_month += 1;
+}
+
+if (Q.next_reichstag_week > 4) {
+  Q.next_reichstag_week -= 4;
+  Q.next_reichstag_month += 1;
+}
+
+if (Q.next_reichstag_month > 12) {
+  Q.next_reichstag_month -= 12;
+  Q.next_reichstag_year += 1;
+}
+!}
+
+По какой-то причине мы попросили поддержать предложение <span style="color: #7A3C00;">нацистов</span> о назначении Геринга главным. Однако наши депутаты просто рассмеялись нам в лицо, назвав это «шуткой»: они проголосовали за предложение <span style="color: #700000;">**коммунистов**</span> motion.
+
+В итоге <span style="color: #000000;">Партия Центра</span> выступает с компромиссом: рейхстаг соберётся вновь в начале Недели [+ next_reichstag_week +], [+ next_reichstag_month : month +] [+ next_reichstag_year +], при условии, что комитет вновь рассмотрит этот вопрос за неделю до этого.
+
+Все партии принимают это соглашение.
+
+
+@reichstag_3
+title: Продвигать компромиссное предложение (созыв через три недели с возможностью пересмотра).
+on-arrival: {!
+Q.reichstag_schleicher = 1;
+Q.reichstag_break = 0;
+
+Q.next_reichstag_time = Q.rubicon_time + 3;
+Q.next_reichstag_week = Q.week + 3;
+Q.next_reichstag_month = Q.month;
+Q.next_reichstag_year = Q.year;
+
+if (Q.next_reichstag_week > 4) {
+  Q.next_reichstag_week -= 4;
+  Q.next_reichstag_month += 1;
+}
+
+if (Q.next_reichstag_week > 4) {
+  Q.next_reichstag_week -= 4;
+  Q.next_reichstag_month += 1;
+}
+
+if (Q.next_reichstag_month > 12) {
+  Q.next_reichstag_month -= 12;
+  Q.next_reichstag_year += 1;
+}
+!}
+
+Наше компромиссное предложение, разработанное совместно с <span style="color: #000000;">партией Центра</span>, принято всеми партиями. Рейхстаг соберётся в начале [+ next_reichstag_week +], [+ next_reichstag_month : month +] [+ next_reichstag_year +], при условии, что комитет вернётся к этому вопросу за неделю до созыва.
+

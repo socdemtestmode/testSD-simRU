@@ -1,6 +1,6 @@
 title: Шлейхер и промышленники
 subtitle: Самые могущественные люди Германии привлекаются в организацию.
-view-if: chancellor = "Schleicher" and dnef_formed and industrialists_schleicher >= 10
+view-if: chancellor = "Шляйхер" and dnef_formed and industrialists_schleicher >= 10
 new-page: true
 priority: 2
 tags: event

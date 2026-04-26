@@ -14,7 +14,7 @@ go-to: start_menu_2
 
 - @start_1: Начать игру
 - @modinfo: Mod Info - Last Updated 2026/01/25
-- @credits: Авторы
+- @credits: Credits
 - @game_over.achievements
 
 
@@ -66,7 +66,7 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist', 'social_patriot'];
+Q.factions = ['левую', 'center', 'тред-юнионистскую', 'reformist', 'neorevisionist', 'social_patriot'];
 // should this be normalized to 100%?
 Q.left_strength = 15;
 Q.left_dissent = 20;
@@ -135,13 +135,13 @@ Q.dnvp_relation = 5;
 Q.nsdap_relation = 0;
 Q.lvp_relation = 0;
 
-Q.kpd_leader = "Thälmann";
-Q.z_leader = "Marx";
-Q.z_ideology = "Right";
-Q.cvp_ideology = "Moderate";
+Q.kpd_leader = "Тельман";
+Q.z_leader = "Маркс";
+Q.z_ideology = "Правые";
+Q.cvp_ideology = "Умеренные";
 Q.stegerwald_path = 0;
-Q.nsdap_leader = "Hitler";
-Q.nsdap_chancellor = "Hitler";
+Q.nsdap_leader = "Гитлер";
+Q.nsdap_chancellor = "Гитлер";
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
@@ -151,7 +151,7 @@ Q.hindenburg_grr_amount = 0;
 // prussian activities lol
 Q.spd_prussia = 1;
 Q.right_prussia = 0;
-Q.prussia_leader = "Braun"
+Q.prussia_leader = "Браун"
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
@@ -453,15 +453,15 @@ Q.old_lvp_r_prussia = 0;
 
 Q.lvp_left = 0;
 Q.lvp_right = 0;
-Q.lvp_leader = "Luther";
-Q.lvp_ideology = "Moderate";
+Q.lvp_leader = "Лютер";
+Q.lvp_ideology = "Умеренные";
 Q.lvp_normalized = 0;
 Q.lvp_votes = 0;
 
 Q.dnef_left = 0;
 Q.dnef_right = 0;
-Q.dnef_leader = "Schleicher";
-Q.dnef_ideology = "Moderate";
+Q.dnef_leader = "Шляйхер";
+Q.dnef_ideology = "Умеренные";
 Q.dnef_normalized = 0;
 Q.dnef_votes = 0;
 Q.dnef_r = 0;
@@ -526,11 +526,11 @@ Q.economic_records = [];
 
 
 // State of the government
-Q.president = "Hindenburg";
-Q.president_ideology = "Hindenburg";
+Q.president = "Гинденбург";
+Q.president_ideology = "Гинденбург";
 // starting chancellor: Wilhelm Marx
-Q.chancellor = "Marx";
-Q.chancellor_party = 'Z';
+Q.chancellor = "Маркс";
+Q.chancellor_party = 'Центр';
 Q.spd_in_government = 0;
 Q.spd_in_government_time = 0;
 Q.spd_in_government_total_time = 0;
@@ -622,21 +622,21 @@ Q.minority_government = 0;
 // starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
 // is the agricultural ministry useful at all?
 Q.foreign_minister = 'Stresemann';
-Q.foreign_minister_party = 'DVP';
+Q.foreign_minister_party = 'ННП';
 Q.interior_minister = 'von Keudell';
-Q.interior_minister_party = 'DNVP';
-Q.justice_minister = 'Hergt';
-Q.justice_minister_party = 'DNVP';
+Q.interior_minister_party = 'НННП';
+Q.justice_minister = 'Хергт';
+Q.justice_minister_party = 'НННП';
 Q.labor_minister = 'Brauns';
-Q.labor_minister_party = 'Z';
-Q.reichswehr_minister = 'Groener';
+Q.labor_minister_party = 'Центр';
+Q.reichswehr_minister = 'Грёнер';
 Q.reichswehr_minister_party = 'I';
-Q.economic_minister = 'Curtius';
-Q.economic_minister_party = 'DVP';
-Q.finance_minister = 'Köhler';
-Q.finance_minister_party = 'Z';
-Q.agriculture_minister = 'Schiele';
-Q.agriculture_minister_party = 'DNVP';
+Q.economic_minister = 'Курциус';
+Q.economic_minister_party = 'ННП';
+Q.finance_minister = 'Кёлер';
+Q.finance_minister_party = 'Центр';
+Q.agriculture_minister = 'Шиле';
+Q.agriculture_minister_party = 'НННП';
 
 // Events: what has occurred?
 Q.panzerkreuzer_seen = 0;
@@ -836,17 +836,17 @@ Q.schleicher_chancellor_timer = 0;
 Q.nazi_decay_timer = 0;
 Q.red_general_timer = 0;
 Q.weimar_rally_timer = 0;
-Q.editorial_line = "Center";
-Q.z_party_name = "Z";
-Q.dnvp_leader = "Westarp";
-Q.dnvp_ideology = "Radical";
+Q.editorial_line = "Центр";
+Q.z_party_name = "Центр";
+Q.dnvp_leader = "Вестарп";
+Q.dnvp_ideology = "Радикалы";
 Q.dstp_formed = 0;
 Q.ddp_left = 0;
 Q.ddp_right = 0;
-Q.ddp_name = "DDP";
+Q.ddp_name = "НДП";
 Q.ddp_full_name = "German Democratic Party";
-Q.ddp_leader = "Koch-Weser";
-Q.ddp_ideology = "Moderate"
+Q.ddp_leader = "Кох-Везер";
+Q.ddp_ideology = "Умеренные"
 Q.ddp_cohesion = 15;
 Q.young_plan_signatures = 0;
 Q.young_plan_votes = 0;
@@ -858,7 +858,7 @@ Q.dvp_left = 0;
 Q.dvp_right = 0;
 Q.dvp_was_in_prussia = 0;
 Q.dvp_leader = "Stresemann";
-Q.dvp_ideology = "Moderate"
+Q.dvp_ideology = "Умеренные"
 Q.liberal_cooperation = 0;
 Q.liberal_parliament = 0;
 Q.bourgeois_parliament = 0;
@@ -884,7 +884,7 @@ Q.lvp_timer_1_trigger = 0;
 Q.lvp_timer_2_trigger = 0;
 Q.ui0_seen = 0;
 Q.young_plan_ratified = 0
-Q.kvp_leader = "Westarp"
+Q.kvp_leader = "Вестарп"
 Q.stresemann_dead = 0;
 Q.bourgeois_negotiations = 0;
 Q.bourgeois_negotiations_1 = 0;

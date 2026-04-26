@@ -1,6 +1,6 @@
 title: Reichsexekution (Имперская экзекуция) в Тюрингии
 subtitle: История повторяется.
-view-if: reichsexekution_defeated = 0 and president = "Hindenburg" and red_thuringia and (rb_force + rfb_force < 75) and not presidential_powers and (prussian_coup_seen or prussian_reichsexekution or hindenburg_angry >= 100 or hindenburg_angry_bruning >= 50 or strife >= 5 or rb_militancy >= 0.1 or bruning_time or saxony_joever) and year >= 1930
+view-if: reichsexekution_defeated = 0 and president = "Гинденбург" and red_thuringia and (rb_force + rfb_force < 75) and not presidential_powers and (prussian_coup_seen or prussian_reichsexekution or hindenburg_angry >= 100 or hindenburg_angry_bruning >= 50 or strife >= 5 or rb_militancy >= 0.1 or bruning_time or saxony_joever) and year >= 1930
 on-arrival: thuringia_joever = 1; strife += 1; hindenburg_angry += 25; hindenburg_angry_bruning -= 25
 new-page: true
 tags: event

@@ -47,7 +47,7 @@ go-to: hugenberg_dnvp if dnvp_ideology == "Radical"; hugenberg_dnf if dnvp_ideol
 @schleicher_2_dnvp
 go-to: schleicher_2_dnvp_post
 
-При поддержке Шлейхера отколовшиеся фракции вошли в состав[? if not kvp_formed: недавно возрождённой <span style="color: #0087DC;">**КНП**</span>, которая по настоянию рейхсканцлера превратилась в <i>Rechtsblock</i>, где могут сплотиться все <span style="color: #3E88B3;">националисты</span>. ?][? if kvp_formed and kvp_dnef: <span style="color: #0087DC;">**КНП**</span>, которая по настоянию Шлейхера превратилась в <i>Rechtsblock</i>, где могут сплотиться все <span style="color: #3E88B3;">националисты</span>. ?][? if kvp_formed and not kvp_dnef: <span style="color: #0087DC;">**КНП**</span>, которую также силой заставили вступить в <span style="color: #BFC8CC;">Фронт Национального Единства Германии</span>. ?]
+При поддержке Шлейхера отколовшиеся фракции вошли в состав[? if not kvp_formed: недавно возрождённой <span style="color: #0087DC;">**КНП**</span>, которая по настоянию рейхсканцлера превратилась в <i>Rechtsblock</i>, где могут сплотиться все <span style="color: #3E88B3;">националисты</span>.  ?][? if kvp_formed and kvp_dnef: <span style="color: #0087DC;">**КНП**</span>, которая по настоянию Шлейхера превратилась в <i>Rechtsblock</i>, где могут сплотиться все <span style="color: #3E88B3;">националисты</span>.  ?][? if kvp_formed and not kvp_dnef: <span style="color: #0087DC;">**КНП**</span>, которую также силой заставили вступить в <span style="color: #BFC8CC;">Фронт Национального Единства Германии</span>.  ?]
 
 То, что осталось от гугенберговской <span style="color: #3E88B3;">**НННП**</span>, — лишь бледная тень самой себя, а его влияние на политической арене страны практически сошло на нет. Но этот человек никогда не сдаётся. [? if kvp_leader != "Treviranus": Тревиранус с тех пор поставлен во главе теперь уже примкнувшей к <i>Blocpartei</i> <span style="color: #0087DC;">**КНП**</span>. ?]
 
@@ -122,23 +122,23 @@ Q.kvp_leader = "Treviranus";
 
 Текущий состав <span style="color: #BFC8CC;">Фронта Национального Единства Германии</span>:
 
-[? if dnef_formed: - <span style="color: #BFC8CC;">**ФНЕГ**</span> ?]
+[? if dnef_formed: - <span style="color: #BFC8CC;">**ФНЕГ**</span>  ?]
 
-[? if dstp_dnef: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
+[? if dstp_dnef: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span>  ?]
 
-[? if lvp_dnef: - <span style="color: #FFCC00;">**ЛНП**</span> ?]
+[? if lvp_dnef: - <span style="color: #FFCC00;">**ЛНП**</span>  ?]
 
-[? if z_dnef: - <span style="color: #000000;">Партия Центра</span> ?]
+[? if z_dnef: - <span style="color: #000000;">Партия Центра</span>  ?]
 
-[? if z_dnef: - <span style="color: #A2D8E0;">**БНП**</span> ?]
+[? if z_dnef: - <span style="color: #A2D8E0;">**БНП**</span>  ?]
 
-[? if dvp_dnef: - <span style="color: #C0A054;">**ННП**</span> ?]
+[? if dvp_dnef: - <span style="color: #C0A054;">**ННП**</span>  ?]
 
-[? if other_dnef: - **Прочие** ?]
+[? if other_dnef: - **Прочие**  ?]
 
-[? if kvp_dnef: - <span style="color: #0087DC;">**КНП**</span> ?]
+[? if kvp_dnef: - <span style="color: #0087DC;">**КНП**</span>  ?]
 
-[? if dnvp_dnef: - <span style="color: #3E88B3;">**НННП**</span> ?]
+[? if dnvp_dnef: - <span style="color: #3E88B3;">**НННП**</span>  ?]
 
 [? if nvf_dnef: - <span style="color: #142e20;">**ННФ**</span> ?]
 
@@ -189,23 +189,22 @@ if (Q.dnvp_leader != "Lambach") Q.dnvp_leader = "Treviranus";
 
 Текущий состав <span style="color: #BFC8CC;">Фронта Национального Единства Германии</span>:
 
-[? if dnef_formed: - <span style="color: #BFC8CC;">**ФНЕГ**</span> ?]
+[? if dnef_formed: - <span style="color: #BFC8CC;">**ФНЕГ**</span>  ?]
 
-[? if dstp_dnef: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
+[? if dstp_dnef: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span>  ?]
 
-[? if lvp_dnef: - <span style="color: #FFCC00;">**ЛНП**</span> ?]
+[? if lvp_dnef: - <span style="color: #FFCC00;">**ЛНП**</span>  ?]
 
-[? if z_dnef: - <span style="color: #000000;">Партия Центра</span> ?]
+[? if z_dnef: - <span style="color: #000000;">Партия Центра</span>  ?]
 
-[? if z_dnef: - <span style="color: #A2D8E0;">**БНП**</span> ?]
+[? if z_dnef: - <span style="color: #A2D8E0;">**БНП**</span>  ?]
 
-[? if dvp_dnef: - <span style="color: #C0A054;">**ННП**</span> ?]
+[? if dvp_dnef: - <span style="color: #C0A054;">**ННП**</span>  ?]
 
-[? if other_dnef: - **Прочие** ?]
+[? if other_dnef: - **Прочие**  ?]
 
-[? if kvp_dnef: - <span style="color: #0087DC;">**КНП**</span> ?]
+[? if kvp_dnef: - <span style="color: #0087DC;">**КНП**</span>  ?]
 
-[? if dnvp_dnef: - <span style="color: #3E88B3;">**НННП**</span> ?]
+[? if dnvp_dnef: - <span style="color: #3E88B3;">**НННП**</span>  ?]
 
 [? if nvf_dnef: - <span style="color: #142e20;">**ННФ**</span> ?]
-

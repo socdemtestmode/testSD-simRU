@@ -6,6 +6,7 @@ on-arrival: labor_affairs_timer = 6; month_actions += 1; labor_affairs_seen = 1
 view-if: spd_in_government = 1 and labor_minister_party = "SPD" and labor_affairs_timer = 0 and strike_term_seen = 0
 card-image: img/portraits/WissellRudolf.jpg
 
+
 = Трудовые отношения
 
 Промышленный Рурский регион охвачен рабочими волнениями. Работодатели объявили массовый локаут, чтобы заставить рабочих пойти на дальнейшее сокращение зарплат и льгот. Министерство труда должно выступить посредником в конфликте между работодателями и рабочими.
@@ -37,3 +38,11 @@ on-arrival: labor_dissent += 4; workers_spd -= 2; kpd_coalition_dissent += 1; kp
 
 Многие рабочие недовольны нашими компромиссами, но со временем они поймут, что все мы ведём общую борьбу с экономическими силами.
 
+
+
+# options: support the workers in their demands, pushing back against the employers.
+# this is the approach favored by the unions. While they do not get everything they desire, an agreement favorable to the workers is reached. The employer associations and their bourgeois allies accuse us of overstepping our bounds.
+# try to make some compromise between the sides. Both sides need to share the pain in the current crisis.
+# whatever it takes, end the strikes and unrest as soon as possible.
+# this is not our business to intervene.
+# We are the party of labor, and it is not our business to intervene? There is incredulity in the ranks. The workers are less likely to trust us in the future.

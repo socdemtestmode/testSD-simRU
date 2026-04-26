@@ -1,11 +1,11 @@
 title: Гитлер приходит к власти.
 subtitle: Начало конца.
-view-if: (chancellor == nsdap_chancellor or president == "Hitler" or president == "Göring" or president == "Frick" or chancellor_party == "NSDAP") and (not rubicon_mini or president == "Hitler" or president == "Göring" or president == "Frick")
+view-if: (chancellor == nsdap_chancellor or president == "Гитлер" or president == "Геринг" or president == "Фрик" or chancellor_party == "НСДАП") and (not rubicon_mini or president == "Гитлер" or president == "Геринг" or president == "Фрик")
 on-arrival: spd_in_government = 0
 tags: event
 new-page: true
 
-[? if hitler_deported and president != "Hitler" and chancellor != "Hitler": Первый шаг, который канцлер [+ chancellor +] предпринимает, вступив в должность, — это возвращение Адольфа Гитлера в Германию, предоставление ему гражданства и официального поста в кабинете министров.  ?]
+[? if hitler_deported and president != "Гитлер" and chancellor != "Гитлер": Первый шаг, который канцлер [+ chancellor +] предпринимает, вступив в должность, — это возвращение Адольфа Гитлера в Германию, предоставление ему гражданства и официального поста в кабинете министров.  ?]
 
 Гитлер обещал расправу над <span style="color: #c00000;">социалистами</span>, и <span style="color: #7A3C00;">нацисты</span> уже пролили много крови на улицах. В своём опубликованном манифесте он обещает кампанию <span style="color: #7e0000;">**неописуемого**</span> <span style="color: #3f0000;">**ужаса**</span> против наших <span style="color: #005EB8;">евреев</span> и бесконечные захватнические войны, которые разрушат всю Европу.
 
@@ -25,11 +25,11 @@ new-page: true
 
 
 @give_up
-on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 1; in_minority_weimar_coalition_prussia = 0; spd_prussia = 0; right_prussia = 0; prussia_leader = "Papen" if president != "Hitler"; prussia_leader = "Goring" if president = "Hitler"
+on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 1; in_minority_weimar_coalition_prussia = 0; spd_prussia = 0; right_prussia = 0; prussia_leader = "Папен" if president != "Гитлер"; prussia_leader = "Геринг" if president = "Гитлер"
 
 Звучат речи. Проходят голосования. На улицах свистят пули. Некоторых <span style="color: #c00000;">социалистов</span> убивают или бросают в тюрьмы. Другие бегут из страны. Что вообще могут решить голоса в такой момент?
 
-Рейхстаг сожжён, якобы иностранным <span style="color: #700000;">коммунистом</span>. Вслед за этим <span style="color: #7A3C00;">нацисты</span> принимают декреты, дающие им неограниченную власть. Они, в союзе с [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnf_formed: <span style="color: #003755;">**НФГ**</span> ?], завоюют большинство на следующих выборах.
+Рейхстаг сожжён, якобы иностранным <span style="color: #700000;">коммунистом</span>. Вслед за этим <span style="color: #7A3C00;">нацисты</span> принимают декреты, дающие им неограниченную власть. Они, в союзе с [? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnf_formed: <span style="color: #003755;">**НФГ**</span> ?], завоюют большинство на следующих выборах.
 
 Германия потеряна.
 

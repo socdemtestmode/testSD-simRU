@@ -1,7 +1,7 @@
 title: Мы можем депортировать Гитлера.
 subtitle: В конце концов, он иностранный гражданин и преступник.
 unavailable-subtitle: [? if judicial_reform < 2 : К сожалению, <span style="color: #808080;">реакционная</span> судебная система не пойдёт на сотрудничество.  ?] [? if hitler_citizen : Гитлер уже получил гражданство Германии в преддверии президентских выборов. ?] [? if not spd_prussia : Мы не можем этого сделать без содействия прусской полиции, которая в данный момент нам не подчиняется. ?]
-view-if: nazi_urgency >= 3 and hitler_deported = 0 and chancellor != "Papen" and chancellor != "Schleicher" and investigate_far_right >= 2
+view-if: nazi_urgency >= 3 and hitler_deported = 0 and chancellor != "Папен" and chancellor != "Шляйхер" and investigate_far_right >= 2
 choose-if: judicial_reform >= 2 and not hitler_citizen and spd_prussia == 1
 
 Неужели всё так просто? Разве его сторонники не ответят насилием на это предложение? И даже если депортация увенчается успехом, разве он просто не вернётся в страну или не станет действовать из Австрии? Кроме того, некоторые сочтут это антидемократическим злоупотреблением властью — использованием закона для устранения политического оппонента.
@@ -45,7 +45,7 @@ on-arrival: sa_strength += 50; workers_nsdap += 5; unemployed_nsdap += 5; new_mi
 
 
 @force_success
-on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap *= 0.7; new_middle_nsdap *= 0.7; old_middle_nsdap *= 0.7; rural_nsdap *= 0.7; unemployed_nsdap *= 0.7; interior_goal_prussia -= 1 if not sa_banned; sa_banned = 1; coup_progress -= 2; nsdap_leader = "Goebbels"; nsdap_chancellor = "Göring"; pro_republic += 10
+on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap *= 0.7; new_middle_nsdap *= 0.7; old_middle_nsdap *= 0.7; rural_nsdap *= 0.7; unemployed_nsdap *= 0.7; interior_goal_prussia -= 1 if not sa_banned; sa_banned = 1; coup_progress -= 2; nsdap_leader = "Геббельс"; nsdap_chancellor = "Геринг"; pro_republic += 10
 achievement: deport_hitler
 
 Противостояние заканчивается победой полиции и Рейхсбаннера, которые захватывают Гитлера для депортации! Это признак слабости, а его физическое отсутствие осложняет организационную работу и мешает <span style="color: #7A3C00;">нацистам</span> завоёвывать голоса избирателей.
@@ -54,7 +54,7 @@ achievement: deport_hitler
 
 
 @deport_success
-on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap *= 0.7; new_middle_nsdap *= 0.7; old_middle_nsdap *= 0.7; rural_nsdap *= 0.7; unemployed_nsdap *= 0.7; interior_goal_prussia -= 1 if not sa_banned; sa_banned = 1; coup_progress -= 2; nsdap_leader = "Goebbels"; nsdap_chancellor = "Göring"; pro_republic += 10
+on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap *= 0.7; new_middle_nsdap *= 0.7; old_middle_nsdap *= 0.7; rural_nsdap *= 0.7; unemployed_nsdap *= 0.7; interior_goal_prussia -= 1 if not sa_banned; sa_banned = 1; coup_progress -= 2; nsdap_leader = "Геббельс"; nsdap_chancellor = "Геринг"; pro_republic += 10
 achievement: deport_hitler
 
 Каким-то образом план сработал! Депортация Гитлера почти не встретила сопротивления. Это признак слабости, а его физическое отсутствие осложняет организационную работу, что мешает <span style="color: #7A3C00;">нацистам</span> привлекать больше голосов.

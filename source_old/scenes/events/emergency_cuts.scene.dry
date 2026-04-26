@@ -24,6 +24,7 @@ on-arrival: welfare -= 1; unemployed += 1; unemployed_nsdap += 3; unemployed_kpd
 Чрезвычайные меры вводятся в действие в обход парламента, так как рейхстаг распущен. <span style="color: #7A3C00;">Нацисты</span> используют это в своих агитационных целях, как, впрочем, и мы.
 
 
+
 @vote_no
 title: Проголосовать против этой меры, расторгнув соглашение о поддержке.
 view-if: spd_toleration
@@ -52,7 +53,7 @@ on-arrival: in_center_right_coalition_prussia = 1; in_right_coalition_prussia = 
 
 Партия[? if z_party_name != "CVP": <span style="color: #000000;">Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] объявила ответный вотум недоверия в Пруссии, заменив наше правительство правоцентристской коалицией, состоящей из всех партий правее нас, за исключением <span style="color: #003755;">**НФГ**</span> и <span style="color: #7A3C00;">**НСДАП**</span>. Хотя это и неудача, это не худший из возможных исходов, ведь новые выборы могли бы привести к значительному усилению экстремистских партий.
 
-[? if z_leader != "Stegerwald": Адам Штегервальд ?][? if z_leader == "Stegerwald": Генрих Брюнинг ?]от [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] избран на пост министра-президента Пруссии.
+[? if z_leader != "Stegerwald": Адам Штегервальд  ?][? if z_leader == "Stegerwald": Генрих Брюнинг  ?]от [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] избран на пост министра-президента Пруссии.
 
 
 @vote_yes
@@ -61,4 +62,3 @@ view-if: spd_toleration
 on-arrival: welfare -= 1; unemployed += 1; left_dissent += 10; labor_dissent += 10; workers_spd *= 0.92; unemployed_spd *= 0.92; unemployed_nsdap += 3; unemployed_kpd += 3; workers_nsdap += 3; workers_kpd += 3; workers_spd -= 3 if welfare < 0; unemployed_spd -= 4 if welfare < 0; pro_republic -= 3; kpd_relation -= 8; budget += 1; inflation -= 2; economic_growth -= 0.5
 
 Мы пытаемся убедить рабочих, что эта политика необходима для поддержания стабильного парламентского правительства и борьбы с финансовыми последствиями депрессии. И все же эта политика служит отличной почвой для вербовки сторонников <span style="color: #7A3C00;">нацистами</span> и <span style="color: #700000;">**коммунистов**</span>.
-

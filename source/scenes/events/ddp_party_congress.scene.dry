@@ -58,7 +58,7 @@ if (Q.bourgeois_parliament_ddp || Q.liberal_parliament || Q.liberal_cooperation 
 if (Q.bourgeois_list) {
     Q.dietrich_points += 1;
 }
-if (Q.chancellor == "Brüning" && Q.spd_toleration) {
+if (Q.chancellor == "Брюнинг" && Q.spd_toleration) {
     Q.dietrich_points += 1;
     Q.ddp_right += 2;
 }
@@ -74,18 +74,18 @@ if (Q.ddp_cohesion >= 10) {
     Q.lemmer_points += 1;
 }
 if (Q.ddp_right > (Q.ddp_left + 4)) {
-    Q.ddp_ideology = "Right"
+    Q.ddp_ideology = "Правые"
 } else if (Q.ddp_left > (Q.ddp_right + 4)) {
-    Q.ddp_ideology = "Left"
+    Q.ddp_ideology = "Левые"
 } else {
-    Q.ddp_ideology = "Moderate"
+    Q.ddp_ideology = "Умеренные"
 }
 
-if (Q.ddp_ideology == "Right") {
+if (Q.ddp_ideology == "Правые") {
     Q.dietrich_points += 3;
-} else if (Q.ddp_ideology == "Moderate") {
+} else if (Q.ddp_ideology == "Умеренные") {
     Q.heuss_points += 1;
-} else if (Q.ddp_ideology == "Left") {
+} else if (Q.ddp_ideology == "Левые") {
     Q.lemmer_points += 3;
 }
 
@@ -133,7 +133,7 @@ new-page: true
 
 @lemmer
 view-if: lemmer_lead
-on-arrival: ddp_leader = "Lemmer"; liberal_cooperation -= 3; ddp_relation += 10; workers_ddp += 6; catholics_ddp += 2; workers_spd -= 4; workers_z -= 2; pro_republic += ddp_votes; ddp_left += 5; ddp_cohesion -= 3; new_middle_ddp -= 4 if stolper_program_adopted; old_middle_ddp -= 4 if stolper_program_adopted; new_middle_ddp -= 2; old_middle_ddp -= 2; rural_ddp -= 1;
+on-arrival: ddp_leader = "Леммер"; liberal_cooperation -= 3; ddp_relation += 10; workers_ddp += 6; catholics_ddp += 2; workers_spd -= 4; workers_z -= 2; pro_republic += ddp_votes; ddp_left += 5; ddp_cohesion -= 3; new_middle_ddp -= 4 if stolper_program_adopted; old_middle_ddp -= 4 if stolper_program_adopted; new_middle_ddp -= 2; old_middle_ddp -= 2; rural_ddp -= 1;
 face-image: img/portraits/lemmer.jpg
 go-to: achievement_calculation
 
@@ -144,7 +144,7 @@ go-to: achievement_calculation
 
 @heuss
 view-if: heuss_lead_ddp
-on-arrival: ddp_leader = "Heuss"; ddp_cohesion += 3; pro_republic += (ddp_votes*2); ddp_relation += 5; ddp_left += 2 if ddp_ideology == "Right"; ddp_right += 2 if ddp_ideology == "Left"; liberal_cooperation += 1; new_middle_ddp += ((pro_republic + (ddp_cohesion * 10)) / 40); old_middle_ddp += ((pro_republic + (ddp_cohesion * 10)) / 40); new_middle_nsdap -= ((pro_republic + (ddp_cohesion * 10)) / 40); old_middle_nsdap -= ((pro_republic + (ddp_cohesion * 10)) / 40); rural_ddp += 1; workers_ddp += 0.5;
+on-arrival: ddp_leader = "Хойс"; ddp_cohesion += 3; pro_republic += (ddp_votes*2); ddp_relation += 5; ddp_left += 2 if ddp_ideology == "Правые"; ddp_right += 2 if ddp_ideology == "Левые"; liberal_cooperation += 1; new_middle_ddp += ((pro_republic + (ddp_cohesion * 10)) / 40); old_middle_ddp += ((pro_republic + (ddp_cohesion * 10)) / 40); new_middle_nsdap -= ((pro_republic + (ddp_cohesion * 10)) / 40); old_middle_nsdap -= ((pro_republic + (ddp_cohesion * 10)) / 40); rural_ddp += 1; workers_ddp += 0.5;
 face-image: img/portraits/heuss.jpg
 go-to: achievement_calculation
 
@@ -155,13 +155,13 @@ go-to: achievement_calculation
 
 @dietrich
 view-if: dietrich_lead
-on-arrival: ddp_leader = "Dietrich"; ddp_right += 1; liberal_cooperation += 1; new_middle_ddp -= 2; old_middle_ddp -= 1; rural_ddp += 2;
+on-arrival: ddp_leader = "Дитрих"; ddp_right += 1; liberal_cooperation += 1; new_middle_ddp -= 2; old_middle_ddp -= 1; rural_ddp += 2;
 face-image: img/portraits/dietrich.jpg
 go-to: achievement_calculation
 
 Rак и ожидалось, Герман Дитрих победил на выборах председателя <span style="color: #D3C24D;">**[+ ddp_name +]**</span>. Он получил поддержку теперь доминирующей фракции малого бизнеса в партии, а также от <span style="color: #D3C24D;">демократов</span> старой закалки, которые вместе с ним выступали против слияния с <span style="color: #D3D3A9;">**ННОР**</span>.
 
-[? if chancellor == "Brüning" and not spd_in_government: Дитрих на посту министра финансов разрабатывал чрезвычайные указы Брюнинга, называя их «горьким лекарством», которое страна должна принять на пути к выздоровлению.  ?][? if not (chancellor == "Brüning" and not spd_in_government) and agriculture_minister_party != "SPD": Дитрих известен фискальным консерватизмом и защитой интересов фермеров Германии на посту министра сельского хозяйства. ?] Однако его руководство, мягко говоря, не впечатляет — это мнение разделяют многие в партии, хотя, похоже, сейчас никто не горит желанием бросить ему вызов. [? if agriculture_minister_party == ddp_name or economic_minister_party == ddp_name: Обязанности министра не позволят ему заняться повседневным управлением партией, которое поручено группе его соратников из лоббистов малого бизнеса, но это вряд ли что-то изменит в её политическом курсе. ?]
+[? if chancellor == "Брюнинг" and not spd_in_government: Дитрих на посту министра финансов разрабатывал чрезвычайные указы Брюнинга, называя их «горьким лекарством», которое страна должна принять на пути к выздоровлению.  ?][? if not (chancellor == "Брюнинг" and not spd_in_government) and agriculture_minister_party != "СДПГ": Дитрих известен фискальным консерватизмом и защитой интересов фермеров Германии на посту министра сельского хозяйства. ?] Однако его руководство, мягко говоря, не впечатляет — это мнение разделяют многие в партии, хотя, похоже, сейчас никто не горит желанием бросить ему вызов. [? if agriculture_minister_party == ddp_name or economic_minister_party == ddp_name: Обязанности министра не позволят ему заняться повседневным управлением партией, которое поручено группе его соратников из лоббистов малого бизнеса, но это вряд ли что-то изменит в её политическом курсе. ?]
 
 
 @deadlock
@@ -178,7 +178,7 @@ go-to: heuss
 
 
 @achievement_calculation
-go-to: ddp_lemmer if ddp_leader == "Lemmer"; ddp_heuss if ddp_leader == "Heuss"; ddp_dietrich if ddp_leader == "Dietrich"
+go-to: ddp_lemmer if ddp_leader == "Леммер"; ddp_heuss if ddp_leader == "Хойс"; ddp_dietrich if ddp_leader == "Дитрих"
 achievement: ddp_congress
 
 

@@ -9,11 +9,15 @@ tags: event
 
 = Восстание в Австрии
 
+# pre-emptive democratic victory if sdapo strength >= 6
+# long civil war if sdapo_strength = 5 or 4 - opportunity for interference/forced peace
+# instant defeat if sdapo_strength < 4
+
 Кризис в Австрии продолжается. «<span style="color: #7A3C00;">Австрофашистское</span>» правительство во главе с Энгельбертом Дольфусом продолжает править с помощью чрезвычайных указов. Оно преследует политическую оппозицию, в первую очередь <span style="color: #A50034;">социал-демократов</span> из <span style="color: #A50034;">**СДПА**</span>.
 
-[? if sdapo_strength < 6: Теперь Австрия вступает в состояние гражданской войны. Когда полиция попыталась изъять оружие у Republikanischer Schutzbund, Schutzbund ответил силой, открыв огонь по правительственным войскам. По всей Австрии между Schutzbund и правительственными войсками то и дело вспыхивают бои. ?]
+[? if sdapo_strength < 6: Теперь Австрия вступает в состояние гражданской войны. Когда полиция попыталась изъять оружие у Republikanischer Schutzbund, Schutzbund ответил силой, открыв огонь по правительственным войскам. По всей Австрии между Schutzbund и правительственными войсками то и дело вспыхивают бои.  ?]
 
-[? if sdapo_strength >= 6: Попытки правительства подавить <span style="color: #A50034;">социалистическую</span> партию и Schutzbund встречены массовыми протестами, поддержанными <span style="color: #c00000;">**СДПГ**</span>[? if foreign_minister_party = "SPD": &nbsp;и правительством Германии ?]. [? if eu_austria: Их также поддерживает недавно созданный <span style="color: #001489;">Европейский</span> <span style="color: #FFDD00;">союз</span>, который ввёл экономические санкции против правительства. ?] ?]
+[? if sdapo_strength >= 6: Попытки правительства подавить <span style="color: #A50034;">социалистическую</span> партию и Schutzbund встречены массовыми протестами, поддержанными <span style="color: #c00000;">**СДПГ**</span>[? if foreign_minister_party = "SPD": &nbsp;и правительством Германии ?]. [? if eu_austria: Их также поддерживает недавно созданный <span style="color: #001489;">Европейский</span> <span style="color: #FFDD00;">союз</span>, который ввёл экономические санкции против правительства.  ?]  ?]
 
 В конце концов…
 
@@ -79,6 +83,7 @@ on-arrival: z_relation -= 6; dvp_relation -= 6; ddp_relation -= 3; catholics_spd
 Несмотря на все наши усилия, война продолжается. Слишком много жизней обрывается. В Германию начинают стекаться беженцы, а торговля страдает. Многие называют наше вмешательство в дела Австрии ошибкой.
 
 
+
 @sdapo_victory
 title: <span style="color: #7A3C00;">Австрофашисты</span> отступают!
 on-arrival: sdapo_win = 1; pro_republic += 5; west_relation += 1; east_relation += 1; austria_victory = 1; reichswehr_loyalty += 0.1; coup_progress -= 2; ddp_left += 3; dvp_left += 3; lvp_left += 3
@@ -88,4 +93,3 @@ achievement: arbeiter_von_wien
 В итоге <span style="color: #7A3C00;">австрофашисты</span> отступили! Оказавшись в безвыходном положении как внутри страны, так и за её пределами, они согласились восстановить Национальный совет, уйти в отставку и провести новые выборы. Теперь начинается долгий процесс восстановления. В результате наши страны, скорее всего, сблизятся.
 
 [? if eu_austria: Это большой успех нового <span style="color: #001489;">Европейского</span> <span style="color: #FFDD00;">союза</span>, и его престиж на международной арене заметно вырос. ?]
-

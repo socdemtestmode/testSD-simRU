@@ -51,4 +51,3 @@ view-if: reichsbanner_disarm_cost > 0
 on-arrival: rb_militancy *= 0.5; rb_strength -= 400; resources += reichsbanner_disarm_cost; unemployed_spd -= 4; unemployed_kpd += 2; rfb_strength += 100
 
 Поскольку рейхсвер поддерживает порядок на улицах, мы больше не нуждаемся в «Рейхсбаннере» для самообороны. Лучше потратить наши скудные средства на предвыборную пропаганду, а не на оружие.
-

@@ -36,4 +36,3 @@ on-arrival: hindenburg_angry -= 5
 on-arrival: pacifism += 1; nationalism -= 5*(1-dissent); pro_republic += 5*(1-dissent); coup_progress += 1; dvp_left += 1; ddp_left += 0.5; lvp_left += 1; hindenburg_angry += 10
 
 Разрушение мифа об «ударе ножом в спину», помимо восстановления исторической правды, значительно улучшило бы репутацию нашей партии. Именно поэтому военные круги будут сопротивляться этому на каждом шагу.
-

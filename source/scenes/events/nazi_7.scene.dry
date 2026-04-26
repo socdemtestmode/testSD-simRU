@@ -1,6 +1,6 @@
 title: Конец Грегора Штрассера
 subtitle: Некогда влиятельный нацист уходит из политики.
-view-if: chancellor = "Schleicher" and schleicher_time == 6 and (lippe_good or not lippe_election_seen)
+view-if: chancellor = "Шляйхер" and schleicher_time == 6 and (lippe_good or not lippe_election_seen)
 new-page: true
 tags: event
 priority: 2

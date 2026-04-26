@@ -7,10 +7,15 @@ view-if: spd_in_government = 1 and labor_minister_party = "SPD" and labor_rights
 card-image: img/portraits/WissellRudolf.jpg
 max-visits: 6
 go-to: labor_rights_menu
+#subtitle: Working hours, safety regulations, and unemployment insurance.
 
 = Права трудящихся
 
 Контролируя министерство труда, мы можем установить общегосударственные трудовые стандарты. Наши сторонники ожидают, что мы введём 40-часовую рабочую неделю, обеспечим соблюдение правил техники безопасности, а также полностью профинансируем программу страхования по безработице.
+
+# enforce a 40-hour work week
+# develop and enforce safety regulations in mines and industries
+# works councils are part of another card...
 
 
 @labor_rights_menu
@@ -67,15 +72,14 @@ on-arrival: workers_spd -= 0.12*workers_spd; unemployed_spd -= 0.2*unemployed_sp
 
 
 @increase_employers
-subtitle: Работодатели категорически против этого.[? if in_grand_coalition: The [? if not lvp_formed: <span style="color: #C0A054;">**ННП**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] , скорее всего, выйдет из коалиции. ?][? if in_weimar_coalition and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span>, скорее всего, выйдет из коалиции. ?]
+subtitle: Работодатели категорически против этого.[? if in_grand_coalition: The [? if not lvp_formed: <span style="color: #C0A054;">**ННП**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?] , скорее всего, выйдет из коалиции.  ?][? if in_weimar_coalition and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span>, скорее всего, выйдет из коалиции. ?]
 on-arrival: capital_strike_progress += 2; coalition_dissent = 2 if in_grand_coalition; coalition_dissent = 2 if (in_weimar_coalition and lvp_formed); coalition_dissent += 1; coalition_dissent += 1 if (lvp_ideology == "Right" and in_weimar_coalition and lvp_formed); welfare += 1; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); old_middle_spd -= 6*(1-dissent); new_middle_spd -= 2*(1-dissent); unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; dvp_right += 2; ddp_right += 2; ddp_cohesion -= 1; lvp_right += 2; dvp_relation -= 6; z_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; unemployment_goal_spd += 1; goal_spd_cancel_peoples += 1; economic_growth -= 0.2;
 
 Мы увеличили взносы работодателей в фонд страхования на случай безработицы, что позволяет продолжать программу, не ущемляя интересов рабочих и безработных. Вполне понятно, что капиталисты и их политические партии в ярости, а наша опора в лице профсоюзов и безработных довольна.
 
 
 @balance
-subtitle: Ни рабочие, ни работодатели не будут полностью удовлетворены или разочарованы. [? if in_grand_coalition and ((dvp_ideology == "Right") or (dvp_ideology == "Moderate" and dvp_relation < 40) or (dvp_ideology == "Left" and dvp_relation < 30)) and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span>, скорее всего, сочтёт этот компромисс неприемлемым. ?][? if in_grand_coalition and ((dvp_ideology == "Left" and dvp_relation >= 30) or (dvp_ideology == "Moderate" and dvp_relation >= 40)) and dvp_ideology != "Right" and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span>, возможно, нехотя примет этот компромисс на данный момент. ?][? if (in_grand_coalition or in_weimar_coalition) and ((lvp_ideology == "Right") or (lvp_ideology == "Moderate" and lvp_relation < 40) or (lvp_ideology == "Left" and lvp_relation < 30)) and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span>, скорее всего, сочтёт этот компромисс неприемлемым. ?][? if (in_grand_coalition or in_weimar_coalition) and ((lvp_ideology == "Left" and lvp_relation >= 30) or (lvp_ideology == "Moderate" and lvp_relation >= 40)) and lvp_ideology != "Right" and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span>, возможно, нехотя примет этот компромисс на данный момент. ?]
+subtitle: Ни рабочие, ни работодатели не будут полностью удовлетворены или разочарованы. [? if in_grand_coalition and ((dvp_ideology == "Right") or (dvp_ideology == "Moderate" and dvp_relation < 40) or (dvp_ideology == "Left" and dvp_relation < 30)) and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span>, скорее всего, сочтёт этот компромисс неприемлемым.  ?][? if in_grand_coalition and ((dvp_ideology == "Left" and dvp_relation >= 30) or (dvp_ideology == "Moderate" and dvp_relation >= 40)) and dvp_ideology != "Right" and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span>, возможно, нехотя примет этот компромисс на данный момент.  ?][? if (in_grand_coalition or in_weimar_coalition) and ((lvp_ideology == "Right") or (lvp_ideology == "Moderate" and lvp_relation < 40) or (lvp_ideology == "Left" and lvp_relation < 30)) and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span>, скорее всего, сочтёт этот компромисс неприемлемым.  ?][? if (in_grand_coalition or in_weimar_coalition) and ((lvp_ideology == "Left" and lvp_relation >= 30) or (lvp_ideology == "Moderate" and lvp_relation >= 40)) and lvp_ideology != "Right" and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span>, возможно, нехотя примет этот компромисс на данный момент. ?]
 on-arrival: workers_spd -= 4; unemployed_spd -= 5; workers_kpd += 3; unemployed_kpd += 3; unemployed_nsdap += 3; left_dissent += 10; labor_dissent += 8; center_dissent += 5; welfare -= 1; budget += 1; kpd_relation -= 4; inflation -= 1; unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; coalition_dissent = 2 if in_grand_coalition and ((dvp_ideology == "Right") or (dvp_ideology == "Moderate" and dvp_relation < 40) or (dvp_ideology == "Left" and dvp_relation < 30)); coalition_dissent = 2 if (in_grand_coalition or in_weimar_coalition) and ((lvp_ideology == "Right") or (lvp_ideology == "Moderate" and lvp_relation < 40) or (lvp_ideology == "Left" and lvp_relation < 30)) and lvp_formed; coalition_dissent += 1 if in_grand_coalition; coalition_dissent += 1 if (in_weimar_coalition and lvp_formed); dvp_right += 1; ddp_right += 1; lvp_right += 1; labor_goal_spd_peoples += 1; economic_growth -= 0.1;
 
 Ни одна из сторон не удовлетворена полностью нашим компромиссным решением. Многие рабочие и безработные видят в этом предательство, хотя мы и преподносим это как успешное предотвращение гораздо худшей альтернативы. [? if (in_grand_coalition or (in_weimar_coalition and lvp_formed)): Тем временем[? if not lvp_formed: <span style="color: #C0A054;">**ННП**</span> ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?]в ужасе от одной лишь перспективы хоть какого-то повышения налогов для бизнеса. ?]
-

@@ -32,7 +32,7 @@ new-page: true
 
 После провала австрийского таможенного союза, архитектор которого — Курциус, он подал в отставку как с поста министра иностранных дел, так и с поста лидера <span style="color: #C0A054;">**ННП**</span>. Этот провал серьёзно дискредитировал его и его союзников в левом крыле партии, что привело к сдвигу вправо внутри <span style="color: #C0A054;">**ННП**</span>, особенно на местном уровне.
 
-Теперь будут внутренние выборы для определения преемника Курциуса. Промышленное крыло ослаблено, поэтому ни один из ведущих кандидатов не имеет тесных связей с крупным бизнесом. Отто Тиль и Франк Глатцель, оба члены DHV — консервативного профсоюза «белых воротничков» — и лидеры молодёжного либерального крыла <span style="color: #C0A054;">**ННП**</span>'s Young Liberal wing, [? if not dvp_reform: — главные сторонники создания истинной Народной партии ?][? if dvp_reform: сыграли ключевую роль, подтолкнув <span style="color: #C0A054;">**ННП**</span> к реформам много лет назад ?]. Тем временем, Зигфрид фон Кардорф, опытный парламентарий, несмотря на свою прошлую связь с <span style="color: #3E88B3;">**НННП**</span>, с годами значительно смягчился и стал близким последователем Штреземана, выступая за «Большую коалицию» с <span style="color: #c00000;">**СДПГ**</span>. И, конечно же, Дингельдей снова баллотируется, несмотря на поражение в прошлый раз.
+Теперь будут внутренние выборы для определения преемника Курциуса. Промышленное крыло ослаблено, поэтому ни один из ведущих кандидатов не имеет тесных связей с крупным бизнесом. Отто Тиль и Франк Глатцель, оба члены DHV — консервативного профсоюза «белых воротничков» — и лидеры молодёжного либерального крыла <span style="color: #C0A054;">**ННП**</span>'s Young Liberal wing, [? if not dvp_reform:  — главные сторонники создания истинной Народной партии ?][? if dvp_reform:  сыграли ключевую роль, подтолкнув <span style="color: #C0A054;">**ННП**</span> к реформам много лет назад ?]. Тем временем, Зигфрид фон Кардорф, опытный парламентарий, несмотря на свою прошлую связь с <span style="color: #3E88B3;">**НННП**</span>, с годами значительно смягчился и стал близким последователем Штреземана, выступая за «Большую коалицию» с <span style="color: #c00000;">**СДПГ**</span>. И, конечно же, Дингельдей снова баллотируется, несмотря на поражение в прошлый раз.
 
 - @thiel: Отто Тиль избран!
 - @glatzel: Франк Глатцель избран!
@@ -42,7 +42,7 @@ new-page: true
 
 @thiel
 subtitle: Тиль — вызывающий споры профсоюзник партии, придерживающийся более левых взглядов, чем Глатцель.
-unavailable-subtitle: [? if not glatzel_unlock: У рабочих нет влияния внутри <span style="color: #C0A054;">ННП</span>: партия не поддержит профсоюзного лидера. ?][? if glatzel_unlock: Тиль по-прежнему кажется слишком левым для партии: многие предпочитают поддержать его более правого коллегу Глатцеля. ?]
+unavailable-subtitle: [? if not glatzel_unlock: У рабочих нет влияния внутри <span style="color: #C0A054;">ННП</span>: партия не поддержит профсоюзного лидера.  ?][? if glatzel_unlock: Тиль по-прежнему кажется слишком левым для партии: многие предпочитают поддержать его более правого коллегу Глатцеля. ?]
 choose-if: thiel_unlock
 on-arrival: dvp_leader = "Thiel"; bourgeois_cooperation -= 3; dvp_left += 10; coalition_dissent -= 1 if in_grand_coalition; dvp_relation += 15; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_spd -= 2; new_middle_dvp += 6; new_middle_nsdap -= 3; new_middle_other -= 3; catholics_dvp += 3; catholics_other -= 3; old_middle_dvp -= 4; old_middle_dnvp += 2; old_middle_kvp += 2 if kvp_formed; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Moderate"; rural_kvp += 2 if kvp_formed; pro_republic += 5; ddp_left += 3; ddp_relation += 5
 face-image: img/portraits/thiel.jpg
@@ -54,7 +54,7 @@ face-image: img/portraits/thiel.jpg
 
 @glatzel
 subtitle: Глатцель, будучи бывшим членом <span style="color: #3E88B3;">**НННП**</span>, имеет националистический уклон.
-unavailable-subtitle: [? if not thiel_unlock: У рабочих нет влияния внутри <span style="color: #C0A054;">ННП</span>: партия не поддержит профсоюзного лидера. ?][? if thiel_unlock: Глатцель чересчур правый и националистический для партии с учетом нынешних настроений в стране. ?]
+unavailable-subtitle: [? if not thiel_unlock: У рабочих нет влияния внутри <span style="color: #C0A054;">ННП</span>: партия не поддержит профсоюзного лидера.  ?][? if thiel_unlock: Глатцель чересчур правый и националистический для партии с учетом нынешних настроений в стране. ?]
 choose-if: glatzel_unlock
 on-arrival: dvp_leader = "Glatzel"; bourgeois_cooperation += 1; dvp_right += 3; dvp_relation -= 5; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_nsdap -= 2; new_middle_dvp += 6; new_middle_nsdap -= 4; new_middle_other -= 2; catholics_dvp += 4; catholics_other -= 2; catholics_dnvp -= 2; old_middle_dvp += 2; old_middle_dnvp -= 2; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Moderate"; rural_kvp += 2 if kvp_formed
 face-image: img/portraits/glatzel.jpg

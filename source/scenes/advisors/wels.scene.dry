@@ -86,8 +86,8 @@ if (Q.stimulation) {
 @snap_election
 title: Досрочные выборы
 subtitle: Назначить досрочные выборы.
-unavailable-subtitle: [? if chancellor != "Wels" and president != "Wels" : Вельс должен быть канцлером или президентом. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?]
-choose-if: advisor_action_timer == 0 and (chancellor == "Wels" or president == "Wels")
+unavailable-subtitle: [? if chancellor != "Вельс" and president != "Вельс" : Вельс должен быть канцлером или президентом. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?]
+choose-if: advisor_action_timer == 0 and (chancellor == "Вельс" or president == "Вельс")
 on-arrival: advisor_action_timer = 6; time_to_election = 3
 call: set_next_election_time
 

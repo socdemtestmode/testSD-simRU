@@ -1,6 +1,6 @@
 title: <span style="color: #3E88B3;">**НННП**</span> проводит съезд
 subtitle: <span style="color: #3E88B3;">НННП</span> выбирает своего нового лидера...
-view-if: year = 1928 and month = 10 and dnvp_leader = "Westarp"
+view-if: year = 1928 and month = 10 and dnvp_leader = "Вестарп"
 on-arrival: dnvp_westarp = 0
 max-visits: 1
 tags: event
@@ -32,7 +32,7 @@ go-to: hergt if (((pro_republic - nationalism - previous_spd_last_election_votes
 
 
 @hergt
-on-arrival: dnvp_leader = "Hergt"; dnvp_ideology = "Moderate"; workers_other -= 1; rural_other -= 1; new_middle_other -= 1; old_middle_other -= 1; ddp_left += 1; dvp_left += 1; lvp_left += 1; z_relation -= 3; ddp_relation -= 2; dvp_relation -= 5
+on-arrival: dnvp_leader = "Хергт"; dnvp_ideology = "Умеренные"; workers_other -= 1; rural_other -= 1; new_middle_other -= 1; old_middle_other -= 1; ddp_left += 1; dvp_left += 1; lvp_left += 1; z_relation -= 3; ddp_relation -= 2; dvp_relation -= 5
 face-image: img/portraits/OskarHergt.jpg
 
 Мнения насчёт провокационной статьи Ламбаха в партии неожиданно разделились: в Германии слишком сильны <span style="color: #000000;">рес</span><span style="color: #DD0000;">пуб</span><span style="color: #FFCC00;">ликанские</span> настроения, а Альфреду Гугенбергу и его радикалам не удаётся убедить умеренных. Всё больше членов партии винят в спаде популярности не участие в <span style="color: #000000;">рес</span><span style="color: #DD0000;">пуб</span><span style="color: #FFCC00;">ликанском</span> правительстве, а её чрезмерный упор на монархизм в програме — они поддерживают тезисы Ламбаха. [? if tariffs < 0: Кроме того, снижение нами тарифов настроило <span style="color: #385A38;">аграрное</span> крыло против Гугенберга и его политики «всё или ничего». Они жаждут скорейшего возвращения в правительство, чтобы вернуть прежние тарифы . ?]
@@ -41,7 +41,7 @@ face-image: img/portraits/OskarHergt.jpg
 
 
 @triumvirate
-on-arrival: dnvp_leader = "Triumvirate"; dnvp_ideology = "Radical"; workers_dnvp -= 1; rural_dnvp -= 2; catholics_other += 1; workers_other += 1; new_middle_dvp += 2; new_middle_lvp += 2; new_middle_dnvp -= 2; pro_republic -= 2; dvp_right += 1; ddp_right += 1; lvp_right += 1
+on-arrival: dnvp_leader = "Триумвират"; dnvp_ideology = "Радикалы"; workers_dnvp -= 1; rural_dnvp -= 2; catholics_other += 1; workers_other += 1; new_middle_dvp += 2; new_middle_lvp += 2; new_middle_dnvp -= 2; pro_republic -= 2; dvp_right += 1; ddp_right += 1; lvp_right += 1
 face-image: img/portraits/Kuno_von_Westarp.jpg
 
 Ни у Гугенберга, ни у Гергта нет большинства: теперь они ищут компромиссное решение между двумя фракциями. Группа делегатов, колеблющихся между ними, в виде компромисса предложила триумвират из Вестарпа, Гугенберга и представителя от Прусской ячейки партии. Это предложение поддержал сам Гугенберг, так как оно позволит ему управлять партией из-за кулис, ведь прусская <span style="color: #3E88B3;">НННП</span> — его преданный оплот в партии.
@@ -50,7 +50,7 @@ face-image: img/portraits/Kuno_von_Westarp.jpg
 
 
 @hugenberg
-on-arrival: dnvp_leader = "Hugenberg"; dnvp_ideology = "Radical"; workers_dnvp -= 1; new_middle_dvp += 2; new_middle_lvp += 2; new_middle_dnvp -= 2; catholics_other += 2; workers_other += 2; pro_republic -= 3; dvp_right += 1; ddp_right += 1; lvp_right += 1
+on-arrival: dnvp_leader = "Гугенберг"; dnvp_ideology = "Радикалы"; workers_dnvp -= 1; new_middle_dvp += 2; new_middle_lvp += 2; new_middle_dnvp -= 2; catholics_other += 2; workers_other += 2; pro_republic -= 3; dvp_right += 1; ddp_right += 1; lvp_right += 1
 face-image: img/portraits/AlfredHugenberg.jpg
 
 Провокационная статья Ламбаха с критикой «чрезмерного» монархизма партии, поражение на недавних выборах и участие в прошлом правительстве, когда партия жаждет ликвидации республики, сыграли на руку Альфреду Гугенбергу. Он перетянул на свою сторону умеренных и добился избрания председателем простым большинством. По всей видимости, Гугенберг оттолкнёт левое крыло партии и спровоцирует раскол — он не потерпит компромиссов в любой форме. Вероятно, он положит конец внутрипартийной демократии и установит в партии <i>Führerprinzip</i> (принцип вождизма). Широкая консервативная партия преобразуется в инструмент по достижению его личных амбиций.

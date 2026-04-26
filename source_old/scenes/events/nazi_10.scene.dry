@@ -41,3 +41,4 @@ on-arrival: sa_strength -= 75; sa_militancy -= 0.1; rfb_strength += 30; unemploy
 
 Хотя недовольство по-прежнему направлено на местных партийных лидеров. Это защищает [+ nsdap_leader +]а. Пока что. Это лишь вопрос времени, когда фасад единства рухнет.
 
+# TODO, more outcomes

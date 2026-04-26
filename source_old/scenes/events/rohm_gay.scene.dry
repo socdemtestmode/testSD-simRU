@@ -16,7 +16,9 @@ face-image: img/portraits/rohm.jpg
 
 Как нам следует поступить с этими письмами?
 
-*«Мы выступаем против позорного параграфа 175 везде, где только можем, и потому не должны присоединяться к хору тех, кто хочет изгнать человека из общества лишь за то, что он гомосексуал».*— Die Weltbühne, немецкий еженедельный журнал
+> *«Мы выступаем против позорного параграфа 175 везде, где только можем, и потому не должны присоединяться к хору тех, кто хочет изгнать человека из общества лишь за то, что он гомосексуал».*
+
+ - — Die Weltbühne, немецкий еженедельный журнал
 
 - @expose_rohm: Мы опубликуем письма, так как разоблачение <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">льности</span> столь высокопоставленного <span style="color: #7A3C00;">нацистского</span> чиновника, несомненно, снизит их привлекательность для основного электората.
 - @no_expose_rohm: The <span style="color: #c00000;">**СДПГ**</span> формально выступает в защиту прав <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">лов</span>, и предавать огласке столь личное дело — дурной тон.
@@ -50,4 +52,3 @@ on-arrival: rohm_explode = 1; new_middle_nsdap -= 2; old_middle_nsdap -= 4; rura
 Имея неопровержимые доказательства нарушения Рёмом параграфа 175 — закона, устанавливающего уголовную ответственность за <span style="color: red;">го</span><span style="color: orange;">мо</span><span style="color: yellow;">се</span><span style="color: green;">кс</span><span style="color: blue;">уа</span><span style="color: purple;">льные</span> деяния, — мы смогли вновь возбудить против него дело. Рём не в состоянии отрицать подлинность писем: многие восприняли это как подтверждение их достоверности.
 
 В итоге Рём осуждён по параграфу 175 и приговорён к году тюремного заключения. Это вновь вынесло скандал на всеобщее обозрение, нанеся серьёзный удар по репутации <span style="color: #7A3C00;">**НСДАП**</span> и <span style="color: #7A3C00;">**СА**</span>.
-

@@ -72,7 +72,7 @@ on-arrival: kpd_relation -= 10; workers_spd -= 8; unemployed_spd -= 8;
 
 
 @appeal
-choose-if: (kpd_score >= 4 and kpd_relation > 50 and kpd_appeal_seen = 0) or kpd_leader = "Conciliators"
+choose-if: (kpd_score >= 4 and kpd_relation > 50 and kpd_appeal_seen = 0) or kpd_leader = "Примиренцы"
 unavailable-subtitle: [? if kpd_score < 4: Они не верят в серьёзность наших намерений по достижению целей коалиции. ?] [? if kpd_relation < 50: Наши отношения слишком плохи. ?] [? if kpd_appeal_seen = 1: У нас больше нет времени. ?]
 on-arrival: kpd_ultimatum_seen = 0; kpd_ultimatum_timer += 6; kpd_appeal_seen = 1
 

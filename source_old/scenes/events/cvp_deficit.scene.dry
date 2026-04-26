@@ -9,7 +9,7 @@ tags: event
 
 Во время формирования коалиции мы обещали <span style="color: #000000;">**[+ z_party_name +]**</span> всегда поддерживать профицит бюджета. Нам это не удалось.
 
-[? if coalition_dissent < 3: The <span style="color: #000000;">**[+ z_party_name +]**</span> дали нам ещё время, поскольку они всё ещё верят, что мы сдержим свои обещания. ?][? if coalition_dissent >= 3: The <span style="color: #000000;">**[+ z_party_name +]**</span> выдвинули нам вотум недоверия. ?]
+[? if coalition_dissent < 3: The <span style="color: #000000;">**[+ z_party_name +]**</span> дали нам ещё время, поскольку они всё ещё верят, что мы сдержим свои обещания.  ?][? if coalition_dissent >= 3: The <span style="color: #000000;">**[+ z_party_name +]**</span> выдвинули нам вотум недоверия. ?]
 
 - @careful: Ой.
 
@@ -17,4 +17,3 @@ tags: event
 @careful
 
 В следующий раз нужно быть осторожнее.
-

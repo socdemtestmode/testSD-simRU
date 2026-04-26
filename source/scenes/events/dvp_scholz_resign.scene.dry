@@ -1,6 +1,6 @@
 title: <span style="color: #C0A054;">**ННП**</span> — Заседание правления партии
 subtitle: Эрнст Шольц подал в отставку!
-view-if: year = 1930 and month = 12 and dvp_leader == "Scholz" and not lvp_formed
+view-if: year = 1930 and month = 12 and dvp_leader == "Шольц" and not lvp_formed
 on-arrival: dvp_left += 2 if dvp_relation >= 35; dvp_left += 2 if in_grand_coalition
 max-visits: 1
 tags: event
@@ -19,20 +19,20 @@ new-page: true
 @resultsdvp
 on-arrival: {!
 if (Q.dvp_right > (Q.dvp_left*1.5) || (Q.dvp_right > (Q.dvp_left + 4))) {
-    Q.dvp_ideology = "Right"
+    Q.dvp_ideology = "Правые"
 } else if (Q.dvp_left > (Q.dvp_right*1.5) || (Q.dvp_left > (Q.dvp_right + 4))) {
-    Q.dvp_ideology = "Left"
+    Q.dvp_ideology = "Левые"
 } else {
-    Q.dvp_ideology = "Moderate"
+    Q.dvp_ideology = "Умеренные"
 }
 !}
 go-to: dingeldey
 
 
 @dingeldey
-on-arrival: dvp_leader = "Dingeldey"; old_middle_dvp -= 2; new_middle_dvp -= 2; old_middle_nsdap += 2; new_middle_nsdap += 2; pro_republic -= 3; liberal_cooperation -= 1; bourgeois_cooperation += 1
+on-arrival: dvp_leader = "Дингельдей"; old_middle_dvp -= 2; new_middle_dvp -= 2; old_middle_nsdap += 2; new_middle_nsdap += 2; pro_republic -= 3; liberal_cooperation -= 1; bourgeois_cooperation += 1
 face-image: img/portraits/dingeldey.jpg
 
-Избрание Дингельдея на пост председателя стало триумфом для реформаторски настроенных элементов левого крыла <span style="color: #C0A054;">**ННП**</span> и с большим одобрением встречено движением за буржуазное единство. Однако, несмотря на энтузиазм левого крыла, его избрание, похоже, вовсе не означает сдвига влево, а лишь подтверждает смещение партии вправо. [? if chancellor == "Brüning" and not spd_in_government: Дингельдей даже не испытывает особой лояльности к правительству Брюнинга и считает, что партия сможет выполнить свою миссию по консолидации буржуазии, лишь освободившись от бремени правительственной ответственности. ?] До сих пор он проявлял себя как слабый и неэффективный лидер, капитулируя перед правым крылом при любой возможности.
+Избрание Дингельдея на пост председателя стало триумфом для реформаторски настроенных элементов левого крыла <span style="color: #C0A054;">**ННП**</span> и с большим одобрением встречено движением за буржуазное единство. Однако, несмотря на энтузиазм левого крыла, его избрание, похоже, вовсе не означает сдвига влево, а лишь подтверждает смещение партии вправо. [? if chancellor == "Брюнинг" and not spd_in_government: Дингельдей даже не испытывает особой лояльности к правительству Брюнинга и считает, что партия сможет выполнить свою миссию по консолидации буржуазии, лишь освободившись от бремени правительственной ответственности. ?] До сих пор он проявлял себя как слабый и неэффективный лидер, капитулируя перед правым крылом при любой возможности.
 
 Кроме того, Дингельдей не особенно заинтересован в более тесных отношениях с <span style="color: #D3C24D;">**[+ ddp_name +]**</span> и уж точно не с нами, а скорее с правыми партиями, такими как <span style="color: #3E88B3;">**НННП**</span> и даже с <span style="color: #7A3C00;">**НСДАП**</span>, чтобы превратить их в «конструктивный элемент государства». Это не сулит ничего хорошего для будущего <span style="color: #000000;">Ве</span><span style="color: #DD0000;">йм</span><span style="color: #FFCC00;">ар</span>ской демократии.

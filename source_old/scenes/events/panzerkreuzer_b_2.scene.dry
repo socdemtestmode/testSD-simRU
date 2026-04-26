@@ -30,7 +30,7 @@ on-arrival: left_dissent += 10; labor_dissent += 10; center_dissent += 5; reform
 on-arrival: dvp_relation -= 8; lvp_relation -= 5; z_relation -= 5; pacifism += 1; nationalism -= 5*(1-dissent); coalition_dissent += 1; workers_spd += 4*(1-dissent) if nationalism < 49; dvp_right += 1; hindenburg_angry += 5
 go-to: built if (spd_r + kpd_r + sapd_r < 50); not_built if (spd_r + kpd_r + sapd_r >= 50)
 
-Наше голосование против строительства военного корабля непопулярно среди правых партий[? if in_grand_coalition or in_weimar_coalition: , включая наших партнёров по коалиции ?][? if spd_toleration: , включая правительство меньшинства, которое мы сейчас поддерживаем ?].
+Наше голосование против строительства военного корабля непопулярно среди правых партий[? if in_grand_coalition or in_weimar_coalition: , включая наших партнёров по коалиции  ?][? if spd_toleration: , включая правительство меньшинства, которое мы сейчас поддерживаем  ?].
 
 
 @abstain
@@ -58,4 +58,3 @@ on-arrival: panzerkreuzer_b_funded = 0; budget += 1 if panzerkreuzer_funded = 0;
 view-if: reichswehr_minister_party == "SPD"
 
 Используя наш контроль над министерством рейхсвера, мы вынудили флот отказаться от планов перевооружения. Корабль не будет построен.
-

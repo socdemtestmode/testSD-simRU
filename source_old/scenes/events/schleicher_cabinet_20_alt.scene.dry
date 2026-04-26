@@ -473,4 +473,3 @@ if (Q.kpd_relation >= 30 && Q.sapd_formed == 1) {
 }
 !}
 go-to: root
-

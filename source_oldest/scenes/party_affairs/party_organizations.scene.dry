@@ -1,0 +1,77 @@
+title: Партийные организации
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: party_organizations_timer <= 0
+on-arrival: month_actions += 1; party_organizations_timer = 6;
+card-image: img/Mann_der_Arbeit.jpg
+max-visits: 6
+
+= Партийные организации
+
+Помимо того что это политическая партия, <span style="color: #c00000;">**СДПГ**</span> — это ещё и целый социальный мир со множеством дочерних организаций, которые заботятся о своих членах от колыбели до могилы.
+
+- @newspapers: Увеличить финансирование газет и журналистов.
+- @welfare: Увеличить финансирование программ взаимопомощи и социального обеспечения.
+- @culture: Увеличить финансирование спортивных лиг, образовательных и культурных программ.
+- @rb: Финансировать Рейхсбаннер, нашу организацию самообороны.
+- @youth: За нами закрепилась репутация партии стариков. Поддержать молодёжные организации.
+- @nothing: Не увеличивать финансирование ни одной из программ.
+- @easy_discard
+
+
+@newspapers
+choose-if: resources > 0
+unavailable-subtitle: Недостаточно ресурсов.
+subtitle: -1 ресурс
+on-arrival: resources -= 1; media_timer = 0;
+go-to: media
+
+
+
+
+@welfare
+choose-if: resources > 0
+unavailable-subtitle: Недостаточно ресурсов.
+subtitle: -1 ресурс
+on-arrival: resources -= 1; workers_aid += 1; unemployed_spd += 5*(1 - dissent);
+
+Мы увеличили финансирование «Рабочего благосостояния».[? if black_thursday_seen > 0 : В эпоху экономического кризиса это поможет нам укрепить свои позиции среди безработных. ?]
+
+
+@culture
+choose-if: resources > 0
+unavailable-subtitle: Недостаточно ресурсов.
+subtitle: -1 ресурс
+on-arrival: resources -= 1; cultural_organizations += 1; left_dissent -= 6; center_dissent -= 6; labor_dissent -= 6; reformist_dissent -= 6; neorevisionist_dissent -= 6
+
+Для <span style="color: #c00000;">**СДПГ**</span> недостаточно быть просто политической партией. Союз рабочих-певцов, рабочий спорт, наши школы и библиотеки имеют огромное значение в жизни наших товарищей. Финансирование этих организаций повышает преданность членов партии, даже когда им не по душе наша политика.
+
+[? if sa_strength > 500 : Однако кажется легкомысленным тратиться на спорт и хоровое пение, когда <span style="color: #7A3C00;">фашисты</span> убивают нас на улицах. ?]
+
+
+@rb
+choose-if: resources > 0
+unavailable-subtitle: Недостаточно ресурсов.
+subtitle: -1 ресурс
+view-if: not rb_explode
+on-arrival: resources -= 1; rb_strength  += 100; rb_militancy += 0.01; reichsbanner_timer = 0; funded_reichsbanner += 1
+
+Мы усилили набор в Рейхсбаннер.
+
+
+@youth
+choose-if: resources > 0
+unavailable-subtitle: Недостаточно ресурсов.
+subtitle: -1 ресурс
+view-if: not rb_explode
+on-arrival: resources -= 1; rb_strength += 50; rb_militancy += 0.02; young_socialists += 1; left_strength += 5; neorevisionist_strength += 5; radicalization += 1;
+
+Наши новые молодые члены партии примыкают к левому или неоревизионистскому крылу, а также привносят новый радикализм в Рейхсбаннер.
+
+
+@nothing
+
+Мы не финансируем партийные организации.
+
+- @return: Continue...

@@ -1,6 +1,6 @@
 title: The <span style="color: #0087DC;">**КНП**</span> присоединяется к <span style="color: #BFC8CC;">**ФНЕГ**</span>
 subtitle: Партия пытается войти в состав правительства, влившись в блок Шлейхера.
-view-if: chancellor = "Schleicher" and schleicher_post and kvp_formed and not kvp_dnef and ((kvp_votes < 6 and not bourgeois_list_kvp) or kvp_leader == "Treviranus") and nationalists_schleicher >= 6 and dnef_formed and not schleicher_cabinet_weak
+view-if: chancellor = "Шляйхер" and schleicher_post and kvp_formed and not kvp_dnef and ((kvp_votes < 6 and not bourgeois_list_kvp) or kvp_leader == "Тревиранус") and nationalists_schleicher >= 6 and dnef_formed and not schleicher_cabinet_weak
 new-page: true
 priority: 1
 tags: event
@@ -27,7 +27,7 @@ Q.kvp_relation = (Q.dnef_relation/2);
 Q.dnef_r += Q.kvp_r;
 Q.kvp_r = 0;
 
-Q.kvp_leader = "Treviranus";
+Q.kvp_leader = "Тревиранус";
 !}
 
 Тревиранус с тех пор назначен лидером теперь уже связанной с <i>Blocpartei</i> <span style="color: #0087DC;">**КНП**</span>.

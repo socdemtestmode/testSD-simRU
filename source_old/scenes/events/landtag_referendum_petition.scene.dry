@@ -20,7 +20,7 @@ on-display: {!
 
 = Референдум по прусскому ландтагу
 
-The <span style="color: #3E88B3;">**Стальной Шлем**</span> официально представил министру внутренних дел Пруссии Карлу Зеверингу план проведения референдума о роспуске рейхстага с целью усилить присутствие <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правых</span> в ландтаге. По их мнению, он больше не отражает национальные настроения. [? if not hitler_deported: Адольф Гитлер и его партия ?][? if hitler_deported: Эти ?] <span style="color: #7A3C00;">**НСДАП**</span> не занимают определённой позиции, [? if dnvp_ideology == "Radical": несмотря на призывы Гугенберга, ?]считая эти усилия пустой тратой ресурсов, поскольку правительство и так падёт в течение года.
+The <span style="color: #3E88B3;">**Стальной Шлем**</span> официально представил министру внутренних дел Пруссии Карлу Зеверингу план проведения референдума о роспуске рейхстага с целью усилить присутствие <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правых</span> в ландтаге. По их мнению, он больше не отражает национальные настроения. [? if not hitler_deported: Адольф Гитлер и его партия ?][? if hitler_deported: Эти ?] <span style="color: #7A3C00;">**НСДАП**</span> не занимают определённой позиции, [? if dnvp_ideology == "Radical": несмотря на призывы Гугенберга,  ?]считая эти усилия пустой тратой ресурсов, поскольку правительство и так падёт в течение года.
 
 Для вынесения вопроса на плебисцит петиция должна собрать подписи более 20% избирателей — это значительно более высокий порог, чем для референдума по плану Юнга. Учитывая, что <span style="color: #7A3C00;">**НСДАП**</span>[? if not in_popular_front_prussia and not in_left_front_prussia: &nbsp;и <span style="color: #700000;">**КПГ**</span> ?] обе действуют нерешительно, успех далеко не гарантирован. [? if dnvp_ideology == "Moderate": Кроме того, <span style="color: #3E88B3;">**НННП**</span>, действующая независимо от <span style="color: #3E88B3;">**Стального Шлема**</span>, не в полной мере поддерживает этот план, утверждая, что роспуск пойдёт на пользу в первую очередь <span style="color: #7A3C00;">**НСДАП**</span> за их счёт. ?]
 
@@ -52,7 +52,7 @@ go-to: PLR_launched
 @urge_paramilitary
 view-if: not political_decree_landtag and spd_toleration
 choose-if: spd_prussia and strife >= 3 and z_relation >= 35
-unavailable-subtitle: [? if not spd_prussia: Мы не контролируем правительство Пруссии. ?] [? if strife < 3: Уровень насилия со стороны военизированных формирований недостаточно высок, чтобы оправдать введение чрезвычайного указа. ?] [? if z_relation < 35: У нас недостаточно хорошие отношения с Брюнингом. ?]
+unavailable-subtitle: [? if not spd_prussia: Мы не контролируем правительство Пруссии. ?] [? if strife < 3: Уровень насилия со стороны военизированных формирований недостаточно высок, чтобы оправдать введение чрезвычайного указа.  ?] [? if z_relation < 35: У нас недостаточно хорошие отношения с Брюнингом. ?]
 title: Убедить Брюнинга принять более решительные меры против политических экстремистов и ограничить определённые права.
 on-arrival: political_decree += 1; prussian_police_loyalty += 0.04; prussian_police_strength += 5; kpd_relation -= 6; rfb_militancy *= 0.9; rfb_strength *= 0.85; sa_militancy *= 0.96; sa_strength *= 0.96; sh_militancy *= 0.98; sh_strength *= 0.98; workers_kpd -= 1; workers_nsdap -= 1; unemployed_kpd -= 3; unemployed_nsdap -= 3; new_middle_nsdap -= 2; hindenburg_angry_bruning += 5; political_decree_landtag = 1
 go-to: PLR_launched
@@ -65,4 +65,3 @@ go-to: PLR_launched
 @hope
 
 Будем надеяться, что победа здесь деморализует <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правых</span>.
-

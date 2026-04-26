@@ -1,6 +1,6 @@
 title: Разногласия в Народном фронте
-subtitle: Как и ожидалось, возникают столкновения между <span style="color: #700000;">**КПГ**</span> и[? if z_party_name != "CVP": <span style="color: #000000;">Партией Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?].
-view-if: in_popular_front = 1 and popular_front_dispute_timer = 0 and (labor_minister_party = "Z" or economic_minister_party = "Z" or interior_minister_party = "Z" or agriculture_minister_party = "Z")
+subtitle: Как и ожидалось, возникают столкновения между <span style="color: #700000;">**КПГ**</span> и[? if z_party_name != "ХНП": <span style="color: #000000;">Партией Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?].
+view-if: in_popular_front = 1 and popular_front_dispute_timer = 0 and (labor_minister_party = "Центр" or economic_minister_party = "Центр" or interior_minister_party = "Центр" or agriculture_minister_party = "Центр")
 new-page: true
 on-arrival: popular_front_dispute_timer = 5;
 #tags: event

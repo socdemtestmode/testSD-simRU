@@ -20,8 +20,8 @@ new-page: true
 @judiciary_major
 title: Провести крупную судебную реформу.
 subtitle: -1 к бюджету
-choose-if: advisor_action_timer = 0 and spd_in_government and justice_minister_party = "SPD" and budget > 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> в данный момент не входит в правительство.  ?][? if justice_minister_party != "SPD" : Министерство юстиции не под нашим контролем. ?] [? if budget <= 0: Недостаточно бюджета. ?]
+choose-if: advisor_action_timer = 0 and spd_in_government and justice_minister_party = "СДПГ" and budget > 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> в данный момент не входит в правительство.  ?][? if justice_minister_party != "СДПГ" : Министерство юстиции не под нашим контролем. ?] [? if budget <= 0: Недостаточно бюджета. ?]
 on-arrival: advisor_action_timer = 6;
 go-to: judiciary.reform
 
@@ -29,8 +29,8 @@ go-to: judiciary.reform
 @judiciary_minor
 title: Провести небольшие судебные реформы.
 subtitle: Постепенно отстранять коррумпированных и предвзятых юристов.
-choose-if: advisor_action_timer = 0 and spd_in_government and justice_minister_party = "SPD" and budget > 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> в настоящее время не у власти.  ?][? if justice_minister_party != "SPD" : У нас нет министерства юстиции. ?]
+choose-if: advisor_action_timer = 0 and spd_in_government and justice_minister_party = "СДПГ" and budget > 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> в настоящее время не у власти.  ?][? if justice_minister_party != "СДПГ" : У нас нет министерства юстиции. ?]
 on-arrival: advisor_action_timer = 6;
 go-to: judiciary.minor_reforms
 
@@ -39,8 +39,8 @@ go-to: judiciary.minor_reforms
 @constitutional_reform_
 title: Конституционная реформа
 subtitle: Добиться реформы несовершенной <span style="color: #000000;">ве</span><span style="color: #DD0000;">йм</span><span style="color: #FFCC00;">ар</span>ской конституции.
-choose-if: advisor_action_timer = 0 and spd_in_government and justice_minister_party = "SPD" and ((in_weimar_coalition) or (in_spd_majority) or (in_left_front) or (in_popular_front)) and judicial_reform >= 2 and neorevisionism
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] мес. до следующего действия советника. ?][? if not spd_in_government : СДПГ в настоящее время не входит в состав правительства. ?] [? if justice_minister_party != "SPD" : У нас нет контроля над министерством юстиции. ?] [? if not neorevisionism: У нас пока нет идеологической поддержки для конституционной реформы — сначала нам нужны идеи неоревизионистов. ?] [? if judicial_reform < 2: Судебная власть вряд ли допустит прогрессивные конституционные изменения. ?] [? if not ((in_weimar_coalition) or (in_spd_majority) or (in_left_front) or (in_popular_front)) : Наша текущая правящая коалиция не поддержит конституционные реформы. ?]
+choose-if: advisor_action_timer = 0 and spd_in_government and justice_minister_party = "СДПГ" and ((in_weimar_coalition) or (in_spd_majority) or (in_left_front) or (in_popular_front)) and judicial_reform >= 2 and neorevisionism
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] мес. до следующего действия советника. ?][? if not spd_in_government : СДПГ в настоящее время не входит в состав правительства. ?] [? if justice_minister_party != "СДПГ" : У нас нет контроля над министерством юстиции. ?] [? if not neorevisionism: У нас пока нет идеологической поддержки для конституционной реформы — сначала нам нужны идеи неоревизионистов. ?] [? if judicial_reform < 2: Судебная власть вряд ли допустит прогрессивные конституционные изменения. ?] [? if not ((in_weimar_coalition) or (in_spd_majority) or (in_left_front) or (in_popular_front)) : Наша текущая правящая коалиция не поддержит конституционные реформы. ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1; constitutional_reform_timer -= 12
 go-to: constitutional_reform
 

@@ -1,6 +1,6 @@
 title: У <span style="color: #7A3C00;">нацистов</span> кончились деньги!
 subtitle: Сокращение пожертвований от сторонников и очередная избирательная кампания истощили партийную казну досуха.
-view-if: chancellor = "Schleicher" and nazi_funds <= 0
+view-if: chancellor = "Шляйхер" and nazi_funds <= 0
 new-page: true
 tags: event
 priority: 2

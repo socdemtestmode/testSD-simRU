@@ -2,7 +2,7 @@ title: План Юнга
 new-page: true
 subtitle: Партия[? if in_right_coalition: Правая ?][? if in_center_right_coalition: Правоцентристская ?] коалиция распалась…
 tags: event
-view-if: year = 1929 and month >= 7 and in_right_coalition or in_center_right_coalition and dnvp_ideology == "Moderate"
+view-if: year = 1929 and month >= 7 and in_right_coalition or in_center_right_coalition and dnvp_ideology == "Умеренные"
 on-arrival: was_in_center_right_coalition = 1
 max-visits: 1
 
@@ -31,7 +31,7 @@ go-to: new_prussia_election if (in_center_right_coalition_prussia or in_right_co
 
 
 @vonc_no
-title: Поддержать, хоть и в урезанном виде, возглавляемое Партией [? if z_party_name != "CVP": <span style="color: #000000;">Центра</span>  ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?]правительство, проголосовав за него.
+title: Поддержать, хоть и в урезанном виде, возглавляемое Партией [? if z_party_name != "ХНП": <span style="color: #000000;">Центра</span>  ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?]правительство, проголосовав за него.
 subtitle: По сути, мы будем «терпеть» буржуазное правительство.
 view-if: neo_weimar_coalition >= 50
 on-arrival: spd_toleration = 1; in_right_coalition = 0; in_center_right_coalition = 0; left_dissent += 8; ddp_left += 0.5

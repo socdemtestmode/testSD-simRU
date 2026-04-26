@@ -2,16 +2,16 @@ title: Правые выгоняют нас из своего правитель
 subtitle: Мы слишком разозлили наших партнёров по коалиции…
 new-page: true
 on-arrival: tried_supporting_kpd = 0; z_relation -= 6; dvp_relation -= 6; ddp_relation -= 6; lvp_relation -= 6; lvp_right += 3; dvp_right += 3; ddp_right += 3
-view-if: chancellor_party != "SPD" and chancellor_party != "KPD" and spd_in_government = 1 and ((in_grand_coalition = 1 or in_popular_front = 1 or in_minority_government = 1) and coalition_dissent >= 3) or (in_weimar_coalition = 1 and coalition_dissent >= 4) and spd_r < 50
+view-if: chancellor_party != "СДПГ" and chancellor_party != "КПГ" and spd_in_government = 1 and ((in_grand_coalition = 1 or in_popular_front = 1 or in_minority_government = 1) and coalition_dissent >= 3) or (in_weimar_coalition = 1 and coalition_dissent >= 4) and spd_r < 50
 tags: event
-go-to: menu if chancellor != "Wirth"; wirth_resign_hindenburg if chancellor == "Wirth" and president_ideology != "Left"; wirth_resign_braun if chancellor == "Wirth" and president_ideology == "Left"
+go-to: menu if chancellor != "Вирт"; wirth_resign_hindenburg if chancellor == "Вирт" and president_ideology != "Левые"; wirth_resign_braun if chancellor == "Вирт" and president_ideology == "Левые"
 
 = Перестановки в кабинете министров
 
 
 @menu
 
-Канцлер [+ chancellor +] объявил о своих намерениях президенту[+ president +] провести перестановки в кабинете, уволив и заменив всех действующих министров от <span style="color: #c00000;">**СДПГ**</span> на представителей буржуазии. [? if bourgeois_coalition < 50 and (right_coalition < 50 or dnvp_ideology == "Radical" and not dnvp_westarp) and (center_right_coalition < 50 or dnvp_ideology == "Radical") : К счастью, без нас у них нет большинства, поэтому мы можем свергнуть их простым вотумом недоверия. ?]
+Канцлер [+ chancellor +] объявил о своих намерениях президенту[+ president +] провести перестановки в кабинете, уволив и заменив всех действующих министров от <span style="color: #c00000;">**СДПГ**</span> на представителей буржуазии. [? if bourgeois_coalition < 50 and (right_coalition < 50 or dnvp_ideology == "Радикалы" and not dnvp_westarp) and (center_right_coalition < 50 or dnvp_ideology == "Радикалы") : К счастью, без нас у них нет большинства, поэтому мы можем свергнуть их простым вотумом недоверия. ?]
 
 - @try_assuage: Попытаться успокоить наших партнёров.
 - @right_coalition: The <span style="color: #3E88B3;">**НННП**</span> сменяет нас в правительстве.
@@ -38,8 +38,8 @@ go-to: menu if chancellor != "Wirth"; wirth_resign_hindenburg if chancellor == "
 
 @dvp_prussia_2
 view-if: year <= 1929 and in_grand_coalition_prussia = 0 and (in_weimar_coalition_prussia or in_minority_weimar_coalition_prussia) and in_grand_coalition = 1 and dvp_was_in_prussia == 0 and not lvp_formed
-choose-if: z_leader != "Kaas"
-unavailable-subtitle: [? if z_leader = "Kaas": Каас и [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] решительно против. ?]
+choose-if: z_leader != "Каас"
+unavailable-subtitle: [? if z_leader = "Каас": Каас и [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] решительно против. ?]
 on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 1; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0; dvp_relation += 10; z_relation -= 5; ddp_relation += 3; coalition_dissent -= 1; left_dissent += 5; in_grand_coalition_prussia = 1; dvp_left += 3; new_middle_dvp += 3
 
 Допустить <span style="color: #C0A054;">**ННП**</span> в правительство Пруссии — это слишком выгодное предложение, чтобы они от него отказались, кто бы ни стоял во главе партии.
@@ -49,12 +49,12 @@ on-arrival: in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_
 
 @give_up_prussia
 subtitle: Брауну придётся уйти в отставку.
-view-if: prussia_leader = "Braun" and neo_weimar_coalition_prussia >= 50
-on-arrival: coalition_dissent = 1; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; reformist_dissent += 10; center_dissent += 10; labor_dissent += 10; left_dissent += 5; workers_spd -= 5; new_middle_spd -= 5; rural_spd -= 3; braun_resign = 1
+view-if: prussia_leader = "Браун" and neo_weimar_coalition_prussia >= 50
+on-arrival: coalition_dissent = 1; prussia_leader = "Штегервальд"; prussia_leader = "Брюнинг" if z_leader == "Штегервальд"; reformist_dissent += 10; center_dissent += 10; labor_dissent += 10; left_dissent += 5; workers_spd -= 5; new_middle_spd -= 5; rural_spd -= 3; braun_resign = 1
 
 Хорошо. Мы больше не контролируем правительство Пруссии. Голосование отменено.
 
-Должность министра-президента переходит к[? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?].
+Должность министра-президента переходит к[? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?].
 
 
 @austerity
@@ -65,8 +65,8 @@ on-arrival: coalition_dissent = 0; workers_spd -= 10; unemployed_spd -= 10; work
 
 
 @resources
-choose-if: (resources >= 3 and in_weimar_coalition or in_popular_front or in_minority_government) or ((resources >= 3 and in_grand_coalition and not (dvp_ideology == "Right" and year >= 1930) and not lvp_formed) or (resources >= 3 and (in_grand_coalition or in_weimar_coalition) and not (lvp_ideology == "Right" and year >= 1930) and lvp_formed))
-unavailable-subtitle: [? if resources < 3: У нас недостаточно ресурсов. ?] [? if in_grand_coalition and (dvp_ideology == "Right" and year >= 1930) and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span> больше не нужны наши ресурсы. ?] [? if (in_grand_coalition or in_weimar_coalition) and (lvp_ideology == "Right" and year >= 1930) and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span> больше не нужны наши ресурсы. ?]
+choose-if: (resources >= 3 and in_weimar_coalition or in_popular_front or in_minority_government) or ((resources >= 3 and in_grand_coalition and not (dvp_ideology == "Правые" and year >= 1930) and not lvp_formed) or (resources >= 3 and (in_grand_coalition or in_weimar_coalition) and not (lvp_ideology == "Правые" and year >= 1930) and lvp_formed))
+unavailable-subtitle: [? if resources < 3: У нас недостаточно ресурсов. ?] [? if in_grand_coalition and (dvp_ideology == "Правые" and year >= 1930) and not lvp_formed: The <span style="color: #C0A054;">**ННП**</span> больше не нужны наши ресурсы. ?] [? if (in_grand_coalition or in_weimar_coalition) and (lvp_ideology == "Правые" and year >= 1930) and lvp_formed: The <span style="color: #FFCC00;">**ЛНП**</span> больше не нужны наши ресурсы. ?]
 subtitle: -3 ресурса
 on-arrival: resources -= 3; coalition_dissent -= 1
 
@@ -75,14 +75,14 @@ on-arrival: resources -= 3; coalition_dissent -= 1
 
 @right_coalition
 view-if: right_coalition >= 50 and bourgeois_coalition < 50
-choose-if: (dnvp_ideology == "Moderate" or dnvp_westarp) and not (year = 1929 and month >= 7)
+choose-if: (dnvp_ideology == "Умеренные" or dnvp_westarp) and not (year = 1929 and month >= 7)
 on-arrival: center_dissent += 5; reformist_dissent += 5; spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; coalition_dissent = 0
 unavailable-subtitle: <span style="color: #3E88B3;">НННП</span> не желает входить в правительство.
 go-to: election_1928.right_coalition_2
 
 
 @center_right_coalition
-view-if: right_coalition < 50 and center_right_coalition >= 50 and bourgeois_coalition < 50 and dnvp_ideology == "Moderate"
+view-if: right_coalition < 50 and center_right_coalition >= 50 and bourgeois_coalition < 50 and dnvp_ideology == "Умеренные"
 choose-if: not (year = 1929 and month >= 7)
 on-arrival: center_dissent += 5; reformist_dissent += 5; spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; coalition_dissent = 0
 unavailable-subtitle: <span style="color: #3E88B3;">НННП</span> не желает входить в правительство.
@@ -96,17 +96,17 @@ go-to: election_1928.bourgeois_coalition
 
 
 @minority_bruning
-view-if: constructive_vonc and not (right_coalition >= 50 and bourgeois_coalition < 50 and (dnvp_ideology == "Moderate" or dnvp_westarp) and not (year = 1929 and month >= 7)) and not (right_coalition < 50 and center_right_coalition >= 50 and bourgeois_coalition < 50 and dnvp_ideology == "Moderate" and not (year = 1929 and month >= 7))
-on-arrival: spd_in_government = 0; minority_government = 1; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; coalition_dissent = 0; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; foreign_minister_party = "LVP" if lvp_formed; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; economic_minister_party = "LVP" if lvp_formed; finance_minister_party = "DVP"; finance_minister_party = "LVP" if lvp_formed; agriculture_minister_party = "Z"; lvp_right += 3; ddp_right += 3; ddp_cohesion -= 1; dvp_right += 3
+view-if: constructive_vonc and not (right_coalition >= 50 and bourgeois_coalition < 50 and (dnvp_ideology == "Умеренные" or dnvp_westarp) and not (year = 1929 and month >= 7)) and not (right_coalition < 50 and center_right_coalition >= 50 and bourgeois_coalition < 50 and dnvp_ideology == "Умеренные" and not (year = 1929 and month >= 7))
+on-arrival: spd_in_government = 0; minority_government = 1; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; coalition_dissent = 0; chancellor = "Брюнинг"; chancellor_party = "Центр"; foreign_minister_party = "ННП"; foreign_minister_party = "ЛНП" if lvp_formed; interior_minister_party = "Центр"; justice_minister_party = "I"; labor_minister_party = "Центр"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; economic_minister_party = "ЛНП" if lvp_formed; finance_minister_party = "ННП"; finance_minister_party = "ЛНП" if lvp_formed; agriculture_minister_party = "Центр"; lvp_right += 3; ddp_right += 3; ddp_cohesion -= 1; dvp_right += 3
 
 Из-за наших же конституционных реформ мы не можем отправить Брюнинга в отставку. Нам придётся готовиться к следующим выборам, чтобы дождаться своего часа.
 
 
 @breitscheid_vonc
-view-if: constructive_vonc and not (right_coalition >= 50 and bourgeois_coalition < 50 and (dnvp_ideology == "Moderate" or dnvp_westarp) and not (year = 1929 and month >= 7)) and not (right_coalition < 50 and center_right_coalition >= 50 and bourgeois_coalition < 50 and dnvp_ideology == "Moderate" and not (year = 1929 and month >= 7)) and (left_coalition >= 50 or kpd_relation >= 50)
+view-if: constructive_vonc and not (right_coalition >= 50 and bourgeois_coalition < 50 and (dnvp_ideology == "Умеренные" or dnvp_westarp) and not (year = 1929 and month >= 7)) and not (right_coalition < 50 and center_right_coalition >= 50 and bourgeois_coalition < 50 and dnvp_ideology == "Умеренные" and not (year = 1929 and month >= 7)) and (left_coalition >= 50 or kpd_relation >= 50)
 choose-if: left_coalition >= 50 and kpd_relation >= 50
 unavailable-subtitle: [? if left_coalition < 50 : У нас нет большинства в поддержку Брейтшейда. ?][? if kpd_relation < 50 : Коммунисты не согласны. ?]
-on-arrival: in_left_front = 1; in_grand_coalition = 0; in_weimar_coalition = 0; in_popular_front = 0; chancellor_party = "SPD"; chancellor = "Breitscheid"; coup_progress += 3; capital_strike_progress += 2; coup_progress += 1 if in_left_front_prussia; capital_strike_progress += 1 if in_left_front_prussia; labor_minister_party = "SPD"; interior_minister_party = "SPD"; finance_minister_party = "SPD"; economic_minister_party = "SPD"; justice_minister_party = "SPD"; foreign_minister_party = "SPD"; agriculture_minister_party = "SPD"; reichswehr_minister_party = "SPD"; kpd_relation += 10; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 10; lvp_relation -= 8; reichswehr_loyalty -= 0.05; dvp_right += 10; ddp_right += 5; ddp_cohesion -= 3; lvp_right += 8; liberal_cooperation += 5; bourgeois_cooperation += 10; liberal_cooperation += 3 if in_left_front_prussia or in_popular_front_prussia; bourgeois_cooperation += 5 if in_left_front_prussia or in_popular_front_prussia; reformist_dissent += 20; reformist_strength -= 10; left_dissent -= 30; left_strength += 20
+on-arrival: in_left_front = 1; in_grand_coalition = 0; in_weimar_coalition = 0; in_popular_front = 0; chancellor_party = "СДПГ"; chancellor = "Брайтшайд"; coup_progress += 3; capital_strike_progress += 2; coup_progress += 1 if in_left_front_prussia; capital_strike_progress += 1 if in_left_front_prussia; labor_minister_party = "СДПГ"; interior_minister_party = "СДПГ"; finance_minister_party = "СДПГ"; economic_minister_party = "СДПГ"; justice_minister_party = "СДПГ"; foreign_minister_party = "СДПГ"; agriculture_minister_party = "СДПГ"; reichswehr_minister_party = "СДПГ"; kpd_relation += 10; z_relation -= 5; ddp_relation -= 5; dvp_relation -= 10; lvp_relation -= 8; reichswehr_loyalty -= 0.05; dvp_right += 10; ddp_right += 5; ddp_cohesion -= 3; lvp_right += 8; liberal_cooperation += 5; bourgeois_cooperation += 10; liberal_cooperation += 3 if in_left_front_prussia or in_popular_front_prussia; bourgeois_cooperation += 5 if in_left_front_prussia or in_popular_front_prussia; reformist_dissent += 20; reformist_strength -= 10; left_dissent -= 30; left_strength += 20
 
 Мы успешно провели вотум недоверия, чтобы заменить Брюнинга на Брейтшейда. Теперь мы у власти в составе единого фронта с <span style="color: #700000;">**КПГ**</span>.
 
@@ -114,7 +114,7 @@ on-arrival: in_left_front = 1; in_grand_coalition = 0; in_weimar_coalition = 0; 
 
 
 @sack_bruning
-view-if: constructive_vonc and president_ideology == "Left"
+view-if: constructive_vonc and president_ideology == "Левые"
 choose-if: presidential_powers != 1
 unavailable-subtitle: У нас больше нет таких полномочий. Знаете, вы своими реформами нам тут всё испортили.
 call: set_next_election_time
@@ -124,15 +124,15 @@ on-arrival: time_to_election = 3; spd_in_government = 0; in_grand_coalition = 0;
 
 
 @bruning_chain
-view-if: not constructive_vonc and not (right_coalition >= 50 and (dnvp_ideology == "Moderate" or dnvp_westarp) and not (year = 1929 and month >= 7)) and not ((center_right_coalition >= 50 and right_coalition < 50) and dnvp_ideology == "Moderate" and not (year = 1929 and month >= 7)) and (not bruning_event_seen and year >= 1930)
-on-arrival: spd_in_government = 0; minority_government = 1; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; coalition_dissent = 0; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; foreign_minister_party = "LVP" if lvp_formed; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; economic_minister_party = "LVP" if lvp_formed; finance_minister_party = "DVP"; finance_minister_party = "LVP" if lvp_formed; agriculture_minister_party = "Z"; bruning_event_timer = 6 if not bruning_event_seen and year >= 1930
+view-if: not constructive_vonc and not (right_coalition >= 50 and (dnvp_ideology == "Умеренные" or dnvp_westarp) and not (year = 1929 and month >= 7)) and not ((center_right_coalition >= 50 and right_coalition < 50) and dnvp_ideology == "Умеренные" and not (year = 1929 and month >= 7)) and (not bruning_event_seen and year >= 1930)
+on-arrival: spd_in_government = 0; minority_government = 1; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; coalition_dissent = 0; chancellor = "Брюнинг"; chancellor_party = "Центр"; foreign_minister_party = "ННП"; foreign_minister_party = "ЛНП" if lvp_formed; interior_minister_party = "Центр"; justice_minister_party = "I"; labor_minister_party = "Центр"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; economic_minister_party = "ЛНП" if lvp_formed; finance_minister_party = "ННП"; finance_minister_party = "ЛНП" if lvp_formed; agriculture_minister_party = "Центр"; bruning_event_timer = 6 if not bruning_event_seen and year >= 1930
 
-На смену нам пришел Брюнинг из[? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?], который реорганизовал кабинет, включив в него буржуазные партии. [? if not bruning_event_seen and year >= 1930: Новые выборы ещё не назначены, но, вероятно, их скоро объявят, учитывая, что Брюнинг, скорее всего, не имеет поддержки большинства в рейхстаге. ?]
+На смену нам пришел Брюнинг из[? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?], который реорганизовал кабинет, включив в него буржуазные партии. [? if not bruning_event_seen and year >= 1930: Новые выборы ещё не назначены, но, вероятно, их скоро объявят, учитывая, что Брюнинг, скорее всего, не имеет поддержки большинства в рейхстаге. ?]
 
 
 @tolerate
 view-if: not constructive_vonc and (bruning_event_seen or year < 1930)
-choose-if: not (right_coalition >= 50 and bourgeois_coalition < 50 and (dnvp_ideology == "Moderate" or dnvp_westarp) and not (year = 1929 and month >= 7)) and not (right_coalition < 50 and center_right_coalition >= 50 and bourgeois_coalition < 50 and dnvp_ideology == "Moderate" and not (year = 1929 and month >= 7))
+choose-if: not (right_coalition >= 50 and bourgeois_coalition < 50 and (dnvp_ideology == "Умеренные" or dnvp_westarp) and not (year = 1929 and month >= 7)) and not (right_coalition < 50 and center_right_coalition >= 50 and bourgeois_coalition < 50 and dnvp_ideology == "Умеренные" and not (year = 1929 and month >= 7))
 unavailable-subtitle: Мы им не нужны.
 on-arrival: spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; coalition_dissent = 0; left_dissent += 15; labor_dissent += 5; center_dissent += 5; workers_spd -= 3; workers_kpd += 3; workers_nsdap += 3; lvp_left += 1; ddp_left += 0.5; dvp_left += 1
 go-to: election_1928.toleration_bruning
@@ -142,10 +142,10 @@ go-to: election_1928.toleration_bruning
 
 @no_tolerate
 view-if: not constructive_vonc and (bruning_event_seen or year < 1930)
-choose-if: not (right_coalition >= 50 and bourgeois_coalition < 50 and (dnvp_ideology == "Moderate" or dnvp_westarp) and not (year = 1929 and month >= 7)) and not (right_coalition < 50 and center_right_coalition >= 50 and bourgeois_coalition < 50 and dnvp_ideology == "Moderate" and not (year = 1929 and month >= 7))
+choose-if: not (right_coalition >= 50 and bourgeois_coalition < 50 and (dnvp_ideology == "Умеренные" or dnvp_westarp) and not (year = 1929 and month >= 7)) and not (right_coalition < 50 and center_right_coalition >= 50 and bourgeois_coalition < 50 and dnvp_ideology == "Умеренные" and not (year = 1929 and month >= 7))
 unavailable-subtitle: Мы им не нужны.
 call: set_next_election_time
-on-arrival: time_to_election = 3; spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; in_popular_front = 0; spd_toleration = 0; spd_toleration_right = 0; foreign_minister_party = "DVP"; foreign_minister_party = "LVP" if lvp_formed; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; economic_minister_party = "LVP" if lvp_formed; finance_minister_party = "DVP"; finance_minister_party = "LVP" if lvp_formed; agriculture_minister_party = "Z"; labor_minister = "Stegerwald"; interior_minister = "Wirth"; finance_minister = "Moldenhauer"; economic_minister = "Curtius"; justice_minister = "Koch-Weser"; foreign_minister = "Stresemann" if not stresemann_dead; foreign_minister = "Curtius" if stresemann_dead; agriculture_minister = "Dietrich"; reichswehr_minister = "Groener"; coalition_dissent = 0; pro_republic -= 4; old_middle_spd -= 3; new_middle_spd -= 2; workers_spd -= 3 if pro_republic < 50; workers_spd -= 4 if pro_republic < 40; old_middle_nsdap += 4 if pro_republic < 50; new_middle_nsdap += 3 if pro_republic < 50; welfare -= 2
+on-arrival: time_to_election = 3; spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; in_popular_front = 0; spd_toleration = 0; spd_toleration_right = 0; foreign_minister_party = "ННП"; foreign_minister_party = "ЛНП" if lvp_formed; interior_minister_party = "Центр"; justice_minister_party = "I"; labor_minister_party = "Центр"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; economic_minister_party = "ЛНП" if lvp_formed; finance_minister_party = "ННП"; finance_minister_party = "ЛНП" if lvp_formed; agriculture_minister_party = "Центр"; labor_minister = "Штегервальд"; interior_minister = "Вирт"; finance_minister = "Мольденхауэр"; economic_minister = "Курциус"; justice_minister = "Кох-Везер"; foreign_minister = "Stresemann" if not stresemann_dead; foreign_minister = "Курциус" if stresemann_dead; agriculture_minister = "Дитрих"; reichswehr_minister = "Грёнер"; coalition_dissent = 0; pro_republic -= 4; old_middle_spd -= 3; new_middle_spd -= 2; workers_spd -= 3 if pro_republic < 50; workers_spd -= 4 if pro_republic < 40; old_middle_nsdap += 4 if pro_republic < 50; new_middle_nsdap += 3 if pro_republic < 50; welfare -= 2
 
 Голосование прошло успешно: правительство ушло в отставку. Канцлер Брюнинг остаётся главой временного правительства, состоящего исключительно из буржуазных партий. Он немедленно приступает к существенному сокращению расходов на социальное обеспечение.
 
@@ -154,7 +154,7 @@ on-arrival: time_to_election = 3; spd_in_government = 0; grand_coalition_collaps
 
 @wirth_resign_braun
 call: set_next_election_time
-on-arrival: time_to_election = 3; chancellor = "Wels"; chancellor_party = "SPD"; spd_caretaker = 1; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; in_popular_front = 0; spd_toleration = 0; spd_toleration_right = 0; foreign_minister_party = "I"; interior_minister_party = "I"; justice_minister_party = "I"; labor_minister_party = "I"; reichswehr_minister_party = "I"; economic_minister_party = "I"; finance_minister_party = "I"; agriculture_minister_party = "I"; coalition_dissent = 0; pro_republic -= 5
+on-arrival: time_to_election = 3; chancellor = "Вельс"; chancellor_party = "СДПГ"; spd_caretaker = 1; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; in_popular_front = 0; spd_toleration = 0; spd_toleration_right = 0; foreign_minister_party = "I"; interior_minister_party = "I"; justice_minister_party = "I"; labor_minister_party = "I"; reichswehr_minister_party = "I"; economic_minister_party = "I"; finance_minister_party = "I"; agriculture_minister_party = "I"; coalition_dissent = 0; pro_republic -= 5
 
 Не в силах сохранить единство коалиции, Вирт объявил о намерении уйти в отставку с поста канцлера.
 
@@ -162,10 +162,10 @@ on-arrival: time_to_election = 3; chancellor = "Wels"; chancellor_party = "SPD";
 
 
 @wirth_resign_hindenburg
-on-arrival: chancellor = "Brüning"; chancellor_party = "Z"
+on-arrival: chancellor = "Брюнинг"; chancellor_party = "Центр"
 
 Не в силах выносить напряжение, связанное с сохранением коалиции, Вирт объявил о намерении уйти в отставку с поста канцлера.
 
-[+ president +]назначает преемником Брюнинга от[? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП,**</span> ?]который немедленно реформирует правительство.
+[+ president +]назначает преемником Брюнинга от[? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП,**</span> ?]который немедленно реформирует правительство.
 
 - @menu: Брюнинг смещает наших министров.

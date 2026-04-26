@@ -1,6 +1,6 @@
 title: <span style="color: #3E88B3;">**НННП**</span>: умеренные откалываются!
 subtitle: Вестарпу надоели выходки Гугенберга.
-view-if: year = 1930 and month = 7 and dnvp_leader = "Hugenberg" and not dnvp_split_2 and not hugenberg_reinstated and not kvp_formed and bruning_event_timer == 0
+view-if: year = 1930 and month = 7 and dnvp_leader = "Гугенберг" and not dnvp_split_2 and not hugenberg_reinstated and not kvp_formed and bruning_event_timer == 0
 priority: -1
 max-visits: 1
 tags: event

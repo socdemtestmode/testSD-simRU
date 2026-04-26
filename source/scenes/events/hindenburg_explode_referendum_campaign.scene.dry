@@ -53,7 +53,7 @@ max-visits: 1
 
 @prussia
 title: Мы воспользуемся правительством Пруссии для тайного финансирования кампании.
-choose-if: spd_prussia and (prussia_leader == "Rosenfeld" or prussia_leader == "Braun")
+choose-if: spd_prussia and (prussia_leader == "Розенфельд" or prussia_leader == "Браун")
 unavailable-subtitle: Мы не полностью контролируем Пруссию.
 on-arrival: workers_spd += 4; new_middle_spd += 2; old_middle_spd += 2; rural_spd += 2; new_middle_ddp += 2 if impeachment_ddp; old_middle_ddp += 2 if impeachment_ddp; new_middle_dvp += 2 if impeachment_dvp; old_middle_dvp += 2 if impeachment_dvp; new_middle_lvp += 4 if impeachment_lvp; old_middle_lvp += 4 if impeachment_lvp; workers_z += 2 if impeachment_z; new_middle_z += 2 if impeachment_z; old_middle_z += 2 if impeachment_z; catholics_z += 2 if impeachment_z; pro_republic += 5; ddp_relation += 5; lvp_relation += 5; dvp_relation += 5; z_relation += 5; dvp_left += 1; ddp_left += 1; ddp_cohesion += 1; prussia_campaign_hindenburg = 1; rb_militancy += 0.03; rb_strength += 100
 face-image: img/weimar_coalition_3.jpg

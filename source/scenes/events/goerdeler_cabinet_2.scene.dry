@@ -1,6 +1,6 @@
 title: Крах первого кабинета Гёрделера
 subtitle: Миссия провалена.
-view-if: chancellor == "Goerdeler" and goerdeler_pre_time >= 3 and goerdeler_right_coalition < 50
+view-if: chancellor == "Гёрделер" and goerdeler_pre_time >= 3 and goerdeler_right_coalition < 50
 new-page: true
 tags: event
 max-visits: 1
@@ -19,7 +19,7 @@ on-display: {!
 
 = Крах первого кабинета Гёрделера
 
-Гугенберг и [+ nsdap_leader +] — непримиримы. Из-за их непреодолимых разногласий с [? if z_party_name != "CVP": <span style="color: #000000;">Партией Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] и президентом Гинденбургом положение Гёрделера становится шатким. В ходе вотума недоверия [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] отказала ему в поддержке: теперь его правительство поддерживают лишь малые партии между [? if z_party_name != "CVP": <span style="color: #000000;">Центром</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] и [? if dnvp_ideology == "Radical": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Moderate": <span style="color: #003755;">**НФГ**</span> ?] backing his government.
+Гугенберг и [+ nsdap_leader +] — непримиримы. Из-за их непреодолимых разногласий с [? if z_party_name != "ХНП": <span style="color: #000000;">Партией Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] и президентом Гинденбургом положение Гёрделера становится шатким. В ходе вотума недоверия [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] отказала ему в поддержке: теперь его правительство поддерживают лишь малые партии между [? if z_party_name != "ХНП": <span style="color: #000000;">Центром</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] и [? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Умеренные": <span style="color: #003755;">**НФГ**</span> ?] backing his government.
 
 - @goerdeler
 
@@ -36,7 +36,7 @@ if (Q.next_election_month > 12) {
     Q.next_election_year = Q.year;
 }
 
-if (Q.dnvp_ideology == "Moderate") {
+if (Q.dnvp_ideology == "Умеренные") {
     Q.new_middle_dnf -= 2;
     Q.old_middle_dnf -= 2;
     Q.rural_dnf -= 2;

@@ -1,6 +1,6 @@
 title: Гитлер совершает самоубийство!
 subtitle: The <span style="color: #7A3C00;">**НСДАП**</span> распадается!
-view-if: chancellor = "Schleicher" and schleicher_time == 9 and nsdap_leader == "Hitler"
+view-if: chancellor = "Шляйхер" and schleicher_time == 9 and nsdap_leader == "Гитлер"
 new-page: true
 tags: event
 max-visits: 1
@@ -27,7 +27,7 @@ on-display: {!
 
 
 @nazi_2
-on-arrival: nsdap_leader = "Goebbels"; nsdap_chancellor = "Göring"; hitler_dead = 1; hindenburg_hitler_r -= 10; papen_strength -= 2; schleicher_strength += 1; nazi_funds -= 3
+on-arrival: nsdap_leader = "Геббельс"; nsdap_chancellor = "Геринг"; hitler_dead = 1; hindenburg_hitler_r -= 10; papen_strength -= 2; schleicher_strength += 1; nazi_funds -= 3
 achievement: hitler_tot
 
 Йозеф Геббельс сменяет Гитлера на посту лидера партии при сильном влиянии Германа Геринга. Движение серьёзно ослаблено и вряд ли когда-нибудь вернёт былое влияние.

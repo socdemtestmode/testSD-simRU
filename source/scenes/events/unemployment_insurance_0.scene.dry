@@ -20,11 +20,11 @@ face-image: img/Kollwitz_Arbeitslosigkeit.jpg
 
 
 @destroy
-on-arrival: spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_toleration = 0; spd_toleration_right = 0; left_strength += 8; pro_republic -= 5; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; reformist_dissent += 5; dvp_right += 3; grand_coalition_collapsed = 1; economic_growth -= 0.3
+on-arrival: spd_in_government = 0; grand_coalition_collapsed = 1 if in_grand_coalition; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Брюнинг"; chancellor_party = "Центр"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_toleration = 0; spd_toleration_right = 0; left_strength += 8; pro_republic -= 5; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; reformist_dissent += 5; dvp_right += 3; grand_coalition_collapsed = 1; economic_growth -= 0.3
 
 Что ж. Если буржуазия хочет уничтожить правительство — пусть. <span style="color: #c00000;">Социалисты</span> не будут соучастниками в уничтожении рабочего класса.
 
-[? if chancellor_party = "SPD" : Генрих Брюнинг из [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] назначен канцлером. ?] Теперь Брюнинг возглавляет чисто буржуазный кабинет. Опираясь на чрезвычайные полномочия статьи 48, Брюнинг и президент Гинденбург провели сокращение расходов вопреки возражениям рейхстага. <span style="color: #3E88B3;">**НННП**</span> не войдёт в правительство, ратифицирующее план Юнга, и поэтому большинство сформировать невозможно.
+[? if chancellor_party = "СДПГ" : Генрих Брюнинг из [? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] назначен канцлером. ?] Теперь Брюнинг возглавляет чисто буржуазный кабинет. Опираясь на чрезвычайные полномочия статьи 48, Брюнинг и президент Гинденбург провели сокращение расходов вопреки возражениям рейхстага. <span style="color: #3E88B3;">**НННП**</span> не войдёт в правительство, ратифицирующее план Юнга, и поэтому большинство сформировать невозможно.
 
 Новые выборы назначены на [+ next_election_month : month +] [+ next_election_year +].
 
@@ -43,7 +43,7 @@ on-arrival: workers_spd -= 0.1*workers_spd; unemployed_spd -= 0.2*unemployed_spd
 unavailable-subtitle: [? if dvp_relation < 25: У нас недостаточно хорошие отношения с правыми партиями. ?] [? if dvp_right - dvp_left > 8: В <span style="color: #C0A054;">ННП</span> изменили свои взгляды. ?]
 choose-if: dvp_relation >= 25 and (dvp_right - dvp_left < 8)
 
-[? if not stresemann_dead: Штреземану ?][? if stresemann_dead: Сторонникам Штреземана в партии ?] удалось убедить[? if dvp_ideology == "Right" or dvp_ideology == "Moderate":  минимальное большинство в его партии ?][? if dvp_ideology == "Left":  большинство в его партии ?] проголосовать за компромисс, который предусматривает сокращение программы без повышения взносов. Хотя это и не идеальное решение, какой у нас есть выбор?
+[? if not stresemann_dead: Штреземану ?][? if stresemann_dead: Сторонникам Штреземана в партии ?] удалось убедить[? if dvp_ideology == "Правые" or dvp_ideology == "Умеренные":  минимальное большинство в его партии ?][? if dvp_ideology == "Левые":  большинство в его партии ?] проголосовать за компромисс, который предусматривает сокращение программы без повышения взносов. Хотя это и не идеальное решение, какой у нас есть выбор?
 
 - @accept_compromise_worse: Принять компромисс.
 - @accept_compromise_good: Возможно ли повысить размер взносов?
@@ -57,8 +57,8 @@ on-arrival: workers_spd -= 2; unemployed_spd -= 2; unemployed_kpd += 2; unemploy
 
 
 @accept_compromise_good
-choose-if: dvp_ideology == "Left" and dvp_relation >= 40
-unavailable-subtitle: [? if dvp_ideology != "Left": <span style="color: #C0A054;">ННП</span> зашла слишком далеко вправо.  ?] [? if dvp_relation < 40: У нас недостаточно хорошие отношения с правыми партиями. ?]
+choose-if: dvp_ideology == "Левые" and dvp_relation >= 40
+unavailable-subtitle: [? if dvp_ideology != "Левые": <span style="color: #C0A054;">ННП</span> зашла слишком далеко вправо.  ?] [? if dvp_relation < 40: У нас недостаточно хорошие отношения с правыми партиями. ?]
 on-arrival: workers_spd -= 1; unemployed_spd -= 1; unemployed_kpd += 1; unemployed_nsdap += 1; workers_nsdap += 1; left_dissent += 5; labor_dissent += 3; kpd_relation -= 4; reformist_strength += 10; reformist_dissent -= 5; coalition_dissent -= 1; old_middle_dvp -= 3; old_middle_nsdap += 3; unemployment_insurance_threshold = unemployed; dvp_left += 3; ddp_left += 1; ddp_cohesion += 1; unemployment_goal_spd += 1; economic_growth -= 0.1
 
 Вместо того чтобы урезать пособия, мы настояли на повышении взносов и для работодателей, и для работников. <span style="color: #C0A054;">**ННП**</span> соглашается под влиянием [? if not stresemann_dead: Штреземана и  ?]своего левого крыла.

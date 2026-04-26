@@ -1,6 +1,6 @@
 title: Папен снимает запрет с <span style="color: #7A3C00;">**СА**</span>!
 subtitle: Политическое насилие возвращается…
-view-if: chancellor = "Papen" and papen_time == 2 and sa_nationwide_ban
+view-if: chancellor = "Папен" and papen_time == 2 and sa_nationwide_ban
 new-page: true
 tags: event
 max-visits: 1

@@ -1,6 +1,6 @@
 title: Чрезвычайное постановление об оживлении экономики
 subtitle: Налоговые льготы для богатых и предпринимателей.
-view-if: chancellor = "Papen" and papen_time == 13
+view-if: chancellor = "Папен" and papen_time == 13
 new-page: true
 tags: event
 max-visits: 1

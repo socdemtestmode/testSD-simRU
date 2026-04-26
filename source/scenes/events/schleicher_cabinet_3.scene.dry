@@ -1,6 +1,6 @@
 title: Запасной план Шлейхера
 subtitle: Поскольку [+ nsdap_leader +] непреклонен, Шлейхер стремится неконституционно «отложить» выборы.
-view-if: chancellor = "Schleicher" and schleicher_time == 6
+view-if: chancellor = "Шляйхер" and schleicher_time == 6
 on-arrival: schleicher_spd_support -= 2; schleicher_spd_r -= 1; schleicher_approval -= 2
 new-page: true
 tags: event

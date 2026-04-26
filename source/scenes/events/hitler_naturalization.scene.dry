@@ -1,7 +1,7 @@
 title: Натурализация Адольфа Гитлера
 new-page: true
 subtitle: Гитлер всё ещё не получил немецкого гражданства…
-view-if: year = 1932 and month == 2 and not hitler_deported and chancellor != "Hitler"
+view-if: year = 1932 and month == 2 and not hitler_deported and chancellor != "Гитлер"
 on-arrival: hitler_citizenship_seen = 1; workers_nsdap *= 0.9; new_middle_nsdap *= 0.95; old_middle_nsdap *= 0.95; rural_nsdap *= 0.95; unemployed_nsdap *= 0.9; catholics_nsdap *= 0.9
 max-visits: 1
 priority: 3
@@ -33,7 +33,7 @@ tags: event
 
 
 @brunswick
-view-if: brunswick_hitler and dvp_ideology == "Right" and dvp_leader == "Dingeldey" and not lvp_formed and not cvp_formed
+view-if: brunswick_hitler and dvp_ideology == "Правые" and dvp_leader == "Дингельдей" and not lvp_formed and not cvp_formed
 on-arrival: hitler_citizen = 1; workers_nsdap += 3; new_middle_nsdap += 4; old_middle_nsdap += 4; rural_nsdap += 4; unemployed_nsdap += 3; catholics_nsdap += 2; pro_republic -= 3
 
 Чтобы <span style="color: #7A3C00;">**НСДАП**</span> смогла быстро и незаметно предоставить Гитлеру гражданство, ей пришлось сотрудничать с [? if dvp_exist: <span style="color: #C0A054;">**ННП**</span> ?][? if not dvp_exist: <span style="color: #3E88B3;">**НННП**</span> ?], которые, хотя и поддерживали эти усилия, настаивали на сохранении видимости законности. Во время встречи представителей двух партий они договорились предоставить Гитлеру должность в представительстве Брауншвейга в Рейхсрате.
@@ -42,7 +42,7 @@ on-arrival: hitler_citizen = 1; workers_nsdap += 3; new_middle_nsdap += 4; old_m
 
 
 @brunswick_fail
-view-if: brunswick_hitler and (((dvp_ideology != "Right" or dvp_leader != "Dingeldey") or lvp_formed) or cvp_formed)
+view-if: brunswick_hitler and (((dvp_ideology != "Правые" or dvp_leader != "Дингельдей") or lvp_formed) or cvp_formed)
 on-arrival: hitler_citizen = 0; pro_republic += 3
 
 Для того чтобы <span style="color: #7A3C00;">**НСДАП**</span> быстро и незаметно предоставила Гитлеру гражданство, ей пришлось сотрудничать с [? if not lvp_formed and dvp_exist: <span style="color: #C0A054;">**ННП**</span> ?][? if not lvp_formed and not dvp_exist: [? if not cvp_formed: <span style="color: #3E88B3;">**НННП**</span> ?][? if cvp_formed: <span style="color: #000000;">**[+ z_party_name +]**</span> ?] ?][? if lvp_formed: <span style="color: #FFCC00;">**ЛНП**</span> ?], чьё праворадикальное крыло поддержало этот шаг, но партия в целом выступила против. На встрече двух партий соглашение так и не достигнуто.

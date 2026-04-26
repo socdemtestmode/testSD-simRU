@@ -1,0 +1,109 @@
+title: <i>Reichskonkordat</i> подписан!
+subtitle: Права католиков по всей Германии теперь официально гарантированы.
+view-if: chancellor == "Schleicher" and z_in_gov and z_in_gov_time >= 6 and z_leader == "Kaas" and reichskonkordat = 0 
+max-visits: 1
+new-page: true
+tags: event
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/reichskonkordat.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
+
+= Подписание Reichskonkordat
+
+После нескольких недель напряжённых переговоров в Риме под руководством Людвига Кааса <i>Рейхсконкордат</i> официально подписан между Германией и Римско-католической церковью. Договор определяет официальные отношения между Церковью и германским государством, гарантируя католикам свободу вероисповедания и право Церкви назначать собственное духовенство. Католики в Германии довольны, как и их представители в <span style="color: #000000;">Партии Центра</span>.
+
+- @reichskonkordat
+
+
+@reichskonkordat
+title: Что станет с <span style="color: #000000;">Партией Центра</span>?
+on-arrival: {!
+Q.schleicher_approval += 1;
+Q.reichskonkordat = 1;
+Q.z_relation -= 10;
+Q.catholics_z += 6;
+Q.catholics_dnef += 6;
+Q.catholics_dnef_bonus += 4;
+
+Q.stegerwald_points = 0;
+Q.bracht_points = 0;
+
+if (Q.prussian_concordat) Q.stegerwald_points += 1;
+if (Q.pro_republic < 10) {
+  Q.bracht_points += 6;
+} else if (Q.pro_republic < 20) {
+  Q.bracht_points += 4;
+} else if (Q.pro_republic < 30) {
+  Q.bracht_points += 3;
+} else if (Q.pro_republic < 40) {
+  Q.bracht_points += 1;
+} else if (Q.pro_republic < 50) {
+  Q.stegerwald_points += 1;
+} else {
+  Q.stegerwald_points += 3;
+}
+if (Q.z_relation < 10) {
+  Q.bracht_points += 4;
+} else if (Q.z_relation < 20) {
+  Q.bracht_points += 3;
+} else if (Q.z_relation < 30) {
+  Q.bracht_points += 2;
+} else if (Q.z_relation < 40) {
+  Q.bracht_points += 1;
+} else if (Q.z_relation < 50) {
+  Q.stegerwald_points += 1;
+} else if (Q.z_relation < 60) {
+  Q.stegerwald_points += 3;
+} else if (Q.z_relation < 70) {
+  Q.stegerwald_points += 5;
+} else {
+  Q.stegerwald_points += 7;
+}
+
+Q.stegerwald_points += Q.workers_z_normalized / 2;
+Q.bracht_points += Q.catholics_z_normalized / 10;
+!}
+face-image: img/portraits/KaasLudwig.jpg
+
+= Конференция Партии Центра
+
+Достигнув цели всей своей жизни, Каас не видит особых причин оставаться лидером <span style="color: #000000;">Партии Центра</span> — эту должность он долгое время называл бременем и выражал своё недовольство ею. В результате в партии должны состояться выборы нового руководства, при этом Шлейхер может повлиять на их исход благодаря своим связям с Каасом и <span style="color: #000000;">христианскими</span> профсоюзами.
+
+Кандидат, поддерживаемый <span style="color: #000000;">христианскими</span> профсоюзами и сторонниками более межконфессиональной <span style="color: #000000;">Партии Центра</span>, сплачивает ряды вокруг Штегервальда.
+
+Франц Брахт, ставленник Шлейхера, [? if not dsu_in_gov: бывший ?]министр внутренних дел[? if prussia_coup_lose: &nbsp;Пруссии и Рейха ?], вновь вступил в партию — он предпочитаемый кандидатом Шлейхера. Брахт искренне верит в шлейхеровское видение новой Германии — свободной от пут парламентаризма — и примыкает к правому крылу <span style="color: #000000;">Центра</span>, хотя и не столь правых взглядов, как Папен. Однако из-за недостатка влияния в партии и ограниченного опыта, поскольку он прослужил лишь восемь лет на посту мэра Эссена, именно поддержка Шлейхера остаётся ключом к его избранию на пост лидера.
+
+- @bracht
+- @stegerwald
+
+
+@bracht
+title: Франц Брахт назначен новым председателем <span style="color: #000000;">Партии Центра</span>.
+unavailable-subtitle: <span style="color: #000000;">Партия Центра</span> по-прежнему стоит на позициях <span style="color: #000000;">респуб</span><span style="color: #DD0000;">лика</span><span style="color: #FFCC00;">низма</span>.
+choose-if: bracht_points > stegerwald_points
+on-arrival: z_leader = "Bracht"; workers_z -= 4; unemployed_z -= 2; new_middle_z -= 2; old_middle_z += 4; rural_z += 4; z_relation -= 15
+
+Несомненно, благодаря вмешательству Шлейхера, председателем <span style="color: #000000;">Партии Центра</span> избран Франц Брахт. При поддержке Кааса и благодаря способности Шлейхера «убеждать» ключевых членов партии изменить свой голос, Брахт с небольшим перевесом победил Штегервальда и его более <span style="color: #000000;">респу</span><span style="color: #DD0000;">бли</span><span style="color: #FFCC00;">кан</span>скую базу поддержки.
+
+Внутренняя реакция  на удивление сдержанная. Возможно, постепенный сдвиг <span style="color: #000000;">Партии Центра</span> вправо сделал такого <span style="color: #808080;">реакционера</span>, как Брахт, наконец приемлемым, — или, возможно, здесь незаметно действуют другие силы.
+
+
+@stegerwald
+title: Штегервальд побеждает на выборах лидера!
+unavailable-subtitle: Штегервальд недоступен.
+choose-if: stegerwald_points >= bracht_points
+on-arrival: z_leader = "Stegerwald"; catholics_z -= 8; catholics_spd += 2; catholics_dnvp += 2; catholics -= 5; workers_z += 4; new_middle_z += 2; old_middle_z += 2; rural_z += 2; z_relation -= 5
+
+Штегервальд победил в голосовании за пост лидера! Объединив <span style="color: #000000;">респу</span><span style="color: #DD0000;">бли</span><span style="color: #FFCC00;">канцев</span> вокруг своей кандидатуры, он успешно помешал Брахту захватить контроль над <span style="color: #000000;">Партией Центра</span>. Поддержка столь правого консерватора оказалась неприемлемой для <span style="color: #000000;">христианских</span> профсоюзов, которые продолжают сопротивляться растущему влиянию Шлейхера.
+
+Хотя Штегервальд и выступает за немедленное открытие <span style="color: #000000;">Партии Центра</span> для протестантов, у партии просто не хватает средств для создания региональных отделений по всей протестантской Германии, поскольку недавние выборы уже истощили её ресурсы.
+

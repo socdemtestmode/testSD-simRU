@@ -62,4 +62,3 @@ on-arrival: dvp_right += 5; new_middle_ddp -= 4; old_middle_ddp -= 4; pro_republ
 face-image: img/portraits/hitler.jpg
 
 Как и всегда, левое крыло <span style="color: #D3C24D;">**[+ ddp_name +]**</span> отвергло планы по созданию единой <span style="color: #FFCC00;">Либеральной народной партии</span>. Похоже, внутренние распри, терзающие <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, никуда не делись. Такой исход сильно деморализовал средний класс Германии и привёл к роспуску Либеральной ассоциации.
-

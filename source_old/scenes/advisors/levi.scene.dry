@@ -32,4 +32,3 @@ choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_strength += 5; kpd_relation += 6*(1-dissent); reformist_dissent += 3; communist_coalition += 1 if kpd_cooperation_seen <= 1; kpd_cooperation_seen += 1
 
 Леви пытается связаться со своими бывшими коллегами, чтобы отговорить <span style="color: #700000;">**КПГ**</span> от их нынешнего крайне <span style="color: #8B0000;">сталинистского</span> курса. Удаётся добиться некоторых уступок.
-

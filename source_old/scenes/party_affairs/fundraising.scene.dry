@@ -34,7 +34,7 @@ on-arrival: dues -= 1; resources -= 1; left_dissent -= 8; center_dissent -= 8; r
 
 
 @increase
-subtitle: Мы будем получать [+ dues + 1 +] ресурсов в год. +1 ресурс. [? if unemployed >= 15 : Учитывая нынешнее экономическое положение, это может быть болезненно. ?][? if dues >= 4 : Взносы и так довольно высоки. Если мы их повысим, численность наших рядов может сократиться. ?]
+subtitle: Мы будем получать [+ dues + 1 +] ресурсов в год. +1 ресурс. [? if unemployed >= 15 :  Учитывая нынешнее экономическое положение, это может быть болезненно.  ?][? if dues >= 4 : Взносы и так довольно высоки. Если мы их повысим, численность наших рядов может сократиться. ?]
 on-arrival: dues += 1; resources += 1; workers_spd -= 3; unemployed_spd -= 3; workers_spd -= 10 if unemployed >= 15; unemployed_spd -= 10 if unemployed >= 15; workers_spd -= 3*dues if dues >= 5; unemployed_spd -= 3*dues if dues >= 5; month_actions += 1
 view-if: dues <= 4
 

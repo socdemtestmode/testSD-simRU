@@ -1,6 +1,6 @@
 title: Разногласия в рядах <span style="color: #7A3C00;">**СА**</span>
 subtitle: Спор со Штегманном снова обостряется…
-view-if: chancellor = "Schleicher" and schleicher_time == 6 and nazi_funds <= 3 and not lippe_big_win
+view-if: chancellor = "Шляйхер" and schleicher_time == 6 and nazi_funds <= 3 and not lippe_big_win
 new-page: true
 tags: event
 priority: 4

@@ -2,7 +2,7 @@ title: Воздержание от вотума недоверия
 new-page: true
 is-card: true
 card-image: img/portraits/BrüningHeinrich.jpg
-view-if: dealing_with_toleration_timer = 0 and spd_toleration and chancellor_party == "Z" and cvp_formed
+view-if: dealing_with_toleration_timer = 0 and spd_toleration and chancellor_party == "Центр" and cvp_formed
 on-arrival: dealing_with_toleration_timer += 6; month_actions += 1
 tags: govt_affairs
 #subtitle: Despite not being in government, we can still provide support.
@@ -22,15 +22,15 @@ tags: govt_affairs
 view-if: not constructive_vonc
 title: Покончить с воздержанием от вотума недоверия!
 
-Мы в этом уверены? Вотум недоверия приведёт к новым выборам и, возможно, к увеличению доли голосов за экстремистские партии. [? if in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia: The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] также угрожает внести нам вотум недоверия в Пруссии, вынуждая нас придерживаться прежнего курса. ?]
+Мы в этом уверены? Вотум недоверия приведёт к новым выборам и, возможно, к увеличению доли голосов за экстремистские партии. [? if in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia: The [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] также угрожает внести нам вотум недоверия в Пруссии, вынуждая нас придерживаться прежнего курса. ?]
 
 - @vonc: Да, покончить с этим соглашением!
 - @stay_course: Нет, мы должны придерживаться прежнего курса.
 
 
 @vonc
-on-arrival: spd_in_government = 0; spd_toleration = 0; spd_toleration_right = 0; in_grand_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; left_strength += 8; pro_republic -= 5; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; reformist_dissent += 5; left_dissent -= 5; dvp_relation -= 4; z_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; ddp_right += 1; dvp_right += 2
-go-to: new_prussia_election if in_social_catholic_coalition_prussia or in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia and ((center_right_coalition_prussia < 50 and dnvp_ideology == "Moderate") or dnvp_ideology == "Radical"); center_right_coalition_prussia if in_social_catholic_coalition_prussia or in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia and (((center_right_coalition_prussia >= 50 or right_coalition_prussia >= 50) and dnvp_ideology == "Moderate") or bourgeois_coalition_prussia >= 50)
+on-arrival: spd_in_government = 0; spd_toleration = 0; spd_toleration_right = 0; in_grand_coalition = 0; chancellor = "Брюнинг"; chancellor_party = "Центр"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; left_strength += 8; pro_republic -= 5; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; reformist_dissent += 5; left_dissent -= 5; dvp_relation -= 4; z_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; ddp_right += 1; dvp_right += 2
+go-to: new_prussia_election if in_social_catholic_coalition_prussia or in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia and ((center_right_coalition_prussia < 50 and dnvp_ideology == "Умеренные") or dnvp_ideology == "Радикалы"); center_right_coalition_prussia if in_social_catholic_coalition_prussia or in_weimar_coalition_prussia or in_grand_coalition_prussia or in_popular_front_prussia and (((center_right_coalition_prussia >= 50 or right_coalition_prussia >= 50) and dnvp_ideology == "Умеренные") or bourgeois_coalition_prussia >= 50)
 
 Мы инициировали вотум недоверия и добились отставки правительства. [+ chancellor +] временно исполняет обязанности канцлера.
 
@@ -41,7 +41,7 @@ go-to: new_prussia_election if in_social_catholic_coalition_prussia or in_weimar
 on-arrival: z_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; kpd_relation += 5; dvp_right += 3; ddp_right += 2; lvp_right += 2; pro_republic -= 3; new_middle_spd -= 2; rural_spd -= 2; old_middle_spd -= 2; catholics_spd -= 2; new_middle_nsdap += 2; old_middle_nsdap += 2; rural_nsdap += 2; catholics_nsdap += 2; in_right_coalition_prussia = 0; in_social_catholic_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_spd_majority_prussia = 0; in_center_right_coalition_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; spd_prussia = 0; right_prussia = 0; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0; prussia_coalition_trigger = 0
 call: set_next_election_time_prussia
 
-The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] инициировала ответное голосование в Пруссии, что привело к роспуску ландтага и назначению новых выборов.
+The [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] инициировала ответное голосование в Пруссии, что привело к роспуску ландтага и назначению новых выборов.
 
 Новые выборы в Пруссии назначены на [+ next_election_month_prussia : month +] [+ next_election_year_prussia +].
 
@@ -49,11 +49,11 @@ The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Це
 
 
 @center_right_coalition_prussia
-on-arrival: in_center_right_coalition_prussia = 1; in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_spd_majority_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; spd_prussia = 0; right_prussia = 0; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0; prussia_coalition_trigger = 0; prussia_leader = "Stegerwald"; prussia_leader = "Brüning" if z_leader == "Stegerwald"; new_middle_spd -= 3; z_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; dvp_right += 3; ddp_right += 2; pro_republic -= 3; prussian_police_loyalty -= 0.06; prussian_police_strength -= 8; 
+on-arrival: in_center_right_coalition_prussia = 1; in_right_coalition_prussia = 0; in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_left_front_prussia = 0; in_spd_majority_prussia = 0; in_far_right_coalition_prussia = 0; in_minority_weimar_coalition_prussia = 0; spd_prussia = 0; right_prussia = 0; ddp_in_popular_front_prussia = 0; kpd_goals_seen_prussia = 0; spd_toleration_prussia = 0; prussia_coalition_trigger = 0; prussia_leader = "Штегервальд"; prussia_leader = "Брюнинг" if z_leader == "Штегервальд"; new_middle_spd -= 3; z_relation -= 4; ddp_relation -= 4; lvp_relation -= 4; dvp_right += 3; ddp_right += 2; pro_republic -= 3; prussian_police_loyalty -= 0.06; prussian_police_strength -= 8; 
 
-The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] объявила ответный вотум недоверия в Пруссии, сместив наше правительство и заменив его правоцентристской коалицией из всех партий правее нас, за исключением <span style="color: #003755;">**НФГ**</span> и <span style="color: #7A3C00;">**НСДАП**</span>. Хотя это и неудача, но это не худший из возможных исходов, поскольку новые выборы могли бы привести к значительному усилению экстремистских партий.
+The [? if z_party_name != "ХНП": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] объявила ответный вотум недоверия в Пруссии, сместив наше правительство и заменив его правоцентристской коалицией из всех партий правее нас, за исключением <span style="color: #003755;">**НФГ**</span> и <span style="color: #7A3C00;">**НСДАП**</span>. Хотя это и неудача, но это не худший из возможных исходов, поскольку новые выборы могли бы привести к значительному усилению экстремистских партий.
 
-[? if z_leader != "Stegerwald": Адам Штегервальд  ?][? if z_leader == "Stegerwald": Генрих Брюнинг  ?]из [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] избран министром-президентом Пруссии.
+[? if z_leader != "Штегервальд": Адам Штегервальд  ?][? if z_leader == "Штегервальд": Генрих Брюнинг  ?]из [? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?] избран министром-президентом Пруссии.
 
 
 @urge_failure

@@ -1,0 +1,59 @@
+title: Антони Пфюльф
+is-pinned-card: true
+tags: advisor, centrist
+card-image: img/portraits/PfülfAntonie.jpg
+view-if: pfulf_advisor = 1
+new-page: true 
+
+= Антони Пфюльф
+
+Пфюльф — бывшая учительница из <span style="color: #00CCFF;">Баварии</span>, выросшая в консервативной католической семье. Она борется за права женщин и за расширение электората <span style="color: #c00000;">**СДПГ**</span>.
+
+- @support_peoples_party
+- @build_peoples_party
+- @campaigning_peoples_party
+- @womens_rights_
+- @root: Return to main
+
+
+@support_peoples_party
+title: Поддержать концепцию Народной Партии
+subtitle: Сможем ли мы расширить нашу партию за пределы промышленного рабочего класса?
+view-if: peoples_party = 0
+choose-if: peoples_party_support <= 4 and advisor_action_timer = 0 and peoples_party = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if peoples_party_support > 4: У концепции Народной Партии уже есть значительная поддержка. ?]
+on-arrival: advisor_action_timer = 6; peoples_party_support += 1; reformist_strength += 5;
+
+Мы наращиваем поддержку идеи переформатирования в Народную Партию.
+
+
+@build_peoples_party
+title: Создание Народной партии
+subtitle: Сможем ли мы расширить социальную базу партии, выйдя за рамки промышленного рабочего класса?
+view-if: peoples_party = 0
+choose-if: peoples_party_support >= 3 and advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if peoples_party_support < 3: У этой политики недостаточно поддержки внутри партии. ?]
+on-arrival: advisor_action_timer = 6;
+go-to: peoples_party
+
+
+@campaigning_peoples_party
+title: Агитировать как Народная Партия
+subtitle: Агитация среди некоторых нетрадиционных для нас слоёв населения.
+view-if: peoples_party = 1
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] мес. до следующего действия советника. ?]
+on-arrival: advisor_action_timer = 6;
+go-to: peoples_party_campaigning
+
+
+
+
+@womens_rights_
+title: Права женщин
+subtitle: Проводить политику в отношении прав женщин.
+choose-if: advisor_action_timer = 0 and spd_in_government and not cvp_women_accepted
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?][? if not spd_in_government : <span style="color: #c00000;">СДПГ</span> в настоящее время не входит в правительство. ?] [? if cvp_women_accepted : Наше коалиционное соглашение исключает меры по защите прав женщин. ?]
+on-arrival: advisor_action_timer = 6; womens_rights_timer -= 10; last_advisor_action = 1
+go-to: womens_rights
+

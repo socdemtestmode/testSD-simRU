@@ -1,6 +1,6 @@
 title: Первый чрезвычайный указ Папена
 subtitle: Фактическая отмена страхования по безработице!
-view-if: chancellor = "Papen" and papen_time == 2
+view-if: chancellor = "Папен" and papen_time == 2
 new-page: true
 tags: event
 max-visits: 1

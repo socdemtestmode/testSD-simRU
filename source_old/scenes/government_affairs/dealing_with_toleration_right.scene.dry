@@ -5,10 +5,11 @@ card-image: img/portraits/BrüningHeinrich.jpg
 view-if: dealing_with_toleration_timer = 0 and spd_toleration and spd_toleration_right and chancellor_party == "Z" and not cvp_formed
 on-arrival: dealing_with_toleration_timer += 6; month_actions += 1
 tags: govt_affairs
+#subtitle: Despite not being in government, we can still provide support.
 
 = Воздержание от вотума недоверия
 
-Сейчас мы оказываем внешнюю поддержку правительству канцлера [+ chancellor +]а, хотя наше влияние ослаблено тем, что в правительство вошли [? if not cvp_formed: the ?][? if cvp_formed: бывшие члены ?] <span style="color: #3E88B3;">**НННП**</span>[? if cvp_formed: &nbsp;members ?]. Как нам использовать своё положение?
+Сейчас мы оказываем внешнюю поддержку правительству канцлера [+ chancellor +]а, хотя наше влияние ослаблено тем, что в правительство вошли [? if not cvp_formed: the ?][? if cvp_formed: бывшие члены  ?] <span style="color: #3E88B3;">**НННП**</span>[? if cvp_formed: &nbsp;members ?]. Как нам использовать своё положение?
 
 - @break_toleration
 - @urge_against_austerity
@@ -54,7 +55,7 @@ on-arrival: in_center_right_coalition_prussia = 1; in_right_coalition_prussia = 
 
 The [? if z_party_name != "CVP": <span style="color: #000000;">Партия Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] объявила ответный вотум недоверия в Пруссии, сместив наше правительство и заменив его правоцентристской коалицией из всех партий правее нас, за исключением <span style="color: #003755;">**НФГ**</span> и <span style="color: #7A3C00;">**НСДАП**</span>. Хотя это и неудача, но это не худший из возможных исходов, поскольку новые выборы могли бы привести к значительному усилению экстремистских партий.
 
-[? if z_leader != "Stegerwald": Адам Штегервальд ?][? if z_leader == "Stegerwald": Генрих Брюнинг ?]из [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] избран министром-президентом Пруссии.
+[? if z_leader != "Stegerwald": Адам Штегервальд  ?][? if z_leader == "Stegerwald": Генрих Брюнинг  ?]из [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?] избран министром-президентом Пруссии.
 
 
 @urge_against_austerity
@@ -87,13 +88,13 @@ on-arrival: bruning_austerity_limited += 1; workers_spd += 3*(1-dissent); unempl
 
 Мы успешно заставили Брюнинга смягчить жёсткость политики строгой экономии в его чрезвычайных декретах. К сожалению, правоцентристы всё чаще видят в нас помеху и попытаются вынудить Брюнинга сформировать коалицию большинства с <span style="color: #7A3C00;">крайне</span>-<span style="color: #003755;">правыми</span>. [? if president == "Hindenburg": Президент Гинденбург также теряет терпение, видя, что Брюнинг уступает нашим требованиям. ?]
 
-[? if bruning_austerity_limited == 1: Мы успешно помешали Брюнингу снизить налоги для людей с высоким доходом, облегчив тем самым бремя компенсационного повышения налогов для низших слоёв населения. ?][? if bruning_austerity_limited == 2: Мы успешно надавили на Брюнинга, и он в попытке пойти нам на уступки восстановил 40-часовую рабочую неделю, однако заработная плата остаётся неудовлетворительной. ?][? if bruning_austerity_limited >= 3: Мы успешно добились от Брюнинга отмены некоторых сокращений зарплат государственным служащим. ?]
+[? if bruning_austerity_limited == 1: Мы успешно помешали Брюнингу снизить налоги для людей с высоким доходом, облегчив тем самым бремя компенсационного повышения налогов для низших слоёв населения.  ?][? if bruning_austerity_limited == 2: Мы успешно надавили на Брюнинга, и он в попытке пойти нам на уступки восстановил 40-часовую рабочую неделю, однако заработная плата остаётся неудовлетворительной.  ?][? if bruning_austerity_limited >= 3: Мы успешно добились от Брюнинга отмены некоторых сокращений зарплат государственным служащим. ?]
 
 
 @urge_paramilitary
 view-if: political_decree < 2 and not sa_nationwide_ban
 choose-if: spd_prussia and strife >= 3 and z_relation >= 35 and not spd_toleration_right and not second_bruning_cabinet_seen
-unavailable-subtitle: [? if not spd_prussia: Мы не контролируем правительство Пруссии. ?] [? if strife < 3: Масштабы насилия со стороны военизированных формирований недостаточны для введения чрезвычайного указа. ?] [? if z_relation < 35: У нас недостаточно тесные отношения с Брюнингом. ?] [? if second_bruning_cabinet_seen: Йозеф Вирт больше не возглавляет министерство внутренних дел, а значит, мы больше не можем рассчитывать на его связи. ?] [? if spd_toleration_right: В <span style="color: #3E88B3;">НННП</span> не позволят Брюнингу ограничивать деятельность собственной военизированной организации. ?]
+unavailable-subtitle: [? if not spd_prussia: Мы не контролируем правительство Пруссии. ?] [? if strife < 3: Масштабы насилия со стороны военизированных формирований недостаточны для введения чрезвычайного указа. ?] [? if z_relation < 35: У нас недостаточно тесные отношения с Брюнингом. ?] [? if second_bruning_cabinet_seen: Йозеф Вирт больше не возглавляет министерство внутренних дел, а значит, мы больше не можем рассчитывать на его связи.  ?] [? if spd_toleration_right: В <span style="color: #3E88B3;">НННП</span> не позволят Брюнингу ограничивать деятельность собственной военизированной организации. ?]
 title: Призвать Брюнинга принять решительные меры против политических экстремистов и ограничить определённые права.
 on-arrival: political_decree += 1; prussian_police_loyalty += 0.04; prussian_police_strength += 5; kpd_relation -= 6; rfb_militancy *= 0.9; rfb_strength *= 0.85; sa_militancy *= 0.96; sa_strength *= 0.96; sh_militancy *= 0.98; sh_strength *= 0.98; workers_kpd -= 1; workers_nsdap -= 1; unemployed_kpd -= 3; unemployed_nsdap -= 3; new_middle_nsdap -= 2; hindenburg_angry_bruning += 5
 
@@ -114,4 +115,3 @@ on-arrival: z_relation += 4*(1-dissent); dvp_relation += 3*(1-dissent); ddp_rela
 @stay_course
 
 Мы продолжим воздерживаться от вотума недоверия ради стабильности.
-

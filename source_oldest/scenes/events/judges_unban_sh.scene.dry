@@ -1,0 +1,8 @@
+title: <span style="color: #3E88B3;">**Стальной Шлем **</span> снова разрешён
+subtitle: Судьи вновь легализовали <span style="color: #3E88B3;">**Стальной Шлем**</span>.
+view-if: sh_banned == 1 and sh_ban_timer == 0 and judicial_reform < 2
+on-arrival: sh_banned = 0; sh_strength += 100; sh_militancy += 0.01; interior_goal_prussia += 1 if interior_goal_seen_prussia; coup_progress += 2 if sh_coup_progress >= 6
+tags: event
+
+По решению суда <span style="color: #3E88B3;">**Стальной Шлем**</span> легализован. Организация немедленно приступает к массовой вербовке.
+

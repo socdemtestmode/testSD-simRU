@@ -12,6 +12,7 @@ max-visits: 1
 
 Несколько молодых <span style="color: #f0456a;">социалистов</span> во главе с Карло Мерендорффом призывают к «новому ревизионизму» в ответ на <span style="color: #7A3C00;">нацистскую</span> угрозу. Это политическое течение призывает к созданию массового движения в защиту демократии, чтобы противостоять <span style="color: #7A3C00;">нацистской</span> и <span style="color: #700000;">**коммунистическому**</span> движениям, а также обновить нашу риторику и образный ряд, чтобы апеллировать к эмоциям, а не только к разуму.
 
+#- @shuffle_leadership: It's time to change our advisors to take into account new ideas.
 - @support_neo: Поддержать неоревизионистское движение.
 - @no_new_ideas: Нам не нужны новые идеи.
 - @easy_discard
@@ -31,4 +32,3 @@ on-arrival: neorevisionist_strength += 10; nazi_urgency += 1; neorevisionism = 1
 on-arrival: neorevisionist_strength -= 5; center_strength += 5; neorevisionism = -1
 
 Нам не нужны эти новые идеи; они, похоже, слишком близко имитируют идеи <span style="color: #7A3C00;">нацистов</span> и <span style="color: #700000;">**коммунистов**</span>.
-

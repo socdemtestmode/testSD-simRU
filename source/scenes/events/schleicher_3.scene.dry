@@ -1,6 +1,6 @@
 title: Шлейхер и профсоюзы
 subtitle: Генерал вновь встречается с АДГБ.
-view-if: chancellor == "Papen" and papen_time == 24 and papen_post_2 and red_general_unlock
+view-if: chancellor == "Папен" and papen_time == 24 and papen_post_2 and red_general_unlock
 new-page: true
 tags: event
 max-visits: 1

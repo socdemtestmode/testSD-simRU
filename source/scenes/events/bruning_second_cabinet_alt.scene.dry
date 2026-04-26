@@ -1,7 +1,7 @@
 title: Второй кабинет Брюнинга
 subtitle: Канцлер [+ chancellor +] сформировал кабинет!
 new-page: true
-view-if: total_bruning_time > 0 and bruning_toleration_time and not in_center_right_coalition and not in_right_coalition and banking_crisis_seen and emergency_decree_alt_seen and not emergency_decree_mitigate and dvp_leader == "Dingeldey" and not lvp_formed and flavour_24_trigger and time == flavour_24_trigger_time + 3 and not second_bruning_cabinet_seen and dvp_exist
+view-if: total_bruning_time > 0 and bruning_toleration_time and not in_center_right_coalition and not in_right_coalition and banking_crisis_seen and emergency_decree_alt_seen and not emergency_decree_mitigate and dvp_leader == "Дингельдей" and not lvp_formed and flavour_24_trigger and time == flavour_24_trigger_time + 3 and not second_bruning_cabinet_seen and dvp_exist
 on-arrival: {!
 Q.second_bruning_cabinet_seen = 1;
 Q.judicial_reform -= 1;
@@ -20,7 +20,7 @@ max-visits: 1
 
 Министр от <span style="color: #C0A054;">**ННП**</span>, Архитектор катастрофического австро-германского таможенного союза Юлиус Курциус подал в отставку с поста министра иностранных дел после его провала. Поскольку в кабинете больше нет министров от <span style="color: #C0A054;">**ННП**</span>, последнее препятствие, мешавшее им порвать с правительством Брюнинга, устранено. В попытке сохранить их поддержку Брюнинг сформировал второй, более консервативный кабинет, с которым <span style="color: #C0A054;">**ННП**</span> неохотно согласилась, учитывая, что <span style="color: #7A3C00;">национальная</span> <span style="color: #3E88B3;">оппозиция</span> не заинтересована во вхождении в правительство.
 
-Теперь мы должны решить, продолжать ли воздерживаться от вотума недоверия к правительству Брюнинга с его ещё большим правым уклоном — теперь, когда в нём нет левых деятелей, таких как представители [? if z_party_name != "CVP": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?]Йозефа Вирта, — или же наконец использовать это как предлог, чтобы порвать с ним, поскольку Брюнинг ввёл третий чрезвычайный декрет, который ещё больше снижает зарплаты, урезает пенсии и социальные пособия, чтобы покрыть дефицит, вызванный банковским кризисом.
+Теперь мы должны решить, продолжать ли воздерживаться от вотума недоверия к правительству Брюнинга с его ещё большим правым уклоном — теперь, когда в нём нет левых деятелей, таких как представители [? if z_party_name != "ХНП": <span style="color: #000000;">Партии Центра</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?]Йозефа Вирта, — или же наконец использовать это как предлог, чтобы порвать с ним, поскольку Брюнинг ввёл третий чрезвычайный декрет, который ещё больше снижает зарплаты, урезает пенсии и социальные пособия, чтобы покрыть дефицит, вызванный банковским кризисом.
 
 - @vote_yes
 - @vote_no

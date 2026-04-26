@@ -32,7 +32,6 @@ on-arrival: boxheim_persecuted = 1; neorevisionist_dissent -= 20; neorevisionist
 view-if: judicial_reform < 4
 on-arrival: boxheim_persecuted = 0; neorevisionist_dissent -= 10; neorevisionist_strength += 5; workers_nsdap -= 2; new_middle_nsdap -= 6; old_middle_nsdap -= 6; rural_nsdap -= 2; pro_republic += 5; sa_militancy -= 0.05; workers_spd += 2; new_middle_spd += 2
 
-Как и ожидалось, Министерство юстиции постановило: документы не содержат состава преступления государственной измены, поскольку, по их утверждению, документ направлен против <span style="color: #700000;">коммунистических</span> путчистов, а не против правительства. [? if bruning_time: Мы уверены, что за этим преуменьшением стоит канцлер Брюнинг — он хочет сохранить возможность сотрудничества с <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правыми</span>. ?]
+Как и ожидалось, Министерство юстиции постановило: документы не содержат состава преступления государственной измены, поскольку, по их утверждению, документ направлен против <span style="color: #700000;">коммунистических</span> путчистов, а не против правительства. [? if bruning_time: Мы уверены, что за этим преуменьшением стоит канцлер Брюнинг — он хочет сохранить возможность сотрудничества с <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правыми</span>.  ?]
 
 По крайней мере, мы дискредитировали <span style="color: #7A3C00;">нацистов</span> в глазах многих и сумели сохранить за нашим правительством Гессена статус временного из-за провала переговоров между <span style="color: #7A3C00;">**НСДАП**</span> и [? if z_party_name != "CVP": <span style="color: #000000;">Центром</span> ?][? if z_party_name == "CVP": <span style="color: #000000;">**ХНП**</span> ?].
-

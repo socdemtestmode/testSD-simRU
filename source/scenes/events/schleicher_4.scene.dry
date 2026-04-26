@@ -1,6 +1,6 @@
 title: Шлейхер и Рейхсбаннер
 subtitle: Пришло время определить нашу позицию по *Имперскому попечительному совету (Reichskuratorium)*.
-view-if: chancellor = "Schleicher" and schleicher_reichsbanner_wait
+view-if: chancellor = "Шляйхер" and schleicher_reichsbanner_wait
 new-page: true
 tags: event
 max-visits: 1

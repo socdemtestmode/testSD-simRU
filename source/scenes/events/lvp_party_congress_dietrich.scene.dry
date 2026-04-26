@@ -1,6 +1,6 @@
 title: <span style="color: #FFCC00;">**ЛНП**</span> — Голосование в партии
 subtitle: Герман Дитрих ушёл в отставку!
-view-if: time >= dietrich_lvp_explode_time and (lvp_votes_start - lvp_votes > 4 or (change_lvp_votes < -3 and (last_election_time >= dietrich_election_time))) and lvp_leader == "Dietrich" and lvp_formed
+view-if: time >= dietrich_lvp_explode_time and (lvp_votes_start - lvp_votes > 4 or (change_lvp_votes < -3 and (last_election_time >= dietrich_election_time))) and lvp_leader == "Дитрих" and lvp_formed
 on-arrival: {!
 
 Q.dietrich_resign_lvp = 1;
@@ -23,7 +23,7 @@ if (Q.spd_votes >= 30) {
     Q.dingeldey_points += 2;
 }
 
-if (Q.chancellor == "Brüning" && Q.spd_toleration) {
+if (Q.chancellor == "Брюнинг" && Q.spd_toleration) {
     Q.dingeldey_points += 2;
     Q.lvp_right += 3;
 } else if (Q.in_right_coalition || Q.in_center_right_coalition) {
@@ -54,9 +54,9 @@ if (Q.pro_republic >= 60) {
 }
 
 if (Q.lvp_votes >= 8) {
-    if (Q.lvp_ideology == "Right") {
+    if (Q.lvp_ideology == "Правые") {
         Q.lvp_left += 3;
-    } else if (Q.lvp_ideology == "Left") {
+    } else if (Q.lvp_ideology == "Левые") {
         Q.lvp_right += 3;
     }
 } else if (Q.lvp_votes < 8 && Q.nsdap_votes >= (Q.lvp_votes + 5)) {
@@ -66,20 +66,20 @@ if (Q.lvp_votes >= 8) {
 }
 
 if (Q.lvp_right > (Q.lvp_left*1.5) || (Q.lvp_right > (Q.lvp_left + 5))) {
-    Q.lvp_ideology = "Right"
+    Q.lvp_ideology = "Правые"
 } else if (Q.lvp_left > (Q.lvp_right*1.5) || (Q.lvp_left > (Q.lvp_right + 5))) {
-    Q.lvp_ideology = "Left"
+    Q.lvp_ideology = "Левые"
 } else {
-    Q.lvp_ideology = "Moderate"
+    Q.lvp_ideology = "Умеренные"
 }
 
-if (Q.lvp_ideology == "Right") {
+if (Q.lvp_ideology == "Правые") {
    Q.dingeldey_points += 2;
 }
-if (Q.lvp_ideology == "Moderate") {
+if (Q.lvp_ideology == "Умеренные") {
     Q.maier_points += 2;
 }
-if (Q.lvp_ideology == "Left") {
+if (Q.lvp_ideology == "Левые") {
     Q.heuss_points += 2;
 }
 
@@ -132,7 +132,7 @@ title: Теодор Хойс избран!
 subtitle: Хойс — <span style="color: #c00000;">социальный</span> <span style="color: #000000;">респуб</span><span style="color: #DD0000;">лик</span><span style="color: #FFCC00;">анец</span> и член бывшей <span style="color: #D3C24D;">**[+ ddp_name +]**</span>.
 unavailable-subtitle: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к предпринимательскому крылу <span style="color: #D3C24D;">[+ ddp_name +]</span>'s business wing.
 choose-if: heuss_lead
-on-arrival: lvp_relation += 15; lvp_left += 8; lvp_leader = "Heuss"; pro_republic += (lvp_votes / 2); workers_lvp += 2; workers_spd -= 2; new_middle_lvp += 8; old_middle_lvp -= 3; old_middle_other += 5 if (dnvp_ideology == "Radical"); old_middle_dnvp += 5 if dnvp_ideology == "Moderate"; old_middle_kvp += 5; rural_lvp -= 5; rural_other += 5 if (dnvp_ideology == "Radical" and not kvp_formed); rural_dnvp += 5 if dnvp_ideology == "Moderate"; rural_kvp += 5; catholics_lvp += 3; catholics_spd -= 3; coalition_dissent -= 1; heuss_explode_time = time + 8; heuss_election_time = time
+on-arrival: lvp_relation += 15; lvp_left += 8; lvp_leader = "Хойс"; pro_republic += (lvp_votes / 2); workers_lvp += 2; workers_spd -= 2; new_middle_lvp += 8; old_middle_lvp -= 3; old_middle_other += 5 if (dnvp_ideology == "Радикалы"); old_middle_dnvp += 5 if dnvp_ideology == "Умеренные"; old_middle_kvp += 5; rural_lvp -= 5; rural_other += 5 if (dnvp_ideology == "Радикалы" and not kvp_formed); rural_dnvp += 5 if dnvp_ideology == "Умеренные"; rural_kvp += 5; catholics_lvp += 3; catholics_spd -= 3; coalition_dissent -= 1; heuss_explode_time = time + 8; heuss_election_time = time
 face-image: img/portraits/heuss.jpg
 
 Теодор Хойс, восходящая звезда и бывший член <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, избран председателем <span style="color: #FFCC00;">Либеральной народной партии</span>. Его основная поддержка — «Круг социальных республиканцев», состоящий из бывших членов <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, а также либеральных интеллектуалов и газет. При этом Хойс заручился поддержкой и других членов партии благодаря своей достаточно консервативной позиции по экономическим и национальным вопросам.
@@ -145,7 +145,7 @@ title: Рейнгольд Майер избран!
 subtitle: Крупная фигура в политике Вюртемберга, теперь его ждёт повышение.
 unavailable-subtitle: [? if not heuss_lead: Большинство в <span style="color: #FFCC00;">ЛНП</span> воспринимают его как слишком левого, несмотря на его прошлую принадлежность к <span style="color: #D3C24D;">[+ ddp_name +]</span>, её деловым крылом.  ?][? if heuss_lead: Социал-республиканцы предпочитают избрать вместо него Хойсса. ?]
 choose-if: maier_lead
-on-arrival: lvp_relation += 5; lvp_left += 3; lvp_leader = "Maier"; pro_republic += 3; new_middle_lvp += 2; old_middle_lvp += 2; rural_lvp += 4; catholics_lvp += 6
+on-arrival: lvp_relation += 5; lvp_left += 3; lvp_leader = "Майер"; pro_republic += 3; new_middle_lvp += 2; old_middle_lvp += 2; rural_lvp += 4; catholics_lvp += 6
 face-image: img/portraits/maier.jpg
 
 Рейнгольд Майер, видный деятель вюртембергской политики и восходящая звезда в переживающей не лучшие времена партии, избран председателем <span style="color: #FFCC00;">**ЛНП**</span>. Молодой и энергичный, он в меньшей степени связан догмами, чем многие ветераны партии, что делает его сильным кандидатом для партии, страдающей от пораженческих настроений и внутренних распрей.
@@ -158,7 +158,7 @@ title: Эдуард Дингельдей избран.
 subtitle: Дингельдей, член бывшей <span style="color: #C0A054;">**ННП**</span>: его обычно связывают с промышленно-правым крылом партии.
 unavailable-subtitle: Право-промышленной фракции <span style="color: #FFCC00;">ЛНП</span> не хватает влияния, чтобы продвинуть своего кандидата.
 choose-if: dingeldey_lead
-on-arrival: lvp_relation -= 12; lvp_right += 6; lvp_leader = "Dingeldey"; new_middle_lvp -= 4; workers_lvp -= 4; old_middle_lvp += 2; coalition_dissent += 1; dingeldey_explode_time = time + 8; dingeldey_election_time = time
+on-arrival: lvp_relation -= 12; lvp_right += 6; lvp_leader = "Дингельдей"; new_middle_lvp -= 4; workers_lvp -= 4; old_middle_lvp += 2; coalition_dissent += 1; dingeldey_explode_time = time + 8; dingeldey_election_time = time
 face-image: img/portraits/dingeldey.jpg
 
 Эдуард Дингельдей, ранее состоявший в движении за буржуазное единство, теперь избран председателем <span style="color: #FFCC00;">**ЛНП**</span>. Дингельдея поддерживают промышленники правого крыла партии, а также бывшие члены <span style="color: #C0A054;">**ННП**</span>. Похоже, он сосредоточен на содействии более тесному сотрудничеству с рядом партий между <span style="color: #FFCC00;">**ЛНП**</span> и <span style="color: #3E88B3;">**НННП**</span>.
@@ -180,7 +180,7 @@ view-if: lvp_deadlock
 @baumer
 title: Гертруда Боймер избрана!
 subtitle: Лидер <span style="color: #FFCC00;">**ЛНП**</span> женского крыла, умеренная феминистка. Придерживается сомнительных взглядов на „национальные вопросы“.
-on-arrival: lvp_leader = "Bäumer"; lvp_relation += 5; nationalism += lvp_votes; workers_lvp += 6; workers_other -= 2; workers_spd -= 4; new_middle_lvp += 20; new_middle_spd -= 15; new_middle_kpd -= 5; old_middle_lvp -= 20; old_middle_dnvp += 5; old_middle_dnvp += 10 if dnvp_ideology == "Moderate"; old_middle_nsdap += 5; old_middle_kvp += 10; old_middle_other += 5; rural_lvp *= 0.5; rural_nsdap += 5; rural_dnvp += 5 if not kvp_formed; rural_kvp += 5; pro_republic -= 5
+on-arrival: lvp_leader = "Боймер"; lvp_relation += 5; nationalism += lvp_votes; workers_lvp += 6; workers_other -= 2; workers_spd -= 4; new_middle_lvp += 20; new_middle_spd -= 15; new_middle_kpd -= 5; old_middle_lvp -= 20; old_middle_dnvp += 5; old_middle_dnvp += 10 if dnvp_ideology == "Умеренные"; old_middle_nsdap += 5; old_middle_kvp += 10; old_middle_other += 5; rural_lvp *= 0.5; rural_nsdap += 5; rural_dnvp += 5 if not kvp_formed; rural_kvp += 5; pro_republic -= 5
 face-image: img/portraits/baumer.jpg
 
 Каким-то образом Гертруда Боймер, многолетний заместитель лидера <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, а теперь и лидер <span style="color: #FFCC00;">**ЛНП**</span>, избрана в руководство <span style="color: #FFCC00;">**ЛНП**</span>. Это довольно странное событие, но её победу можно объяснить её страстным национализмом и романтизмом, а также её сомнительными взглядами на <span style="color: #005EB8;">евреев</span> и расовый вопрос, что обеспечило ей поддержку националистов внутри партии. Кроме того, некоторые в партии цинично полагают, что, избрав женщину, они смогут привлечь более широкий женский электорат.

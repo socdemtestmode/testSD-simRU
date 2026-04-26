@@ -1,11 +1,11 @@
 title: Гитлер приходит к власти.
 subtitle: Начало конца?
-view-if: (chancellor == nsdap_chancellor or president == "Hitler" or chancellor_party == "NSDAP") and rubicon_mini
+view-if: (chancellor == nsdap_chancellor or president == "Гитлер" or chancellor_party == "НСДАП") and rubicon_mini
 max-visits: 1
 tags: event
 new-page: true
 
-[? if hitler_deported and president != "Hitler" and chancellor != "Hitler": Первый шаг, который канцлер [+ chancellor +] предпринимает по вступлении в должность, — это возвращение Адольфа Гитлера в Германию, предоставление ему гражданства и официального поста в кабинете министров.  ?]
+[? if hitler_deported and president != "Гитлер" and chancellor != "Гитлер": Первый шаг, который канцлер [+ chancellor +] предпринимает по вступлении в должность, — это возвращение Адольфа Гитлера в Германию, предоставление ему гражданства и официального поста в кабинете министров.  ?]
 
 С назначением [+ chancellor +]а может показаться, что для <span style="color: #000000;">Вейм</span><span style="color: #DD0000;">арс</span><span style="color: #FFCC00;">кой</span> республики всё почти кончено. Однако такие люди, как Шлейхер и Брюнинг, неожиданно оказались в одном кабинете с <span style="color: #7A3C00;">нацистами</span>. Возможно, их всё-таки удастся «приручить»? Может, нам не стоит действовать опрометчиво и лучше выждать.
 

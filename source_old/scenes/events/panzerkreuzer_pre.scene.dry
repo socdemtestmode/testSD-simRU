@@ -26,4 +26,3 @@ on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 2*(1-dissent); panze
 on-arrival: workers_kpd += 2; unemployed_kpd += 2; labor_dissent += 5; left_dissent += 5; kpd_relation -= 6; panzerkreuzer_campaign = 0
 
 Из-за нашего молчания <span style="color: #700000;">**КПГ**</span> осталась единственной партией, открыто выступающей против строительства корабля, — и они тут же обвиняют нас в предательстве. Фракции левых и профсоюзников выражают недовольство.
-

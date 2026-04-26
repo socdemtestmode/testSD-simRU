@@ -1,6 +1,6 @@
 title: Уличные бои прекращаются
 subtitle: Парамилитарные организации уходят в прошлое.
-view-if: chancellor == "Schleicher" and schleicher_post_time >= 10 and state_force >= 70
+view-if: chancellor == "Шляйхер" and schleicher_post_time >= 10 and state_force >= 70
 max-visits: 1
 new-page: true
 tags: event

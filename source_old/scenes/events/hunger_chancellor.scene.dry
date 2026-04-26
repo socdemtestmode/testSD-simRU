@@ -9,7 +9,7 @@ face-image: img/Kollwitz_Hospital.jpg
 
 = Канцлер голода
 
-Народ называет канцлера [+ chancellor +]а Канцлером Голода из-за его кажущейся безжалостности перед лицом депрессии.[? if chancellor_party == "SPD" : Очевидно, это очень плохой знак для нас. ?]
+Народ называет канцлера [+ chancellor +]а Канцлером Голода из-за его кажущейся безжалостности перед лицом депрессии.[? if chancellor_party == "SPD" : Очевидно, это очень плохой знак для нас.  ?]
 
 [? if spd_toleration == 1 : Поскольку мы сейчас поддерживаем правительство [+ chancellor +]а, это вполне может плохо на нас отразиться. ?]
 
@@ -25,6 +25,7 @@ on-arrival: workers_nsdap += 2; workers_kpd += 2; unemployed_nsdap += 2; workers
 Наше воздержание от вотума недоверия продолжается.
 
 
+
 @break_toleration
 subtitle: Это, скорее всего, приведёт к новым выборам.
 view-if: spd_toleration == 1
@@ -33,4 +34,3 @@ on-arrival: next_election_time = time+3 if next_election_time >= time+3; next_el
 Мы окончательно порвали с правительством [+ chancellor +]а и проголосовали против него при вынесении вотума недоверия.
 
 Новые выборы назначены на [+ next_election_month : month +] [+ next_election_year +].
-

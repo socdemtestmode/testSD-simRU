@@ -2,7 +2,7 @@ title: Новый день в Германии
 subtitle: Неужели демократия наконец восторжествовала?
 tags: event
 priority: 3
-view-if: hindenburg_dead = 1 and president != "Hitler" and president != "Göring" and president != "Seldte"
+view-if: hindenburg_dead = 1 and president != "Гитлер" and president != "Геринг" and president != "Зельдте"
 max-visits: 1
 on-arrival: {!
 !}

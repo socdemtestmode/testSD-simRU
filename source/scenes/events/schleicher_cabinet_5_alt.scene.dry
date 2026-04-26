@@ -1,6 +1,6 @@
 title: Общественные работы Шлейхера
 subtitle: План наконец доработан и готов к введению в действие.
-view-if: chancellor = "Schleicher" and (schleicher_time == 7 and not schleicher_explode) or (schleicher_time == 5 and schleicher_public_works_fast)
+view-if: chancellor = "Шляйхер" and (schleicher_time == 7 and not schleicher_explode) or (schleicher_time == 5 and schleicher_public_works_fast)
 new-page: true
 tags: event
 priority: -7

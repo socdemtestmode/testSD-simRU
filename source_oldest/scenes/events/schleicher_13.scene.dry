@@ -1,0 +1,63 @@
+title: The <span style="color: #D3C24D;">**[+ ddp_name +]**</span> присоединяется к <span style="color: #BFC8CC;">**ФНЕГ**</span>
+subtitle: Крошечная партия больше не может существовать самостоятельно.
+view-if: chancellor = "Schleicher" and schleicher_time >= 35 and republicans_schleicher >= 12 and not lvp_formed and ddp_r < 2 and dnef_formed
+new-page: true
+priority: 1
+tags: event
+max-visits: 1
+
+= <span style="color: #D3C24D;">**[+ ddp_name +]**</span> присоединяется к <span style="color: #BFC8CC;">**ФНЕГ**</span>
+
+Теперь, когда <span style="color: #D3C24D;">**[+ ddp_name +]**</span> фактически прекратила своё существование как политическая сила, многие бывшие политики — особенно из её правого крыла — давно выступали за её самороспуск, полагая, что только так из её пепла сможет восстать новая, единая сила.
+
+Эта вера лишь укрепилась с возвышением <span style="color: #BFC8CC;">**ФНЕГ**</span>. Теперь всё больше членов партии призывают к официальному слиянию с организацией Шлейхера. Его призывы к национальному единству нанесли психологический удар по рядовым членам партии, которая всегда превыше всего ставила благополучие и единство всей нации.
+
+<span style="color: #D3C24D;">Демократы</span> старой закалки Дитрих и Хойс оказывают наибольшее сопротивление, будучи убеждёнными <span style="color: #000000;">респу</span><span style="color: #DD0000;">бли</span><span style="color: #FFCC00;">канцами</span> до мозга костей. Но Леммер и левое крыло партии оказываются более восприимчивы к призывам Шлейхера о национальном единстве.
+
+Тем не менее, проводится голосование, и победу одерживает оппозиция.
+
+- @schleicher_2: <span style="color: #BFC8CC;">Фронт Национального Единства Германии</span> приветствует нового члена.
+
+
+@schleicher_2
+on-arrival: {!
+Q.dstp_dnef = 1
+
+Q.pro_republic -= Q.ddp_votes;
+
+Q.ddp_relation = Q.dnef_relation;
+
+Q.dnef_r += Q.ddp_r;
+Q.ddp_r = 0;
+
+if (Q.ddp_ideology == "Left") Q.ddp_leader = "Lemmer";
+if (Q.ddp_ideology != "Left") Q.ddp_leader = "Hellpach";
+
+Q.old_ddp_name = Q.ddp_name;
+Q.ddp_name = "DStP";
+!}
+
+Шлейхер считает более эффективным сохранить <span style="color: #D3C24D;">**[+ old_ddp_name +]**</span> в качестве отдельной, но тесно связанной <i>Blocpartei</i> для привлечения избирателей, и поэтому пока сохраняет её номинальную независимость[? if not dstp_formed: , хотя и под новым названием, чтобы избавиться от старого и ироничного ярлыка «Демократическая» ?]. [+ ddp_leader +] с тех пор назначен лидером теперь уже связанной с <i>Blocpartei</i> <span style="color: #D3C24D;">[+ ddp_name +]</span>.
+
+Текущий состав <span style="color: #BFC8CC;">Фронта Национального Единства Германии</span>:
+
+[? if dnef_formed: - <span style="color: #BFC8CC;">**ФНЕГ**</span> ?]
+
+[? if dstp_dnef: - <span style="color: #D3C24D;">**[+ ddp_name +]**</span> ?]
+
+[? if lvp_dnef: - <span style="color: #FFCC00;">**ЛНП**</span> ?]
+
+[? if z_dnef: - <span style="color: #000000;">Партия Центра</span> ?]
+
+[? if z_dnef: - <span style="color: #A2D8E0;">**БНП**</span> ?]
+
+[? if dvp_dnef: - <span style="color: #C0A054;">**ННП**</span> ?]
+
+[? if other_dnef: - **Прочие** ?]
+
+[? if kvp_dnef: - <span style="color: #0087DC;">**КНП**</span> ?]
+
+[? if dnvp_dnef: - <span style="color: #3E88B3;">**НННП**</span> ?]
+
+[? if nvf_dnef: - <span style="color: #142e20;">**ННФ**</span> ?]
+

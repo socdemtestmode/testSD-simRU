@@ -1,6 +1,6 @@
 title: The <span style="color: #7A3C00;">**НСДАП**</span> раскалывается!
 subtitle: Их внутренние противоречия наконец взяли своё.
-view-if: chancellor = "Schleicher" and schleicher_time >= 10 and nazi_explode >= 4 and not hitler_dead
+view-if: chancellor = "Шляйхер" and schleicher_time >= 10 and nazi_explode >= 4 and not hitler_dead
 new-page: true
 tags: event
 max-visits: 1
@@ -32,7 +32,7 @@ on-display: {!
 on-arrival: {!
 Q.nsdap_split = 1;
 Q.dsu_exist = 1;
-Q.dsu_leader = "Triumvirate";
+Q.dsu_leader = "Триумвират";
 Q.dsu_alt = 1;
 Q.nvf_exist = 0;
 Q.dsu_r = Math.round(Q.nsdap_r*0.4 * 10) / 10;

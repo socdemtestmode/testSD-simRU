@@ -1,4 +1,3 @@
 title: В главное меню
 go-to: root
 on-arrival: month_actions -= 1 if difficulty < 0
-

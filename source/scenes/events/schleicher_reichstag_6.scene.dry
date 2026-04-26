@@ -1,6 +1,6 @@
 title: Рейхстаг возобновляет работу
 subtitle: Шлейхер намерен огласить указ.
-view-if: chancellor = "Schleicher" and schleicher_time and schleicher_post_reichstag and next_reichstag_time == rubicon_time and next_reichstag_time > 0
+view-if: chancellor = "Шляйхер" and schleicher_time and schleicher_post_reichstag and next_reichstag_time == rubicon_time and next_reichstag_time > 0
 on-arrival: reichstag_rubicon = 1
 new-page: true
 tags: event

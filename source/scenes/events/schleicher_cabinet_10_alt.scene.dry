@@ -1,6 +1,6 @@
 title: The <span style="color: #6A1E1E;">**НСС**</span> входит в правительство
 subtitle: Оказывается, наш выбор не имеет значения.
-view-if: chancellor == "Schleicher" and not dsu_in_gov and not dsu_was_gov and z_in_gov and z_leader == "Bracht" and schleicher_post_time >= 8
+view-if: chancellor == "Шляйхер" and not dsu_in_gov and not dsu_was_gov and z_in_gov and z_leader == "Брахт" and schleicher_post_time >= 8
 max-visits: 1
 new-page: true
 tags: event
@@ -31,7 +31,7 @@ title: Штрассер входит в кабинет.
 on-arrival: {!
 Q.dsu_in_gov = 1;
 Q.schleicher_post = 1;
-Q.vice_chancellor = "Strasser";
+Q.vice_chancellor = "Штрассер";
 Q.workers_nsdap += 3;
 Q.new_middle_nsdap += 3;
 Q.unemployed_nsdap += 3;
@@ -46,7 +46,7 @@ Q.schleicher_spd_r -= 4;
 Q.schleicher_spd_influence -= 3;
 !}
 
-Вильгельм Фрик назначен министром внутренних дел[? if old_prussia_leader == "Schleicher": — как в правительстве Рейха, так и в Пруссии ?]. Грегор Штрассер получает пост вице-канцлера — должность чисто номинальную.[? if prussia_leader == "Goerdeler": Хотя <span style="color: #6A1E1E;">**НСС**</span> предпочли бы, чтобы Штрассер возглавил Пруссию, но Гёрделер остаётся на своём посту — как верная марионетка Шлейхера и уступка <span style="color: #000000;">Партии Центра</span>.  ?]
+Вильгельм Фрик назначен министром внутренних дел[? if old_prussia_leader == "Шляйхер": — как в правительстве Рейха, так и в Пруссии ?]. Грегор Штрассер получает пост вице-канцлера — должность чисто номинальную.[? if prussia_leader == "Гёрделер": Хотя <span style="color: #6A1E1E;">**НСС**</span> предпочли бы, чтобы Штрассер возглавил Пруссию, но Гёрделер остаётся на своём посту — как верная марионетка Шлейхера и уступка <span style="color: #000000;">Партии Центра</span>.  ?]
 
 По настоянию <span style="color: #7A3C00;">нацистов</span> Ялмар Шахт, как независимый специалист, возглавил Министерство экономики.
 

@@ -28,8 +28,8 @@ go-to: international_relations
 @breitscheid_foreign
 title: Внешняя политика
 subtitle: Будучи министром иностранных дел, Брейтшейд может определять нашу внешнюю политику.
-unavailable-subtitle: [? if not spd_in_government: <span style="color: #c00000;">СДПГ</span> не входит в правительство.  ?] [? if foreign_minister_party != "SPD" : <span style="color: #c00000;">СДПГ</span> не контролирует министерство иностранных дел.  ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] мес. до следующего действия советника. ?]
-choose-if: advisor_action_timer == 0 and spd_in_government and foreign_minister_party == "SPD"
+unavailable-subtitle: [? if not spd_in_government: <span style="color: #c00000;">СДПГ</span> не входит в правительство.  ?] [? if foreign_minister_party != "СДПГ" : <span style="color: #c00000;">СДПГ</span> не контролирует министерство иностранных дел.  ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] мес. до следующего действия советника. ?]
+choose-if: advisor_action_timer == 0 and spd_in_government and foreign_minister_party == "СДПГ"
 on-arrival: advisor_action_timer = 6; foreign_policy_timer -= 8; last_advisor_action = 1
 go-to: foreign_policy
 
@@ -49,8 +49,8 @@ on-arrival: advisor_action_timer = 6; left_dissent -= 5; labor_dissent -= 10; ce
 @snap_election
 title: Досрочные выборы
 subtitle: Объявить досрочные выборы.
-unavailable-subtitle: [? if chancellor != "Breitscheid" : Брейтшейд должен быть канцлером. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?]
-choose-if: advisor_action_timer == 0 and chancellor == "Breitscheid"
+unavailable-subtitle: [? if chancellor != "Брайтшайд" : Брейтшейд должен быть канцлером. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?]
+choose-if: advisor_action_timer == 0 and chancellor == "Брайтшайд"
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
 
 Мы назначили новые выборы на [+ next_election_month : month +] [+ next_election_year +].

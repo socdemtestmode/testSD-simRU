@@ -1,6 +1,6 @@
 title: Шлейхер и Рейхсбаннер
 subtitle: Генерал пытается обеспечить участие Рейхсбаннера в новой организации.
-view-if: chancellor = "Papen" and papen_time == 17 and red_general_unlock
+view-if: chancellor = "Папен" and papen_time == 17 and red_general_unlock
 new-page: true
 tags: event
 max-visits: 1

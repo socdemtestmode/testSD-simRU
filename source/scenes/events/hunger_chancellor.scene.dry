@@ -2,14 +2,14 @@ title: Канцлер голода
 subtitle: Народное недовольство канцлером [+ chancellor +]ом растёт.
 new-page: true
 view-if: year >= 1931 and month >= 2 and unemployed >= 18 and welfare < 0 and works_program == 0
-on-arrival: workers_spd *= 0.9 if chancellor_party == "SPD"; workers_spd *= 0.9 if spd_in_government == 1; workers_nsdap += 5 if spd_in_government; workers_kpd += 4 if spd_in_government; unemployed_nsdap += 5 if spd_in_government; hindenburg_angry += 10; hindenburg_angry_bruning += 10
+on-arrival: workers_spd *= 0.9 if chancellor_party == "СДПГ"; workers_spd *= 0.9 if spd_in_government == 1; workers_nsdap += 5 if spd_in_government; workers_kpd += 4 if spd_in_government; unemployed_nsdap += 5 if spd_in_government; hindenburg_angry += 10; hindenburg_angry_bruning += 10
 tags: event
 max-visits: 1
 face-image: img/Kollwitz_Hospital.jpg
 
 = Канцлер голода
 
-Народ называет канцлера [+ chancellor +]а Канцлером Голода из-за его кажущейся безжалостности перед лицом депрессии.[? if chancellor_party == "SPD" : Очевидно, это очень плохой знак для нас.  ?]
+Народ называет канцлера [+ chancellor +]а Канцлером Голода из-за его кажущейся безжалостности перед лицом депрессии.[? if chancellor_party == "СДПГ" : Очевидно, это очень плохой знак для нас.  ?]
 
 [? if spd_toleration == 1 : Поскольку мы сейчас поддерживаем правительство [+ chancellor +]а, это вполне может плохо на нас отразиться. ?]
 

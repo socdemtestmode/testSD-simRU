@@ -1,6 +1,6 @@
 title: Лозаннская конференция
 subtitle: По вопросу о репарациях…
-view-if: year = 1932 and month >= 7 and hoover_moratorium_seen and foreign_minister_party != "SPD" and not reparations_resolved and chancellor != "Papen"
+view-if: year = 1932 and month >= 7 and hoover_moratorium_seen and foreign_minister_party != "СДПГ" and not reparations_resolved and chancellor != "Папен"
 on-arrival: {!
 Q.reparations = -2;
 Q.budget += 1;
@@ -16,16 +16,16 @@ Q.ddp_cohesion += 2;
 Q.coalition_dissent -= 2;
 
 if (Q.spd_in_government) {
-    if (foreign_minister_party === "DVP") {
+    if (foreign_minister_party === "ННП") {
         Q.new_middle_dvp += 3;
         Q.old_middle_dvp += 3;
         Q.rural_dvp += 3;
-    } else if (foreign_minister_party === "LVP") {
+    } else if (foreign_minister_party === "ЛНП") {
         Q.workers_lvp += 3;
         Q.new_middle_lvp += 3;
         Q.old_middle_lvp += 3;
         Q.rural_lvp += 3;
-    } else if (foreign_minister_party === "Z") {
+    } else if (foreign_minister_party === "Центр") {
         if (!Q.stegerwald_path) {
             Q.workers_z += 3;
             Q.new_middle_z += 3;
@@ -44,7 +44,7 @@ if (Q.spd_in_government) {
 }
 
 if (Q.bruning_time) {
-    if (Q.dnvp_ideology == "Moderate" && (Q.in_center_right_coalition || Q.in_right_coalition || Q.spd_toleration_right)) {
+    if (Q.dnvp_ideology == "Умеренные" && (Q.in_center_right_coalition || Q.in_right_coalition || Q.spd_toleration_right)) {
         Q.workers_dnvp += 2;
         Q.new_middle_dnvp += 4;
         Q.old_middle_dnvp += 4;
@@ -53,7 +53,7 @@ if (Q.bruning_time) {
         Q.new_middle_dnf -= 4;
         Q.old_middle_dnf -= 4;
         Q.rural_dnf -= 4;
-    } else if (Q.dnvp_ideology == "Radical") {
+    } else if (Q.dnvp_ideology == "Радикалы") {
         Q.workers_kvp += 3;
         Q.new_middle_kvp += 5;
         Q.old_middle_kvp += 5;
@@ -113,7 +113,7 @@ tags: event
 
 На Лозаннской конференции союзники встретились с представителями Германии, чтобы раз и навсегда решить вопрос о военных репарациях. Учитывая продолжающийся экономический кризис, они пришли к выводу, что Германия не сможет возобновить выплаты по окончании моратория.
 
-В результате наши репарации сокращены на 90%! В итоге Германия обязана совершить лишь последний платёж в три миллиарда марок, что фактически прекращает будущие репарационные обязательства. Это значительно укрепило доверие инвесторов и вызвало новую волну притока капитала в Германию. Это должно снизить нагрузку на наш бюджет. [? if spd_in_government and foreign_minister_party == "SPD": Хотя это и не наша заслуга, наше министерство иностранных дел стремится присвоить себе это достижение.  ?][? if not spd_in_government and foreign_minister_party != "SPD": Хотя это и не заслуга министерства иностранных дел, оно стремится присвоить себе это достижение.  ?]
+В результате наши репарации сокращены на 90%! В итоге Германия обязана совершить лишь последний платёж в три миллиарда марок, что фактически прекращает будущие репарационные обязательства. Это значительно укрепило доверие инвесторов и вызвало новую волну притока капитала в Германию. Это должно снизить нагрузку на наш бюджет. [? if spd_in_government and foreign_minister_party == "СДПГ": Хотя это и не наша заслуга, наше министерство иностранных дел стремится присвоить себе это достижение.  ?][? if not spd_in_government and foreign_minister_party != "СДПГ": Хотя это и не заслуга министерства иностранных дел, оно стремится присвоить себе это достижение.  ?]
 
 [? if bruning_time: Брюнинг, умело использовавший вопросы внешней политики и репараций, значительно укрепил свои позиции. Он долгое время утверждал, что его меры жёсткой экономии и дефляции оправданы, если они приведут к отмене репараций, — и вот теперь этот замысел осуществился. Президент Гинденбург в восторге от такого исхода и вместе со своим ближайшим окружением превозносит дипломатическое мастерство Брюнинга. Тем временем острая необходимость привлечения <span style="color: #7A3C00;">национальной</span> <span style="color: #3E88B3;">оппозиции</span> в правительство ослабла, так как многие считают, что пик их поддержки уже пройден. ?]
 
@@ -124,8 +124,8 @@ tags: event
 @military_parity
 title: Но, конечно же, Шлейхер настаивает, чтобы мы потребовали военного паритета.
 subtitle: Это станет серьёзным предательством наших ценностей!
-view-if: schleicher_spd and president == "Hindenburg" and foreign_minister_party == "SPD"
-on-arrival: military_parity = 1 if eu or (west_relation >= 6 and reformist_strength >= left_strength + center_strength and soviet_relation == 0 and kpd_relation < 30); reichswehr_strength += 300 if military_parity; sh_strength -= 100 if military_parity; sa_strength -= 50 if military_parity; rb_strength -= 150 if military_parity; reichswehr_militancy += 2 if military_parity; workers_spd -= 6; old_middle_spd -= 2; new_middle_spd -= 4; rural_spd -= 2; catholics_spd -= 2; unemployed_spd -= 4; workers_kpd += 6; old_middle_ddp += 2; new_middle_ddp += 4; rural_ddp += 2; catholics_kpd += 2; unemployed_kpd += 4; old_middle_spd += 20 if military_parity; workers_nsdap -= 3 if military_parity; unemployed_nsdap -= 4 if military_parity; new_middle_nsdap -= 3 if military_parity; old_middle_nsdap -= 15 if military_parity; rural_nsdap -= 3 if military_parity; catholics_nsdap -= 3 if military_parity; left_dissent += 50; center_dissent += 40; labor_dissent += 30; reformist_dissent += 20; neorevisionist_dissent += 20; left_strength -= 20; center_strength -= 10; ddp_relation -= 5; dvp_relation += 15; dvp_left += 5; ddp_left += 10; ddp_cohesion += 5; lvp_relation += 5; new_middle_ddp += 10 if ddp_leader == "Lüders"; new_middle_spd -= 10 if ddp_leader == "Lüders"; workers_ddp += 5 if ddp_leader == "Lüders"; workers_spd -= 5 if ddp_leader == "Lüders"; west_relation -= 3; eu_progress -= 2
+view-if: schleicher_spd and president == "Гинденбург" and foreign_minister_party == "СДПГ"
+on-arrival: military_parity = 1 if eu or (west_relation >= 6 and reformist_strength >= left_strength + center_strength and soviet_relation == 0 and kpd_relation < 30); reichswehr_strength += 300 if military_parity; sh_strength -= 100 if military_parity; sa_strength -= 50 if military_parity; rb_strength -= 150 if military_parity; reichswehr_militancy += 2 if military_parity; workers_spd -= 6; old_middle_spd -= 2; new_middle_spd -= 4; rural_spd -= 2; catholics_spd -= 2; unemployed_spd -= 4; workers_kpd += 6; old_middle_ddp += 2; new_middle_ddp += 4; rural_ddp += 2; catholics_kpd += 2; unemployed_kpd += 4; old_middle_spd += 20 if military_parity; workers_nsdap -= 3 if military_parity; unemployed_nsdap -= 4 if military_parity; new_middle_nsdap -= 3 if military_parity; old_middle_nsdap -= 15 if military_parity; rural_nsdap -= 3 if military_parity; catholics_nsdap -= 3 if military_parity; left_dissent += 50; center_dissent += 40; labor_dissent += 30; reformist_dissent += 20; neorevisionist_dissent += 20; left_strength -= 20; center_strength -= 10; ddp_relation -= 5; dvp_relation += 15; dvp_left += 5; ddp_left += 10; ddp_cohesion += 5; lvp_relation += 5; new_middle_ddp += 10 if ddp_leader == "Людерс"; new_middle_spd -= 10 if ddp_leader == "Людерс"; workers_ddp += 5 if ddp_leader == "Людерс"; workers_spd -= 5 if ddp_leader == "Людерс"; west_relation -= 3; eu_progress -= 2
 
 Генерал Шлейхер потребовал, чтобы мы подняли вопрос о перевооружении, которое всё ещё ограничено Версальским договором. Однако премьер-министр <span style="color: #002654;">Франции</span> Эдуар Эррио ухватился за это как за признание того, что Германия на самом деле способна выплачивать репарации и просто направит высвободившиеся средства на перевооружение.
 
@@ -136,10 +136,10 @@ on-arrival: military_parity = 1 if eu or (west_relation >= 6 and reformist_stren
 
 @military_parity_bruning
 title: [? if not cvp_formed: Но, разумеется, <span style="color: #3E88B3;">**НННП**</span>, входящая в коалицию Брюнинга, требует права на перевооружение.  ?][? if cvp_formed: Но, разумеется, <span style="color: #3E88B3;">националисты</span> в <span style="color: #000000;">**[+ z_party_name +]**</span> требуют права на перевооружение. ?]
-view-if: bruning_time and (in_right_coalition or in_center_right_coalition or spd_toleration_right or cvp_formed) and president == "Hindenburg" and not cvp_reparations_left
+view-if: bruning_time and (in_right_coalition or in_center_right_coalition or spd_toleration_right or cvp_formed) and president == "Гинденбург" and not cvp_reparations_left
 on-arrival: west_relation -= 2; eu_progress -= 1; bruning_coalition_dissent += 2; dnvp_angry += 3; old_middle_dnvp -= 5; old_middle_dnf += 3; old_middle_nsdap += 3; rural_dnvp -= 3; rural_dnf += 3; workers_dnvp -= 2; workers_nsdap += 2; unemployed_dnvp -= 2; unemployed_nsdap += 2; catholics_dnvp -= 2; catholics_nsdap += 2
 
-Генерал Шлейхер, [? if president == "Hindenburg": the [? if not cvp_formed: <span style="color: #3E88B3;">**НННП**</span> ?][? if cvp_formed: <span style="color: #3E88B3;">националисты</span> ?], и президент Гинденбург  ?][? if president != "Hindenburg": и[? if not cvp_formed: <span style="color: #3E88B3;">**НННП**</span> ?][? if cvp_formed: <span style="color: #3E88B3;">националисты</span> ?] ?] оказали давление на Брюнинга, чтобы тот поднял вопрос о перевооружении, которое по-прежнему ограничено Версальским договором и ненавистной статьёй о «виновности в развязывании войны». Однако премьер-министр <span style="color: #002654;">Франции</span> Эдуар Эррио ухватился за это как за признание:  Германия якобы способна выплачивать репарации и просто направит любые высвобожденные средства на перевооружение.
+Генерал Шлейхер, [? if president == "Гинденбург": the [? if not cvp_formed: <span style="color: #3E88B3;">**НННП**</span> ?][? if cvp_formed: <span style="color: #3E88B3;">националисты</span> ?], и президент Гинденбург  ?][? if president != "Гинденбург": и[? if not cvp_formed: <span style="color: #3E88B3;">**НННП**</span> ?][? if cvp_formed: <span style="color: #3E88B3;">националисты</span> ?] ?] оказали давление на Брюнинга, чтобы тот поднял вопрос о перевооружении, которое по-прежнему ограничено Версальским договором и ненавистной статьёй о «виновности в развязывании войны». Однако премьер-министр <span style="color: #002654;">Франции</span> Эдуар Эррио ухватился за это как за признание:  Германия якобы способна выплачивать репарации и просто направит любые высвобожденные средства на перевооружение.
 
 У <span style="color: #002654;">французов</span>, которые и без того с опаской относились к правым элементам в кабинете Брюнинга, веские причины отклонить эти требования. Этот скандал лишь усилил напряжённость в правительстве Брюнинга.
 

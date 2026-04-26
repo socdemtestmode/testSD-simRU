@@ -55,7 +55,7 @@ new-page: true
 
 @thiel
 subtitle: Тиль — вызывающая споры фигура в партии, поскольку он придерживается более левых взглядов, чем Глатцель.
-unavailable-subtitle: [? if not glatzel_unlock: У рабочих нет влияния внутри <span style="color: #C0A054;">ННП</span>: партия не поддержит профсоюзного лидера. ?][? if glatzel_unlock: Тиля всё ещё считают слишком левым для партии: многие предпочитают поддержать его коллегу Глатцеля. ?]
+unavailable-subtitle: [? if not glatzel_unlock: У рабочих нет влияния внутри <span style="color: #C0A054;">ННП</span>: партия не поддержит профсоюзного лидера.  ?][? if glatzel_unlock: Тиля всё ещё считают слишком левым для партии: многие предпочитают поддержать его коллегу Глатцеля. ?]
 choose-if: thiel_unlock
 on-arrival: dvp_leader = "Thiel"; bourgeois_cooperation -= 3; dvp_left += 10; coalition_dissent -= 1 if in_grand_coalition; dvp_relation += 15; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_spd -= 2; new_middle_dvp += 6; new_middle_nsdap -= 3; new_middle_other -= 3; catholics_dvp += 3; catholics_other -= 3; old_middle_dvp -= 4; old_middle_dnvp += 2; old_middle_kvp += 2 if kvp_formed; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Moderate"; rural_kvp += 2 if kvp_formed; pro_republic += 5; ddp_left += 3; ddp_relation += 5
 face-image: img/portraits/thiel.jpg
@@ -67,7 +67,7 @@ face-image: img/portraits/thiel.jpg
 
 @glatzel
 subtitle: Глатцель, как бывший член <span style="color: #3E88B3;">**НННП**</span>, имеет националистический уклон.
-unavailable-subtitle: [? if not thiel_unlock: У рабочих нет влияния внутри <span style="color: #C0A054;">ННП</span>: партия не поддержит профсоюзного лидера. ?][? if thiel_unlock: Глатцель чрезмерно правый и националистический для партии с учетом нынешних настроений в стране. ?]
+unavailable-subtitle: [? if not thiel_unlock: У рабочих нет влияния внутри <span style="color: #C0A054;">ННП</span>: партия не поддержит профсоюзного лидера.  ?][? if thiel_unlock: Глатцель чрезмерно правый и националистический для партии с учетом нынешних настроений в стране. ?]
 choose-if: glatzel_unlock
 on-arrival: dvp_leader = "Glatzel"; bourgeois_cooperation += 1; dvp_right += 3; dvp_relation -= 5; workers_dvp += 6; workers_dnvp -= 2; workers_other -= 2; workers_nsdap -= 2; new_middle_dvp += 6; new_middle_nsdap -= 4; new_middle_other -= 2; catholics_dvp += 4; catholics_other -= 2; catholics_dnvp -= 2; old_middle_dvp += 2; old_middle_dnvp -= 2; rural_dvp -= 4; rural_dnvp += 2; rural_dnvp += 2 if dnvp_ideology == "Moderate"; rural_kvp += 2 if kvp_formed
 face-image: img/portraits/glatzel.jpg
@@ -80,7 +80,7 @@ achievement: neuer_nationalismus
 
 @kardorff
 subtitle: Кардорффу удаётся сохранить за Лютером пост председателя.
-unavailable-subtitle: [? if hugo_unlock: Правые промышленники блокируют восхождение Кардорффа и гарантируют дальнейший сдвиг партии вправо. ?][? if thiel_unlock or glatzel_unlock: Партия предпочитает нового и энергичного лидера, желательно не близкого к Лютеру. ?]
+unavailable-subtitle: [? if hugo_unlock: Правые промышленники блокируют восхождение Кардорффа и гарантируют дальнейший сдвиг партии вправо.  ?][? if thiel_unlock or glatzel_unlock: Партия предпочитает нового и энергичного лидера, желательно не близкого к Лютеру. ?]
 choose-if: kardorff_unlock
 on-arrival: dvp_leader = "Kardorff"; dvp_left += 3 if in_grand_coalition; liberal_cooperation += 3; bourgeois_cooperation += 3; dvp_relation += 5 if in_grand_coalition; new_middle_dvp += 4; catholics_dvp += 2; rural_dvp += 2; old_middle_dvp += 2; pro_republic += 3
 face-image: img/portraits/kardorff.jpg
@@ -102,4 +102,3 @@ face-image: img/portraits/hugo.jpg
 Его избрание знаменует решительный и, вероятно, необратимый сдвиг вправо[? if dvp_reform: , вплоть до отмены реформ Штреземана, касавшихся внутренней структуры партии ?], поскольку Гуго стремится обеспечить господство промышленников в <span style="color: #C0A054;">**ННП**</span> . Он открыто враждебен по отношению к партиям левее <span style="color: #C0A054;">**ННП**</span>. Гуго предпочитает союз с <span style="color: #3E88B3;">**НННП**</span> и даже с <span style="color: #7A3C00;">**НСДАП**</span>, чем даже рассмотрение сотрудничества с нами.
 
 Неудивительно, что связи Гуго с промышленниками и недостаток популярности — особенно на контрасте с Лютером — привели к падению рейтинга <span style="color: #C0A054;">**ННП**</span> по результатам опросов. Основную выгоду из этого извлекает <span style="color: #D3C24D;">**[+ ddp_name +]**</span>, которая смещается вправо, чтобы привлечь голоса разочарованного среднего класса.
-
