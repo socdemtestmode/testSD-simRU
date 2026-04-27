@@ -1,6 +1,6 @@
 title: Агитация
 new-page: true
-on-arrival: month_actions += 1; workers_spd = tutorial_workers_spd; tutorial_stage += 1
+on-arrival: month_actions += 1; tutorial_stage += 1
 max-visits: 2
 is-card: true
 card-image: img/flags.jpg
@@ -11,9 +11,9 @@ tags: party_tutorial_campaign_affairs
 
 Идёт ли сейчас избирательная кампания или нет, партия всё равно стремится расширить электорат. На ком нам сосредоточить агитацию?
 
-[? if tutorial_campaign = 1: В рамках обучения вам доступен один вариант. ?]
+[? if tutorial_stage = 1: В рамках обучения вам доступен один вариант. ?]
 
-[? if tutorial_campaign = 0: Теперь мы можем выбрать что-то другое. ?]
+[? if tutorial_stage = 2: Теперь мы можем выбрать что-то другое. ?]
 
 - @workers: Городской рабочий класс, наша традиционная опора.
 - @new_middle: «Новый средний класс»: госслужащие и „белые воротнички“.
@@ -24,7 +24,7 @@ tags: party_tutorial_campaign_affairs
 
 @workers
 subtitle: -1 ресурс. Вам лучше всего выбрать этот вариант. Рабочие действительно основа нашей партии.
-choose-if: resources >= 1 and tutorial_campaign = 1
+choose-if: resources >= 1 and tutorial_stage = 1
 unavailable-subtitle: В рамках обучения вам лучше выбрать другой вариант.
 on-arrival: tutorial_dissent = 1; workers_spd += 20*(1-dissent); workers_spd -= 1 if unemployed >= 20; workers_spd -= 1 if unemployed >= 30; workers_spd += 3*(1-dissent) if wtb_adopted = 1; resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1
 go-to: workers_tutorial_end
@@ -39,7 +39,7 @@ title: Конец обучению рабочих.
 
 @new_middle
 subtitle: -1 ресурс
-choose-if: resources >= 1 and tutorial_campaign = 0
+choose-if: resources >= 1 and tutorial_stage = 2
 unavailable-subtitle: В рамках обучения вам лучше выбрать другой вариант.
 on-arrival: new_middle_spd += 6*(1-dissent); new_middle_spd -= 4 if socialism <= 49 and peoples_party == 0; resources -= 1; peoples_party_support += 1;
 
@@ -49,7 +49,7 @@ on-arrival: new_middle_spd += 6*(1-dissent); new_middle_spd -= 4 if socialism <=
 
 @old_middle
 subtitle: -1 ресурс
-choose-if: resources >= 1 and tutorial_campaign = 0
+choose-if: resources >= 1 and tutorial_stage = 2
 unavailable-subtitle: В рамках обучения вам лучше выбрать другой вариант.
 on-arrival: old_middle_spd += 5*(1-dissent); resources -= 1; old_middle_spd -= 3 if nationalism >= 51 and peoples_party == 0; peoples_party_support += 1
 
@@ -59,7 +59,7 @@ on-arrival: old_middle_spd += 5*(1-dissent); resources -= 1; old_middle_spd -= 3
 
 @rural
 subtitle: -1 ресурс
-choose-if: resources >= 1 and tutorial_campaign = 0
+choose-if: resources >= 1 and tutorial_stage = 2
 unavailable-subtitle: В рамках обучения вам лучше выбрать другой вариант.
 on-arrival: rural_spd += 5*(1-dissent); rural_spd -= 3*(1-dissent) if peoples_party == 0; resources -= 1; peoples_party_support += 1; rural_spd += 3*(1-dissent) if rural_policy >= 2
 
@@ -69,7 +69,7 @@ on-arrival: rural_spd += 5*(1-dissent); rural_spd -= 3*(1-dissent) if peoples_pa
 
 @unemployed
 subtitle: -1 ресурс
-choose-if: resources >= 1 and tutorial_campaign = 0
+choose-if: resources >= 1 and tutorial_stage = 2
 unavailable-subtitle: В рамках обучения вам лучше выбрать другой вариант.
 on-arrival: unemployed_spd += 6*(1-dissent); resources -= 1; unemployed_spd -= 3 if welfare < 0; unemployed_spd -= 2 if unemployed >= 30; unemployed_spd += 6*(1-dissent) if wtb_adopted = 1; unemployed_spd += 3*(1-dissent) if welfare >= 2;
 
@@ -79,7 +79,7 @@ on-arrival: unemployed_spd += 6*(1-dissent); resources -= 1; unemployed_spd -= 3
 
 @catholics
 subtitle: -1 ресурс
-choose-if: resources >= 1 and tutorial_campaign = 0
+choose-if: resources >= 1 and tutorial_stage = 2
 unavailable-subtitle: В рамках обучения вам лучше выбрать другой вариант.
 on-arrival: catholics_spd += 6*(1-dissent); resources -= 1
 

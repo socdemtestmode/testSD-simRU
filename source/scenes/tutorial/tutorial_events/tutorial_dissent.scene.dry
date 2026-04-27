@@ -8,7 +8,7 @@ Q.center_dissent += 60;
 Q.reformist_dissent += 60;
 Q.left_dissent += 20;
 Q.labor_dissent += 10;
-Q.tutorial_campaign = 0; 
+
 !}
 max-visits: 1
 

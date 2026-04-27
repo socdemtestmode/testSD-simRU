@@ -55,7 +55,6 @@ go-to: end_tutorial if tutorial_stage = 3
 @party
 title: Партийные дела
 view-if: tutorial_stage != 2
-on-arrival: tutorial_campaign = 1 if tutorial_stage = 0; tutorial_campaign = 0 if tutorial_stage = 1;
 card-image: img/Vorwaerts_nr_1.png
 is-deck: true
 
