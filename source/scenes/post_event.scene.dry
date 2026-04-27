@@ -5171,7 +5171,11 @@ Q.has_event = 0;
 // check if there are any cards in #event, and then go to main if not.
 var scene = this.game.scenes['post_event.events_choice'];
 var choices = this._compileChoices(scene);
-if (choices && choices[0].title != "Продолжить...") {
+if (choices && choices[0] && 
+    choices[0].title !== "Продолжить…" && 
+    choices[0].title !== "Продолжить..." && 
+    choices[0].title !== "Continue..." && 
+    choices[0].title !== "Continue…") {
     Q.has_event = 1;
 } else {
     Q.has_event = 0;
@@ -5191,7 +5195,11 @@ Q.has_tutorial_even = 0;
 // check if there are any cards in #tutorial_event, and then go to main if not.
 var scene = this.game.scenes['post_event.tutorial_events_choice'];
 var choices = this._compileChoices(scene);
-if (choices && choices[0].title != "Продолжить...") {
+if (choices && choices[0] && 
+    choices[0].title !== "Продолжить…" && 
+    choices[0].title !== "Продолжить..." && 
+    choices[0].title !== "Continue..." && 
+    choices[0].title !== "Continue…") {
     Q.has_tutorial_event = 1;
 } else {
     Q.has_tutorial_event = 0;
