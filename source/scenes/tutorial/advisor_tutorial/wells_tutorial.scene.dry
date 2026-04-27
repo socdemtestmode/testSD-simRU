@@ -36,11 +36,11 @@ if (Q.difficulty >= 0) {
 @party_discipline
 title: Партийная дисциплина
 subtitle: Уменьшить разногласия в партии.
-choose-if: advisor_action_timer = 0 and tutorial_stage = 1
+choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?] 
 on-arrival: tutorial_stage += 1; advisor_action_timer = 6; left_dissent -= 15; labor_dissent -= 30; center_dissent -= 50; reformist_dissent -= 50; neorevisionist_dissent -= 5;
 
-Мы укрепили партийную дисциплину, чтобы уменьшить недовольство во всех фракциях. Теперь уровень раскола в партии [+ dissent_percent : dissent +]. Это позволит эффективнее осуществлять большую часть действий.
+Мы укрепили партийную дисциплину, чтобы уменьшить недовольство во всех фракциях. Теперь уровень раскола в партии cнизится. Это позволит эффективнее осуществлять большую часть действий.
 
 
 @emergency_fundraising
