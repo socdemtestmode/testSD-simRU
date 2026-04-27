@@ -64,8 +64,8 @@ is-deck: true
 
 @end_tutorial
 title: Конец
-on-arrival: started = 0; tutorial_started = 0;
+on-arrival: started = 0; tutorial_started = 0
 
 Обучениие окончено. Теперь Вы готовы к игре.
 
-@root: Перейти к игре.
+- @root: Перейти к игре.

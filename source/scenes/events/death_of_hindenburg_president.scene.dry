@@ -945,7 +945,7 @@ on-arrival: chancellor = "Зельдте"; chancellor_party = "НННП"
 Благодаря победе Гергта — одержанной без поддержки <span style="color: #7A3C00;">нацистов</span> — он не обязан назначать [+ nsdap_candidate +]а канцлером. Будучи убеждённым <span style="color: #808080;">монархистом</span>, Гергт, как ожидается, предпримет шаги к реставрации Гогенцоллернов. В отличие от Гинденбурга, он гораздо более открыто выражает свои политические пристрастия и намерен не допускать <span style="color: #c00000;">**СДПГ**</span> в правительство в течение всего своего семилетнего срока.
 
 
-@Леттов-Форбек_victory
+@Lettow_Forbeck_victory
 
 К сожалению, президентом избран Пауль фон Леттов-Форбек, <span style="color: #3E88B3;">националист</span>, мало чем отличающийся от Гинденбурга. Возвращение в правительство под его руководством — практически невозможно, его камарилья этого точно не допустит. Будем надеяться, что его личная неприязнь к <span style="color: #7A3C00;">нацистам</span> не позволит им войти в правительство.
 
@@ -1004,7 +1004,7 @@ on-arrival: constitutional_crisis = 1
 
 
 @election_end
-go-to: eckener_win if winner = "Эккенер"; juchacz_win if winner = "Юхач"; bundesrepublik_win if winner = "Шумахер" or winner = "Аденауэр"; hitler_victory if winner = "Гитлер" or winner = "Геринг" or winner = "Геринг"; seldte_victory if winner = "Зельдте"; hergt_victory_nazi if winner = "Гергт" and nsdap_candidate == "Гергт"; hergt_victory_lite if winner = "Гергт" and nsdap_candidate != "Гергт"; Леттов-Форбек_victory if winner = "Леттов-Форбек"; munzenberg_victory if winner = "Munzenberg" or winner = "Мюнценберг"; thalmann_victory if winner = "Thalmann" or winner = "Тельман"; nazis_lose if winner = "Браун" or winner = "Гесслер" or winner = "Хойс" or winner = "Bruning"; cultural_victory if winner = "Осецкий" or winner = "Манн"; einstein_victory if winner = "Эйнштейн"
+go-to: eckener_win if winner = "Эккенер"; juchacz_win if winner = "Юхач"; bundesrepublik_win if winner = "Шумахер" or winner = "Аденауэр"; hitler_victory if winner = "Гитлер" or winner = "Геринг" or winner = "Геринг"; seldte_victory if winner = "Зельдте"; hergt_victory_nazi if winner = "Гергт" and nsdap_candidate == "Гергт"; hergt_victory_lite if winner = "Гергт" and nsdap_candidate != "Гергт"; Lettow_Forbeck_victory if winner = "Леттов-Форбек"; munzenberg_victory if winner = "Munzenberg" or winner = "Мюнценберг"; thalmann_victory if winner = "Thalmann" or winner = "Тельман"; nazis_lose if winner = "Браун" or winner = "Гесслер" or winner = "Хойс" or winner = "Bruning"; cultural_victory if winner = "Осецкий" or winner = "Манн"; einstein_victory if winner = "Эйнштейн"
 on-arrival: {!
 Q.president = Q.winner;
 if (Q.president == "Bruning") Q.president = "Брюнинг";
