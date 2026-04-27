@@ -26,15 +26,14 @@ tags: party_tutorial_campaign_affairs
 subtitle: -1 ресурс. Вам лучше всего выбрать этот вариант. Рабочие действительно основа нашей партии.
 choose-if: resources >= 1 and tutorial_campaign = 1
 unavailable-subtitle: В рамках обучения вам лучше выбрать другой вариант.
-on-arrival: tutorial_dissent = 1; workers_spd += 10*(1-dissent); workers_spd -= 1 if unemployed >= 20; workers_spd -= 1 if unemployed >= 30; workers_spd += 3*(1-dissent) if wtb_adopted = 1; resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1
-on-departure: tutorial_workers_dynamic = (workers_spd-tutorial_workers_spd)
+on-arrival: tutorial_dissent = 1; workers_spd += 20*(1-dissent); workers_spd -= 1 if unemployed >= 20; workers_spd -= 1 if unemployed >= 30; workers_spd += 3*(1-dissent) if wtb_adopted = 1; resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1
 go-to: workers_tutorial_end
 
 
 @workers_tutorial_end
 title: Конец обучению рабочих.
 
-Мы усилили агитацию среди рабочих. Теперь нас поддерживает на [+ tutorial_workers_dynamic +]% больше рабочих, чем раньше. Высокий уровень безработицы и крупномасштабные экономические реформы в их пользу увеличат их поддержку.
+Мы усилили агитацию среди рабочих. Теперь нас поддерживает больше рабочих, чем раньше. Высокий уровень безработицы и крупномасштабные экономические реформы в их пользу увеличат их поддержку.
 
 
 
