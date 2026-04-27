@@ -171,7 +171,7 @@ if (Q.lvp_ideology == "Правые") {
 }
 
 if (Q.lvp_relation >= 65) {
-    Q.luther_endorsed_candidate = "Theodor Heuss"
+    Q.luther_endorsed_candidate = "Теодор Хойс"
 }
 
 if (((Q.curtius_resign_lvp) || (Q.curtius_banking_crisis && Q.banking_crisis_seen)) && Q.luther_endorsed_candidate == "Julius Curtius") {
@@ -184,7 +184,7 @@ if (Q.luther_endorsed_candidate == "Eduard Dingeldey") {
     Q.curtius_points += 0.5;
 } else if (Q.luther_endorsed_candidate == "Hermann Dietrich") {
     Q.dietrich_points += 0.5;
-} else if (Q.luther_endorsed_candidate == "Theodor Heuss") {
+} else if (Q.luther_endorsed_candidate == "Теодор Хойс") {
     Q.heuss_points += 0.5;
 }
 

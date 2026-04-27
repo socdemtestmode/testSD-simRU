@@ -17,7 +17,7 @@ Q.adenauer_run_1934 = 1;
 Q.bruning_run_1934 = 0;
 Q.seldte_run_1934 = 1;
 Q.hergt_run_1934 = 0;
-Q.lettow_vorbeck_run_1934 = 0;
+Q.Леттов-Форбек_run_1934 = 0;
 Q.hugenberg_run_1934 = 0;
 
 Q.president = "Бумке (и.о.)";
@@ -40,13 +40,13 @@ if ((Q.ddp_ideology == "Левые" || Q.ddp_ideology == "Умеренные" &&
     Q.heuss_run_1934 = 1;
     Q.gessler_run_1934 = 0;
     Q.lib_candidate_1934 = "Хойс";
-    Q.lib_candidate_1934_disp = "Theodor Heuss";
+    Q.lib_candidate_1934_disp = "Теодор Хойс";
 }
 
 if (Q.cvp_formed) {
-    Q.reactionary_candidate_1934 = "Lettow_Vorbeck";
-    Q.reactionary_candidate_1934_disp = "Paul von Lettow_Vorbeck";
-    Q.lettow_vorbeck_run_1934 = 1;
+    Q.reactionary_candidate_1934 = "Леттов-Форбек";
+    Q.reactionary_candidate_1934_disp = "Пауль фон Леттов-Форбек";
+    Q.Леттов-Форбек_run_1934 = 1;
 
     Q.center_running = 0;
     Q.seldte_run_1934 = 0;
@@ -65,13 +65,13 @@ if (Q.dnvp_ideology == "Умеренные" && !Q.cvp_formed) {
     } else {
         Q.dnf_candidate = Q.nsdap_candidate;
     }
-    Q.reactionary_candidate_1934 = "Хергт";
-    Q.reactionary_candidate_1934_disp = "Oskar Hergt";
+    Q.reactionary_candidate_1934 = "Гергт";
+    Q.reactionary_candidate_1934_disp = "Оскар Гергт";
 }
 
 if (Q.lautenbach_adopted && !Q.cvp_formed) {
     Q.center_candidate_1934 = "Брюнинг";
-    Q.center_candidate_1934_disp = "Heinrich Brüning";
+    Q.center_candidate_1934_disp = "Генрих Брюнинг";
     Q.bruning_run_1934 = 1;
     Q.adenauer_run_1934 = 0;
     Q.lib_running = 0;
@@ -101,7 +101,7 @@ if (Q.reactionary_candidate_1934 == "Зельдте" && (Q.center_candidate_1934
 
 Q.sapd_candidate = Q.kpd_candidate;
 
-if (Q.reactionary_candidate_1934 == "Lettow_Vorbeck") Q.reactionary_candidate_1934 = "Леттов-Форбек";
+if (Q.reactionary_candidate_1934 == "Леттов-Форбек") Q.reactionary_candidate_1934 = "Леттов-Форбек";
 
 Q.is_unity_candidate = 0;
 !}
@@ -140,7 +140,7 @@ go-to: candidate_menu
 
 [? if hitler_deported or hitler_dead or (not hitler_citizen and not hitler_deported and not hitler_dead) : Поскольку Гитлер не будет участвовать, кандидатом от <span style="color: #7A3C00;">нацистов</span> станет Герман Геринг.  ?] Возможно, это станет лебединой песней <span style="color: #7A3C00;">нацистов</span>: внутренние противоречия в партии обостряются, и она отчаянно нуждается в средствах.
 
-[? if seldte_run_1934: <span style="color: #3E88B3;">**НННП**</span> выдвинут Франца Зельдте, лидера <span style="color: #3E88B3;">**Стального Шлема**</span>. Его поддержат многие из наиболее правых сторонников Гинденбурга. Они сотрудничают с <span style="color: #7A3C00;">нацистами</span> теснее, чем прежде: ожидается, что во втором туре <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правые</span> партии объединятся в единый анти<span style="color: #000000;">респ</span><span style="color: #DD0000;">убл</span><span style="color: #FFCC00;">иканский</span> фронт. [? if kvp_formed and kvp_candidate == center_candidate_1934: Однако <span style="color: #0087DC;">**КНП**</span>, недовольная таким раскладом, решила поддержать того, кого [? if z_party_name != "ХНП": выдвинет <span style="color: #000000;">Центр</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?]. ?]  ?][? if hergt_run_1934: Кандидатом от <span style="color: #3E88B3;">**НННП**</span> станет Оскар Гергт,[? if dnvp_leader != "Хергт": &nbsp;бывший ?] лидер <span style="color: #3E88B3;">**НННП**</span> и бывший вице-канцлер. Его поддержат многие из самых правых сторонников Гинденбурга. Они сотрудничают с <span style="color: #7A3C00;">нацистами</span> теснее, чем прежде: ожидается, что во втором туре <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правые</span> партии объединятся в единый анти<span style="color: #000000;">рес</span><span style="color: #DD0000;">публ</span><span style="color: #FFCC00;">иканский</span> фронт.  ?][? if cvp_formed: <span style="color: #000000;">**[+ z_party_name +]**</span> единодушно выступили за выдвижение кандидатуры генерала Леттов-Форбека, героя войны, который некогда состоял в <span style="color: #3E88B3;">**НННП**</span>. Несмотря на первоначальное нежелание, популярный генерал согласился на выдвижение, тем самым заявив о намерении сохранить наследие Гинденбурга.  ?]
+[? if seldte_run_1934: <span style="color: #3E88B3;">**НННП**</span> выдвинут Франца Зельдте, лидера <span style="color: #3E88B3;">**Стального Шлема**</span>. Его поддержат многие из наиболее правых сторонников Гинденбурга. Они сотрудничают с <span style="color: #7A3C00;">нацистами</span> теснее, чем прежде: ожидается, что во втором туре <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правые</span> партии объединятся в единый анти<span style="color: #000000;">респ</span><span style="color: #DD0000;">убл</span><span style="color: #FFCC00;">иканский</span> фронт. [? if kvp_formed and kvp_candidate == center_candidate_1934: Однако <span style="color: #0087DC;">**КНП**</span>, недовольная таким раскладом, решила поддержать того, кого [? if z_party_name != "ХНП": выдвинет <span style="color: #000000;">Центр</span> ?][? if z_party_name == "ХНП": <span style="color: #000000;">**ХНП**</span> ?]. ?]  ?][? if hergt_run_1934: Кандидатом от <span style="color: #3E88B3;">**НННП**</span> станет Оскар Гергт,[? if dnvp_leader != "Гергт": &nbsp;бывший ?] лидер <span style="color: #3E88B3;">**НННП**</span> и бывший вице-канцлер. Его поддержат многие из самых правых сторонников Гинденбурга. Они сотрудничают с <span style="color: #7A3C00;">нацистами</span> теснее, чем прежде: ожидается, что во втором туре <span style="color: #7A3C00;">ультра</span><span style="color: #3E88B3;">правые</span> партии объединятся в единый анти<span style="color: #000000;">рес</span><span style="color: #DD0000;">публ</span><span style="color: #FFCC00;">иканский</span> фронт.  ?][? if cvp_formed: <span style="color: #000000;">**[+ z_party_name +]**</span> единодушно выступили за выдвижение кандидатуры генерала Леттов-Форбека, героя войны, который некогда состоял в <span style="color: #3E88B3;">**НННП**</span>. Несмотря на первоначальное нежелание, популярный генерал согласился на выдвижение, тем самым заявив о намерении сохранить наследие Гинденбурга.  ?]
 
 [? if not seldte_run_1934: Альфреду Гугенбергу не нужен [+ reactionary_candidate_1934 +] — он предпочел бы баллотироваться сам. Однако его финансовое положение подорвано: он в одиночку финансировал [? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Умеренные": <span style="color: #003755;">**НФГ**</span> ?] на протяжении всей экономической депрессии, которая также подорвала доходы его медиаимперии. [? if hugenberg_run_1934: Однако он наскрёб остатки своего личного состояния, чтобы начать президентскую кампанию. Он надеется использовать свою поддержку во втором туре как рычаг для выбивания уступок. Его цель: [+ reactionary_candidate_1934 +]. ?][? if not hugenberg_run_1934: Стремясь сохранить как платёжеспособность своей партии, так и остатки собственного состояния, он воздержался от выдвижения своей кандидатуры и от поддержки кого-либо — к большому разочарованию коллег.  ?]  ?]
 
@@ -520,31 +520,31 @@ set-jump: post_election
 @post_election
 on-arrival: {!
 var candidate_descs = {
-Hitler: "Adolf Hitler of the <span style='color: #7A3C00; font-weight: bold;'>NSDAP</span>",
-Goring: "Hermann Göring of the <span style='color: #7A3C00; font-weight: bold;'>NSDAP</span>",
-Seldte: "Franz Seldte of the <span style='color: #3E88B3; font-weight: bold;'>Stahlhelm</span>/<span style='color: #3E88B3; font-weight: bold;'>DNVP</span>",
-Hergt: "Oskar Hergt of the <span style='color: #3E88B3; font-weight: bold;'>DNVP</span>",
-Eckener: "the independent <span style='color: #000000;'>rep</span><span style='color: #DD0000;'>ubl</span><span style='color: #FFCC00;'>ican</span> candidate Hugo Eckener",
-Adenauer: "Konrad Adenauer of the <span style='color: #000000;'>Center Party</span>",
-Bruning: "Heinrich Brüning of the <span style='color: #000000;'>Center Party</span>",
-Lettow_Vorbeck: "Lettow-Vorbeck of the <span style='color: #000000; font-weight: bold;'>CVP</span>",
-Gessler: "Otto Gessler, independent formerly of the <span style='color: #D3C24D; font-weight: bold;'>DDP</span>",
-Heuss: "Theodor Heuss of the <span style='color: #D3C24D; font-weight: bold;'>DDP</span>",
-Thalmann: "Ernst Thälmann of the <span style='color: #700000; font-weight: bold;'>KPD</span>",
-Munzenberg: "Willi Münzenberg of the <span style='color: #700000; font-weight: bold;'>KPD</span>",
-Braun: "Otto Braun of the <span style='color: #c00000; font-weight: bold;'>SPD</span>",
-Schumacher: "Kurt Schumacher of the <span style='color: #c00000; font-weight: bold;'>SPD</span>",
-Juchacz: "Marie Juchacz of the <span style='color: #c00000; font-weight: bold;'>SPD</span>",
-Einstein: "Albert Einstein, scientist",
-Mann: "Heinrich Mann, writer",
-Ossietzky: "Carl von Ossietzky, journalist"
+Гитлер: "Адольф Гитлер от <span style='color: #7A3C00; font-weight: bold;'>НСДАП</span>",
+Геринг: "Герман Геринг от <span style='color: #7A3C00; font-weight: bold;'>НСДАП</span>",
+Зельдте: "Франц Зельдте от <span style='color: #3E88B3; font-weight: bold;'>Штальхельма</span>/<span style='color: #3E88B3; font-weight: bold;'>ННП</span>",
+Гергт: "Оскар Гергт от <span style='color: #3E88B3; font-weight: bold;'>ННП</span>",
+Эккенер: "независимый <span style='color: #000000;'>респ</span><span style='color: #DD0000;'>ублик</span><span style='color: #FFCC00;'>анский</span> кандидат Гуго Эккенер",
+Аденауэр: "Конрад Аденауэр от <span style='color: #000000;'>Партии Центра</span>",
+Брюнинг: "Генрих Брюнинг от <span style='color: #000000;'>Партии Центра</span>",
+Леттов-Форбек: "Леттов-Форбек от <span style='color: #000000; font-weight: bold;'>ХНП</span>",
+Гесслер: "Отто Гесслер, независимый кандидат, ранее от <span style='color: #D3C24D; font-weight: bold;'>НДП</span>",
+Хойс: "Теодор Хойс от <span style='color: #D3C24D; font-weight: bold;'>НДП</span>",
+Тельман: "Эрнст Тельман от <span style='color: #700000; font-weight: bold;'>КПГ</span>",
+Мюнценберг: "Вилли Мюнценберг от <span style='color: #700000; font-weight: bold;'>КПГ</span>",
+Браун: "Отто Браун от <span style='color: #c00000; font-weight: bold;'>СДПГ</span>",
+Шумахер: "Курт Шумахер от <span style='color: #c00000; font-weight: bold;'>СДПГ</span>",
+Юхач: "Мария Юхач от <span style='color: #c00000; font-weight: bold;'>СДПГ</span>",
+Эйнштейн: "Альберт Эйнштейн, ученый",
+Манн: "Генрих Манн, писатель",
+Осецкий: "Карл фон Осецкий, журналист"
 }
 if (Q.z_party_name == "ХНП") {
-    candidate_descs.Adenauer = "Konrad Adenauer of the <span style='color: #000000; font-weight: bold;'>CVP</span>";
-    candidate_descs.Bruning = "Heinrich Brüning of the <span style='color: #000000; font-weight: bold;'>CVP</span>";
+    candidate_descs.Adenauer = "Конрад Аденауэр от <span style='color: #000000; font-weight: bold;'>ХНП</span>";
+    candidate_descs.Bruning = "Генрих Брюнинг от <span style='color: #000000; font-weight: bold;'>ХНП</span>";
 }
 if (Q.lvp_formed) {
-    candidate_descs.Heuss = "Theodor Heuss of the <span style='color: #FFCC00; font-weight: bold;'>LVP</span>";
+    candidate_descs.Heuss = "Теодор Хойс от <span style='color: #FFCC00; font-weight: bold;'>ЛНП</span>";
 }
 
 if (typeof Q.last_round_candidates === 'undefined') {
@@ -562,7 +562,7 @@ for (var i = 0; i < Q.parties.length; i++) {
     var supported_candidate = Q[party + '_candidate'];
     //console.log(party, supported_candidate);
     supported_candidate = supported_candidate.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    if (supported_candidate == "Леттов-Форбек") supported_candidate = "Lettow_Vorbeck";
+    if (supported_candidate == "Леттов-Форбек") supported_candidate = "Леттов-Форбек";
     Q[supported_candidate + '_running'] = 1;
     if (!current_round_candidates.includes(supported_candidate)) {
         current_round_candidates.push(supported_candidate);
@@ -660,7 +660,7 @@ if (Q.Adenauer_votes || Q.Bruning_votes) {
     Q.center_running = 0;
 }
 
-if (Q.Hergt_votes || Q.Seldte_votes || Q.Lettow_Vorbeck_votes) {
+if (Q.Hergt_votes || Q.Seldte_votes || Q.Леттов-Форбек_votes) {
     Q.reactionary_running = 1;
     if (Q.Hergt_votes_disp) {
         Q.Reactionary_votes = Q.Hergt_votes;
@@ -670,9 +670,9 @@ if (Q.Hergt_votes || Q.Seldte_votes || Q.Lettow_Vorbeck_votes) {
         Q.Reactionary_votes = Q.Seldte_votes;
         Q.Reactionary_votes_disp = Q.Seldte_votes_disp;
     }
-    if (Q.Lettow_Vorbeck_votes) {
-        Q.Reactionary_votes = Q.Lettow_Vorbeck_votes;
-        Q.Reactionary_votes_disp = Q.Lettow_Vorbeck_votes;
+    if (Q.Леттов-Форбек_votes) {
+        Q.Reactionary_votes = Q.Леттов-Форбек_votes;
+        Q.Reactionary_votes_disp = Q.Леттов-Форбек_votes;
     }
 } else {
     Q.reactionary_running = 0;
@@ -945,7 +945,7 @@ on-arrival: chancellor = "Зельдте"; chancellor_party = "НННП"
 Благодаря победе Гергта — одержанной без поддержки <span style="color: #7A3C00;">нацистов</span> — он не обязан назначать [+ nsdap_candidate +]а канцлером. Будучи убеждённым <span style="color: #808080;">монархистом</span>, Гергт, как ожидается, предпримет шаги к реставрации Гогенцоллернов. В отличие от Гинденбурга, он гораздо более открыто выражает свои политические пристрастия и намерен не допускать <span style="color: #c00000;">**СДПГ**</span> в правительство в течение всего своего семилетнего срока.
 
 
-@lettow_vorbeck_victory
+@Леттов-Форбек_victory
 
 К сожалению, президентом избран Пауль фон Леттов-Форбек, <span style="color: #3E88B3;">националист</span>, мало чем отличающийся от Гинденбурга. Возвращение в правительство под его руководством — практически невозможно, его камарилья этого точно не допустит. Будем надеяться, что его личная неприязнь к <span style="color: #7A3C00;">нацистам</span> не позволит им войти в правительство.
 
@@ -1004,7 +1004,7 @@ on-arrival: constitutional_crisis = 1
 
 
 @election_end
-go-to: eckener_win if winner = "Эккенер"; juchacz_win if winner = "Юхач"; bundesrepublik_win if winner = "Шумахер" or winner = "Аденауэр"; hitler_victory if winner = "Гитлер" or winner = "Геринг" or winner = "Геринг"; seldte_victory if winner = "Зельдте"; hergt_victory_nazi if winner = "Хергт" and nsdap_candidate == "Хергт"; hergt_victory_lite if winner = "Хергт" and nsdap_candidate != "Хергт"; lettow_vorbeck_victory if winner = "Леттов-Форбек"; munzenberg_victory if winner = "Munzenberg" or winner = "Мюнценберг"; thalmann_victory if winner = "Thalmann" or winner = "Тельман"; nazis_lose if winner = "Браун" or winner = "Гесслер" or winner = "Хойс" or winner = "Bruning"; cultural_victory if winner = "Осецкий" or winner = "Манн"; einstein_victory if winner = "Эйнштейн"
+go-to: eckener_win if winner = "Эккенер"; juchacz_win if winner = "Юхач"; bundesrepublik_win if winner = "Шумахер" or winner = "Аденауэр"; hitler_victory if winner = "Гитлер" or winner = "Геринг" or winner = "Геринг"; seldte_victory if winner = "Зельдте"; hergt_victory_nazi if winner = "Гергт" and nsdap_candidate == "Гергт"; hergt_victory_lite if winner = "Гергт" and nsdap_candidate != "Гергт"; Леттов-Форбек_victory if winner = "Леттов-Форбек"; munzenberg_victory if winner = "Munzenberg" or winner = "Мюнценберг"; thalmann_victory if winner = "Thalmann" or winner = "Тельман"; nazis_lose if winner = "Браун" or winner = "Гесслер" or winner = "Хойс" or winner = "Bruning"; cultural_victory if winner = "Осецкий" or winner = "Манн"; einstein_victory if winner = "Эйнштейн"
 on-arrival: {!
 Q.president = Q.winner;
 if (Q.president == "Bruning") Q.president = "Брюнинг";

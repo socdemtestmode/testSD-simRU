@@ -38,9 +38,9 @@ title: Партийная дисциплина
 subtitle: Уменьшить разногласия в партии.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяцев до следующего действия советника. ?] 
-on-arrival: advisor_action_timer = 6; left_dissent -= 5; labor_dissent -= 10; center_dissent -= 10; reformist_dissent -= 10; neorevisionist_dissent -= 5; dissent -= 0.3;
+on-arrival: tutorial_stage += 1; advisor_action_timer = 6; left_dissent -= 15; labor_dissent -= 30; center_dissent -= 50; reformist_dissent -= 50; neorevisionist_dissent -= 5;
 
-Мы укрепили партийную дисциплину, чтобы уменьшить недовольство во всех фракциях. Теперь уровень раскола в партии [+ dissent_percent : dissent +]. Это позволит эффективно осуществлять большую часть действий.
+Мы укрепили партийную дисциплину, чтобы уменьшить недовольство во всех фракциях. Теперь уровень раскола в партии [+ dissent_percent : dissent +]. Это позволит эффективнее осуществлять большую часть действий.
 
 
 @emergency_fundraising

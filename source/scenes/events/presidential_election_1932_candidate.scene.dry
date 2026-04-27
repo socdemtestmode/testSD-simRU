@@ -19,7 +19,7 @@ if (Q.hindenburg_run) {
 Q.communist_candidate_1932 = "Тельман";
 
 Q.spd_candidate_1932_disp = "Otto Braun";
-if (Q.hindenburg_run) Q.reactionary_candidate_1932_disp = "Paul von Hindenburg";
+if (Q.hindenburg_run) Q.reactionary_candidate_1932_disp = "Пауль фон Гинденбург";
 Q.communist_candidate_1932_disp = "Ernst Thälmann";
 
 if (Q.nsdap_candidate_1932) {
@@ -185,11 +185,11 @@ if (Q.reactionary_candidate_1932_count > 0) {
         Q.bruning_run = 1; 
         if (Q.reactionary_candidate_1932) {
             Q.secondary_reactionary_candidate_1932 = "Брюнинг";
-            Q.secondary_reactionary_candidate_1932_disp = "Heinrich Brüning";
+            Q.secondary_reactionary_candidate_1932_disp = "Генрих Брюнинг";
         }
         if (!Q.reactionary_candidate_1932) {
             Q.reactionary_candidate_1932 = "Брюнинг";
-            Q.reactionary_candidate_1932_disp = "Heinrich Brüning";
+            Q.reactionary_candidate_1932_disp = "Генрих Брюнинг";
         }
         Q.reactionary_candidate_1932_count -= 1;
     }
@@ -198,11 +198,11 @@ if (Q.reactionary_candidate_1932_count > 0) {
         Q.stegerwald_run = 1; 
         if (Q.reactionary_candidate_1932) {
             Q.secondary_reactionary_candidate_1932 = "Штегервальд";
-            Q.secondary_reactionary_candidate_1932_disp = "Adam Stegerwald";
+            Q.secondary_reactionary_candidate_1932_disp = "Адам Штегервальд";
         }
         if (!Q.reactionary_candidate_1932) {
             Q.reactionary_candidate_1932 = "Штегервальд";
-            Q.reactionary_candidate_1932_disp = "Adam Stegerwald";
+            Q.reactionary_candidate_1932_disp = "Адам Штегервальд";
         }
         Q.reactionary_candidate_1932_count -= 1;
     }
@@ -211,11 +211,11 @@ if (Q.reactionary_candidate_1932_count > 0) {
         Q.vorbeck_run = 1; 
         if (Q.reactionary_candidate_1932) {
             Q.secondary_reactionary_candidate_1932 = "Леттов-Форбек";
-            Q.secondary_reactionary_candidate_1932_disp = "Paul von Lettow-Vorbeck";
+            Q.secondary_reactionary_candidate_1932_disp = "Пауль фон Леттов-Форбек";
         }
         if (!Q.reactionary_candidate_1932) {
             Q.reactionary_candidate_1932 = "Леттов-Форбек";
-            Q.reactionary_candidate_1932_disp = "Paul von Lettow-Vorbeck";
+            Q.reactionary_candidate_1932_disp = "Пауль фон Леттов-Форбек";
         }
         Q.reactionary_candidate_1932_count -= 1;
     }
@@ -224,11 +224,11 @@ if (Q.reactionary_candidate_1932_count > 0) {
         Q.westarp_run = 1; 
         if (Q.reactionary_candidate_1932) {
             Q.secondary_reactionary_candidate_1932 = "Вестарп";
-            Q.secondary_reactionary_candidate_1932_disp = "Kuno von Westarp";
+            Q.secondary_reactionary_candidate_1932_disp = "Куно фон Вестарп";
         }
         if (!Q.reactionary_candidate_1932) {
             Q.reactionary_candidate_1932 = "Вестарп";
-            Q.reactionary_candidate_1932_disp = "Kuno von Westarp";
+            Q.reactionary_candidate_1932_disp = "Куно фон Вестарп";
         }
         Q.reactionary_candidate_1932_count -= 1;
     }
@@ -933,7 +933,7 @@ if ((Q.lib_drop_out && Q.z_drop_out || Q.z_drop_out && !Q.secondary_reactionary_
     Q.vorbeck_run = 1;
     Q.vorbeck_fallback = 1;
     Q.reactionary_candidate_1932 = "Леттов-Форбек";
-    Q.reactionary_candidate_1932_disp = "Paul von Lettow-Vorbeck";
+    Q.reactionary_candidate_1932_disp = "Пауль фон Леттов-Форбек";
     Q.secondary_reactionary_candidate_1932 = 0;
     Q.secondary_reactionary_candidate_1932_disp = 0;
     Q.z_choice = Q.reactionary_candidate_1932;

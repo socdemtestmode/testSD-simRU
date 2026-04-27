@@ -83,7 +83,7 @@ on-arrival: {!
     if (Q.dnvp_leader == "Вестарп") {
         Q.natcons_fkp = Q.natcons_fkp*2;
     }
-    if (Q.dnvp_leader == "Хергт") {
+    if (Q.dnvp_leader == "Гергт") {
         Q.natcons_fkp = Q.natcons_fkp*1.5;
         Q.pp_conservatives_fkp = Q.natcons_fkp*1.5;
     }
@@ -121,7 +121,7 @@ on-arrival: {!
     Q.westarp_points_fkp = Q.agrarians_fkp*0.6 + Q.natcons_fkp*0.4;
     Q.hergt_points_fkp = Q.agrarians_fkp*0.4 + Q.natcons_fkp*0.6;
     Q.treviranus_points_fkp = Q.pp_conservatives_fkp;
-    Q.winner_fkp = "Хергт";
+    Q.winner_fkp = "Гергт";
     if (Q.glatzel_points_fkp > Q.raumer_points_fkp && Q.pro_republic > 65) {
         Q.glatzel_points_fkp += Q.raumer_points_fkp;
         Q.raumer_points_fkp = 0;
@@ -150,7 +150,7 @@ on-arrival: {!
         }
     } else {
         if ((Q.raumer_points + Q.treviranus_points_fkp + Q.glatzel_points_fkp)*1.1 >= Q.hergt_points_fkp + Q.westarp_points_fkp || Q.hergt_points_fkp > Q.westarp_points_fkp) {
-            Q.winner_fkp = "Хергт";
+            Q.winner_fkp = "Гергт";
         } else {
             Q.winner_fkp = "Вестарп";
         }
@@ -227,8 +227,8 @@ face-image: img/portraits/Treviranus.jpg
 
 @hergt
 subtitle: Член старой гвардии [? if dnvp_ideology == "Радикалы": <span style="color: #3E88B3;">**НННП**</span> ?][? if dnvp_ideology == "Умеренные": <span style="color: #003755;">**НФГ**</span> ?], пользующийся поддержкой сельских и консервативных кругов.
-choose-if: winner_fkp = "Хергт"
-on-arrival: fkp_leader = "Хергт"; fkp_ideology = "Либеральный консерватизм"; 
+choose-if: winner_fkp = "Гергт"
+on-arrival: fkp_leader = "Гергт"; fkp_ideology = "Либеральный консерватизм"; 
 call: dnvp_dvp_formed
 face-image: img/portraits/OskarHergt.jpg
 

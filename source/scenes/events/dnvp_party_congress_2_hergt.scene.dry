@@ -1,6 +1,6 @@
 title: Съезд <span style="color: #3E88B3;">**НННП**</span>
 subtitle: <span style="color: #3E88B3;">НННП</span> решает свою судьбу...
-view-if: year = 1929 and month = 11 and dnvp_leader = "Хергт"
+view-if: year = 1929 and month = 11 and dnvp_leader = "Гергт"
 on-arrival: pro_republic += 3
 max-visits: 1
 tags: event

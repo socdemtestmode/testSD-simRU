@@ -39,7 +39,7 @@ if (Q.hugenberg_dvp) {
     Q.papen_votes += Q.dvp_r;
 }
 if (Q.dnvp_ideology == "Радикалы") Q.papen_votes += Q.dnvp_r;
-if (Q.dnvp_ideology == "Умеренные" && (Q.dnvp_leader == "Шиле" || Q.dnvp_leader == "Вестарп" || Q.dnvp_leader == "Хергт" || Q.dnvp_leader == "Тревиранус" && !Q.true_christian_democracy)) {
+if (Q.dnvp_ideology == "Умеренные" && (Q.dnvp_leader == "Шиле" || Q.dnvp_leader == "Вестарп" || Q.dnvp_leader == "Гергт" || Q.dnvp_leader == "Тревиранус" && !Q.true_christian_democracy)) {
     Q.papen_votes += Q.dnvp_r;
     Q.dnvp_papen = 1;
 }

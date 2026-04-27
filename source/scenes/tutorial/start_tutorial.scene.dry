@@ -44,12 +44,14 @@ Q.last_time_updated = Q.time;
 if (Q.week) Q.last_week_updated = Q.week;
 !}
 max-cards: 1
+go-to: end_tutorial if tutorial_stage = 3
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
 Добро пожаловать в обучение. Сейчас мы поочередно ознакомимся с основными игровыми механиками. [? if tutorial_stage < 2: Нажмите на колоду "Партийные дела" и на появившуюся карточку. ?] [? if tutorial_stage = 2: Нажмите на портрет Велса в советниках. ?]
 
 - @party
+- #advisor_tutorial
 
 @party
 title: Партийные дела
@@ -57,4 +59,13 @@ card-image: img/Vorwaerts_nr_1.png
 is-deck: true
 
 - #party_tutorial_campaign_affairs
-- #advisor_tutorial
+
+
+
+@end_tutorial
+title: Конец
+on-arrival: started = 0; tutorial_started = 0;
+
+Обучениие окончено. Теперь Вы готовы к игре.
+
+@root: Перейти к игре.

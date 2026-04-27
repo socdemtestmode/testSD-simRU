@@ -625,7 +625,7 @@ Q.foreign_minister = 'Stresemann';
 Q.foreign_minister_party = 'ННП';
 Q.interior_minister = 'von Keudell';
 Q.interior_minister_party = 'НННП';
-Q.justice_minister = 'Хергт';
+Q.justice_minister = 'Гергт';
 Q.justice_minister_party = 'НННП';
 Q.labor_minister = 'Brauns';
 Q.labor_minister_party = 'Центр';
@@ -1234,7 +1234,7 @@ new-page: true
 - @1928_challenge: Пользовательские режимы
 
 @1928_tutorial
-on-arrival: difficulty = -1; resources = 4; dues = 5; base_dues = 5; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; ddp_relation = 65; budget = 5;
+on-arrival: year = 1927; difficulty = -1; resources = 4; dues = 5; base_dues = 5; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; ddp_relation = 65; budget = 5;
 go-to: start_tutorial
 
 

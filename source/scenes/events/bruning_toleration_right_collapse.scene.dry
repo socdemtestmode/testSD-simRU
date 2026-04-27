@@ -35,7 +35,7 @@ go-to: new_prussia_election if (in_center_right_coalition_prussia or in_right_co
 title: Проголосовать против вотума недоверия, поддержав правительство.
 subtitle: Будем надеяться, что <span style="color: #3E88B3;">**НННП**</span> сумеет навести у себя порядок.
 on-arrival: left_dissent += 5
-go-to: vonc_hergt if dnvp_leader == "Хергт"; vonc_treviranus if dnvp_leader == "Тревиранус"; vonc_lambach if dnvp_leader == "Ламбах"; vonc_moderate if dnvp_leader == "Шиле" or dnvp_leader == "Вестарп"
+go-to: vonc_hergt if dnvp_leader == "Гергт"; vonc_treviranus if dnvp_leader == "Тревиранус"; vonc_lambach if dnvp_leader == "Ламбах"; vonc_moderate if dnvp_leader == "Шиле" or dnvp_leader == "Вестарп"
 
 
 

@@ -1,14 +1,16 @@
 title: Раскол в партии. 
 new-page: true 
 view_if: tutorial_dissent = 1
-subtitle: Разногласия с нашей политикой стали слишком серьёзными.
+subtitle: Внутренние разногласия растут.
 tags: tutorial_event
 on-arrival: {!
-Q.dissent += 0.7;
+Q.center_dissent += 60;
+Q.reformist_dissent += 60;
+Q.left_dissent += 20;
+Q.labor_dissent += 10;
 Q.tutorial_campaign = 0; 
 !}
 max-visits: 1
 
-Из-за нашей чрезмерной увлеченности рабочим классом на нас обозлились предстваители других классов. 
-
+Из-за нашей чрезмерной увлеченности агитации среди рабочих в партии стали считать, что мы недооцениваем другие партии. Это приблизило нас к расколу. Уровень разногласий в партии теперь: [+ dissent_percent : dissent +]
 

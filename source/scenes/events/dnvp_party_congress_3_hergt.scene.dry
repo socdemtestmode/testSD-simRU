@@ -1,6 +1,6 @@
 title: <span style="color: #3E88B3;">**НННП**</span> проводит съезд
 subtitle: Экономическая депрессия радикализoвала партию…
-view-if: year = 1930 and month = 11 and dnvp_leader = "Хергт"
+view-if: year = 1930 and month = 11 and dnvp_leader = "Гергт"
 on-arrival: pro_republic += dnvp_votes if pro_republic < 50
 max-visits: 1
 tags: event

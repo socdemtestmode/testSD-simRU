@@ -1156,7 +1156,7 @@ if (!Q.hindenburg_run) {
         Q.vorbeck_fallback = 1;
         Q.vorbeck_trolling = 1;
         Q.reactionary_candidate_1932 = "Леттов-Форбек";
-        Q.reactionary_candidate_1932_disp = "Paul von Lettow-Vorbeck";
+        Q.reactionary_candidate_1932_disp = "Пауль фон Леттов-Форбек";
         Q.secondary_reactionary_candidate_1932 = 0;
         Q.secondary_reactionary_candidate_1932_disp = 0;
         Q.z_choice = Q.reactionary_candidate_1932;

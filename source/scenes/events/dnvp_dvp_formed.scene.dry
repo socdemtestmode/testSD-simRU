@@ -95,7 +95,7 @@ if (Q.winner_fkp = "Тревиранус") {
     Q.workers_kvp = Q.workers_kvp * 0.6;
 }
 
-if (Q.winner_fkp = "Хергт") {
+if (Q.winner_fkp = "Гергт") {
     if (Q.dnvp_ideology == "Умеренные") {
         Q.rural_kvp += Q.rural_dnf * 0.2;
         Q.rural_dnf = Q.rural_dnf * 0.8;
