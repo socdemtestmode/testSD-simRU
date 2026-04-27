@@ -4,7 +4,6 @@ on-arrival: {!
 Q.deckDescription = 'Колоды — нажмите на колоду, чтобы взять карту.';
 Q.handDescription = 'Рука — нажмите на карточку, чтобы разыграть её.';
 Q.tutorial_started = 1;
-Q.tutorial_campaign = 1;
 if (!Q.rubicon) {
     if (Q.advisor_action_timer <= 0) {
         Q.pinnedCardsDescription = 'Советники доступны';
@@ -55,6 +54,7 @@ go-to: end_tutorial if tutorial_stage = 3
 
 @party
 title: Партийные дела
+on-arrival: tutorial_campaign = 1 if tutorial_stage = 0; tutorial_campaign = 0 if tutorial_stage = 1;
 card-image: img/Vorwaerts_nr_1.png
 is-deck: true
 
@@ -66,6 +66,6 @@ is-deck: true
 title: Конец
 on-arrival: started = 0; tutorial_started = 0
 
-Обучениие окончено. Теперь Вы готовы к игре.
+Обучение окончено. Теперь Вы готовы к игре.
 
 - @root: Перейти к игре.

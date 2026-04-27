@@ -11,7 +11,7 @@ tags: party_tutorial_campaign_affairs
 
 Идёт ли сейчас избирательная кампания или нет, партия всё равно стремится расширить электорат. На ком нам сосредоточить агитацию?
 
-[? if tutorial_campaign = 1: В рамках обучения вам доступен один вариант. ?]я
+[? if tutorial_campaign = 1: В рамках обучения вам доступен один вариант. ?]
 
 [? if tutorial_campaign = 0: Теперь мы можем выбрать что-то другое. ?]
 
@@ -24,7 +24,7 @@ tags: party_tutorial_campaign_affairs
 
 @workers
 subtitle: -1 ресурс. Вам лучше всего выбрать этот вариант. Рабочие действительно основа нашей партии.
-choose-if: resources >= 1 and tutorial_campaign = 1
+choose-if: resources >= 1
 unavailable-subtitle: В рамках обучения вам лучше выбрать другой вариант.
 on-arrival: tutorial_dissent = 1; workers_spd += 10*(1-dissent); workers_spd -= 1 if unemployed >= 20; workers_spd -= 1 if unemployed >= 30; workers_spd += 3*(1-dissent) if wtb_adopted = 1; resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1
 on-departure: tutorial_workers_dynamic = (workers_spd-tutorial_workers_spd)
