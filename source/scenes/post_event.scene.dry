@@ -5188,13 +5188,13 @@ if (this.ui && this.ui.show_portraits) {
 }
 
 Q.has_tutorial_even = 0;
-// check if there are any cards in #event, and then go to main if not.
+// check if there are any cards in #tutorial_event, and then go to main if not.
 var scene = this.game.scenes['post_event.tutorial_events_choice'];
 var choices = this._compileChoices(scene);
 if (choices && choices[0].title != "Продолжить...") {
     Q.has_tutorial_event = 1;
 } else {
-    Q.has_tutorial_even = 0;
+    Q.has_tutorial_event = 0;
 }
 // pre-load all of the event images
 if (this.ui && this.ui.show_portraits) {
@@ -5209,7 +5209,7 @@ if (this.ui && this.ui.show_portraits) {
 if (typeof window !== "undefined" && window.generateBar) {
 }
 !}
-go-to: tutorial_events_choice if tutorial_started = 1 and has_tutorial_event = 1; bg_change if rubicon; events_choice if has_event = 1 and not rubicon and tutorial_started != 1; main if has_event = 0 and difficulty >= 0 and not rubicon and tutorial_started != 1; main.main_easy if has_event = 0 and difficulty < 0 and not rubicon and tutorial_started != 1
+go-to: tutorial_events_choice if tutorial_started = 1 and has_tutorial_event = 1; bg_change if rubicon; events_choice if has_event = 1 and not rubicon and tutorial_started != 1; main if has_event = 0 and difficulty >= 0 and not rubicon and tutorial_started != 1; main.main_easy if has_event = 0 and difficulty < 0 and not rubicon and tutorial_started != 1; start_tutorial if tutorial_started = 1 and has_tutorial_event = 0
 
 = [+ month : month +] [+ year +][? if rubicon: , неделя [+ week +] ?]
 
@@ -5228,7 +5228,6 @@ go-to: events_choice if has_event = 1; main if has_event = 0 and difficulty >= 0
 
 
 @tutorial_events_choice
-go-to: start_tutorial if tutorial_event = 0
 
 - #tutorial_event
 

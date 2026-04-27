@@ -1,7 +1,7 @@
 title: Раскол в партии. 
 new-page: true 
 view_if: tutorial_dissent = 1
-subtitle: Разногласия левого крыла с нашей политикой стали слишком серьёзными.
+subtitle: Разногласия с нашей политикой стали слишком серьёзными.
 tags: tutorial_event
 on-arrival: {!
 Q.dissent += 0.7;
