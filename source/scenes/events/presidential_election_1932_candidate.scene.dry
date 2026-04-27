@@ -210,12 +210,12 @@ if (Q.reactionary_candidate_1932_count > 0) {
     if (Q.vorbeck_unlock_pres) {
         Q.vorbeck_run = 1; 
         if (Q.reactionary_candidate_1932) {
-            Q.secondary_reactionary_candidate_1932 = "Леттов-Форбек";
-            Q.secondary_reactionary_candidate_1932_disp = "Пауль фон Леттов-Форбек";
+            Q.secondary_reactionary_candidate_1932 = "Леттов_Форбек";
+            Q.secondary_reactionary_candidate_1932_disp = "Пауль фон Леттов_Форбек";
         }
         if (!Q.reactionary_candidate_1932) {
-            Q.reactionary_candidate_1932 = "Леттов-Форбек";
-            Q.reactionary_candidate_1932_disp = "Пауль фон Леттов-Форбек";
+            Q.reactionary_candidate_1932 = "Леттов_Форбек";
+            Q.reactionary_candidate_1932_disp = "Пауль фон Леттов_Форбек";
         }
         Q.reactionary_candidate_1932_count -= 1;
     }
@@ -266,7 +266,7 @@ if (Q.secondary_reactionary_candidate_1932) {
         Q.dnvp_choice = Q.secondary_reactionary_candidate_1932;
         Q.kvp_choice = Q.secondary_reactionary_candidate_1932;
         Q.other_choice = Q.secondary_reactionary_candidate_1932;
-    } else if (Q.secondary_reactionary_candidate_1932 == "Леттов-Форбек") {
+    } else if (Q.secondary_reactionary_candidate_1932 == "Леттов_Форбек") {
         if (Q.cvp_formed) Q.z_choice = Q.reactionary_candidate_1932;
         Q.dnvp_choice = Q.secondary_reactionary_candidate_1932;
         Q.kvp_choice = Q.secondary_reactionary_candidate_1932;
@@ -306,7 +306,7 @@ if (Q.secondary_reactionary_candidate_1932) {
 
 if (Q.reactionary_candidate_1932 == "Лютер" || Q.reactionary_candidate_1932 == "Гесслер" || Q.reactionary_candidate_1932 == "Яррес") {
     Q.reactionary_candidate_1932_ideology = "Liberal";
-} else if (Q.reactionary_candidate_1932 == "Вестарп" || Q.reactionary_candidate_1932 == "Леттов-Форбек") {
+} else if (Q.reactionary_candidate_1932 == "Вестарп" || Q.reactionary_candidate_1932 == "Леттов_Форбек") {
     Q.reactionary_candidate_1932_ideology = "Conservative";
 } else if (Q.reactionary_candidate_1932 == "Аденауэр" || Q.reactionary_candidate_1932 == "Брюнинг" || Q.reactionary_candidate_1932 == "Штегервальд") {
     Q.reactionary_candidate_1932_ideology = "Centrist";
@@ -314,7 +314,7 @@ if (Q.reactionary_candidate_1932 == "Лютер" || Q.reactionary_candidate_1932
 
 if (Q.secondary_reactionary_candidate_1932 == "Лютер" || Q.secondary_reactionary_candidate_1932 == "Гесслер" || Q.secondary_reactionary_candidate_1932 == "Яррес") {
     Q.secondary_reactionary_candidate_1932_ideology = "Liberal";
-} else if (Q.secondary_reactionary_candidate_1932 == "Вестарп" || Q.secondary_reactionary_candidate_1932 == "Леттов-Форбек") {
+} else if (Q.secondary_reactionary_candidate_1932 == "Вестарп" || Q.secondary_reactionary_candidate_1932 == "Леттов_Форбек") {
     Q.secondary_reactionary_candidate_1932_ideology = "Conservative";
 } else if (Q.secondary_reactionary_candidate_1932 == "Аденауэр" || Q.secondary_reactionary_candidate_1932 == "Брюнинг" || Q.secondary_reactionary_candidate_1932 == "Штегервальд") {
     Q.secondary_reactionary_candidate_1932_ideology = "Centrist";
@@ -434,17 +434,17 @@ go-to: reactionary_candidates if reactionary_candidate_1932_count_2 > 0
 
 
 @vorbeck
-title: Пауль фон Леттов-Форбек, герой Великой войны и член [? if not cvp_formed: [? if dnvp_ideology == "Радикалы": <span style="color: #0087DC;">**КНП**</span> ?][? if dnvp_ideology == "Умеренные": <span style="color: #3E88B3;">**НННП**</span> ?] ?][? if cvp_formed: <span style="color: #000000;">**ХНП**</span> ?].
+title: Пауль фон Леттов_Форбек, герой Великой войны и член [? if not cvp_formed: [? if dnvp_ideology == "Радикалы": <span style="color: #0087DC;">**КНП**</span> ?][? if dnvp_ideology == "Умеренные": <span style="color: #3E88B3;">**НННП**</span> ?] ?][? if cvp_formed: <span style="color: #000000;">**ХНП**</span> ?].
 view-if: vorbeck_unlock_pres
 on-arrival: reactionary_candidate_1932_count_2 -= 1
-unavailable-subtitle: Леттов-Форбек не горит желанием брать на себя роль лидера и предпочитает свою скромную жизнь вдали от глаз общественности. Если его, конечно, не убедят.
+unavailable-subtitle: Леттов_Форбек не горит желанием брать на себя роль лидера и предпочитает свою скромную жизнь вдали от глаз общественности. Если его, конечно, не убедят.
 face-image: img/portraits/lettowvorbeck.jpg
 max-visits: 1
 go-to: reactionary_candidates if reactionary_candidate_1932_count_2 > 0
 
 Каким-то чудом немецким правым удалось убедить Пауля фон Леттова-Форбека — известного своей успешной партизанской кампанией в Германской Восточной Африке во время Великой войны — баллотироваться в президенты. Однако сейчас обстоятельства куда более плачевные, чем в 1925 году. Немецкие правые сплотились вокруг Леттова-Форбека значительно слабее, чем в своё время вокруг президента Гинденбурга.
 
-Как именно будет править Леттов-Форбек, пока неясно. Весьма вероятно, что, как и в случае с Гинденбургом, его решения за кулисами будет определять камарилья ближайших советников.
+Как именно будет править Леттов_Форбек, пока неясно. Весьма вероятно, что, как и в случае с Гинденбургом, его решения за кулисами будет определять камарилья ближайших советников.
 
 Его кандидатуру поддерживают [? if not vorbeck_fallback: [? if not cvp_formed: [? if dnvp_ideology == "Радикалы": <span style="color: #0087DC;">**КНП**</span> ?][? if dnvp_ideology == "Умеренные": <span style="color: #3E88B3;">**НННП**</span> ?] ?][? if cvp_formed: <span style="color: #000000;">**ХНП**</span> ?], а также разрозненная коалиция мелких буржуазных партий.  ?][? if vorbeck_fallback: все партии «Буржуазного блока», которые видят в нём свою последнюю общую надежду удержать власть. ?]
 
@@ -580,8 +580,8 @@ face-image: img/portraits/braun.jpg
 - @run_rosenfeld: Выдвинуть Курта Розенфельда от [? if not left_split: <span style="color: #c00000;">**СДПГ**</span> ?][? if left_split: <span style="color: #9B0000;">**СРПГ**</span> ?].
 - @run_eckener: Выдвинуть Гуго Эккенера как единого кандидата.
 - @support_hindenburg: Поддержать <span style="color: #808080;">Гинденбурга</span>.
-- @support_reactionary: Нам нужен [? if (reactionary_candidate_1932 == "Лютер" or reactionary_candidate_1932 == "Гесслер" or reactionary_candidate_1932 == "Яррес") and lvp_formed: <span style="color: #FFCC00;">**[+ reactionary_candidate_1932 +]**</span> ?][? if (reactionary_candidate_1932 == "Лютер" or reactionary_candidate_1932 == "Яррес") and not lvp_formed: <span style="color: #C0A054;">**[+ reactionary_candidate_1932 +]**</span> ?][? if reactionary_candidate_1932 == "Гесслер" and not lvp_formed: <span style="color: #D3C24D;">**[+ reactionary_candidate_1932 +]**</span> ?][? if ((reactionary_candidate_1932 == "Леттов-Форбек" and not cvp_formed) or reactionary_candidate_1932 == "Вестарп") and not kvp_formed: <span style="color: #3E88B3;">**[+ reactionary_candidate_1932 +]**</span> ?][? if ((reactionary_candidate_1932 == "Леттов-Форбек" and not cvp_formed) or reactionary_candidate_1932 == "Вестарп") and kvp_formed: <span style="color: #0087DC;">**[+ reactionary_candidate_1932 +]**</span> ?][? if reactionary_candidate_1932 == "Аденауэр" or reactionary_candidate_1932 == "Брюнинг" or reactionary_candidate_1932 == "Штегервальд" or (reactionary_candidate_1932 == "Леттов-Форбек" and cvp_formed): <span style="color: #000000;">**[+ reactionary_candidate_1932 +]**</span> ?].
-- @support_reactionary_2: Нам нужен [? if (secondary_reactionary_candidate_1932 == "Лютер" or secondary_reactionary_candidate_1932 == "Гесслер" or secondary_reactionary_candidate_1932 == "Яррес") and lvp_formed: <span style="color: #FFCC00;">**[+ secondary_reactionary_candidate_1932 +]**</span> ?][? if (secondary_reactionary_candidate_1932 == "Лютер" or secondary_reactionary_candidate_1932 == "Яррес") and not lvp_formed: <span style="color: #C0A054;">**[+ secondary_reactionary_candidate_1932 +]**</span> ?][? if secondary_reactionary_candidate_1932 == "Гесслер" and not lvp_formed: <span style="color: #D3C24D;">**[+ secondary_reactionary_candidate_1932 +]**</span> ?][? if ((secondary_reactionary_candidate_1932 == "Леттов-Форбек" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Вестарп") and not kvp_formed: <span style="color: #3E88B3;">**[+ secondary_reactionary_candidate_1932 +]**</span> ?][? if ((secondary_reactionary_candidate_1932 == "Леттов-Форбек" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Вестарп") and kvp_formed: <span style="color: #0087DC;">**[+ secondary_reactionary_candidate_1932 +]**</span> ?][? if secondary_reactionary_candidate_1932 == "Аденауэр" or secondary_reactionary_candidate_1932 == "Брюнинг" or secondary_reactionary_candidate_1932 == "Штегервальд" or (secondary_reactionary_candidate_1932 == "Леттов-Форбек" and cvp_formed): <span style="color: #000000;">**[+ secondary_reactionary_candidate_1932 +]**</span> ?].
+- @support_reactionary: Нам нужен [? if (reactionary_candidate_1932 == "Лютер" or reactionary_candidate_1932 == "Гесслер" or reactionary_candidate_1932 == "Яррес") and lvp_formed: <span style="color: #FFCC00;">**[+ reactionary_candidate_1932 +]**</span> ?][? if (reactionary_candidate_1932 == "Лютер" or reactionary_candidate_1932 == "Яррес") and not lvp_formed: <span style="color: #C0A054;">**[+ reactionary_candidate_1932 +]**</span> ?][? if reactionary_candidate_1932 == "Гесслер" and not lvp_formed: <span style="color: #D3C24D;">**[+ reactionary_candidate_1932 +]**</span> ?][? if ((reactionary_candidate_1932 == "Леттов_Форбек" and not cvp_formed) or reactionary_candidate_1932 == "Вестарп") and not kvp_formed: <span style="color: #3E88B3;">**[+ reactionary_candidate_1932 +]**</span> ?][? if ((reactionary_candidate_1932 == "Леттов_Форбек" and not cvp_formed) or reactionary_candidate_1932 == "Вестарп") and kvp_formed: <span style="color: #0087DC;">**[+ reactionary_candidate_1932 +]**</span> ?][? if reactionary_candidate_1932 == "Аденауэр" or reactionary_candidate_1932 == "Брюнинг" or reactionary_candidate_1932 == "Штегервальд" or (reactionary_candidate_1932 == "Леттов_Форбек" and cvp_formed): <span style="color: #000000;">**[+ reactionary_candidate_1932 +]**</span> ?].
+- @support_reactionary_2: Нам нужен [? if (secondary_reactionary_candidate_1932 == "Лютер" or secondary_reactionary_candidate_1932 == "Гесслер" or secondary_reactionary_candidate_1932 == "Яррес") and lvp_formed: <span style="color: #FFCC00;">**[+ secondary_reactionary_candidate_1932 +]**</span> ?][? if (secondary_reactionary_candidate_1932 == "Лютер" or secondary_reactionary_candidate_1932 == "Яррес") and not lvp_formed: <span style="color: #C0A054;">**[+ secondary_reactionary_candidate_1932 +]**</span> ?][? if secondary_reactionary_candidate_1932 == "Гесслер" and not lvp_formed: <span style="color: #D3C24D;">**[+ secondary_reactionary_candidate_1932 +]**</span> ?][? if ((secondary_reactionary_candidate_1932 == "Леттов_Форбек" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Вестарп") and not kvp_formed: <span style="color: #3E88B3;">**[+ secondary_reactionary_candidate_1932 +]**</span> ?][? if ((secondary_reactionary_candidate_1932 == "Леттов_Форбек" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Вестарп") and kvp_formed: <span style="color: #0087DC;">**[+ secondary_reactionary_candidate_1932 +]**</span> ?][? if secondary_reactionary_candidate_1932 == "Аденауэр" or secondary_reactionary_candidate_1932 == "Брюнинг" or secondary_reactionary_candidate_1932 == "Штегервальд" or (secondary_reactionary_candidate_1932 == "Леттов_Форбек" and cvp_formed): <span style="color: #000000;">**[+ secondary_reactionary_candidate_1932 +]**</span> ?].
 - @support_thalmann: Нам нужен [+ communist_candidate_1932_disp +] от <span style="color: #700000;">**КПГ**</span>.
 - @abstain: Воздержаться от поддержки какого-либо кандидата.
 
@@ -607,7 +607,7 @@ go-to: endorsements_braun if braun_campaign; endorsements_eckener if eckener_cam
 
 [? if dvp_support_spd == 1 and spd_campaign: — <span style="color: #C0A054;">**ННП**</span> ?]
 
-[? if reactionary_candidate_1932: [? if hindenburg_run: <span style="color: #808080;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if (reactionary_candidate_1932 == "Лютер" or reactionary_candidate_1932 == "Гесслер" or reactionary_candidate_1932 == "Яррес") and lvp_formed: <span style="color: #FFCC00;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if (reactionary_candidate_1932 == "Лютер" or reactionary_candidate_1932 == "Яррес") and not lvp_formed: <span style="color: #C0A054;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if reactionary_candidate_1932 == "Гесслер" and not lvp_formed: <span style="color: #D3C24D;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if ((reactionary_candidate_1932 == "Леттов-Форбек" and not cvp_formed) or reactionary_candidate_1932 == "Вестарп") and not kvp_formed: <span style="color: #3E88B3;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if ((reactionary_candidate_1932 == "Леттов-Форбек" and not cvp_formed) or reactionary_candidate_1932 == "Вестарп") and kvp_formed: <span style="color: #0087DC;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if reactionary_candidate_1932 == "Аденауэр" or reactionary_candidate_1932 == "Брюнинг" or reactionary_candidate_1932 == "Штегервальд" or (reactionary_candidate_1932 == "Леттов-Форбек" and cvp_formed): <span style="color: #000000;">**[+ reactionary_candidate_1932_disp +]**</span> ?] — поддерживают: ?]
+[? if reactionary_candidate_1932: [? if hindenburg_run: <span style="color: #808080;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if (reactionary_candidate_1932 == "Лютер" or reactionary_candidate_1932 == "Гесслер" or reactionary_candidate_1932 == "Яррес") and lvp_formed: <span style="color: #FFCC00;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if (reactionary_candidate_1932 == "Лютер" or reactionary_candidate_1932 == "Яррес") and not lvp_formed: <span style="color: #C0A054;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if reactionary_candidate_1932 == "Гесслер" and not lvp_formed: <span style="color: #D3C24D;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if ((reactionary_candidate_1932 == "Леттов_Форбек" and not cvp_formed) or reactionary_candidate_1932 == "Вестарп") and not kvp_formed: <span style="color: #3E88B3;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if ((reactionary_candidate_1932 == "Леттов_Форбек" and not cvp_formed) or reactionary_candidate_1932 == "Вестарп") and kvp_formed: <span style="color: #0087DC;">**[+ reactionary_candidate_1932_disp +]**</span> ?][? if reactionary_candidate_1932 == "Аденауэр" or reactionary_candidate_1932 == "Брюнинг" or reactionary_candidate_1932 == "Штегервальд" or (reactionary_candidate_1932 == "Леттов_Форбек" and cvp_formed): <span style="color: #000000;">**[+ reactionary_candidate_1932_disp +]**</span> ?] — поддерживают: ?]
 
 [? if (spd_support_reactionary_1 or (spd_support_reactionary and hindenburg_run)) and reactionary_candidate_1932: — <span style="color: #c00000;">**СДПГ**</span> ?]
 
@@ -627,7 +627,7 @@ go-to: endorsements_braun if braun_campaign; endorsements_eckener if eckener_cam
 
 [? if (other_choice == reactionary_candidate_1932 or hindenburg_run) and reactionary_candidate_1932: — **Прочие**  ?]
 
-[? if secondary_reactionary_candidate_1932: [? if hindenburg_run: <span style="color: #808080;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if (secondary_reactionary_candidate_1932 == "Лютер" or secondary_reactionary_candidate_1932 == "Гесслер" or secondary_reactionary_candidate_1932 == "Яррес") and lvp_formed: <span style="color: #FFCC00;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if (secondary_reactionary_candidate_1932 == "Лютер" or secondary_reactionary_candidate_1932 == "Яррес") and not lvp_formed: <span style="color: #C0A054;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if secondary_reactionary_candidate_1932 == "Гесслер" and not lvp_formed: <span style="color: #D3C24D;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if ((secondary_reactionary_candidate_1932 == "Леттов-Форбек" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Вестарп") and not kvp_formed: <span style="color: #3E88B3;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if ((secondary_reactionary_candidate_1932 == "Леттов-Форбек" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Вестарп") and kvp_formed: <span style="color: #0087DC;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if secondary_reactionary_candidate_1932 == "Аденауэр" or secondary_reactionary_candidate_1932 == "Брюнинг" or secondary_reactionary_candidate_1932 == "Штегервальд" or (secondary_reactionary_candidate_1932 == "Леттов-Форбек" and cvp_formed): <span style="color: #000000;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?] — поддерживают: ?]
+[? if secondary_reactionary_candidate_1932: [? if hindenburg_run: <span style="color: #808080;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if (secondary_reactionary_candidate_1932 == "Лютер" or secondary_reactionary_candidate_1932 == "Гесслер" or secondary_reactionary_candidate_1932 == "Яррес") and lvp_formed: <span style="color: #FFCC00;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if (secondary_reactionary_candidate_1932 == "Лютер" or secondary_reactionary_candidate_1932 == "Яррес") and not lvp_formed: <span style="color: #C0A054;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if secondary_reactionary_candidate_1932 == "Гесслер" and not lvp_formed: <span style="color: #D3C24D;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if ((secondary_reactionary_candidate_1932 == "Леттов_Форбек" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Вестарп") and not kvp_formed: <span style="color: #3E88B3;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if ((secondary_reactionary_candidate_1932 == "Леттов_Форбек" and not cvp_formed) or secondary_reactionary_candidate_1932 == "Вестарп") and kvp_formed: <span style="color: #0087DC;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?][? if secondary_reactionary_candidate_1932 == "Аденауэр" or secondary_reactionary_candidate_1932 == "Брюнинг" or secondary_reactionary_candidate_1932 == "Штегервальд" or (secondary_reactionary_candidate_1932 == "Леттов_Форбек" and cvp_formed): <span style="color: #000000;">**[+ secondary_reactionary_candidate_1932_disp +]**</span> ?] — поддерживают: ?]
 
 [? if spd_support_reactionary_2 and reactionary_candidate_1932: — <span style="color: #c00000;">**СДПГ**</span> ?]
 
@@ -878,7 +878,7 @@ on-arrival: spd_support_reactionary = 1; left_dissent += 15; labor_dissent += 10
 
 @support_reactionary
 subtitle: Это вариант по умолчанию.
-view-if: not hindenburg_run and reactionary_candidate_1932 and reactionary_candidate_1932 != "Вестарп" and reactionary_candidate_1932 != "Леттов-Форбек"
+view-if: not hindenburg_run and reactionary_candidate_1932 and reactionary_candidate_1932 != "Вестарп" and reactionary_candidate_1932 != "Леттов_Форбек"
 on-arrival: spd_support_reactionary = 1; spd_support_reactionary_1 = 1; spd_choice = reactionary_candidate_1932; left_dissent += 15; labor_dissent += 10; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
 
 По какой-то причине, то ли мы физически <i>не в состоянии</i> выставить собственного кандидата, то ли искренне верим, что [+ reactionary_candidate_1932 +] это самый надёжный выбор для немецкой демократии, теперь мы его поддерживаем.
@@ -886,7 +886,7 @@ on-arrival: spd_support_reactionary = 1; spd_support_reactionary_1 = 1; spd_choi
 
 @support_reactionary_2
 subtitle: Это вариант по умолчанию.
-view-if: not hindenburg_run and secondary_reactionary_candidate_1932 and secondary_reactionary_candidate_1932 != "Вестарп" and secondary_reactionary_candidate_1932 != "Леттов-Форбек"
+view-if: not hindenburg_run and secondary_reactionary_candidate_1932 and secondary_reactionary_candidate_1932 != "Вестарп" and secondary_reactionary_candidate_1932 != "Леттов_Форбек"
 on-arrival: spd_support_reactionary = 1; spd_support_reactionary_2 = 1; spd_choice = secondary_reactionary_candidate_1932; left_dissent += 15; labor_dissent += 10; hindenburg_angry -= 40; workers_spd -= 3; workers_kpd += 3; unemployed_spd -= 3; unemployed_kpd += 3
 
 По какой-то причине: то ли мы и впрямь <i>не можем</i> выдвинуть собственного кандидата, то ли искренне верим, что [+ secondary_reactionary_candidate_1932 +] это лучшая надежда для германской демократии, и теперь мы поддерживаем его.
@@ -932,8 +932,8 @@ if (Q.z_support_spd == 1 && Q.center_reactionary_candidate_1932) Q.z_drop_out = 
 if ((Q.lib_drop_out && Q.z_drop_out || Q.z_drop_out && !Q.secondary_reactionary_candidate_1932 || Q.lib_drop_out && !Q.secondary_reactionary_candidate_1932)) {
     Q.vorbeck_run = 1;
     Q.vorbeck_fallback = 1;
-    Q.reactionary_candidate_1932 = "Леттов-Форбек";
-    Q.reactionary_candidate_1932_disp = "Пауль фон Леттов-Форбек";
+    Q.reactionary_candidate_1932 = "Леттов_Форбек";
+    Q.reactionary_candidate_1932_disp = "Пауль фон Леттов_Форбек";
     Q.secondary_reactionary_candidate_1932 = 0;
     Q.secondary_reactionary_candidate_1932_disp = 0;
     Q.z_choice = Q.reactionary_candidate_1932;
@@ -1019,7 +1019,7 @@ if ((Q.lib_drop_out && Q.z_drop_out || Q.z_drop_out && !Q.secondary_reactionary_
 
 if (Q.reactionary_candidate_1932 == "Лютер" || Q.reactionary_candidate_1932 == "Гесслер" || Q.reactionary_candidate_1932 == "Яррес") {
     Q.reactionary_candidate_1932_ideology = "Liberal";
-} else if (Q.reactionary_candidate_1932 == "Вестарп" || Q.reactionary_candidate_1932 == "Леттов-Форбек") {
+} else if (Q.reactionary_candidate_1932 == "Вестарп" || Q.reactionary_candidate_1932 == "Леттов_Форбек") {
     Q.reactionary_candidate_1932_ideology = "Conservative";
 } else if (Q.reactionary_candidate_1932 == "Аденауэр" || Q.reactionary_candidate_1932 == "Брюнинг" || Q.reactionary_candidate_1932 == "Штегервальд") {
     Q.reactionary_candidate_1932_ideology = "Centrist";
@@ -1027,7 +1027,7 @@ if (Q.reactionary_candidate_1932 == "Лютер" || Q.reactionary_candidate_1932
 
 if (Q.secondary_reactionary_candidate_1932 == "Лютер" || Q.secondary_reactionary_candidate_1932 == "Гесслер" || Q.secondary_reactionary_candidate_1932 == "Яррес") {
     Q.secondary_reactionary_candidate_1932_ideology = "Liberal";
-} else if (Q.secondary_reactionary_candidate_1932 == "Вестарп" || Q.secondary_reactionary_candidate_1932 == "Леттов-Форбек") {
+} else if (Q.secondary_reactionary_candidate_1932 == "Вестарп" || Q.secondary_reactionary_candidate_1932 == "Леттов_Форбек") {
     Q.secondary_reactionary_candidate_1932_ideology = "Conservative";
 } else if (Q.secondary_reactionary_candidate_1932 == "Аденауэр" || Q.secondary_reactionary_candidate_1932 == "Брюнинг" || Q.secondary_reactionary_candidate_1932 == "Штегервальд") {
     Q.secondary_reactionary_candidate_1932_ideology = "Centrist";
