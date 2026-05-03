@@ -50,6 +50,8 @@ go-to: end_tutorial if tutorial_stage = 3
 Добро пожаловать в обучение. Сейчас мы поочередно ознакомимся с основными игровыми механиками. [? if tutorial_stage < 2: Нажмите на колоду "Партийные дела" и на появившуюся карточку. ?] [? if tutorial_stage = 2: Нажмите на портрет Велса в советниках. ?]
 
 [? if tutorial_stage = 1: Теперь наш уровень недовольств в партии: [+ dissent_percent : dissent +] ?]
+
+
 - @party
 - #advisor_tutorial
 
